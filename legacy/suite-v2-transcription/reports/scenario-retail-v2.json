@@ -1,0 +1,93 @@
+{
+  "schema_version": "office-scenario-qualification-v1",
+  "dataset_id": "retail",
+  "run_id": "xlsx-retail-20261009T081357Z-c3f36068",
+  "source_trace_sha256": "1ff52d9a6698c2455c7be08b1f5cc379a2f85012350408ac7402896d6a29249a",
+  "source_workbook_sha256": "d95fd7ecc76c001b89be4d40d67c26840eac794572977132108d9e40093989f3",
+  "expected_sha256": "8da96dcf6bdb7f45842c16455cf5d898626af689637f2f595d7285284c30a3d9",
+  "status": "success",
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "recalc_status": "success",
+      "checks": {
+        "projected_sales": {
+          "actual": 773947,
+          "expected": 773947,
+          "ok": true
+        },
+        "base_metric:adjusted_sales": {
+          "actual": 773947,
+          "expected": 773947,
+          "ok": true
+        },
+        "base_metric:monthly_growth": {
+          "actual": 0.0124074185505624,
+          "expected": 0.012407418550562266,
+          "ok": true
+        },
+        "base_metric:annual_growth": {
+          "actual": 0.060147636352678,
+          "expected": 0.06014763635267806,
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Higher",
+      "recalc_status": "success",
+      "checks": {
+        "projected_sales": {
+          "actual": 804904.88,
+          "expected": 804904.88,
+          "ok": true
+        },
+        "base_metric:adjusted_sales": {
+          "actual": 773947,
+          "expected": 773947,
+          "ok": true
+        },
+        "base_metric:monthly_growth": {
+          "actual": 0.0124074185505624,
+          "expected": 0.012407418550562266,
+          "ok": true
+        },
+        "base_metric:annual_growth": {
+          "actual": 0.060147636352678,
+          "expected": 0.06014763635267806,
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Lower",
+      "recalc_status": "success",
+      "checks": {
+        "projected_sales": {
+          "actual": 742989.12,
+          "expected": 742989.12,
+          "ok": true
+        },
+        "base_metric:adjusted_sales": {
+          "actual": 773947,
+          "expected": 773947,
+          "ok": true
+        },
+        "base_metric:monthly_growth": {
+          "actual": 0.0124074185505624,
+          "expected": 0.012407418550562266,
+          "ok": true
+        },
+        "base_metric:annual_growth": {
+          "actual": 0.060147636352678,
+          "expected": 0.06014763635267806,
+          "ok": true
+        }
+      },
+      "passed": true
+    }
+  ],
+  "scope": "Functional scenario QA on disposable copies after Agent execution. No LLM, no CPU/OS replay or performance measurements. These recalc calls are not original Agent tool events."
+}

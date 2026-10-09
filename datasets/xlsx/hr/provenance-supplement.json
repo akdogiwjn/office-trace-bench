@@ -1,0 +1,14 @@
+{
+  "schema_version": "office-input-provenance-supplement-v1",
+  "dataset_id": "hr",
+  "input_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+  "original_provenance_sha256": "9c31955d9728d0c3c74885b2cc4bc32f01364699adac66379a8098ba42c64bd3",
+  "manifest_sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+  "canonical_sha256": "648bef3f71a6e753c292a4916e6b7408a482d515f0cceabbf27c028704738a53",
+  "evidence_path": "reports/official-native-input-provenance-v3.json",
+  "evidence_sha256": "d0397dc0c260a78f0b084d81490073c14c9be2a3a7b5485902036ccc57275355",
+  "official_download": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+  "download_date": "2026-10-09",
+  "decision": "Preserve the existing manifest, original cache provenance and canonical trace; owner-supplied official bytes are identical.",
+  "independent_official_redownload": false
+}

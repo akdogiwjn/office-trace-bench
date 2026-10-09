@@ -41,24 +41,24 @@
       "kind": "xlsx",
       "dataset_id": "manufacturing",
       "manifest_path": "datasets/xlsx/manufacturing/manifest.json",
-      "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
-      "canonical_path": "canonical/xlsx/manufacturing/xlsx-manufacturing-20261009T081356Z-7553ba0b",
-      "canonical_sha256": "94fee7eba0be2adfb005c38ed0e238bf633f65d4c2a74cfbb9ccda8db81b651a",
+      "manifest_sha256": "d1b0226702960d952bfdc95e2c0d61a6b1232244acaa0675f8186437c6bec8b0",
+      "canonical_path": "canonical/xlsx/manufacturing/xlsx-manufacturing-20261009T101352Z-bd60f53e",
+      "canonical_sha256": "7dd6a7f4b3476d354db7a8678438e8a3313f896b3350cbf6516ea78132c8ad0d",
       "scenario_qualification": {
         "path": "reports/scenario-manufacturing-v2.json",
-        "sha256": "4760e3ea2ef8015e568aa331559d5648085cf9809b886ee8afd50651fa5017f1"
+        "sha256": "cbc55c0b01d5092cf8b8f488c9ac7e11a789aa6670dba24d2c9eae52ffec013d"
       }
     },
     {
       "kind": "xlsx",
       "dataset_id": "retail",
       "manifest_path": "datasets/xlsx/retail/manifest.json",
-      "manifest_sha256": "b9aacfd3a459ca1b865da4031955607f684e655571bba4ce11b7b9ce228da0c3",
-      "canonical_path": "canonical/xlsx/retail/xlsx-retail-20261009T081357Z-c3f36068",
-      "canonical_sha256": "fe2546cfb45aee3b5eb34c9aef7504d63a2a6214ab7490ffc5d0dc5de10aed6a",
+      "manifest_sha256": "5604a33257c5acb1a803272226bbdfd931ad37e1159b228ae8f52cac3df0674b",
+      "canonical_path": "canonical/xlsx/retail/xlsx-retail-20261009T101352Z-725a21b6",
+      "canonical_sha256": "444625027976edfefc32a9a6f0c7c7d7b0628cc1c435673de595b760a5e745be",
       "scenario_qualification": {
         "path": "reports/scenario-retail-v2.json",
-        "sha256": "430948fdc7b7841146da5df933c987f9db8b2231d0c405fc6e8f5b5866ed5017"
+        "sha256": "bdd7a920b7a8d0cfa7d17e63cea6032d3c9f4345059dadcf1dfb2c109d1858ac"
       }
     },
     {
@@ -76,9 +76,11 @@
   ],
   "replay_ready": false,
   "provenance_evidence": {
+    "datasets/xlsx/hr/provenance-supplement.json": "4e0e7741b2ea27d8a9d03d9014f47dfa56bf88079c8f961503ea966d592bdb2f",
     "reports/hr-formal-kpi-provenance-v2.json": "6ec74310933a224cba5daa3ca34531e98b7e06e595313673452eaff48f3a330e",
     "reports/hr-sba-source-reliability-v1.json": "1dbf6bd0264076826d1be3243759587191e23424892d13926f16f77a8505c137",
     "reports/hr-sba-source-reliability-v2.json": "ee97e795beebe5007a46ec21df73faa538d3cebbbb91dbf2b728599292c07039",
+    "reports/official-native-input-provenance-v3.json": "d0397dc0c260a78f0b084d81490073c14c9be2a3a7b5485902036ccc57275355",
     "sources/provenance-audit/bls-table1-web-1180.txt": "35416938fd67d20226b89bfc918e230ab179443279b37d0c18ab12579d7a4ae4",
     "sources/provenance-audit/bls-table1-web-180.txt": "97b12f9f5e743ee9aa63ca5acba70af4eaffc3e39cd8724b90d11f4b9e2f6c2e",
     "sources/provenance-audit/bls-table1-web-380.txt": "9e417a262249c0f1440a7e73362e12d99c1db2058e567ed6f56a910775ac762b",
@@ -97,9 +99,9 @@
   },
   "agent_qualification": {
     "path": "reports/current-agent-regression-v2.json",
-    "sha256": "23a9840e111f60fa2ee1d3d361db0129423b85357e04586bc2c303d3cd0775c0"
+    "sha256": "3ac1a3105f46e10f1f43251b3ea8dde9826c20a956e41d4092f40c3d64a3a006"
   },
   "research_scope": "Agent/tool workload characterization with workbook complexity; future frozen tool replay without LLM.",
-  "source_limits": "Retail/M3 official-table transcriptions; HR unexpanded cached native XLSX with partial official corroboration. See per-input provenance.",
+  "source_limits": "Retail/M3 full native official XLSX with independently matched downloads; HR original cache trace input matches owner-supplied official workbook, but official ZIP acquisition was not independently observed. See per-input provenance and supplement.",
   "replay_gate": "Executable recipe compilation, dependency review and isolated tool replay validation are a later explicitly separate phase."
 }

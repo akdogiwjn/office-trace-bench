@@ -1,0 +1,42 @@
+{
+  "output_workbook": "retail_enhanced.xlsx",
+  "added_sheets": ["Overview"],
+  "feature_counts": {
+    "new_sheets": 1,
+    "metrics": 3,
+    "scenario_selectors": 1,
+    "scenario_dimensions": 1,
+    "scenario_assumptions": 3,
+    "scenario_projections": 1,
+    "charts": 1,
+    "added_formula_cells": 7,
+    "conditional_format_ranges": 4,
+    "comments": 3,
+    "data_validations": 1,
+    "freeze_panes": 1
+  },
+  "helper_filenames": [
+    "helpers/build_enhance.py",
+    "helpers/assemble_output.py",
+    "helpers/run_pipeline.sh",
+    "helpers/diag_roundtrip.py",
+    "helpers/build_enhance.v1.py",
+    "helpers/assemble_output.v1.py",
+    "helpers/office/soffice.py",
+    "helpers/office/pack.py",
+    "helpers/office/unpack.py",
+    "helpers/office/validate.py"
+  ],
+  "helper_execution": {
+    "build_enhance.py": {"attempts": 2, "successes": 2},
+    "assemble_output.py": {"attempts": 2, "successes": 1},
+    "run_pipeline.sh": {"attempts": 1, "successes": 1},
+    "diag_roundtrip.py": {"attempts": 1, "successes": 1},
+    "recalc.py": {"attempts": 3, "successes": 3},
+    "verify_office.py": {"attempts": 2, "successes": 1}
+  },
+  "helper_execution_totals": {"attempts": 10, "successes": 9},
+  "recalc_invocation_count": 3,
+  "recalc_report": {"status": "success", "total_errors": 0, "total_formulas": 7},
+  "final_verifier_status": "success"
+}

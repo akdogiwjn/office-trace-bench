@@ -1,0 +1,32 @@
+{
+  "schema_version": "office-semantic-oracle-v2",
+  "metric_values": {
+    "total_shipments": 658622,
+    "monthly_growth": -3.795659890659664e-05,
+    "durable_share": 0.506495379747412,
+    "nondurable_shipments": 325033
+  },
+  "scenario_values": {
+    "Base": {
+      "projected_shipments": 658622
+    },
+    "Expansion": {
+      "projected_shipments": 678380.66
+    },
+    "Contraction": {
+      "projected_shipments": 638863.34
+    }
+  },
+  "oracle_provenance": "Independent calculations over frozen source observations; these answers are not part of the Agent-facing task contract.",
+  "chart_values": {
+    "shipment_trend": [
+      653505,
+      658647,
+      658622
+    ],
+    "durability_mix": [
+      333589,
+      325033
+    ]
+  }
+}

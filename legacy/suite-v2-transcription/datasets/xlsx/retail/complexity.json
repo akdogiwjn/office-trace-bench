@@ -1,0 +1,45 @@
+{
+  "schema_version": "office-workbook-complexity-v1",
+  "input_sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+  "file_size_bytes": 10084,
+  "compressed_xlsx_size_bytes": 10084,
+  "uncompressed_package_bytes": 41389,
+  "sheet_count": 2,
+  "sheets": [
+    {
+      "name": "MARTS Table 1",
+      "used_cell_count": 494,
+      "populated_cell_count": 494,
+      "row_count": 38,
+      "column_count": 13,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 0,
+      "merged_ranges": [],
+      "chart_count": 0,
+      "merged_range_count": 0
+    },
+    {
+      "name": "Publication notes",
+      "used_cell_count": 18,
+      "populated_cell_count": 18,
+      "row_count": 18,
+      "column_count": 1,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 0,
+      "merged_ranges": [],
+      "chart_count": 0,
+      "merged_range_count": 0
+    }
+  ],
+  "used_cell_count": 512,
+  "populated_cell_count": 512,
+  "formula_count": 0,
+  "chart_count": 0,
+  "style_count": 1,
+  "merged_range_count": 0,
+  "has_shared_strings": false,
+  "cross_sheet_formula_count": 0,
+  "counting_method": "OOXML c elements; populated excludes style-only cells; row/column counts are maximum serialized cell coordinates, per sheet"
+}

@@ -9,10 +9,12 @@ Semantic correctness is an acceptance gate for collecting valid tool workloads.
 
 TLC is a benchmark-generated spreadsheet containing sampled real trip records and
 full-population summary tables. It is not a native TLC-published XLSX. Retail and M3
-are frozen official statistical tables transcribed without row expansion because
-native XLSX downloads were denied. HR is an unmodified cached native occupation-level
-OEWS spreadsheet, including all original sheets and aggregate/detail hierarchies.
-The cache has partial primary-source corroboration; official byte identity is unknown.
+are full unmodified official native Census workbooks: 35 yearly Retail worksheets and
+8 M3 benchmark worksheets with their original release layouts. HR is an unmodified
+occupation-level OEWS spreadsheet. Its original cache bytes match the owner-supplied
+workbook reported extracted from the official BLS ZIP; that ZIP acquisition was not
+independently observed because the Agent's redownload returns 403. Existing HR trace
+and acquisition provenance remain frozen, with a hash-bound supplementary record.
 These are different spreadsheet forms, not equivalent observations from four industries.
 PDF forms use fixed revisions and reproducible fictional records.
 

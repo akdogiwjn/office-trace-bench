@@ -1,3 +1,5 @@
+> 历史审计：Retail/M3 原表转录阶段，已被 [原生输入更新](native-input-update-v3.md) 取代。下文计数与来源边界只适用于当时冻结的 suite v2。
+
 # Suite v2 foundation audit — 2026-10-09
 
 本轮修改保留 OpenClaw Agent、vendored PDF/XLSX Skill、ATIF 和运行镜像主流程。

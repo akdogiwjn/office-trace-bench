@@ -8,7 +8,7 @@ First freeze inputs, actual provenance, shared task contracts, independent seman
 oracles and workbook-complexity metadata. Then independently verify source preservation,
 run real Agents, accept successful traces and publish canonical evidence with complete
 hash bindings. Test the repository in an independent checkout without a sibling project.
-Current evidence and remaining source limitations are in suite-audit-v2.md.
+Current evidence and remaining source limitations are in native-input-update-v3.md.
 
 Later, under a separate task, review helper revisions and dependencies, define both
 full-tool-chain and final-effective slices, compile recipe-v1 without LLM calls, and

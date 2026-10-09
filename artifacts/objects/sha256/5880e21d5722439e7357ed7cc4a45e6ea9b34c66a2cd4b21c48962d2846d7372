@@ -1,0 +1,12 @@
+{"step":"diagnostic","helper":"diag_roundtrip.py","status":"ok","note":"compared source vs re-saved copy to detect engine formatting drift"}
+{"step":"diagnostic_recalc","helper":"recalc.py","status":"ok","target":"work/roundtrip_test.xlsx","note":"confirmed LibreOffice drops empty-string cells and alters number formats"}
+{"step":"openpyxl_roundtrip_probe","helper":"inline","status":"ok","note":"openpyxl preserves data/formulas/number formats/styles except empty-string cells"}
+{"step":"build","helper":"build_enhance.py","status":"ok","target":"work/build.xlsx"}
+{"step":"recalc","helper":"recalc.py","status":"ok","target":"work/recalc_input.xlsx","result":{"status":"success","total_errors":0,"total_formulas":7}}
+{"step":"assemble","helper":"assemble_output.py","status":"fail","note":"KeyError rId1: rels attribute order (Target before Id)"}
+{"step":"build","helper":"build_enhance.py","status":"ok","target":"work/build.xlsx","note":"chart fix: from_rows=True"}
+{"step":"recalc","helper":"recalc.py","status":"ok","target":"work/recalc_input.xlsx","result":{"status":"success","total_errors":0,"total_formulas":7}}
+{"step":"assemble","helper":"assemble_output.py","status":"ok","note":"patched 1102 empty-string cells, injected 7 caches"}
+{"step":"verify","helper":"verify_office.py","status":"fail","note":"verification_exception TypeError: Cell not iterable (single-cell chart series)"}
+{"step":"pipeline","helper":"run_pipeline.sh","status":"ok"}
+{"step":"verify","helper":"verify_office.py","status":"ok","result":"success"}

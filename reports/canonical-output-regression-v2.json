@@ -1,6 +1,6 @@
 {
   "schema_version": "office-canonical-output-regression-v1",
-  "checked_at": "2026-10-09T08:37:13.044397+00:00",
+  "checked_at": "2026-10-09T10:26:19.366831+00:00",
   "status": "success",
   "verifier_source_hashes": {
     "office_trace_bench/__init__.py": "63d004276ebec93a5ce83bfb39ebb309667f171b10755287c5dd61653d618ff1",
@@ -1954,15 +1954,15 @@
     {
       "dataset_id": "manufacturing",
       "kind": "xlsx",
-      "run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
-      "trace_sha256": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
-      "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+      "run_id": "xlsx-manufacturing-20261009T101352Z-bd60f53e",
+      "trace_sha256": "1ef604c890dff1e83d10ac1cfeb154733d26a179b2652648f352014d9f919400",
+      "manifest_sha256": "d1b0226702960d952bfdc95e2c0d61a6b1232244acaa0675f8186437c6bec8b0",
       "output_hashes": {
-        "output/business_verification.json": "b02483279e999ad2000feebbc35aa7bf70619f779c47301fffe0a2ad7e586a38",
+        "output/business_verification.json": "1ebbfd7178bcbcfab01f098f15369abc3fcd5456bc35403dc3597273be96b0c6",
         "output/formula_recalc.json": "db37a72edd1870d80e18dd6df94bdf067bff976229628a3fd627b72d4f351618",
-        "output/manufacturing_enhanced.xlsx": "6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1",
-        "output/workbook_features.json": "6512bb85d764cfa36dba8d106947c02c9cc6bc46f5c5d34c4c66b91da05537f9",
-        "output/xlsx_enhancement_summary.json": "e5a2a17e69172db0d4c87d3297659a9c4d8a06171cdeb726a86f443e64c22f66"
+        "output/manufacturing_enhanced.xlsx": "a83be97688814b182624f4063e4015851a7345cd05ae526ade5f8980198c1662",
+        "output/workbook_features.json": "280fc1a493dbdb313acc12f98129988352949f1454253594031b76e237f13127",
+        "output/xlsx_enhancement_summary.json": "10cd7b1090743c0e650fa62d22f1e22863ce835cf63a3bd74f20fcb7bc318509"
       },
       "verification": {
         "schema_version": "office-verification-v1",
@@ -1970,7 +1970,7 @@
         "kind": "xlsx",
         "status": "success",
         "checks": {
-          "input:input/m3_shipments_202608.xlsx": {
+          "input:input/text.xlsx": {
             "ok": true,
             "detail": null
           },
@@ -1981,15 +1981,22 @@
           "source:worksheets": {
             "ok": true,
             "detail": [
-              "Shipments August 2026",
-              "Dashboard"
+              "Table 1",
+              "Table 2",
+              "Table 3",
+              "Table 4",
+              "Table 5",
+              "Table 6",
+              "Table 7",
+              "Sheet1",
+              "Overview"
             ]
           },
           "source:relative_order": {
             "ok": true,
             "detail": null
           },
-          "source:data:Shipments August 2026": {
+          "source:data:Table 1": {
             "ok": true,
             "detail": {
               "missing": [],
@@ -1997,23 +2004,219 @@
               "added": []
             }
           },
-          "source:formulas:Shipments August 2026": {
+          "source:formulas:Table 1": {
             "ok": true,
             "detail": []
           },
-          "source:number_formats:Shipments August 2026": {
+          "source:number_formats:Table 1": {
             "ok": true,
             "detail": []
           },
-          "source:merged_regions:Shipments August 2026": {
+          "source:data:Table 2": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Table 2": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Table 2": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Table 3": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Table 3": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Table 3": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Table 4": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Table 4": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Table 4": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Table 5": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Table 5": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Table 5": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Table 6": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Table 6": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Table 6": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Table 7": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Table 7": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Table 7": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Sheet1": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Sheet1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Sheet1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 1": {
             "ok": true,
             "detail": null
           },
-          "source:charts:Shipments August 2026": {
+          "source:charts:Table 1": {
             "ok": true,
             "detail": []
           },
-          "source:styles:Shipments August 2026": {
+          "source:styles:Table 1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 2": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Table 2": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Table 2": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 3": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Table 3": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Table 3": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 4": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Table 4": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Table 4": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 5": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Table 5": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Table 5": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 6": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Table 6": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Table 6": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Table 7": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Table 7": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Table 7": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Sheet1": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Sheet1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Sheet1": {
             "ok": true,
             "detail": []
           },
@@ -2029,7 +2232,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Dashboard!B6": {
+          "feature:formula:Overview!B6": {
             "ok": true,
             "detail": null
           },
@@ -2045,7 +2248,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Dashboard!B7": {
+          "feature:formula:Overview!B7": {
             "ok": true,
             "detail": null
           },
@@ -2061,7 +2264,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Dashboard!B8": {
+          "feature:formula:Overview!B8": {
             "ok": true,
             "detail": null
           },
@@ -2077,7 +2280,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Dashboard!B9": {
+          "feature:formula:Overview!B9": {
             "ok": true,
             "detail": null
           },
@@ -2137,7 +2340,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Dashboard!B18": {
+          "feature:formula:Overview!B18": {
             "ok": true,
             "detail": null
           },
@@ -2156,16 +2359,16 @@
           "chart:references:durability_mix": {
             "ok": true,
             "detail": [
-              "DASHBOARD!A22:A23",
-              "DASHBOARD!B22:B23"
+              "OVERVIEW!A22:A23",
+              "OVERVIEW!B22:B23"
             ]
           },
           "semantic:chart:durability_mix": {
             "ok": true,
             "detail": [
               [
-                333589,
-                325033
+                299293,
+                301964
               ]
             ]
           },
@@ -2180,17 +2383,17 @@
           "chart:references:shipment_trend": {
             "ok": true,
             "detail": [
-              "DASHBOARD!A26:A28",
-              "DASHBOARD!B26:B28"
+              "OVERVIEW!A26:A28",
+              "OVERVIEW!B26:B28"
             ]
           },
           "semantic:chart:shipment_trend": {
             "ok": true,
             "detail": [
               [
-                653505,
-                658647,
-                658622
+                598328,
+                602132,
+                601257
               ]
             ]
           },
@@ -2249,15 +2452,15 @@
     {
       "dataset_id": "retail",
       "kind": "xlsx",
-      "run_id": "xlsx-retail-20261009T081357Z-c3f36068",
-      "trace_sha256": "1ff52d9a6698c2455c7be08b1f5cc379a2f85012350408ac7402896d6a29249a",
-      "manifest_sha256": "b9aacfd3a459ca1b865da4031955607f684e655571bba4ce11b7b9ce228da0c3",
+      "run_id": "xlsx-retail-20261009T101352Z-725a21b6",
+      "trace_sha256": "a82aa4b889938382ac73a74a6bbd0109ce5c4d51028338b6a9d9fe500ef96cc6",
+      "manifest_sha256": "5604a33257c5acb1a803272226bbdfd931ad37e1159b228ae8f52cac3df0674b",
       "output_hashes": {
-        "output/business_verification.json": "2f23e57b5262e370b0d15c1c819ba6db7b58fde00f748ad31d3299cee2b23452",
-        "output/formula_recalc.json": "3efc8bca1d8cc9edc183952944e4de47be44d9c4ae0ffa402e29bdc87c57d940",
-        "output/retail_enhanced.xlsx": "d95fd7ecc76c001b89be4d40d67c26840eac794572977132108d9e40093989f3",
-        "output/workbook_features.json": "07957d8e89db176e62ce3b17104727158b0512b91b7fd48d88dccfa477d0cfd4",
-        "output/xlsx_enhancement_summary.json": "ff3eb75e78aa1a1cbc164bb877cf72654ddac5b231d9687453191951c3f5f719"
+        "output/business_verification.json": "05cc11bca57a9a8419977121eb0b902d14b66c5e99e8092a74c6b61b0395166d",
+        "output/formula_recalc.json": "5f4989e14b7385b3716099a47751d725bedb05615124e1a4c9bdb53597f71d5f",
+        "output/retail_enhanced.xlsx": "7d4c7e6f708399510438f773b140b0d366cacfab61b331b5f9e139515ec72e51",
+        "output/workbook_features.json": "45bed22e115743a4f7a7218b8d45cabbf39a816cce21a367905b5dcf54402e82",
+        "output/xlsx_enhancement_summary.json": "7a2f4d6120aef160a8a3dc9cc06dd6bbf67f404dbc4d801eb25d4076d5a4e90d"
       },
       "verification": {
         "schema_version": "office-verification-v1",
@@ -2265,7 +2468,7 @@
         "kind": "xlsx",
         "status": "success",
         "checks": {
-          "input:input/marts_table1_202608.xlsx": {
+          "input:input/mrtssales92-present.xlsx": {
             "ok": true,
             "detail": null
           },
@@ -2276,16 +2479,49 @@
           "source:worksheets": {
             "ok": true,
             "detail": [
-              "MARTS Table 1",
-              "Publication notes",
-              "Retail Analysis"
+              "2026",
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012",
+              "2011",
+              "2010",
+              "2009",
+              "2008",
+              "2007",
+              "2006",
+              "2005",
+              "2004",
+              "2003",
+              "2002",
+              "2001",
+              "2000",
+              "1999",
+              "1998",
+              "1997",
+              "1996",
+              "1995",
+              "1994",
+              "1993",
+              "1992",
+              "Overview"
             ]
           },
           "source:relative_order": {
             "ok": true,
             "detail": null
           },
-          "source:data:MARTS Table 1": {
+          "source:data:2026": {
             "ok": true,
             "detail": {
               "missing": [],
@@ -2293,15 +2529,15 @@
               "added": []
             }
           },
-          "source:formulas:MARTS Table 1": {
+          "source:formulas:2026": {
             "ok": true,
             "detail": []
           },
-          "source:number_formats:MARTS Table 1": {
+          "source:number_formats:2026": {
             "ok": true,
             "detail": []
           },
-          "source:data:Publication notes": {
+          "source:data:2025": {
             "ok": true,
             "detail": {
               "missing": [],
@@ -2309,35 +2545,959 @@
               "added": []
             }
           },
-          "source:formulas:Publication notes": {
+          "source:formulas:2025": {
             "ok": true,
             "detail": []
           },
-          "source:number_formats:Publication notes": {
+          "source:number_formats:2025": {
             "ok": true,
             "detail": []
           },
-          "source:merged_regions:MARTS Table 1": {
+          "source:data:2024": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2024": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2024": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2023": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2023": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2023": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2022": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2022": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2022": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2021": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2021": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2021": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2020": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2020": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2020": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2019": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2019": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2019": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2018": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2018": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2018": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2017": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2017": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2017": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2016": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2016": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2016": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2015": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2015": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2015": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2014": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2014": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2014": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2013": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2013": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2013": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2012": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2012": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2012": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2011": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2011": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2011": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2010": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2010": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2010": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2009": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2009": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2009": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2008": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2008": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2008": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2007": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2007": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2007": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2006": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2006": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2006": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2005": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2005": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2005": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2004": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2004": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2004": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2003": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2003": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2003": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2002": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2002": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2002": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2001": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2001": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2001": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:2000": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:2000": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:2000": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1999": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1999": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1999": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1998": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1998": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1998": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1997": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1997": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1997": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1996": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1996": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1996": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1995": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1995": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1995": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1994": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1994": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1994": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1993": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1993": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1993": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:1992": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:1992": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:1992": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2026": {
             "ok": true,
             "detail": null
           },
-          "source:charts:MARTS Table 1": {
+          "source:charts:2026": {
             "ok": true,
             "detail": []
           },
-          "source:styles:MARTS Table 1": {
+          "source:styles:2026": {
             "ok": true,
             "detail": []
           },
-          "source:merged_regions:Publication notes": {
+          "source:merged_regions:2025": {
             "ok": true,
             "detail": null
           },
-          "source:charts:Publication notes": {
+          "source:charts:2025": {
             "ok": true,
             "detail": []
           },
-          "source:styles:Publication notes": {
+          "source:styles:2025": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2024": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2024": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2024": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2023": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2023": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2023": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2022": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2022": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2022": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2021": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2021": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2021": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2020": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2020": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2020": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2019": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2019": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2019": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2018": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2018": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2018": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2017": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2017": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2017": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2016": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2016": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2016": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2015": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2015": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2015": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2014": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2014": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2014": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2013": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2013": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2013": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2012": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2012": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2012": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2011": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2011": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2011": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2010": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2010": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2010": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2009": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2009": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2009": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2008": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2008": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2008": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2007": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2007": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2007": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2006": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2006": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2006": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2005": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2005": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2005": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2004": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2004": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2004": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2003": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2003": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2003": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2002": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2002": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2002": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2001": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2001": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2001": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:2000": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:2000": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:2000": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1999": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1999": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1999": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1998": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1998": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1998": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1997": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1997": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1997": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1996": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1996": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1996": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1995": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1995": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1995": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1994": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1994": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1994": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1993": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1993": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1993": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:1992": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:1992": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:1992": {
             "ok": true,
             "detail": []
           },
@@ -2353,7 +3513,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Retail Analysis!B6": {
+          "feature:formula:Overview!B6": {
             "ok": true,
             "detail": null
           },
@@ -2369,7 +3529,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Retail Analysis!B7": {
+          "feature:formula:Overview!B7": {
             "ok": true,
             "detail": null
           },
@@ -2385,7 +3545,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Retail Analysis!B8": {
+          "feature:formula:Overview!B8": {
             "ok": true,
             "detail": null
           },
@@ -2445,7 +3605,7 @@
             "ok": true,
             "detail": null
           },
-          "feature:formula:Retail Analysis!B17": {
+          "feature:formula:Overview!B19": {
             "ok": true,
             "detail": null
           },
@@ -2464,18 +3624,17 @@
           "chart:references:adjusted_trend": {
             "ok": true,
             "detail": [
-              "RETAILANALYSIS!A21:A23",
-              "RETAILANALYSIS!B20",
-              "RETAILANALYSIS!B21:B23"
+              "OVERVIEW!B22:D22",
+              "OVERVIEW!B23:D23"
             ]
           },
           "semantic:chart:adjusted_trend": {
             "ok": true,
             "detail": [
               [
-                768587,
-                764462,
-                773947
+                731415,
+                732898,
+                729538
               ]
             ]
           },

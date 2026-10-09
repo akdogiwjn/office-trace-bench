@@ -1,0 +1,108 @@
+{
+  "schema_version": "office-scenario-qualification-v1",
+  "dataset_id": "manufacturing",
+  "run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
+  "source_trace_sha256": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
+  "source_workbook_sha256": "6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1",
+  "expected_sha256": "cc342a2fa33df138a395f259f4f09437462aaf83c7d53300731d5b63db70c0c8",
+  "status": "success",
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "recalc_status": "success",
+      "checks": {
+        "projected_shipments": {
+          "actual": 658622,
+          "expected": 658622,
+          "ok": true
+        },
+        "base_metric:total_shipments": {
+          "actual": 658622,
+          "expected": 658622,
+          "ok": true
+        },
+        "base_metric:monthly_growth": {
+          "actual": -3.79565989065463e-05,
+          "expected": -3.795659890659664e-05,
+          "ok": true
+        },
+        "base_metric:durable_share": {
+          "actual": 0.506495379747412,
+          "expected": 0.506495379747412,
+          "ok": true
+        },
+        "base_metric:nondurable_shipments": {
+          "actual": 325033,
+          "expected": 325033,
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Expansion",
+      "recalc_status": "success",
+      "checks": {
+        "projected_shipments": {
+          "actual": 678380.66,
+          "expected": 678380.66,
+          "ok": true
+        },
+        "base_metric:total_shipments": {
+          "actual": 658622,
+          "expected": 658622,
+          "ok": true
+        },
+        "base_metric:monthly_growth": {
+          "actual": -3.79565989065463e-05,
+          "expected": -3.795659890659664e-05,
+          "ok": true
+        },
+        "base_metric:durable_share": {
+          "actual": 0.506495379747412,
+          "expected": 0.506495379747412,
+          "ok": true
+        },
+        "base_metric:nondurable_shipments": {
+          "actual": 325033,
+          "expected": 325033,
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Contraction",
+      "recalc_status": "success",
+      "checks": {
+        "projected_shipments": {
+          "actual": 638863.34,
+          "expected": 638863.34,
+          "ok": true
+        },
+        "base_metric:total_shipments": {
+          "actual": 658622,
+          "expected": 658622,
+          "ok": true
+        },
+        "base_metric:monthly_growth": {
+          "actual": -3.79565989065463e-05,
+          "expected": -3.795659890659664e-05,
+          "ok": true
+        },
+        "base_metric:durable_share": {
+          "actual": 0.506495379747412,
+          "expected": 0.506495379747412,
+          "ok": true
+        },
+        "base_metric:nondurable_shipments": {
+          "actual": 325033,
+          "expected": 325033,
+          "ok": true
+        }
+      },
+      "passed": true
+    }
+  ],
+  "scope": "Functional scenario QA on disposable copies after Agent execution. No LLM, no CPU/OS replay or performance measurements. These recalc calls are not original Agent tool events."
+}

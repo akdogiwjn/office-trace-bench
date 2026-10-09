@@ -1,0 +1,3130 @@
+{
+  "schema_version": "office-canonical-output-regression-v1",
+  "checked_at": "2026-10-09T08:37:13.044397+00:00",
+  "status": "success",
+  "verifier_source_hashes": {
+    "office_trace_bench/__init__.py": "63d004276ebec93a5ce83bfb39ebb309667f171b10755287c5dd61653d618ff1",
+    "office_trace_bench/artifact_capture.py": "8eeea928350bac756b4ad38466a6909fc48d731c2ea15442b7b9718417f31040",
+    "office_trace_bench/atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+    "office_trace_bench/canonical.py": "9c57f45e2e0080621bf90ef4501daa1b8634240b98c07591f7b5964e571350ee",
+    "office_trace_bench/cli.py": "e54d03ee0686b3a17006473517acf12b2eef735d8fb5d11ba605f7f95bfc4dcf",
+    "office_trace_bench/complexity.py": "fd297ceda4411679bb6eebcc0c4f4a6120c453a0ebe2cc5232f085f31c5ac8c5",
+    "office_trace_bench/context.py": "11891fc4e355ae140e62e63011bb24b5b7552b888dbbaf33d04c168b1774f78c",
+    "office_trace_bench/contracts.py": "e62eece9e7fbabffdd03ddd1a6ec8cc1d2e1af9aa7286990344622ec9d8b760f",
+    "office_trace_bench/prompts.py": "31008029dcb8dbef1b4024779bc77b74a8b03b31e932f06eb86a5e8b0800828e",
+    "office_trace_bench/records.py": "f205dbb3e3a25ae26b7fa525a621a8f970e77498294cd417b1682b2f0bbe8d6d",
+    "office_trace_bench/runner.py": "16da332277fde4a1ed80b2a4f1f3a9aa829d204a2743a68dcb828f53138c3a1d",
+    "office_trace_bench/spreadsheet.py": "d7460345e37a5018f845ae4671183d4f20f1cd12bfd508f8b2f6ca92bb9d23af",
+    "office_trace_bench/trace.py": "673ebeda64ef8015fe2d3f8e9e0a30244c1c380829718a28dc51eaf3cdb7fbeb",
+    "office_trace_bench/verify.py": "35322df61f69c00695e6e6db13ad7e8897c7220f1b26d6674d7de5314d3005dd",
+    "office_trace_bench/workbooks.py": "eacd45d2cc8732454f62bb8496e19b6086d2ca74fd01739628b7840572e67a1c",
+    "scripts/verify_canonical_outputs.py": "4ac8f76a9e588d2284528c444b1692f7605ac21380d65ce406a96624e8819dfb"
+  },
+  "datasets": [
+    {
+      "dataset_id": "irs_w4",
+      "kind": "pdf",
+      "run_id": "pdf-irs_w4-20261009T060857Z-ef1696a0",
+      "trace_sha256": "3361b484e8daf305b45a03bac6dbbac0e5cd740999168fffa73fd2faaee90f45",
+      "manifest_sha256": "ea7e0817247d77740b4c5d46330f981b53814dd91ca28079cd824aa0650404f9",
+      "output_hashes": {
+        "output/batch_summary.json": "b0d2b5d7d71d5062e0c3474fde3b4c89947b0b2b7d04f013e8568757b0014071",
+        "output/business_verification.json": "e90000c2f6b9e8f1f19e32b9aaa256dbd3415f8fe037026be57955bda8d706bc",
+        "output/check_fillable_fields.log": "469c7ba0dd5d021c18d2bc6648b4f1a5fe4842fcd4f77e85058a3b3969eeecb1",
+        "output/field_values/employee_01.json": "e33b313ada78e1b21576a32157f1cf3fa4c9e44a2e26814fe452dedcd33d44f6",
+        "output/field_values/employee_02.json": "39eea7a386f468de74e7015d60ff15b0e494aaacb74788ae673ed270d6d8e681",
+        "output/field_values/employee_03.json": "ff9536a63ec5ee31338abc1ed54c4c31ac72c296ec279c65e59d3861c9d13737",
+        "output/field_values/employee_04.json": "ff79a36ab9f5242e76873cd60ad4c518d6140ce06073b6b0a66294b19c2757b5",
+        "output/field_values/employee_05.json": "8b4ed1f6526aa5c08c992a44e18f99cc9d8d282f77e9f15a9014939d6182bd57",
+        "output/field_values/employee_06.json": "37af96f6e9d2a510c13ccad9139472c8c36532d8cba0b3ea19a4b247f80efc68",
+        "output/field_values/employee_07.json": "ae16a5e2eff2e10398d2165c1bb01ff99db46fdc88ad3fdffc59a9f3377df033",
+        "output/field_values/employee_08.json": "222390f1d4e4b94df4c842933ff7cadbacb7b1c1b51ce9734b952b7a9c33e62c",
+        "output/field_values/employee_09.json": "9399ad3f1d266d861e86ff688a131172240fa776b051fbebfcfedc3dc57f76b7",
+        "output/field_values/employee_10.json": "6c5efc107e5515f8dccf021c1c486e48a3fae707d028b5e37ee7d47cf986941b",
+        "output/filled/employee_01.pdf": "786e54dde37852fcbb3eda02b6833fd02ec1d72af615009fc5d3483751365ce8",
+        "output/filled/employee_02.pdf": "128d52528379f2197f9ea25e503b193b50ed8c06e19f5f6d0214082db63826c2",
+        "output/filled/employee_03.pdf": "1282ed22a77b0b0a339854c8891812a6a5c514afcc3cdba2527c973254fbc444",
+        "output/filled/employee_04.pdf": "178a9f518a12d5a379757557fffe24c24568b4497db8c9bb320a2c40c7e13103",
+        "output/filled/employee_05.pdf": "11ebcd0b16913b28b6509e78f46a2ace4f1b0d01b10134e69a0b69c3a5a5ee0b",
+        "output/filled/employee_06.pdf": "35ab816e7a4b29e0aaaacc3404bfbfb365d902fc65f0a8b483240b0de20ae0af",
+        "output/filled/employee_07.pdf": "d161fdccc710c35ec004c1a427cd8734eaec236acdde578ace4d9a4055a956a9",
+        "output/filled/employee_08.pdf": "8ec62fcca08fa2ce169a83017787f65aaa2e8a2d4bc1ea1337c43b7d277a3f9c",
+        "output/filled/employee_09.pdf": "69e1d27ba0071eff909b7636b605ad2bebcf1a383b1db14cef53a5f5c85ba79f",
+        "output/filled/employee_10.pdf": "03d7009fb1840f4f64b83b4de20ea474f1e37c4c4f6e20b627c6edbb88f037bd",
+        "output/form_field_info.json": "324d971ccee91702f29aa1fcf97ac1bd8991ba33c41771a7f349de9073e5c4a7",
+        "output/rendered/employee_01/page_1.png": "60c9e6fdcd90306904dfab3da1c02e599a0b1bdfb52c70f4faa4f268411bcf7a",
+        "output/rendered/employee_01/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_01/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_01/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_01/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_02/page_1.png": "081ecf055c10f6efa0ba0fd90b72b2bb5c6614446da3818b27a29839e8df0c64",
+        "output/rendered/employee_02/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_02/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_02/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_02/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_03/page_1.png": "c4883216b1f003240126ff9772e0f9c97d13b98cfc444275c4f67c73baf3417a",
+        "output/rendered/employee_03/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_03/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_03/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_03/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_04/page_1.png": "0aee985c90dc07c8e7e1e8f98f6489d933db42bc79b6cdbd8ba8999f5ae7cc3d",
+        "output/rendered/employee_04/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_04/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_04/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_04/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_05/page_1.png": "4783c0835b40ae5c97abe96106c5f0d8ad0e54523bb70596d1d78fc421e36da0",
+        "output/rendered/employee_05/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_05/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_05/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_05/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_06/page_1.png": "969d63d52cfa0179d29aa27d1902f80b008c3ed6fc1aa9c5370ad9c191cca891",
+        "output/rendered/employee_06/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_06/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_06/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_06/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_07/page_1.png": "6228242ee6704eea87a51652d0d6353982f45515e0a0ec417d264d5e1ee597ad",
+        "output/rendered/employee_07/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_07/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_07/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_07/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_08/page_1.png": "8cf3f26d5d91112deee902aacf21002e73ea39ce7e3a43d43841442b18881335",
+        "output/rendered/employee_08/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_08/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_08/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_08/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_09/page_1.png": "e04852e22687e81f34a735b74a6eba64cb5c12353c92c01fa24f4d3a249a385b",
+        "output/rendered/employee_09/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_09/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_09/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_09/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/employee_10/page_1.png": "0a04e2eaa92896ffed805754c41798dad655e159596f91a767de979706f64cce",
+        "output/rendered/employee_10/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/employee_10/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/employee_10/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/employee_10/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d",
+        "output/rendered/template/page_1.png": "63d79c12c65f76b0b85e5283438c2b2ab03cfe9e05dfa31b64a9478debfdf403",
+        "output/rendered/template/page_2.png": "6d428c54029f85e8571553b02c6c7634989940bb70d067f4f29b69b4b3104bd4",
+        "output/rendered/template/page_3.png": "d87c579125bb36a72af8cfb81d42eecb6c1a60c6cdfd9dd3bbac7ca6f7c82638",
+        "output/rendered/template/page_4.png": "b26e880027e13980b4973e2361f750e8594cdb5c65411665361fa7a22a81fe24",
+        "output/rendered/template/page_5.png": "1a06e963dd46c0d70582d188c5854e2fad088a57c49f1cfbc9e8c6e6e0bd8b5d"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "irs_w4",
+        "kind": "pdf",
+        "status": "success",
+        "checks": {
+          "input:input/fw4_2026.pdf": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/pdf_dataset_sources.md": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/synthetic_employees.json": {
+            "ok": true,
+            "detail": null
+          },
+          "template_form": {
+            "ok": true,
+            "detail": null
+          },
+          "field_inspection": {
+            "ok": true,
+            "detail": null
+          },
+          "record_count": {
+            "ok": true,
+            "detail": null
+          },
+          "render:template": {
+            "ok": true,
+            "detail": 5
+          },
+          "pages:employee_01": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_01": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_01": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_01": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_01": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_01": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_01": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_01:1": {
+            "ok": true,
+            "detail": 1906
+          },
+          "pages:employee_02": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_02": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_02": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_02": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_02": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_02": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_02": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_02:1": {
+            "ok": true,
+            "detail": 1959
+          },
+          "pages:employee_03": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_03": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_03": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_03": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_03": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_03": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_03": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_03:1": {
+            "ok": true,
+            "detail": 1950
+          },
+          "pages:employee_04": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_04": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_04": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_04": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_04": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_04": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_04": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_04:1": {
+            "ok": true,
+            "detail": 1948
+          },
+          "pages:employee_05": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_05": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_05": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_05": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_05": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_05": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_05": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_05:1": {
+            "ok": true,
+            "detail": 1967
+          },
+          "pages:employee_06": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_06": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_06": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_06": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_06": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_06": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_06": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_06:1": {
+            "ok": true,
+            "detail": 1974
+          },
+          "pages:employee_07": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_07": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_07": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_07": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_07": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_07": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_07": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_07:1": {
+            "ok": true,
+            "detail": 1929
+          },
+          "pages:employee_08": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_08": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_08": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_08": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_08": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_08": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_08": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_08:1": {
+            "ok": true,
+            "detail": 1977
+          },
+          "pages:employee_09": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_09": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_09": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_09": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_09": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_09": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_09": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_09:1": {
+            "ok": true,
+            "detail": 1966
+          },
+          "pages:employee_10": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:employee_10": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:employee_10": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:employee_10": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:employee_10": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:employee_10": {
+            "ok": true,
+            "detail": null
+          },
+          "render:employee_10": {
+            "ok": true,
+            "detail": 5
+          },
+          "visible_change:employee_10:1": {
+            "ok": true,
+            "detail": 1996
+          },
+          "exact_pdf_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "exact_mapping_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "summary:input_form": {
+            "ok": true,
+            "detail": "fw4_2026.pdf"
+          },
+          "summary:applicant_count": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:filled_pdf_count": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:rendered_page_count": {
+            "ok": true,
+            "detail": 55
+          },
+          "summary:ssn_and_signatures_left_blank": {
+            "ok": true,
+            "detail": true
+          },
+          "summary:fill_script_invocations": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:render_script_invocations": {
+            "ok": true,
+            "detail": 11
+          },
+          "deliverable:check_fillable_fields.log": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:form_field_info.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:field_values": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:filled": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:rendered": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:batch_summary.json": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    },
+    {
+      "dataset_id": "opm",
+      "kind": "pdf",
+      "run_id": "pdf-opm-20261009T060618Z-87cbc811",
+      "trace_sha256": "cdddfcce32d5d3209f71fec07e628f3f5569f36d328b9496f044bd8fb35cabe8",
+      "manifest_sha256": "c186b2ed0fc07639048c7bb2378a30831e2c53e832c186a5f99aac9f0e40532d",
+      "output_hashes": {
+        "output/batch_summary.json": "f1dfac7f189642ed8106add30a8fef2623791d707f9ce717d40d03120eda586e",
+        "output/business_verification.json": "b74111c3bbfa9256a528e8d287b59abf4311fa78f4c8bf706983fe4903a948a7",
+        "output/check_fillable_fields.log": "469c7ba0dd5d021c18d2bc6648b4f1a5fe4842fcd4f77e85058a3b3969eeecb1",
+        "output/field_values/applicant_01.json": "b11f34e313279e4ae34f35d8741490f581f21be6d42eb99f16601e530c0a53e7",
+        "output/field_values/applicant_02.json": "0215069c5f8b76e0ae2c5bb99a6ed07d766a36db59edd908fd570bf91a5f010c",
+        "output/field_values/applicant_03.json": "cc1a2b51b6b50de18c2211a93fb610c55ad7d120faac788dedfaf29b5ca7b659",
+        "output/field_values/applicant_04.json": "f482d3055ca013e2ff8b58d43df702a71b0db61ad6ee41900a7835a2f7414727",
+        "output/field_values/applicant_05.json": "8e940cb0612970835e0669c6c961aa8e90796cb3d17ddae4a21b4ed616684fdf",
+        "output/field_values/applicant_06.json": "a10243b432c5d79b85ba913c285a363071383fea9a90b16f4a6064e0727e843a",
+        "output/field_values/applicant_07.json": "a6abbe6ea96ee63f09c5b78d578cb9f90b56568180b2672021aead6347e9e787",
+        "output/field_values/applicant_08.json": "ccfd242addea5522cbaca421492fa28e4b13554bc7dc4b7d38bcffdbade1b59e",
+        "output/field_values/applicant_09.json": "747075839db8d83287e2dc0c9092bcc0048b8e9ff6600123da243f29cdfee1cb",
+        "output/field_values/applicant_10.json": "ac7281a1d26cd7de50ccd4a4a834c2a8f0f8b8681a78b633ba139377bcf98a9d",
+        "output/filled/applicant_01.pdf": "85f1b17bec54d846a84a0573f6d105205e372db20fdb72924819e664fa051756",
+        "output/filled/applicant_02.pdf": "3e898de9c0f2a153248d34717c587e5d6ed8058ccc36d6c3a2cd7dd9f2da1ba5",
+        "output/filled/applicant_03.pdf": "8c31530819d1e5e12fbe5d0cd8b53bb1032d5a529bc081c585e082d84456c747",
+        "output/filled/applicant_04.pdf": "68280ced1e025f99a5ed5d9437586f48ac8c115c9e84e78b3dfbf12add9f1e48",
+        "output/filled/applicant_05.pdf": "4a3364f017c8bdc802210d038b7bc52794fc6d7bbe63db1c60dee6e54e370337",
+        "output/filled/applicant_06.pdf": "1d0b8ecc4a183d797998e6e982b8d902f0ec0e85a46b2df3964146c0720fc23a",
+        "output/filled/applicant_07.pdf": "38f8fd79b6aabb58f39abe9ff4abdef187442d028330d54a8b5483667c87b055",
+        "output/filled/applicant_08.pdf": "736f6cb14db70f6cf80a98e920f7347b247f135cd7b80abfecab9b994d13be08",
+        "output/filled/applicant_09.pdf": "44543668338a25cd12547b957f38f8c0a03166c63c03c7fe3f2b2f5892c4c67b",
+        "output/filled/applicant_10.pdf": "f994a500fbda33a404f33707b1f94ec968632bdb02f525f317bacaa66bff43f1",
+        "output/form_field_info.json": "ac8e2cb735563a53359c62a961f2361879625d751a536dc6980cd895696b8821",
+        "output/invocation_log.json": "bff4a3935aa0a5a420d831e151556f30d35b3421cb7935324b065a83ca2e1f4a",
+        "output/rendered/applicant_01/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_01/page_2.png": "dbd1e67a62b0653fff564fbd8a3b917eb75c4e81d0f6ee42092e9adfcb8e694b",
+        "output/rendered/applicant_01/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_02/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_02/page_2.png": "bc151bb656b6e9adde05df231639aae97c7535ea3ed6ee29c6d83a158e6e7ff7",
+        "output/rendered/applicant_02/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_03/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_03/page_2.png": "1b1675af4978beb564ad35555064f46968f748d405114f01ede670b1d49c1de8",
+        "output/rendered/applicant_03/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_04/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_04/page_2.png": "a59352166152ae958eeb724678587315643a138bd7f37518130d950a006f706a",
+        "output/rendered/applicant_04/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_05/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_05/page_2.png": "c23a8f5f75e63ebeae3b1bbb4a8b598429a9126495df38cd0cde11781399b4e5",
+        "output/rendered/applicant_05/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_06/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_06/page_2.png": "d2d38996b066ac297869abef45d4a750ea5ebd5a81d930e4129162a080d1cef4",
+        "output/rendered/applicant_06/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_07/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_07/page_2.png": "91aa6797718fae6193e0fa8a737af41969afaf1621e5be8ffef8d601b5ba1b8c",
+        "output/rendered/applicant_07/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_08/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_08/page_2.png": "2d12b50e75c337e8a9a56ea1e42c0e51c190f5c71eeb9125dffca8f82b02f11a",
+        "output/rendered/applicant_08/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_09/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_09/page_2.png": "af83270941ce231c81abd999835127d7fe65279c96c12ddfa4f5af9274195e13",
+        "output/rendered/applicant_09/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/applicant_10/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/applicant_10/page_2.png": "fbb7d7351a434eb3d808c174855372ae0bb00bfe5041fbf8c599f34ddd4bcd9c",
+        "output/rendered/applicant_10/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+        "output/rendered/template/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+        "output/rendered/template/page_2.png": "cac3bd9ff3da266eefbc8e8a7f6f04452fe92e5eb793326e7cec4cc81512ac84",
+        "output/rendered/template/page_3.png": "9ad2d01d8ba81fd1f0851b75c4a045511dd30b8e5c9270b4882f6b539408aaa0"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "opm",
+        "kind": "pdf",
+        "status": "success",
+        "checks": {
+          "input:input/synthetic_applicants.json": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/pdf_dataset_sources.md": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/of306_aug2023.pdf": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/verify_pdf_batch.py": {
+            "ok": true,
+            "detail": null
+          },
+          "template_form": {
+            "ok": true,
+            "detail": null
+          },
+          "field_inspection": {
+            "ok": true,
+            "detail": null
+          },
+          "record_count": {
+            "ok": true,
+            "detail": null
+          },
+          "render:template": {
+            "ok": true,
+            "detail": 3
+          },
+          "pages:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_01": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_01:2": {
+            "ok": true,
+            "detail": 7742
+          },
+          "pages:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_02": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_02:2": {
+            "ok": true,
+            "detail": 7598
+          },
+          "pages:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_03": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_03:2": {
+            "ok": true,
+            "detail": 7684
+          },
+          "pages:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_04": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_04:2": {
+            "ok": true,
+            "detail": 7528
+          },
+          "pages:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_05": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_05:2": {
+            "ok": true,
+            "detail": 7727
+          },
+          "pages:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_06": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_06:2": {
+            "ok": true,
+            "detail": 7714
+          },
+          "pages:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_07": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_07:2": {
+            "ok": true,
+            "detail": 7931
+          },
+          "pages:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_08": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_08:2": {
+            "ok": true,
+            "detail": 7813
+          },
+          "pages:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_09": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_09:2": {
+            "ok": true,
+            "detail": 7691
+          },
+          "pages:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_10": {
+            "ok": true,
+            "detail": 3
+          },
+          "visible_change:applicant_10:2": {
+            "ok": true,
+            "detail": 8075
+          },
+          "exact_pdf_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "exact_mapping_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "summary:input_form": {
+            "ok": true,
+            "detail": "of306_aug2023.pdf"
+          },
+          "summary:applicant_count": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:filled_pdf_count": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:rendered_page_count": {
+            "ok": true,
+            "detail": 33
+          },
+          "summary:ssn_and_signatures_left_blank": {
+            "ok": true,
+            "detail": true
+          },
+          "deliverable:check_fillable_fields.log": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:form_field_info.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:field_values": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:filled": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:rendered": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:batch_summary.json": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    },
+    {
+      "dataset_id": "sba1919",
+      "kind": "pdf",
+      "run_id": "pdf-sba1919-20261009T060857Z-b7a0ae3b",
+      "trace_sha256": "0378b2448dae7c681a504ebb2a38f904e127dabbcd058f26a8e36f8bac56e89d",
+      "manifest_sha256": "2b65a2ca089abdf246fd9695cd539bb2890d6aaaa752083a352e4b2835e6b446",
+      "output_hashes": {
+        "output/batch_summary.json": "bce322123bb70d6aa1be42e416256c139da0dd91156ae1110075787df06dfcf2",
+        "output/business_verification.json": "7e216d4b56fce60519e817cfa5bb43b42dda227e03ed094d3d16640485971571",
+        "output/check_fillable_fields.log": "469c7ba0dd5d021c18d2bc6648b4f1a5fe4842fcd4f77e85058a3b3969eeecb1",
+        "output/field_values/applicant_01.json": "5f8f9495451ae0681d3def450d29e75657b8be4dc4553f6790b164dac25faae8",
+        "output/field_values/applicant_02.json": "1031fe90bd6e7a697c4f951c579a956b7375f1c9c2d7fff34f02765398b8219f",
+        "output/field_values/applicant_03.json": "1a6b5ec320575bc750664ef107284608db6c5ce0cdbd00ff1e70b9ef3772afe0",
+        "output/field_values/applicant_04.json": "733072891749fa2d6273fa2bd7cae849e34ab06caaeaa21e11ddf797ddbbc73b",
+        "output/field_values/applicant_05.json": "50e6f727f7bcc346dbfd2b3cd94c0a00d0b09abcc3d84f2cf946491c5c869dd9",
+        "output/field_values/applicant_06.json": "be6b7572f9963a9bd94605ebba2b74c93bfe1f3ddbc05b32d340f414f7f6fb3b",
+        "output/field_values/applicant_07.json": "2c9349b2f789a8a90a8b17ded59a874fc66519061f8396b723400d72486b0bc6",
+        "output/field_values/applicant_08.json": "b267e76cf421f2c407775781af3878268f14f44d3a86036ef6887b3bc77d67b1",
+        "output/field_values/applicant_09.json": "ff0c49f1c47eba4acffa4a2edb69e14ce42fc7cbf8eb0a174d032ff537ac5f22",
+        "output/field_values/applicant_10.json": "409e61f1dab4b10b3fe76d6354509ca98755308f954cd032e22e1875cde005f4",
+        "output/filled/applicant_01.pdf": "3cd204f379fd7a2c22ee51c6053bc97f1d05bb5f47a74a1484cafd761c8bab07",
+        "output/filled/applicant_02.pdf": "29e03bbcba6ad04d9937c4ea001688055154aa0737946967a312b4ec433007d5",
+        "output/filled/applicant_03.pdf": "d2b03dd430d281af5ef54fa7907e3e3d9637936e97fe71df88f5eff1400352f1",
+        "output/filled/applicant_04.pdf": "345e292435dc3e4d47766b4b4a87b7c57c0f1779a6d97af856edd8d9fef24fe8",
+        "output/filled/applicant_05.pdf": "3bdb727ee843b252856f63700461dfc9f69216f946b3be02d295d905ba1bdb96",
+        "output/filled/applicant_06.pdf": "d2d79f2cb772f6305e59c1fd4d4ce681ec62dce282fff55390b03efcfe8aed77",
+        "output/filled/applicant_07.pdf": "963e736378e8de42b32a8236aa719f7d5fda285d3b36feb5fad3d65a8596f0f6",
+        "output/filled/applicant_08.pdf": "7d76dd2d1e23b5cdb3bddaa979bf78d9ccd501e3ef0c8b3fa0f39431085cd023",
+        "output/filled/applicant_09.pdf": "895fffb9191890cdc5ca27aa0a0cbf1f5a0b0627fcf24fcb4c2ccb568631d9fc",
+        "output/filled/applicant_10.pdf": "8bafe65a36886e5fe822e24bd754ce80108a22b82bd2dc242ed3504341e935ab",
+        "output/form_field_info.json": "846dd035900b79d8a0702bb59598bf2c245f5cded7e10692d44d474d1a284972",
+        "output/rendered/applicant_01/page_1.png": "0eb7672e7374d52d8dd7c5a8e841eb9a17006919b3a7a430ff2d87122431714e",
+        "output/rendered/applicant_01/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_01/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_01/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_01/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_01/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_01/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_02/page_1.png": "26352041259b1c88d66ab60c9f4fb9fcd9ad310c3263970f6351c4b76f3adb46",
+        "output/rendered/applicant_02/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_02/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_02/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_02/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_02/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_02/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_03/page_1.png": "46286365cc44cb6bd068f158db1f6c33c3cb5a0b627eec1870878fd70849b12a",
+        "output/rendered/applicant_03/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_03/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_03/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_03/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_03/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_03/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_04/page_1.png": "d22ced01c70d14c574c4611c4534b773429c0cda1b597af43fa31b74f7cebc61",
+        "output/rendered/applicant_04/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_04/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_04/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_04/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_04/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_04/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_05/page_1.png": "706bb95fe45ca3500a082ac3dca2063e395bcdfd55f0f9f5cfc5fa9330f217b2",
+        "output/rendered/applicant_05/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_05/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_05/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_05/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_05/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_05/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_06/page_1.png": "ca4d65ead58c13c8de3b62c163df63cc1f6103851911686bb3d1130203a8d480",
+        "output/rendered/applicant_06/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_06/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_06/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_06/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_06/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_06/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_07/page_1.png": "251783b122643aed8ec5288e8c920b422b148e5883af77db0aa026e9ca8a05d8",
+        "output/rendered/applicant_07/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_07/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_07/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_07/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_07/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_07/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_08/page_1.png": "05e374715667af6a5cf26ccfe21dbfc05907eb29036c755747e021c81cf2c395",
+        "output/rendered/applicant_08/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_08/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_08/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_08/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_08/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_08/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_09/page_1.png": "c4f5ab0583f55ad8c3643dc4d6e35622c5ca7871f4edaeb0dfcf866551851631",
+        "output/rendered/applicant_09/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_09/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_09/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_09/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_09/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_09/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/applicant_10/page_1.png": "afa073675c91a8020582b4b1a9922215339387aabca988b7a38d8b1cf5b3b253",
+        "output/rendered/applicant_10/page_2.png": "1ccf7f90a7f5a7851464eab7f3d2eceb4e49129b17417645fd1d0ed8eb48f217",
+        "output/rendered/applicant_10/page_3.png": "5d633afe17cbe50cde00ee18648b54ffffab6e60b3abf40373a07002d8d41485",
+        "output/rendered/applicant_10/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/applicant_10/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/applicant_10/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/applicant_10/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863",
+        "output/rendered/template/page_1.png": "9743dc31f099df25a30974281cadfe25059c7bcb004aad9ce84922de3e1122db",
+        "output/rendered/template/page_2.png": "e2bcf3bb428545b7dce0521c95a90622b6f31b2bea860836750e96132bc29b68",
+        "output/rendered/template/page_3.png": "a200af547b6626cb1ba3b24091883e7a6c240258116a2f6de621913f7114f80b",
+        "output/rendered/template/page_4.png": "c0755bc2f44d370b539b559756beab0eb5b2eef9e7407e29041be0785fc74182",
+        "output/rendered/template/page_5.png": "c6471eb015c3954bf8bfbe7869dc420e31d5af44234a66d4422e6a35662dd521",
+        "output/rendered/template/page_6.png": "a569340080bc85b50ea955f2c84b2981b068da120e53d43241afdfd9e176cf1b",
+        "output/rendered/template/page_7.png": "3effdb381b8de40aa8bb7ebd67ed73f13ba9ec2ab407fade3fc414e45df82863"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "sba1919",
+        "kind": "pdf",
+        "status": "success",
+        "checks": {
+          "input:input/pdf_dataset_sources.md": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/sba1919_2024.pdf": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/synthetic_applicants.json": {
+            "ok": true,
+            "detail": null
+          },
+          "template_form": {
+            "ok": true,
+            "detail": null
+          },
+          "field_inspection": {
+            "ok": true,
+            "detail": null
+          },
+          "record_count": {
+            "ok": true,
+            "detail": null
+          },
+          "render:template": {
+            "ok": true,
+            "detail": 7
+          },
+          "pages:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_01": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_01": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_01:1": {
+            "ok": true,
+            "detail": 18520
+          },
+          "visible_change:applicant_01:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_01:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_02": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_02": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_02:1": {
+            "ok": true,
+            "detail": 18660
+          },
+          "visible_change:applicant_02:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_02:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_03": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_03": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_03:1": {
+            "ok": true,
+            "detail": 18742
+          },
+          "visible_change:applicant_03:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_03:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_04": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_04": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_04:1": {
+            "ok": true,
+            "detail": 18655
+          },
+          "visible_change:applicant_04:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_04:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_05": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_05": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_05:1": {
+            "ok": true,
+            "detail": 18859
+          },
+          "visible_change:applicant_05:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_05:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_06": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_06": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_06:1": {
+            "ok": true,
+            "detail": 18854
+          },
+          "visible_change:applicant_06:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_06:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_07": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_07": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_07:1": {
+            "ok": true,
+            "detail": 18508
+          },
+          "visible_change:applicant_07:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_07:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_08": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_08": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_08:1": {
+            "ok": true,
+            "detail": 18939
+          },
+          "visible_change:applicant_08:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_08:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_09": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_09": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_09:1": {
+            "ok": true,
+            "detail": 18895
+          },
+          "visible_change:applicant_09:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_09:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "pages:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "pdf_size:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "field_values:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "mapping_pages:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "protected_blank:applicant_10": {
+            "ok": true,
+            "detail": null
+          },
+          "render:applicant_10": {
+            "ok": true,
+            "detail": 7
+          },
+          "visible_change:applicant_10:1": {
+            "ok": true,
+            "detail": 18732
+          },
+          "visible_change:applicant_10:2": {
+            "ok": true,
+            "detail": 758
+          },
+          "visible_change:applicant_10:3": {
+            "ok": true,
+            "detail": 139
+          },
+          "exact_pdf_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "exact_mapping_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "summary:input_form": {
+            "ok": true,
+            "detail": "sba1919_2024.pdf"
+          },
+          "summary:applicant_count": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:filled_pdf_count": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:rendered_page_count": {
+            "ok": true,
+            "detail": 77
+          },
+          "summary:ssn_and_signatures_left_blank": {
+            "ok": true,
+            "detail": true
+          },
+          "summary:fill_script_invocations": {
+            "ok": true,
+            "detail": 10
+          },
+          "summary:render_script_invocations": {
+            "ok": true,
+            "detail": 11
+          },
+          "deliverable:check_fillable_fields.log": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:form_field_info.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:field_values": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:filled": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:rendered": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:batch_summary.json": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    },
+    {
+      "dataset_id": "hr",
+      "kind": "xlsx",
+      "run_id": "xlsx-hr-20261009T060833Z-5e454df8",
+      "trace_sha256": "8e6de648af39d18a706a7a688b2be91ff96cd91873d1c0b24e70f79015294ad0",
+      "manifest_sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+      "output_hashes": {
+        "output/business_verification.json": "e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c",
+        "output/formula_recalc.json": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+        "output/hr_enhanced.xlsx": "1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833",
+        "output/workbook_features.json": "8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae",
+        "output/xlsx_enhancement_summary.json": "086815a7f501d381144f2006abab6f0e54a823c44fa36d82326d1037b4664092"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "hr",
+        "kind": "xlsx",
+        "status": "success",
+        "checks": {
+          "input:input/national_M2025_dl.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "workbook_file": {
+            "ok": true,
+            "detail": null
+          },
+          "source:worksheets": {
+            "ok": true,
+            "detail": [
+              "national_M2025_dl",
+              "Field Descriptions",
+              "UpdateTime",
+              "Filler",
+              "OEWS Summary",
+              "Chart Data"
+            ]
+          },
+          "source:relative_order": {
+            "ok": true,
+            "detail": null
+          },
+          "source:data:national_M2025_dl": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:national_M2025_dl": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:national_M2025_dl": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Field Descriptions": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Field Descriptions": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Field Descriptions": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:UpdateTime": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:UpdateTime": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:UpdateTime": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Filler": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Filler": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Filler": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:national_M2025_dl": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:national_M2025_dl": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:national_M2025_dl": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Field Descriptions": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Field Descriptions": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Field Descriptions": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:UpdateTime": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:UpdateTime": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:UpdateTime": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Filler": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Filler": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Filler": {
+            "ok": true,
+            "detail": []
+          },
+          "source:defined_names": {
+            "ok": true,
+            "detail": null
+          },
+          "overview_added": {
+            "ok": true,
+            "detail": null
+          },
+          "metric_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:OEWS Summary!B6": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:total_employment": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:total_employment": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:total_employment": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:OEWS Summary!B7": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:annual_mean_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:annual_mean_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:annual_mean_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:OEWS Summary!B8": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:hourly_median_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:hourly_median_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:hourly_median_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:default": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dropdown": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:selector_color": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Base": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Base:wage_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Increase": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Increase:wage_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "projection_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:OEWS Summary!B18": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:projection:projected_mean_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:scenario_dependency:projected_mean_wage": {
+            "ok": true,
+            "detail": null
+          },
+          "chart_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:references:major_employment": {
+            "ok": true,
+            "detail": [
+              "CHARTDATA!C28:C32",
+              "CHARTDATA!D27",
+              "CHARTDATA!D28:D32"
+            ]
+          },
+          "semantic:chart:major_employment": {
+            "ok": true,
+            "detail": [
+              [
+                17753430,
+                13680750,
+                13677150,
+                13424300,
+                11132700
+              ]
+            ]
+          },
+          "semantic:chart_dependency:major_employment": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:major_employment": {
+            "ok": true,
+            "detail": null
+          },
+          "format:conditional_rules": {
+            "ok": true,
+            "detail": null
+          },
+          "format:comments": {
+            "ok": true,
+            "detail": null
+          },
+          "format:freeze_panes": {
+            "ok": true,
+            "detail": null
+          },
+          "no_external_links": {
+            "ok": true,
+            "detail": null
+          },
+          "zero_formula_errors": {
+            "ok": true,
+            "detail": []
+          },
+          "recalc_report": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:hr_enhanced.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:workbook_features.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:formula_recalc.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:xlsx_enhancement_summary.json": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    },
+    {
+      "dataset_id": "manufacturing",
+      "kind": "xlsx",
+      "run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
+      "trace_sha256": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
+      "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+      "output_hashes": {
+        "output/business_verification.json": "b02483279e999ad2000feebbc35aa7bf70619f779c47301fffe0a2ad7e586a38",
+        "output/formula_recalc.json": "db37a72edd1870d80e18dd6df94bdf067bff976229628a3fd627b72d4f351618",
+        "output/manufacturing_enhanced.xlsx": "6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1",
+        "output/workbook_features.json": "6512bb85d764cfa36dba8d106947c02c9cc6bc46f5c5d34c4c66b91da05537f9",
+        "output/xlsx_enhancement_summary.json": "e5a2a17e69172db0d4c87d3297659a9c4d8a06171cdeb726a86f443e64c22f66"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "manufacturing",
+        "kind": "xlsx",
+        "status": "success",
+        "checks": {
+          "input:input/m3_shipments_202608.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "workbook_file": {
+            "ok": true,
+            "detail": null
+          },
+          "source:worksheets": {
+            "ok": true,
+            "detail": [
+              "Shipments August 2026",
+              "Dashboard"
+            ]
+          },
+          "source:relative_order": {
+            "ok": true,
+            "detail": null
+          },
+          "source:data:Shipments August 2026": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Shipments August 2026": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Shipments August 2026": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Shipments August 2026": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Shipments August 2026": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Shipments August 2026": {
+            "ok": true,
+            "detail": []
+          },
+          "source:defined_names": {
+            "ok": true,
+            "detail": null
+          },
+          "overview_added": {
+            "ok": true,
+            "detail": null
+          },
+          "metric_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Dashboard!B6": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:total_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:total_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:total_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Dashboard!B7": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:monthly_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:monthly_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:monthly_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Dashboard!B8": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:durable_share": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:durable_share": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:durable_share": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Dashboard!B9": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:nondurable_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:nondurable_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:nondurable_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:default": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dropdown": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:selector_color": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Base": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Base:shipments_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Expansion": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Expansion:shipments_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Contraction": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Contraction:shipments_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "projection_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Dashboard!B18": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:projection:projected_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:scenario_dependency:projected_shipments": {
+            "ok": true,
+            "detail": null
+          },
+          "chart_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:references:durability_mix": {
+            "ok": true,
+            "detail": [
+              "DASHBOARD!A22:A23",
+              "DASHBOARD!B22:B23"
+            ]
+          },
+          "semantic:chart:durability_mix": {
+            "ok": true,
+            "detail": [
+              [
+                333589,
+                325033
+              ]
+            ]
+          },
+          "semantic:chart_dependency:durability_mix": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:durability_mix": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:references:shipment_trend": {
+            "ok": true,
+            "detail": [
+              "DASHBOARD!A26:A28",
+              "DASHBOARD!B26:B28"
+            ]
+          },
+          "semantic:chart:shipment_trend": {
+            "ok": true,
+            "detail": [
+              [
+                653505,
+                658647,
+                658622
+              ]
+            ]
+          },
+          "semantic:chart_dependency:shipment_trend": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:shipment_trend": {
+            "ok": true,
+            "detail": null
+          },
+          "format:conditional_rules": {
+            "ok": true,
+            "detail": null
+          },
+          "format:comments": {
+            "ok": true,
+            "detail": null
+          },
+          "format:freeze_panes": {
+            "ok": true,
+            "detail": null
+          },
+          "no_external_links": {
+            "ok": true,
+            "detail": null
+          },
+          "zero_formula_errors": {
+            "ok": true,
+            "detail": []
+          },
+          "recalc_report": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:manufacturing_enhanced.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:workbook_features.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:formula_recalc.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:xlsx_enhancement_summary.json": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    },
+    {
+      "dataset_id": "retail",
+      "kind": "xlsx",
+      "run_id": "xlsx-retail-20261009T081357Z-c3f36068",
+      "trace_sha256": "1ff52d9a6698c2455c7be08b1f5cc379a2f85012350408ac7402896d6a29249a",
+      "manifest_sha256": "b9aacfd3a459ca1b865da4031955607f684e655571bba4ce11b7b9ce228da0c3",
+      "output_hashes": {
+        "output/business_verification.json": "2f23e57b5262e370b0d15c1c819ba6db7b58fde00f748ad31d3299cee2b23452",
+        "output/formula_recalc.json": "3efc8bca1d8cc9edc183952944e4de47be44d9c4ae0ffa402e29bdc87c57d940",
+        "output/retail_enhanced.xlsx": "d95fd7ecc76c001b89be4d40d67c26840eac794572977132108d9e40093989f3",
+        "output/workbook_features.json": "07957d8e89db176e62ce3b17104727158b0512b91b7fd48d88dccfa477d0cfd4",
+        "output/xlsx_enhancement_summary.json": "ff3eb75e78aa1a1cbc164bb877cf72654ddac5b231d9687453191951c3f5f719"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "retail",
+        "kind": "xlsx",
+        "status": "success",
+        "checks": {
+          "input:input/marts_table1_202608.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "workbook_file": {
+            "ok": true,
+            "detail": null
+          },
+          "source:worksheets": {
+            "ok": true,
+            "detail": [
+              "MARTS Table 1",
+              "Publication notes",
+              "Retail Analysis"
+            ]
+          },
+          "source:relative_order": {
+            "ok": true,
+            "detail": null
+          },
+          "source:data:MARTS Table 1": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:MARTS Table 1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:MARTS Table 1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Publication notes": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Publication notes": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Publication notes": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:MARTS Table 1": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:MARTS Table 1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:MARTS Table 1": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Publication notes": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Publication notes": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Publication notes": {
+            "ok": true,
+            "detail": []
+          },
+          "source:defined_names": {
+            "ok": true,
+            "detail": null
+          },
+          "overview_added": {
+            "ok": true,
+            "detail": null
+          },
+          "metric_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Retail Analysis!B6": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:adjusted_sales": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:adjusted_sales": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:adjusted_sales": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Retail Analysis!B7": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:monthly_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:monthly_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:monthly_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Retail Analysis!B8": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:annual_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:annual_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:annual_growth": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:default": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dropdown": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:selector_color": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Base": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Base:sales_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Higher": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Higher:sales_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Lower": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Lower:sales_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "projection_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Retail Analysis!B17": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:projection:projected_sales": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:scenario_dependency:projected_sales": {
+            "ok": true,
+            "detail": null
+          },
+          "chart_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:references:adjusted_trend": {
+            "ok": true,
+            "detail": [
+              "RETAILANALYSIS!A21:A23",
+              "RETAILANALYSIS!B20",
+              "RETAILANALYSIS!B21:B23"
+            ]
+          },
+          "semantic:chart:adjusted_trend": {
+            "ok": true,
+            "detail": [
+              [
+                768587,
+                764462,
+                773947
+              ]
+            ]
+          },
+          "semantic:chart_dependency:adjusted_trend": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:adjusted_trend": {
+            "ok": true,
+            "detail": null
+          },
+          "format:conditional_rules": {
+            "ok": true,
+            "detail": null
+          },
+          "format:comments": {
+            "ok": true,
+            "detail": null
+          },
+          "format:freeze_panes": {
+            "ok": true,
+            "detail": null
+          },
+          "no_external_links": {
+            "ok": true,
+            "detail": null
+          },
+          "zero_formula_errors": {
+            "ok": true,
+            "detail": []
+          },
+          "recalc_report": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:retail_enhanced.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:workbook_features.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:formula_recalc.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:xlsx_enhancement_summary.json": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    },
+    {
+      "dataset_id": "tlc",
+      "kind": "xlsx",
+      "run_id": "xlsx-tlc-20261009T063937Z-9a06558f",
+      "trace_sha256": "c9ae5b05b14022a7cdb8a9aa7963e9e82a00697048615f95adaf5a49be3bde25",
+      "manifest_sha256": "ee14c42c1ec518dfeac768902916dc6e4e293f415a5953aa6cc15220cde7f4a6",
+      "output_hashes": {
+        "output/business_verification.json": "f9462bbd6fbb0a6adb566fdcac5924f9abcb34c17bdbb348dbc37b2426a5155f",
+        "output/formula_recalc.json": "a780d48811efe2e84d774a296ec6fb238acfd631209a9055ef1260c050a32345",
+        "output/monthly_operations_report.xlsx": "5f30be31087743d3b92b7b9d9d8aea44e8cc8d77064ba278021ee8964133fdaa",
+        "output/monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+        "output/reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+        "output/workbook_features.json": "8a671ff26ed2683751c767c6a085178b8c2bba85aaac4477560d57d4e3e7d923",
+        "output/xlsx_enhancement_summary.json": "24f50e1f3637792891df8fad29848335b1f37377659bc87104a79a906005b644"
+      },
+      "verification": {
+        "schema_version": "office-verification-v1",
+        "dataset_id": "tlc",
+        "kind": "xlsx",
+        "status": "success",
+        "checks": {
+          "input:input/monthly_operations_template.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/template_manifest.json": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/dataset_sources.md": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/prepared_monthly_operations_summary.csv": {
+            "ok": true,
+            "detail": null
+          },
+          "input:input/prepared_reconciliation_summary.csv": {
+            "ok": true,
+            "detail": null
+          },
+          "workbook_file": {
+            "ok": true,
+            "detail": null
+          },
+          "source:worksheets": {
+            "ok": true,
+            "detail": [
+              "Raw_Sample",
+              "Hourly_Summary",
+              "Daily_Summary",
+              "Zone_Summary",
+              "Payment_Summary",
+              "Fare_Distance_Bands",
+              "Reconciliation",
+              "Executive_Dashboard",
+              "Charts"
+            ]
+          },
+          "source:relative_order": {
+            "ok": true,
+            "detail": null
+          },
+          "source:data:Raw_Sample": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Raw_Sample": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Raw_Sample": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Hourly_Summary": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Hourly_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Hourly_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Daily_Summary": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Daily_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Daily_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Zone_Summary": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Zone_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Zone_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Payment_Summary": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Payment_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Payment_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Fare_Distance_Bands": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Fare_Distance_Bands": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Fare_Distance_Bands": {
+            "ok": true,
+            "detail": []
+          },
+          "source:data:Reconciliation": {
+            "ok": true,
+            "detail": {
+              "missing": [],
+              "changed": [],
+              "added": []
+            }
+          },
+          "source:formulas:Reconciliation": {
+            "ok": true,
+            "detail": []
+          },
+          "source:number_formats:Reconciliation": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Raw_Sample": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Raw_Sample": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Raw_Sample": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Hourly_Summary": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Hourly_Summary": {
+            "ok": true,
+            "detail": [
+              [
+                "BarChart",
+                [
+                  "HOURLY_SUMMARY!A2:A25",
+                  "HOURLY_SUMMARY!B1",
+                  "HOURLY_SUMMARY!B2:B25"
+                ]
+              ]
+            ]
+          },
+          "source:styles:Hourly_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Daily_Summary": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Daily_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Daily_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Zone_Summary": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Zone_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Zone_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Payment_Summary": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Payment_Summary": {
+            "ok": true,
+            "detail": [
+              [
+                "PieChart",
+                [
+                  "PAYMENT_SUMMARY!A2:A5",
+                  "PAYMENT_SUMMARY!B1",
+                  "PAYMENT_SUMMARY!B2:B5"
+                ]
+              ]
+            ]
+          },
+          "source:styles:Payment_Summary": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Fare_Distance_Bands": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Fare_Distance_Bands": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Fare_Distance_Bands": {
+            "ok": true,
+            "detail": []
+          },
+          "source:merged_regions:Reconciliation": {
+            "ok": true,
+            "detail": null
+          },
+          "source:charts:Reconciliation": {
+            "ok": true,
+            "detail": []
+          },
+          "source:styles:Reconciliation": {
+            "ok": true,
+            "detail": []
+          },
+          "source:defined_names": {
+            "ok": true,
+            "detail": null
+          },
+          "overview_added": {
+            "ok": true,
+            "detail": null
+          },
+          "metric_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B6": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:total_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:total_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:total_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B7": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:fare_revenue": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:fare_revenue": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:fare_revenue": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B8": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:average_fare": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:average_fare": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:average_fare": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B9": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:removal_rate": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:removal_rate": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:removal_rate": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B10": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:metric:reconciliation_status": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:source_dependency:reconciliation_status": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:metric_color:reconciliation_status": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:default": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dropdown": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:selector_color": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Base": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Base:fare_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Base:trip_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Upside": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Upside:fare_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Upside:trip_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:dimension_inventory:Downside": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Downside:fare_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "scenario:assumption:Downside:trip_multiplier": {
+            "ok": true,
+            "detail": null
+          },
+          "projection_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B21": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:projection:projected_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:scenario_dependency:projected_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "feature:formula:Executive_Dashboard!B22": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:projection:projected_fare": {
+            "ok": true,
+            "detail": null
+          },
+          "semantic:scenario_dependency:projected_fare": {
+            "ok": true,
+            "detail": null
+          },
+          "chart_inventory": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:references:daily_trips": {
+            "ok": true,
+            "detail": [
+              "DAILY_SUMMARY!A2:A32",
+              "DAILY_SUMMARY!C1",
+              "DAILY_SUMMARY!C2:C32"
+            ]
+          },
+          "semantic:chart:daily_trips": {
+            "ok": true,
+            "detail": [
+              [
+                69073,
+                71057,
+                78111,
+                97758,
+                97823,
+                90260,
+                63738,
+                75558,
+                84285,
+                89755,
+                99130,
+                96747,
+                98382,
+                87305,
+                72868,
+                85601,
+                99930,
+                102078,
+                89472,
+                98565,
+                77673,
+                80283,
+                93304,
+                98991,
+                102571,
+                98682,
+                104101,
+                83819,
+                79645,
+                95696,
+                96166
+              ]
+            ]
+          },
+          "semantic:chart_dependency:daily_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:daily_trips": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:references:payment_mix": {
+            "ok": true,
+            "detail": [
+              "PAYMENT_SUMMARY!A2:A5",
+              "PAYMENT_SUMMARY!B1",
+              "PAYMENT_SUMMARY!B2:B5"
+            ]
+          },
+          "semantic:chart:payment_mix": {
+            "ok": true,
+            "detail": [
+              [
+                2289029,
+                430338,
+                25219,
+                13841
+              ]
+            ]
+          },
+          "semantic:chart_dependency:payment_mix": {
+            "ok": true,
+            "detail": null
+          },
+          "chart:payment_mix": {
+            "ok": true,
+            "detail": null
+          },
+          "format:conditional_rules": {
+            "ok": true,
+            "detail": null
+          },
+          "format:comments": {
+            "ok": true,
+            "detail": null
+          },
+          "format:freeze_panes": {
+            "ok": true,
+            "detail": null
+          },
+          "no_external_links": {
+            "ok": true,
+            "detail": null
+          },
+          "zero_formula_errors": {
+            "ok": true,
+            "detail": []
+          },
+          "recalc_report": {
+            "ok": true,
+            "detail": null
+          },
+          "published:monthly_operations_summary.csv": {
+            "ok": true,
+            "detail": null
+          },
+          "published:reconciliation_summary.csv": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:monthly_operations_report.xlsx": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:workbook_features.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:formula_recalc.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:xlsx_enhancement_summary.json": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:monthly_operations_summary.csv": {
+            "ok": true,
+            "detail": null
+          },
+          "deliverable:reconciliation_summary.csv": {
+            "ok": true,
+            "detail": null
+          }
+        },
+        "failures": []
+      }
+    }
+  ],
+  "scope": "Current verifier on restored hash-bound canonical input/output artifacts. No model, helper execution, regeneration, recalc, performance measurements or ignored runs."
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "office-semantic-oracle-v2",
+  "metric_values": {
+    "adjusted_sales": 773947,
+    "monthly_growth": 0.012407418550562266,
+    "annual_growth": 0.06014763635267806
+  },
+  "scenario_values": {
+    "Base": {
+      "projected_sales": 773947
+    },
+    "Higher": {
+      "projected_sales": 804904.88
+    },
+    "Lower": {
+      "projected_sales": 742989.12
+    }
+  },
+  "oracle_provenance": "Independent calculations over frozen source observations; these answers are not part of the Agent-facing task contract.",
+  "chart_values": {
+    "adjusted_trend": [
+      768587,
+      764462,
+      773947
+    ]
+  }
+}

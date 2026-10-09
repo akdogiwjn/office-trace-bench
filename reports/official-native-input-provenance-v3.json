@@ -1,0 +1,43 @@
+{
+  "schema_version": "office-official-download-evidence-v1",
+  "checked_at": "2026-10-09T09:40:52.410573+00:00",
+  "acquisition_date": "2026-10-09",
+  "acquisition_method": "Owner downloaded official files and supplied URLs; Agent independently redownloaded Census files with curl -fL.",
+  "datasets": {
+    "retail": {
+      "official_url": "https://www.census.gov/retail/mrts/www/mrtssales92-present.xlsx",
+      "filename": "mrtssales92-present.xlsx",
+      "local_sha256": "6b2cb26926ba0a438f2b45c4b38b218045273f63a674c11b1cbb7bf1cf9a7956",
+      "official_redownload_sha256": "6b2cb26926ba0a438f2b45c4b38b218045273f63a674c11b1cbb7bf1cf9a7956",
+      "byte_identity_verified": true,
+      "release": "MRTS historical estimates 1992–2026; 2026 monthly data through July (preliminary). Exact release date not embedded in supplied file.",
+      "period": "July 2026; historical annual worksheets 1992–2026",
+      "download_date": "2026-10-09",
+      "conversion": "None; unmodified full native workbook"
+    },
+    "manufacturing": {
+      "official_url": "https://www.census.gov/manufacturing/m3/bench/text.xlsx",
+      "filename": "text.xlsx",
+      "local_sha256": "3a675ad4067e5463600ba46237c1f38123a4b83519035d1450b511496c130e43",
+      "official_redownload_sha256": "3a675ad4067e5463600ba46237c1f38123a4b83519035d1450b511496c130e43",
+      "byte_identity_verified": true,
+      "release": "M3 Benchmark Report, May 16, 2025 (source note inside workbook)",
+      "period": "January–March 2025",
+      "download_date": "2026-10-09",
+      "conversion": "None; unmodified full native workbook"
+    },
+    "hr": {
+      "official_url": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+      "archive_member": "national_M2025_dl.xlsx",
+      "local_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "repository_input_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "byte_identity_verified": true,
+      "verification_method": "Local byte-for-byte and SHA256 equality against owner-supplied file reported downloaded/extracted from the official ZIP.",
+      "official_download_attested_by": "repository owner",
+      "independent_official_redownload": false,
+      "independent_retry_result": "HTTP 403",
+      "download_date": "2026-10-09",
+      "limitation": "Official ZIP bytes and extraction were not independently observed by the Agent; no ZIP hash is available."
+    }
+  }
+}

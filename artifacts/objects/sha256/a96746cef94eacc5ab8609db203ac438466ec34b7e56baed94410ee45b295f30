@@ -1,0 +1,103 @@
+"""Assemble the final workbook from:
+  - build.xlsx   : openpyxl output (originals preserved semantically, Overview formulas, no caches)
+  - recalc.xlsx  : LibreOffice-recalculated copy of build.xlsx (has computed caches)
+  - source.xlsx  : original input (defines which cells are empty-string and must be restored)
+
+Original sheet parts are patched so empty-string cells read back as '' again; the Overview
+sheet gets its recalculated numeric caches injected. No original styling/formula is altered.
+"""
+import re
+import sys
+import zipfile
+from openpyxl import load_workbook
+
+BASE = '/root/.openclaw/workspace/tool-modeling/OFFICE-XLSX-RETAIL'
+BUILD = BASE + '/work/build.xlsx'
+RECALC = BASE + '/work/recalc_input.xlsx'
+SOURCE = BASE + '/input/mrtssales92-present.xlsx'
+OUT = BASE + '/output/retail_enhanced.xlsx'
+
+OVERVIEW = 'Overview'
+
+
+def sheet_parts(zf):
+    """Map worksheet name -> zip part path using workbook.xml + rels."""
+    wbxml = zf.read('xl/workbook.xml').decode()
+    rels = zf.read('xl/_rels/workbook.xml.rels').decode()
+    rid2target = dict(re.findall(r'<Relationship Id="([^"]+)"[^>]*Target="([^"]+)"', rels))
+    name2part = {}
+    for name, rid in re.findall(r'<sheet name="([^"]+)"[^>]*r:id="([^"]+)"', wbxml):
+        tgt = rid2target[rid].lstrip('/')
+        if not tgt.startswith('xl/'):
+            tgt = 'xl/' + tgt
+        name2part[name] = tgt
+    return name2part
+
+
+def empty_coords_by_sheet():
+    wb = load_workbook(SOURCE, data_only=False)
+    out = {}
+    for ws in wb.worksheets:
+        out[ws.title] = {c.coordinate for row in ws.iter_rows() for c in row if c.value == ''}
+    wb.close()
+    return out
+
+
+def num(v):
+    if isinstance(v, str):
+        return None
+    if v is None:
+        return None
+    if float(v).is_integer():
+        return str(int(round(v)))
+    return repr(float(v))
+
+
+def main():
+    empties = empty_coords_by_sheet()
+    # computed caches for every formula cell on the Overview sheet
+    rwb = load_workbook(RECALC, data_only=True)
+    ows = rwb[OVERVIEW]
+    caches = {}
+    for row in ows.iter_rows():
+        for c in row:
+            if c.value is not None:
+                caches[c.coordinate] = c.value
+    rwb.close()
+    # only numeric caches should be injected into <v/>
+    numeric = {k: num(v) for k, v in caches.items() if not isinstance(v, str)}
+    numeric = {k: v for k, v in numeric.items() if v is not None}
+
+    src = zipfile.ZipFile(BUILD)
+    parts = sheet_parts(src)
+    rev = {p: n for n, p in parts.items()}
+    dst = zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED)
+
+    empty_patched = 0
+    cache_patched = 0
+    for item in src.infolist():
+        data = src.read(item.filename)
+        name = item.filename
+        if name in rev:
+            sh = rev[name]
+            text = data.decode('utf-8')
+            if sh == OVERVIEW:
+                for coord, val in numeric.items():
+                    pat = re.compile(r'(<c r="%s"[^>]*?>)(<f>.*?</f>)\s*<v\s*/>' % re.escape(coord), re.S)
+                    text, n = pat.subn(lambda m: m.group(1) + m.group(2) + '<v>' + val + '</v>', text)
+                    cache_patched += n
+            else:
+                ecs = empties.get(sh, set())
+                for coord in ecs:
+                    pat = re.compile(r'(<c r="%s"[^>]*?)\s*/>' % re.escape(coord))
+                    text, n = pat.subn(lambda m: m.group(1) + '><is><t></t></is></c>', text)
+                    empty_patched += n
+            data = text.encode('utf-8')
+        dst.writestr(item, data)
+    dst.close()
+    src.close()
+    print('empty cells patched:', empty_patched, 'cache cells patched:', cache_patched)
+
+
+if __name__ == '__main__':
+    main()

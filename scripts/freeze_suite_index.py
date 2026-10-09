@@ -13,6 +13,7 @@ SCOPE={('xlsx',name) for name in ('tlc','retail','manufacturing','hr')} | {('pdf
 def provenance_evidence():
     paths=list((ROOT/'sources/provenance-audit').glob('*'))
     paths += [ROOT/'reports'/name for name in ('hr-formal-kpi-provenance-v2.json','hr-sba-source-reliability-v1.json','hr-sba-source-reliability-v2.json')]
+    paths += [ROOT/'reports/official-native-input-provenance-v3.json', ROOT/'datasets/xlsx/hr/provenance-supplement.json']
     return {str(path.relative_to(ROOT)):sha256(path) for path in sorted(paths) if path.is_file()}
 
 def validate_evidence(suite):
@@ -31,6 +32,22 @@ def validate_evidence(suite):
         if entry['dataset_id']=='hr':
             report=read_json(ROOT/source['formal_kpi_verification'])
             if report['status']!='success' or report['input_sha256']!=source['sha256']:raise ValueError('HR corroboration/input binding mismatch')
+        if source.get('input_class')=='official_native_spreadsheet':
+            name=source['verification_evidence']
+            if name not in evidence:raise ValueError('missing official native download evidence')
+            download=read_json(ROOT/name)['datasets'][entry['dataset_id']]
+            if (download['local_sha256']!=source['sha256'] or download['official_redownload_sha256']!=source['sha256']
+                or download['official_url']!=source['official_url'] or download['byte_identity_verified'] is not True):
+                raise ValueError('native official download/input binding mismatch')
+        if entry['dataset_id']=='hr' and 'datasets/xlsx/hr/provenance-supplement.json' in evidence:
+            supplement=read_json(ROOT/'datasets/xlsx/hr/provenance-supplement.json')
+            if (supplement['input_sha256']!=source['sha256'] or supplement['original_provenance_sha256']!=sha256(root/'provenance.json')
+                or supplement['manifest_sha256']!=entry['manifest_sha256'] or supplement['canonical_sha256']!=entry['canonical_sha256']
+                or evidence.get(supplement['evidence_path'])!=supplement['evidence_sha256']):
+                raise ValueError('HR supplementary official acquisition binding mismatch')
+            download=read_json(ROOT/supplement['evidence_path'])['datasets']['hr']
+            if download['local_sha256']!=source['sha256'] or download['repository_input_sha256']!=source['sha256']:
+                raise ValueError('HR supplied official file differs from canonical input')
     qualification=suite['agent_qualification']
     if sha256(ROOT/qualification['path'])!=qualification['sha256']:raise ValueError('Agent qualification report hash mismatch')
     report=read_json(ROOT/qualification['path'])
@@ -96,7 +113,7 @@ def main():
     suite=dict(schema_version='office-frozen-suite-v2',datasets=entries,replay_ready=False,provenance_evidence=provenance_evidence(),
         agent_qualification=dict(path=str(qualification.relative_to(ROOT)),sha256=sha256(qualification)),
         research_scope='Agent/tool workload characterization with workbook complexity; future frozen tool replay without LLM.',
-        source_limits='Retail/M3 official-table transcriptions; HR unexpanded cached native XLSX with partial official corroboration. See per-input provenance.',
+        source_limits='Retail/M3 full native official XLSX with independently matched downloads; HR original cache trace input matches owner-supplied official workbook, but official ZIP acquisition was not independently observed. See per-input provenance and supplement.',
         replay_gate='Executable recipe compilation, dependency review and isolated tool replay validation are a later explicitly separate phase.')
     validate_evidence(suite);write_json(target,suite)
     print('Published artifacts/suite.json; canonical run identities are machine-bound.')

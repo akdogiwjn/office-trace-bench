@@ -1,0 +1,112 @@
+{
+  "schema_version": "office-dataset-v2",
+  "workload_contract": "spreadsheet-semantic-v2",
+  "kind": "xlsx",
+  "dataset_id": "retail",
+  "domain": "retail",
+  "task": "Analyze the frozen Census MARTS August 2026 publication table",
+  "workbook": "marts_table1_202608.xlsx",
+  "output_workbook": "retail_enhanced.xlsx",
+  "input_files": {
+    "input/marts_table1_202608.xlsx": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "8da96dcf6bdb7f45842c16455cf5d898626af689637f2f595d7285284c30a3d9",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "runtime_case": "OFFICE-XLSX-RETAIL",
+  "requirements": {
+    "metrics": [
+      {
+        "id": "adjusted_sales",
+        "name": "Adjusted retail and food services sales",
+        "meaning": "Published total retail and food services seasonally adjusted sales for August 2026. Use the total, not a sum of overlapping categories.",
+        "unit": "USD million"
+      },
+      {
+        "id": "monthly_growth",
+        "name": "Month-over-month growth",
+        "meaning": "Relative change in the adjusted total from July to August 2026; compute from sales levels rather than rounded published percentages.",
+        "unit": "fraction"
+      },
+      {
+        "id": "annual_growth",
+        "name": "Year-over-year growth",
+        "meaning": "Relative change in the adjusted total from August 2025 to August 2026; compute from sales levels.",
+        "unit": "fraction"
+      }
+    ],
+    "scenario": {
+      "default": "Base",
+      "dimensions": [
+        {
+          "id": "sales_multiplier",
+          "meaning": "Hypothetical sales level multiplier, not a Census forecast"
+        }
+      ],
+      "rows": [
+        {
+          "name": "Base",
+          "assumptions": {
+            "sales_multiplier": 1
+          }
+        },
+        {
+          "name": "Higher",
+          "assumptions": {
+            "sales_multiplier": 1.04
+          }
+        },
+        {
+          "name": "Lower",
+          "assumptions": {
+            "sales_multiplier": 0.96
+          }
+        }
+      ],
+      "projections": [
+        {
+          "id": "projected_sales",
+          "meaning": "Adjusted sales scaled by the selected sales multiplier",
+          "unit": "USD million"
+        }
+      ]
+    },
+    "charts": [
+      {
+        "id": "adjusted_trend",
+        "meaning": "June, July and August 2026 adjusted total sales; chronological order",
+        "unit": "USD million"
+      }
+    ],
+    "minimum_comments": 2,
+    "minimum_conditional_formats": 2,
+    "recalc_timeout": 180
+  },
+  "publish_files": [],
+  "trace_rules": [
+    {
+      "pattern": "\\bverify_office\\.py\\b",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "recalc\\.py",
+      "operation": "recalculate_formulas"
+    }
+  ],
+  "required_outputs": [
+    "retail_enhanced.xlsx",
+    "workbook_features.json",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ],
+  "analysis_metadata": {
+    "provenance.json": "368d734077747055d39ea53bd495b3bd93a975ffdd24bc6f0e43b51d0dc047da",
+    "complexity.json": "8d55f123130410b1d91b9c4886a814e147c8c81c2793f2f39adc6f22914cf722"
+  }
+}

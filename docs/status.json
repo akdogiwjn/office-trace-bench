@@ -1,7 +1,7 @@
 {
   "schema_version": "office-project-status-v2",
-  "updated_at": "2026-10-09T08:44:18.773328+00:00",
-  "current_phase": "suite_v2_frozen_verified_with_source_limits",
+  "updated_at": "2026-10-09T10:26:54.416124+00:00",
+  "current_phase": "native_xlsx_v3_frozen_verified_with_source_limits",
   "formal_dataset_count": 7,
   "real_agent_regression": {
     "irs_w4": {
@@ -179,15 +179,15 @@
     "manufacturing": {
       "dataset_id": "manufacturing",
       "kind": "xlsx",
-      "run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
+      "run_id": "xlsx-manufacturing-20261009T101352Z-bd60f53e",
       "status": "success",
       "accepted": true,
-      "canonical_path": "artifacts/canonical/xlsx/manufacturing/xlsx-manufacturing-20261009T081356Z-7553ba0b",
-      "canonical_sha256": "94fee7eba0be2adfb005c38ed0e238bf633f65d4c2a74cfbb9ccda8db81b651a",
-      "trace_sha256": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
-      "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+      "canonical_path": "artifacts/canonical/xlsx/manufacturing/xlsx-manufacturing-20261009T101352Z-bd60f53e",
+      "canonical_sha256": "7dd6a7f4b3476d354db7a8678438e8a3313f896b3350cbf6516ea78132c8ad0d",
+      "trace_sha256": "1ef604c890dff1e83d10ac1cfeb154733d26a179b2652648f352014d9f919400",
+      "manifest_sha256": "d1b0226702960d952bfdc95e2c0d61a6b1232244acaa0675f8186437c6bec8b0",
       "input_hashes": {
-        "input/m3_shipments_202608.xlsx": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8"
+        "input/text.xlsx": "3a675ad4067e5463600ba46237c1f38123a4b83519035d1450b511496c130e43"
       },
       "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
       "agent": {
@@ -202,42 +202,39 @@
         }
       },
       "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
-      "trace_steps": 31,
-      "tool_calls": 35,
+      "trace_steps": 34,
+      "tool_calls": 39,
       "verifier_result": {
         "status": "success",
         "accepted": true,
-        "independent_sha256": "cd348485fbf6b74657a6ed69a5d5a8452b146cd062272ad6607eedc21d3584ca",
+        "independent_sha256": "3f132eeaf503bf18f4c51530c0fa7f0c8bd1b0df8e682868f67942f965278f4b",
         "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
       },
-      "provenance_sha256": "1dbff799e6e8156a37291ed9812c7008624f03ec2c46c57bd41dcc81e28bc421",
+      "provenance_sha256": "e89ef677bfe0f2eb11ad4d82511dfae983acedd944920a699fa39235e967b7e4",
       "revision_capture": {
         "present": true,
         "gaps": [
           {
             "path": "workspace/output/business_verification.json.tmp",
             "reason": "FileNotFoundError"
-          },
-          {
-            "path": "workspace/output/business_verification.json.tmp",
-            "reason": "FileNotFoundError"
           }
-        ],
-        "supplemental": []
-      }
+        ]
+      },
+      "agent_seconds": 164.402,
+      "independent_verification_seconds": 1.075
     },
     "retail": {
       "dataset_id": "retail",
       "kind": "xlsx",
-      "run_id": "xlsx-retail-20261009T081357Z-c3f36068",
+      "run_id": "xlsx-retail-20261009T101352Z-725a21b6",
       "status": "success",
       "accepted": true,
-      "canonical_path": "artifacts/canonical/xlsx/retail/xlsx-retail-20261009T081357Z-c3f36068",
-      "canonical_sha256": "fe2546cfb45aee3b5eb34c9aef7504d63a2a6214ab7490ffc5d0dc5de10aed6a",
-      "trace_sha256": "1ff52d9a6698c2455c7be08b1f5cc379a2f85012350408ac7402896d6a29249a",
-      "manifest_sha256": "b9aacfd3a459ca1b865da4031955607f684e655571bba4ce11b7b9ce228da0c3",
+      "canonical_path": "artifacts/canonical/xlsx/retail/xlsx-retail-20261009T101352Z-725a21b6",
+      "canonical_sha256": "444625027976edfefc32a9a6f0c7c7d7b0628cc1c435673de595b760a5e745be",
+      "trace_sha256": "a82aa4b889938382ac73a74a6bbd0109ce5c4d51028338b6a9d9fe500ef96cc6",
+      "manifest_sha256": "5604a33257c5acb1a803272226bbdfd931ad37e1159b228ae8f52cac3df0674b",
       "input_hashes": {
-        "input/marts_table1_202608.xlsx": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3"
+        "input/mrtssales92-present.xlsx": "6b2cb26926ba0a438f2b45c4b38b218045273f63a674c11b1cbb7bf1cf9a7956"
       },
       "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
       "agent": {
@@ -252,37 +249,30 @@
         }
       },
       "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
-      "trace_steps": 39,
-      "tool_calls": 46,
+      "trace_steps": 55,
+      "tool_calls": 57,
       "verifier_result": {
         "status": "success",
         "accepted": true,
-        "independent_sha256": "57055c0689ff8f189ec130be2ffce5c9e340448fbcb06d5a10951d746959746f",
+        "independent_sha256": "be7f91bc92de19642e1a6dede282cac4f2489c43fbcff8e25086d931fd53c69e",
         "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
       },
-      "provenance_sha256": "368d734077747055d39ea53bd495b3bd93a975ffdd24bc6f0e43b51d0dc047da",
+      "provenance_sha256": "c23da9ed04cd8c5baf79b90bb855c65b2a62e64bf7996b1fc2798d5bd63e1cf2",
       "revision_capture": {
         "present": true,
         "gaps": [
           {
-            "path": "workspace/output/retail_enhanced.tmp.xlsx",
-            "reason": "FileNotFoundError"
-          },
-          {
-            "path": "workspace/output/retail_enhanced.tmp.xlsx",
-            "reason": "FileNotFoundError"
-          },
-          {
-            "path": "workspace/output/retail_enhanced.tmp.xlsx",
+            "path": "workspace/output/business_verification.json.tmp",
             "reason": "FileNotFoundError"
           },
           {
             "path": "workspace/output/business_verification.json.tmp",
             "reason": "FileNotFoundError"
           }
-        ],
-        "supplemental": []
-      }
+        ]
+      },
+      "agent_seconds": 289.812,
+      "independent_verification_seconds": 3.811
     },
     "tlc": {
       "dataset_id": "tlc",
@@ -349,11 +339,11 @@
   },
   "agent_regression_report": {
     "path": "reports/current-agent-regression-v2.json",
-    "sha256": "23a9840e111f60fa2ee1d3d361db0129423b85357e04586bc2c303d3cd0775c0"
+    "sha256": "3ac1a3105f46e10f1f43251b3ea8dde9826c20a956e41d4092f40c3d64a3a006"
   },
   "canonical_suite_index": {
     "path": "artifacts/suite.json",
-    "sha256": "7e65405a447ee4b06febba7464c45cf216657a16ebe12effa89ac5c178ee5085"
+    "sha256": "86ea1a7a02192972624cbc8e2e4b505fb8005a5f2f73a82a5c77aa212815578c"
   },
   "xlsx_scenario_qualification": {
     "hr": {
@@ -362,11 +352,11 @@
     },
     "manufacturing": {
       "path": "reports/scenario-manufacturing-v2.json",
-      "sha256": "4760e3ea2ef8015e568aa331559d5648085cf9809b886ee8afd50651fa5017f1"
+      "sha256": "cbc55c0b01d5092cf8b8f488c9ac7e11a789aa6670dba24d2c9eae52ffec013d"
     },
     "retail": {
       "path": "reports/scenario-retail-v2.json",
-      "sha256": "430948fdc7b7841146da5df933c987f9db8b2231d0c405fc6e8f5b5866ed5017"
+      "sha256": "bdd7a920b7a8d0cfa7d17e63cea6032d3c9f4345059dadcf1dfb2c109d1858ac"
     },
     "tlc": {
       "path": "reports/scenario-tlc-v2.json",
@@ -380,38 +370,48 @@
   "independent_checkout_tests": {
     "status": "success",
     "path": "reports/self-contained-tests-v2.json",
-    "sha256": "ad69534cbd144e94ef921d864ea84272492be723f41195e9513d10d362cf026f",
+    "sha256": "feb8dbc9621135d2610a9b38afa5e86ba380478eddc49d01c865532c5a83b258",
     "counts": {
-      "total": 26,
-      "passed": 26,
+      "total": 27,
+      "passed": 27,
       "skipped": 0,
       "failed": 0,
       "errors": 0,
       "expected_failures": 0,
       "unexpected_successes": 0
     },
-    "checked_publication_tree_sha1": "5dd081d5dc21c1e4f5c70c2f3034a18dd31b3d17"
+    "checked_publication_tree_sha1": "6fc460be85b996a006e6572a56cce8c0ae648d46"
   },
   "replay_ready": false,
   "executable_replay_recipe": false,
   "cpu_os_measurements": false,
   "replay_image": "deferred",
   "source_limits": [
-    "Census native XLSX downloads 403; official-table transcription, not native XLSX.",
-    "BLS native ZIP download 403; unexpanded cached workbook, partial official field corroboration, no byte identity proof.",
+    "HR official workbook acquisition attested by repository owner; its bytes equal the historical cache/canonical input. Independent BLS ZIP fetch returns 403; ZIP/extraction not independently observed.",
     "TLC upstream byte chain and OPM exact historical acquisition date incomplete.",
     "SBA 04/2024 Box bytes with official content corroboration, not current 2025 or exact official byte identity."
   ],
-  "current_audit": "docs/suite-audit-v2.md",
+  "current_audit": "docs/native-input-update-v3.md",
   "historical_status": "legacy/project-status-v1.json",
   "default_style_regression": {
-    "status": "fresh_selected_runs_accepted",
+    "status": "historical_transcription_revision_fix_retained",
     "evidence": "reports/source-default-style-regression-v2.json"
   },
   "canonical_output_regression": {
     "status": "success",
     "path": "reports/canonical-output-regression-v2.json",
-    "sha256": "f050b24c89669238e39aba69cd40ab0a4e515a0b36d2eabdee92bd2c43537f0e",
+    "sha256": "c25056dc76bdceca7d7b83950909094bbbafef159e78bb3c37ae66ea245f93f8",
     "dataset_count": 7
-  }
+  },
+  "native_input_revision": "native-xlsx-v3",
+  "pending_real_agent_datasets": [],
+  "native_input_provenance": {
+    "path": "reports/official-native-input-provenance-v3.json",
+    "sha256": "d0397dc0c260a78f0b084d81490073c14c9be2a3a7b5485902036ccc57275355"
+  },
+  "hr_provenance_supplement": {
+    "path": "datasets/xlsx/hr/provenance-supplement.json",
+    "sha256": "4e0e7741b2ea27d8a9d03d9014f47dfa56bf88079c8f961503ea966d592bdb2f"
+  },
+  "prior_transcription_revision": "legacy/suite-v2-transcription/README.json"
 }

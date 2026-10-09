@@ -5,9 +5,9 @@
 trace；后续离线工具 replay 以冻结证据为输入，不重新调用 LLM。当前尚无可执行 recipe、
 离线 replay 镜像或 CPU/OS 性能结论。
 
-正式输入、来源限制和逐项回归状态见 [suite 审计](docs/suite-audit-v2.md)；研究边界见
+正式输入、来源限制和逐项回归状态见 [原生输入更新审计](docs/native-input-update-v3.md)；研究边界见
 [methodology](docs/methodology.md)。测试结果以 [独立目录测试报告](reports/self-contained-tests-v2.json)
-为准：当前独立目录检查为 **26 passed、0 skipped、0 failed、0 errors**。
+为准：当前原生输入版本为 **27 passed、0 skipped、0 failed、0 errors**。
 七个正式 dataset 均已由真实 Agent 成功运行并冻结；归档产物恢复后通过当前 verifier，
 四个 XLSX 的 11 个场景重算通过，旧 TLC / OPM 兼容回归通过。
 详见 [真实 Agent 回归](reports/current-agent-regression-v2.json) 和
@@ -16,18 +16,22 @@ trace；后续离线工具 replay 以冻结证据为输入，不重新调用 LLM
 | Dataset | 正式输入形态 | 边界 |
 |---|---|---|
 | XLSX TLC | 历史生成的真实 trip-record 样本与全量汇总 workbook | 100k 真实样本记录，25 列；不是 TLC 官方原生 XLSX，没有 synthetic shard |
-| XLSX Retail | Census MARTS 2026-08 Table 1 原始发布表转录 | 37 个发布类别、原表 12 个度量/标记列；2 张表；官网 XLSX 下载 403，明确不是 native XLSX |
-| XLSX Manufacturing | Census M3 2026-08 Table 1 原始发布表转录 | 71 个含层级/汇总/排除项的发布行、13 个度量列；1 张表；官网 XLSX 下载 403 |
-| XLSX HR | 未扩增、未改写的 May 2025 OEWS 缓存 XLSX | 保留 4 张原表及 1,401 个职业/层级记录；来源是 GitHub cache，官方原字节未核验 |
+| XLSX Retail | Census 原生 MRTS 历史 XLSX | 保留 1992–2026 共 35 张原表；任务聚焦 2026 年 7 月；独立官方下载字节一致 |
+| XLSX Manufacturing | Census 原生 M3 benchmark XLSX | 保留 8 张原表，含 2025 年 1–3 月七张发布表；May 16, 2025 revision；独立官方下载字节一致 |
+| XLSX HR | 未扩增、未改写的 May 2025 OEWS XLSX | 保留 4 张原表及 1,401 个职业/层级记录；与用户官网下载文件字节一致，既有缓存输入 trace 保留 |
 | PDF OPM | OF-306 August 2023 + 冻结虚构记录 | 3 页、38 字段；历史官网下载的精确日期未保留 |
 | PDF IRS W-4 | IRS 原始 2026 W-4 + 可复现虚构记录 | 5 页、48 字段；官方 URL 与 SHA256 冻结，不能静默更新年份 |
 | PDF SBA 1919 | 可填写的 04/2024 表单 + 可复现虚构企业记录 | 7 页、127 字段；不是当前 2025 版；来源与核对边界见下文 |
 
-Retail/M3 使用官方原始表格作为无法获得 native XLSX 时的明确 fallback，保留发布行、
-层级、缺失/抑制标记及说明，不进行扩增或统一成 100k × 16 模板。HR 原缓存与官网表核对的
-字段、未核对字段和字节来源限制都列在 [provenance](datasets/xlsx/hr/provenance.json)；
-正式 KPI 及图表使用的主要职业组另有 [官网字段核对](reports/hr-formal-kpi-provenance-v2.json)。
-旧的三个 synthetic-expanded workbook 和 builder 位于 `legacy/development-synthetic-v1/`，
+Retail/M3 直接使用完整官方原生文件，原始字节与独立官网下载一致；不转录、不扩增，
+不统一成 100k × 16 模板。历史转录输入及其验收记录已归档到
+`legacy/suite-v2-transcription/`，旧 canonical pack 保持原样。HR 用户提供的官方 ZIP
+解压 XLSX 与已有缓存文件字节完全一致，因此保留原 manifest 和 trace；新增
+[provenance supplement](datasets/xlsx/hr/provenance-supplement.json) 绑定官方链接、输入哈希、
+既有 manifest/canonical 和下载核对报告。原 provenance 仍准确记录该次运行用缓存，
+不改写历史。当前环境的 BLS ZIP 重下载仍返回 403，官方 ZIP 获取与解压由用户提供，
+没有独立 ZIP 字节核验。详见 [下载证据](reports/official-native-input-provenance-v3.json)。
+旧三个 synthetic-expanded workbook 和 builder 位于 `legacy/development-synthetic-v1/`，
 仅是历史开发对照，既不在正式 suite 中，也不进入 Agent 输入快照。
 
 SBA 实际取自 `sba.app.box.com` 公开链接。重复下载字节一致，七页规范化文字与 SBA.gov

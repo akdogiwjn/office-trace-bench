@@ -1,0 +1,45 @@
+{
+  "dataset_id": "manufacturing",
+  "output_workbook": "manufacturing_enhanced.xlsx",
+  "added_sheets": ["Overview"],
+  "summary_sheet": "Overview",
+  "original_sheets_preserved": ["Table 1", "Table 2", "Table 3", "Table 4", "Table 5", "Table 6", "Table 7", "Sheet1"],
+  "feature_counts": {
+    "metrics": 4,
+    "scenario_selector": 1,
+    "scenario_dimensions": 1,
+    "scenario_rows": 3,
+    "scenario_assumptions": 3,
+    "projections": 1,
+    "charts": 2,
+    "comments": 3,
+    "conditional_format_rules": 4,
+    "freeze_panes": 1,
+    "data_validation_dropdowns": 1,
+    "new_formulas": 10,
+    "cross_sheet_formulas": 9,
+    "local_formulas": 1,
+    "editable_input_cells": 4
+  },
+  "helper_filenames": [
+    "build_enhanced.py",
+    "inject_caches.py",
+    "build/enhanced_base.xlsx",
+    "build/recalc_work.xlsx",
+    "build/recalc_attempt1.json"
+  ],
+  "helper_attempts": [
+    {"helper": "build_enhanced.py", "attempt": 1, "success": true, "note": "Built Overview sheet with metrics, scenario, projections and charts; appended after originals."},
+    {"helper": "inject_caches.py", "attempt": 1, "success": false, "note": "Relationship Target regex failed (attribute order); repaired in run 2."},
+    {"helper": "inject_caches.py", "attempt": 2, "success": true, "note": "Injected recalculated caches into Overview formula cells at XML level."},
+    {"helper": "input/verify_office.py", "attempt": 1, "success": true, "note": "business_verification.json status=success, 103 checks, 0 failures."}
+  ],
+  "recalc_invocations": 2,
+  "recalc_attempts": [
+    {"target": "/tmp/rtest/copy.xlsx", "purpose": "environment probe", "timeout": 180, "status": "success", "total_errors": 0, "total_formulas": 0},
+    {"target": "build/recalc_work.xlsx", "purpose": "recalculate enhanced formulas", "timeout": 180, "status": "success", "total_errors": 0, "total_formulas": 10}
+  ],
+  "recalc_report_file": "formula_recalc.json",
+  "source_restoration": "LibreOffice recalc altered original-sheet styles/merged ranges, so the output package was built from the pristine openpyxl serialization (which preserves source content) and only the added sheet's <v/> placeholders were patched with recalculated caches via XML injection; originals were never re-serialized through the spreadsheet engine.",
+  "final_verifier_status": "success"
+}

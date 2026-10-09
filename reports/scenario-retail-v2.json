@@ -1,10 +1,10 @@
 {
   "schema_version": "office-scenario-qualification-v1",
   "dataset_id": "retail",
-  "run_id": "xlsx-retail-20261009T081357Z-c3f36068",
-  "source_trace_sha256": "1ff52d9a6698c2455c7be08b1f5cc379a2f85012350408ac7402896d6a29249a",
-  "source_workbook_sha256": "d95fd7ecc76c001b89be4d40d67c26840eac794572977132108d9e40093989f3",
-  "expected_sha256": "8da96dcf6bdb7f45842c16455cf5d898626af689637f2f595d7285284c30a3d9",
+  "run_id": "xlsx-retail-20261009T101352Z-725a21b6",
+  "source_trace_sha256": "a82aa4b889938382ac73a74a6bbd0109ce5c4d51028338b6a9d9fe500ef96cc6",
+  "source_workbook_sha256": "7d4c7e6f708399510438f773b140b0d366cacfab61b331b5f9e139515ec72e51",
+  "expected_sha256": "7cde3d7e0a79aa0d49c2e7d1136d9d1b4a40417d0c0cb8268dbbaa3fdae736c0",
   "status": "success",
   "scenarios": [
     {
@@ -12,23 +12,23 @@
       "recalc_status": "success",
       "checks": {
         "projected_sales": {
-          "actual": 773947,
-          "expected": 773947,
+          "actual": 729538,
+          "expected": 729538,
           "ok": true
         },
         "base_metric:adjusted_sales": {
-          "actual": 773947,
-          "expected": 773947,
+          "actual": 729538,
+          "expected": 729538,
           "ok": true
         },
         "base_metric:monthly_growth": {
-          "actual": 0.0124074185505624,
-          "expected": 0.012407418550562266,
+          "actual": -0.00458453973131323,
+          "expected": -0.004584539731313231,
           "ok": true
         },
         "base_metric:annual_growth": {
-          "actual": 0.060147636352678,
-          "expected": 0.06014763635267806,
+          "actual": 0.0447642779400813,
+          "expected": 0.04476427794008142,
           "ok": true
         }
       },
@@ -39,23 +39,23 @@
       "recalc_status": "success",
       "checks": {
         "projected_sales": {
-          "actual": 804904.88,
-          "expected": 804904.88,
+          "actual": 758719.52,
+          "expected": 758719.52,
           "ok": true
         },
         "base_metric:adjusted_sales": {
-          "actual": 773947,
-          "expected": 773947,
+          "actual": 729538,
+          "expected": 729538,
           "ok": true
         },
         "base_metric:monthly_growth": {
-          "actual": 0.0124074185505624,
-          "expected": 0.012407418550562266,
+          "actual": -0.00458453973131323,
+          "expected": -0.004584539731313231,
           "ok": true
         },
         "base_metric:annual_growth": {
-          "actual": 0.060147636352678,
-          "expected": 0.06014763635267806,
+          "actual": 0.0447642779400813,
+          "expected": 0.04476427794008142,
           "ok": true
         }
       },
@@ -66,23 +66,23 @@
       "recalc_status": "success",
       "checks": {
         "projected_sales": {
-          "actual": 742989.12,
-          "expected": 742989.12,
+          "actual": 700356.48,
+          "expected": 700356.48,
           "ok": true
         },
         "base_metric:adjusted_sales": {
-          "actual": 773947,
-          "expected": 773947,
+          "actual": 729538,
+          "expected": 729538,
           "ok": true
         },
         "base_metric:monthly_growth": {
-          "actual": 0.0124074185505624,
-          "expected": 0.012407418550562266,
+          "actual": -0.00458453973131323,
+          "expected": -0.004584539731313231,
           "ok": true
         },
         "base_metric:annual_growth": {
-          "actual": 0.060147636352678,
-          "expected": 0.06014763635267806,
+          "actual": 0.0447642779400813,
+          "expected": 0.04476427794008142,
           "ok": true
         }
       },

@@ -1,0 +1,1223 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "retail",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "input:input/mrtssales92-present.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "source:worksheets": {
+      "ok": true,
+      "detail": [
+        "2026",
+        "2025",
+        "2024",
+        "2023",
+        "2022",
+        "2021",
+        "2020",
+        "2019",
+        "2018",
+        "2017",
+        "2016",
+        "2015",
+        "2014",
+        "2013",
+        "2012",
+        "2011",
+        "2010",
+        "2009",
+        "2008",
+        "2007",
+        "2006",
+        "2005",
+        "2004",
+        "2003",
+        "2002",
+        "2001",
+        "2000",
+        "1999",
+        "1998",
+        "1997",
+        "1996",
+        "1995",
+        "1994",
+        "1993",
+        "1992",
+        "Overview"
+      ]
+    },
+    "source:relative_order": {
+      "ok": true,
+      "detail": null
+    },
+    "source:data:2026": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2026": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2026": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2025": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2025": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2025": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2024": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2024": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2024": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2023": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2023": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2023": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2022": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2022": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2022": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2021": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2021": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2021": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2020": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2020": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2020": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2019": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2019": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2019": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2018": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2018": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2018": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2017": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2017": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2017": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2016": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2016": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2016": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2015": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2015": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2015": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2014": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2014": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2014": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2013": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2013": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2013": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2012": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2012": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2012": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2011": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2011": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2011": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2010": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2010": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2010": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2009": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2009": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2009": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2008": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2008": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2008": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2007": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2007": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2007": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2006": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2006": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2006": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2005": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2005": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2005": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2004": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2004": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2004": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2003": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2003": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2003": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2002": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2002": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2002": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2001": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2001": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2001": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:2000": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:2000": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:2000": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1999": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1999": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1999": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1998": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1998": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1998": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1997": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1997": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1997": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1996": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1996": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1996": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1995": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1995": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1995": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1994": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1994": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1994": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1993": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1993": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1993": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:1992": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:1992": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:1992": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2026": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2026": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2026": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2025": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2025": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2025": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2024": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2024": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2024": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2023": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2023": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2023": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2022": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2022": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2022": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2021": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2021": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2021": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2020": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2020": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2020": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2019": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2019": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2019": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2018": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2018": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2018": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2017": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2017": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2017": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2016": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2016": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2016": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2015": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2015": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2015": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2014": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2014": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2014": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2013": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2013": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2013": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2012": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2012": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2012": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2011": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2011": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2011": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2010": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2010": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2010": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2009": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2009": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2009": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2008": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2008": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2008": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2007": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2007": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2007": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2006": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2006": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2006": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2005": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2005": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2005": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2004": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2004": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2004": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2003": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2003": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2003": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2002": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2002": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2002": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2001": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2001": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2001": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:2000": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:2000": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:2000": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1999": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1999": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1999": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1998": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1998": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1998": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1997": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1997": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1997": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1996": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1996": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1996": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1995": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1995": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1995": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1994": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1994": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1994": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1993": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1993": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1993": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:1992": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:1992": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:1992": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names": {
+      "ok": true,
+      "detail": null
+    },
+    "overview_added": {
+      "ok": true,
+      "detail": null
+    },
+    "metric_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Overview!B6": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:adjusted_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:adjusted_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:adjusted_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Overview!B7": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:monthly_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:monthly_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:monthly_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Overview!B8": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:annual_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:annual_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:annual_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:selector_color": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:sales_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Higher": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Higher:sales_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Lower": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Lower:sales_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "projection_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Overview!B19": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "chart_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:adjusted_trend": {
+      "ok": true,
+      "detail": [
+        "OVERVIEW!B22:D22",
+        "OVERVIEW!B23:D23"
+      ]
+    },
+    "semantic:chart:adjusted_trend": {
+      "ok": true,
+      "detail": [
+        [
+          731415,
+          732898,
+          729538
+        ]
+      ]
+    },
+    "semantic:chart_dependency:adjusted_trend": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:adjusted_trend": {
+      "ok": true,
+      "detail": null
+    },
+    "format:conditional_rules": {
+      "ok": true,
+      "detail": null
+    },
+    "format:comments": {
+      "ok": true,
+      "detail": null
+    },
+    "format:freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:retail_enhanced.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:workbook_features.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "office-frozen-suite-v2",
+  "datasets": [
+    {
+      "kind": "pdf",
+      "dataset_id": "irs_w4",
+      "manifest_path": "datasets/pdf/irs_w4/manifest.json",
+      "manifest_sha256": "ea7e0817247d77740b4c5d46330f981b53814dd91ca28079cd824aa0650404f9",
+      "canonical_path": "canonical/pdf/irs_w4/pdf-irs_w4-20261009T060857Z-ef1696a0",
+      "canonical_sha256": "33511c033b87703152e38d1b0291f773045c9651c7e604b365753a2a95abd48f"
+    },
+    {
+      "kind": "pdf",
+      "dataset_id": "opm",
+      "manifest_path": "datasets/pdf/opm/manifest.json",
+      "manifest_sha256": "c186b2ed0fc07639048c7bb2378a30831e2c53e832c186a5f99aac9f0e40532d",
+      "canonical_path": "canonical/pdf/opm/pdf-opm-20261009T060618Z-87cbc811",
+      "canonical_sha256": "de2f3bb1dcb6989be3d99c01432f1140e4aa85771b63b28060ae87e8c67c7320"
+    },
+    {
+      "kind": "pdf",
+      "dataset_id": "sba1919",
+      "manifest_path": "datasets/pdf/sba1919/manifest.json",
+      "manifest_sha256": "2b65a2ca089abdf246fd9695cd539bb2890d6aaaa752083a352e4b2835e6b446",
+      "canonical_path": "canonical/pdf/sba1919/pdf-sba1919-20261009T060857Z-b7a0ae3b",
+      "canonical_sha256": "86a92c2378a2ec34efcf4940de6e75236128197e2aadb622f5398f9a17c73110"
+    },
+    {
+      "kind": "xlsx",
+      "dataset_id": "hr",
+      "manifest_path": "datasets/xlsx/hr/manifest.json",
+      "manifest_sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+      "canonical_path": "canonical/xlsx/hr/xlsx-hr-20261009T060833Z-5e454df8",
+      "canonical_sha256": "648bef3f71a6e753c292a4916e6b7408a482d515f0cceabbf27c028704738a53",
+      "scenario_qualification": {
+        "path": "reports/scenario-hr-v2.json",
+        "sha256": "568dcae43fa99d56ea708bc5628311ec04948558933b53499e93690e31035d1b"
+      }
+    },
+    {
+      "kind": "xlsx",
+      "dataset_id": "manufacturing",
+      "manifest_path": "datasets/xlsx/manufacturing/manifest.json",
+      "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+      "canonical_path": "canonical/xlsx/manufacturing/xlsx-manufacturing-20261009T081356Z-7553ba0b",
+      "canonical_sha256": "94fee7eba0be2adfb005c38ed0e238bf633f65d4c2a74cfbb9ccda8db81b651a",
+      "scenario_qualification": {
+        "path": "reports/scenario-manufacturing-v2.json",
+        "sha256": "4760e3ea2ef8015e568aa331559d5648085cf9809b886ee8afd50651fa5017f1"
+      }
+    },
+    {
+      "kind": "xlsx",
+      "dataset_id": "retail",
+      "manifest_path": "datasets/xlsx/retail/manifest.json",
+      "manifest_sha256": "b9aacfd3a459ca1b865da4031955607f684e655571bba4ce11b7b9ce228da0c3",
+      "canonical_path": "canonical/xlsx/retail/xlsx-retail-20261009T081357Z-c3f36068",
+      "canonical_sha256": "fe2546cfb45aee3b5eb34c9aef7504d63a2a6214ab7490ffc5d0dc5de10aed6a",
+      "scenario_qualification": {
+        "path": "reports/scenario-retail-v2.json",
+        "sha256": "430948fdc7b7841146da5df933c987f9db8b2231d0c405fc6e8f5b5866ed5017"
+      }
+    },
+    {
+      "kind": "xlsx",
+      "dataset_id": "tlc",
+      "manifest_path": "datasets/xlsx/tlc/manifest.json",
+      "manifest_sha256": "ee14c42c1ec518dfeac768902916dc6e4e293f415a5953aa6cc15220cde7f4a6",
+      "canonical_path": "canonical/xlsx/tlc/xlsx-tlc-20261009T063937Z-9a06558f",
+      "canonical_sha256": "96dd73fc07faf1eb4b1a411616af5941121d6c34903bf8104d2ca0cb9a06af47",
+      "scenario_qualification": {
+        "path": "reports/scenario-tlc-v2.json",
+        "sha256": "b163cd893ac8d557b106b2afdee8eefd869d1020bd4c4c0a64998438df6991b7"
+      }
+    }
+  ],
+  "replay_ready": false,
+  "provenance_evidence": {
+    "reports/hr-formal-kpi-provenance-v2.json": "6ec74310933a224cba5daa3ca34531e98b7e06e595313673452eaff48f3a330e",
+    "reports/hr-sba-source-reliability-v1.json": "1dbf6bd0264076826d1be3243759587191e23424892d13926f16f77a8505c137",
+    "reports/hr-sba-source-reliability-v2.json": "ee97e795beebe5007a46ec21df73faa538d3cebbbb91dbf2b728599292c07039",
+    "sources/provenance-audit/bls-table1-web-1180.txt": "35416938fd67d20226b89bfc918e230ab179443279b37d0c18ab12579d7a4ae4",
+    "sources/provenance-audit/bls-table1-web-180.txt": "97b12f9f5e743ee9aa63ca5acba70af4eaffc3e39cd8724b90d11f4b9e2f6c2e",
+    "sources/provenance-audit/bls-table1-web-380.txt": "9e417a262249c0f1440a7e73362e12d99c1db2058e567ed6f56a910775ac762b",
+    "sources/provenance-audit/bls-table1-web-580.txt": "e55a6f7d11abf7f9c3ccd180cb129c9ba107f2e07ea7ebc6f67faf529cde9bd2",
+    "sources/provenance-audit/bls-table1-web-780.txt": "3f612826785ca792ac3f03ca5b255ff461463202c9b529df8a02766442d8d09a",
+    "sources/provenance-audit/bls-table1-web-980.txt": "8ab292c01ce9c4e77f77a44c8d1d6188e28bfce59a050fca42aa58571f53f74e",
+    "sources/provenance-audit/m3-table1-web.txt": "6bf15167813e0dd1f297965f85f116a3bf754c07d0ebbec77b2c8bbdbe095f10",
+    "sources/provenance-audit/retail-m3-tables-web.txt": "6a60f7bf197c4fc710e6c3fb46cb0d9ff8a18f069096cff6cd5bb03fe1f5f9ee",
+    "sources/provenance-audit/sba-official-pdf-web-0.txt": "26961ba8f110457d39dedfa0bf255509e10ddf4bfd1e927ff0959c60aa889f16",
+    "sources/provenance-audit/sba-official-pdf-web-210.txt": "c27ab003c3704f5bf61dc8e98e19fb103b68195528dfae168ac57e3a35c038a1",
+    "sources/provenance-audit/sba-official-pdf-web-400.txt": "132e180b71d6fceb015e9df9afeb0cefc15ebcc79fa8be283544eba82a3518d7",
+    "sources/provenance-audit/sba-official-pdf-web-ref0.txt": "48653f542652693a9fe84511e16cd63ddc6fefaa34504b247f0937950785f757",
+    "sources/provenance-audit/sba-official-pdf-web-ref210.txt": "ba995968f791951055848ebb43cd1f4e0e2a19962385acc3a6ef5b652a4778f9",
+    "sources/provenance-audit/sba-official-pdf-web-ref400.txt": "12908756fd6eb8f309ed80fd4acf5970d99631a2f81bb2d35e4201e4f33339a9",
+    "sources/provenance-audit/sba1919-box-redownload.pdf": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a"
+  },
+  "agent_qualification": {
+    "path": "reports/current-agent-regression-v2.json",
+    "sha256": "23a9840e111f60fa2ee1d3d361db0129423b85357e04586bc2c303d3cd0775c0"
+  },
+  "research_scope": "Agent/tool workload characterization with workbook complexity; future frozen tool replay without LLM.",
+  "source_limits": "Retail/M3 official-table transcriptions; HR unexpanded cached native XLSX with partial official corroboration. See per-input provenance.",
+  "replay_gate": "Executable recipe compilation, dependency review and isolated tool replay validation are a later explicitly separate phase."
+}

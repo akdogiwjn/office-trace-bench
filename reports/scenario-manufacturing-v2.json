@@ -1,10 +1,10 @@
 {
   "schema_version": "office-scenario-qualification-v1",
   "dataset_id": "manufacturing",
-  "run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
-  "source_trace_sha256": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
-  "source_workbook_sha256": "6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1",
-  "expected_sha256": "cc342a2fa33df138a395f259f4f09437462aaf83c7d53300731d5b63db70c0c8",
+  "run_id": "xlsx-manufacturing-20261009T101352Z-bd60f53e",
+  "source_trace_sha256": "1ef604c890dff1e83d10ac1cfeb154733d26a179b2652648f352014d9f919400",
+  "source_workbook_sha256": "a83be97688814b182624f4063e4015851a7345cd05ae526ade5f8980198c1662",
+  "expected_sha256": "034886b23a5e0e616a5f34ed38e36c6cc8322fcddfb0365065f82935fd3779d5",
   "status": "success",
   "scenarios": [
     {
@@ -12,28 +12,28 @@
       "recalc_status": "success",
       "checks": {
         "projected_shipments": {
-          "actual": 658622,
-          "expected": 658622,
+          "actual": 601257,
+          "expected": 601257,
           "ok": true
         },
         "base_metric:total_shipments": {
-          "actual": 658622,
-          "expected": 658622,
+          "actual": 601257,
+          "expected": 601257,
           "ok": true
         },
         "base_metric:monthly_growth": {
-          "actual": -3.79565989065463e-05,
-          "expected": -3.795659890659664e-05,
+          "actual": -0.00145316973686833,
+          "expected": -0.001453169736868376,
           "ok": true
         },
         "base_metric:durable_share": {
-          "actual": 0.506495379747412,
-          "expected": 0.506495379747412,
+          "actual": 0.497778820038686,
+          "expected": 0.4977788200386856,
           "ok": true
         },
         "base_metric:nondurable_shipments": {
-          "actual": 325033,
-          "expected": 325033,
+          "actual": 301964,
+          "expected": 301964,
           "ok": true
         }
       },
@@ -44,28 +44,28 @@
       "recalc_status": "success",
       "checks": {
         "projected_shipments": {
-          "actual": 678380.66,
-          "expected": 678380.66,
+          "actual": 619294.71,
+          "expected": 619294.71,
           "ok": true
         },
         "base_metric:total_shipments": {
-          "actual": 658622,
-          "expected": 658622,
+          "actual": 601257,
+          "expected": 601257,
           "ok": true
         },
         "base_metric:monthly_growth": {
-          "actual": -3.79565989065463e-05,
-          "expected": -3.795659890659664e-05,
+          "actual": -0.00145316973686833,
+          "expected": -0.001453169736868376,
           "ok": true
         },
         "base_metric:durable_share": {
-          "actual": 0.506495379747412,
-          "expected": 0.506495379747412,
+          "actual": 0.497778820038686,
+          "expected": 0.4977788200386856,
           "ok": true
         },
         "base_metric:nondurable_shipments": {
-          "actual": 325033,
-          "expected": 325033,
+          "actual": 301964,
+          "expected": 301964,
           "ok": true
         }
       },
@@ -76,28 +76,28 @@
       "recalc_status": "success",
       "checks": {
         "projected_shipments": {
-          "actual": 638863.34,
-          "expected": 638863.34,
+          "actual": 583219.29,
+          "expected": 583219.29,
           "ok": true
         },
         "base_metric:total_shipments": {
-          "actual": 658622,
-          "expected": 658622,
+          "actual": 601257,
+          "expected": 601257,
           "ok": true
         },
         "base_metric:monthly_growth": {
-          "actual": -3.79565989065463e-05,
-          "expected": -3.795659890659664e-05,
+          "actual": -0.00145316973686833,
+          "expected": -0.001453169736868376,
           "ok": true
         },
         "base_metric:durable_share": {
-          "actual": 0.506495379747412,
-          "expected": 0.506495379747412,
+          "actual": 0.497778820038686,
+          "expected": 0.4977788200386856,
           "ok": true
         },
         "base_metric:nondurable_shipments": {
-          "actual": 325033,
-          "expected": 325033,
+          "actual": 301964,
+          "expected": 301964,
           "ok": true
         }
       },

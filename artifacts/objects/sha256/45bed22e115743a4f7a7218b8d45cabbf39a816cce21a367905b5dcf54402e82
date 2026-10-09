@@ -1,0 +1,22 @@
+{
+  "summary_sheet": "Overview",
+  "metrics": {
+    "adjusted_sales": {"sheet": "Overview", "cell": "B6"},
+    "monthly_growth": {"sheet": "Overview", "cell": "B7"},
+    "annual_growth": {"sheet": "Overview", "cell": "B8"}
+  },
+  "scenario": {
+    "selector": {"sheet": "Overview", "cell": "B11"},
+    "assumptions": {
+      "Base": {"sales_multiplier": {"sheet": "Overview", "cell": "B14"}},
+      "Higher": {"sales_multiplier": {"sheet": "Overview", "cell": "B15"}},
+      "Lower": {"sales_multiplier": {"sheet": "Overview", "cell": "B16"}}
+    },
+    "projections": {
+      "projected_sales": {"sheet": "Overview", "cell": "B19"}
+    }
+  },
+  "charts": {
+    "adjusted_trend": {"sheet": "Overview", "index": 0}
+  }
+}

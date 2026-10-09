@@ -1,0 +1,5 @@
+{
+  "status": "superseded_by_native_xlsx_v3",
+  "archived_at": "2026-10-09T09:40:52.410573+00:00",
+  "reason": "Owner authorized adoption of complete native Census workbooks; old canonical packs remain immutable in artifacts/canonical."
+}
