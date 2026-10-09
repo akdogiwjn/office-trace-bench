@@ -38,16 +38,16 @@ def main():
         results=[]
         commands=[[sys.executable,'scripts/check_self_contained.py','--inside-report',str(Path(tmp)/'unit.json')],
                   ['make','regression'],[sys.executable,'scripts/freeze_suite_index.py','--validate'],
-                  [sys.executable,'scripts/verify_canonical_outputs.py']]
+                  [sys.executable,'scripts/verify_canonical_outputs.py','--report','qualification/canonical-output-regression-current.json']]
         for command in commands:
             print('Isolated check:',command[1] if command[0]==sys.executable else 'make regression',flush=True)
             process=subprocess.run(command,cwd=folder,env=environment,capture_output=True,text=True)
-            results.append(dict(check='unit_tests' if '--inside-report' in command else 'legacy_regression' if command[0]=='make' else 'canonical_outputs' if command[-1]=='scripts/verify_canonical_outputs.py' else 'canonical_suite',
+            results.append(dict(check='unit_tests' if '--inside-report' in command else 'legacy_regression' if command[0]=='make' else 'canonical_outputs' if 'scripts/verify_canonical_outputs.py' in command else 'canonical_suite',
                                 exit_code=process.returncode,stdout=process.stdout,stderr=process.stderr))
             print(process.stdout,flush=True)
             if process.returncode:print(process.stderr,flush=True)
         unit=json.loads((Path(tmp)/'unit.json').read_text())
-        restored_report=folder/'reports/canonical-output-regression-v2.json'
+        restored_report=folder/'qualification/canonical-output-regression-current.json'
         if restored_report.exists():
             import shutil
             shutil.copyfile(restored_report,ROOT/'reports/canonical-output-regression-v2.json')

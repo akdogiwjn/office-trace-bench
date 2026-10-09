@@ -7,7 +7,7 @@ trace；后续离线工具 replay 以冻结证据为输入，不重新调用 LLM
 
 正式输入、来源限制和逐项回归状态见 [原生输入更新审计](docs/native-input-update-v3.md)；研究边界见
 [methodology](docs/methodology.md)。测试结果以 [独立目录测试报告](reports/self-contained-tests-v2.json)
-为准：当前原生输入版本为 **27 passed、0 skipped、0 failed、0 errors**。
+为依据：原生输入 v3 的完整独立回归为 **27 passed、0 skipped、0 failed、0 errors**。
 七个正式 dataset 均已由真实 Agent 成功运行并冻结；归档产物恢复后通过当前 verifier，
 四个 XLSX 的 11 个场景重算通过，旧 TLC / OPM 兼容回归通过。
 详见 [真实 Agent 回归](reports/current-agent-regression-v2.json) 和
@@ -47,7 +47,18 @@ make test
 make regression
 python3 scripts/freeze_suite_index.py --validate
 python3 scripts/verify_canonical_outputs.py
+# 单项检查；--dataset 可重复指定：
+python3 scripts/verify_canonical_outputs.py --dataset retail
+python3 scripts/verify_canonical_outputs.py --dataset tlc
 ```
+
+归档恢复检查打印每项开始/结束及耗时，逐项保存结果，默认报告写入新的
+`qualification/canonical-verification/` 文件，不覆盖仓库冻结报告。可用 `--report PATH`
+指定输出；单项报告明确标为 `dataset_selection`，不能覆盖正式七项报告。
+命令被强制终止时已保存的结果保留，报告中的 `in_progress` 不代表全套通过。
+此次单项/进度 CLI 修复另通过 31 项测试（0 skipped / failed / errors）及 Retail 单项恢复验收。
+核心 verifier 与 canonical trace 未变；冻结的完整报告仍绑定修复前的入口脚本，
+本次单项报告不替代该完整回归证据。
 
 需要 Python 3.11+ 和 Pillow。纯 Python 依赖从仓库内 vendored wheels 引导加载；宿主若没有
 Pillow，可在自己的虚拟环境中安装。无需旁边的旧仓库、`runs/`、`qualification/` 或开发机
