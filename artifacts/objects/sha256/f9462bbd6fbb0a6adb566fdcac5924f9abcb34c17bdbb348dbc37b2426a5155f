@@ -1,0 +1,561 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "tlc",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "input:input/monthly_operations_template.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/template_manifest.json": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/dataset_sources.md": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/prepared_monthly_operations_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/prepared_reconciliation_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "source:worksheets": {
+      "ok": true,
+      "detail": [
+        "Raw_Sample",
+        "Hourly_Summary",
+        "Daily_Summary",
+        "Zone_Summary",
+        "Payment_Summary",
+        "Fare_Distance_Bands",
+        "Reconciliation",
+        "Executive_Dashboard",
+        "Charts"
+      ]
+    },
+    "source:relative_order": {
+      "ok": true,
+      "detail": null
+    },
+    "source:data:Raw_Sample": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Raw_Sample": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Raw_Sample": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Hourly_Summary": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Hourly_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Hourly_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Daily_Summary": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Daily_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Daily_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Zone_Summary": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Zone_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Zone_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Payment_Summary": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Payment_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Payment_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Reconciliation": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Reconciliation": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Reconciliation": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Raw_Sample": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Raw_Sample": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Raw_Sample": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Hourly_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Hourly_Summary": {
+      "ok": true,
+      "detail": [
+        [
+          "HOURLY_SUMMARY!A2:A25",
+          "HOURLY_SUMMARY!B1",
+          "HOURLY_SUMMARY!B2:B25"
+        ]
+      ]
+    },
+    "source:styles:Hourly_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Daily_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Daily_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Daily_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Zone_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Zone_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Zone_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Payment_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Payment_Summary": {
+      "ok": true,
+      "detail": [
+        [
+          "PAYMENT_SUMMARY!A2:A5",
+          "PAYMENT_SUMMARY!B1",
+          "PAYMENT_SUMMARY!B2:B5"
+        ]
+      ]
+    },
+    "source:styles:Payment_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Reconciliation": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Reconciliation": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Reconciliation": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names": {
+      "ok": true,
+      "detail": null
+    },
+    "overview_added": {
+      "ok": true,
+      "detail": null
+    },
+    "metric_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B6": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:total_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:total_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:total_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B7": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:fare_revenue": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:fare_revenue": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:fare_revenue": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B8": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:average_fare": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:average_fare": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:average_fare": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B9": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:removal_rate": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:removal_rate": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:removal_rate": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B10": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:reconciliation_status": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:reconciliation_status": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:reconciliation_status": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:selector_color": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:fare_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:trip_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Upside": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Upside:fare_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Upside:trip_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Downside": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Downside:fare_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Downside:trip_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "projection_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B21": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Executive_Dashboard!B22": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_fare": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_fare": {
+      "ok": true,
+      "detail": null
+    },
+    "chart_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:daily_trips": {
+      "ok": true,
+      "detail": [
+        "DAILY_SUMMARY!A2:A32",
+        "DAILY_SUMMARY!C1",
+        "DAILY_SUMMARY!C2:C32"
+      ]
+    },
+    "semantic:chart:daily_trips": {
+      "ok": true,
+      "detail": [
+        [
+          69073,
+          71057,
+          78111,
+          97758,
+          97823,
+          90260,
+          63738,
+          75558,
+          84285,
+          89755,
+          99130,
+          96747,
+          98382,
+          87305,
+          72868,
+          85601,
+          99930,
+          102078,
+          89472,
+          98565,
+          77673,
+          80283,
+          93304,
+          98991,
+          102571,
+          98682,
+          104101,
+          83819,
+          79645,
+          95696,
+          96166
+        ]
+      ]
+    },
+    "semantic:chart_dependency:daily_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:daily_trips": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:payment_mix": {
+      "ok": true,
+      "detail": [
+        "PAYMENT_SUMMARY!A2:A5",
+        "PAYMENT_SUMMARY!B1",
+        "PAYMENT_SUMMARY!B2:B5"
+      ]
+    },
+    "semantic:chart:payment_mix": {
+      "ok": true,
+      "detail": [
+        [
+          2289029,
+          430338,
+          25219,
+          13841
+        ]
+      ]
+    },
+    "semantic:chart_dependency:payment_mix": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:payment_mix": {
+      "ok": true,
+      "detail": null
+    },
+    "format:conditional_rules": {
+      "ok": true,
+      "detail": null
+    },
+    "format:comments": {
+      "ok": true,
+      "detail": null
+    },
+    "format:freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": null
+    },
+    "published:monthly_operations_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "published:reconciliation_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:monthly_operations_report.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:workbook_features.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:monthly_operations_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:reconciliation_summary.csv": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "failures": []
+}

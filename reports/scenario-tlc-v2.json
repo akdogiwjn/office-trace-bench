@@ -1,0 +1,138 @@
+{
+  "schema_version": "office-scenario-qualification-v1",
+  "dataset_id": "tlc",
+  "run_id": "xlsx-tlc-20261009T063937Z-9a06558f",
+  "source_trace_sha256": "c9ae5b05b14022a7cdb8a9aa7963e9e82a00697048615f95adaf5a49be3bde25",
+  "source_workbook_sha256": "5f30be31087743d3b92b7b9d9d8aea44e8cc8d77064ba278021ee8964133fdaa",
+  "expected_sha256": "d7c4964637cf50f7b3555288e4c97dea7752c0d59facb9939b304b11ea8c8ca4",
+  "status": "success",
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "recalc_status": "success",
+      "checks": {
+        "projected_trips": {
+          "actual": 2758427,
+          "expected": 2758427,
+          "ok": true
+        },
+        "projected_fare": {
+          "actual": 50744748.6,
+          "expected": 50744748.6,
+          "ok": true
+        },
+        "base_metric:total_trips": {
+          "actual": 2758427,
+          "expected": 2758427,
+          "ok": true
+        },
+        "base_metric:fare_revenue": {
+          "actual": 50744748.6,
+          "expected": 50744748.6,
+          "ok": true
+        },
+        "base_metric:average_fare": {
+          "actual": 18.9361351508528,
+          "expected": 18.9361351508528,
+          "ok": true
+        },
+        "base_metric:removal_rate": {
+          "actual": 0.0695524963705347,
+          "expected": 0.0695524963705347,
+          "ok": true
+        },
+        "base_metric:reconciliation_status": {
+          "actual": "PASS",
+          "expected": "PASS",
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Upside",
+      "recalc_status": "success",
+      "checks": {
+        "projected_trips": {
+          "actual": 2896348.35,
+          "expected": 2896348.35,
+          "ok": true
+        },
+        "projected_fare": {
+          "actual": 57544544.9124,
+          "expected": 57544544.91240001,
+          "ok": true
+        },
+        "base_metric:total_trips": {
+          "actual": 2758427,
+          "expected": 2758427,
+          "ok": true
+        },
+        "base_metric:fare_revenue": {
+          "actual": 50744748.6,
+          "expected": 50744748.6,
+          "ok": true
+        },
+        "base_metric:average_fare": {
+          "actual": 18.9361351508528,
+          "expected": 18.9361351508528,
+          "ok": true
+        },
+        "base_metric:removal_rate": {
+          "actual": 0.0695524963705347,
+          "expected": 0.0695524963705347,
+          "ok": true
+        },
+        "base_metric:reconciliation_status": {
+          "actual": "PASS",
+          "expected": "PASS",
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Downside",
+      "recalc_status": "success",
+      "checks": {
+        "projected_trips": {
+          "actual": 2620505.65,
+          "expected": 2620505.65,
+          "ok": true
+        },
+        "projected_fare": {
+          "actual": 44832985.3881,
+          "expected": 44832985.388100006,
+          "ok": true
+        },
+        "base_metric:total_trips": {
+          "actual": 2758427,
+          "expected": 2758427,
+          "ok": true
+        },
+        "base_metric:fare_revenue": {
+          "actual": 50744748.6,
+          "expected": 50744748.6,
+          "ok": true
+        },
+        "base_metric:average_fare": {
+          "actual": 18.9361351508528,
+          "expected": 18.9361351508528,
+          "ok": true
+        },
+        "base_metric:removal_rate": {
+          "actual": 0.0695524963705347,
+          "expected": 0.0695524963705347,
+          "ok": true
+        },
+        "base_metric:reconciliation_status": {
+          "actual": "PASS",
+          "expected": "PASS",
+          "ok": true
+        }
+      },
+      "passed": true
+    }
+  ],
+  "scope": "Functional scenario QA on disposable copies after Agent execution. No LLM, no CPU/OS replay or performance measurements. These recalc calls are not original Agent tool events."
+}

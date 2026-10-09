@@ -1,0 +1,133 @@
+{
+  "status": "success",
+  "checks": [
+    {
+      "occupation": "All Occupations",
+      "field": "TOT_EMP",
+      "cache_value": 155495730,
+      "official_value": 155495730,
+      "equal": true
+    },
+    {
+      "occupation": "All Occupations",
+      "field": "A_MEAN",
+      "cache_value": 69770,
+      "official_value": 69770,
+      "equal": true
+    },
+    {
+      "occupation": "All Occupations",
+      "field": "H_MEDIAN",
+      "cache_value": 24.51,
+      "official_value": 24.51,
+      "equal": true
+    },
+    {
+      "occupation": "Office and Administrative Support Occupations",
+      "field": "TOT_EMP",
+      "cache_value": 17753430,
+      "official_value": 17753430,
+      "equal": true
+    },
+    {
+      "occupation": "Office and Administrative Support Occupations",
+      "field": "A_MEAN",
+      "cache_value": 51560,
+      "official_value": 51560,
+      "equal": true
+    },
+    {
+      "occupation": "Office and Administrative Support Occupations",
+      "field": "H_MEDIAN",
+      "cache_value": 22.81,
+      "official_value": 22.81,
+      "equal": true
+    },
+    {
+      "occupation": "Food Preparation and Serving Related Occupations",
+      "field": "TOT_EMP",
+      "cache_value": 13680750,
+      "official_value": 13680750,
+      "equal": true
+    },
+    {
+      "occupation": "Food Preparation and Serving Related Occupations",
+      "field": "A_MEAN",
+      "cache_value": 37150,
+      "official_value": 37150,
+      "equal": true
+    },
+    {
+      "occupation": "Food Preparation and Serving Related Occupations",
+      "field": "H_MEDIAN",
+      "cache_value": 16.85,
+      "official_value": 16.85,
+      "equal": true
+    },
+    {
+      "occupation": "Transportation and Material Moving Occupations",
+      "field": "TOT_EMP",
+      "cache_value": 13677150,
+      "official_value": 13677150,
+      "equal": true
+    },
+    {
+      "occupation": "Transportation and Material Moving Occupations",
+      "field": "A_MEAN",
+      "cache_value": 49850,
+      "official_value": 49850,
+      "equal": true
+    },
+    {
+      "occupation": "Transportation and Material Moving Occupations",
+      "field": "H_MEDIAN",
+      "cache_value": 21.32,
+      "official_value": 21.32,
+      "equal": true
+    },
+    {
+      "occupation": "Sales and Related Occupations",
+      "field": "TOT_EMP",
+      "cache_value": 13424300,
+      "official_value": 13424300,
+      "equal": true
+    },
+    {
+      "occupation": "Sales and Related Occupations",
+      "field": "A_MEAN",
+      "cache_value": 54960,
+      "official_value": 54960,
+      "equal": true
+    },
+    {
+      "occupation": "Sales and Related Occupations",
+      "field": "H_MEDIAN",
+      "cache_value": 18.52,
+      "official_value": 18.52,
+      "equal": true
+    },
+    {
+      "occupation": "Management Occupations",
+      "field": "TOT_EMP",
+      "cache_value": 11132700,
+      "official_value": 11132700,
+      "equal": true
+    },
+    {
+      "occupation": "Management Occupations",
+      "field": "A_MEAN",
+      "cache_value": 145260,
+      "official_value": 145260,
+      "equal": true
+    },
+    {
+      "occupation": "Management Occupations",
+      "field": "H_MEDIAN",
+      "cache_value": 60.83,
+      "official_value": 60.83,
+      "equal": true
+    }
+  ],
+  "source": "BLS official May 2025 news table, frozen extracts",
+  "input_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2"
+}

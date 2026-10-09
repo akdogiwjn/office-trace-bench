@@ -1,3 +1,5 @@
+> 历史证据：本报告保留原实验及其契约，不代表当前冻结 suite。当前输入、trace 选择与来源边界见 [suite 审计](../docs/suite-audit-v2.md)。
+
 # 当前环境下旧、新 runner 各一次对照
 
 对照：`comparison_complete`；控制项：`success`；严格业务回归：`failed`。

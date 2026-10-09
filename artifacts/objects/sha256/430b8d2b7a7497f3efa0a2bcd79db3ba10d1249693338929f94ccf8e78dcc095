@@ -1,0 +1,127 @@
+{
+  "schema_version": "office-fictional-record-contract-v1",
+  "records_file": "synthetic_applicants.json",
+  "records_sha256": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+  "records_key": "applicants",
+  "record_count": 10,
+  "schema": {
+    "type": "object",
+    "required": [
+      "applicants",
+      "dataset_name",
+      "privacy_notice",
+      "shared_answers"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "dataset_name": {
+        "type": "string"
+      },
+      "privacy_notice": {
+        "type": "string"
+      },
+      "applicants": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "born_male_after_1959",
+            "date_of_birth",
+            "day_phone",
+            "full_name",
+            "id",
+            "other_names",
+            "place_of_birth",
+            "registered_selective_service",
+            "us_citizen"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "place_of_birth": {
+              "type": "string"
+            },
+            "date_of_birth": {
+              "type": "string"
+            },
+            "day_phone": {
+              "type": "string"
+            },
+            "other_names": {
+              "type": "string"
+            },
+            "us_citizen": {
+              "type": "boolean"
+            },
+            "born_male_after_1959": {
+              "type": "boolean"
+            },
+            "registered_selective_service": {
+              "type": "boolean"
+            }
+          }
+        },
+        "minItems": 10,
+        "maxItems": 10
+      },
+      "shared_answers": {
+        "type": "object",
+        "required": [
+          "continuation",
+          "convicted_or_paroled_last_7_years",
+          "court_martialed_last_7_years",
+          "currently_under_charges",
+          "delinquent_federal_debt",
+          "fired_debarred_or_forced_to_quit",
+          "government_retirement_or_pension",
+          "military_service",
+          "relative_at_agency"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "military_service": {
+            "type": "boolean"
+          },
+          "convicted_or_paroled_last_7_years": {
+            "type": "boolean"
+          },
+          "court_martialed_last_7_years": {
+            "type": "boolean"
+          },
+          "currently_under_charges": {
+            "type": "boolean"
+          },
+          "fired_debarred_or_forced_to_quit": {
+            "type": "boolean"
+          },
+          "delinquent_federal_debt": {
+            "type": "boolean"
+          },
+          "relative_at_agency": {
+            "type": "boolean"
+          },
+          "government_retirement_or_pension": {
+            "type": "boolean"
+          },
+          "continuation": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "synthetic": true,
+  "contains_real_sensitive_data": false,
+  "random_seed": null,
+  "generation_method": "Hand-authored frozen fictional fixture; reproduce byte-for-byte from legacy/runner/cases/pdf/input/synthetic_applicants.json",
+  "generator": "legacy/runner/cases/pdf/input/synthetic_applicants.json",
+  "generator_sha256": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+  "generator_function": null,
+  "privacy": "All fixture identities are invented; reserved 555 phone numbers/example.invalid emails where present; SSNs/TINs/signatures excluded. Public birthplaces/addresses can coincide with real places without representing real persons.",
+  "update_policy": "Input byte changes require a new suite revision and new canonical trace; never replace silently."
+}

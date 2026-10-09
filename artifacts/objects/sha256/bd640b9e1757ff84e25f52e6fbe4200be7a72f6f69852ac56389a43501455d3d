@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""Recalculate stage1 with LibreOffice, then merge cached formula values into
+the openpyxl-authored workbook so original sheet formatting is preserved
+exactly while the new formulas carry recalculated caches.
+
+Outputs:
+  output/formula_recalc.json   (LibreOffice recalc report)
+  output/retail_enhanced.xlsx  (final workbook: original styles + caches)
+"""
+import json
+import re
+import shutil
+import subprocess
+import sys
+import zipfile
+from pathlib import Path
+from xml.etree import ElementTree as ET
+
+import openpyxl
+
+ROOT = Path(__file__).resolve().parents[1]
+SCRATCH = ROOT / 'scratch'
+OUTPUT = ROOT / 'output'
+RECALC = Path('/root/.openclaw/skills/xlsx/scripts/recalc.py')
+TIMEOUT = 180
+
+STAGE1 = SCRATCH / 'stage1.xlsx'
+RECALC_SRC = SCRATCH / 'recalc_source.xlsx'
+FINAL = OUTPUT / 'retail_enhanced.xlsx'
+
+M_NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
+R_NS = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'
+PR_NS = 'http://schemas.openxmlformats.org/package/2006/relationships'
+
+
+def run_recalc(src, work):
+    shutil.copyfile(src, work)
+    attempts = []
+    proc = subprocess.run([sys.executable, str(RECALC), str(work), str(TIMEOUT)],
+                          capture_output=True, text=True)
+    attempts.append({'cmd': f'python3 recalc.py {work.name} {TIMEOUT}',
+                     'returncode': proc.returncode,
+                     'stdout': proc.stdout, 'stderr': proc.stderr})
+    report = None
+    try:
+        report = json.loads(proc.stdout.strip()) if proc.stdout.strip() else None
+    except Exception:
+        report = {'status': 'parse_error', 'raw': proc.stdout}
+    return report, attempts
+
+
+def sheet_xml_map(zf):
+    """Map worksheet display name -> zip path."""
+    wb_xml = ET.fromstring(zf.read('xl/workbook.xml'))
+    rels = ET.fromstring(zf.read('xl/_rels/workbook.xml.rels'))
+    rel_target = {r.get('Id'): r.get('Target') for r in rels}
+    mapping = {}
+    for sh in wb_xml.find(f'{{{M_NS}}}sheets'):
+        rid = sh.get(f'{{{R_NS}}}id')
+        target = rel_target[rid].lstrip('/')
+        if not target.startswith('xl/'):
+            target = 'xl/' + target
+        mapping[sh.get('name')] = target
+    return mapping
+
+
+def inject(stage, final, values_by_sheet):
+    """values_by_sheet: {sheet_name: {coord: value}}."""
+    tmp = final.with_suffix('.tmp.xlsx')
+    with zipfile.ZipFile(stage, 'r') as zin:
+        names = zin.namelist()
+        mapping = sheet_xml_map(zin)
+        path_to_sheet = {v: k for k, v in mapping.items()}
+        data = {n: zin.read(n) for n in names}
+    injected = 0
+    for part, sheet_name in path_to_sheet.items():
+        vals = values_by_sheet.get(sheet_name, {})
+        if not vals:
+            continue
+        xml = data[part].decode('utf-8')
+        for coord, value in vals.items():
+            pat = re.compile(r'(<c r="' + re.escape(coord) + r'"[^>]*>)(.*?)(</c>)', re.S)
+            m = pat.search(xml)
+            if not m:
+                continue
+            inner = m.group(2)
+            if '<f' not in inner or '<v>' in inner:
+                continue
+            if value is None:
+                continue
+            vxml = f'<v>{value}</v>'
+            xml = xml[:m.start()] + m.group(1) + inner + vxml + m.group(3) + xml[m.end():]
+            injected += 1
+        data[part] = xml.encode('utf-8')
+    with zipfile.ZipFile(tmp, 'w', zipfile.ZIP_DEFLATED) as zout:
+        for n in names:
+            zout.writestr(n, data[n])
+    tmp.replace(final)
+    return injected
+
+
+def fmt_val(v):
+    if isinstance(v, bool):
+        return str(v)
+    if isinstance(v, int):
+        return str(v)
+    if isinstance(v, float):
+        return format(v, '.15g')
+    return str(v)
+
+
+def main():
+    OUTPUT.mkdir(exist_ok=True)
+    report, attempts = run_recalc(STAGE1, RECALC_SRC)
+    (OUTPUT / 'formula_recalc.json').write_text(json.dumps(report, indent=2) + '\n')
+    (SCRATCH / 'recalc_attempts.json').write_text(json.dumps(attempts, indent=2) + '\n')
+
+    rb = openpyxl.load_workbook(RECALC_SRC, data_only=True)
+    fb = openpyxl.load_workbook(STAGE1, data_only=False)
+    values_by_sheet = {}
+    for ws in fb.worksheets:
+        rb_ws = rb[ws.title]
+        sheet_vals = {}
+        for row in ws.iter_rows():
+            for c in row:
+                if c.data_type == 'f':
+                    v = rb_ws[c.coordinate].value
+                    if v is not None:
+                        sheet_vals[c.coordinate] = fmt_val(v)
+        if sheet_vals:
+            values_by_sheet[ws.title] = sheet_vals
+    n = inject(STAGE1, FINAL, values_by_sheet)
+    print('recalc status:', report.get('status') if report else None,
+          '| injected caches:', n, '| sheets:', list(values_by_sheet))
+
+
+if __name__ == '__main__':
+    main()

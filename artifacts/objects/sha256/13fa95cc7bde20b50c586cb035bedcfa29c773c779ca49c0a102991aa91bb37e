@@ -1,0 +1,8 @@
+│
+◇  Config warnings ──────────────────────────────────────────────╮
+│                                                                │
+│  - plugins.allow: plugin deepseek: plugin requires plugin API  │
+│    >=2026.7.1, but this host is 2026.6.6; skipping discovery   │
+│                                                                │
+├────────────────────────────────────────────────────────────────╯
+Updated agents.defaults.model. Restart the gateway to apply.

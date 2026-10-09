@@ -1,0 +1,123 @@
+{
+  "schema_version": "office-dataset-v2",
+  "workload_contract": "spreadsheet-semantic-v2",
+  "kind": "xlsx",
+  "dataset_id": "manufacturing",
+  "domain": "manufacturing",
+  "task": "Analyze Census M3 August 2026 Table 1 shipments",
+  "workbook": "m3_shipments_202608.xlsx",
+  "output_workbook": "manufacturing_enhanced.xlsx",
+  "input_files": {
+    "input/m3_shipments_202608.xlsx": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "cc342a2fa33df138a395f259f4f09437462aaf83c7d53300731d5b63db70c0c8",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "runtime_case": "OFFICE-XLSX-MANUFACTURING",
+  "requirements": {
+    "metrics": [
+      {
+        "id": "total_shipments",
+        "name": "Total shipments",
+        "meaning": "All manufacturing industries seasonally adjusted August 2026 shipments. Do not sum overlapping industry hierarchy rows.",
+        "unit": "USD million"
+      },
+      {
+        "id": "monthly_growth",
+        "name": "Monthly change",
+        "meaning": "Relative change in all-manufacturing adjusted shipments July to August 2026 computed from the levels.",
+        "unit": "fraction"
+      },
+      {
+        "id": "durable_share",
+        "name": "Durable goods share",
+        "meaning": "Durable-goods August 2026 adjusted shipments as a fraction of all manufacturing shipments.",
+        "unit": "fraction"
+      },
+      {
+        "id": "nondurable_shipments",
+        "name": "Nondurable shipments",
+        "meaning": "Published nondurable-goods August 2026 seasonally adjusted shipments.",
+        "unit": "USD million"
+      }
+    ],
+    "scenario": {
+      "default": "Base",
+      "dimensions": [
+        {
+          "id": "shipments_multiplier",
+          "meaning": "Hypothetical shipments multiplier, not an official forecast"
+        }
+      ],
+      "rows": [
+        {
+          "name": "Base",
+          "assumptions": {
+            "shipments_multiplier": 1
+          }
+        },
+        {
+          "name": "Expansion",
+          "assumptions": {
+            "shipments_multiplier": 1.03
+          }
+        },
+        {
+          "name": "Contraction",
+          "assumptions": {
+            "shipments_multiplier": 0.97
+          }
+        }
+      ],
+      "projections": [
+        {
+          "id": "projected_shipments",
+          "meaning": "Total adjusted shipments scaled by the selected multiplier",
+          "unit": "USD million"
+        }
+      ]
+    },
+    "charts": [
+      {
+        "id": "durability_mix",
+        "meaning": "Compare August 2026 seasonally adjusted durable versus nondurable shipments, excluding subordinate rows",
+        "unit": "USD million"
+      },
+      {
+        "id": "shipment_trend",
+        "meaning": "All-manufacturing seasonally adjusted shipments June, July, August 2026 in chronological order",
+        "unit": "USD million"
+      }
+    ],
+    "minimum_comments": 2,
+    "minimum_conditional_formats": 2,
+    "recalc_timeout": 180
+  },
+  "publish_files": [],
+  "trace_rules": [
+    {
+      "pattern": "\\bverify_office\\.py\\b",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "recalc\\.py",
+      "operation": "recalculate_formulas"
+    }
+  ],
+  "required_outputs": [
+    "manufacturing_enhanced.xlsx",
+    "workbook_features.json",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ],
+  "analysis_metadata": {
+    "provenance.json": "c8c1b86a51227d2424219e292ebe3df14d99624efc1582b1a029d2a3f964db5a",
+    "complexity.json": "541f15960bb62ff05c5594d1f21981d539d6dabc44b7dbe620de0c4c38f2f252"
+  }
+}

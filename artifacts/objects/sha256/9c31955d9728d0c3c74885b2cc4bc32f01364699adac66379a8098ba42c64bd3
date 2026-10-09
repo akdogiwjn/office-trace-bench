@@ -1,0 +1,29 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "dataset_id": "hr",
+  "filename": "national_M2025_dl.xlsx",
+  "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+  "frozen_at": "2026-10-09T05:17:31.684215+00:00",
+  "task": "Analyze the frozen May 2025 OEWS national workbook",
+  "input_class": "cached_native_spreadsheet",
+  "native_xlsx": true,
+  "official_byte_identity_verified": false,
+  "official_url": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+  "actual_download_source": "https://raw.githubusercontent.com/hack4rva/richmond-ai-impact-analysis/main/data/oesm25nat/national_M2025_dl.xlsx",
+  "source_filename": "national_M2025_dl.xlsx",
+  "release": "May 2025 OEWS estimates",
+  "download_date": "2026-10-09 (cache first acquired; official retry same day returned 403)",
+  "synthetic_expansion": false,
+  "conversion": "None. Unmodified cache bytes; all worksheets, occupation hierarchy, suppression markers and formatting retained.",
+  "verification_evidence": "reports/hr-sba-source-reliability-v1.json",
+  "verified_fields": "825 detailed seed occupations: TOT_EMP and A_MEAN; 767 published H_MEAN/H_MEDIAN values against BLS official news table. Formal KPI cells will be separately corroborated.",
+  "unverified_fields": [
+    "Official ZIP/workbook byte identity",
+    "A_MEDIAN and percentile columns",
+    "All 1401 original records, including non-seed aggregates and other ownership records"
+  ],
+  "limitations": [
+    "A GitHub cache is not an official download. The source limits remain explicit; no silent substitution when the official file becomes accessible."
+  ],
+  "formal_kpi_verification": "reports/hr-formal-kpi-provenance-v2.json"
+}

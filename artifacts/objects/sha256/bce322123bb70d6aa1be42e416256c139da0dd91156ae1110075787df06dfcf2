@@ -1,0 +1,21 @@
+{
+  "input_form": "sba1919_2024.pdf",
+  "applicant_count": 10,
+  "filled_pdf_count": 10,
+  "rendered_page_count": 77,
+  "ssn_and_signatures_left_blank": true,
+  "fill_script_invocations": 10,
+  "render_script_invocations": 11,
+  "counts_detail": {
+    "records": 10,
+    "field_values_files": 10,
+    "filled_pdfs": 10,
+    "rendered_dirs": 11,
+    "fill_invocations_normal": 10,
+    "fill_invocations_failed": 0,
+    "fill_invocations_repair": 0,
+    "render_invocations_normal": 11,
+    "render_invocations_failed": 0,
+    "render_invocations_repair": 0
+  }
+}

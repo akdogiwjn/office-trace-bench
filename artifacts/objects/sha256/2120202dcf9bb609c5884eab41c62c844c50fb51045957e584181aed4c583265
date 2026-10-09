@@ -1,0 +1,172 @@
+{
+  "schema_version": "office-agent-context-audit-v1",
+  "matched": true,
+  "profile": "legacy-host-v1",
+  "workspace_files": {
+    "AGENTS.md": 7195,
+    "SOUL.md": 1509,
+    "TOOLS.md": 866,
+    "IDENTITY.md": 1275,
+    "USER.md": 534,
+    "HEARTBEAT.md": 243
+  },
+  "expected_workspace_files": {
+    "AGENTS.md": 7195,
+    "SOUL.md": 1509,
+    "TOOLS.md": 866,
+    "IDENTITY.md": 1275,
+    "USER.md": 534,
+    "HEARTBEAT.md": 243
+  },
+  "skills": {
+    "promptChars": 5813,
+    "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+    "entries": [
+      {
+        "name": "agent-browser",
+        "blockChars": 316
+      },
+      {
+        "name": "canvas",
+        "blockChars": 314
+      },
+      {
+        "name": "diagram-maker",
+        "blockChars": 317
+      },
+      {
+        "name": "healthcheck",
+        "blockChars": 329
+      },
+      {
+        "name": "meme-maker",
+        "blockChars": 302
+      },
+      {
+        "name": "node-connect",
+        "blockChars": 332
+      },
+      {
+        "name": "node-inspect-debugger",
+        "blockChars": 328
+      },
+      {
+        "name": "python-debugpy",
+        "blockChars": 316
+      },
+      {
+        "name": "skill-creator",
+        "blockChars": 310
+      },
+      {
+        "name": "spike",
+        "blockChars": 302
+      },
+      {
+        "name": "taskflow",
+        "blockChars": 332
+      },
+      {
+        "name": "taskflow-inbox-triage",
+        "blockChars": 342
+      },
+      {
+        "name": "weather",
+        "blockChars": 340
+      },
+      {
+        "name": "xlsx",
+        "blockChars": 1134
+      }
+    ]
+  },
+  "expected_skills": {
+    "promptChars": 5813,
+    "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+    "entries": [
+      {
+        "name": "agent-browser",
+        "blockChars": 316
+      },
+      {
+        "name": "canvas",
+        "blockChars": 314
+      },
+      {
+        "name": "diagram-maker",
+        "blockChars": 317
+      },
+      {
+        "name": "healthcheck",
+        "blockChars": 329
+      },
+      {
+        "name": "meme-maker",
+        "blockChars": 302
+      },
+      {
+        "name": "node-connect",
+        "blockChars": 332
+      },
+      {
+        "name": "node-inspect-debugger",
+        "blockChars": 328
+      },
+      {
+        "name": "python-debugpy",
+        "blockChars": 316
+      },
+      {
+        "name": "skill-creator",
+        "blockChars": 310
+      },
+      {
+        "name": "spike",
+        "blockChars": 302
+      },
+      {
+        "name": "taskflow",
+        "blockChars": 332
+      },
+      {
+        "name": "taskflow-inbox-triage",
+        "blockChars": 342
+      },
+      {
+        "name": "weather",
+        "blockChars": 340
+      },
+      {
+        "name": "xlsx",
+        "blockChars": 1134
+      }
+    ]
+  },
+  "tool_schema_chars": 27477,
+  "expected_tool_schema_chars": 27477,
+  "system_prompt": {
+    "chars": 30146,
+    "hash": "fc2d5f6a758748fedade5f47a3f4efd17d0c0c6cc1120161d671e6e80a965974",
+    "projectContextChars": 11727,
+    "nonProjectContextChars": 18419
+  },
+  "background_hashes_before": {
+    "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+    "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+    "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+    "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+    "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+    "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+  },
+  "background_hashes_after": {
+    "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+    "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+    "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+    "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+    "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+    "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+  },
+  "background_matches_profile": true,
+  "background_unchanged": true,
+  "scope": "Historical injected-file lengths, exact Skill registry text hash and tool-schema length checked; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen."
+}

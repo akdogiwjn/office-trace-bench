@@ -1,0 +1,123 @@
+{
+  "schema_version": "office-run-v1",
+  "run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
+  "kind": "xlsx",
+  "dataset_id": "manufacturing",
+  "status": "success",
+  "execution": "real-openclaw-agent",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+  "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+  "expected_sha256": "cc342a2fa33df138a395f259f4f09437462aaf83c7d53300731d5b63db70c0c8",
+  "prompt_sha256": "394c2ece661271c6b7f5d32816e9b04907f6d94bf2c8ee725d33a873fd5ef77c",
+  "started_at": "2026-10-09T08:13:57.188359+00:00",
+  "requested_model": "deepseek/deepseek-v4-flash",
+  "tool_versions": {
+    "openclaw": "OpenClaw 2026.6.6 (8c802aa)",
+    "node": "v24.14.0",
+    "python": "Python 3.12.3",
+    "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+    "poppler": "pdftoppm version 24.02.0"
+  },
+  "input_hashes": {
+    "input/m3_shipments_202608.xlsx": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8"
+  },
+  "prompt_workspace": "/root/.openclaw/workspace/tool-modeling/OFFICE-XLSX-MANUFACTURING",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "session_key": "agent:main:OFFICE-XLSX-MANUFACTURING",
+  "artifact_capture": {
+    "event_count": 55,
+    "gaps": [
+      {
+        "path": "workspace/output/business_verification.json.tmp",
+        "reason": "FileNotFoundError"
+      },
+      {
+        "path": "workspace/output/business_verification.json.tmp",
+        "reason": "FileNotFoundError"
+      }
+    ],
+    "revision_manifest_sha256": "725efdef9a99de2c74914b56e65b23d11f76205277dab9020714b6084cb39f9d"
+  },
+  "agent_seconds": 192.905,
+  "agent_exit_code": 0,
+  "agent_context_matched": true,
+  "trace": {
+    "session_id": "e78eb892-baa5-4da4-bc50-65fd3ae571cb",
+    "steps": 31,
+    "tool_calls": 35
+  },
+  "agent_business_status": "success",
+  "verifier_called_in_trace": true,
+  "verification_seconds": 0.495,
+  "business_status": "success",
+  "elapsed_seconds": 202.012,
+  "finished_at": "2026-10-09T08:17:19.201553+00:00",
+  "artifacts": {
+    "source_snapshot.json": "474cd893b87885c13e22c48182ee527d14754ce6f8e1b2871d84f4db73af09de",
+    "task.prompt": "394c2ece661271c6b7f5d32816e9b04907f6d94bf2c8ee725d33a873fd5ef77c",
+    "model_select.stdout.log": "13fa95cc7bde20b50c586cb035bedcfa29c773c779ca49c0a102991aa91bb37e",
+    "config_validate.stdout.log": "275572d12706cfa6972ae580e598a72b66f7ed80d7a126837bb7c383391ccfef",
+    "session_capture.json": "6a8dc376cf9df7ec632ea213ea6792e3536124d202137e00e0a21b0b2dfbfb33",
+    "tool_events.json": "66e5da8a206984392a6f27426c74a1b857f24528bcec54042f61aa09efe6c826",
+    "model_select.stderr.log": "9ab08bfab1d34adab9e66185d5dda5daede58e4de16cb50a7cf2fc640a90e2bb",
+    "openclaw_session.jsonl": "8d8592c5149c561471a6cb492304c2a14042c10aaafeb489f724a82ed1521cf8",
+    "config_validate.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trajectory.json": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
+    "openclaw_agent.stdout.log": "5db633e09386548daf06da20d870aadf815e610d193a4f1b441e155cc8d9f090",
+    "openclaw_agent.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "agent_context_audit.json": "b4ce74c40a2da59e453e20da20b589926511bf32558fe22a3d36268374d9a5b6",
+    "independent_verification.json": "cd348485fbf6b74657a6ed69a5d5a8452b146cd062272ad6607eedc21d3584ca",
+    "artifact_revisions/revisions.json": "725efdef9a99de2c74914b56e65b23d11f76205277dab9020714b6084cb39f9d",
+    "workspace/restore_source_style.py": "924193689866ddc5b8730810f4744d4b1a5c07977a94c7ee7cf9ea38b546a05b",
+    "workspace/build_workbook.py": "7cdcdeb0af19495d9a47333750ec30b95ae5a4aed034a1f5819ac833799c032a",
+    "artifact_revisions/objects/7cdcdeb0af19495d9a47333750ec30b95ae5a4aed034a1f5819ac833799c032a": "7cdcdeb0af19495d9a47333750ec30b95ae5a4aed034a1f5819ac833799c032a",
+    "artifact_revisions/objects/6512bb85d764cfa36dba8d106947c02c9cc6bc46f5c5d34c4c66b91da05537f9": "6512bb85d764cfa36dba8d106947c02c9cc6bc46f5c5d34c4c66b91da05537f9",
+    "artifact_revisions/objects/bcd8e0271212916be741cd89eed241a7e16fb8d38c32713b28ea4c1208ec1454": "bcd8e0271212916be741cd89eed241a7e16fb8d38c32713b28ea4c1208ec1454",
+    "artifact_revisions/objects/91f5401a85f74a5fafaea9567e1c7699567f80eba1848f6ed2f239b3a1eace61": "91f5401a85f74a5fafaea9567e1c7699567f80eba1848f6ed2f239b3a1eace61",
+    "artifact_revisions/objects/cc05501555e24357c4aaa9b68e852f535e3a4b97903d37f45a2a1c6084d36263": "cc05501555e24357c4aaa9b68e852f535e3a4b97903d37f45a2a1c6084d36263",
+    "artifact_revisions/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_revisions/objects/3d8aa5c37569769ded281cf91e5acc9c841005cf49eadf48bb7424592b33eec6": "3d8aa5c37569769ded281cf91e5acc9c841005cf49eadf48bb7424592b33eec6",
+    "artifact_revisions/objects/c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06": "c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06",
+    "artifact_revisions/objects/2b1dad736db88d4b6ca305c70d6665409fcecf2c3d7bf528c387b814f762a616": "2b1dad736db88d4b6ca305c70d6665409fcecf2c3d7bf528c387b814f762a616",
+    "artifact_revisions/objects/e5a2a17e69172db0d4c87d3297659a9c4d8a06171cdeb726a86f443e64c22f66": "e5a2a17e69172db0d4c87d3297659a9c4d8a06171cdeb726a86f443e64c22f66",
+    "artifact_revisions/objects/b02483279e999ad2000feebbc35aa7bf70619f779c47301fffe0a2ad7e586a38": "b02483279e999ad2000feebbc35aa7bf70619f779c47301fffe0a2ad7e586a38",
+    "artifact_revisions/objects/1eedb35bb9e1cabbcf3a5f5bf2fd77cfc08fd8abebe8f7ad92e02e382bb687cb": "1eedb35bb9e1cabbcf3a5f5bf2fd77cfc08fd8abebe8f7ad92e02e382bb687cb",
+    "artifact_revisions/objects/db37a72edd1870d80e18dd6df94bdf067bff976229628a3fd627b72d4f351618": "db37a72edd1870d80e18dd6df94bdf067bff976229628a3fd627b72d4f351618",
+    "artifact_revisions/objects/c1b2b4a75695957b550caa6778c51822f719aa426f50bf5f3fa035033ac2aa19": "c1b2b4a75695957b550caa6778c51822f719aa426f50bf5f3fa035033ac2aa19",
+    "artifact_revisions/objects/017f4e6107f21842a9e2eebf06c5d7f8d5ac1c852137bf1480a7161be82de67f": "017f4e6107f21842a9e2eebf06c5d7f8d5ac1c852137bf1480a7161be82de67f",
+    "artifact_revisions/objects/924193689866ddc5b8730810f4744d4b1a5c07977a94c7ee7cf9ea38b546a05b": "924193689866ddc5b8730810f4744d4b1a5c07977a94c7ee7cf9ea38b546a05b",
+    "artifact_revisions/objects/6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1": "6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1",
+    "workspace/output/xlsx_enhancement_summary.json": "e5a2a17e69172db0d4c87d3297659a9c4d8a06171cdeb726a86f443e64c22f66",
+    "workspace/output/business_verification.json": "b02483279e999ad2000feebbc35aa7bf70619f779c47301fffe0a2ad7e586a38",
+    "workspace/output/manufacturing_enhanced.xlsx": "6055a8a30c94e9ef64353f00aa1582848acd1d9aaf37f693d6dd1ecae8fd8bc1",
+    "workspace/output/formula_recalc.json": "db37a72edd1870d80e18dd6df94bdf067bff976229628a3fd627b72d4f351618",
+    "workspace/output/workbook_features.json": "6512bb85d764cfa36dba8d106947c02c9cc6bc46f5c5d34c4c66b91da05537f9",
+    "workspace/input/dataset_manifest.json": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+    "workspace/input/verify_office.py": "c6338492488dedd3be936c5e102a62d5c25f0fbe47551f8c87545a5e17e1c593",
+    "workspace/input/m3_shipments_202608.xlsx": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8",
+    "workspace/work/manufacturing_enhanced.recalced.xlsx": "1eedb35bb9e1cabbcf3a5f5bf2fd77cfc08fd8abebe8f7ad92e02e382bb687cb"
+  },
+  "runtime_image": "office-trace-bench:runtime",
+  "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+  "container_exit_code": 0,
+  "source_snapshot_sha256": "474cd893b87885c13e22c48182ee527d14754ce6f8e1b2871d84f4db73af09de",
+  "source_snapshot_unchanged": true,
+  "source_snapshot_path": "/home/lcq/office-trace-bench/.snapshots/xlsx-manufacturing-20261009T081356Z-7553ba0b",
+  "baseline_accepted": true,
+  "baseline_acceptance_audit": {
+    "source_snapshot_unchanged": true,
+    "historical_artifact_reference_steps": [],
+    "verifier_called_in_trace": true,
+    "agent_verifier": "success",
+    "independent_verifier": "success",
+    "legacy_verifier": "not_applicable",
+    "context_required": true,
+    "context_accepted": true,
+    "legacy_failures": [],
+    "scope": "new-dataset manifest/expected acceptance; no historical comparator"
+  }
+}

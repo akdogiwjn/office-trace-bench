@@ -1,0 +1,289 @@
+#!/usr/bin/env python3
+"""Build manufacturing_enhanced.xlsx: preserve source sheet, add analysis dashboard.
+
+All metrics/scenario/chart values are live formulas linked to the original sheet.
+"""
+import json
+from pathlib import Path
+
+from openpyxl import load_workbook
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.chart import BarChart, LineChart, Reference
+from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.formatting.rule import CellIsRule, ColorScaleRule
+from openpyxl.comments import Comment
+
+BASE = Path(__file__).resolve().parent
+SRC = BASE / 'input' / 'm3_shipments_202608.xlsx'
+OUT = BASE / 'output' / 'manufacturing_enhanced.xlsx'
+DATA = 'Shipments August 2026'          # original worksheet name
+DASH = 'Analysis Dashboard'             # added summary sheet
+
+GREEN = '008000'   # cross-sheet formulas
+BLUE = '0000FF'    # editable inputs
+BLACK = '000000'   # local formulas
+FONT = 'Arial'
+
+TITLE_FONT = Font(name=FONT, bold=True, size=14, color=BLACK)
+NOTE_FONT = Font(name=FONT, italic=True, size=9, color='404040')
+HEAD_FONT = Font(name=FONT, bold=True, size=11, color=BLACK)
+LABEL_FONT = Font(name=FONT, size=10, color=BLACK)
+GREEN_F = Font(name=FONT, size=11, color=GREEN)
+BLUE_F = Font(name=FONT, size=11, color=BLUE)
+BLACK_F = Font(name=FONT, size=11, color=BLACK)
+HEAD_FILL = PatternFill('solid', start_color='D9E1F2', end_color='D9E1F2')
+SECT_FILL = PatternFill('solid', start_color='F2F2F2', end_color='F2F2F2')
+THIN = Side(style='thin', color='BFBFBF')
+BOX = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
+
+
+def q(sheet):
+    return "'" + sheet.replace("'", "''") + "'"
+
+
+def build():
+    wb = load_workbook(SRC)
+    ws = wb.create_sheet(DASH, 0)
+
+    ref = q(DATA)
+
+    # ---- Header -------------------------------------------------------
+    ws['A1'] = "Census M3 — Manufacturers' Shipments Analysis (August 2026)"
+    ws['A1'].font = TITLE_FONT
+    ws['A2'] = ("Source: U.S. Census Bureau, Manufacturers' Shipments, Inventories, and Orders (M3) Survey, "
+                "August 2026 Full Report, October 2, 2026. Values in USD millions; seasonally adjusted unless noted.")
+    ws['A2'].font = NOTE_FONT
+
+    # ---- Key metrics --------------------------------------------------
+    ws['A4'] = 'Key metrics'
+    ws['A4'].font = HEAD_FONT
+    ws['A4'].fill = SECT_FILL
+    for col, text in (('A5', 'Metric'), ('B5', 'Value'), ('C5', 'Unit'), ('D5', 'Basis')):
+        ws[col] = text
+        ws[col].font = HEAD_FONT
+        ws[col].fill = HEAD_FILL
+        ws[col].border = BOX
+
+    metrics = [
+        ('A6', 'Total shipments (all manufacturing)', 'B6', f"={ref}!B2", 'C6', 'USD million',
+         'D6', 'SA Aug 2026, published aggregate'),
+        ('A7', 'Monthly change (Jul→Aug, from levels)', 'B7',
+         f"=({ref}!B2-{ref}!C2)/{ref}!C2", 'C7', 'fraction',
+         'D7', 'Computed from SA levels'),
+        ('A8', 'Durable goods share', 'B8', f"={ref}!B6/{ref}!B2", 'C8', 'fraction',
+         'D8', 'Durable ÷ all manufacturing'),
+        ('A9', 'Nondurable shipments', 'B9', f"={ref}!B50", 'C9', 'USD million',
+         'D9', 'SA Aug 2026, published aggregate'),
+    ]
+    for a, alab, b, bform, c, cunit, d, dbasis in metrics:
+        ws[a] = alab
+        ws[a].font = LABEL_FONT
+        ws[a].border = BOX
+        ws[b] = bform
+        ws[b].font = GREEN_F
+        ws[b].border = BOX
+        ws[c] = cunit
+        ws[c].font = LABEL_FONT
+        ws[c].border = BOX
+        ws[d] = dbasis
+        ws[d].font = LABEL_FONT
+        ws[d].border = BOX
+
+    ws['B6'].number_format = '#,##0'
+    ws['B7'].number_format = '0.0000%'
+    ws['B8'].number_format = '0.0%'
+    ws['B9'].number_format = '#,##0'
+    ws['B6'].alignment = Alignment(horizontal='right')
+    ws['B7'].alignment = Alignment(horizontal='right')
+    ws['B8'].alignment = Alignment(horizontal='right')
+    ws['B9'].alignment = Alignment(horizontal='right')
+
+    # ---- Scenario -----------------------------------------------------
+    ws['A11'] = 'Scenario analysis'
+    ws['A11'].font = HEAD_FONT
+    ws['A11'].fill = SECT_FILL
+
+    ws['A12'] = 'Scenario selector'
+    ws['A12'].font = HEAD_FONT
+    ws['B12'] = 'Base'
+    ws['B12'].font = BLUE_F
+    ws['B12'].fill = PatternFill('solid', start_color='FFF2CC', end_color='FFF2CC')
+    ws['B12'].border = BOX
+    ws['B12'].alignment = Alignment(horizontal='center')
+
+    ws['A13'] = 'Assumptions'
+    ws['A13'].font = HEAD_FONT
+    ws['B13'] = 'Shipments multiplier'
+    ws['B13'].font = HEAD_FONT
+    ws['B13'].fill = HEAD_FILL
+    ws['B13'].alignment = Alignment(horizontal='center', wrap_text=True)
+
+    scen_rows = [('Base', 1), ('Expansion', 1.03), ('Contraction', 0.97)]
+    r = 14
+    for name, value in scen_rows:
+        ws.cell(row=r, column=1, value=name).font = LABEL_FONT
+        c = ws.cell(row=r, column=2, value=value)
+        c.font = BLUE_F
+        c.number_format = '0.00'
+        c.border = BOX
+        c.alignment = Alignment(horizontal='center')
+        r += 1
+
+    ws['A18'] = 'Selected multiplier'
+    ws['A18'].font = LABEL_FONT
+    ws['B18'] = f'=INDEX($B$14:$B$16,MATCH($B$12,$A$14:$A$16,0))'
+    ws['B18'].font = BLACK_F
+    ws['B18'].number_format = '0.00'
+    ws['B18'].border = BOX
+    ws['B18'].alignment = Alignment(horizontal='center')
+
+    ws['A19'] = 'Projected total shipments'
+    ws['A19'].font = LABEL_FONT
+    ws['B19'] = f'=$B$6*INDEX($B$14:$B$16,MATCH($B$12,$A$14:$A$16,0))'
+    ws['B19'].font = BLACK_F
+    ws['B19'].number_format = '#,##0'
+    ws['B19'].border = BOX
+    ws['B19'].alignment = Alignment(horizontal='right')
+
+    # ---- Chart data ---------------------------------------------------
+    ws['A21'] = 'Chart data — durability mix (SA Aug 2026)'
+    ws['A21'].font = HEAD_FONT
+    ws['A21'].fill = SECT_FILL
+    ws['A22'] = 'Category'
+    ws['B22'] = 'Shipments (USD million)'
+    for cell in ('A22', 'B22'):
+        ws[cell].font = HEAD_FONT
+        ws[cell].fill = HEAD_FILL
+        ws[cell].border = BOX
+    mix = [('Durable goods', 'B23', f'={ref}!B6'), ('Nondurable goods', 'B24', f'={ref}!B50')]
+    for r, (name, cell, form) in enumerate(mix, start=23):
+        ws.cell(row=r, column=1, value=name).font = LABEL_FONT
+        ws.cell(row=r, column=1).border = BOX
+        cc = ws[cell]
+        cc.value = form
+        cc.font = GREEN_F
+        cc.number_format = '#,##0'
+        cc.border = BOX
+        cc.alignment = Alignment(horizontal='right')
+
+    ws['A27'] = 'Chart data — all-manufacturing shipments trend (SA, USD million)'
+    ws['A27'].font = HEAD_FONT
+    ws['A27'].fill = SECT_FILL
+    ws['A28'] = 'Month'
+    ws['B28'] = 'Shipments (USD million)'
+    for cell in ('A28', 'B28'):
+        ws[cell].font = HEAD_FONT
+        ws[cell].fill = HEAD_FILL
+        ws[cell].border = BOX
+    trend = [('Jun 2026', 'B29', f'={ref}!D2'), ('Jul 2026', 'B30', f'={ref}!C2'), ('Aug 2026', 'B31', f'={ref}!B2')]
+    for r, (name, cell, form) in enumerate(trend, start=29):
+        ws.cell(row=r, column=1, value=name).font = LABEL_FONT
+        ws.cell(row=r, column=1).border = BOX
+        cc = ws[cell]
+        cc.value = form
+        cc.font = GREEN_F
+        cc.number_format = '#,##0'
+        cc.border = BOX
+        cc.alignment = Alignment(horizontal='right')
+
+    # ---- Charts -------------------------------------------------------
+    bar = BarChart()
+    bar.type = 'col'
+    bar.title = 'Durability mix — SA Aug 2026 shipments'
+    bar.y_axis.title = 'USD million'
+    bar.x_axis.title = 'Goods type'
+    bar.add_data(Reference(ws, min_col=2, min_row=22, max_row=24), titles_from_data=True)
+    bar.set_categories(Reference(ws, min_col=1, min_row=23, max_row=24))
+    bar.height = 7.5
+    bar.width = 12
+    ws.add_chart(bar, 'F5')
+
+    line = LineChart()
+    line.title = 'All-manufacturing SA shipments trend (2026)'
+    line.y_axis.title = 'USD million'
+    line.x_axis.title = 'Month'
+    line.add_data(Reference(ws, min_col=2, min_row=28, max_row=31), titles_from_data=True)
+    line.set_categories(Reference(ws, min_col=1, min_row=29, max_row=31))
+    line.height = 7.5
+    line.width = 12
+    ws.add_chart(line, 'F23')
+
+    # ---- Data validation (scenario selector) --------------------------
+    dv = DataValidation(type='list', formula1='"Base,Expansion,Contraction"', allow_blank=False)
+    dv.prompt = 'Select a scenario'
+    dv.promptTitle = 'Scenario'
+    ws.add_data_validation(dv)
+    dv.add('B12')
+
+    # ---- Conditional formatting --------------------------------------
+    ws.conditional_formatting.add(
+        'B7', CellIsRule(operator='lessThan', formula=['0'],
+                         font=Font(name=FONT, color='9C0006'),
+                         fill=PatternFill('solid', start_color='FFC7CE', end_color='FFC7CE')))
+    ws.conditional_formatting.add(
+        'B19', ColorScaleRule(start_type='min', start_color='F8696B',
+                              mid_type='percentile', mid_value=50, mid_color='FFEB84',
+                              end_type='max', end_color='63BE7B'))
+    ws.conditional_formatting.add(
+        'B6:B9', ColorScaleRule(start_type='min', start_color='FFFFFF',
+                                end_type='max', end_color='BDD7EE'))
+
+    # ---- Comments (source / assumption documentation) ----------------
+    ws['B6'].comment = Comment(
+        "Source: U.S. Census Bureau, M3 Survey, August 2026 Full Report (Oct 2, 2026), "
+        "Table 1, row 'All manufacturing industries', column 'SA Aug 2026' (USD millions). "
+        "Published aggregate — not a sum of subordinate hierarchy rows.",
+        "Spreadsheet Agent")
+    ws['B7'].comment = Comment(
+        "Monthly change computed from seasonally adjusted levels: (SA Aug 2026 - SA Jul 2026) / SA Jul 2026. "
+        "The workbook's own percent-change column is rounded to one decimal and equals 0.0 here.",
+        "Spreadsheet Agent")
+    ws['B12'].comment = Comment(
+        "Editable scenario selector (data-validation dropdown: Base / Expansion / Contraction). "
+        "Drives the projected total shipments cell B19.",
+        "Spreadsheet Agent")
+    ws['B19'].comment = Comment(
+        "Projection = total shipments (B6) x selected multiplier. The multiplier is a hypothetical "
+        "assumption only, not an official forecast.",
+        "Spreadsheet Agent")
+
+    # ---- Layout -------------------------------------------------------
+    ws.freeze_panes = 'A6'
+    widths = {'A': 44, 'B': 16, 'C': 12, 'D': 30, 'E': 3, 'F': 12, 'G': 12, 'H': 12}
+    for col, width in widths.items():
+        ws.column_dimensions[col].width = width
+
+    wb.save(OUT)
+
+    features = {
+        "summary_sheet": DASH,
+        "metrics": {
+            "total_shipments": {"sheet": DASH, "cell": "B6"},
+            "monthly_growth": {"sheet": DASH, "cell": "B7"},
+            "durable_share": {"sheet": DASH, "cell": "B8"},
+            "nondurable_shipments": {"sheet": DASH, "cell": "B9"},
+        },
+        "scenario": {
+            "selector": {"sheet": DASH, "cell": "B12"},
+            "assumptions": {
+                "Base": {"shipments_multiplier": {"sheet": DASH, "cell": "B14"}},
+                "Expansion": {"shipments_multiplier": {"sheet": DASH, "cell": "B15"}},
+                "Contraction": {"shipments_multiplier": {"sheet": DASH, "cell": "B16"}},
+            },
+            "projections": {
+                "projected_shipments": {"sheet": DASH, "cell": "B19"},
+            },
+        },
+        "charts": {
+            "durability_mix": {"sheet": DASH, "index": 0},
+            "shipment_trend": {"sheet": DASH, "index": 1},
+        },
+    }
+    (BASE / 'output' / 'workbook_features.json').write_text(
+        json.dumps(features, indent=2) + '\n', encoding='utf-8')
+    print('wrote', OUT)
+    print('sheets:', wb.sheetnames)
+
+
+if __name__ == '__main__':
+    build()

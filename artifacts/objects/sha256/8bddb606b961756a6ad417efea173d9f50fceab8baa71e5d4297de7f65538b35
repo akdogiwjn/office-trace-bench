@@ -1,0 +1,45 @@
+{
+  "task": "Analyze Census M3 August 2026 Table 1 shipments",
+  "dataset_id": "manufacturing",
+  "input_workbook": "input/m3_shipments_202608.xlsx",
+  "output_workbook": "output/manufacturing_enhanced.xlsx",
+  "added_sheet_names": ["Analysis Dashboard"],
+  "preserved_sheet_names": ["Shipments August 2026"],
+  "feature_counts": {
+    "metrics": 4,
+    "scenario_dimensions": 1,
+    "scenario_rows": 3,
+    "scenario_assumptions": 3,
+    "projections": 1,
+    "charts": 2,
+    "comments": 4,
+    "conditional_formats": 3,
+    "data_validations": 1,
+    "formulas_added": 11,
+    "freeze_panes": 1
+  },
+  "deliverables": {
+    "manufacturing_enhanced.xlsx": "output/manufacturing_enhanced.xlsx",
+    "workbook_features.json": "output/workbook_features.json",
+    "formula_recalc.json": "output/formula_recalc.json",
+    "business_verification.json": "output/business_verification.json",
+    "xlsx_enhancement_summary.json": "output/xlsx_enhancement_summary.json"
+  },
+  "helper_filenames": [
+    "build_enhancement.py",
+    "/root/.openclaw/skills/xlsx/scripts/recalc.py",
+    "input/verify_office.py"
+  ],
+  "helper_execution_attempts": [
+    {"helper": "build_enhancement.py", "attempts": 1, "successes": 1},
+    {"helper": "/root/.openclaw/skills/xlsx/scripts/recalc.py", "attempts": 1, "successes": 1},
+    {"helper": "input/verify_office.py", "attempts": 1, "successes": 1}
+  ],
+  "helper_execution_attempts_count": 3,
+  "helper_execution_successes": 3,
+  "recalc_invocation_count": 1,
+  "recalc_result": {"status": "success", "total_errors": 0, "total_formulas": 11, "timeout_seconds": 180},
+  "final_verifier_status": "success",
+  "verification_checks_total": 61,
+  "verification_failures": []
+}

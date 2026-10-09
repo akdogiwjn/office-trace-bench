@@ -1,0 +1,66 @@
+{
+  "schema_version": "office-scenario-qualification-v1",
+  "dataset_id": "hr",
+  "run_id": "xlsx-hr-20261009T060833Z-5e454df8",
+  "source_trace_sha256": "8e6de648af39d18a706a7a688b2be91ff96cd91873d1c0b24e70f79015294ad0",
+  "source_workbook_sha256": "1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833",
+  "expected_sha256": "d7f9a987801f88829c549e37e9acb56f5ec4157da6cf79f375c966ee1210b13a",
+  "status": "success",
+  "scenarios": [
+    {
+      "scenario": "Base",
+      "recalc_status": "success",
+      "checks": {
+        "projected_mean_wage": {
+          "actual": 69770,
+          "expected": 69770,
+          "ok": true
+        },
+        "base_metric:total_employment": {
+          "actual": 155495730,
+          "expected": 155495730,
+          "ok": true
+        },
+        "base_metric:annual_mean_wage": {
+          "actual": 69770,
+          "expected": 69770,
+          "ok": true
+        },
+        "base_metric:hourly_median_wage": {
+          "actual": 24.51,
+          "expected": 24.51,
+          "ok": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": "Increase",
+      "recalc_status": "success",
+      "checks": {
+        "projected_mean_wage": {
+          "actual": 73258.5,
+          "expected": 73258.5,
+          "ok": true
+        },
+        "base_metric:total_employment": {
+          "actual": 155495730,
+          "expected": 155495730,
+          "ok": true
+        },
+        "base_metric:annual_mean_wage": {
+          "actual": 69770,
+          "expected": 69770,
+          "ok": true
+        },
+        "base_metric:hourly_median_wage": {
+          "actual": 24.51,
+          "expected": 24.51,
+          "ok": true
+        }
+      },
+      "passed": true
+    }
+  ],
+  "scope": "Functional scenario QA on disposable copies after Agent execution. No LLM, no CPU/OS replay or performance measurements. These recalc calls are not original Agent tool events."
+}

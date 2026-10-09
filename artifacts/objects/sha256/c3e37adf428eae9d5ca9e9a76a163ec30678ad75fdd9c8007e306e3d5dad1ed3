@@ -1,0 +1,245 @@
+#!/usr/bin/env python3
+"""Build manufacturing_enhanced.xlsx from the M3 shipments workbook.
+
+Original sheet is preserved byte-for-byte in semantics; analysis lives on new
+sheets.  All computed features are live Excel formulas linked to the source.
+"""
+from pathlib import Path
+
+from openpyxl import load_workbook
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.comments import Comment
+from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.formatting.rule import ColorScaleRule, CellIsRule
+from openpyxl.chart import BarChart, LineChart, Reference
+from openpyxl.utils import get_column_letter
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "input" / "m3_shipments_202608.xlsx"
+OUT = ROOT / "output" / "manufacturing_enhanced.xlsx"
+
+SRC_SHEET = "Shipments August 2026"
+DASH = "Dashboard"
+DATA = "Chart Data"
+
+BLUE = "FF0000FF"      # editable inputs
+GREEN = "FF008000"     # cross-sheet links
+BLACK = "FF000000"     # local formulas
+NAVY = "FF1F3864"
+HDR_FILL = PatternFill("solid", start_color="FFD9E1F2")
+TITLE_FONT = Font(name="Calibri", size=14, bold=True, color=NAVY)
+SUB_FONT = Font(name="Calibri", size=9, italic=True, color="FF808080")
+HDR_FONT = Font(name="Calibri", size=11, bold=True, color=NAVY)
+LBL_FONT = Font(name="Calibri", size=11)
+BLUE_IN = Font(name="Calibri", size=11, bold=True, color=BLUE)
+BLUE_FILL = PatternFill("solid", start_color="FFFFF2CC")
+GREEN_F = Font(name="Calibri", size=11, color=GREEN)
+BLACK_F = Font(name="Calibri", size=11, color=BLACK)
+thin = Side(style="thin", color="FFBFBFBF")
+BORDER = Border(left=thin, right=thin, top=thin, bottom=thin)
+
+
+def q(sheet):
+    return "'" + sheet + "'"
+
+
+def ref(sheet, cell):
+    return f"{q(sheet)}!{cell}"
+
+
+wb = load_workbook(SRC)
+ws = wb[SRC_SHEET]
+
+dash = wb.create_sheet(DASH)
+data = wb.create_sheet(DATA)
+
+# ---------------------------------------------------------------- Dashboard
+dash["A1"] = "Manufacturing Shipments Analysis \u2014 August 2026"
+dash["A1"].font = TITLE_FONT
+dash["A2"] = ("Source: U.S. Census Bureau, Manufacturers' Shipments, Inventories, and Orders (M3) "
+              "Survey, August Full Report, October 2, 2026 (Table 1). Values are seasonally adjusted (SA).")
+dash["A2"].font = SUB_FONT
+
+dash["A4"] = "Key Metrics"
+dash["A4"].font = HDR_FONT
+for c in ("A5", "B5", "C5"):
+    dash[c].fill = HDR_FILL
+    dash[c].border = BORDER
+dash["A5"], dash["B5"], dash["C5"] = "Metric", "Value", "Unit"
+for c in ("A5", "B5", "C5"):
+    dash[c].font = HDR_FONT
+
+metric_rows = [
+    ("Total shipments (SA, Aug 2026)", f"={ref(SRC_SHEET,'B2')}", "USD million", "#,##0"),
+    ("Monthly change (Jul\u2192Aug 2026)", f"=({ref(SRC_SHEET,'B2')}-{ref(SRC_SHEET,'C2')})/{ref(SRC_SHEET,'C2')}", "fraction", "0.0000%"),
+    ("Durable goods share (SA, Aug 2026)", f"={ref(SRC_SHEET,'B6')}/{ref(SRC_SHEET,'B2')}", "fraction", "0.0%"),
+    ("Nondurable shipments (SA, Aug 2026)", f"={ref(SRC_SHEET,'B50')}", "USD million", "#,##0"),
+]
+metric_cells = {}
+metric_ids = ["total_shipments", "monthly_growth", "durable_share", "nondurable_shipments"]
+start = 6
+for i, (label, formula, unit, numfmt) in enumerate(metric_rows):
+    r = start + i
+    dash[f"A{r}"] = label
+    dash[f"A{r}"].font = LBL_FONT
+    cell = dash[f"B{r}"]
+    cell.value = formula
+    cell.font = GREEN_F
+    cell.number_format = numfmt
+    cell.border = BORDER
+    dash[f"C{r}"] = unit
+    dash[f"C{r}"].font = SUB_FONT
+    metric_cells[metric_ids[i]] = f"B{r}"
+
+# metric source comments
+dash["B6"].comment = Comment(
+    "Source: U.S. Census Bureau M3 Survey, August 2026 Full Report, Table 1, "
+    "'All manufacturing industries' seasonally adjusted shipments.", "Analyst")
+dash["B9"].comment = Comment(
+    "Source: U.S. Census Bureau M3 Survey, August 2026 Full Report, Table 1, "
+    "'Nondurable goods industries' seasonally adjusted shipments.", "Analyst")
+
+# ---------------------------------------------------------- scenario block
+dash["A11"] = "Scenario Analysis (hypothetical \u2014 not an official forecast)"
+dash["A11"].font = HDR_FONT
+dash["A12"] = "Selected scenario"
+dash["A12"].font = LBL_FONT
+sel = dash["B12"]
+sel.value = "Base"
+sel.font = BLUE_IN
+sel.fill = BLUE_FILL
+sel.border = BORDER
+sel.alignment = Alignment(horizontal="center")
+sel.comment = Comment(
+    "Editable input: choose Base / Expansion / Contraction from the dropdown. "
+    "Drives the projection below.", "Analyst")
+
+dash["A13"] = ("Assumption: shipments multiplier applied to the published "
+               "all-manufacturing August 2026 level.")
+dash["A13"].font = SUB_FONT
+
+dash["A14"], dash["B14"] = "Scenario", "Shipments multiplier"
+for c in ("A14", "B14"):
+    dash[c].fill = HDR_FILL
+    dash[c].font = HDR_FONT
+    dash[c].border = BORDER
+
+scn_rows = [("Base", 1), ("Expansion", 1.03), ("Contraction", 0.97)]
+assumption_cells = {}
+r = 15
+for name, mult in scn_rows:
+    dash[f"A{r}"] = name
+    dash[f"A{r}"].font = LBL_FONT
+    dash[f"A{r}"].border = BORDER
+    c = dash[f"B{r}"]
+    c.value = mult
+    c.font = BLUE_IN
+    c.fill = BLUE_FILL
+    c.number_format = "0.00"
+    c.border = BORDER
+    assumption_cells[name] = f"B{r}"
+    r += 1
+
+dash["A19"] = "Projected shipments (selected scenario)"
+dash["A19"].font = LBL_FONT
+proj = dash["B19"]
+proj.value = f"={dash['B6'].coordinate}*VLOOKUP($B$12,$A$15:$B$17,2,FALSE)"
+proj.font = BLACK_F
+proj.number_format = "#,##0"
+proj.border = BORDER
+dash["C19"] = "USD million"
+dash["C19"].font = SUB_FONT
+
+# ------------------------------------------------------------ validations
+dv = DataValidation(type="list", formula1='"Base,Expansion,Contraction"', allow_blank=False)
+dv.prompt = "Select a scenario"
+dv.promptTitle = "Scenario"
+dash.add_data_validation(dv)
+dv.add(sel)
+
+# conditional formatting (>= 2 required)
+dash.conditional_formatting.add(
+    "B15:B17", ColorScaleRule(start_type="min", start_color="FFF8696B",
+                              mid_type="percentile", mid_value=50, mid_color="FFFFEB84",
+                              end_type="max", end_color="FF63BE7B"))
+dash.conditional_formatting.add(
+    "B19", CellIsRule(operator="greaterThan", formula=["$B$6"],
+                      fill=PatternFill("solid", start_color="FFC6EFCE"),
+                      font=Font(color="FF006100")))
+dash.conditional_formatting.add(
+    "B7", CellIsRule(operator="lessThan", formula=["0"],
+                     fill=PatternFill("solid", start_color="FFFFC7CE"),
+                     font=Font(color="FF9C0006")))
+
+dash.freeze_panes = "A5"
+dash.column_dimensions["A"].width = 42
+dash.column_dimensions["B"].width = 18
+dash.column_dimensions["C"].width = 14
+
+# ------------------------------------------------------------ chart data
+data["A1"] = "Durability Mix \u2014 August 2026 (SA)"
+data["A1"].font = HDR_FONT
+data["A2"], data["B2"] = "Category", "Shipments (USD million)"
+for c in ("A2", "B2"):
+    data[c].fill = HDR_FILL
+    data[c].font = HDR_FONT
+mix = [("Durable goods industries", "B6"), ("Nondurable goods industries", "B50")]
+r = 3
+for label, srccell in mix:
+    data[f"A{r}"] = label
+    data[f"A{r}"].font = LBL_FONT
+    cell = data[f"B{r}"]
+    cell.value = f"={ref(SRC_SHEET, srccell)}"
+    cell.font = GREEN_F
+    cell.number_format = "#,##0"
+    r += 1
+
+data["A6"] = "All-manufacturing Shipment Trend (SA)"
+data["A6"].font = HDR_FONT
+data["A7"], data["B7"] = "Month", "Shipments (USD million)"
+for c in ("A7", "B7"):
+    data[c].fill = HDR_FILL
+    data[c].font = HDR_FONT
+trend = [("Jun 2026", "D2"), ("Jul 2026", "C2"), ("Aug 2026", "B2")]
+r = 8
+for label, srccell in trend:
+    data[f"A{r}"] = label
+    data[f"A{r}"].font = LBL_FONT
+    cell = data[f"B{r}"]
+    cell.value = f"={ref(SRC_SHEET, srccell)}"
+    cell.font = GREEN_F
+    cell.number_format = "#,##0"
+    r += 1
+
+data.column_dimensions["A"].width = 30
+data.column_dimensions["B"].width = 22
+
+# ---------------------------------------------------------------- charts
+bar = BarChart()
+bar.type = "col"
+bar.title = "Durability Mix \u2014 August 2026 (SA)"
+bar.y_axis.title = "USD million"
+bar.x_axis.title = "Goods group"
+bdata = Reference(data, min_col=2, min_row=2, max_row=4)
+bcats = Reference(data, min_col=1, min_row=3, max_row=4)
+bar.add_data(bdata, titles_from_data=True)
+bar.set_categories(bcats)
+bar.height = 8
+bar.width = 14
+data.add_chart(bar, "E2")
+
+line = LineChart()
+line.title = "All-manufacturing Shipments \u2014 Jun\u2013Aug 2026 (SA)"
+line.y_axis.title = "USD million"
+line.x_axis.title = "Month"
+ldata = Reference(data, min_col=2, min_row=7, max_row=10)
+lcats = Reference(data, min_col=1, min_row=8, max_row=10)
+line.add_data(ldata, titles_from_data=True)
+line.set_categories(lcats)
+line.height = 8
+line.width = 14
+line.series[0].marker.symbol = "circle"
+data.add_chart(line, "E18")
+
+wb.save(OUT)
+print("saved", OUT)

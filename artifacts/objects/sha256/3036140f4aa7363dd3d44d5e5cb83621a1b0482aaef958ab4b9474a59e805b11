@@ -1,0 +1,31 @@
+{
+  "dataset_id": "retail",
+  "output_workbook": "retail_enhanced.xlsx",
+  "added_sheets": ["Analysis"],
+  "feature_counts": {
+    "metrics": 3,
+    "scenario_selectors": 1,
+    "scenario_assumptions": 3,
+    "scenario_dimensions": 1,
+    "projections": 1,
+    "charts": 1,
+    "conditional_format_ranges": 2,
+    "comments": 3,
+    "data_validations": 1,
+    "formulas": 7
+  },
+  "helper_filenames": [
+    "build_enhanced.py",
+    "work/roundtrip.xlsx",
+    "output/formula_recalc.json",
+    "output/workbook_features.json"
+  ],
+  "helper_execution_attempts": [
+    {"helper": "build_enhanced.py", "attempts": 1, "successes": 1},
+    {"helper": "recalc.py", "attempts": 2, "successes": 2,
+     "notes": "1 preservation probe on work/roundtrip.xlsx, 1 production recalc on output/retail_enhanced.xlsx"},
+    {"helper": "verify_office.py", "attempts": 1, "successes": 1}
+  ],
+  "recalc_invocations": 2,
+  "final_verifier_status": "success"
+}

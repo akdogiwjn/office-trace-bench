@@ -13,7 +13,10 @@ from office_trace_bench.workbooks import workbook_snapshot
 def main():
     import shutil
     from openpyxl import load_workbook
-    source = Path('/home/lcq/openclaw-trace-bench')
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path, required=True, help='Explicit historical source; never required by tests')
+    source = parser.parse_args().source.resolve()
     if (ROOT / 'datasets/xlsx/tlc/manifest.json').exists():
         raise SystemExit('baseline manifests already exist; refusing to replace the frozen import')
     for kind in ('xlsx', 'pdf'):

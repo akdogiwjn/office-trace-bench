@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Inject LibreOffice-computed cached values into an openpyxl-built workbook.
+
+The final workbook keeps the exact openpyxl-built styles/structure (so original
+worksheets are preserved byte-for-byte semantically) while gaining cached
+formula results computed by recalc.py. Only <v> elements of formula cells and
+the t="str" attribute for text results are touched.
+"""
+import sys, re, os, shutil, zipfile
+import xml.etree.ElementTree as ET
+from openpyxl import load_workbook
+
+BASE, RECALC, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
+
+vals = {}
+wb = load_workbook(RECALC, data_only=True)
+for ws in wb.worksheets:
+    for row in ws.iter_rows():
+        for c in row:
+            if c.value is not None:
+                vals[(ws.title, c.coordinate)] = c.value
+wb.close()
+
+NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
+RNS = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'
+
+zin = zipfile.ZipFile(BASE)
+wbxml = ET.fromstring(zin.read('xl/workbook.xml'))
+rels = ET.fromstring(zin.read('xl/_rels/workbook.xml.rels'))
+remap = {}
+for r in rels:
+    remap[r.get('Id')] = r.get('Target')
+name_to_path = {}
+for s in wbxml.find(f'{{{NS}}}sheets'):
+    tgt = remap[s.get(f'{{{RNS}}}id')]
+    if not tgt.startswith('xl/'):
+        tgt = 'xl/' + tgt.lstrip('/')
+    name_to_path[s.get('name')] = tgt
+
+def esc(v):
+    return v.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+def numstr(v):
+    if isinstance(v, bool):
+        return 'TRUE' if v else 'FALSE'
+    if isinstance(v, float):
+        if v == int(v) and abs(v) < 1e15:
+            return repr(int(v))
+        return repr(v)
+    return str(v)
+
+CELLF = re.compile(r'<c\b([^>]*)>(<f\b.*?</f>)<v\s*/>', re.S)
+
+report = {}
+data = {}
+for name, path in name_to_path.items():
+    xml = zin.read(path).decode('utf-8')
+    n = [0]
+    def repl(m):
+        attrs, inner = m.group(1), m.group(2)
+        mc = re.search(r'r="([A-Z]+[0-9]+)"', attrs)
+        coord = mc.group(1) if mc else None
+        v = vals.get((name, coord))
+        if v is None:
+            return m.group(0)
+        attrs2 = re.sub(r'\s+t="[^"]*"', '', attrs)
+        if isinstance(v, str):
+            attrs2 = attrs2 + ' t="str"'
+            body = f'<v>{esc(v)}</v>'
+        else:
+            body = f'<v>{numstr(v)}</v>'
+        n[0] += 1
+        return f'<c{attrs2}>{inner}{body}'
+    xml2 = CELLF.sub(repl, xml)
+    data[path] = xml2
+    report[name] = n[0]
+zin.close()
+
+tmp = OUT + '.tmp'
+with zipfile.ZipFile(BASE) as src, zipfile.ZipFile(tmp, 'w', zipfile.ZIP_DEFLATED) as dst:
+    for item in src.infolist():
+        payload = data.get(item.filename)
+        if payload is None:
+            payload = src.read(item.filename)
+        else:
+            payload = payload.encode('utf-8')
+        dst.writestr(item, payload)
+os.replace(tmp, OUT)
+print('injected cached values per sheet:', report)

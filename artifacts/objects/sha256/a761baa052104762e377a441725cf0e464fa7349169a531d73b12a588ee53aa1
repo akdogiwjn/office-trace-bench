@@ -1,0 +1,52 @@
+You are executing a measured OpenClaw benchmark case inside a fresh trace-generation container.
+
+Case: enhance an existing NYC TLC January 2024 operations workbook into an executive-ready, interactive workbook.
+Workspace root: {workspace}
+Input directory: {workspace}/input
+Output directory: {workspace}/output
+
+First read and follow the installed xlsx Skill at /root/.openclaw/skills/xlsx/SKILL.md. Use its prescribed openpyxl workflow and its bundled scripts/recalc.py. Do not replace the source workbook with a newly generated simplified workbook.
+
+Inputs:
+- monthly_operations_template.xlsx: 100,000-row sample workbook with seven existing sheets and reconciled formulas.
+- prepared_monthly_operations_summary.csv and prepared_reconciliation_summary.csv: stable reference exports.
+- template_manifest.json and dataset_sources.md: source and integrity metadata.
+- verify_xlsx_enhanced.py: independent strict verifier.
+
+Required business work:
+1. Copy monthly_operations_template.xlsx to output/monthly_operations_report.xlsx, preserve every existing sheet, formula, chart, value, and the 100,000-row Raw_Sample sheet.
+2. Add Executive_Summary as the first sheet. Use Arial consistently and a professional blue/gray visual hierarchy.
+3. Place these KPI formulas in the exact cells below:
+   - B5 Total Trips: cross-sheet formula linked to Reconciliation!B10.
+   - B6 Total Fare Revenue: cross-sheet formula linked to Reconciliation!B14.
+   - B7 Overall Average Fare: cross-sheet formula linked to Hourly_Summary!B34.
+   - B8 Removal Rate: cross-sheet formula linked to Reconciliation!B5.
+   - B9 Reconciliation Status: formula returning exactly PASS only when Reconciliation!B24 and B25 both show consistency; otherwise REVIEW.
+4. Add a three-scenario control block:
+   - B12 is a data-validation dropdown with Base, Upside, Downside and defaults to Base.
+   - D13:F15 is the hardcoded scenario table: Base 1.00/1.00, Upside 1.08/1.05, Downside 0.93/0.95 for fare and trip multipliers.
+   - B13 and B14 dynamically return the selected fare and trip multipliers using formulas that reference the scenario table.
+   - B15 Projected Trips is a formula based on B5 and B14.
+   - B16 Projected Fare Revenue is a formula based on B6, B13, and B14.
+5. Add at least two charts on Executive_Summary: a daily-trip trend using Daily_Summary and a payment-method mix using Payment_Summary. The two original charts must remain intact.
+6. Add at least two conditional-formatting rules, freeze panes, readable widths/heights, correct currency/percentage/integer number formats, and at least two comments documenting source or scenario assumptions.
+7. Apply the xlsx Skill color convention: hardcoded editable inputs in blue font, cross-sheet formulas in green font, local formulas in black font.
+8. Calculations must remain Excel formulas, not Python-hardcoded results. Do not create external workbook links.
+
+Execution and QA:
+- You may write one concise Python helper using openpyxl to perform the workbook edits.
+- The container uses the installed openpyxl. Never assign None to cell.fill or another style descriptor; leave an unstyled cell untouched. Construct PatternFill with explicit start_color, end_color, and fill_type keyword arguments so the saved workbook remains valid.
+- When all edits are finished, invoke /root/.openclaw/skills/xlsx/scripts/recalc.py exactly once with a 180-second timeout and save its JSON stdout as output/formula_recalc.json.
+- Copy the two prepared CSVs to output/monthly_operations_summary.csv and output/reconciliation_summary.csv.
+- Run input/verify_xlsx_enhanced.py against the final workbook and recalc JSON so it writes output/business_verification.json. Fix the workbook only if this strict verifier fails; if you must repair after recalc, rerun recalc and record the extra invocation in the summary.
+- Write output/xlsx_enhancement_summary.json with the created feature counts, helper filename, helper execution-attempt count, helper successful-execution count, recalc invocation count, and final verifier status.
+
+Completion requires all of these files:
+- monthly_operations_report.xlsx
+- monthly_operations_summary.csv
+- reconciliation_summary.csv
+- formula_recalc.json
+- business_verification.json with status=success
+- xlsx_enhancement_summary.json
+
+Do not install packages or download data during the measured task. Do not merely describe the work: create and verify the actual files.

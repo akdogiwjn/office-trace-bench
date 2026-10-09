@@ -1,0 +1,52 @@
+{
+  "dataset_id": "tlc",
+  "output_workbook": "monthly_operations_report.xlsx",
+  "added_sheets": ["Executive_Dashboard", "Charts"],
+  "summary_sheet": "Executive_Dashboard",
+  "feature_counts": {
+    "metrics": 5,
+    "scenario_dimensions": 2,
+    "scenario_assumptions": 6,
+    "scenario_projections": 2,
+    "charts": 2,
+    "comments": 8,
+    "conditional_formatting_ranges": 3,
+    "conditional_formatting_rules": 4,
+    "data_validations": 1,
+    "freeze_panes_sheets": 1
+  },
+  "helpers": [
+    "helpers/build_report.py",
+    "helpers/inject_caches.py",
+    "helpers/run_pipeline.py",
+    "helpers/compare_preservation.py"
+  ],
+  "helper_execution_attempts": {
+    "helpers/build_report.py": 2,
+    "helpers/inject_caches.py": 2,
+    "helpers/run_pipeline.py": 1,
+    "helpers/compare_preservation.py": 2
+  },
+  "helper_execution_successes": {
+    "helpers/build_report.py": 2,
+    "helpers/inject_caches.py": 2,
+    "helpers/run_pipeline.py": 1,
+    "helpers/compare_preservation.py": 2
+  },
+  "recalc_invocations": 4,
+  "recalc_invocations_note": "One exploratory recalc on the untouched original, one on a plain openpyxl copy (style drift check), and two on the built report (pipeline + manual retry); the final formula_recalc.json comes from the built report.",
+  "recalc_timeout_seconds": 180,
+  "recalc_status": "success",
+  "recalc_total_errors": 0,
+  "recalc_total_formulas": 43,
+  "cached_values_injected": {
+    "Hourly_Summary": 8,
+    "Daily_Summary": 7,
+    "Zone_Summary": 4,
+    "Payment_Summary": 4,
+    "Reconciliation": 13,
+    "Executive_Dashboard": 7
+  },
+  "verifier": "input/verify_office.py",
+  "final_verifier_status": "success"
+}

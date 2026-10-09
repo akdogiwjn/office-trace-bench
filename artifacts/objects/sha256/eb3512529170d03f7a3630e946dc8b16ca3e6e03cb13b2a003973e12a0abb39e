@@ -1,0 +1,127 @@
+{
+  "schema_version": "office-supplemental-temporary-capture-v1",
+  "run_id": "xlsx-tlc-20261009T063937Z-9a06558f",
+  "started_at": "2026-10-09T06:56:17.889767+00:00",
+  "logical_root": "/tmp",
+  "observer_script_sha256": "8954a2b7c511beaf9ae0b672b88ec7ddfd710f94dd28c315db00278b38f3d6c8",
+  "events": [
+    {
+      "path": "temporary/openpyxl_recalc.xlsx",
+      "sha256": "279a7ebb3d1fd95df92cde221848d86b9d2bd9f545725f56c1c00e8bfc9cee68",
+      "size": 11465176,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977945541493,
+      "source_mtime_ns": 1791528550872180698
+    },
+    {
+      "path": "temporary/openpyxl_compare.txt",
+      "sha256": "4c84a69208b5adc9bcbe2295beb2ed1081b7bf991f69fbf8a0e250cf80b44f18",
+      "size": 628,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977945884008,
+      "source_mtime_ns": 1791528757071009054
+    },
+    {
+      "path": "temporary/report_recalc.xlsx",
+      "sha256": "7e4020ecaa2e442972828ca68bb130ec5d6433c6ae46fc5a5310bbac6623b6a7",
+      "size": 11475545,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977955548381,
+      "source_mtime_ns": 1791528967169900133
+    },
+    {
+      "path": "temporary/orig_copy.xlsx",
+      "sha256": "a16441106f39e4173875a5d11c931fdea47115a4e57e26f5f8e8d488ddbd0c8e",
+      "size": 11465191,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977965904133,
+      "source_mtime_ns": 1791528198307376896
+    },
+    {
+      "path": "temporary/report_base.xlsx",
+      "sha256": "35007761aa0b6ec1f611d870e3bc49992a7030153c345233f58b9d9721452738",
+      "size": 12284730,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977977200389,
+      "source_mtime_ns": 1791528948649645317
+    },
+    {
+      "path": "temporary/openpyxl_copy.xlsx",
+      "sha256": "f37e58d282b8ad5e6e5c53854783030b1817a551c716a1efb08d29d487c3c7ae",
+      "size": 12278320,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977987604302,
+      "source_mtime_ns": 1791528413590310191
+    },
+    {
+      "path": "temporary/office-runtime-requirements.txt",
+      "sha256": "b56cfe36e0a22611b012b66ab497c691f957becd394c0aad5498303b69bbce4d",
+      "size": 64,
+      "event": "initial_midrun_inventory",
+      "captured_at_ns": 1791528977987957827,
+      "source_mtime_ns": 1785330043559835118
+    },
+    {
+      "path": "temporary/openpyxl_recalc.xlsx",
+      "sha256": "279a7ebb3d1fd95df92cde221848d86b9d2bd9f545725f56c1c00e8bfc9cee68",
+      "size": 11465176,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546562286656,
+      "source_mtime_ns": 1791528550872180698
+    },
+    {
+      "path": "temporary/openpyxl_compare.txt",
+      "sha256": "4c84a69208b5adc9bcbe2295beb2ed1081b7bf991f69fbf8a0e250cf80b44f18",
+      "size": 628,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546562418508,
+      "source_mtime_ns": 1791528757071009054
+    },
+    {
+      "path": "temporary/report_recalc.xlsx",
+      "sha256": "7e4020ecaa2e442972828ca68bb130ec5d6433c6ae46fc5a5310bbac6623b6a7",
+      "size": 11475545,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546569821980,
+      "source_mtime_ns": 1791528967169900133
+    },
+    {
+      "path": "temporary/orig_copy.xlsx",
+      "sha256": "a16441106f39e4173875a5d11c931fdea47115a4e57e26f5f8e8d488ddbd0c8e",
+      "size": 11465191,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546577370684,
+      "source_mtime_ns": 1791528198307376896
+    },
+    {
+      "path": "temporary/report_base.xlsx",
+      "sha256": "35007761aa0b6ec1f611d870e3bc49992a7030153c345233f58b9d9721452738",
+      "size": 12284730,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546585745219,
+      "source_mtime_ns": 1791528948649645317
+    },
+    {
+      "path": "temporary/openpyxl_copy.xlsx",
+      "sha256": "f37e58d282b8ad5e6e5c53854783030b1817a551c716a1efb08d29d487c3c7ae",
+      "size": 12278320,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546594142435,
+      "source_mtime_ns": 1791528413590310191
+    },
+    {
+      "path": "temporary/office-runtime-requirements.txt",
+      "sha256": "b56cfe36e0a22611b012b66ab497c691f957becd394c0aad5498303b69bbce4d",
+      "size": 64,
+      "event": "final_inventory",
+      "captured_at_ns": 1791529546594384738,
+      "source_mtime_ns": 1785330043559835118
+    }
+  ],
+  "gaps": [],
+  "complete": true,
+  "scope": "Passive observer of temporary document/transformed-data files. Initial mid-run inventory plus subsequent close-write/move versions. Does not execute helpers or change Agent tools.",
+  "limitations": [
+    "Started mid-run; earlier removed or overwritten unsupported temporary-file versions cannot be recovered. Files over 128MiB and races are reported as gaps. This is not syscall read/exec provenance."
+  ]
+}

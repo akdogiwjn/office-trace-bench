@@ -21,7 +21,7 @@ def main():
         print(f'checking archived {kind}/{dataset}', flush=True)
         with tempfile.TemporaryDirectory(prefix='office-regression-') as directory:
             workspace = Path(directory) / 'workspace'
-            manifest_path = dataset_path(kind, dataset)
+            manifest_path = ROOT / 'legacy/runner/cases' / kind / 'manifest.json'
             stage(manifest_path, workspace)
             shutil.copytree(ROOT / 'legacy' / kind / 'output', workspace / 'output', dirs_exist_ok=True)
             report = verify(manifest_path, workspace, ROOT / 'reports' / f'{dataset}-archived-regression.json')

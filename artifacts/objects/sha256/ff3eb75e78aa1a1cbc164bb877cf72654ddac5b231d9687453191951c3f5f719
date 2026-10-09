@@ -1,0 +1,63 @@
+{
+  "task": "OFFICE-XLSX-RETAIL",
+  "output_workbook": "retail_enhanced.xlsx",
+  "added_sheets": ["Retail Analysis"],
+  "sheet_order": ["MARTS Table 1", "Publication notes", "Retail Analysis"],
+  "feature_counts": {
+    "metrics": 3,
+    "scenario_dimensions": 1,
+    "scenario_rows": 3,
+    "scenario_assumption_cells": 3,
+    "scenario_selector_cells": 1,
+    "data_validations": 1,
+    "projections": 1,
+    "charts": 1,
+    "conditional_format_ranges": 3,
+    "cell_comments": 4,
+    "cross_sheet_formula_cells": 6,
+    "local_formula_cells": 2,
+    "formulas_added": 8
+  },
+  "helper_files": [
+    "scratch/build_workbook.py",
+    "scratch/recalc_and_inject.py",
+    "scratch/recalc_attempts.json",
+    "scratch/versions/build_workbook.v1_initial.py",
+    "scratch/versions/build_workbook.v2_final.py",
+    "scratch/versions/recalc_and_inject.v1_initial.py",
+    "scratch/versions/recalc_and_inject.v2_pathfix.py",
+    "scratch/versions/recalc_and_inject.v3_parsefix.py",
+    "scratch/versions/recalc_and_inject.v4_final.py"
+  ],
+  "intermediate_workbooks": [
+    "scratch/stage1.xlsx",
+    "scratch/recalc_source.xlsx",
+    "scratch/test_norecalc.xlsx",
+    "scratch/test_recalc.xlsx",
+    "scratch/base.xlsx"
+  ],
+  "helper_runs": [
+    {
+      "helper": "scratch/build_workbook.py",
+      "attempts": 2,
+      "successes": 2,
+      "notes": "First revision had a stray attribute-access line; second (final) revision produced stage1.xlsx."
+    },
+    {
+      "helper": "scratch/recalc_and_inject.py",
+      "attempts": 3,
+      "successes": 1,
+      "notes": "v1 failed with a zip path KeyError before injection; v2 fixed the rels path but appended a duplicate <v> next to openpyxl's empty <v/> so caches read as None; v3/v4 fixed value parsing and replaced the empty <v/> instead of appending. Only the final revision produced the delivered workbook."
+    }
+  ],
+  "recalc_invocation_count": 4,
+  "recalc_attempts": [
+    {"n": 1, "target": "scratch/test_recalc.xlsx", "result": "success (round-trip style probe)"},
+    {"n": 2, "target": "scratch/recalc_source.xlsx", "result": "success (recalc ran; helper then errored in injection step)"},
+    {"n": 3, "target": "scratch/recalc_source.xlsx", "result": "success (report parse bug in helper)"},
+    {"n": 4, "target": "scratch/recalc_source.xlsx", "result": "success (final; caches injected into openpyxl workbook)"}
+  ],
+  "recalc_report_file": "formula_recalc.json",
+  "cache_strategy": "LibreOffice recalculation was run on a copy; computed values were merged back into the openpyxl-authored workbook as cell caches so original sheet styles/formatting are byte-preserved while new formulas carry recalculated caches.",
+  "final_verifier_status": "success"
+}

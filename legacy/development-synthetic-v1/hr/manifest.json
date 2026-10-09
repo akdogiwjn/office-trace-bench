@@ -1,0 +1,249 @@
+{
+  "schema_version": "office-dataset-v1",
+  "kind": "xlsx",
+  "dataset_id": "hr",
+  "domain": "workforce",
+  "task": "Enhance the BLS OEWS selected workforce benchmark workbook",
+  "workbook": "workforce_template.xlsx",
+  "output_workbook": "workforce_report.xlsx",
+  "requirements": {
+    "summary_sheet": "Executive_Summary",
+    "base_sheets": [
+      "Raw_Data",
+      "Occupation_Summary",
+      "Employment_Summary",
+      "Wage_Summary",
+      "Segment_Summary",
+      "Employment_Mix",
+      "Reconciliation"
+    ],
+    "raw_sheets": [
+      "Raw_Data"
+    ],
+    "minimum_bytes": 1000000,
+    "minimum_formula_count": 20,
+    "metrics": [
+      {
+        "name": "Selected Employment",
+        "cell": "B5",
+        "required_references": [
+          "Employment_Summary!B2"
+        ],
+        "font_color": "008000",
+        "number_format": "#,##0"
+      },
+      {
+        "name": "Employment-weighted Annual Mean Wage",
+        "cell": "B6",
+        "required_references": [
+          "Wage_Summary!B2"
+        ],
+        "font_color": "008000",
+        "number_format": "$#,##0.00"
+      },
+      {
+        "name": "Employment-weighted Occupation Median Proxy",
+        "cell": "B7",
+        "required_references": [
+          "Wage_Summary!B3"
+        ],
+        "font_color": "008000",
+        "number_format": "$#,##0.00"
+      },
+      {
+        "name": "Highest Employment Selected Occupation",
+        "cell": "B8",
+        "required_references": [
+          "Occupation_Summary!H2"
+        ],
+        "font_color": "008000"
+      },
+      {
+        "name": "Reconciliation Status",
+        "cell": "B9",
+        "required_references": [
+          "Reconciliation!B15"
+        ],
+        "font_color": "008000"
+      }
+    ],
+    "scenario": {
+      "selector_cell": "B12",
+      "default": "Base",
+      "table_columns": {
+        "D": "Scenario",
+        "E": "Wage multiplier",
+        "F": "Headcount multiplier"
+      },
+      "rows": [
+        {
+          "name": "Base",
+          "cells": {
+            "D13": "Base",
+            "E13": 1.0,
+            "F13": 1.0
+          }
+        },
+        {
+          "name": "Upside",
+          "cells": {
+            "D14": "Upside",
+            "E14": 1.08,
+            "F14": 1.05
+          }
+        },
+        {
+          "name": "Downside",
+          "cells": {
+            "D15": "Downside",
+            "E15": 0.93,
+            "F15": 0.95
+          }
+        }
+      ],
+      "formula_metrics": [
+        {
+          "name": "Selected wage multiplier",
+          "cell": "B13",
+          "required_references": [
+            "B12"
+          ],
+          "meaning": "Look up selected wage multiplier",
+          "font_color": "000000"
+        },
+        {
+          "name": "Selected headcount multiplier",
+          "cell": "B14",
+          "required_references": [
+            "B12"
+          ],
+          "meaning": "Look up selected headcount multiplier",
+          "font_color": "000000"
+        },
+        {
+          "name": "Projected Employment",
+          "cell": "B15",
+          "required_references": [
+            "B5",
+            "B14"
+          ],
+          "meaning": "Multiply selected employment by headcount multiplier",
+          "font_color": "000000"
+        },
+        {
+          "name": "Projected Estimated Payroll",
+          "cell": "B16",
+          "required_references": [
+            "B5",
+            "B6",
+            "B13",
+            "B14"
+          ],
+          "meaning": "Multiply employment by annual mean wage and both scenario multipliers",
+          "font_color": "000000"
+        }
+      ]
+    },
+    "charts": [
+      {
+        "id": "employment_mix",
+        "description": "employment mix of selected occupations",
+        "required_references": [
+          "Employment_Mix!"
+        ]
+      },
+      {
+        "id": "wage_distribution",
+        "description": "annual mean and median wage comparison of selected occupations",
+        "required_references": [
+          "Occupation_Summary!"
+        ]
+      }
+    ],
+    "minimum_conditional_formats": 2,
+    "minimum_comments": 2,
+    "recalc_timeout": 180
+  },
+  "publish_files": [
+    {
+      "input": "prepared_workforce_summary.csv",
+      "output": "workforce_summary.csv",
+      "sha256": "2392fb3139e3f34f95a4fa484214d9df68a73af210b4cafcc17fe3d03dfcd719"
+    },
+    {
+      "input": "prepared_reconciliation_summary.csv",
+      "output": "reconciliation_summary.csv",
+      "sha256": "e7db8995ddb19f2edb252a1b41e9d66f08c8ece26fbf3960f6c65e8fbf56db01"
+    }
+  ],
+  "required_outputs": [
+    "workforce_report.xlsx",
+    "workforce_summary.csv",
+    "reconciliation_summary.csv",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ],
+  "input_files": {
+    "input/dataset_sources.md": "7a2f2ba41394427402ae99acceac58ce8ae32f5c1235ca0fdf10d762bc0029c6",
+    "input/prepared_reconciliation_summary.csv": "e7db8995ddb19f2edb252a1b41e9d66f08c8ece26fbf3960f6c65e8fbf56db01",
+    "input/prepared_workforce_summary.csv": "2392fb3139e3f34f95a4fa484214d9df68a73af210b4cafcc17fe3d03dfcd719",
+    "input/template_manifest.json": "8402e573e7d48abed22e868d2e080932cc6769615b0b95e4532a601ecea3dd01",
+    "input/workforce_template.xlsx": "717c86b5bf614862fc88baabc8107cc7c3a72a0e2b17070cfb6a445a5eebd478"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "0bd1a69a6b1cb468675a0e2c2c58a9bb453dd64a8c48eb9b06674c8b81ce666f",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+  "prompt_contract": {
+    "task_subject": "BLS OEWS 2025 selected detailed-occupation workforce benchmark workbook",
+    "raw_record_count": 100000,
+    "original_chart_count": 2,
+    "metadata_files": [
+      "template_manifest.json",
+      "dataset_sources.md"
+    ]
+  },
+  "runtime_case": "SUB-MEM-OFFICE-HR-01",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "trace_rules": [
+    {
+      "pattern": "verify_office\\.py",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "recalc\\.py",
+      "operation": "recalculate_formulas"
+    },
+    {
+      "pattern": "\\bcp\\b.*\\.csv",
+      "operation": "publish_csv"
+    },
+    {
+      "pattern": "load_workbook",
+      "operation": "inspect_workbook"
+    }
+  ],
+  "source_provenance": {
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "distributor": "Public GitHub repository cache",
+    "official_source_url": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+    "source_url": "https://raw.githubusercontent.com/hack4rva/richmond-ai-impact-analysis/main/data/oesm25nat/national_M2025_dl.xlsx",
+    "source_artifact": "sources/xlsx/national_M2025_dl.xlsx",
+    "source_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+    "year": 2025,
+    "official_download_available": false,
+    "official_byte_identity_independently_verified": false,
+    "observed_seed_rows": 825,
+    "benchmark_raw_rows": 100000,
+    "raw_rows_are_observed_workers": false,
+    "selection": "U.S. cross-industry ownership 1235 detailed occupations with numeric positive employment, annual mean and annual median; exclude all aggregate hierarchy rows and suppressed wages.",
+    "expansion": "Partition employment counts into synthetic shards; preserve source occupation counts and count-times-wage masses.",
+    "median_definition": "Employment-weighted average of occupation medians; a proxy, never the national worker median.",
+    "payroll_definition": "Employment times published annual mean wage; illustrative estimated wage mass, not observed payroll.",
+    "industries": "No industry detail in national cross-industry source; segments are explicitly synthetic."
+  }
+}

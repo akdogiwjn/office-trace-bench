@@ -1,0 +1,45 @@
+You are executing a measured OpenClaw benchmark case inside a fresh trace-generation container.
+
+Case: inspect, batch-fill, render, and verify the current official OPM OF-306 fillable PDF using ten synthetic training applicants.
+Workspace root: {workspace}
+Input directory: {workspace}/input
+Output directory: {workspace}/output
+
+First read and follow both /root/.openclaw/skills/pdf/SKILL.md and /root/.openclaw/skills/pdf/forms.md. Use the PDF Skill's bundled scripts; do not replace them with a custom PDF implementation.
+
+Execution discipline for a stable measured run:
+- Use `python3` for every Python invocation; do not use the `python` alias.
+- Do not smoke-test, preflight, or separately fill applicant_01 before the batch.
+- The first and only field-check invocation must already redirect stdout to `output/check_fillable_fields.log`. Do not run a display-only check from the Skill directory before saving the log.
+- Before filling or rendering any applicant, generate the final field-values files and final batch driver/loop. Then execute that final path once.
+- A bundled-script invocation is counted even if a later invocation overwrites the same output. Therefore execute check and extract exactly once, fill exactly ten times, and render exactly eleven times. Do not run duplicate probes or retry a successful operation.
+
+Inputs:
+- of306_aug2023.pdf: the current official 3-page OPM fillable form.
+- synthetic_applicants.json: ten fictitious applicant profiles plus shared safe answers.
+- pdf_dataset_sources.md: public source and privacy rules.
+- verify_pdf_batch.py: independent strict verifier.
+
+Required path and outputs:
+1. Run scripts/check_fillable_fields.py once and save stdout as output/check_fillable_fields.log. It must confirm fillable fields.
+2. Run scripts/extract_form_field_info.py once and save output/form_field_info.json.
+3. Run scripts/convert_pdf_to_images.py once on the blank template, producing output/rendered/template/page_1.png through page_3.png.
+4. Create output/field_values and output/filled. For each of the ten applicants:
+   - create one field-values JSON using exact field IDs and page numbers from form_field_info.json;
+   - fill Full Name, place/date of birth, day phone, other names, citizenship, Selective Service answers, the shared background answers, and continuation text;
+   - answer No for military service, all background questions, relatives-at-agency, and government retirement/pension;
+   - invoke scripts/fill_fillable_fields.py once to create output/filled/applicant_XX.pdf;
+   - invoke scripts/convert_pdf_to_images.py once on that filled PDF to create three PNGs under output/rendered/applicant_XX/.
+5. Social Security Number, both signature fields, certification dates, appointment date, prior-Federal-job date, and life-insurance questions must be omitted from every field-values JSON and remain blank in every PDF. All names and phone numbers are synthetic.
+6. Write output/batch_summary.json containing at least: input_form, applicant_count=10, filled_pdf_count=10, rendered_page_count=33 (blank template plus ten outputs), fill_script_invocations=10, render_script_invocations=11, and ssn_and_signatures_left_blank=true.
+7. Run input/verify_pdf_batch.py against the source PDF, applicant JSON, and output directory so it writes output/business_verification.json. Correct any field mapping or rendering problem until status=success.
+
+Completion requires:
+- one field inspection JSON;
+- ten field-values JSON files;
+- ten valid 3-page filled PDFs;
+- 33 rendered PNG pages;
+- batch_summary.json;
+- business_verification.json with status=success.
+
+Do not install packages, use live personal data, sign/certify forms, or download anything during the measured task. Do not merely describe the work: produce and verify the actual files.

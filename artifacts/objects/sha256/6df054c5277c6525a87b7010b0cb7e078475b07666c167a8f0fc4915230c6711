@@ -1,0 +1,20 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "dataset_id": "tlc",
+  "filename": "monthly_operations_template.xlsx",
+  "sha256": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+  "frozen_at": "2026-10-09T05:17:32.108124+00:00",
+  "task": "Enhance the existing NYC TLC January 2024 operations workbook",
+  "input_class": "benchmark_generated_record_sample",
+  "native_xlsx": false,
+  "synthetic_expansion": false,
+  "official_url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+  "original_data_url": "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet",
+  "source_filename": "yellow_tripdata_2024-01.parquet",
+  "release": "January 2024 yellow taxi records",
+  "download_date": "Historical import; precise acquisition date not recorded",
+  "conversion": "Frozen historical 100000-real-record sample workbook with full-population aggregation sheets; generated XLSX, not TLC-published spreadsheet. No synthetic shards.",
+  "limitations": [
+    "Original upstream byte-level download evidence is historical and incomplete; frozen workbook hash and legacy artifacts are available."
+  ]
+}

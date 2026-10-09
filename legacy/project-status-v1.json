@@ -1,0 +1,272 @@
+{
+  "schema_version": "office-project-status-v1",
+  "current_phase": "all_selected_datasets_have_accepted_real_traces",
+  "runtime_image": "office-trace-bench:runtime",
+  "runtime_image_built": true,
+  "archived_artifact_regression": "success",
+  "real_agent_regression": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T150146Z-1742e186",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "prompt_template": "xlsx.txt",
+      "trace_steps": 20,
+      "tool_calls": 25,
+      "acceptance_report": "runs/xlsx-tlc-20261008T150146Z-1742e186/baseline_acceptance.json",
+      "context_report": "runs/xlsx-tlc-20261008T150146Z-1742e186/agent_context_audit.json",
+      "scope": "business regression; historical context metadata matched; independent generated programs may differ"
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T151503Z-e61d4442",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "prompt_template": "pdf.txt",
+      "trace_steps": 16,
+      "tool_calls": 21,
+      "acceptance_report": "runs/pdf-opm-20261008T151503Z-e61d4442/baseline_acceptance.json",
+      "context_report": "runs/pdf-opm-20261008T151503Z-e61d4442/agent_context_audit.json",
+      "scope": "business regression; historical context metadata matched; independent generated programs may differ"
+    },
+    "irs_w4": {
+      "status": "success",
+      "run_id": "pdf-irs_w4-20261009T021352Z-a22a4aaa",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "trace_steps": 24,
+      "tool_calls": 34,
+      "acceptance_report": "runs/pdf-irs_w4-20261009T021352Z-a22a4aaa/baseline_acceptance.json",
+      "scope": "New dataset; common family prompt and generic verifier; no original historical verifier."
+    },
+    "retail": {
+      "status": "success",
+      "run_id": "xlsx-retail-20261009T023342Z-42168240",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "trace_steps": 26,
+      "tool_calls": 31,
+      "acceptance_report": "runs/xlsx-retail-20261009T023342Z-42168240/baseline_acceptance.json",
+      "scope": "New dataset; common family prompt and generic verifier; no original historical verifier."
+    },
+    "manufacturing": {
+      "status": "success",
+      "run_id": "xlsx-manufacturing-20261009T024115Z-4afa2f56",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "trace_steps": 27,
+      "tool_calls": 36,
+      "acceptance_report": "runs/xlsx-manufacturing-20261009T024115Z-4afa2f56/baseline_acceptance.json",
+      "scope": "New dataset; common family prompt and generic verifier; no original historical verifier."
+    },
+    "hr": {
+      "status": "success",
+      "run_id": "xlsx-hr-20261009T025210Z-173694e5",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "trace_steps": 31,
+      "tool_calls": 41,
+      "acceptance_report": "runs/xlsx-hr-20261009T025210Z-173694e5/baseline_acceptance.json",
+      "scope": "New dataset; common family prompt and generic verifier; no original historical verifier."
+    },
+    "sba1919": {
+      "status": "success",
+      "run_id": "pdf-sba1919-20261009T030304Z-987669df",
+      "baseline_accepted": true,
+      "agent_context_matched": true,
+      "trace_steps": 31,
+      "tool_calls": 38,
+      "acceptance_report": "runs/pdf-sba1919-20261009T030304Z-987669df/baseline_acceptance.json",
+      "scope": "New dataset; common family prompt and generic verifier; no original historical verifier."
+    }
+  },
+  "new_datasets": {
+    "retail": "independently_qualified_and_real_trace_accepted",
+    "manufacturing": "independently_qualified_and_real_trace_accepted",
+    "hr": "independently_qualified_and_real_trace_accepted",
+    "irs_w4": "independently_qualified_and_real_trace_accepted",
+    "sba1919": "independently_qualified_and_real_trace_accepted"
+  },
+  "replay_image": "deferred_until_all_dataset_traces_can_be_generated",
+  "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+  "tests": {
+    "passed": 18,
+    "failed": 0
+  },
+  "evidence": {
+    "archived_regression": "reports/archived-regression-summary.json",
+    "opm_trace": "runs/pdf-opm-20261008T151503Z-e61d4442/trajectory.json",
+    "opm_verification": "runs/pdf-opm-20261008T151503Z-e61d4442/independent_verification.json",
+    "tlc_trace": "runs/xlsx-tlc-20261008T150146Z-1742e186/trajectory.json",
+    "tlc_verification": "runs/xlsx-tlc-20261008T150146Z-1742e186/independent_verification.json",
+    "prompt_restoration": "reports/prompt-restoration-v1.json",
+    "restored_prompt_comparison": "reports/prompt-restored-trace-comparison-v2.json",
+    "context_aligned_comparison": "reports/context-aligned-trace-comparison-v4.json",
+    "controlled_runner_pair": "reports/controlled-runner-pair-v6.json",
+    "pdf_contract_compatibility": "reports/pdf-contract-compatibility-v7.json",
+    "expansion_negative_samples": "reports/expansion-failure-samples-v1.json",
+    "pdf_source_gates": "reports/pdf-source-gates-v1.json",
+    "new_dataset_expansion": "reports/new-dataset-expansion-v8.json",
+    "hr_sba_source_reliability": "reports/hr-sba-source-reliability-v1.json"
+  },
+  "next_phase": "freeze_selected_successful_trajectories_and_design_replay_recipe_when_requested; replay_image_deferred",
+  "previous_compact_prompt_regression": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T115345Z-63218840",
+      "baseline_accepted": true,
+      "trace_steps": 32,
+      "tool_calls": 36,
+      "acceptance_report": "runs/xlsx-tlc-20261008T115345Z-63218840/baseline_acceptance.json"
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T115600Z-aa170fa3",
+      "baseline_accepted": true,
+      "trace_steps": 16,
+      "tool_calls": 27,
+      "acceptance_report": "runs/pdf-opm-20261008T115600Z-aa170fa3/baseline_acceptance.json"
+    }
+  },
+  "agent_context_comparison": {
+    "matched": true,
+    "evidence": "reports/context-aligned-trace-comparison-v4.json",
+    "unmatched_inputs": [],
+    "matched_scope": [
+      "historical background document lengths",
+      "exact Skill registry text hash",
+      "tool schema length",
+      "Agent workspace path",
+      "frozen current background hashes unchanged"
+    ],
+    "full_historical_input_byte_equivalence": "unverifiable; historical full hashes and dynamic system text not archived",
+    "scope": "Known runner background/Skill differences fixed; not a claim of identical complete model inputs.",
+    "unresolved_comparison_details": [
+      "Historical full background/configuration hashes are unavailable; complete historical input byte equivalence cannot be verified.",
+      "Full system text lengths still differ; dynamic system text was not archived, so the remaining difference cannot be localized from metadata."
+    ]
+  },
+  "generalization_scope": {
+    "runtime_and_manifest_framework": "implemented",
+    "generic_verifier": "implemented_for_current_task_families",
+    "legacy_compatible_business_regression": "passed",
+    "unified_parameterized_legacy_structure_prompt": "implemented_and_tlc_opm_text_compatibility_passed",
+    "full_agent_context_alignment": "known_background_and_skill_differences_fixed; historical_full_bytes_not_verifiable",
+    "new_domain_trace_validation": "five_new_domains_passed; same_family_prompts_and_verifier",
+    "scope_document": "docs/generalization-scope.md",
+    "latest_literal_contract_gap": "resolved with field-specific and summary-specific explicit aliases; original failures preserved"
+  },
+  "previous_leaf_template_regression": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T123533Z-e0fe46a7",
+      "baseline_accepted": true,
+      "prompt_template": "tlc-legacy-compatible.txt",
+      "trace_steps": 18,
+      "tool_calls": 19,
+      "acceptance_report": "runs/xlsx-tlc-20261008T123533Z-e0fe46a7/baseline_acceptance.json",
+      "scope": "business regression and original prompt compatibility; not identical program workloads"
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T124346Z-f0f172a6",
+      "baseline_accepted": true,
+      "prompt_template": "opm-legacy-compatible.txt",
+      "trace_steps": 19,
+      "tool_calls": 26,
+      "acceptance_report": "runs/pdf-opm-20261008T124346Z-f0f172a6/baseline_acceptance.json",
+      "scope": "business regression and original prompt compatibility; not identical program workloads"
+    }
+  },
+  "generation_stability": {
+    "status": "not_established",
+    "reason": "one old/new pair per dataset completed under frozen current setup; no repeat samples to estimate variation",
+    "evidence": "reports/controlled-runner-pair-v6.json",
+    "current_pair_initial_inputs_identical": true,
+    "current_pair_helper_sources_different": true,
+    "user_decision": "Keep current Agent-generated helpers; implementation variation accepted; fixed scripts/runner proposal canceled."
+  },
+  "controlled_current_runner_comparison": {
+    "status": "comparison_complete",
+    "experiment_id": "20261008T163759Z-90a05c03",
+    "plan": "control_pairs/20261008T163759Z-90a05c03/plan.json",
+    "scope": "One fresh old/new run for TLC and OPM; current conditions frozen; historical outputs retained",
+    "controls_status": "success",
+    "strict_regression_status": "failed",
+    "actual_agent_runs": 4,
+    "evidence": "reports/controlled-runner-pair-v6.json",
+    "report": "reports/controlled-runner-pair-v6.md",
+    "private_config_volume_removed": true,
+    "same_actual_tasks": true,
+    "same_full_initial_system_prompts": true,
+    "remaining_runner_differences": [
+      "real directory versus symlink; process cwd",
+      "legacy model preflight"
+    ],
+    "runs": {
+      "tlc": {
+        "old": {
+          "run_id": "control-old-xlsx-tlc-20261008T163759Z-90a05c03",
+          "status": "success",
+          "baseline_accepted": true,
+          "steps": 25,
+          "tool_calls": 30,
+          "original_verifier": "success",
+          "generic_verifier": "success"
+        },
+        "new": {
+          "run_id": "control-new-xlsx-tlc-20261008T163759Z-90a05c03",
+          "status": "success",
+          "baseline_accepted": true,
+          "steps": 22,
+          "tool_calls": 27,
+          "original_verifier": "success",
+          "generic_verifier": "success"
+        }
+      },
+      "opm": {
+        "old": {
+          "run_id": "control-old-pdf-opm-20261008T163759Z-90a05c03",
+          "status": "failed",
+          "baseline_accepted": false,
+          "steps": 17,
+          "tool_calls": 23,
+          "original_verifier": "success",
+          "generic_verifier": "failed"
+        },
+        "new": {
+          "run_id": "control-new-pdf-opm-20261008T163759Z-90a05c03",
+          "status": "success",
+          "baseline_accepted": true,
+          "steps": 18,
+          "tool_calls": 25,
+          "original_verifier": "success",
+          "generic_verifier": "success"
+        }
+      }
+    },
+    "strict_failure": "old OPM: United States of America versus United States; input/ form prefix versus basename",
+    "generated_outputs_edited": false
+  },
+  "source_limitations": [
+    "Retail and manufacturing Census series obtained through FRED; frozen 2023–2024 selected observations, 100k synthetic partitions, not observed transactions or firms.",
+    "HR public repository cache: all 825 selected employment/annual-mean values and 767 published hourly-mean/hourly-median values match primary BLS table. Official XLSX bytes and annual median column remain unverified; weighted occupation median is a proxy.",
+    "SBA public sba.app.box.com 2024 PDF: repeat download bytes match and all seven pages normalized text match SBA.gov historical PDF. Exact official PDF bytes and direct SBA.gov backlink to this share remain unverified; it is not the 2025 form."
+  ],
+  "source_reliability_audit": {
+    "status": "content_checks_passed_with_provenance_limits",
+    "hr": {
+      "official_matched_selected_occupations": 825,
+      "employment_and_annual_mean_verified": true,
+      "hourly_mean_and_median_verified_occupations": 767,
+      "annual_median_directly_checked": false,
+      "official_workbook_byte_identity_verified": false
+    },
+    "sba1919": {
+      "box_redownload_byte_identical": true,
+      "seven_page_official_normalized_text_identical": true,
+      "direct_official_backlink_to_exact_box_share_found": false,
+      "official_pdf_byte_identity_verified": false
+    }
+  }
+}

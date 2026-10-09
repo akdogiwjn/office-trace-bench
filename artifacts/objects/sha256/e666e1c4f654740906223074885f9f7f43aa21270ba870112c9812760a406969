@@ -1,0 +1,265 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "retail",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "input:input/marts_table1_202608.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "source:worksheets": {
+      "ok": true,
+      "detail": [
+        "MARTS Table 1",
+        "Publication notes",
+        "Analysis"
+      ]
+    },
+    "source:relative_order": {
+      "ok": true,
+      "detail": null
+    },
+    "source:data:MARTS Table 1": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:MARTS Table 1": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:MARTS Table 1": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Publication notes": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Publication notes": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Publication notes": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:MARTS Table 1": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:MARTS Table 1": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:MARTS Table 1": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Publication notes": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Publication notes": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Publication notes": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names": {
+      "ok": true,
+      "detail": null
+    },
+    "overview_added": {
+      "ok": true,
+      "detail": null
+    },
+    "metric_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Analysis!B6": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:adjusted_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:adjusted_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:adjusted_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Analysis!B7": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:monthly_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:monthly_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:monthly_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Analysis!B8": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:annual_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:annual_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:annual_growth": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:selector_color": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:sales_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Higher": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Higher:sales_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Lower": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Lower:sales_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "projection_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Analysis!B18": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_sales": {
+      "ok": true,
+      "detail": null
+    },
+    "chart_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:adjusted_trend": {
+      "ok": true,
+      "detail": [
+        "ANALYSIS!A22:A24",
+        "ANALYSIS!B21",
+        "ANALYSIS!B22:B24"
+      ]
+    },
+    "semantic:chart:adjusted_trend": {
+      "ok": true,
+      "detail": [
+        [
+          768587,
+          764462,
+          773947
+        ]
+      ]
+    },
+    "semantic:chart_dependency:adjusted_trend": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:adjusted_trend": {
+      "ok": true,
+      "detail": null
+    },
+    "format:conditional_rules": {
+      "ok": true,
+      "detail": null
+    },
+    "format:comments": {
+      "ok": true,
+      "detail": null
+    },
+    "format:freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:retail_enhanced.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:workbook_features.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "failures": []
+}

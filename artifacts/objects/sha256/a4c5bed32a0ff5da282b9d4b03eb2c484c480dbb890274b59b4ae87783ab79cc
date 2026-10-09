@@ -1,0 +1,195 @@
+{
+  "employees": [
+    {
+      "id": "employee_01",
+      "first_name": "Training01",
+      "last_name": "Example",
+      "address": "101 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": true,
+        "married": false,
+        "head_of_household": false
+      },
+      "multiple_jobs": false,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "100",
+      "deductions": "0",
+      "extra_withholding": "5"
+    },
+    {
+      "id": "employee_02",
+      "first_name": "Training02",
+      "last_name": "Example",
+      "address": "102 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": false,
+        "married": true,
+        "head_of_household": false
+      },
+      "multiple_jobs": true,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "200",
+      "deductions": "0",
+      "extra_withholding": "10"
+    },
+    {
+      "id": "employee_03",
+      "first_name": "Training03",
+      "last_name": "Example",
+      "address": "103 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": false,
+        "married": false,
+        "head_of_household": true
+      },
+      "multiple_jobs": false,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "300",
+      "deductions": "0",
+      "extra_withholding": "15"
+    },
+    {
+      "id": "employee_04",
+      "first_name": "Training04",
+      "last_name": "Example",
+      "address": "104 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": true,
+        "married": false,
+        "head_of_household": false
+      },
+      "multiple_jobs": true,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "400",
+      "deductions": "0",
+      "extra_withholding": "20"
+    },
+    {
+      "id": "employee_05",
+      "first_name": "Training05",
+      "last_name": "Example",
+      "address": "105 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": false,
+        "married": true,
+        "head_of_household": false
+      },
+      "multiple_jobs": false,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "500",
+      "deductions": "0",
+      "extra_withholding": "25"
+    },
+    {
+      "id": "employee_06",
+      "first_name": "Training06",
+      "last_name": "Example",
+      "address": "106 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": false,
+        "married": false,
+        "head_of_household": true
+      },
+      "multiple_jobs": true,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "600",
+      "deductions": "0",
+      "extra_withholding": "30"
+    },
+    {
+      "id": "employee_07",
+      "first_name": "Training07",
+      "last_name": "Example",
+      "address": "107 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": true,
+        "married": false,
+        "head_of_household": false
+      },
+      "multiple_jobs": false,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "700",
+      "deductions": "0",
+      "extra_withholding": "35"
+    },
+    {
+      "id": "employee_08",
+      "first_name": "Training08",
+      "last_name": "Example",
+      "address": "108 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": false,
+        "married": true,
+        "head_of_household": false
+      },
+      "multiple_jobs": true,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "800",
+      "deductions": "0",
+      "extra_withholding": "40"
+    },
+    {
+      "id": "employee_09",
+      "first_name": "Training09",
+      "last_name": "Example",
+      "address": "109 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": false,
+        "married": false,
+        "head_of_household": true
+      },
+      "multiple_jobs": false,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "900",
+      "deductions": "0",
+      "extra_withholding": "45"
+    },
+    {
+      "id": "employee_10",
+      "first_name": "Training10",
+      "last_name": "Example",
+      "address": "110 Example Lane",
+      "city_state_zip": "Example City, CA 90001",
+      "filing_flags": {
+        "single": true,
+        "married": false,
+        "head_of_household": false
+      },
+      "multiple_jobs": true,
+      "children_credit": "0",
+      "other_dependents_credit": "0",
+      "total_credit": "0",
+      "other_income": "1000",
+      "deductions": "0",
+      "extra_withholding": "50"
+    }
+  ],
+  "provenance": "Deterministic fictional performance fixtures; amounts are supplied input values, not tax advice or computed eligibility."
+}

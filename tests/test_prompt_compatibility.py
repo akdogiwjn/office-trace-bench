@@ -1,77 +1,37 @@
-import tempfile
 import copy
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 import sys
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import office
 from office_trace_bench import contracts
-from office_trace_bench.runner import render_prompt
-
+from office_trace_bench.prompts import render_prompt
 
 class PromptCompatibilityTests(unittest.TestCase):
-    def test_domains_change_through_manifest_without_template_forks(self):
-        path = contracts.dataset_path('xlsx', 'tlc')
-        manifest = copy.deepcopy(contracts.load_manifest(path))
-        manifest['prompt_contract'].update(task_subject='Retail inventory workbook', raw_record_count=250,
-                                           original_chart_count=1, metadata_files=['inventory_sources.md'])
-        manifest['workbook'] = 'inventory_seed.xlsx'
-        manifest['output_workbook'] = 'inventory_report.xlsx'
-        manifest['requirements']['summary_sheet'] = 'Inventory_Overview'
-        manifest['requirements']['raw_sheets'] = ['Inventory_Rows']
-        manifest['requirements']['metrics'] = [dict(name='Total Stock', cell='C7', required_references=['Stock!C3'])]
-        prompt = render_prompt(manifest, '/run', path)
-        for phrase in ('Retail inventory workbook', '250-row', 'Inventory_Overview', 'C7 Total Stock', 'Stock!C3'):
-            self.assertIn(phrase, prompt)
-        for phrase in ('NYC TLC', '100,000', 'Raw_Sample', 'B5 Total Trips'):
-            self.assertNotIn(phrase, prompt)
-        path = contracts.dataset_path('pdf', 'opm')
-        manifest = copy.deepcopy(contracts.load_manifest(path))
-        manifest['prompt_contract'].update(task_subject='Synthetic payroll fillable PDF', record_noun='employees',
-            record_singular='employee', first_record_name='employee_01', record_pattern='employee_XX',
-            form_description='a five-page payroll form', fill_description='employee payroll fields',
-            safe_answer_description='use the synthetic payroll answers', protected_description='Certification fields')
-        manifest['requirements'].update(page_count=5, record_count=4)
-        manifest['form'] = 'payroll.pdf'
-        manifest['records'] = 'employees.json'
-        manifest['summary_contract'] = dict(input_form='payroll.pdf', record_count=4, filled_pdf_count=4,
-            rendered_page_count=25, fill_script_invocations=4, render_script_invocations=5, certification_blank=True)
-        prompt = render_prompt(manifest, '/run', path)
-        for phrase in ('four synthetic training employees', 'exactly four times', 'exactly five times',
-                       'page_5.png', '25 rendered PNG pages', 'employee_XX.pdf'):
-            self.assertIn(phrase, prompt)
-        for phrase in ('OPM', 'Selective Service', 'applicant_', '33 rendered', 'Social Security Number'):
-            self.assertNotIn(phrase, prompt)
-
-    def test_original_task_and_execution_instructions_are_preserved(self):
-        for kind, dataset, original_workspace in (
-            ('xlsx', 'tlc', '/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01'),
-            ('pdf', 'opm', '/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01'),
-        ):
-            manifest_path = contracts.dataset_path(kind, dataset)
-            manifest = contracts.load_manifest(manifest_path)
-            prompt = render_prompt(manifest, '/new/workspace', manifest_path)
-            original = (contracts.ROOT / 'legacy' / kind / 'task.prompt').read_text()
-            normalized = prompt.replace('/new/workspace', original_workspace)
-            normalized = normalized.replace('inside a fresh trace-generation container.', 'inside a fresh VM.')
-            normalized = normalized.replace('The container uses the installed openpyxl.', "The VM uses Ubuntu's packaged openpyxl.")
-            self.assertEqual(original, normalized)
-            self.assertNotIn('/project/', prompt)
-            self.assertNotIn('expected.json', prompt)
-
+    def test_common_prompts_have_no_dataset_layout_or_business_literals(self):
+        for kind, forbidden in [('xlsx',['Raw_Data','Raw_Sample','Reconciliation','Total Trips','Fare Revenue','Retail Sales','Shipments','Mean Wage','Median Wage','B5','100,000','INDEX','MATCH']),('pdf',['OF-306','Selective Service','citizenship','38 fields','3 pages','33 PNG','exactly ten','exactly eleven'])]:
+            text=(contracts.ROOT/'prompts'/f'{kind}.txt').read_text()
+            for phrase in forbidden:self.assertNotIn(phrase,text)
+            for path in (contracts.ROOT/'datasets'/kind).glob('*/manifest.json'):
+                m=contracts.load_manifest(path)
+                prompt=render_prompt(m,'/any/workspace',path)
+                self.assertIn('input/dataset_manifest.json',prompt)
+                alternate=copy.deepcopy(m);alternate['dataset_id']='unseen';alternate['requirements']={}
+                self.assertEqual(prompt,render_prompt(alternate,'/any/workspace',path))
+    def test_historical_tasks_are_frozen_in_repository_fixtures(self):
+        for name,digest in contracts.read_json(contracts.ROOT/'legacy/fixture_index.json')['files'].items():
+            self.assertEqual(contracts.sha256(contracts.ROOT/name),digest,name)
+        for kind in ('xlsx','pdf'):
+            path=contracts.ROOT/'legacy/runner/cases'/kind/'manifest.json'
+            m=contracts.load_manifest(path)
+            workspace='/root/.openclaw/workspace/tool-modeling/'+m['runtime_case']
+            rendered=render_prompt(m,workspace,path).replace('inside a fresh trace-generation container.','inside a fresh VM.').replace('The container uses the installed openpyxl.',"The VM uses Ubuntu's packaged openpyxl.")
+            self.assertEqual(rendered,(contracts.ROOT/'legacy'/kind/'task.prompt').read_text())
     def test_modified_prompt_cannot_pass_frozen_manifest_validation(self):
-        path = contracts.dataset_path('pdf', 'opm')
-        manifest = contracts.load_manifest(path)
+        path=contracts.dataset_path('pdf','opm');m=contracts.load_manifest(path)
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            (root / 'prompts').mkdir()
-            (root / 'prompts' / manifest['prompt_template']).write_text('unrecorded prompt change')
-            with patch.object(contracts, 'ROOT', root):
-                with self.assertRaisesRegex(ValueError, 'prompt template hash mismatch'):
-                    contracts.load_manifest(path)
-
-
-if __name__ == '__main__':
-    unittest.main()
+            root=Path(tmp);(root/'prompts').mkdir();(root/'prompts'/m['prompt_template']).write_text('changed')
+            with patch.object(contracts,'ROOT',root):
+                with self.assertRaisesRegex(ValueError,'prompt template hash mismatch'):contracts.load_manifest(path)

@@ -1,0 +1,276 @@
+{
+  "schema_version": "office-fictional-record-contract-v1",
+  "records_file": "synthetic_applicants.json",
+  "records_sha256": "4931c2c9f56878cd60507fb6b223e283cb3dae8dedc029ff54f6905209b839d2",
+  "records_key": "applicants",
+  "record_count": 10,
+  "schema": {
+    "type": "object",
+    "required": [
+      "applicants",
+      "provenance"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "applicants": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "answers",
+            "business_address",
+            "business_name",
+            "contact_email",
+            "contact_name",
+            "existing_employees",
+            "flags",
+            "id",
+            "industry_code",
+            "new_jobs",
+            "operating_name",
+            "operation_year",
+            "owner_address",
+            "owner_name",
+            "owner_percentage",
+            "owner_title",
+            "phone",
+            "project_address",
+            "retained_jobs",
+            "trade_name",
+            "working_capital_amount"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "business_name": {
+              "type": "string"
+            },
+            "operating_name": {
+              "type": "string"
+            },
+            "trade_name": {
+              "type": "string"
+            },
+            "industry_code": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "operation_year": {
+              "type": "string"
+            },
+            "business_address": {
+              "type": "string"
+            },
+            "project_address": {
+              "type": "string"
+            },
+            "contact_name": {
+              "type": "string"
+            },
+            "contact_email": {
+              "type": "string"
+            },
+            "existing_employees": {
+              "type": "string"
+            },
+            "retained_jobs": {
+              "type": "string"
+            },
+            "new_jobs": {
+              "type": "string"
+            },
+            "owner_name": {
+              "type": "string"
+            },
+            "owner_title": {
+              "type": "string"
+            },
+            "owner_percentage": {
+              "type": "string"
+            },
+            "owner_address": {
+              "type": "string"
+            },
+            "working_capital_amount": {
+              "type": "string"
+            },
+            "flags": {
+              "type": "object",
+              "required": [
+                "EPC",
+                "OC",
+                "ccorp",
+                "etother",
+                "llc",
+                "partnership",
+                "scorp",
+                "soleprop",
+                "working capital"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "OC": {
+                  "type": "boolean"
+                },
+                "EPC": {
+                  "type": "boolean"
+                },
+                "soleprop": {
+                  "type": "boolean"
+                },
+                "partnership": {
+                  "type": "boolean"
+                },
+                "ccorp": {
+                  "type": "boolean"
+                },
+                "scorp": {
+                  "type": "boolean"
+                },
+                "llc": {
+                  "type": "boolean"
+                },
+                "etother": {
+                  "type": "boolean"
+                },
+                "working capital": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "answers": {
+              "type": "object",
+              "required": [
+                "10no",
+                "10yes",
+                "11no",
+                "11yes",
+                "12no",
+                "12yes",
+                "13no",
+                "13yes",
+                "1no",
+                "1yes",
+                "2no",
+                "2yes",
+                "3no",
+                "3yes",
+                "4no",
+                "4yes",
+                "5no",
+                "5yes",
+                "6no",
+                "6yes",
+                "7no",
+                "7yes",
+                "8no",
+                "8yes",
+                "9no",
+                "9yes"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "1yes": {
+                  "type": "boolean"
+                },
+                "1no": {
+                  "type": "boolean"
+                },
+                "2yes": {
+                  "type": "boolean"
+                },
+                "2no": {
+                  "type": "boolean"
+                },
+                "3yes": {
+                  "type": "boolean"
+                },
+                "3no": {
+                  "type": "boolean"
+                },
+                "4yes": {
+                  "type": "boolean"
+                },
+                "4no": {
+                  "type": "boolean"
+                },
+                "5yes": {
+                  "type": "boolean"
+                },
+                "5no": {
+                  "type": "boolean"
+                },
+                "6yes": {
+                  "type": "boolean"
+                },
+                "6no": {
+                  "type": "boolean"
+                },
+                "7yes": {
+                  "type": "boolean"
+                },
+                "7no": {
+                  "type": "boolean"
+                },
+                "8yes": {
+                  "type": "boolean"
+                },
+                "8no": {
+                  "type": "boolean"
+                },
+                "9yes": {
+                  "type": "boolean"
+                },
+                "9no": {
+                  "type": "boolean"
+                },
+                "10yes": {
+                  "type": "boolean"
+                },
+                "10no": {
+                  "type": "boolean"
+                },
+                "11yes": {
+                  "type": "boolean"
+                },
+                "11no": {
+                  "type": "boolean"
+                },
+                "12yes": {
+                  "type": "boolean"
+                },
+                "12no": {
+                  "type": "boolean"
+                },
+                "13yes": {
+                  "type": "boolean"
+                },
+                "13no": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "minItems": 10,
+        "maxItems": 10
+      },
+      "provenance": {
+        "type": "string"
+      }
+    }
+  },
+  "synthetic": true,
+  "contains_real_sensitive_data": false,
+  "random_seed": null,
+  "generation_method": "Deterministic ordinal loop, no random inputs",
+  "generator": "office_trace_bench/records.py",
+  "generator_sha256": "f205dbb3e3a25ae26b7fa525a621a8f970e77498294cd417b1682b2f0bbe8d6d",
+  "generator_function": "sba",
+  "privacy": "All fixture identities are invented; reserved 555 phone numbers/example.invalid emails where present; SSNs/TINs/signatures excluded. Public birthplaces/addresses can coincide with real places without representing real persons.",
+  "update_policy": "Input byte changes require a new suite revision and new canonical trace; never replace silently."
+}

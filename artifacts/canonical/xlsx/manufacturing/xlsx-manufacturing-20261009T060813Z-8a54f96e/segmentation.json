@@ -1,0 +1,227 @@
+{
+  "schema_version": "office-trace-segmentation-v1",
+  "events": [
+    {
+      "step_id": 2,
+      "tool_call_id": "call_00_OAMGa6I6nRiMy6OmHKGA5529",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 2,
+      "tool_call_id": "call_01_iw5tCCbXLWeaZstSKwQw7843",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 2,
+      "tool_call_id": "call_02_PAwZd066U0nRtrEI1vob8670",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_00_Fpoz5YalcHiDlw8aKy9f8646",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_01_uKL5Vu9SG1YZpmfspWXk6570",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_02_5LGn6dGhUK8MT7OtcOTO3373",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 4,
+      "tool_call_id": "call_00_FDqEoKvWPBZInC1HaV2V8816",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 4,
+      "tool_call_id": "call_01_QU8FGCh8UFF0RgYpxKFY3122",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 4,
+      "tool_call_id": "call_02_HJzFJtCaKgX92djm4thf5794",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 5,
+      "tool_call_id": "call_00_o2O9NFknn73Wk2nHVniE2865",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 5,
+      "tool_call_id": "call_01_VMR0xexJC0Ky0ouyvirI3529",
+      "label": "helper_edit",
+      "result_present": true
+    },
+    {
+      "step_id": 6,
+      "tool_call_id": "call_00_sedosbh48GJdbwkp5DL37463",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 6,
+      "tool_call_id": "call_01_ebiFJPvqQiJ722jOZZuq4764",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 7,
+      "tool_call_id": "call_00_lohiyXWI1mIMBPwCaRc70174",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 7,
+      "tool_call_id": "call_01_MqqlHbekJ5VqHADZFmPH1714",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 8,
+      "tool_call_id": "call_00_oZwMei2dSYd2BsEaUAE58025",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 9,
+      "tool_call_id": "call_00_UNFZ1ry8MGTM0By4kGVZ4122",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 10,
+      "tool_call_id": "call_00_tC4gESA0kfVcSkPR2iXx0131",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 11,
+      "tool_call_id": "call_00_yQtPibhnWx273xKfPwNk2720",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 12,
+      "tool_call_id": "call_00_YGpU6KP9GEcNqr9EZhvk5612",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 13,
+      "tool_call_id": "call_00_ET_KlykHD4WnxzCca0tUQmw4349",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 14,
+      "tool_call_id": "call_00_Qx460tfT28NYnZ4gtXLV1125",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 15,
+      "tool_call_id": "call_00_ET_A11SRZBQmYNWzN4PoptY4217",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 16,
+      "tool_call_id": "call_00_TtRqidOEgPCF27oIUkOb3234",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 17,
+      "tool_call_id": "call_00_5RRP7R64UXw5a4FbZnHg8192",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 18,
+      "tool_call_id": "call_00_5yjiRvgCTvVUHhxuusWX6824",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 18,
+      "tool_call_id": "call_01_vL5p5lXqNw0wZRqa12Qj7857",
+      "label": "verification",
+      "result_present": true
+    },
+    {
+      "step_id": 19,
+      "tool_call_id": "call_00_VXSV0eCKlb3N5qE54c0O2846",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 20,
+      "tool_call_id": "call_00_xUl2gZK0wRYijt4VQygK6717",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 21,
+      "tool_call_id": "call_00_dgOps4OMiWhrroRADx484010",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 21,
+      "tool_call_id": "call_01_tUS2y2K0n6sf2Xt6wER69382",
+      "label": "verification",
+      "result_present": true
+    }
+  ],
+  "agent_tool_chain": [
+    "call_00_OAMGa6I6nRiMy6OmHKGA5529",
+    "call_01_iw5tCCbXLWeaZstSKwQw7843",
+    "call_02_PAwZd066U0nRtrEI1vob8670",
+    "call_00_Fpoz5YalcHiDlw8aKy9f8646",
+    "call_01_uKL5Vu9SG1YZpmfspWXk6570",
+    "call_02_5LGn6dGhUK8MT7OtcOTO3373",
+    "call_00_FDqEoKvWPBZInC1HaV2V8816",
+    "call_01_QU8FGCh8UFF0RgYpxKFY3122",
+    "call_02_HJzFJtCaKgX92djm4thf5794",
+    "call_00_o2O9NFknn73Wk2nHVniE2865",
+    "call_01_VMR0xexJC0Ky0ouyvirI3529",
+    "call_00_sedosbh48GJdbwkp5DL37463",
+    "call_01_ebiFJPvqQiJ722jOZZuq4764",
+    "call_00_lohiyXWI1mIMBPwCaRc70174",
+    "call_01_MqqlHbekJ5VqHADZFmPH1714",
+    "call_00_oZwMei2dSYd2BsEaUAE58025",
+    "call_00_UNFZ1ry8MGTM0By4kGVZ4122",
+    "call_00_tC4gESA0kfVcSkPR2iXx0131",
+    "call_00_yQtPibhnWx273xKfPwNk2720",
+    "call_00_YGpU6KP9GEcNqr9EZhvk5612",
+    "call_00_ET_KlykHD4WnxzCca0tUQmw4349",
+    "call_00_Qx460tfT28NYnZ4gtXLV1125",
+    "call_00_ET_A11SRZBQmYNWzN4PoptY4217",
+    "call_00_TtRqidOEgPCF27oIUkOb3234",
+    "call_00_5RRP7R64UXw5a4FbZnHg8192",
+    "call_00_5yjiRvgCTvVUHhxuusWX6824",
+    "call_01_vL5p5lXqNw0wZRqa12Qj7857",
+    "call_00_VXSV0eCKlb3N5qE54c0O2846",
+    "call_00_xUl2gZK0wRYijt4VQygK6717",
+    "call_00_dgOps4OMiWhrroRADx484010",
+    "call_01_tUS2y2K0n6sf2Xt6wER69382"
+  ],
+  "final_effective_selection": null,
+  "final_effective_status": "requires dependency reconstruction and review; all retries/rewrites remain available",
+  "classification_method": "heuristic analysis labels; not a replay recipe"
+}

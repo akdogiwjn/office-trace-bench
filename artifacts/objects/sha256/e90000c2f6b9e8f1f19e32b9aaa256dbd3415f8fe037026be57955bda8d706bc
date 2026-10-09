@@ -1,0 +1,417 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "irs_w4",
+  "kind": "pdf",
+  "status": "success",
+  "checks": {
+    "input:input/fw4_2026.pdf": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/pdf_dataset_sources.md": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/synthetic_employees.json": {
+      "ok": true,
+      "detail": null
+    },
+    "template_form": {
+      "ok": true,
+      "detail": null
+    },
+    "field_inspection": {
+      "ok": true,
+      "detail": null
+    },
+    "record_count": {
+      "ok": true,
+      "detail": null
+    },
+    "render:template": {
+      "ok": true,
+      "detail": 5
+    },
+    "pages:employee_01": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_01": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_01": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_01": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_01": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_01": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_01": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_01:1": {
+      "ok": true,
+      "detail": 1906
+    },
+    "pages:employee_02": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_02": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_02": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_02": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_02": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_02": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_02": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_02:1": {
+      "ok": true,
+      "detail": 1959
+    },
+    "pages:employee_03": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_03": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_03": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_03": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_03": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_03": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_03": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_03:1": {
+      "ok": true,
+      "detail": 1950
+    },
+    "pages:employee_04": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_04": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_04": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_04": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_04": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_04": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_04": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_04:1": {
+      "ok": true,
+      "detail": 1948
+    },
+    "pages:employee_05": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_05": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_05": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_05": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_05": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_05": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_05": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_05:1": {
+      "ok": true,
+      "detail": 1967
+    },
+    "pages:employee_06": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_06": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_06": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_06": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_06": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_06": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_06": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_06:1": {
+      "ok": true,
+      "detail": 1974
+    },
+    "pages:employee_07": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_07": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_07": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_07": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_07": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_07": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_07": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_07:1": {
+      "ok": true,
+      "detail": 1929
+    },
+    "pages:employee_08": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_08": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_08": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_08": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_08": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_08": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_08": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_08:1": {
+      "ok": true,
+      "detail": 1977
+    },
+    "pages:employee_09": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_09": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_09": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_09": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_09": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_09": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_09": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_09:1": {
+      "ok": true,
+      "detail": 1966
+    },
+    "pages:employee_10": {
+      "ok": true,
+      "detail": null
+    },
+    "pdf_size:employee_10": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping:employee_10": {
+      "ok": true,
+      "detail": null
+    },
+    "field_values:employee_10": {
+      "ok": true,
+      "detail": null
+    },
+    "mapping_pages:employee_10": {
+      "ok": true,
+      "detail": null
+    },
+    "protected_blank:employee_10": {
+      "ok": true,
+      "detail": null
+    },
+    "render:employee_10": {
+      "ok": true,
+      "detail": 5
+    },
+    "visible_change:employee_10:1": {
+      "ok": true,
+      "detail": 1996
+    },
+    "exact_pdf_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "exact_mapping_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "summary:input_form": {
+      "ok": true,
+      "detail": "fw4_2026.pdf"
+    },
+    "summary:applicant_count": {
+      "ok": true,
+      "detail": 10
+    },
+    "summary:filled_pdf_count": {
+      "ok": true,
+      "detail": 10
+    },
+    "summary:rendered_page_count": {
+      "ok": true,
+      "detail": 55
+    },
+    "summary:ssn_and_signatures_left_blank": {
+      "ok": true,
+      "detail": true
+    },
+    "summary:fill_script_invocations": {
+      "ok": true,
+      "detail": 10
+    },
+    "summary:render_script_invocations": {
+      "ok": true,
+      "detail": 11
+    },
+    "deliverable:check_fillable_fields.log": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:form_field_info.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:field_values": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:filled": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:rendered": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:batch_summary.json": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "failures": []
+}

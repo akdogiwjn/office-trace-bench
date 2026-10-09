@@ -1,3 +1,5 @@
+> 历史证据：本报告保留原实验及其契约，不代表当前冻结 suite。当前输入、trace 选择与来源边界见 [suite 审计](../docs/suite-audit-v2.md)。
+
 # 旧版重复生成与新旧 Agent 上下文审计
 
 只恢复 task.prompt 还没有恢复完整 Agent 输入；不能将所有执行差异归结为随机性。

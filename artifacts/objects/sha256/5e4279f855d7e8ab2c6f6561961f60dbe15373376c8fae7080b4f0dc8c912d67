@@ -1,0 +1,837 @@
+{
+  "schema_version": "office-artifact-revisions-v1",
+  "events": [
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "size": 289615,
+      "event": "close_write",
+      "captured_at_ns": 1791526190803471004,
+      "source_mtime_ns": 1791526190795784008
+    },
+    {
+      "path": "/tmp/k7vyvrak",
+      "event": "deleted",
+      "captured_at_ns": 1791526190834041246
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791526190998207788
+    },
+    {
+      "path": "workspace/helpers/.~lock.recalc_probe.xlsx#",
+      "sha256": "844eff93c16a717386f38fcef7ef23db9c2d87699944b48b83bb2d18704c8779",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791526191243783122,
+      "source_mtime_ns": 1791526191239790127
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoac.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191243832733
+    },
+    {
+      "path": "temporary/lu1907gzoab.tmp/lu1907gzoad.tmp/pkcs11.txt",
+      "sha256": "bbb52e4299b891baa5754838839e38c737a97f02a272184782435387b5c111df",
+      "size": 456,
+      "event": "close_write",
+      "captured_at_ns": 1791526191445489631,
+      "source_mtime_ns": 1791526191439792883
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoad.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791526191449114221
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoad.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791526191450498521
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoad.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791526191451970351
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoae.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191592372866
+    },
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "size": 289615,
+      "event": "close_write",
+      "captured_at_ns": 1791526191594181130,
+      "source_mtime_ns": 1791526190795784008
+    },
+    {
+      "path": "/runs/xlsx-hr-20261009T060833Z-5e454df8/workspace/helpers/.~lock.recalc_probe.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791526191594200471
+    },
+    {
+      "path": "workspace/helpers/lu1907gzoaf.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791526191594365063,
+      "source_mtime_ns": 1791526191587794922
+    },
+    {
+      "path": "workspace/helpers/.~lock.recalc_probe.xlsx#",
+      "sha256": "844eff93c16a717386f38fcef7ef23db9c2d87699944b48b83bb2d18704c8779",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791526191594507725,
+      "source_mtime_ns": 1791526191587794922
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoag.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191594534195
+    },
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "size": 289615,
+      "event": "close_write",
+      "captured_at_ns": 1791526191594880950,
+      "source_mtime_ns": 1791526190795784008
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu190{81D31BCA-E940-461F-9EEE-A870C5A06FA4}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191797049956
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu190{76342020-A53B-49DA-AF00-FAE00805144F}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191800454143
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu190{27B84221-9C43-4940-9E8A-3503E604EEB5}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191800501564
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu190{299EF377-7640-42AA-B8F6-6C31711E5BBC}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191800782497
+    },
+    {
+      "path": "workspace/helpers/lu1907gzoaf.tmp",
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "event": "close_write",
+      "captured_at_ns": 1791526191802245538,
+      "source_mtime_ns": 1791526191795797789
+    },
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "event": "moved_to",
+      "captured_at_ns": 1791526191802538212,
+      "source_mtime_ns": 1791526191795797789
+    },
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "event": "close_write",
+      "captured_at_ns": 1791526191803571526,
+      "source_mtime_ns": 1791526191795797789
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu190{92C3B423-A451-4543-8539-942FD254F0E4}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526191813962759
+    },
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "event": "close_write",
+      "captured_at_ns": 1791526191814256833,
+      "source_mtime_ns": 1791526191795797789
+    },
+    {
+      "path": "/runs/xlsx-hr-20261009T060833Z-5e454df8/workspace/helpers/.~lock.recalc_probe.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791526191814273853
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoad.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791526191815259597
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoad.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791526191815273017
+    },
+    {
+      "path": "/tmp/lu1907gzoab.tmp/lu1907gzoad.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791526191815285677
+    },
+    {
+      "path": "/tmp/tzxm1i",
+      "event": "deleted",
+      "captured_at_ns": 1791526191825089922
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791526191830853432
+    },
+    {
+      "path": "/tmp/2jc5jdbo",
+      "event": "deleted",
+      "captured_at_ns": 1791526228367986809
+    },
+    {
+      "path": "/tmp/openpyxl.lk3owqg5",
+      "event": "deleted",
+      "captured_at_ns": 1791526228771748863
+    },
+    {
+      "path": "/tmp/openpyxl.ox1dxp7x",
+      "event": "deleted",
+      "captured_at_ns": 1791526228774597023
+    },
+    {
+      "path": "/tmp/openpyxl.rttpja78",
+      "event": "deleted",
+      "captured_at_ns": 1791526228775288192
+    },
+    {
+      "path": "/tmp/openpyxl.6_0ez3e7",
+      "event": "deleted",
+      "captured_at_ns": 1791526228775825579
+    },
+    {
+      "path": "workspace/helpers/openpyxl_rt.xlsx",
+      "sha256": "3c6b5063f455dd24246acdb70aacb1ec0b2ff313b1578da6426dfeab899ee3bb",
+      "size": 239663,
+      "event": "close_write",
+      "captured_at_ns": 1791526228779660542,
+      "source_mtime_ns": 1791526228776307386
+    },
+    {
+      "path": "/tmp/xkr2jbz1",
+      "event": "deleted",
+      "captured_at_ns": 1791526258602855051
+    },
+    {
+      "path": "/tmp/openpyxl.n_xkmqcj",
+      "event": "deleted",
+      "captured_at_ns": 1791526258603533900
+    },
+    {
+      "path": "/tmp/w6mgquqj",
+      "event": "deleted",
+      "captured_at_ns": 1791526278770036478
+    },
+    {
+      "path": "/tmp/openpyxl.ajbivjq9",
+      "event": "deleted",
+      "captured_at_ns": 1791526278770726687
+    },
+    {
+      "path": "/tmp/ihch1j5v",
+      "event": "deleted",
+      "captured_at_ns": 1791526284535371765
+    },
+    {
+      "path": "/tmp/openpyxl.bkv9tr86",
+      "event": "deleted",
+      "captured_at_ns": 1791526284536107845
+    },
+    {
+      "path": "workspace/helpers/build.py",
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "event": "close_write",
+      "captured_at_ns": 1791526336344374291,
+      "source_mtime_ns": 1791526336341789656
+    },
+    {
+      "path": "/tmp/hfcnajbe",
+      "event": "deleted",
+      "captured_at_ns": 1791526338840498428
+    },
+    {
+      "path": "/tmp/openpyxl.97e7i4zn",
+      "event": "deleted",
+      "captured_at_ns": 1791526339241580945
+    },
+    {
+      "path": "/tmp/openpyxl.fz5nb9ih",
+      "event": "deleted",
+      "captured_at_ns": 1791526339244361074
+    },
+    {
+      "path": "/tmp/openpyxl.ld49vfoc",
+      "event": "deleted",
+      "captured_at_ns": 1791526339244961312
+    },
+    {
+      "path": "/tmp/openpyxl.ojze274r",
+      "event": "deleted",
+      "captured_at_ns": 1791526339245441328
+    },
+    {
+      "path": "/tmp/openpyxl.sxvq7khy",
+      "event": "deleted",
+      "captured_at_ns": 1791526339246888448
+    },
+    {
+      "path": "/tmp/openpyxl.zu97azk1",
+      "event": "deleted",
+      "captured_at_ns": 1791526339249569645
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "e722460d0181b57d84cba7d59357510f082b84b5a2dc3000c190d8ceebf050a7",
+      "size": 246544,
+      "event": "close_write",
+      "captured_at_ns": 1791526339255461387,
+      "source_mtime_ns": 1791526339253829784
+    },
+    {
+      "path": "workspace/output/workbook_features.json",
+      "sha256": "8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae",
+      "size": 900,
+      "event": "close_write",
+      "captured_at_ns": 1791526339255641999,
+      "source_mtime_ns": 1791526339253829784
+    },
+    {
+      "path": "workspace/helpers/recalc_out.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791526342561747408,
+      "source_mtime_ns": 1791526342557875314
+    },
+    {
+      "path": "/tmp/3o_r4c0e",
+      "event": "deleted",
+      "captured_at_ns": 1791526344065094794
+    },
+    {
+      "path": "workspace/helpers/.~lock.pre_recalc.xlsx#",
+      "sha256": "4bd02c1f24bd4f09be431eee1ca4d8c12655120c29ff057c6c8d5860e7985180",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791526344378123498,
+      "source_mtime_ns": 1791526344373900339
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg7.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526344378170688
+    },
+    {
+      "path": "temporary/lu13007h2yg6.tmp/lu13007h2yg8.tmp/pkcs11.txt",
+      "sha256": "4cb9c9a70f6305f4f611c3b3b4b022dc34cbbad1f72352e46b3a15a431ea345a",
+      "size": 458,
+      "event": "close_write",
+      "captured_at_ns": 1791526344603473873,
+      "source_mtime_ns": 1791526344601903481
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg8.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791526344606294772
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg8.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791526344607706351
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg8.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791526344609104381
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg9.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526344755359086
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "e722460d0181b57d84cba7d59357510f082b84b5a2dc3000c190d8ceebf050a7",
+      "size": 246544,
+      "event": "close_write",
+      "captured_at_ns": 1791526344757964072,
+      "source_mtime_ns": 1791526339253829784
+    },
+    {
+      "path": "/runs/xlsx-hr-20261009T060833Z-5e454df8/workspace/helpers/.~lock.pre_recalc.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791526344757985112
+    },
+    {
+      "path": "workspace/helpers/lu13007h2yga.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791526344758093994,
+      "source_mtime_ns": 1791526344753905576
+    },
+    {
+      "path": "workspace/helpers/.~lock.pre_recalc.xlsx#",
+      "sha256": "4bd02c1f24bd4f09be431eee1ca4d8c12655120c29ff057c6c8d5860e7985180",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791526344758238616,
+      "source_mtime_ns": 1791526344753905576
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2ygb.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526344758265756
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "e722460d0181b57d84cba7d59357510f082b84b5a2dc3000c190d8ceebf050a7",
+      "size": 246544,
+      "event": "close_write",
+      "captured_at_ns": 1791526344758531570,
+      "source_mtime_ns": 1791526339253829784
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu1300{E4BCA765-C912-4254-8409-5EBC6A031BD8}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526345057582291
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu1300{0D3DB4AF-1C5B-43A2-A1AE-CC67BA1BA88A}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526345061155960
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu1300{699998F1-7258-44E9-8C85-5422D827D7AA}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526345061192490
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu1300{7DE6A385-CCAA-4C6D-A03E-8B0A7B3A0619}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526345061538825
+    },
+    {
+      "path": "workspace/helpers/lu13007h2yga.tmp",
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "event": "close_write",
+      "captured_at_ns": 1791526345073307207,
+      "source_mtime_ns": 1791526345069909931
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "event": "moved_to",
+      "captured_at_ns": 1791526345073620282,
+      "source_mtime_ns": 1791526345069909931
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "event": "close_write",
+      "captured_at_ns": 1791526345074499554,
+      "source_mtime_ns": 1791526345069909931
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu1300{D1572F23-268F-4432-89BE-F383448AA494}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791526345086861414
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "event": "close_write",
+      "captured_at_ns": 1791526345087211409,
+      "source_mtime_ns": 1791526345069909931
+    },
+    {
+      "path": "/runs/xlsx-hr-20261009T060833Z-5e454df8/workspace/helpers/.~lock.pre_recalc.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791526345087231719
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg8.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791526345088087941
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg8.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791526345088101271
+    },
+    {
+      "path": "/tmp/lu13007h2yg6.tmp/lu13007h2yg8.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791526345088114491
+    },
+    {
+      "path": "/tmp/2EOdNz",
+      "event": "deleted",
+      "captured_at_ns": 1791526345093961712
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791526345099723821
+    },
+    {
+      "path": "workspace/helpers/recalc_out.json",
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "event": "close_write",
+      "captured_at_ns": 1791526345848305807,
+      "source_mtime_ns": 1791526345769919577
+    },
+    {
+      "path": "workspace/helpers/recalc_err.txt",
+      "sha256": "c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06",
+      "size": 325,
+      "event": "close_write",
+      "captured_at_ns": 1791526345848485259,
+      "source_mtime_ns": 1791526345401914506
+    },
+    {
+      "path": "workspace/helpers/rec_recalc.xlsx",
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "event": "close_write",
+      "captured_at_ns": 1791526348129140557,
+      "source_mtime_ns": 1791526348125952043
+    },
+    {
+      "path": "/tmp/r5lz509_",
+      "event": "deleted",
+      "captured_at_ns": 1791526348945063451
+    },
+    {
+      "path": "/tmp/openpyxl.gko6f7dl",
+      "event": "deleted",
+      "captured_at_ns": 1791526349346162368
+    },
+    {
+      "path": "/tmp/openpyxl.hwnepyzl",
+      "event": "deleted",
+      "captured_at_ns": 1791526349348929926
+    },
+    {
+      "path": "/tmp/openpyxl.lf3xx4w_",
+      "event": "deleted",
+      "captured_at_ns": 1791526349349555625
+    },
+    {
+      "path": "/tmp/openpyxl.zeettjm5",
+      "event": "deleted",
+      "captured_at_ns": 1791526349350068122
+    },
+    {
+      "path": "/tmp/openpyxl.ifxgwntt",
+      "event": "deleted",
+      "captured_at_ns": 1791526349351535782
+    },
+    {
+      "path": "/tmp/openpyxl.lz192t71",
+      "event": "deleted",
+      "captured_at_ns": 1791526349354263520
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "dab019540db3efc03a3b76c889b7b9ecbc6bf054010f77ab01981b791a06c81f",
+      "size": 246544,
+      "event": "close_write",
+      "captured_at_ns": 1791526349360099360,
+      "source_mtime_ns": 1791526349357969021
+    },
+    {
+      "path": "workspace/output/workbook_features.json",
+      "sha256": "8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae",
+      "size": 900,
+      "event": "close_write",
+      "captured_at_ns": 1791526349360227432,
+      "source_mtime_ns": 1791526349357969021
+    },
+    {
+      "path": "workspace/helpers/patch.py",
+      "sha256": "be55b80eba8739dceaba30f360b2c639450293c05427eeb9e71841e7bae30735",
+      "size": 4264,
+      "event": "close_write",
+      "captured_at_ns": 1791526360142842568,
+      "source_mtime_ns": 1791526360138117573
+    },
+    {
+      "path": "workspace/helpers/patch.py",
+      "sha256": "8478570c75d321e1f4a663268bb5bed03667817d985c8990c967290a05ea13e4",
+      "size": 4393,
+      "event": "close_write",
+      "captured_at_ns": 1791526368400491400,
+      "source_mtime_ns": 1791526368398231399
+    },
+    {
+      "path": "workspace/output/hr_enhanced.xlsx",
+      "sha256": "5c3266120024a791aa0b19238a275a4e1c5b8778acaf31ea72ad827667247b8c",
+      "size": 247678,
+      "event": "close_write",
+      "captured_at_ns": 1791526373168573995,
+      "source_mtime_ns": 1791526373166297103
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "event": "close_write",
+      "captured_at_ns": 1791526376522847077,
+      "source_mtime_ns": 1791526376518343295
+    },
+    {
+      "path": "workspace/helpers/patch.py",
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "event": "close_write",
+      "captured_at_ns": 1791526382799208866,
+      "source_mtime_ns": 1791526382798429836
+    },
+    {
+      "path": "workspace/output/hr_enhanced.xlsx",
+      "sha256": "1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833",
+      "size": 247687,
+      "event": "close_write",
+      "captured_at_ns": 1791526388081231763,
+      "source_mtime_ns": 1791526388078502596
+    },
+    {
+      "path": "workspace/output/business_verification.json",
+      "sha256": "e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c",
+      "size": 6524,
+      "event": "moved_to",
+      "captured_at_ns": 1791526405936590373,
+      "source_mtime_ns": 1791526405930748603
+    },
+    {
+      "path": "workspace/helpers/revisions/patch_v1_initial.py",
+      "sha256": "cbaa1bf1d23618562623caacc549884b59b18f8e799a56bf024dc3f310f8f015",
+      "size": 4461,
+      "event": "new_directory_inventory",
+      "captured_at_ns": 1791526420555449793,
+      "source_mtime_ns": 1791526420550950071
+    },
+    {
+      "path": "workspace/helpers/revisions/patch_v2_relsfix.py",
+      "sha256": "83f2fa7afd5de9dab1e4dd6b54016bc9f2ca97f58bf1e79dbc830e63407b9750",
+      "size": 4608,
+      "event": "close_write",
+      "captured_at_ns": 1791526423330170019,
+      "source_mtime_ns": 1791526423322988270
+    },
+    {
+      "path": "workspace/helpers/revisions/patch_v3_final.py",
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "event": "close_write",
+      "captured_at_ns": 1791526423334418598,
+      "source_mtime_ns": 1791526423326988326
+    },
+    {
+      "path": "workspace/helpers/revisions/build_final.py",
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "event": "close_write",
+      "captured_at_ns": 1791526423335256090,
+      "source_mtime_ns": 1791526423330988381
+    },
+    {
+      "path": "workspace/helpers/revisions/README.md",
+      "sha256": "80bd6f63334d7d0b44058438d522fe216c86db16f466f86d1f5ae58aca87ad11",
+      "size": 2104,
+      "event": "close_write",
+      "captured_at_ns": 1791526426982510349,
+      "source_mtime_ns": 1791526426975038596
+    },
+    {
+      "path": "workspace/output/xlsx_enhancement_summary.json",
+      "sha256": "086815a7f501d381144f2006abab6f0e54a823c44fa36d82326d1037b4664092",
+      "size": 2602,
+      "event": "close_write",
+      "captured_at_ns": 1791526430673308149,
+      "source_mtime_ns": 1791526430667089473
+    },
+    {
+      "path": "workspace/output/business_verification.json",
+      "sha256": "e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c",
+      "size": 6524,
+      "event": "moved_to",
+      "captured_at_ns": 1791526445555905694,
+      "source_mtime_ns": 1791526445551294580
+    },
+    {
+      "path": "workspace/output/xlsx_enhancement_summary.json",
+      "sha256": "086815a7f501d381144f2006abab6f0e54a823c44fa36d82326d1037b4664092",
+      "size": 2602,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452058990097,
+      "source_mtime_ns": 1791526430667089473
+    },
+    {
+      "path": "workspace/output/business_verification.json",
+      "sha256": "e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c",
+      "size": 6524,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452059114379,
+      "source_mtime_ns": 1791526445551294580
+    },
+    {
+      "path": "workspace/output/hr_enhanced.xlsx",
+      "sha256": "1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833",
+      "size": 247687,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452059422363,
+      "source_mtime_ns": 1791526388078502596
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452059526665,
+      "source_mtime_ns": 1791526376518343295
+    },
+    {
+      "path": "workspace/output/workbook_features.json",
+      "sha256": "8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae",
+      "size": 900,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452059629986,
+      "source_mtime_ns": 1791526349357969021
+    },
+    {
+      "path": "workspace/helpers/openpyxl_rt.xlsx",
+      "sha256": "3c6b5063f455dd24246acdb70aacb1ec0b2ff313b1578da6426dfeab899ee3bb",
+      "size": 239663,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452060170893,
+      "source_mtime_ns": 1791526228776307386
+    },
+    {
+      "path": "workspace/helpers/build.py",
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452060281055,
+      "source_mtime_ns": 1791526336341789656
+    },
+    {
+      "path": "workspace/helpers/rec_recalc.xlsx",
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452060557819,
+      "source_mtime_ns": 1791526348125952043
+    },
+    {
+      "path": "workspace/helpers/pre_recalc.xlsx",
+      "sha256": "dab019540db3efc03a3b76c889b7b9ecbc6bf054010f77ab01981b791a06c81f",
+      "size": 246544,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452060850113,
+      "source_mtime_ns": 1791526349357969021
+    },
+    {
+      "path": "workspace/helpers/recalc_probe.xlsx",
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061123917,
+      "source_mtime_ns": 1791526191795797789
+    },
+    {
+      "path": "workspace/helpers/recalc_err.txt",
+      "sha256": "c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06",
+      "size": 325,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061223498,
+      "source_mtime_ns": 1791526345401914506
+    },
+    {
+      "path": "workspace/helpers/patch.py",
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061326209,
+      "source_mtime_ns": 1791526382798429836
+    },
+    {
+      "path": "workspace/helpers/recalc_out.json",
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061420861,
+      "source_mtime_ns": 1791526345769919577
+    },
+    {
+      "path": "workspace/helpers/revisions/patch_v2_relsfix.py",
+      "sha256": "83f2fa7afd5de9dab1e4dd6b54016bc9f2ca97f58bf1e79dbc830e63407b9750",
+      "size": 4608,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061606033,
+      "source_mtime_ns": 1791526423322988270
+    },
+    {
+      "path": "workspace/helpers/revisions/build_final.py",
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061727145,
+      "source_mtime_ns": 1791526423330988381
+    },
+    {
+      "path": "workspace/helpers/revisions/README.md",
+      "sha256": "80bd6f63334d7d0b44058438d522fe216c86db16f466f86d1f5ae58aca87ad11",
+      "size": 2104,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061835666,
+      "source_mtime_ns": 1791526426975038596
+    },
+    {
+      "path": "workspace/helpers/revisions/patch_v1_initial.py",
+      "sha256": "cbaa1bf1d23618562623caacc549884b59b18f8e799a56bf024dc3f310f8f015",
+      "size": 4461,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452061943198,
+      "source_mtime_ns": 1791526420550950071
+    },
+    {
+      "path": "workspace/helpers/revisions/patch_v3_final.py",
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "event": "final_inventory",
+      "captured_at_ns": 1791526452062050969,
+      "source_mtime_ns": 1791526423326988326
+    }
+  ],
+  "gaps": [
+    {
+      "path": "workspace/output/business_verification.json.tmp",
+      "reason": "FileNotFoundError"
+    }
+  ],
+  "scope": "Workspace generated files plus script/config/text files under /tmp. close-write/move observations and final inventory; filesystem timing is not process read/exec provenance. Fast overwrite/delete races may produce gaps. Full tool arguments/results remain in tool_events.",
+  "replay_ready": false
+}

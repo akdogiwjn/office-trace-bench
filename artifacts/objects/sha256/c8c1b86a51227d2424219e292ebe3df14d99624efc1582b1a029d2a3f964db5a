@@ -1,0 +1,24 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "dataset_id": "manufacturing",
+  "filename": "m3_shipments_202608.xlsx",
+  "sha256": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8",
+  "frozen_at": "2026-10-09T05:17:31.445118+00:00",
+  "task": "Analyze Census M3 August 2026 Table 1 shipments",
+  "input_class": "official_table_transcription",
+  "native_xlsx": false,
+  "official_url": "https://www.census.gov/manufacturing/m3/prel/pdf/table1p.pdf",
+  "official_xlsx_url": "https://www.census.gov/manufacturing/m3/prel/table1p.xlsx",
+  "actual_download_source": "Official census.gov PDF Table 1 via web-tool text extraction",
+  "source_filename": "table1p.pdf",
+  "release": "August 2026 Full Report, CB26-150, 2026-10-02",
+  "download_date": "2026-10-09",
+  "source_evidence": "sources/provenance-audit/m3-table1-web.txt",
+  "source_evidence_sha256": "6bf15167813e0dd1f297965f85f116a3bf754c07d0ebbec77b2c8bbdbe095f10",
+  "observations": 71,
+  "synthetic_expansion": false,
+  "conversion": "All 65 Table 1 rows, 13 measure columns and notes retained; wrapped labels joined. No native XLSX or PDF byte identity claimed.",
+  "limitations": [
+    "Native Census XLSX downloads return HTTP 403; official-table fallback, not native XLSX."
+  ]
+}

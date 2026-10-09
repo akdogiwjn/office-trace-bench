@@ -1,0 +1,32 @@
+{
+  "schema_version": "office-workbook-complexity-v1",
+  "input_sha256": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8",
+  "file_size_bytes": 12597,
+  "compressed_xlsx_size_bytes": 12597,
+  "uncompressed_package_bytes": 56075,
+  "sheet_count": 1,
+  "sheets": [
+    {
+      "name": "Shipments August 2026",
+      "used_cell_count": 1024,
+      "populated_cell_count": 1024,
+      "row_count": 89,
+      "column_count": 14,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 0,
+      "merged_ranges": [],
+      "chart_count": 0,
+      "merged_range_count": 0
+    }
+  ],
+  "used_cell_count": 1024,
+  "populated_cell_count": 1024,
+  "formula_count": 0,
+  "chart_count": 0,
+  "style_count": 1,
+  "merged_range_count": 0,
+  "has_shared_strings": false,
+  "cross_sheet_formula_count": 0,
+  "counting_method": "OOXML c elements; populated excludes style-only cells; row/column counts are maximum serialized cell coordinates, per sheet"
+}

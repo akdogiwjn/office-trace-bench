@@ -1,0 +1,260 @@
+{
+  "fill_invocations": [
+    {
+      "id": "applicant_01",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_01.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_01.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_02",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_02.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_02.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_03",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_03.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_03.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_04",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_04.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_04.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_05",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_05.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_05.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_06",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_06.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_06.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_07",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_07.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_07.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_08",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_08.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_08.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_09",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_09.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_09.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_10",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/fill_fillable_fields.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/input/of306_aug2023.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/field_values/applicant_10.json",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_10.pdf"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "render_invocations": [
+    {
+      "id": "applicant_01",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_01.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_01"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_01/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_01/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_01/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_02",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_02.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_02"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_02/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_02/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_02/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_03",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_03.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_03"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_03/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_03/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_03/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_04",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_04.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_04"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_04/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_04/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_04/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_05",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_05.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_05"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_05/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_05/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_05/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_06",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_06.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_06"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_06/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_06/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_06/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_07",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_07.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_07"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_07/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_07/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_07/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_08",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_08.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_08"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_08/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_08/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_08/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_09",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_09.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_09"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_09/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_09/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_09/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    },
+    {
+      "id": "applicant_10",
+      "cmd": [
+        "/usr/bin/python3",
+        "/root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/filled/applicant_10.pdf",
+        "/runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_10"
+      ],
+      "rc": 0,
+      "stdout": "Saved page 1 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_10/page_1.png (size: (772, 1000))\nSaved page 2 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_10/page_2.png (size: (772, 1000))\nSaved page 3 as /runs/pdf-opm-20261009T060618Z-87cbc811/workspace/output/rendered/applicant_10/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images",
+      "stderr": ""
+    }
+  ],
+  "fill_invocation_count": 10,
+  "render_invocation_count": 10,
+  "fill_success": 10,
+  "render_success": 10
+}

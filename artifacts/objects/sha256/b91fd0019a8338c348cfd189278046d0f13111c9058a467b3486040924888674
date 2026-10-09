@@ -1,0 +1,15 @@
+{
+  "accepted": true,
+  "audit": {
+    "source_snapshot_unchanged": true,
+    "historical_artifact_reference_steps": [],
+    "verifier_called_in_trace": true,
+    "agent_verifier": "success",
+    "independent_verifier": "success",
+    "legacy_verifier": "success",
+    "context_required": true,
+    "context_accepted": true,
+    "legacy_failures": [],
+    "scope": "legacy-compatible business regression"
+  }
+}

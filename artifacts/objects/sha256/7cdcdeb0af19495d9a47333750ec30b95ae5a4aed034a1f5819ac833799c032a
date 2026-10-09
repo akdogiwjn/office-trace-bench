@@ -1,0 +1,234 @@
+#!/usr/bin/env python3
+"""Build manufacturing_enhanced.xlsx: preserve source sheet, add analysis sheet.
+
+Layout is chosen here; the verifier independently checks content & computed values.
+"""
+from pathlib import Path
+
+from openpyxl import load_workbook
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.comments import Comment
+from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.chart import BarChart, LineChart, Reference
+from openpyxl.formatting.rule import CellIsRule, ColorScaleRule, DataBarRule
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "input" / "m3_shipments_202608.xlsx"
+OUT = ROOT / "output" / "manufacturing_enhanced.xlsx"
+
+SHEET = "Dashboard"
+DATA = "'Shipments August 2026'"
+GREEN = "FF008000"   # cross-sheet formula
+BLUE = "FF0000FF"    # editable input
+BLACK = "FF000000"   # local formula
+FONT = "Calibri"
+
+# ---- feature locations chosen for this implementation ----
+LOC = {
+    "metrics": {
+        "total_shipments": "B6",
+        "monthly_growth": "B7",
+        "durable_share": "B8",
+        "nondurable_shipments": "B9",
+    },
+    "selector": "B12",
+    "assumptions": {
+        "Base":        {"shipments_multiplier": "B14"},
+        "Expansion":   {"shipments_multiplier": "B15"},
+        "Contraction": {"shipments_multiplier": "B16"},
+    },
+    "projection": "B18",
+    "chart_data": {
+        "durability_mix": {"cat": "A22:A23", "val": "B22:B23"},
+        "shipment_trend": {"cat": "A26:A28", "val": "B26:B28"},
+    },
+}
+
+
+def style(cell, *, bold=False, size=11, color=BLACK, italic=False, wrap=False,
+          fill=None, halign=None, valign=None, numfmt=None, border=False):
+    cell.font = Font(name=FONT, size=size, bold=bold, italic=italic, color=color)
+    if fill:
+        cell.fill = PatternFill("solid", start_color=fill, end_color=fill)
+    cell.alignment = Alignment(horizontal=halign, vertical=valign, wrap_text=wrap)
+    if numfmt:
+        cell.number_format = numfmt
+    if border:
+        s = Side(style="thin", color="FFBFBFBF")
+        cell.border = Border(left=s, right=s, top=s, bottom=s)
+
+
+def main():
+    wb = load_workbook(SRC)
+    assert wb.sheetnames == ["Shipments August 2026"], wb.sheetnames
+    ws = wb.create_sheet(SHEET)      # original sheet untouched
+
+    # ---------------- title / source ----------------
+    ws["A1"] = "Manufacturing Shipments Analysis - August 2026"
+    style(ws["A1"], bold=True, size=14)
+    ws["A2"] = ("Source: U.S. Census Bureau, Manufacturers' Shipments, Inventories and Orders (M3) "
+                "Survey, August 2026 Full Report (Table 1). Seasonally adjusted levels in USD million. "
+                "This sheet holds derived analysis; the original published table is unchanged.")
+    style(ws["A2"], italic=True, size=9, color="FF595959", wrap=True)
+    ws.merge_cells("A2:D2")
+    ws.row_dimensions[2].height = 28
+
+    # ---------------- key metrics (cross-sheet formulas) ----------------
+    ws["A4"] = "Key metrics"
+    style(ws["A4"], bold=True, size=12)
+    for col, head in zip("ABCD", ["Metric", "Value", "Unit", "Definition"]):
+        c = ws[col + "5"]
+        c.value = head
+        style(c, bold=True, fill="FFD9E1F2", border=True, halign="center")
+    rows = [
+        ("A6", "Total shipments", "B6", f"={DATA}!B2", "C6", "USD million",
+         "All manufacturing industries, seasonally adjusted, August 2026 (source row 2)."),
+        ("A7", "Monthly change (Jul to Aug)", "B7", f"=({DATA}!B2-{DATA}!C2)/{DATA}!C2", "C7", "fraction",
+         "Relative change in all-manufacturing adjusted shipments July to August 2026."),
+        ("A8", "Durable goods share", "B8", f"={DATA}!B6/{DATA}!B2", "C8", "fraction",
+         "Durable-goods August 2026 adjusted shipments divided by all manufacturing."),
+        ("A9", "Nondurable shipments", "B9", f"={DATA}!B50", "C9", "USD million",
+         "Published nondurable-goods August 2026 seasonally adjusted shipments (source row 50)."),
+    ]
+    for label_c, label, val_c, formula, unit_c, unit, note in rows:
+        ws[label_c] = label
+        style(ws[label_c], border=True)
+        v = ws[val_c]
+        v.value = formula
+        style(v, color=GREEN, border=True, halign="right")
+        ws[unit_c] = unit
+        style(ws[unit_c], border=True, halign="center")
+        ws["D" + val_c[1:]] = note
+        style(ws["D" + val_c[1:]], size=9, color="FF595959", wrap=True)
+    ws["B6"].number_format = "#,##0"
+    ws["B9"].number_format = "#,##0"
+    ws["B7"].number_format = "0.0%"
+    ws["B8"].number_format = "0.0%"
+
+    ws["B6"].comment = Comment(
+        "Source: U.S. Census Bureau, M3 Survey, August 2026 Full Report, Table 1, "
+        "row 'All manufacturing industries', column 'SA Aug 2026'. Published aggregate.", "analyst")
+    ws["B7"].comment = Comment(
+        "Derived: (SA Aug 2026 - SA Jul 2026) / SA Jul 2026 from source levels B2 and C2.", "analyst")
+    ws["B8"].comment = Comment(
+        "Derived: durable-goods adjusted shipments (source B6) / all-manufacturing (source B2).", "analyst")
+    ws["B9"].comment = Comment(
+        "Source: 'Nondurable goods industries' row, SA Aug 2026 (source B50). Published aggregate.", "analyst")
+
+    # ---------------- scenario selector ----------------
+    ws["A11"] = "Scenario projection"
+    style(ws["A11"], bold=True, size=12)
+    ws["A12"] = "Scenario selector"
+    style(ws["A12"], border=True)
+    sel = ws[LOC["selector"]]
+    sel.value = "Base"
+    style(sel, bold=True, color=BLUE, border=True, halign="center", fill="FFFFF2CC")
+    sel.comment = Comment(
+        "Editable input. Choose Base, Expansion, or Contraction from the dropdown. "
+        "Drives the shipments multiplier used by the projection.", "analyst")
+    dv = DataValidation(type="list", formula1='"Base,Expansion,Contraction"',
+                        allow_blank=False, showDropDown=False)
+    dv.error = "Choose Base, Expansion, or Contraction."
+    dv.errorTitle = "Invalid scenario"
+    dv.prompt = "Select a scenario"
+    dv.promptTitle = "Scenario"
+    ws.add_data_validation(dv)
+    dv.add(sel)
+
+    ws["A13"] = "Scenario"
+    ws["B13"] = "Shipments multiplier"
+    for c in ("A13", "B13"):
+        style(ws[c], bold=True, fill="FFD9E1F2", border=True, halign="center")
+    ws["B13"].comment = Comment(
+        "Editable assumptions. shipments_multiplier is a hypothetical scaling factor, "
+        "not an official Census forecast.", "analyst")
+    for name, lc, value in [("Base", "A14", 1), ("Expansion", "A15", 1.03), ("Contraction", "A16", 0.97)]:
+        ws[lc] = name
+        style(ws[lc], border=True)
+        vc = LOC["assumptions"][name]["shipments_multiplier"]
+        ws[vc] = value
+        style(ws[vc], color=BLUE, border=True, halign="right", numfmt="0.00")
+
+    # ---------------- projection (local formula) ----------------
+    ws["A18"] = "Projected shipments (USD million)"
+    style(ws["A18"], border=True, bold=True)
+    proj = ws[LOC["projection"]]
+    proj.value = f"=B6*VLOOKUP({LOC['selector']},$A$14:$B$16,2,FALSE)"
+    style(proj, color=BLACK, border=True, halign="right", numfmt="#,##0")
+    proj.comment = Comment(
+        "Scenario projection: total August shipments (B6) times the multiplier looked up "
+        "from the assumption table for the selected scenario.", "analyst")
+
+    # ---------------- chart data blocks (cross-sheet formulas) ----------------
+    ws["D21"] = "Chart data: August durable vs nondurable (SA)"
+    style(ws["D21"], bold=True, size=10)
+    ws["A21"] = "Category"
+    ws["B21"] = "USD million"
+    for c in ("A21", "B21"):
+        style(ws[c], bold=True, fill="FFD9E1F2", border=True, halign="center")
+    for label, formula, lc, vc in [("Durable goods", f"={DATA}!B6", "A22", "B22"),
+                                   ("Nondurable goods", f"={DATA}!B50", "A23", "B23")]:
+        ws[lc] = label
+        style(ws[lc], border=True)
+        ws[vc] = formula
+        style(ws[vc], color=GREEN, border=True, halign="right", numfmt="#,##0")
+
+    ws["D25"] = "Chart data: all-manufacturing SA shipments, Jun-Aug 2026"
+    style(ws["D25"], bold=True, size=10)
+    ws["A25"] = "Month"
+    ws["B25"] = "USD million"
+    for c in ("A25", "B25"):
+        style(ws[c], bold=True, fill="FFD9E1F2", border=True, halign="center")
+    for label, formula, lc, vc in [("Jun 2026", f"={DATA}!D2", "A26", "B26"),
+                                   ("Jul 2026", f"={DATA}!C2", "A27", "B27"),
+                                   ("Aug 2026", f"={DATA}!B2", "A28", "B28")]:
+        ws[lc] = label
+        style(ws[lc], border=True)
+        ws[vc] = formula
+        style(ws[vc], color=GREEN, border=True, halign="right", numfmt="#,##0")
+
+    # ---------------- charts ----------------
+    bar = BarChart()
+    bar.type = "col"
+    bar.title = "August 2026 SA Shipments: Durable vs Nondurable"
+    bar.y_axis.title = "USD million"
+    bar.x_axis.title = "Goods type"
+    bar.add_data(Reference(ws, min_col=2, min_row=22, max_row=23), titles_from_data=False)
+    bar.set_categories(Reference(ws, min_col=1, min_row=22, max_row=23))
+    bar.height, bar.width = 8, 12
+    ws.add_chart(bar, "F4")          # index 0 -> durability_mix
+
+    line = LineChart()
+    line.title = "All-Manufacturing SA Shipments, Jun-Aug 2026"
+    line.y_axis.title = "USD million"
+    line.x_axis.title = "Month"
+    line.add_data(Reference(ws, min_col=2, min_row=26, max_row=28), titles_from_data=False)
+    line.set_categories(Reference(ws, min_col=1, min_row=26, max_row=28))
+    line.height, line.width = 8, 12
+    ws.add_chart(line, "F22")        # index 1 -> shipment_trend
+
+    # ---------------- conditional formatting (>=2 ranges) ----------------
+    ws.conditional_formatting.add("B7", CellIsRule(
+        operator="lessThan", formula=["0"], font=Font(color="FF9C0006", bold=True),
+        fill=PatternFill("solid", start_color="FFFFC7CE", end_color="FFFFC7CE")))
+    ws.conditional_formatting.add("B7", CellIsRule(
+        operator="greaterThan", formula=["0"], font=Font(color="FF006100", bold=True),
+        fill=PatternFill("solid", start_color="FFC6EFCE", end_color="FFC6EFCE")))
+    ws.conditional_formatting.add("B8", ColorScaleRule(
+        start_type="min", start_color="FFFFFFFF", end_type="max", end_color="FF63BE7B"))
+    ws.conditional_formatting.add("B18", DataBarRule(
+        start_type="min", end_type="max", color="FF638EC6"))
+
+    # ---------------- layout / freeze ----------------
+    ws.column_dimensions["A"].width = 30
+    ws.column_dimensions["B"].width = 20
+    ws.column_dimensions["C"].width = 13
+    ws.column_dimensions["D"].width = 52
+    ws.freeze_panes = "A5"
+
+    wb.save(OUT)
+    print("saved", OUT)
+
+
+if __name__ == "__main__":
+    main()

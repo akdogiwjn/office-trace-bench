@@ -1,3 +1,5 @@
+> 历史阶段记录，当前契约以 [suite 审计](suite-audit-v2.md) 为准。旧模板和合成扩增不属于当前正式输入。
+
 # 当前通用化范围
 
 共用模板现在为 `prompts/xlsx.txt` 和 `prompts/pdf.txt`，TLC/OPM 都从 manifest 传入领域参数。
@@ -26,6 +28,6 @@ workspace 位置和本轮背景文件前后哈希。可核验的历史元数据�
 TLC/OPM 本轮真实回归与脚本差异见 `reports/context-aligned-trace-comparison-v4.md`。
 OPM 明确国籍别名与摘要路径别名的重验见 `reports/pdf-contract-compatibility-v7.json`；旧失败记录不改写。
 新数据规模、正负样本与真实验收见 `reports/new-dataset-expansion-v8.md`。
-HR 来源是公开缓存，未核验官方 ZIP 字节一致性；SBA 固定为官方 Box 的 2024 原生可填写表单。
+HR 来源是公开缓存，未核验官方 ZIP 字节一致性；SBA 固定为 SBA-named Box 公开链接取得的 2024 原生可填写表单；官网旧版文字已核对，但具体分享链接的官方背书未验证。
 当前没有通过修改 PDF Skill、增加 AcroForm 或坐标覆盖来接入不可填写表单。
 全部实例能生成 trace 后，再进行固定 recipe 和离线 replay 镜像建设；本阶段不构建后者。

@@ -1,0 +1,35 @@
+{
+  "status": "template_built",
+  "source_rows": 2964624,
+  "clean_rows": 2758427,
+  "sample_rows": 100000,
+  "expected_sheets": [
+    "Raw_Sample",
+    "Hourly_Summary",
+    "Daily_Summary",
+    "Zone_Summary",
+    "Payment_Summary",
+    "Fare_Distance_Bands",
+    "Reconciliation"
+  ],
+  "reconciliation": {
+    "trip_status_cell": "B24",
+    "fare_status_cell": "B25",
+    "success_value": "YES - Consistent",
+    "trip_total_cells": [
+      "B10",
+      "B11",
+      "B12",
+      "B13"
+    ],
+    "fare_total_cells": [
+      "B14",
+      "B15",
+      "B16",
+      "B17"
+    ]
+  },
+  "expected_clean_total_fare": 50744748.6,
+  "expected_clean_total_amount": 75600521.4,
+  "minimum_formula_count": 1
+}

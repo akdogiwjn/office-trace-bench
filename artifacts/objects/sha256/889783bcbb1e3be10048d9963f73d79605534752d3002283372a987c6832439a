@@ -1,0 +1,207 @@
+#!/usr/bin/env python3
+"""Build the enhanced retail workbook (stage 1, openpyxl formulas).
+
+Adds one overview sheet 'Retail Analysis' with live formula metrics, a
+data-validated scenario selector with editable assumptions and a formula
+driven projection, helper trend table and one chart. Original worksheets are
+left completely untouched.
+"""
+import sys
+from openpyxl import load_workbook
+from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.comments import Comment
+from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.formatting.rule import CellIsRule, DataBarRule, ColorScaleRule
+from openpyxl.chart import LineChart, Reference
+
+SRC = sys.argv[1] if len(sys.argv) > 1 else 'input/marts_table1_202608.xlsx'
+OUT = sys.argv[2] if len(sys.argv) > 2 else 'scratch/stage1.xlsx'
+
+ORIG = 'MARTS Table 1'
+SUMMARY = 'Retail Analysis'
+
+BASE_FONT = 'Arial'
+blue = Font(name=BASE_FONT, size=10, color='FF0000FF')          # editable inputs
+green = Font(name=BASE_FONT, size=10, color='FF008000')         # cross-sheet formulas
+black = Font(name=BASE_FONT, size=10, color='FF000000')         # local formulas
+title_font = Font(name=BASE_FONT, size=14, bold=True, color='FF1F3864')
+sub_font = Font(name=BASE_FONT, size=9, italic=True, color='FF595959')
+sec_font = Font(name=BASE_FONT, size=10, bold=True, color='FFFFFFFF')
+hdr_font = Font(name=BASE_FONT, size=10, bold=True, color='FF1F3864')
+lbl_font = Font(name=BASE_FONT, size=10)
+sec_fill = PatternFill('solid', fgColor='FF1F3864')
+hdr_fill = PatternFill('solid', fgColor='FFD9E1F2')
+note_fill = PatternFill('solid', fgColor='FFFFF2CC')
+
+wb = load_workbook(SRC)
+ws = wb.create_sheet(SUMMARY)
+
+# ---- Header -----------------------------------------------------------------
+ws['A1'] = 'Census MARTS - Retail & Food Services Sales Analysis'
+ws['A1'].font = title_font
+ws['A2'] = ('Frozen advance monthly retail trade publication, August 2026 (release CB26-153, 2026-09-16). '
+            'Source data preserved unchanged on the original worksheets; figures below are linked live by formula.')
+ws['A2'].font = sub_font
+ws.merge_cells('A1:C1')
+ws.merge_cells('A2:C2')
+
+# ---- Key metrics ------------------------------------------------------------
+ws['A4'] = 'KEY METRICS - seasonally adjusted (USD million unless noted)'
+ws['A4'].font = sec_font
+ws['A4'].fill = sec_fill
+ws.merge_cells('A4:C4')
+
+ws['A5'] = 'Metric'; ws['B5'] = 'Value'; ws['C5'] = 'Unit / basis'
+for c in ('A5', 'B5', 'C5'):
+    ws[c].font = hdr_font
+    ws[c].fill = hdr_fill
+
+ws['A6'] = 'Adjusted retail & food services sales (SA, Aug 2026)'
+ws['B6'] = f"='{ORIG}'!I2"
+ws['C6'] = 'USD million'
+
+ws['A7'] = 'Month-over-month growth (Jul 2026 -> Aug 2026)'
+ws['B7'] = f"=('{ORIG}'!I2-'{ORIG}'!J2)/'{ORIG}'!J2"
+ws['C7'] = 'fraction, from SA levels'
+
+ws['A8'] = 'Year-over-year growth (Aug 2025 -> Aug 2026)'
+ws['B8'] = f"=('{ORIG}'!I2-'{ORIG}'!L2)/'{ORIG}'!L2"
+ws['C8'] = 'fraction, from SA levels'
+
+for c in ('A6', 'B6', 'A7', 'B7', 'A8', 'B8'):
+    ws[c].font = black
+ws['B6'].font = green
+ws['B7'].font = green
+ws['B8'].font = green
+ws['A6'].font = lbl_font
+ws['A7'].font = lbl_font
+ws['A8'].font = lbl_font
+ws['C6'].font = lbl_font
+ws['C7'].font = lbl_font
+ws['C8'].font = lbl_font
+ws['B6'].number_format = '#,##0'
+ws['B7'].number_format = '0.0%'
+ws['B8'].number_format = '0.0%'
+ws['B6'].alignment = Alignment(horizontal='right')
+ws['B7'].alignment = Alignment(horizontal='right')
+ws['B8'].alignment = Alignment(horizontal='right')
+
+# ---- Scenario projection ----------------------------------------------------
+ws['A10'] = 'SCENARIO PROJECTION - hypothetical sales multiplier (not a Census forecast)'
+ws['A10'].font = sec_font
+ws['A10'].fill = sec_fill
+ws.merge_cells('A10:C10')
+
+ws['A11'] = 'Selected scenario'
+ws['B11'] = 'Base'                       # default selector value
+ws['B11'].font = blue
+ws['B11'].fill = note_fill
+ws['B11'].alignment = Alignment(horizontal='center')
+ws['A11'].font = lbl_font
+
+dv = DataValidation(type='list', formula1='"Base,Higher,Lower"', allow_blank=False,
+                    showDropDown=False)
+dv.prompt = 'Select a scenario; the assumption multiplier and projection update.'
+dv.promptTitle = 'Scenario'
+ws.add_data_validation(dv)
+dv.add(ws['B11'])
+
+ws['A12'] = 'Scenario'
+ws['B12'] = 'sales_multiplier (editable)'
+ws['A12'].font = hdr_font
+ws['B12'].font = hdr_font
+ws['A12'].fill = hdr_fill
+ws['B12'].fill = hdr_fill
+
+ws['A13'] = 'Base';   ws['B13'] = 1
+ws['A14'] = 'Higher'; ws['B14'] = 1.04
+ws['A15'] = 'Lower';  ws['B15'] = 0.96
+for c in ('B13', 'B14', 'B15'):
+    ws[c].font = blue
+    ws[c].number_format = '0.00'
+    ws[c].alignment = Alignment(horizontal='right')
+for c in ('A13', 'A14', 'A15'):
+    ws[c].font = lbl_font
+
+ws['A16'] = 'Selected multiplier'
+ws['B16'] = '=VLOOKUP($B$11,$A$13:$B$15,2,FALSE)'
+ws['B16'].font = black
+ws['B16'].number_format = '0.00'
+ws['A16'].font = lbl_font
+
+ws['A17'] = 'Projected adjusted sales (USD million)'
+ws['B17'] = '=B6*B16'
+ws['B17'].font = black
+ws['B17'].number_format = '#,##0'
+ws['A17'].font = lbl_font
+
+# ---- Trend helper table -----------------------------------------------------
+ws['A19'] = 'ADJUSTED SALES TREND - Jun-Aug 2026 (SA, USD million)'
+ws['A19'].font = sec_font
+ws['A19'].fill = sec_fill
+ws.merge_cells('A19:C19')
+
+ws['A20'] = 'Month'; ws['B20'] = 'Adjusted sales (USD million)'
+ws['A20'].font = hdr_font
+ws['B20'].font = hdr_font
+ws['A20'].fill = hdr_fill
+ws['B20'].fill = hdr_fill
+
+ws['A21'] = 'Jun 2026'; ws['B21'] = f"='{ORIG}'!K2"
+ws['A22'] = 'Jul 2026'; ws['B22'] = f"='{ORIG}'!J2"
+ws['A23'] = 'Aug 2026'; ws['B23'] = f"='{ORIG}'!I2"
+for c in ('B21', 'B22', 'B23'):
+    ws[c].font = green
+    ws[c].number_format = '#,##0'
+    ws[c].alignment = Alignment(horizontal='right')
+for c in ('A21', 'A22', 'A23'):
+    ws[c].font = lbl_font
+
+# ---- Chart (added sheet, index 0) -------------------------------------------
+chart = LineChart()
+chart.title = 'Adjusted retail & food services sales (SA, Jun-Aug 2026)'
+chart.y_axis.title = 'USD million'
+chart.x_axis.title = 'Month'
+chart.height = 8
+chart.width = 14
+data = Reference(ws, min_col=2, min_row=20, max_row=23)
+cats = Reference(ws, min_col=1, min_row=21, max_row=23)
+chart.add_data(data, titles_from_data=True)
+chart.set_categories(cats)
+chart.style = 12
+ws.add_chart(chart, 'E4')
+
+# ---- Formatting: comments, conditional formatting, freeze panes -------------
+ws['B6'].comment = Comment(
+    "Source: U.S. Census Bureau, Advance Monthly Retail Trade Survey, release CB26-153 "
+    "(2026-09-16), MARTS Table 1, column 'SA Aug 2026' total row. Linked live to "
+    "'MARTS Table 1'!I2.", 'Analyst')
+ws['B7'].comment = Comment(
+    "Computed from seasonally adjusted sales levels (Aug 2026 vs Jul 2026), not the "
+    "published rounded percentage. Linked live to the source worksheet.", 'Analyst')
+ws['B11'].comment = Comment(
+    "Editable scenario selector (data validation list: Base / Higher / Lower). "
+    "Changing it updates the multiplier and the projection.", 'Analyst')
+ws['B13'].comment = Comment(
+    "Editable assumption: hypothetical sales multiplier. Base=1.00, Higher=1.04, "
+    "Lower=0.96. Not a Census forecast.", 'Analyst')
+
+ws['B7'].conditional_formatting  # noqa
+ws.conditional_formatting.add('B7:B8', CellIsRule(
+    operator='lessThan', formula=['0'],
+    fill=PatternFill('solid', bgColor='FFF4B4B4'), font=Font(color='FF9C0006')))
+ws.conditional_formatting.add('B21:B23', DataBarRule(
+    start_type='min', end_type='max', color='FF638EC6'))
+ws.conditional_formatting.add('B17', CellIsRule(
+    operator='greaterThan', formula=['$B$6'],
+    fill=PatternFill('solid', bgColor='FFC6EFCE'), font=Font(color='FF006100')))
+
+ws.freeze_panes = 'A3'
+
+# widths
+ws.column_dimensions['A'].width = 56
+ws.column_dimensions['B'].width = 24
+ws.column_dimensions['C'].width = 26
+
+wb.save(OUT)
+print('wrote', OUT, 'sheets:', wb.sheetnames)

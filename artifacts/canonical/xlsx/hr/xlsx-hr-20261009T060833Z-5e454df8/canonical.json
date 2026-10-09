@@ -1,0 +1,693 @@
+{
+  "schema_version": "office-canonical-trace-v1",
+  "kind": "xlsx",
+  "dataset_id": "hr",
+  "original_run_id": "xlsx-hr-20261009T060833Z-5e454df8",
+  "trace_sha256": "8e6de648af39d18a706a7a688b2be91ff96cd91873d1c0b24e70f79015294ad0",
+  "tool_events_sha256": "3b44b22ee9f03179eeaad4e1e3ae5000c437a2f0e5b3eb8a0fcf4f9eba3e67c1",
+  "segmentation_sha256": "d8285e7f9d8ffd324b072d2380c1e759e9fd702eb53edc90cde41b1daed95632",
+  "manifest_sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+  "input_hashes": {
+    "input/national_M2025_dl.xlsx": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2"
+  },
+  "prompt_sha256": "183955ba6d639ff13ed451b9b2725705d0abd0fe44e21f69e7081e60b1b618e0",
+  "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+  "model": {
+    "name": "openclaw",
+    "version": "OpenClaw 2026.6.6 (8c802aa)",
+    "model_name": "deepseek/deepseek-v4-flash",
+    "extra": {
+      "parser": "openclaw-session-jsonl",
+      "provider": "deepseek",
+      "session_schema_version": 3,
+      "thinking_level": "high"
+    }
+  },
+  "agent_runtime_versions": {
+    "openclaw": "OpenClaw 2026.6.6 (8c802aa)",
+    "node": "v24.14.0",
+    "python": "Python 3.12.3",
+    "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+    "poppler": "pdftoppm version 24.02.0"
+  },
+  "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+  "skill_and_context_hashes": {
+    "vendor/skills/pdf/reference.md": "03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
+    "vendor/skills/pdf/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+    "vendor/skills/pdf/forms.md": "9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44",
+    "vendor/skills/pdf/SKILL.md": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+    "vendor/skills/pdf/scripts/fill_fillable_fields.py": "d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5",
+    "vendor/skills/pdf/scripts/extract_form_field_info.py": "bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109",
+    "vendor/skills/pdf/scripts/check_fillable_fields.py": "1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8",
+    "vendor/skills/pdf/scripts/convert_pdf_to_images.py": "7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d",
+    "vendor/skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+    "vendor/skills/xlsx/SKILL.md": "dd316db7785a6be12966c2a2d848931fbf5f518b3cdb0a66fa62ee835ead1cfc",
+    "vendor/skills/xlsx/scripts/recalc.py": "cf419d15e02965aeaec17773c05b61303f7f520f67fa2696547e7da07502eac7",
+    "vendor/skills/xlsx/scripts/office/soffice.py": "a3e21840e29e32f947d5286028931b96eaf2dee63f75d883b8eb19c943c80aa0",
+    "vendor/skills/xlsx/scripts/office/unpack.py": "83f69cecc87910183654c06345837244402e8a99edbf3bdddc1cf72f11304b62",
+    "vendor/skills/xlsx/scripts/office/validate.py": "1aef24f8e316965a0584c30859776bd2c82a9fb69f72d79cfed041119cf95514",
+    "vendor/skills/xlsx/scripts/office/pack.py": "b1800987e568261a31f462df8e1303d386e9e6ccc11a75ef46e60cc528c20683",
+    "runtime_context/profiles/legacy-host-v1/profile.json": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5",
+    "runtime_context/profiles/legacy-host-v1/skills/agent-browser/SKILL.md": "9643b9c65476eedd5ab353956c31a4d4ce9ad225f9a786d23376a43893f59979",
+    "runtime_context/profiles/legacy-host-v1/workspace/TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+    "runtime_context/profiles/legacy-host-v1/workspace/USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+    "runtime_context/profiles/legacy-host-v1/workspace/AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+    "runtime_context/profiles/legacy-host-v1/workspace/IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+    "runtime_context/profiles/legacy-host-v1/workspace/HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+    "runtime_context/profiles/legacy-host-v1/workspace/SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+  },
+  "skill_version_policy": "Frozen source tree hashes; no invented upstream version number",
+  "source_snapshot_sha256": "e3159cbdc326258d8d0a28846e4ba2c558a311333e7d6f8a802d3b18b400f30d",
+  "verifier_result": {
+    "status": "success",
+    "accepted": true,
+    "independent_sha256": "8309261908a0091bf90d5936725e6ebfb2c71c2cb0e606ced30b4bee05c8bea7",
+    "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+  },
+  "artifact_inventory": {
+    "source/office.py": {
+      "sha256": "d0c96e934266adbd24fb04ee291eae7da2ba4e6568de92f297cdc510762460c9",
+      "size": 456,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/wheels/pypdf-6.10.0-py3-none-any.whl": {
+      "sha256": "90005e959e1596c6e6c84c8b0ad383285b3e17011751cedd17f2ce8fcdfc86de",
+      "size": 334459,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/wheels/et_xmlfile-2.0.0-py3-none-any.whl": {
+      "sha256": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa",
+      "size": 18059,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/wheels/pdf2image-1.17.0-py3-none-any.whl": {
+      "sha256": "ecdd58d7afb810dffe21ef2b1bbc057ef434dabbac6c33778a38a3f7744a27e2",
+      "size": 11618,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl": {
+      "sha256": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2",
+      "size": 250910,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/wheels/pillow-12.2.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl": {
+      "sha256": "7371b48c4fa448d20d2714c9a1f775a81155050d383333e0a6c15b1123dda005",
+      "size": 6398371,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/reference.md": {
+      "sha256": "03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
+      "size": 16692,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/LICENSE.txt": {
+      "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "size": 1467,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/forms.md": {
+      "sha256": "9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44",
+      "size": 11854,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/SKILL.md": {
+      "sha256": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+      "size": 8072,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/scripts/fill_fillable_fields.py": {
+      "sha256": "d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5",
+      "size": 3819,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/scripts/extract_form_field_info.py": {
+      "sha256": "bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109",
+      "size": 4300,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/scripts/check_fillable_fields.py": {
+      "sha256": "1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8",
+      "size": 268,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/pdf/scripts/convert_pdf_to_images.py": {
+      "sha256": "7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d",
+      "size": 1008,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/LICENSE.txt": {
+      "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "size": 1467,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/SKILL.md": {
+      "sha256": "dd316db7785a6be12966c2a2d848931fbf5f518b3cdb0a66fa62ee835ead1cfc",
+      "size": 11463,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/scripts/recalc.py": {
+      "sha256": "cf419d15e02965aeaec17773c05b61303f7f520f67fa2696547e7da07502eac7",
+      "size": 5782,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/scripts/office/soffice.py": {
+      "sha256": "a3e21840e29e32f947d5286028931b96eaf2dee63f75d883b8eb19c943c80aa0",
+      "size": 5301,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/scripts/office/unpack.py": {
+      "sha256": "83f69cecc87910183654c06345837244402e8a99edbf3bdddc1cf72f11304b62",
+      "size": 4052,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/scripts/office/validate.py": {
+      "sha256": "1aef24f8e316965a0584c30859776bd2c82a9fb69f72d79cfed041119cf95514",
+      "size": 3668,
+      "role": "frozen_execution_source"
+    },
+    "source/vendor/skills/xlsx/scripts/office/pack.py": {
+      "sha256": "b1800987e568261a31f462df8e1303d386e9e6ccc11a75ef46e60cc528c20683",
+      "size": 4991,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/__init__.py": {
+      "sha256": "63d004276ebec93a5ce83bfb39ebb309667f171b10755287c5dd61653d618ff1",
+      "size": 93,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/cli.py": {
+      "sha256": "e54d03ee0686b3a17006473517acf12b2eef735d8fb5d11ba605f7f95bfc4dcf",
+      "size": 3493,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/verify.py": {
+      "sha256": "35322df61f69c00695e6e6db13ad7e8897c7220f1b26d6674d7de5314d3005dd",
+      "size": 14558,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/records.py": {
+      "sha256": "f205dbb3e3a25ae26b7fa525a621a8f970e77498294cd417b1682b2f0bbe8d6d",
+      "size": 2141,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/workbooks.py": {
+      "sha256": "eacd45d2cc8732454f62bb8496e19b6086d2ca74fd01739628b7840572e67a1c",
+      "size": 2534,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/trace.py": {
+      "sha256": "673ebeda64ef8015fe2d3f8e9e0a30244c1c380829718a28dc51eaf3cdb7fbeb",
+      "size": 2469,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/complexity.py": {
+      "sha256": "fd297ceda4411679bb6eebcc0c4f4a6120c453a0ebe2cc5232f085f31c5ac8c5",
+      "size": 4836,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/atif.py": {
+      "sha256": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+      "size": 16115,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/canonical.py": {
+      "sha256": "ce99c2a5256d1c43a8e4ef51b60ca1a6fcdf23851504fd306b610001f3f52613",
+      "size": 8123,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/artifact_capture.py": {
+      "sha256": "b2d7d59234f3a47c81988ab6d984eaae486a534d7873906f4a80d0165c966195",
+      "size": 5720,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/runner.py": {
+      "sha256": "16da332277fde4a1ed80b2a4f1f3a9aa829d204a2743a68dcb828f53138c3a1d",
+      "size": 14208,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/contracts.py": {
+      "sha256": "e62eece9e7fbabffdd03ddd1a6ec8cc1d2e1af9aa7286990344622ec9d8b760f",
+      "size": 4493,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/prompts.py": {
+      "sha256": "31008029dcb8dbef1b4024779bc77b74a8b03b31e932f06eb86a5e8b0800828e",
+      "size": 6378,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/context.py": {
+      "sha256": "11891fc4e355ae140e62e63011bb24b5b7552b888dbbaf33d04c168b1774f78c",
+      "size": 4507,
+      "role": "frozen_execution_source"
+    },
+    "source/office_trace_bench/spreadsheet.py": {
+      "sha256": "11d3c78058f74b27e4fe6eedfafdb1afdfc241044421aa3bb5454b3fcba5a123",
+      "size": 13154,
+      "role": "frozen_execution_source"
+    },
+    "source/prompts/xlsx.txt": {
+      "sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+      "size": 3807,
+      "role": "frozen_execution_source"
+    },
+    "source/prompts/legacy-v1-pdf.txt": {
+      "sha256": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+      "size": 3403,
+      "role": "frozen_execution_source"
+    },
+    "source/prompts/pdf.txt": {
+      "sha256": "bcd3fde01752dbcfe98527e199cf00da932f9d9371d74f83e483e1d17d1d2c74",
+      "size": 2533,
+      "role": "frozen_execution_source"
+    },
+    "source/prompts/tlc-legacy-compatible.txt": {
+      "sha256": "a761baa052104762e377a441725cf0e464fa7349169a531d73b12a588ee53aa1",
+      "size": 4423,
+      "role": "frozen_execution_source"
+    },
+    "source/prompts/opm-legacy-compatible.txt": {
+      "sha256": "0101047875c980b9e987bf402af97e7c7dfb3525960cf95a1c606d3c676c171f",
+      "size": 3803,
+      "role": "frozen_execution_source"
+    },
+    "source/prompts/legacy-v1-xlsx.txt": {
+      "sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+      "size": 3547,
+      "role": "frozen_execution_source"
+    },
+    "source/datasets/xlsx/hr/complexity.json": {
+      "sha256": "af51330dd3a13895ef2861e1dffcb88db134f5c9b08201c6270cfb69d3a3a44d",
+      "size": 2022,
+      "role": "frozen_execution_source"
+    },
+    "source/datasets/xlsx/hr/expected.json": {
+      "sha256": "d7f9a987801f88829c549e37e9acb56f5ec4157da6cf79f375c966ee1210b13a",
+      "size": 603,
+      "role": "frozen_execution_source"
+    },
+    "source/datasets/xlsx/hr/manifest.json": {
+      "sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+      "size": 3372,
+      "role": "frozen_execution_source"
+    },
+    "source/datasets/xlsx/hr/provenance.json": {
+      "sha256": "9c31955d9728d0c3c74885b2cc4bc32f01364699adac66379a8098ba42c64bd3",
+      "size": 1707,
+      "role": "frozen_execution_source"
+    },
+    "source/datasets/xlsx/hr/input/national_M2025_dl.xlsx": {
+      "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "size": 289615,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/profile.json": {
+      "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5",
+      "size": 5523,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/skills/agent-browser/SKILL.md": {
+      "sha256": "9643b9c65476eedd5ab353956c31a4d4ce9ad225f9a786d23376a43893f59979",
+      "size": 5548,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/workspace/TOOLS.md": {
+      "sha256": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+      "size": 876,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/workspace/USER.md": {
+      "sha256": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+      "size": 537,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/workspace/AGENTS.md": {
+      "sha256": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+      "size": 7196,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/workspace/IDENTITY.md": {
+      "sha256": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+      "size": 1278,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/workspace/HEARTBEAT.md": {
+      "sha256": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+      "size": 244,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime_context/profiles/legacy-host-v1/workspace/SOUL.md": {
+      "sha256": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+      "size": 1518,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime/Dockerfile": {
+      "sha256": "ac8ef54ef077852baf7a43af4718a0402eddc11a0d81666c08cbfcb39fae4f1e",
+      "size": 819,
+      "role": "frozen_execution_source"
+    },
+    "source/runtime/verify_office.py": {
+      "sha256": "c6338492488dedd3be936c5e102a62d5c25f0fbe47551f8c87545a5e17e1c593",
+      "size": 976,
+      "role": "frozen_execution_source"
+    },
+    "agent_context_audit.json": {
+      "sha256": "8f4796276829ab97005869e15fd1eb969e3cb42c4602231aaaf4324228dceb1f",
+      "size": 4481,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824": {
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/086815a7f501d381144f2006abab6f0e54a823c44fa36d82326d1037b4664092": {
+      "sha256": "086815a7f501d381144f2006abab6f0e54a823c44fa36d82326d1037b4664092",
+      "size": 2602,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6": {
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833": {
+      "sha256": "1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833",
+      "size": 247687,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106": {
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/3c6b5063f455dd24246acdb70aacb1ec0b2ff313b1578da6426dfeab899ee3bb": {
+      "sha256": "3c6b5063f455dd24246acdb70aacb1ec0b2ff313b1578da6426dfeab899ee3bb",
+      "size": 239663,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/4bd02c1f24bd4f09be431eee1ca4d8c12655120c29ff057c6c8d5860e7985180": {
+      "sha256": "4bd02c1f24bd4f09be431eee1ca4d8c12655120c29ff057c6c8d5860e7985180",
+      "size": 71,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/4cb9c9a70f6305f4f611c3b3b4b022dc34cbbad1f72352e46b3a15a431ea345a": {
+      "sha256": "4cb9c9a70f6305f4f611c3b3b4b022dc34cbbad1f72352e46b3a15a431ea345a",
+      "size": 458,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/5c3266120024a791aa0b19238a275a4e1c5b8778acaf31ea72ad827667247b8c": {
+      "sha256": "5c3266120024a791aa0b19238a275a4e1c5b8778acaf31ea72ad827667247b8c",
+      "size": 247678,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10": {
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04": {
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/80bd6f63334d7d0b44058438d522fe216c86db16f466f86d1f5ae58aca87ad11": {
+      "sha256": "80bd6f63334d7d0b44058438d522fe216c86db16f466f86d1f5ae58aca87ad11",
+      "size": 2104,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/83f2fa7afd5de9dab1e4dd6b54016bc9f2ca97f58bf1e79dbc830e63407b9750": {
+      "sha256": "83f2fa7afd5de9dab1e4dd6b54016bc9f2ca97f58bf1e79dbc830e63407b9750",
+      "size": 4608,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/844eff93c16a717386f38fcef7ef23db9c2d87699944b48b83bb2d18704c8779": {
+      "sha256": "844eff93c16a717386f38fcef7ef23db9c2d87699944b48b83bb2d18704c8779",
+      "size": 71,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/8478570c75d321e1f4a663268bb5bed03667817d985c8990c967290a05ea13e4": {
+      "sha256": "8478570c75d321e1f4a663268bb5bed03667817d985c8990c967290a05ea13e4",
+      "size": 4393,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2": {
+      "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "size": 289615,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae": {
+      "sha256": "8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae",
+      "size": 900,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/bbb52e4299b891baa5754838839e38c737a97f02a272184782435387b5c111df": {
+      "sha256": "bbb52e4299b891baa5754838839e38c737a97f02a272184782435387b5c111df",
+      "size": 456,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/be55b80eba8739dceaba30f360b2c639450293c05427eeb9e71841e7bae30735": {
+      "sha256": "be55b80eba8739dceaba30f360b2c639450293c05427eeb9e71841e7bae30735",
+      "size": 4264,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06": {
+      "sha256": "c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06",
+      "size": 325,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/cbaa1bf1d23618562623caacc549884b59b18f8e799a56bf024dc3f310f8f015": {
+      "sha256": "cbaa1bf1d23618562623caacc549884b59b18f8e799a56bf024dc3f310f8f015",
+      "size": 4461,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/dab019540db3efc03a3b76c889b7b9ecbc6bf054010f77ab01981b791a06c81f": {
+      "sha256": "dab019540db3efc03a3b76c889b7b9ecbc6bf054010f77ab01981b791a06c81f",
+      "size": 246544,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/e722460d0181b57d84cba7d59357510f082b84b5a2dc3000c190d8ceebf050a7": {
+      "sha256": "e722460d0181b57d84cba7d59357510f082b84b5a2dc3000c190d8ceebf050a7",
+      "size": 246544,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/objects/e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c": {
+      "sha256": "e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c",
+      "size": 6524,
+      "role": "execution_artifact"
+    },
+    "artifact_revisions/revisions.json": {
+      "sha256": "5e4279f855d7e8ab2c6f6561961f60dbe15373376c8fae7080b4f0dc8c912d67",
+      "size": 28023,
+      "role": "execution_artifact"
+    },
+    "baseline_acceptance.json": {
+      "sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590",
+      "size": 447,
+      "role": "execution_artifact"
+    },
+    "config_validate.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "role": "execution_artifact"
+    },
+    "config_validate.stdout.log": {
+      "sha256": "275572d12706cfa6972ae580e598a72b66f7ed80d7a126837bb7c383391ccfef",
+      "size": 40,
+      "role": "execution_artifact"
+    },
+    "independent_verification.json": {
+      "sha256": "8309261908a0091bf90d5936725e6ebfb2c71c2cb0e606ced30b4bee05c8bea7",
+      "size": 6621,
+      "role": "execution_artifact"
+    },
+    "legacy_verification.json": {
+      "sha256": "a75b60df51c0c6d93db67a94cfacbc26057be58b39f1022f2afb913d90897bb9",
+      "size": 176,
+      "role": "execution_artifact"
+    },
+    "model_select.stderr.log": {
+      "sha256": "9ab08bfab1d34adab9e66185d5dda5daede58e4de16cb50a7cf2fc640a90e2bb",
+      "size": 590,
+      "role": "execution_artifact"
+    },
+    "model_select.stdout.log": {
+      "sha256": "13fa95cc7bde20b50c586cb035bedcfa29c773c779ca49c0a102991aa91bb37e",
+      "size": 711,
+      "role": "execution_artifact"
+    },
+    "openclaw_agent.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "role": "execution_artifact"
+    },
+    "openclaw_agent.stdout.log": {
+      "sha256": "9eed3c6caac5afa18d4a012fa82b7ac1978e79717417443f621f64c922140028",
+      "size": 25329,
+      "role": "execution_artifact"
+    },
+    "openclaw_session.jsonl": {
+      "sha256": "480a7772e541821d6b794d8864b859698703192b946d47d91c6a90288be5c94d",
+      "size": 493117,
+      "role": "execution_artifact"
+    },
+    "run_manifest.json": {
+      "sha256": "5da72ff6dca84ddc7c3dbcc015578cc762bbe945681f56037163ba484c0a134d",
+      "size": 10950,
+      "role": "execution_artifact"
+    },
+    "session_capture.json": {
+      "sha256": "c4937c728dd599c12dde6ea29209bb63c67754e99405a452bc343dab13e61695",
+      "size": 272,
+      "role": "execution_artifact"
+    },
+    "source_snapshot.json": {
+      "sha256": "e3159cbdc326258d8d0a28846e4ba2c558a311333e7d6f8a802d3b18b400f30d",
+      "size": 6533,
+      "role": "execution_artifact"
+    },
+    "task.prompt": {
+      "sha256": "183955ba6d639ff13ed451b9b2725705d0abd0fe44e21f69e7081e60b1b618e0",
+      "size": 3912,
+      "role": "execution_artifact"
+    },
+    "tool_events.json": {
+      "sha256": "3b44b22ee9f03179eeaad4e1e3ae5000c437a2f0e5b3eb8a0fcf4f9eba3e67c1",
+      "size": 221302,
+      "role": "execution_artifact"
+    },
+    "trajectory.json": {
+      "sha256": "8e6de648af39d18a706a7a688b2be91ff96cd91873d1c0b24e70f79015294ad0",
+      "size": 399754,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/build.py": {
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/openpyxl_rt.xlsx": {
+      "sha256": "3c6b5063f455dd24246acdb70aacb1ec0b2ff313b1578da6426dfeab899ee3bb",
+      "size": 239663,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/patch.py": {
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/pre_recalc.xlsx": {
+      "sha256": "dab019540db3efc03a3b76c889b7b9ecbc6bf054010f77ab01981b791a06c81f",
+      "size": 246544,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/rec_recalc.xlsx": {
+      "sha256": "0d1188781c9307b7e41b85d21e37df4b74957e7f775b773b20ab7c8847f2e2c6",
+      "size": 245892,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/recalc_err.txt": {
+      "sha256": "c16caafe3ecff7a076abe5de47fc91a69f398f0117308b75445dc1aa1167ba06",
+      "size": 325,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/recalc_out.json": {
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/recalc_probe.xlsx": {
+      "sha256": "23ce594863603757728afb2f878cab788e647d14dfd9fccd2d6268039a22d106",
+      "size": 235263,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/revisions/README.md": {
+      "sha256": "80bd6f63334d7d0b44058438d522fe216c86db16f466f86d1f5ae58aca87ad11",
+      "size": 2104,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/revisions/build_final.py": {
+      "sha256": "01b2a377043113f30a669f77744d4c9cef9a523fdb8a269c9b8c407b64e32824",
+      "size": 10216,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/revisions/patch_v1_initial.py": {
+      "sha256": "cbaa1bf1d23618562623caacc549884b59b18f8e799a56bf024dc3f310f8f015",
+      "size": 4461,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/revisions/patch_v2_relsfix.py": {
+      "sha256": "83f2fa7afd5de9dab1e4dd6b54016bc9f2ca97f58bf1e79dbc830e63407b9750",
+      "size": 4608,
+      "role": "execution_artifact"
+    },
+    "workspace/helpers/revisions/patch_v3_final.py": {
+      "sha256": "66aabda1a11bc8dc9fbff315ebd991b0828b413a702927249ce49d738eb6da04",
+      "size": 4799,
+      "role": "execution_artifact"
+    },
+    "workspace/input/dataset_manifest.json": {
+      "sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+      "size": 3372,
+      "role": "execution_artifact"
+    },
+    "workspace/input/national_M2025_dl.xlsx": {
+      "sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+      "size": 289615,
+      "role": "execution_artifact"
+    },
+    "workspace/input/verify_office.py": {
+      "sha256": "c6338492488dedd3be936c5e102a62d5c25f0fbe47551f8c87545a5e17e1c593",
+      "size": 976,
+      "role": "execution_artifact"
+    },
+    "workspace/output/business_verification.json": {
+      "sha256": "e7bafd5bc6c49e940c522e052ba32a850d7854f023016c78ee5f6ff3a0a9a99c",
+      "size": 6524,
+      "role": "execution_artifact"
+    },
+    "workspace/output/formula_recalc.json": {
+      "sha256": "60981e5d4802d6cc4fb3eb7c392964eb40afb60cccb4ab43f522af02aead5c10",
+      "size": 94,
+      "role": "execution_artifact"
+    },
+    "workspace/output/hr_enhanced.xlsx": {
+      "sha256": "1c433779bf110dab3a6edb46590072477479e947c0fd72e1694dd919d9c0c833",
+      "size": 247687,
+      "role": "execution_artifact"
+    },
+    "workspace/output/workbook_features.json": {
+      "sha256": "8f42d98c3a9cd6e8fe7982288afe0998d88164edbe52d0f7d6ec611ab8e843ae",
+      "size": 900,
+      "role": "execution_artifact"
+    },
+    "workspace/output/xlsx_enhancement_summary.json": {
+      "sha256": "086815a7f501d381144f2006abab6f0e54a823c44fa36d82326d1037b4664092",
+      "size": 2602,
+      "role": "execution_artifact"
+    }
+  },
+  "revision_capture": {
+    "present": true,
+    "gaps": [
+      {
+        "path": "workspace/output/business_verification.json.tmp",
+        "reason": "FileNotFoundError"
+      }
+    ]
+  },
+  "execution_trace": true,
+  "executable_replay_recipe": false,
+  "replay_requires_llm": false,
+  "replay_scopes": [
+    "agent_trajectory_tool_chain",
+    "final_effective_tool_execution"
+  ],
+  "limitations": [
+    "Tool events do not by themselves establish an executable recipe. Final-effective slicing requires reconstructing reads/writes, helper revisions, environment and success dependencies. Filesystem capture is not a syscall trace."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "filename": "of306_aug2023.pdf",
+  "revision": "OF-306, August 2023",
+  "sha256": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+  "page_count": 3,
+  "field_count": 38,
+  "official_source": "https://www.opm.gov/forms/pdf_fill/of306.pdf",
+  "actual_download_source": "https://www.opm.gov/forms/pdf_fill/of306.pdf",
+  "download_date": "Historical import; precise acquisition date not recorded",
+  "official_byte_identity_verified": false,
+  "records_contract_sha256": "430b8d2b7a7497f3efa0a2bcd79db3ba10d1249693338929f94ccf8e78dcc095"
+}

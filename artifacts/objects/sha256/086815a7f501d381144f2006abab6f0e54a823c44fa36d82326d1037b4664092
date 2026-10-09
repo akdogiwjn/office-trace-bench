@@ -1,0 +1,64 @@
+{
+  "task": "OFFICE-XLSX-HR",
+  "output_workbook": "hr_enhanced.xlsx",
+  "added_sheets": ["OEWS Summary", "Chart Data"],
+  "original_sheets_preserved": ["national_M2025_dl", "Field Descriptions", "UpdateTime", "Filler"],
+  "feature_counts": {
+    "metrics": 3,
+    "scenario_selectors": 1,
+    "scenario_dimensions": 1,
+    "scenario_rows": 2,
+    "scenario_assumption_inputs": 2,
+    "projections": 1,
+    "charts": 1,
+    "data_validations": 1,
+    "conditional_format_rules": 3,
+    "cell_comments": 5,
+    "freeze_panes_sheets": 2,
+    "added_sheet_formulas": 86
+  },
+  "feature_locations": {
+    "summary_sheet": "OEWS Summary",
+    "metrics": {
+      "total_employment": "OEWS Summary!B6",
+      "annual_mean_wage": "OEWS Summary!B7",
+      "hourly_median_wage": "OEWS Summary!B8"
+    },
+    "scenario": {
+      "selector": "OEWS Summary!B11",
+      "assumptions": {
+        "Base": {"wage_multiplier": "OEWS Summary!B14"},
+        "Increase": {"wage_multiplier": "OEWS Summary!B15"}
+      },
+      "projections": {"projected_mean_wage": "OEWS Summary!B18"}
+    },
+    "charts": {"major_employment": "Chart Data (index 0)"}
+  },
+  "helper_files": [
+    "helpers/build.py",
+    "helpers/patch.py",
+    "helpers/revisions/build_final.py",
+    "helpers/revisions/patch_v1_initial.py",
+    "helpers/revisions/patch_v2_relsfix.py",
+    "helpers/revisions/patch_v3_final.py",
+    "helpers/revisions/README.md"
+  ],
+  "helper_execution_attempts": [
+    {"helper": "build.py", "attempt": 1, "status": "success"},
+    {"helper": "recalc.py (diagnostic probe on recalc_probe.xlsx)", "attempt": 1, "status": "success"},
+    {"helper": "build.py", "attempt": 2, "status": "success", "note": "regenerated clean pre-build after LibreOffice overwrote it during recalc"},
+    {"helper": "recalc.py (pre_recalc.xlsx)", "attempt": 2, "status": "success", "note": "86 formulas, 0 errors"},
+    {"helper": "patch.py v1", "attempt": 1, "status": "failed", "note": "KeyError: rId1 (relationship attribute order)"},
+    {"helper": "patch.py v2", "attempt": 2, "status": "failed", "note": "string INDEX caches lacked t=str; output unreadable by openpyxl"},
+    {"helper": "patch.py v3 (final)", "attempt": 3, "status": "success"}
+  ],
+  "helper_successes": 4,
+  "helper_failures": 2,
+  "recalc_invocation_count": 2,
+  "recalc_timeout_seconds": 180,
+  "recalc_result": {"status": "success", "total_errors": 0, "total_formulas": 86},
+  "formula_recalc_json": "output/formula_recalc.json",
+  "workbook_features_json": "output/workbook_features.json",
+  "final_verifier_status": "success",
+  "final_verifier_failures": []
+}

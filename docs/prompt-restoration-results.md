@@ -1,3 +1,5 @@
+> 历史阶段记录，当前契约以 [suite 审计](suite-audit-v2.md) 为准。旧模板和合成扩增不属于当前正式输入。
+
 > 后续进展：共用模板与可核验背景上下文回归已通过，见 [本轮对比](../reports/context-aligned-trace-comparison-v4.md)。下文保留当时记录。
 
 # 旧提示词恢复与重新执行

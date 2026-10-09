@@ -1,0 +1,36 @@
+"""Passive supplementary capture, started mid-run; not an Agent tool event."""
+from datetime import datetime,timezone
+from pathlib import Path
+import sys,time
+sys.path.insert(0,'/workspace')
+from office_trace_bench.artifact_capture import ArtifactCapture
+from office_trace_bench.contracts import write_json,sha256
+
+ROOT=Path('/runs/xlsx-tlc-20261009T063937Z-9a06558f')
+TEMP=Path('/tmp');DEST=ROOT/'supplemental_temporary_capture'
+EXTENSIONS={'.py','.sh','.json','.csv','.tsv','.yaml','.yml','.cfg','.ini','.toml','.conf','.txt','.xlsx','.xls','.pdf','.xml','.rels','.parquet','.arrow','.feather'}
+class TemporaryCapture(ArtifactCapture):
+    def capture(self,path,action):
+        if path.suffix.lower() in EXTENSIONS:super().capture(path,action)
+
+started=datetime.now(timezone.utc).isoformat()
+capture=TemporaryCapture(TEMP,DEST,temporary_root=TEMP).start()
+for path in TEMP.rglob('*'):
+    if path.is_file():capture.capture(path,'initial_midrun_inventory')
+print('Supplementary temporary document/data capture active.',flush=True)
+def publish(events,gaps,complete):
+    transformed=[]
+    for event in events:
+        event=dict(event)
+        if event.get('path','').startswith('workspace/'):event['path']='temporary/'+event['path'][len('workspace/'):]
+        transformed.append(event)
+    write_json(DEST/'revisions.json',dict(schema_version='office-supplemental-temporary-capture-v1',run_id=ROOT.name,
+        started_at=started,logical_root='/tmp',observer_script_sha256=sha256(__file__),events=transformed,gaps=list(gaps),complete=complete,
+        scope='Passive observer of temporary document/transformed-data files. Initial mid-run inventory plus subsequent close-write/move versions. Does not execute helpers or change Agent tools.',
+        limitations=['Started mid-run; earlier removed or overwritten unsupported temporary-file versions cannot be recovered. Files over 128MiB and races are reported as gaps. This is not syscall read/exec provenance.']))
+while True:
+    publish(list(capture.events),capture.gaps,False)
+    if (ROOT/'openclaw_agent.stdout.log').stat().st_size>0:break
+    time.sleep(1)
+result=capture.finish();publish(result['events'],result['gaps'],True)
+print('Supplementary capture complete.',flush=True)

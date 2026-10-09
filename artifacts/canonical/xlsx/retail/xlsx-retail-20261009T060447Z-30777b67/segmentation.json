@@ -1,0 +1,206 @@
+{
+  "schema_version": "office-trace-segmentation-v1",
+  "events": [
+    {
+      "step_id": 2,
+      "tool_call_id": "call_00_OaUwxB6DijHBQpbsSvZz0146",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 2,
+      "tool_call_id": "call_01_O3dFMqD6MMKSlTWn7ocm1568",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_00_SjBuuoIRdtUbeKmhVSRD2621",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_01_32kcp2TZItpc83oneIPS3504",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 4,
+      "tool_call_id": "call_00_A9U0NV6wnDsZY65KmfLi5737",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 5,
+      "tool_call_id": "call_00_gsyNwzdHKcK0MxzTMB3W5516",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 6,
+      "tool_call_id": "call_00_U5VHh66QryDK7CSUvdRK9790",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 6,
+      "tool_call_id": "call_01_pZ6Dyd9ekwfSv9WgBZkX6169",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 7,
+      "tool_call_id": "call_00_w3JfIRBbUe7bzCUZO2GL3331",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 7,
+      "tool_call_id": "call_01_Kxxh8H6HQhEFyBHHYpsV5234",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 8,
+      "tool_call_id": "call_00_QZQQi3ZNeEBZAt5vfCBT5145",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 8,
+      "tool_call_id": "call_01_8EwfOT1yCzdaMeFEFbW25298",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 9,
+      "tool_call_id": "call_00_6tmnjnr5sPRw9l3qp6U41467",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 9,
+      "tool_call_id": "call_01_I2J2Vv6ThuG3GHMXTYG15840",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 10,
+      "tool_call_id": "call_00_bIOAjmAKVrJSbfD5Vy1j8025",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 10,
+      "tool_call_id": "call_01_TAPQYee1e9tHLSeZQd7h3793",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 11,
+      "tool_call_id": "call_00_9es6pBa1eQrQFoym7CHA7101",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 12,
+      "tool_call_id": "call_00_X5SpGfxvmn50Oct0zGsA9398",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 13,
+      "tool_call_id": "call_00_DNIDL51RmKcuPcftt7YT7341",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 14,
+      "tool_call_id": "call_00_FTuwl7CRQfCuB0ehE2iq2868",
+      "label": "helper_edit",
+      "result_present": true
+    },
+    {
+      "step_id": 15,
+      "tool_call_id": "call_00_ET_GC4mSHRL0ga64yCNQZnQ1988",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 16,
+      "tool_call_id": "call_00_YDOs2SEDU9h19aTdj4zZ2391",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 17,
+      "tool_call_id": "call_00_lCsbjQi3myN5xqD73n2x3262",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 18,
+      "tool_call_id": "call_00_1QPI3QdwI0DuzHRNjNcj2794",
+      "label": "verification",
+      "result_present": true
+    },
+    {
+      "step_id": 19,
+      "tool_call_id": "call_00_KpqbfbezrPBBFRVIdFtT2592",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 20,
+      "tool_call_id": "call_00_N15wpGU7raUwYzcsWCc63733",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 21,
+      "tool_call_id": "call_00_ET_eT2vAbWQVRtNWqWM9yBO2862",
+      "label": "verification",
+      "result_present": true
+    },
+    {
+      "step_id": 22,
+      "tool_call_id": "call_00_5G9LcLpxsSA86uR4tEvu5154",
+      "label": "execution_or_control",
+      "result_present": true
+    }
+  ],
+  "agent_tool_chain": [
+    "call_00_OaUwxB6DijHBQpbsSvZz0146",
+    "call_01_O3dFMqD6MMKSlTWn7ocm1568",
+    "call_00_SjBuuoIRdtUbeKmhVSRD2621",
+    "call_01_32kcp2TZItpc83oneIPS3504",
+    "call_00_A9U0NV6wnDsZY65KmfLi5737",
+    "call_00_gsyNwzdHKcK0MxzTMB3W5516",
+    "call_00_U5VHh66QryDK7CSUvdRK9790",
+    "call_01_pZ6Dyd9ekwfSv9WgBZkX6169",
+    "call_00_w3JfIRBbUe7bzCUZO2GL3331",
+    "call_01_Kxxh8H6HQhEFyBHHYpsV5234",
+    "call_00_QZQQi3ZNeEBZAt5vfCBT5145",
+    "call_01_8EwfOT1yCzdaMeFEFbW25298",
+    "call_00_6tmnjnr5sPRw9l3qp6U41467",
+    "call_01_I2J2Vv6ThuG3GHMXTYG15840",
+    "call_00_bIOAjmAKVrJSbfD5Vy1j8025",
+    "call_01_TAPQYee1e9tHLSeZQd7h3793",
+    "call_00_9es6pBa1eQrQFoym7CHA7101",
+    "call_00_X5SpGfxvmn50Oct0zGsA9398",
+    "call_00_DNIDL51RmKcuPcftt7YT7341",
+    "call_00_FTuwl7CRQfCuB0ehE2iq2868",
+    "call_00_ET_GC4mSHRL0ga64yCNQZnQ1988",
+    "call_00_YDOs2SEDU9h19aTdj4zZ2391",
+    "call_00_lCsbjQi3myN5xqD73n2x3262",
+    "call_00_1QPI3QdwI0DuzHRNjNcj2794",
+    "call_00_KpqbfbezrPBBFRVIdFtT2592",
+    "call_00_N15wpGU7raUwYzcsWCc63733",
+    "call_00_ET_eT2vAbWQVRtNWqWM9yBO2862",
+    "call_00_5G9LcLpxsSA86uR4tEvu5154"
+  ],
+  "final_effective_selection": null,
+  "final_effective_status": "requires dependency reconstruction and review; all retries/rewrites remain available",
+  "classification_method": "heuristic analysis labels; not a replay recipe"
+}

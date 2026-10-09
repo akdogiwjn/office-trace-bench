@@ -1,0 +1,16 @@
+You are executing a measured PDF Agent task inside a fresh trace-generation container.
+Workspace root: /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-SBA1919-01
+Input directory: /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-SBA1919-01/input
+Output directory: /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-SBA1919-01/output
+
+Read and follow /root/.openclaw/skills/pdf/SKILL.md and forms.md. Read input/dataset_manifest.json for the frozen form, records file and records key, semantic field rules, protected fields, summary contract, and deliverables. Inspect the actual PDF; do not assume its page count, field count, field names, revision, or business rules.
+
+Use python3 and the Skill's bundled scripts. Run check_fillable_fields.py and save its stdout as output/check_fillable_fields.log. Run extract_form_field_info.py and save output/form_field_info.json. Render the blank input to output/rendered/template/ using convert_pdf_to_images.py.
+
+Derive the batch size from the supplied records. For each record ID, create output/field_values/ID.json using field IDs and page numbers from the actual inspection, populate only the manifest's field rules with the supplied fictional values, fill output/filled/ID.pdf using fill_fillable_fields.py, and render it to output/rendered/ID/. Keep every original page. Omit all protected fields and leave them blank. Do not sign or certify forms, use real personal information, infer eligibility, or invent business answers. Preserve helpers, field-value JSON and intermediate configurations in this workspace, including distinct files for rewritten helpers.
+
+Prepare the batch mapping and driver before filling; avoid redundant probes and rerunning successful operations. Expected normal fill invocations equal the record count; expected normal render invocations equal the record count plus the blank template. Record actual invocation counts, including failed attempts and repairs. These counts are derived from this input, not universal constants.
+
+Write output/batch_summary.json according to the manifest's summary_contract. Run the independent input verifier named by agent_verifier, or input/verify_office.py when no custom verifier is declared; pass the source PDF, records JSON and output directory if required. It must create output/business_verification.json with status=success. Correct field mapping, privacy or rendering failures until it passes. Produce every manifest deliverable, one field-values JSON and one filled PDF per supplied record, and one PNG per original page for both template and each filled PDF.
+
+Do not install packages or download data during this task. Produce and verify the actual artifacts.

@@ -1,0 +1,20 @@
+You are executing a measured Spreadsheet Agent task inside a fresh trace-generation container.
+Workspace root: /root/.openclaw/workspace/tool-modeling/OFFICE-XLSX-HR
+Input directory: /root/.openclaw/workspace/tool-modeling/OFFICE-XLSX-HR/input
+Output directory: /root/.openclaw/workspace/tool-modeling/OFFICE-XLSX-HR/output
+
+Read and follow /root/.openclaw/skills/xlsx/SKILL.md. Read input/dataset_manifest.json for the input filename, task semantics, units, allowed scenarios, chart requirements, and deliverables. Inspect the actual workbook before designing your additions. Its sheet names, layout, dimensions, styles, formulas, and charts are dataset-specific; do not assume a standardized schema.
+
+Enhance a copy of the input workbook. Preserve all original worksheets in their original relative order, source data, original formulas, charts, merged regions, and formatting. Place your analysis and presentation on new worksheets. Choose their names and layout yourself. Do not replace, canonicalize, expand, or simplify the original data. Distinguish published aggregate estimates from individual records; retain suppression and missing-value markers.
+
+Implement the manifest's metrics as live Excel formulas linked to the original source data. Implement the allowed scenario selector and editable assumptions using a data-validation dropdown and formula-driven projections. Choose suitable Excel functions yourself. Do not hardcode calculated answers, create external workbook links, or infer missing published observations. Create the requested charts using appropriate categories and formula-linked values. Add readable formatting, freeze panes, conditional formatting, and source/assumption comments as required by the manifest. Apply Skill colors to newly added content only: editable inputs blue, cross-sheet formulas green, local formulas black.
+
+Save output/workbook_features.json as an index of your chosen implementation, using this schema:
+{"summary_sheet":"your new overview sheet", "metrics":{"metric_id":{"sheet":"your sheet","cell":"your chosen cell"}}, "scenario":{"selector":{"sheet":"your sheet","cell":"your chosen cell"}, "assumptions":{"scenario_name":{"dimension_id":{"sheet":"your sheet","cell":"your chosen input cell"}}}, "projections":{"projection_id":{"sheet":"your sheet","cell":"your chosen formula cell"}}}, "charts":{"chart_id":{"sheet":"your sheet","index":0}}}
+Use every metric, scenario, dimension, projection and chart ID from the manifest. Chart index is zero-based within the sheet. This file records locations you chose; the verifier independently checks workbook content and computed results.
+
+Use openpyxl and the Skill's bundled scripts/recalc.py to save a workbook with recalculated formula caches. Save its JSON stdout to output/formula_recalc.json. Use the timeout specified by the manifest. Avoid unnecessary recalculation; record all attempts, including repairs. Preserve source content through recalculation. If the spreadsheet engine changes original data or formatting, restore source content carefully while retaining recalculated caches for your new formulas. Do not overwrite a recalculated workbook with a normal openpyxl save that discards caches.
+
+Publish any reference files specified by the manifest. Run python3 input/verify_office.py to create output/business_verification.json. Repair problems if verification fails. Finally write output/xlsx_enhancement_summary.json with added sheet names, feature counts, helper filenames, helper execution attempts and successes, recalc invocation count, and final_verifier_status. Preserve every helper and intermediate configuration used in execution within this workspace, including distinct files for rewritten helpers. Completion requires all manifest deliverables and status=success from the verifier.
+
+Do not install packages or download data during this task. Produce and verify the actual artifacts.

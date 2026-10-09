@@ -1,0 +1,37 @@
+{
+  "dataset_id": "manufacturing",
+  "output_workbook": "manufacturing_enhanced.xlsx",
+  "summary_sheet": "Dashboard",
+  "added_sheets": ["Dashboard"],
+  "preserved_sheets": ["Shipments August 2026"],
+  "feature_counts": {
+    "metrics": 4,
+    "scenario_selectors": 1,
+    "scenario_rows": 3,
+    "scenario_dimensions": 1,
+    "editable_assumptions": 3,
+    "projections": 1,
+    "charts": 2,
+    "conditional_format_ranges": 3,
+    "cell_comments": 7,
+    "data_validations": 1,
+    "freeze_panes": 1
+  },
+  "helpers": [
+    {"filename": "build_workbook.py", "purpose": "load source, add Dashboard with formulas/charts/CF/DV/comments", "attempts": 2, "successes": 1},
+    {"filename": "restore_source_style.py", "purpose": "post-recalc repair of original-sheet default style entries", "attempts": 2, "successes": 1}
+  ],
+  "helper_files_preserved": [
+    "build_workbook.py",
+    "restore_source_style.py",
+    "work/manufacturing_enhanced.recalced.xlsx"
+  ],
+  "recalc_invocations": 1,
+  "recalc_timeout_seconds": 180,
+  "recalc_report_file": "formula_recalc.json",
+  "formula_count": 10,
+  "repairs": [
+    "LibreOffice recalc rewrote xl/styles.xml default cellXf/font for the untouched source sheet; restored font[0] and cellXfs[0] from the source (style index 0 is used only by the original sheet) while retaining all recalculated caches."
+  ],
+  "final_verifier_status": "success"
+}

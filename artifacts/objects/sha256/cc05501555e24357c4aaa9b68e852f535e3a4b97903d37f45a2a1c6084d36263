@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Post-recalc repair: restore the original sheet's default style semantics.
+
+LibreOffice (via recalc) reserialized xl/styles.xml and changed the default
+cellXf/font used by the untouched source sheet (added charset, dropped
+scheme=minor, injected horizontal/vertical alignment).  Style index 0 is used
+ONLY by the original sheet, so we splice the source's font[0] / cellXfs[0] back
+in while keeping every other part (including recalculated formula caches)
+untouched.
+
+Run AFTER recalc.py and BEFORE verification.  Never re-run recalc afterwards.
+"""
+import re
+import sys
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "input" / "m3_shipments_202608.xlsx"
+OUT = ROOT / "output" / "manufacturing_enhanced.xlsx"
+
+STYLES_PART = "xl/styles.xml"
+
+
+def first_block(xml, tag):
+    """Return the first <tag .../> or <tag ...>...</tag> element inside a <tag s> container."""
+    container = re.search(rf"<{tag}s[^>]*>(.*?)</{tag}s>", xml, re.S)
+    if not container:
+        raise ValueError(f"{tag}s container not found")
+    body = container.group(1)
+    m = re.match(r"\s*(<" + tag + r"\b[^>]*?/>|<" + tag + r"\b.*?</" + tag + r">)", body, re.S)
+    if not m:
+        raise ValueError(f"no <{tag}> element found")
+    return m.group(1)
+
+
+def main(path=None):
+    path = Path(path) if path else OUT
+    src_styles = zipfile.ZipFile(SRC).read(STYLES_PART).decode("utf-8")
+    src_font0 = first_block(src_styles, "font")
+    src_xf0 = first_block(src_styles, "xf")
+
+    zin = zipfile.ZipFile(path)
+    names = zin.namelist()
+    data = {n: zin.read(n) for n in names}
+    zin.close()
+
+    styles = data[STYLES_PART].decode("utf-8")
+
+    # Replace the first <font> in the <fonts> container with the source's.
+    fonts_c = re.search(r"(<fonts[^>]*>)(.*?)(</fonts>)", styles, re.S)
+    body = fonts_c.group(2)
+    new_body, n_font = re.subn(re.escape(first_block(styles, "font")), src_font0, body, count=1)
+    assert n_font == 1, "font[0] not replaced"
+    styles = styles[:fonts_c.start(2)] + new_body + styles[fonts_c.end(2):]
+
+    # Replace the first <xf> in the <cellXfs> container with the source's.
+    xfs_c = re.search(r"(<cellXfs[^>]*>)(.*?)(</cellXfs>)", styles, re.S)
+    body = xfs_c.group(2)
+    new_body, n_xf = re.subn(re.escape(first_block(styles, "xf")), src_xf0, body, count=1)
+    assert n_xf == 1, "cellXfs[0] not replaced"
+    styles = styles[:xfs_c.start(2)] + new_body + styles[xfs_c.end(2):]
+
+    data[STYLES_PART] = styles.encode("utf-8")
+
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zout:
+        for n in names:
+            zout.writestr(n, data[n])
+    print(f"patched {STYLES_PART}: font[0] and cellXfs[0] restored from source")
+
+
+if __name__ == "__main__":
+    main(*sys.argv[1:])

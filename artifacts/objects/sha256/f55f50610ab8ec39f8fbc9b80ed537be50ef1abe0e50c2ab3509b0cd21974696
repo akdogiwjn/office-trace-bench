@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Build per-record field_values JSON for the IRS W-4 batch.
+
+Reads the frozen manifest (field_rules, protected_blank), the supplied records,
+and the inspected form_field_info.json (real field IDs + page numbers).
+Writes output/field_values/<ID>.json for every supplied record.
+
+Only the manifest's declared field_rules are populated. Protected fields are
+omitted entirely (left blank). No eligibility inference, no signatures.
+"""
+import json
+from pathlib import Path
+
+WS = Path(__file__).resolve().parent
+IN = WS / "input"
+OUT = WS / "output"
+
+manifest = json.load(open(IN / "dataset_manifest.json"))
+records = json.load(open(IN / manifest["records"]))[manifest["records_key"]]
+field_info = json.load(open(OUT / "form_field_info.json"))
+page_by_id = {f["field_id"]: f["page"] for f in field_info}
+
+field_rules = manifest["requirements"]["field_rules"]
+protected = set(manifest["requirements"]["protected_blank"])
+
+
+def resolve(record, dotted):
+    cur = record
+    for part in dotted.split("."):
+        cur = cur[part]
+    return cur
+
+
+def coerce(value, rule):
+    if "choices" in rule:
+        key = "true" if value else "false"
+        return rule["choices"][key]
+    return value
+
+
+def build(record):
+    rows = []
+    for rule in field_rules:
+        fid = rule["field_id"]
+        assert fid in page_by_id, f"field {fid} not in inspection"
+        assert fid not in protected, f"field {fid} is protected"
+        raw = resolve(record, rule["value_from"])
+        value = coerce(raw, rule)
+        rows.append({
+            "field_id": fid,
+            "description": rule["semantic"],
+            "page": page_by_id[fid],
+            "value": value,
+        })
+    return rows
+
+
+def main():
+    (OUT / "field_values").mkdir(parents=True, exist_ok=True)
+    ids = []
+    for rec in records:
+        rows = build(rec)
+        (OUT / "field_values" / f"{rec['id']}.json").write_text(
+            json.dumps(rows, indent=2) + "\n"
+        )
+        ids.append(rec["id"])
+    (WS / "batch_ids.json").write_text(json.dumps(ids, indent=2) + "\n")
+    print(f"records={len(ids)} fields_per_record={len(field_rules)}")
+    print("ids=" + ",".join(ids))
+
+
+if __name__ == "__main__":
+    main()

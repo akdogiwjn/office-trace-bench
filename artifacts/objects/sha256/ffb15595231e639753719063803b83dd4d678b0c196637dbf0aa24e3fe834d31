@@ -1,0 +1,63 @@
+{
+  "summary_sheet": "Analysis Dashboard",
+  "metrics": {
+    "total_shipments": {
+      "sheet": "Analysis Dashboard",
+      "cell": "B6"
+    },
+    "monthly_growth": {
+      "sheet": "Analysis Dashboard",
+      "cell": "B7"
+    },
+    "durable_share": {
+      "sheet": "Analysis Dashboard",
+      "cell": "B8"
+    },
+    "nondurable_shipments": {
+      "sheet": "Analysis Dashboard",
+      "cell": "B9"
+    }
+  },
+  "scenario": {
+    "selector": {
+      "sheet": "Analysis Dashboard",
+      "cell": "B12"
+    },
+    "assumptions": {
+      "Base": {
+        "shipments_multiplier": {
+          "sheet": "Analysis Dashboard",
+          "cell": "B14"
+        }
+      },
+      "Expansion": {
+        "shipments_multiplier": {
+          "sheet": "Analysis Dashboard",
+          "cell": "B15"
+        }
+      },
+      "Contraction": {
+        "shipments_multiplier": {
+          "sheet": "Analysis Dashboard",
+          "cell": "B16"
+        }
+      }
+    },
+    "projections": {
+      "projected_shipments": {
+        "sheet": "Analysis Dashboard",
+        "cell": "B19"
+      }
+    }
+  },
+  "charts": {
+    "durability_mix": {
+      "sheet": "Analysis Dashboard",
+      "index": 0
+    },
+    "shipment_trend": {
+      "sheet": "Analysis Dashboard",
+      "index": 1
+    }
+  }
+}

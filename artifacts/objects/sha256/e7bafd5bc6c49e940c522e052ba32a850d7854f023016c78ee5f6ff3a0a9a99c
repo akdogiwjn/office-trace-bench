@@ -1,0 +1,316 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "hr",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "input:input/national_M2025_dl.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "source:worksheets": {
+      "ok": true,
+      "detail": [
+        "national_M2025_dl",
+        "Field Descriptions",
+        "UpdateTime",
+        "Filler",
+        "OEWS Summary",
+        "Chart Data"
+      ]
+    },
+    "source:relative_order": {
+      "ok": true,
+      "detail": null
+    },
+    "source:data:national_M2025_dl": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:national_M2025_dl": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:national_M2025_dl": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Field Descriptions": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Field Descriptions": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Field Descriptions": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:UpdateTime": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:UpdateTime": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:UpdateTime": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:Filler": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": []
+      }
+    },
+    "source:formulas:Filler": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:Filler": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:national_M2025_dl": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:national_M2025_dl": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:national_M2025_dl": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Field Descriptions": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Field Descriptions": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Field Descriptions": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:UpdateTime": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:UpdateTime": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:UpdateTime": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Filler": {
+      "ok": true,
+      "detail": null
+    },
+    "source:charts:Filler": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Filler": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names": {
+      "ok": true,
+      "detail": null
+    },
+    "overview_added": {
+      "ok": true,
+      "detail": null
+    },
+    "metric_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:OEWS Summary!B6": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:total_employment": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:total_employment": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:total_employment": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:OEWS Summary!B7": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:annual_mean_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:annual_mean_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:annual_mean_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:OEWS Summary!B8": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:hourly_median_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:hourly_median_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:hourly_median_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:selector_color": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:wage_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Increase": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Increase:wage_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "projection_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:OEWS Summary!B18": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_mean_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_mean_wage": {
+      "ok": true,
+      "detail": null
+    },
+    "chart_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:major_employment": {
+      "ok": true,
+      "detail": [
+        "CHARTDATA!C28:C32",
+        "CHARTDATA!D27",
+        "CHARTDATA!D28:D32"
+      ]
+    },
+    "semantic:chart:major_employment": {
+      "ok": true,
+      "detail": [
+        [
+          17753430,
+          13680750,
+          13677150,
+          13424300,
+          11132700
+        ]
+      ]
+    },
+    "semantic:chart_dependency:major_employment": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:major_employment": {
+      "ok": true,
+      "detail": null
+    },
+    "format:conditional_rules": {
+      "ok": true,
+      "detail": null
+    },
+    "format:comments": {
+      "ok": true,
+      "detail": null
+    },
+    "format:freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:hr_enhanced.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:workbook_features.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "failures": []
+}

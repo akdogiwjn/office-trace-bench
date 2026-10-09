@@ -1,0 +1,1527 @@
+[
+  {
+    "field_id": "OC",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      179.6,
+      703.28,
+      188.6,
+      711.207
+    ]
+  },
+  {
+    "field_id": "EPC",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      212.16,
+      703.28,
+      221.16,
+      711.207
+    ]
+  },
+  {
+    "field_id": "applicantname",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      238.01,
+      698.898,
+      583.908,
+      714.699
+    ]
+  },
+  {
+    "field_id": "operatingnbusname",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      237.864,
+      682.112,
+      583.959,
+      697.913
+    ]
+  },
+  {
+    "field_id": "dba",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      237.864,
+      665.45,
+      583.696,
+      681.251
+    ]
+  },
+  {
+    "field_id": "Business TIN EIN SSN",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      237.864,
+      648.621,
+      583.565,
+      664.422
+    ]
+  },
+  {
+    "field_id": "PrimarIndustry",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      237.94,
+      631.816,
+      295.893,
+      647.864
+    ]
+  },
+  {
+    "field_id": "busphone",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.039,
+      631.544,
+      583.711,
+      647.739
+    ]
+  },
+  {
+    "field_id": "yearbeginoperations",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.039,
+      615.139,
+      583.777,
+      630.94
+    ]
+  },
+  {
+    "field_id": "UniqueEntityID",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      237.94,
+      615.033,
+      295.893,
+      631.221
+    ]
+  },
+  {
+    "field_id": "Employee Stock Ownership Plan ESOP",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      390.84,
+      611.48,
+      398.88,
+      603.269
+    ]
+  },
+  {
+    "field_id": "soleprop",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      98.269,
+      603.96,
+      106.309,
+      611.777
+    ]
+  },
+  {
+    "field_id": "401k or ROBS 401k Trust",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      390.84,
+      600.4,
+      398.88,
+      592.189
+    ]
+  },
+  {
+    "field_id": "partnership",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      98.269,
+      592.238,
+      106.309,
+      600.055
+    ]
+  },
+  {
+    "field_id": "Cooperative",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      390.84,
+      589.24,
+      398.88,
+      581.029
+    ]
+  },
+  {
+    "field_id": "ccorp",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      98.269,
+      581.093,
+      106.309,
+      588.91
+    ]
+  },
+  {
+    "field_id": "NativeAmerican TribalOwned Business",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      390.84,
+      578.08,
+      398.88,
+      569.869
+    ]
+  },
+  {
+    "field_id": "scorp",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      98.269,
+      569.949,
+      106.309,
+      577.766
+    ]
+  },
+  {
+    "field_id": "llc",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      98.269,
+      558.804,
+      106.309,
+      566.621
+    ]
+  },
+  {
+    "field_id": "speowntypeother",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      423.96,
+      558.72,
+      540.96,
+      569.04
+    ]
+  },
+  {
+    "field_id": "Other",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      390.84,
+      558.709,
+      399.143,
+      566.92
+    ]
+  },
+  {
+    "field_id": "etother",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      98.269,
+      547.659,
+      106.309,
+      555.476
+    ]
+  },
+  {
+    "field_id": "entityother",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      135.48,
+      547.56,
+      230.28,
+      558.96
+    ]
+  },
+  {
+    "field_id": "Business Address",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      36.0875,
+      451.937,
+      299.679,
+      520.472
+    ]
+  },
+  {
+    "field_id": "Project Address",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      301.572,
+      450.965,
+      582.854,
+      519.5
+    ]
+  },
+  {
+    "field_id": "Primary Contact Name",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      472.44,
+      432.6,
+      583.44,
+      448.32
+    ]
+  },
+  {
+    "field_id": "Primary Contact Email Address",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      472.44,
+      415.56,
+      583.44,
+      431.4
+    ]
+  },
+  {
+    "field_id": " of existing employees including owners all parttime fulltime and all employees of domestic and foreign Affiliates  do not convert to FTE",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      472.8,
+      387.96,
+      583.08,
+      414
+    ]
+  },
+  {
+    "field_id": " of FTE jobs savedretained because of the loan including owners",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      472.44,
+      371.04,
+      583.44,
+      386.76
+    ]
+  },
+  {
+    "field_id": " of new FTE jobs created because of the loan including owners",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      472.44,
+      354.12,
+      583.44,
+      369.84
+    ]
+  },
+  {
+    "field_id": "Purchase/Construction of Commercial Real Estate amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      511.92,
+      321.68,
+      572.76,
+      332.96
+    ]
+  },
+  {
+    "field_id": "Acquisitioninstallation of equipment",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      42.0,
+      320.08,
+      52.32,
+      329.32
+    ]
+  },
+  {
+    "field_id": "PurchaseConstruction of Commercial Real Estate",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      305.16,
+      320.08,
+      315.48,
+      329.32
+    ]
+  },
+  {
+    "field_id": "Acquisition/installation of equipment amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      233.16,
+      319.8,
+      294.0,
+      331.2
+    ]
+  },
+  {
+    "field_id": "Working Capital amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      233.16,
+      303.84,
+      294.0,
+      315.24
+    ]
+  },
+  {
+    "field_id": "Acquisition of inventory amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      511.92,
+      302.84,
+      572.76,
+      314.24
+    ]
+  },
+  {
+    "field_id": "working capital",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      42.0,
+      301.24,
+      52.32,
+      310.48
+    ]
+  },
+  {
+    "field_id": "Acquisition of Inventory",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      305.16,
+      301.24,
+      315.48,
+      310.48
+    ]
+  },
+  {
+    "field_id": "Business acquisition (Change of Ownership) amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      233.16,
+      285.0,
+      294.0,
+      296.4
+    ]
+  },
+  {
+    "field_id": "Debt Refinancing amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      511.92,
+      284.0,
+      572.76,
+      295.4
+    ]
+  },
+  {
+    "field_id": "Business acquisition Change of Ownership",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      42.0,
+      282.4,
+      52.32,
+      292.23
+    ]
+  },
+  {
+    "field_id": "DebtRefi",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      305.16,
+      282.4,
+      315.48,
+      291.64
+    ]
+  },
+  {
+    "field_id": "Other amount2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      511.92,
+      265.16,
+      572.76,
+      276.56
+    ]
+  },
+  {
+    "field_id": "OtherPurpose",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      42.0,
+      264.56,
+      52.32,
+      273.8
+    ]
+  },
+  {
+    "field_id": "OtherPurpose2",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 1,
+    "rect": [
+      305.16,
+      264.56,
+      315.48,
+      273.8
+    ]
+  },
+  {
+    "field_id": "Other amount",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      233.16,
+      264.16,
+      294.0,
+      275.56
+    ]
+  },
+  {
+    "field_id": "otherpurp2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      344.502,
+      263.191,
+      489.195,
+      279.295
+    ]
+  },
+  {
+    "field_id": "otherpurp1",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      77.8274,
+      263.099,
+      222.521,
+      279.203
+    ]
+  },
+  {
+    "field_id": "Owners Legal Name First name Last nameRow1",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      36.24,
+      164.32,
+      146.64,
+      189.28
+    ]
+  },
+  {
+    "field_id": "TitleRow1",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      148.68,
+      164.32,
+      259.2,
+      189.28
+    ]
+  },
+  {
+    "field_id": "Ownership Row1",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      261.24,
+      164.32,
+      317.64,
+      189.28
+    ]
+  },
+  {
+    "field_id": "TIN SSNEINRow1",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      319.68,
+      164.32,
+      389.64,
+      189.28
+    ]
+  },
+  {
+    "field_id": "Home Address Street City State Zip Code No PO BoxRow1",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.68,
+      164.32,
+      583.2,
+      189.28
+    ]
+  },
+  {
+    "field_id": "Ownership Row2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      261.24,
+      138.394,
+      317.64,
+      163.354
+    ]
+  },
+  {
+    "field_id": "Owners Legal Name First name Last nameRow2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      36.24,
+      137.92,
+      146.64,
+      162.88
+    ]
+  },
+  {
+    "field_id": "TitleRow2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      148.68,
+      137.92,
+      259.2,
+      162.88
+    ]
+  },
+  {
+    "field_id": "TIN SSNEINRow2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      319.68,
+      137.92,
+      389.64,
+      162.88
+    ]
+  },
+  {
+    "field_id": "Home Address Street City State Zip Code No PO BoxRow2",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.68,
+      137.92,
+      583.2,
+      162.88
+    ]
+  },
+  {
+    "field_id": "Owners Legal Name First name Last nameRow3",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      36.24,
+      111.52,
+      146.64,
+      136.48
+    ]
+  },
+  {
+    "field_id": "TitleRow3",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      148.68,
+      111.52,
+      259.2,
+      136.48
+    ]
+  },
+  {
+    "field_id": "Ownership Row3",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      261.24,
+      111.52,
+      317.64,
+      136.48
+    ]
+  },
+  {
+    "field_id": "TIN SSNEINRow3",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      319.68,
+      111.52,
+      389.64,
+      136.48
+    ]
+  },
+  {
+    "field_id": "Home Address Street City State Zip Code No PO BoxRow3",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.68,
+      111.52,
+      583.2,
+      136.48
+    ]
+  },
+  {
+    "field_id": "Owners Legal Name First name Last nameRow4",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      36.24,
+      85.12,
+      146.64,
+      110.08
+    ]
+  },
+  {
+    "field_id": "TitleRow4",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      148.68,
+      85.12,
+      259.2,
+      110.08
+    ]
+  },
+  {
+    "field_id": "Ownership Row4",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      261.24,
+      85.12,
+      317.64,
+      110.08
+    ]
+  },
+  {
+    "field_id": "TIN SSNEINRow4",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      319.68,
+      85.12,
+      389.64,
+      110.08
+    ]
+  },
+  {
+    "field_id": "Home Address Street City State Zip Code No PO BoxRow4",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.68,
+      85.12,
+      583.2,
+      110.08
+    ]
+  },
+  {
+    "field_id": "Owners Legal Name First name Last nameRow5",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      36.24,
+      58.72,
+      146.64,
+      83.68
+    ]
+  },
+  {
+    "field_id": "TitleRow5",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      148.68,
+      58.72,
+      259.2,
+      83.68
+    ]
+  },
+  {
+    "field_id": "Ownership Row5",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      261.24,
+      58.72,
+      317.64,
+      83.68
+    ]
+  },
+  {
+    "field_id": "TIN SSNEINRow5",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      319.68,
+      58.72,
+      389.64,
+      83.68
+    ]
+  },
+  {
+    "field_id": "Home Address Street City State Zip Code No PO BoxRow5",
+    "type": "text",
+    "page": 1,
+    "rect": [
+      391.68,
+      58.72,
+      583.2,
+      83.68
+    ]
+  },
+  {
+    "field_id": "Owners Legal Name First name Last name",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      256.828,
+      659.728,
+      583.426,
+      681.087
+    ]
+  },
+  {
+    "field_id": "Owners Position",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      256.828,
+      638.003,
+      583.771,
+      658.663
+    ]
+  },
+  {
+    "field_id": "NonVeteran",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      197.0,
+      623.84,
+      207.32,
+      633.08
+    ]
+  },
+  {
+    "field_id": "Veteran",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      261.96,
+      623.84,
+      272.28,
+      633.08
+    ]
+  },
+  {
+    "field_id": "ServiceDisabled Veteran",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      305.08,
+      623.84,
+      315.4,
+      633.08
+    ]
+  },
+  {
+    "field_id": "Spouse of Veteran",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      414.64,
+      623.84,
+      424.96,
+      633.08
+    ]
+  },
+  {
+    "field_id": "Not Disclosed",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      499.04,
+      623.84,
+      509.36,
+      633.08
+    ]
+  },
+  {
+    "field_id": "male",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      195.0,
+      605.8,
+      205.32,
+      615.04
+    ]
+  },
+  {
+    "field_id": "female",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      233.4,
+      605.8,
+      243.72,
+      615.04
+    ]
+  },
+  {
+    "field_id": "GenderNotDisclosed",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      275.44,
+      605.8,
+      285.76,
+      615.04
+    ]
+  },
+  {
+    "field_id": "American Indian or Alaska Native",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      195.0,
+      589.76,
+      205.32,
+      599.0
+    ]
+  },
+  {
+    "field_id": "Asian",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      341.16,
+      589.76,
+      351.48,
+      599.0
+    ]
+  },
+  {
+    "field_id": "Black or African American",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      380.24,
+      589.76,
+      390.56,
+      599.0
+    ]
+  },
+  {
+    "field_id": "Native Hawaiian or Pacific Islander",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      195.0,
+      576.8,
+      205.32,
+      586.04
+    ]
+  },
+  {
+    "field_id": "White",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      344.2,
+      576.8,
+      354.52,
+      586.04
+    ]
+  },
+  {
+    "field_id": "Not Disclosed_race",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      385.24,
+      576.8,
+      395.56,
+      586.04
+    ]
+  },
+  {
+    "field_id": "Hispanic or Latino",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      195.0,
+      559.96,
+      205.32,
+      569.2
+    ]
+  },
+  {
+    "field_id": "Not Hispanic or Latino",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      284.64,
+      559.96,
+      294.96,
+      569.2
+    ]
+  },
+  {
+    "field_id": "Not Disclosed_ethnicity",
+    "type": "checkbox",
+    "checked_value": "/On",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      384.88,
+      559.96,
+      395.2,
+      569.2
+    ]
+  },
+  {
+    "field_id": "1yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      524.879,
+      492.833,
+      542.879,
+      510.833
+    ]
+  },
+  {
+    "field_id": "1no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.317,
+      492.833,
+      577.317,
+      510.833
+    ]
+  },
+  {
+    "field_id": "2yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      524.879,
+      456.862,
+      542.879,
+      474.862
+    ]
+  },
+  {
+    "field_id": "2no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.317,
+      456.862,
+      577.317,
+      474.862
+    ]
+  },
+  {
+    "field_id": "3yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      524.879,
+      426.497,
+      542.879,
+      444.497
+    ]
+  },
+  {
+    "field_id": "3no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.317,
+      426.497,
+      577.317,
+      444.497
+    ]
+  },
+  {
+    "field_id": "4yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      524.879,
+      394.234,
+      542.879,
+      412.234
+    ]
+  },
+  {
+    "field_id": "4no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.317,
+      394.234,
+      577.317,
+      412.234
+    ]
+  },
+  {
+    "field_id": "5initials",
+    "type": "unknown (/Sig)",
+    "page": 2,
+    "rect": [
+      518.124,
+      366.44,
+      583.477,
+      382.986
+    ]
+  },
+  {
+    "field_id": "5yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      525.229,
+      337.271,
+      543.229,
+      355.271
+    ]
+  },
+  {
+    "field_id": "5no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.193,
+      337.271,
+      577.193,
+      355.271
+    ]
+  },
+  {
+    "field_id": "5a Provide the estimated total export sales this loan will support",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      528.654,
+      312.29,
+      583.75,
+      327.209
+    ]
+  },
+  {
+    "field_id": "5b3 List of principal countries of Export list at least 1",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      454.864,
+      268.915,
+      583.908,
+      284.765
+    ]
+  },
+  {
+    "field_id": "5b List of principal countries of Export list at least 1",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      225.48,
+      268.8,
+      336.48,
+      285.0
+    ]
+  },
+  {
+    "field_id": "5b2 List of principal countries of Export list at least 1",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      337.784,
+      268.799,
+      453.645,
+      284.999
+    ]
+  },
+  {
+    "field_id": "6yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      526.094,
+      241.38,
+      544.094,
+      259.38
+    ]
+  },
+  {
+    "field_id": "6no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.532,
+      241.38,
+      577.532,
+      259.38
+    ]
+  },
+  {
+    "field_id": "7yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      526.094,
+      203.432,
+      544.094,
+      221.432
+    ]
+  },
+  {
+    "field_id": "7no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.532,
+      203.432,
+      577.532,
+      221.432
+    ]
+  },
+  {
+    "field_id": "8yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      526.094,
+      162.556,
+      544.094,
+      180.556
+    ]
+  },
+  {
+    "field_id": "8no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.532,
+      162.556,
+      577.532,
+      180.556
+    ]
+  },
+  {
+    "field_id": "9yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      526.094,
+      126.235,
+      544.094,
+      144.235
+    ]
+  },
+  {
+    "field_id": "9no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.532,
+      126.235,
+      577.532,
+      144.235
+    ]
+  },
+  {
+    "field_id": "10yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      526.094,
+      96.2201,
+      544.094,
+      114.22
+    ]
+  },
+  {
+    "field_id": "10no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.532,
+      96.2201,
+      577.532,
+      114.22
+    ]
+  },
+  {
+    "field_id": "11yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      526.094,
+      60.2493,
+      544.094,
+      78.2493
+    ]
+  },
+  {
+    "field_id": "11no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 2,
+    "rect": [
+      559.532,
+      60.2493,
+      577.532,
+      78.2493
+    ]
+  },
+  {
+    "field_id": "12yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 3,
+    "rect": [
+      525.196,
+      686.694,
+      543.196,
+      704.694
+    ]
+  },
+  {
+    "field_id": "12no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 3,
+    "rect": [
+      559.181,
+      686.694,
+      577.181,
+      704.694
+    ]
+  },
+  {
+    "field_id": "13yes",
+    "type": "checkbox",
+    "checked_value": "/Yes",
+    "unchecked_value": "/Off",
+    "page": 3,
+    "rect": [
+      525.196,
+      655.664,
+      543.196,
+      673.664
+    ]
+  },
+  {
+    "field_id": "13no",
+    "type": "checkbox",
+    "checked_value": "/No",
+    "unchecked_value": "/Off",
+    "page": 3,
+    "rect": [
+      559.181,
+      655.664,
+      577.181,
+      673.664
+    ]
+  },
+  {
+    "field_id": "Signature of Authorized Representative of Applicant",
+    "type": "unknown (/Sig)",
+    "page": 4,
+    "rect": [
+      21.6,
+      525,
+      278.4,
+      553.8
+    ]
+  },
+  {
+    "field_id": "Date",
+    "type": "text",
+    "page": 4,
+    "rect": [
+      375.24,
+      525,
+      483.24,
+      553.8
+    ]
+  },
+  {
+    "field_id": "Print Name",
+    "type": "text",
+    "page": 4,
+    "rect": [
+      21.6,
+      479.88,
+      278.4,
+      508.68
+    ]
+  },
+  {
+    "field_id": "Title",
+    "type": "text",
+    "page": 4,
+    "rect": [
+      375.24,
+      479.88,
+      483.24,
+      508.68
+    ]
+  }
+]

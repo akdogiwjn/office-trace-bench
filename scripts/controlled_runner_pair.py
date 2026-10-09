@@ -11,7 +11,7 @@ import sys
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-LEGACY = ROOT.parent / 'openclaw-trace-bench'
+LEGACY = ROOT / 'legacy/runner'
 sys.path.insert(0, str(ROOT))
 import office
 from office_trace_bench.contracts import load_manifest, read_json, sha256, write_json
@@ -30,7 +30,7 @@ def prepare_snapshot(snapshot, kind, dataset):
     for name in ('office_trace_bench', 'prompts', 'vendor', 'runtime', 'runtime_context'):
         shutil.copytree(ROOT / name, snapshot / name, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
     shutil.copy2(ROOT / 'office.py', snapshot / 'office.py')
-    source_dataset = ROOT / 'datasets' / kind / dataset
+    source_dataset = LEGACY / 'cases' / kind
     shutil.copytree(source_dataset, snapshot / 'datasets' / kind / dataset)
     manifest = load_manifest(source_dataset / 'manifest.json')
     template = snapshot / 'prompts' / manifest['prompt_template']
@@ -71,7 +71,7 @@ def prepare_snapshot(snapshot, kind, dataset):
     shutil.copy2(ROOT / 'scripts/control_openclaw.py', snapshot / 'control-bin/openclaw')
     (snapshot / 'control-bin/openclaw').chmod(0o755)
     skill = 'vendor/skills/' + kind
-    legacy_skill = {k: v for k, v in tree_hashes(LEGACY / skill).items()
+    legacy_skill = {k: v for k, v in tree_hashes(ROOT / skill).items()
                     if '__pycache__' not in Path(k).parts and not k.endswith('.pyc')}
     if tree_hashes(snapshot / skill) != legacy_skill:
         raise ValueError('Office Skill source differs across old/new')

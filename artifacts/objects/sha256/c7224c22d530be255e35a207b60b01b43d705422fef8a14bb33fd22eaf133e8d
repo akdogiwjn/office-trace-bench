@@ -1,0 +1,8 @@
+[
+  {
+    "cmd": "python3 recalc.py recalc_source.xlsx 180",
+    "returncode": 0,
+    "stdout": "{\n  \"status\": \"success\",\n  \"total_errors\": 0,\n  \"error_summary\": {},\n  \"total_formulas\": 8\n}\n",
+    "stderr": "/usr/local/lib/python3.12/dist-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed\n  warn(msg)\n/usr/local/lib/python3.12/dist-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed\n  warn(msg)\n"
+  }
+]

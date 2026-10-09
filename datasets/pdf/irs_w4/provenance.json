@@ -1,0 +1,13 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "filename": "fw4_2026.pdf",
+  "revision": "Form W-4, 2026",
+  "sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+  "page_count": 5,
+  "field_count": 48,
+  "official_source": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+  "actual_download_source": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+  "download_date": "2026-10-09",
+  "official_byte_identity_verified": true,
+  "records_contract_sha256": "3aac32e0c07470f413d5ee07665220b4361eef04a193522e248b21485b3ff8ad"
+}

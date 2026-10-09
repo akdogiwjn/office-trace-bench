@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Future executable recipe contract; no recipes are promoted yet",
+  "type": "object",
+  "required": ["schema_version", "canonical_trace_sha256", "mode", "requires_llm", "runtime_image_id", "files", "steps", "selection_review"],
+  "properties": {
+    "schema_version": {"const": "office-replay-recipe-v1"},
+    "canonical_trace_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "mode": {"enum": ["agent_trajectory_tool_chain", "final_effective_tool_execution"]},
+    "requires_llm": {"const": false},
+    "runtime_image_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "files": {
+      "type": "array",
+      "items": {"type": "object", "required": ["path", "sha256", "role"], "properties": {
+        "path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "role": {"enum": ["input", "skill", "helper_revision", "intermediate", "runtime_config"]}
+      }, "additionalProperties": false}
+    },
+    "steps": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["id", "source_tool_call_ids", "adapter", "cwd", "argv", "env", "reads", "writes", "expected_exit_code"],
+        "properties": {
+          "id": {"type": "string"}, "source_tool_call_ids": {"type": "array", "items": {"type": "string"}},
+          "adapter": {"enum": ["exec", "file_write", "file_edit", "process_control"]},
+          "cwd": {"type": "string"}, "argv": {"type": "array", "items": {"type": "string"}},
+          "env": {"type": "object", "additionalProperties": {"type": "string"}},
+          "stdin_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "reads": {"type": "array", "items": {"type": "string"}},
+          "writes": {"type": "array", "items": {"type": "string"}},
+          "expected_exit_code": {"type": "integer"},
+          "process_bindings": {"type": "object"}
+        }, "additionalProperties": false}
+    },
+    "selection_review": {"type": "object", "required": ["included_tool_call_ids", "excluded_tool_call_ids", "dependency_complete", "capture_gaps_reviewed"],
+      "properties": {
+        "included_tool_call_ids": {"type": "array", "items": {"type": "string"}},
+        "excluded_tool_call_ids": {"type": "array", "items": {"type": "string"}},
+        "dependency_complete": {"const": true}, "capture_gaps_reviewed": {"const": true}
+      }, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

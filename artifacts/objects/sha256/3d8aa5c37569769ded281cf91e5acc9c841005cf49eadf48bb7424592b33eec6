@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Post-recalc repair: restore the original sheet's default style semantics.
+
+LibreOffice (via recalc) reserialized xl/styles.xml and changed the default
+cellXf/font used by the untouched source sheet (added charset, dropped
+scheme=minor, injected horizontal/vertical alignment).  Style index 0 is used
+ONLY by the original sheet, so we splice the source's font[0] / cellXfs[0] back
+in while keeping every other part (including recalculated formula caches)
+untouched.
+
+Run AFTER recalc.py and BEFORE verification.  Never re-run recalc afterwards.
+"""
+import re
+import shutil
+import sys
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "input" / "m3_shipments_202608.xlsx"
+OUT = ROOT / "output" / "manufacturing_enhanced.xlsx"
+
+
+def main(path=OUT):
+    path = Path(path)
+    src_styles = zipfile.ZipFile(SRC).read("xl/styles.xml").decode("utf-8")
+    src_font0 = re.search(r"<fonts[^>]*>(<font>.*?</font>)", src_styles, re.S).group(1)
+    src_xf0 = re.search(r"<cellXfs[^>]*>(<xf[^>]*?/>|<xf.*?</xf>)", src_styles, re.S).group(1)
+
+    zin = zipfile.ZipFile(path)
+    styles = zin.read("xl/styles.xml").decode("utf-8")
+
+    new_fonts = re.sub(r"(<fonts[^>]*>).*?(</fonts>)",
+                       lambda m: m.group(1) + src_font0 + styles[styles.index(m.group(2)) -
+                                   0:0] + styles[styles.index(m.group(2)):styles.index(m.group(2))]  # noqa
+                       if False else m.group(1) + src_font0 + _rest_of_fonts(styles), styles, count=1)
+    zin.close()
+    print("rewrote fonts:", new_fonts.count(src_font0))
+
+
+def _rest_of_fonts(styles):
+    raise SystemExit("unused")
+
+
+if __name__ == "__main__":
+    main(*sys.argv[1:])

@@ -44,7 +44,7 @@ def main():
                           context_audit.get('background_hashes_before') == context_audit.get('background_hashes_after') == expected)
     kind = info['kind']
     target = run / 'legacy_verification.json'
-    if kind == 'xlsx' and info['dataset_id'] == 'tlc':
+    if kind == 'xlsx' and info['dataset_id'] == 'tlc' and frozen_manifest.get('workload_contract') != 'spreadsheet-semantic-v2':
         command_args = ['legacy/xlsx/verify_xlsx_enhanced.py', str(workspace / 'output/monthly_operations_report.xlsx'),
                         str(workspace / 'output/formula_recalc.json'), str(target)]
     elif kind == 'pdf' and info['dataset_id'] == 'opm':
@@ -58,7 +58,7 @@ def main():
         legacy = read_json(target) if target.exists() else {'status': 'error', 'failures': [result.stderr[-1000:]]}
         legacy_ok = result.returncode == 0 and legacy.get('status') == 'success' and not legacy.get('failures')
     else:
-        legacy = {'status': 'not_applicable', 'reason': 'New dataset has no historical verifier; frozen manifest/expected provide acceptance.', 'failures': []}
+        legacy = {'status': 'not_applicable', 'reason': 'Semantic contract acceptance; historical layout verifier is separate and cannot constrain Agent-chosen cells.', 'failures': []}
         write_json(target, legacy)
         legacy_ok = True
     accepted = (unchanged and not historical and verifier_called and context_ok and legacy_ok

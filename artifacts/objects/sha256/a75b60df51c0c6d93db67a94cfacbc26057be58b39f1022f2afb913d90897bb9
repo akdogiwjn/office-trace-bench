@@ -1,0 +1,5 @@
+{
+  "status": "not_applicable",
+  "reason": "Semantic contract acceptance; historical layout verifier is separate and cannot constrain Agent-chosen cells.",
+  "failures": []
+}

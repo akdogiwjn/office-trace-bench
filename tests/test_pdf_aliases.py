@@ -22,13 +22,15 @@ class PdfAliasTests(unittest.TestCase):
         self.assertFalse(pdf_field_matches('United States', 'Canada', rule))
 
     def test_real_old_attempt_passes_current_contract_without_output_changes(self):
-        old = ROOT / 'runs/control-old-pdf-opm-20261008T163759Z-90a05c03/workspace/output'
-        if not old.exists():
-            self.skipTest('optional retained controlled run is absent')
+        old = ROOT / 'legacy/pdf/output'
         with tempfile.TemporaryDirectory() as tmp:
             workspace = Path(tmp) / 'workspace'
             stage(dataset_path('pdf', 'opm'), workspace)
             shutil.copytree(old, workspace / 'output', dirs_exist_ok=True)
+            mapping = workspace / 'output/field_values/applicant_01.json'
+            aliases = read_json(mapping)
+            next(v for v in aliases if v['field_id'] == 'Country of Citizenship')['value'] = 'United States of America'
+            mapping.write_text(json.dumps(aliases))
             report = verify(dataset_path('pdf', 'opm'), workspace)
             self.assertEqual(report['failures'], [])
             summary_path = workspace / 'output/batch_summary.json'

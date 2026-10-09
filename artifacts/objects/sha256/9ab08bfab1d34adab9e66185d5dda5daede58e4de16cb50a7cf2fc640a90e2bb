@@ -1,0 +1,7 @@
+Your OpenClaw config was written by version 2026.7.1-2, but this command is running 2026.6.6.
+Check: `openclaw --version`, `which openclaw`, and `openclaw gateway status --deep`.
+If unexpected, update PATH so `openclaw` points to the version you want, or reinstall the Gateway service from that same OpenClaw install.
+Config warnings:
+- plugins.allow: plugin deepseek: plugin requires plugin API >=2026.7.1, but this host is 2026.6.6; skipping discovery
+Config warnings:
+- plugins.allow: plugin deepseek: plugin requires plugin API >=2026.7.1, but this host is 2026.6.6; skipping discovery

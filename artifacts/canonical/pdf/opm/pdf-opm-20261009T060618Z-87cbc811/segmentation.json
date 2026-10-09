@@ -1,0 +1,143 @@
+{
+  "schema_version": "office-trace-segmentation-v1",
+  "events": [
+    {
+      "step_id": 2,
+      "tool_call_id": "call_00_6xzXdGOf0psgz2P8wVAJ9804",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 2,
+      "tool_call_id": "call_01_NHDJdy50t60y4KRYmNDT1309",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_00_3gn6A7GzU2L9ADaS1O6L8623",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 3,
+      "tool_call_id": "call_01_TOU9Evud5c3ufm5PXprb3028",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 4,
+      "tool_call_id": "call_00_RyNZl7ZQfolYmVLxKi2u0577",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 4,
+      "tool_call_id": "call_01_Rp4My6fWg4Y1vY6r1Jym1267",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 5,
+      "tool_call_id": "call_00_uw1SCOXvOJtWCw7Bicsx3001",
+      "label": "inspection",
+      "result_present": true
+    },
+    {
+      "step_id": 5,
+      "tool_call_id": "call_01_0x7FHiLMqgTdp5qQX2fD8544",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 5,
+      "tool_call_id": "call_02_IE4sbxytsd9qkNrQu0LU9566",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 6,
+      "tool_call_id": "call_00_d1fPeDi1O7wqF9D95HfC1536",
+      "label": "inspection",
+      "result_present": true
+    },
+    {
+      "step_id": 7,
+      "tool_call_id": "call_00_uuAVgdpfi4bV0TaMxH6g4865",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 8,
+      "tool_call_id": "call_00_gFwJKw5xddhPBcITcWjq1941",
+      "label": "helper_edit",
+      "result_present": true
+    },
+    {
+      "step_id": 9,
+      "tool_call_id": "call_00_ET_Ai7ytRpSFnnfFYfSq9Aa8266",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 10,
+      "tool_call_id": "call_00_Y44XzfIZoSef26PGeDP21539",
+      "label": "helper_edit",
+      "result_present": true
+    },
+    {
+      "step_id": 11,
+      "tool_call_id": "call_00_ET_ErkhuJ5wCZEVlKWfUthk7175",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 12,
+      "tool_call_id": "call_00_NlNoMqvBNThpgt0NAlIF8347",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 13,
+      "tool_call_id": "call_00_KLQnrvSA5Z7RlmmZ4Yls9131",
+      "label": "execution_or_control",
+      "result_present": true
+    },
+    {
+      "step_id": 14,
+      "tool_call_id": "call_00_ET_cnGk0KrWJ9WywNrgU1837094",
+      "label": "verification",
+      "result_present": true
+    },
+    {
+      "step_id": 15,
+      "tool_call_id": "call_00_jLJvue9D69dM1xYVESNF9104",
+      "label": "execution_or_control",
+      "result_present": true
+    }
+  ],
+  "agent_tool_chain": [
+    "call_00_6xzXdGOf0psgz2P8wVAJ9804",
+    "call_01_NHDJdy50t60y4KRYmNDT1309",
+    "call_00_3gn6A7GzU2L9ADaS1O6L8623",
+    "call_01_TOU9Evud5c3ufm5PXprb3028",
+    "call_00_RyNZl7ZQfolYmVLxKi2u0577",
+    "call_01_Rp4My6fWg4Y1vY6r1Jym1267",
+    "call_00_uw1SCOXvOJtWCw7Bicsx3001",
+    "call_01_0x7FHiLMqgTdp5qQX2fD8544",
+    "call_02_IE4sbxytsd9qkNrQu0LU9566",
+    "call_00_d1fPeDi1O7wqF9D95HfC1536",
+    "call_00_uuAVgdpfi4bV0TaMxH6g4865",
+    "call_00_gFwJKw5xddhPBcITcWjq1941",
+    "call_00_ET_Ai7ytRpSFnnfFYfSq9Aa8266",
+    "call_00_Y44XzfIZoSef26PGeDP21539",
+    "call_00_ET_ErkhuJ5wCZEVlKWfUthk7175",
+    "call_00_NlNoMqvBNThpgt0NAlIF8347",
+    "call_00_KLQnrvSA5Z7RlmmZ4Yls9131",
+    "call_00_ET_cnGk0KrWJ9WywNrgU1837094",
+    "call_00_jLJvue9D69dM1xYVESNF9104"
+  ],
+  "final_effective_selection": null,
+  "final_effective_status": "requires dependency reconstruction and review; all retries/rewrites remain available",
+  "classification_method": "heuristic analysis labels; not a replay recipe"
+}

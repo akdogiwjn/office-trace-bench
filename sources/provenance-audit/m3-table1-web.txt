@@ -1,0 +1,110 @@
+table1p.xlsx (https://www.census.gov/manufacturing/m3/prel/pdf/table1p.pdf)
+citeturn59view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 1; Source: open({"ref_id":"turn56view1","lineno":70}); Total lines: 107
+L0@P0: Table 1. Value of Manufacturers' Shipments for Industry Groups
+L1@P0: 1
+L2@P0: [Estimates are shown in millions of dollars and are based on data from the Manufacturers' Shipments, Inventories, and Orders Survey.]
+L3@P0: Seasonally Adjusted Not Seasonally Adjusted
+L4@P0: Monthly Percent Change Monthly
+L5@P0: Industry % Change
+L6@P0: Aug. July June July - June - May - Aug. July June Aug. 2026/
+L7@P0: 2026p 2026r 2026 Aug. July June 2026p 2026r 2026 2025 2026p 2025 2025
+L8@P0:  All manufacturing industries......………… 658,622 658,647 653,505 0.0 0.8 0.0 675,497 648,604 692,462 620,447 5,137,751 4,796,322 7.1
+L9@P0:  Excluding transportation……….……… 549,194 547,220 543,316 0.4 0.7 -0.1 564,248 549,001 573,297 516,049 4,282,094 4,021,077 6.5
+L10@P0:  Excluding defense…………...…..………. 635,661 635,782 630,868 0.0 0.8 -0.1 653,123 627,540 669,057 602,745 4,969,187 4,662,514 6.6
+L11@P0:  With unfilled orders…………...…..…….. 234,407 234,817 232,431 -0.2 1.0 1.5 237,646 225,716 252,174 215,891 1,817,208 1,659,186 9.5
+L12@P0:  Durable goods industries………….…..……. 333,589 334,510 331,494 -0.3 0.9 1.0 340,530 320,002 358,166 313,927 2,598,931 2,397,081 8.4
+L13@P0:  Wood products…………..……...….………… 13,908 13,928 13,774 -0.1 1.1 -0.9 14,543 14,394 14,876 14,335 111,888 111,745 0.1
+L14@P0:  Nonmetallic mineral products…….…………. 14,866 14,800 14,877 0.4 -0.5 0.1 15,988 15,943 16,398 15,549 119,238 115,511 3.2
+L15@P0:  Primary metals…………………….………….. 31,784 31,249 30,685 1.7 1.8 1.0 32,573 31,089 32,661 27,316 243,228 213,971 13.7
+L16@P0:  Iron and steel mills…………..……….…. 17,059 16,882 16,554 1.0 2.0 2.8 17,471 16,817 17,560 14,774 130,106 118,980 9.4
+L17@P0:  Aluminum and nonferrous metals………. 12,559 12,191 12,039 3.0 1.3 -1.1 12,933 12,129 12,782 10,713 96,129 80,426 19.5
+L18@P0:  Ferrous metal foundries………..…..……. 2,166 2,176 2,092 -0.5 4.0 -0.6 2,169 2,143 2,319 1,829 16,993 14,565 16.7
+L19@P0:  Fabricated metal products…….……………. 44,078 43,885 43,801 0.4 0.2 0.7 45,637 43,254 46,490 42,317 347,836 325,397 6.9
+L20@P0:  Machinery……………………………………… 43,941 43,849 42,538 0.2 3.1 2.5 44,365 43,728 46,792 39,032 337,630 305,995 10.3
+L21@P0:  Farm machinery…..………….…………… 2,487 2,524 2,447 -1.5 3.1 2.0 2,680 2,598 2,632 2,763 21,022 21,584 -2.6
+L22@P0:  Construction machinery…..………….… 4,597 4,657 4,560 -1.3 2.1 1.4 4,444 4,683 5,084 4,069 36,513 32,187 13.4
+L23@P0:  Mining, oil field, and
+L24@P0:  gas field machinery………...………….. 1,591 1,620 1,583 -1.8 2.3 6.5 1,595 1,606 1,660 1,241 11,613 10,054 15.5
+L25@P0:  Industrial machinery……….……………. 5,061 5,277 4,886 -4.1 8.0 13.4 5,001 5,176 5,616 3,711 36,104 27,203 32.7
+L26@P0:  Photographic equipment….……………… 533 520 535 2.5 -2.8 2.5 513 483 656 531 4,197 4,569 -8.1
+L27@P0:  Ventilation, heating, air-conditioning,
+L28@P0:  and refrigeration equipment………… 7,095 6,963 6,695 1.9 4.0 -0.5 7,569 7,712 7,993 6,257 54,726 48,244 13.4
+L29@P0:  Metalworking machinery......……..……. 2,993 3,058 2,977 -2.1 2.7 1.0 2,964 2,887 3,109 2,762 23,018 21,547 6.8
+L30@P0:  Turbines, generators, and other
+L31@P0:  power transmission equipment….… 5,547 5,403 5,289 2.7 2.2 1.8 5,557 5,274 5,504 4,633 42,182 36,957 14.1
+L32@P0:  Material handling equipment…………… 3,071 3,118 3,068 -1.5 1.6 0.5 3,141 3,027 3,205 3,037 23,980 24,042 -0.3
+L33@P0:  Computers and electronic products
+L34@P0: 2
+L35@P0: ………. 34,233 34,230 34,691 0.0 -1.3 2.5 34,123 32,007 37,685 31,365 262,170 243,243 7.8
+L36@P0:  Computers…………...……………………. 1,774 1,793 1,809 -1.1 -0.9 0.3 1,965 1,752 2,003 1,706 14,320 12,325 16.2
+L37@P0:  Computer storage devices……….……….. 638 610 589 4.6 3.6 -1.8 627 580 709 496 4,761 4,114 15.7
+L38@P0:  Other peripheral equipment……….…… 444 447 445 -0.7 0.4 -11.2 433 443 518 362 3,515 2,591 35.7
+L39@P0:  Nondefense communications
+L40@P0:  equipment……………………….…….. 4,661 4,589 4,549 1.6 0.9 2.1 4,167 3,961 5,687 3,157 33,535 26,639 25.9
+L41@P0:  Defense communications equipment…. 244 263 251 -7.2 4.8 6.8 252 252 260 219 1,843 1,731 6.5
+L42@P0:  Audio and video equipment……...……….. 415 421 408 -1.4 3.2 -1.4 381 390 327 423 3,004 3,332 -9.8
+L43@P0:  Electronic components…………..……….. 5,625 5,570 5,567 1.0 0.1 2.4 5,987 5,345 6,044 5,458 43,439 40,785 6.5
+L44@P0:  Nondefense search and navigation
+L45@P0:  equipment……………….……...………. 1,646 1,648 1,668 -0.1 -1.2 -1.4 1,598 1,467 1,818 1,519 12,981 12,365 5.0
+L46@P0:  Defense search and navigation
+L47@P0:  equipment…………..…………....……. 3,723 3,709 3,775 0.4 -1.7 3.5 3,725 3,412 3,951 3,134 28,509 24,888 14.5
+L48@P0:  Electromedical, measuring,
+L49@P0:  and control instruments……..…...… 9,885 9,983 10,361 -1.0 -3.6 5.0 9,786 9,317 11,265 9,720 76,636 75,579 1.4
+L50@P0:  Electrical equipment, appliances,
+L51@P0:  and components………….….……………… 18,686 18,538 18,518 0.8 0.1 0.4 19,359 17,703 20,451 18,045 145,153 136,965 6.0
+L52@P0:  Electric lighting equipment…..…..……….. 1,636 1,648 1,658 -0.7 -0.6 4.1 1,730 1,653 1,797 1,530 12,754 11,578 10.2
+L53@P0:  Household appliances…………..………. 2,213 2,225 2,229 -0.5 -0.2 -0.1 2,280 1,967 2,507 2,321 17,175 17,438 -1.5
+L54@P0:  Electrical equipment………….…………… 5,012 4,999 5,037 0.3 -0.8 -0.4 5,046 4,805 5,754 4,749 39,769 36,869 7.9
+L55@P0:  Batteries………………...…….……....….. 5,110 5,040 5,033 1.4 0.1 0.1 5,433 4,636 5,511 5,088 38,863 37,173 4.5
+L56@P0:  Transportation equipment………….……….. 109,428 111,427 110,189 -1.8 1.1 0.5 111,249 99,603 119,165 104,398 855,657 775,245 10.4
+L57@P0:  Automobiles……………………...………. 12,822 13,256 13,430 -3.3 -1.3 1.4 13,953 11,208 13,466 13,568 104,401 94,959 9.9
+L58@P0:  Light trucks and utility vehicles………….. 22,330 22,923 22,655 -2.6 1.2 -2.1 23,240 19,445 24,784 21,987 176,421 157,492 12.0
+L59@P0:  Heavy duty trucks ………...…………….. 4,355 4,072 3,749 6.9 8.6 -0.3 4,133 3,851 4,159 2,985 30,064 26,702 12.6
+L60@P0:  Motor vehicle bodies, parts,
+L61@P0:  and trailers………….…….....………… 33,680 33,483 33,232 0.6 0.8 0.4 35,015 31,252 34,983 32,006 266,113 244,801 8.7
+L62@P0:  Nondefense aircraft and parts…..……….. 16,267 17,794 17,713 -8.6 0.5 -0.8 15,455 15,301 21,450 17,742 132,137 125,894 5.0
+L63@P0:  Defense aircraft and parts……...…...… 6,202 6,248 5,976 -0.7 4.6 5.0 6,079 5,927 6,467 4,965 45,773 40,920 11.9
+L64@P0:  Ships and boats……..………….…….….. 4,671 4,723 4,561 -1.1 3.6 5.7 4,589 4,268 4,878 4,197 35,772 33,037 8.3
+L65@P0:  Furniture and related products…….….……. 7,670 7,685 7,645 -0.2 0.5 -0.4 8,004 7,913 7,930 7,929 61,336 60,246 1.8
+L66@P0:  Miscellaneous durable goods……..……… 14,995 14,919 14,776 0.5 1.0 1.6 14,689 14,368 15,718 13,641 114,795 108,763 5.5
+L67@P0:  Nondurable goods industries…….………….. 325,033 324,137 322,011 0.3 0.7 -0.9 334,967 328,602 334,296 306,520 2,538,820 2,399,241 5.8
+L68@P0:  Food products……….…………..……….….. 90,620 90,760 90,753 -0.2 0.0 0.4 92,005 88,783 91,236 90,402 715,324 707,907 1.0
+L69@P0:  Grain and oilseed milling…….....….…….. 10,525 10,580 10,631 -0.5 -0.5 1.3 10,664 10,522 10,729 9,636 81,467 76,136 7.0
+L70@P0:  Dairy products……………...……...……. 12,788 12,861 12,866 -0.6 0.0 0.0 13,011 12,866 13,010 13,529 103,002 107,482 -4.2
+L71@P0:  Meat, poultry, and seafood products… 26,272 26,175 26,131 0.4 0.2 -0.1 26,653 25,933 27,182 26,323 208,577 206,336 1.1
+L72@P0:  Beverage and tobacco products……………. 18,374 18,469 18,370 -0.5 0.5 0.1 18,832 18,945 19,192 18,593 147,075 142,198 3.4
+L73@P0:  Beverages………………..….…..………… 12,230 12,308 12,318 -0.6 -0.1 0.5 12,688 12,784 13,140 12,451 98,193 96,138 2.1
+L74@P0:  Tobacco……...……..…….……………….. 6,144 6,161 6,052 -0.3 1.8 -0.5 6,144 6,161 6,052 6,142 48,882 46,060 6.1
+L75@P0:  Textile mills………………….………………… 1,998 1,997 1,988 0.1 0.5 -0.4 2,114 2,044 2,121 2,116 16,069 16,447 -2.3
+L76@P0:  Textile products………..…………………… 1,818 1,848 1,820 -1.6 1.5 -1.8 1,892 1,866 1,952 1,890 14,841 14,741 0.7
+L77@P0:  Apparel……………………..……..………….. 833 818 816 1.8 0.2 -1.3 880 802 771 813 6,318 5,941 6.3
+L78@P0:  Leather and allied products…………………. 421 411 424 2.4 -3.1 4.7 415 391 422 415 3,432 3,606 -4.8
+L79@P0:  Paper products…………………….……..….. 19,384 19,331 19,182 0.3 0.8 0.0 19,909 19,523 19,755 19,260 153,800 150,828 2.0
+L80@P0:  Pulp, paper, and paperboard mills....… 7,052 7,010 6,962 0.6 0.7 0.4 7,249 7,095 7,094 7,019 55,689 55,428 0.5
+L81@P0:  Paperboard containers……..……………. 7,895 7,932 7,910 -0.5 0.3 0.8 8,160 8,130 8,219 7,810 63,186 60,435 4.6
+L82@P0:  Printing…………………...………….…….….. 7,397 7,412 7,275 -0.2 1.9 0.8 7,412 7,477 7,301 7,380 57,622 58,199 -1.0
+L83@P0:  Petroleum and coal products……………… 70,689 69,746 68,215 1.4 2.2 -4.8 77,048 75,867 71,312 58,477 528,565 452,026 16.9
+L84@P0:  Petroleum refineries………...……..…… 65,885 65,106 63,653 1.2 2.3 -5.2 71,722 70,716 66,103 53,395 492,470 414,717 18.7
+L85@P0:  Chemical products……..……………..………… 87,317 87,172 87,010 0.2 0.2 -0.2 87,659 86,361 92,080 81,257 686,971 644,557 6.6
+L86@P0:  Pesticides, fertilizers, and other
+L87@P0:  agricultural chemicals….…...……….... 5,131 5,048 5,180 1.6 -2.5 -2.4 4,426 4,192 5,247 4,498 42,234 37,933 11.3
+L88@P0:  Pharmaceuticals and medicines…………. 26,127 26,493 26,513 -1.4 -0.1 1.5 25,470 26,179 28,348 22,947 202,456 181,811 11.4
+L89@P0:  Paints, coatings, and adhesives…....… 4,297 4,309 4,280 -0.3 0.7 0.0 4,513 4,415 4,648 4,359 34,835 33,950 2.6
+L90@P0:  Plastics and rubber products…...………… 26,182 26,173 26,158 0.0 0.1 0.7 26,801 26,543 28,154 25,917 208,803 202,791 3.0
+L91@P0: Year to date
+L92@P0: p
+L93@P0:  Preliminary
+L94@P0: r Revised data due to late receipts and concurrent seasonal adjustment.
+L95@P0: 1
+L96@P0:  Estimates of shipments and new orders are for the duration of the period, while estimates of unfilled orders and total inventories are for the end of the period. Not seasonally adjusted estimates of shipments and new orders include adjusted
+L97@P0: data for non-calendar reporters. Seasonally adjusted estimates include concurrent adjustments for holiday and trading-day differences, where appropriate, as well as seasonal variation, based on the results of the latest annual review of the
+L98@P0: model parameters. Estimates are not adjusted for price changes.
+L99@P0: 2
+L100@P0:  Estimates and percent changes of shipments for the semiconductor industry are included in computers and electronic products, and all other applicable aggregate totals.
+L101@P0: Note: Estimates of manufacturers' shipments, inventories and orders are subject to survey error and revision. One major component of survey error is nonsampling error, which includes errors of coverage, response, and nonreporting. Since the
+L102@P0: survey panel is not a probability sample, estimates of sampling error cannot be calculated. For further details on survey design, methodology, and data limitations see <http://www.census.gov/manufacturing/m3/>.
+L103@P0: The Census Bureau has reviewed this data product to ensure appropriate access, use, and disclosure avoidance protection of the confidential source data (Project No. P-6000307, Disclosure Review Board (DRB) approval number: CBDRB-FY26-
+L104@P0: 0151).
+L105@P0: Source: U.S. Census Bureau, Manufacturers’ Shipments, Inventories, and Orders (M3) Survey, August Full Report, October 2, 2026. Information on data sources and methodology can be found on our website at
+L106@P0: <www.census.gov/manufacturing/m3/how_the_data_are_collected/index.html>.
+

@@ -1,0 +1,24 @@
+{
+  "schema_version": "office-source-style-regression-v1",
+  "status": "fixed_in_selected_real_runs",
+  "verifier_sha256": "d7460345e37a5018f845ae4671183d4f20f1cd12bfd508f8b2f6ca92bb9d23af",
+  "changes": [
+    {
+      "dataset_id": "manufacturing",
+      "superseded_run_id": "xlsx-manufacturing-20261009T062012Z-176d7d79",
+      "selected_run_id": "xlsx-manufacturing-20261009T081356Z-7553ba0b",
+      "selected_trace_sha256": "06d68af2ebe93d3a20e6ccb131e1c833a833d128314c73d2616c2f4e06f347fa",
+      "input_and_prompt_unchanged": true
+    },
+    {
+      "dataset_id": "retail",
+      "superseded_run_id": "xlsx-retail-20261009T060447Z-30777b67",
+      "selected_run_id": "xlsx-retail-20261009T081357Z-c3f36068",
+      "selected_trace_sha256": "1ff52d9a6698c2455c7be08b1f5cc379a2f85012350408ac7402896d6a29249a",
+      "input_and_prompt_unchanged": true
+    }
+  ],
+  "detected": "Initial verifier skipped cells without explicit styles. LibreOffice changed default font charset/scheme and alignment properties. New checker compares default styles too and rejects source blank-cell writes/row expansion and original chart-type changes.",
+  "remedy": "Fresh Agent runs under the stricter verifier; original input and public task template hashes unchanged. Prior packs remain immutable historical evidence.",
+  "validation": "Current independent output-regression report supplies the final archive-restoration checks."
+}

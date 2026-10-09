@@ -1,0 +1,65 @@
+{
+  "task": "OFFICE-XLSX-MANUFACTURING",
+  "input_workbook": "input/m3_shipments_202608.xlsx",
+  "output_workbook": "output/manufacturing_enhanced.xlsx",
+  "added_sheet_names": ["Dashboard", "Chart Data"],
+  "original_sheets_preserved": ["Shipments August 2026"],
+  "feature_counts": {
+    "metrics": 4,
+    "scenario_selectors": 1,
+    "scenario_dimensions": 1,
+    "scenario_rows": 3,
+    "scenario_assumptions": 3,
+    "scenario_projections": 1,
+    "charts": 2,
+    "comments": 3,
+    "conditional_format_rules": 3,
+    "data_validations": 1,
+    "freeze_panes_sheets": 1,
+    "total_formulas": 10
+  },
+  "helper_filenames": [
+    "build_enhanced.py",
+    "build_enhanced_v1.py",
+    "output/workbook_features.json",
+    "output/formula_recalc.json"
+  ],
+  "helper_execution_attempts": [
+    {
+      "helper": "build_enhanced.py",
+      "attempt": 1,
+      "result": "partial",
+      "note": "Initial build. Metrics total_shipments and nondurable_shipments were written without a leading '=' so openpyxl stored them as text instead of formulas. Preserved as build_enhanced_v1.py."
+    },
+    {
+      "helper": "build_enhanced.py",
+      "attempt": 2,
+      "result": "success",
+      "note": "Repaired by prefixing '=' on both direct-reference metrics; all four metrics are now live formulas."
+    }
+  ],
+  "helper_execution_successes": 1,
+  "recalc_invocation_count": 1,
+  "recalc_attempts": [
+    {
+      "invocation": 1,
+      "target": "output/manufacturing_enhanced.xlsx",
+      "timeout_seconds": 180,
+      "status": "success",
+      "total_errors": 0,
+      "total_formulas": 10,
+      "note": "Deliverable recalculation via xlsx skill scripts/recalc.py; stdout saved to output/formula_recalc.json."
+    },
+    {
+      "invocation": 0,
+      "target": "/tmp/lo.xlsx (scratch round-trip probe)",
+      "timeout_seconds": 180,
+      "status": "success",
+      "total_errors": 0,
+      "total_formulas": 0,
+      "note": "Exploratory pre-flight to confirm the LibreOffice round-trip preserves the original sheet before building."
+    }
+  ],
+  "verifier_invocations": 1,
+  "final_verifier_status": "success"
+}

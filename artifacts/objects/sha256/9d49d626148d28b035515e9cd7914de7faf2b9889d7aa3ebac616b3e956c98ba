@@ -1,0 +1,1297 @@
+{
+  "schema_version": "office-artifact-revisions-v1",
+  "events": [
+    {
+      "path": "workspace/scratch/test_norecalc.xlsx",
+      "sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+      "size": 10084,
+      "event": "close_write",
+      "captured_at_ns": 1791533705163718313,
+      "source_mtime_ns": 1791533705161622324
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+      "size": 10084,
+      "event": "close_write",
+      "captured_at_ns": 1791533705164477813,
+      "source_mtime_ns": 1791533705161622324
+    },
+    {
+      "path": "/tmp/ui2eq3ql",
+      "event": "deleted",
+      "captured_at_ns": 1791533705198003607
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791533705359184313
+    },
+    {
+      "path": "workspace/scratch/.~lock.test_recalc.xlsx#",
+      "sha256": "af6230eee7a9df8365b3500d4fffd9027ea4447406bdfe1924a103748c1ba74d",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533705602285908,
+      "source_mtime_ns": 1791533705597628235
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqel.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533705602332119
+    },
+    {
+      "path": "temporary/lu1827lgqek.tmp/lu1827lgqem.tmp/pkcs11.txt",
+      "sha256": "f8259a42f1cdd0c2000c78c66c32c0ac031b2b0adcdc31c7ac83fcccae24d2cf",
+      "size": 456,
+      "event": "close_write",
+      "captured_at_ns": 1791533705654411255,
+      "source_mtime_ns": 1791533705649628940
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqem.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533705658645982
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqem.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533705660415646
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqem.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533705662028178
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqen.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533705807356259
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+      "size": 10084,
+      "event": "close_write",
+      "captured_at_ns": 1791533705808845279,
+      "source_mtime_ns": 1791533705161622324
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.test_recalc.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533705808884569
+    },
+    {
+      "path": "workspace/scratch/lu1827lgqeo.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791533705809085812,
+      "source_mtime_ns": 1791533705805631055
+    },
+    {
+      "path": "workspace/scratch/.~lock.test_recalc.xlsx#",
+      "sha256": "af6230eee7a9df8365b3500d4fffd9027ea4447406bdfe1924a103748c1ba74d",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533705809255334,
+      "source_mtime_ns": 1791533705805631055
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqep.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533705809290035
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+      "size": 10084,
+      "event": "close_write",
+      "captured_at_ns": 1791533705809401006,
+      "source_mtime_ns": 1791533705161622324
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu182{0AF2F986-8B26-44D0-AE3B-99EBBA4E42B4}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533705871388207
+    },
+    {
+      "path": "workspace/scratch/lu1827lgqeo.tmp",
+      "sha256": "034014a78042538aa5c048247574e6ab51b9714fbd58c7f96d8eb8267c391270",
+      "size": 11878,
+      "event": "close_write",
+      "captured_at_ns": 1791533705871930654,
+      "source_mtime_ns": 1791533705869631923
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "034014a78042538aa5c048247574e6ab51b9714fbd58c7f96d8eb8267c391270",
+      "size": 11878,
+      "event": "moved_to",
+      "captured_at_ns": 1791533705872059796,
+      "source_mtime_ns": 1791533705869631923
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "034014a78042538aa5c048247574e6ab51b9714fbd58c7f96d8eb8267c391270",
+      "size": 11878,
+      "event": "close_write",
+      "captured_at_ns": 1791533705872858587,
+      "source_mtime_ns": 1791533705869631923
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu182{D45AFDBC-9BC2-4E53-B5BE-4013201810B6}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533705881395322
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "034014a78042538aa5c048247574e6ab51b9714fbd58c7f96d8eb8267c391270",
+      "size": 11878,
+      "event": "close_write",
+      "captured_at_ns": 1791533705881544794,
+      "source_mtime_ns": 1791533705869631923
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.test_recalc.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533705881601975
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqem.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533705882792551
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqem.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533705882806241
+    },
+    {
+      "path": "/tmp/lu1827lgqek.tmp/lu1827lgqem.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791533705882819182
+    },
+    {
+      "path": "/tmp/ftfEbx",
+      "event": "deleted",
+      "captured_at_ns": 1791533705892684195
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791533705899128713
+    },
+    {
+      "path": "/tmp/c0ruwkkf",
+      "event": "deleted",
+      "captured_at_ns": 1791533729646099994
+    },
+    {
+      "path": "/tmp/openpyxl.r7swxdgj",
+      "event": "deleted",
+      "captured_at_ns": 1791533729650617225
+    },
+    {
+      "path": "/tmp/openpyxl.mfxrm6wb",
+      "event": "deleted",
+      "captured_at_ns": 1791533729651599919
+    },
+    {
+      "path": "workspace/scratch/base.xlsx",
+      "sha256": "7bcac0c67785cc83605334fb5b664d37abd884c8e9906bcc75bfbcde1207eca4",
+      "size": 10083,
+      "event": "close_write",
+      "captured_at_ns": 1791533729653661847,
+      "source_mtime_ns": 1791533729649954316
+    },
+    {
+      "path": "workspace/scratch/build_workbook.py",
+      "sha256": "889783bcbb1e3be10048d9963f73d79605534752d3002283372a987c6832439a",
+      "size": 7867,
+      "event": "close_write",
+      "captured_at_ns": 1791533777151402911,
+      "source_mtime_ns": 1791533777146598236
+    },
+    {
+      "path": "workspace/scratch/build_workbook.py",
+      "sha256": "f84dbc1ff0cfa24e1cc79dc0a0a93ac269b2f4389b271958b7df9cdcf9483f52",
+      "size": 7827,
+      "event": "close_write",
+      "captured_at_ns": 1791533780565354965,
+      "source_mtime_ns": 1791533780558644494
+    },
+    {
+      "path": "/tmp/bkcci7mk",
+      "event": "deleted",
+      "captured_at_ns": 1791533783536457955
+    },
+    {
+      "path": "/tmp/openpyxl.cjmjwvih",
+      "event": "deleted",
+      "captured_at_ns": 1791533783541141188
+    },
+    {
+      "path": "/tmp/openpyxl.wzov06h9",
+      "event": "deleted",
+      "captured_at_ns": 1791533783542125001
+    },
+    {
+      "path": "/tmp/openpyxl.nbtkh0yi",
+      "event": "deleted",
+      "captured_at_ns": 1791533783543892975
+    },
+    {
+      "path": "workspace/scratch/stage1.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533783548511468,
+      "source_mtime_ns": 1791533783542684949
+    },
+    {
+      "path": "workspace/scratch/recalc_and_inject.py",
+      "sha256": "8bd580a1a4d3d90bbc4272b89c049f9fe17d41bec3737c9b9f55246d0b419975",
+      "size": 4791,
+      "event": "close_write",
+      "captured_at_ns": 1791533789788060278,
+      "source_mtime_ns": 1791533789782769547
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533791380948163,
+      "source_mtime_ns": 1791533791374791130
+    },
+    {
+      "path": "/tmp/0jztz8sn",
+      "event": "deleted",
+      "captured_at_ns": 1791533791412615283
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533791711409104,
+      "source_mtime_ns": 1791533791706795631
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likus.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533791711455144
+    },
+    {
+      "path": "temporary/lu6937likur.tmp/lu6937likut.tmp/pkcs11.txt",
+      "sha256": "01859585a89d92f4062a936fddbb61262bd8747aaeb4c104785cb2a0766a64ff",
+      "size": 456,
+      "event": "close_write",
+      "captured_at_ns": 1791533791806936499,
+      "source_mtime_ns": 1791533791802796933
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likut.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533791809840228
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likut.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533791811560221
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likut.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533791813122062
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likuu.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533791957043594
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533791959160192,
+      "source_mtime_ns": 1791533791374791130
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533791959192363
+    },
+    {
+      "path": "workspace/scratch/lu6937likuv.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791533791959343615,
+      "source_mtime_ns": 1791533791954798993
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533791959530497,
+      "source_mtime_ns": 1791533791954798993
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likuw.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533791959572368
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533791959682669,
+      "source_mtime_ns": 1791533791374791130
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu693{422B5690-8905-4A5A-BB79-BC2F9259D7BF}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533792084575863
+    },
+    {
+      "path": "workspace/scratch/lu6937likuv.tmp",
+      "sha256": "0d876d45804c97be85476d06b8113b07b4649ea17838dd543fe352d103149238",
+      "size": 19618,
+      "event": "close_write",
+      "captured_at_ns": 1791533792094444766,
+      "source_mtime_ns": 1791533792086800783
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "0d876d45804c97be85476d06b8113b07b4649ea17838dd543fe352d103149238",
+      "size": 19618,
+      "event": "moved_to",
+      "captured_at_ns": 1791533792094739860,
+      "source_mtime_ns": 1791533792086800783
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "0d876d45804c97be85476d06b8113b07b4649ea17838dd543fe352d103149238",
+      "size": 19618,
+      "event": "close_write",
+      "captured_at_ns": 1791533792095338629,
+      "source_mtime_ns": 1791533792086800783
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu693{D486D55C-27F4-4321-B5AB-D8640505C379}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533792105826431
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "0d876d45804c97be85476d06b8113b07b4649ea17838dd543fe352d103149238",
+      "size": 19618,
+      "event": "close_write",
+      "captured_at_ns": 1791533792105963733,
+      "source_mtime_ns": 1791533792086800783
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533792106048974
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likut.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533792107248820
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likut.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533792107262910
+    },
+    {
+      "path": "/tmp/lu6937likur.tmp/lu6937likut.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791533792107277000
+    },
+    {
+      "path": "/tmp/ZJFCAQ",
+      "event": "deleted",
+      "captured_at_ns": 1791533792113275872
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791533792119788830
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "5f840fcb828135bb57267b5521385e64494fb245002404d2a0ffa8934533467b",
+      "size": 152,
+      "event": "close_write",
+      "captured_at_ns": 1791533792194966109,
+      "source_mtime_ns": 1791533792190802193
+    },
+    {
+      "path": "workspace/scratch/recalc_attempts.json",
+      "sha256": "c7224c22d530be255e35a207b60b01b43d705422fef8a14bb33fd22eaf133e8d",
+      "size": 561,
+      "event": "close_write",
+      "captured_at_ns": 1791533792195118591,
+      "source_mtime_ns": 1791533792190802193
+    },
+    {
+      "path": "workspace/scratch/recalc_and_inject.py",
+      "sha256": "380c0650c0edadc995af6965f0de6d4b9351bf3c5b6114a1ea61d46deeb1b775",
+      "size": 4791,
+      "event": "close_write",
+      "captured_at_ns": 1791533795926392517,
+      "source_mtime_ns": 1791533795918852734
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533797591233787,
+      "source_mtime_ns": 1791533797586875348
+    },
+    {
+      "path": "/tmp/cyngumuz",
+      "event": "deleted",
+      "captured_at_ns": 1791533797623175240
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533797918926070,
+      "source_mtime_ns": 1791533797914879795
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnb.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533797918971200
+    },
+    {
+      "path": "temporary/lu15027lipna.tmp/lu15027lipnc.tmp/pkcs11.txt",
+      "sha256": "98fed0c50b8f7afd16be4bb92ab6369b5922e9519901822adea063df0790a591",
+      "size": 458,
+      "event": "close_write",
+      "captured_at_ns": 1791533798013574923,
+      "source_mtime_ns": 1791533798006881042
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnc.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533798016693995
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnc.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533798018373228
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnc.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533798019987470
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnd.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533798166008279
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533798168175469,
+      "source_mtime_ns": 1791533797586875348
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533798168200889
+    },
+    {
+      "path": "workspace/scratch/lu15027lipne.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791533798168349201,
+      "source_mtime_ns": 1791533798162883157
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533798168537274,
+      "source_mtime_ns": 1791533798162883157
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnf.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533798168586794
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533798168696156,
+      "source_mtime_ns": 1791533797586875348
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu1502{0BC0051C-1843-41A8-9284-4238AE16739B}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533798294874877
+    },
+    {
+      "path": "workspace/scratch/lu15027lipne.tmp",
+      "sha256": "8f1a07b7b565737227f7bf4fbca824521d744cdd9dbb3c2f194378a34dbf3995",
+      "size": 19621,
+      "event": "close_write",
+      "captured_at_ns": 1791533798304678769,
+      "source_mtime_ns": 1791533798298885001
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "8f1a07b7b565737227f7bf4fbca824521d744cdd9dbb3c2f194378a34dbf3995",
+      "size": 19621,
+      "event": "moved_to",
+      "captured_at_ns": 1791533798304900202,
+      "source_mtime_ns": 1791533798298885001
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "8f1a07b7b565737227f7bf4fbca824521d744cdd9dbb3c2f194378a34dbf3995",
+      "size": 19621,
+      "event": "close_write",
+      "captured_at_ns": 1791533798305503811,
+      "source_mtime_ns": 1791533798298885001
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu1502{FBD57501-3E6D-48F4-82CE-E353425AAFB2}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533798315868641
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "8f1a07b7b565737227f7bf4fbca824521d744cdd9dbb3c2f194378a34dbf3995",
+      "size": 19621,
+      "event": "close_write",
+      "captured_at_ns": 1791533798316018863,
+      "source_mtime_ns": 1791533798298885001
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533798316083074
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnc.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533798317158609
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnc.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533798317177419
+    },
+    {
+      "path": "/tmp/lu15027lipna.tmp/lu15027lipnc.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791533798317190089
+    },
+    {
+      "path": "/tmp/OCGI1y",
+      "event": "deleted",
+      "captured_at_ns": 1791533798322764805
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791533798329213612
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "5f840fcb828135bb57267b5521385e64494fb245002404d2a0ffa8934533467b",
+      "size": 152,
+      "event": "close_write",
+      "captured_at_ns": 1791533798404982729,
+      "source_mtime_ns": 1791533798398886357
+    },
+    {
+      "path": "workspace/scratch/recalc_attempts.json",
+      "sha256": "c7224c22d530be255e35a207b60b01b43d705422fef8a14bb33fd22eaf133e8d",
+      "size": 561,
+      "event": "close_write",
+      "captured_at_ns": 1791533798405109741,
+      "source_mtime_ns": 1791533798398886357
+    },
+    {
+      "path": "workspace/output/retail_enhanced.xlsx",
+      "sha256": "e30feaa9a5ac1b86dfd6eafbdd14e15332652d0b05cd6ca46fd8b1e216f2256a",
+      "size": 15301,
+      "event": "moved_to",
+      "captured_at_ns": 1791533798435319861,
+      "source_mtime_ns": 1791533798430886790
+    },
+    {
+      "path": "workspace/scratch/recalc_and_inject.py",
+      "sha256": "bd640b9e1757ff84e25f52e6fbe4200be7a72f6f69852ac56389a43501455d3d",
+      "size": 4774,
+      "event": "close_write",
+      "captured_at_ns": 1791533803119334282,
+      "source_mtime_ns": 1791533803114950293
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533805229561901,
+      "source_mtime_ns": 1791533805222978872
+    },
+    {
+      "path": "/tmp/5r9dzkxk",
+      "event": "deleted",
+      "captured_at_ns": 1791533805262080542
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533805562462224,
+      "source_mtime_ns": 1791533805554983373
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livji.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533805562511075
+    },
+    {
+      "path": "temporary/lu23147livjh.tmp/lu23147livjj.tmp/pkcs11.txt",
+      "sha256": "c8f65a700d5fefe1003aa1824fb85423a8387c673e72158d00d89140b3c2e364",
+      "size": 458,
+      "event": "close_write",
+      "captured_at_ns": 1791533805656321117,
+      "source_mtime_ns": 1791533805650984674
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjj.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533805659207136
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjj.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533805660765277
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjj.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533805662266997
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjk.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533805806120398
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533805808218226,
+      "source_mtime_ns": 1791533805222978872
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533805808245646
+    },
+    {
+      "path": "workspace/scratch/lu23147livjl.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791533805808396929,
+      "source_mtime_ns": 1791533805802986735
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533805808574831,
+      "source_mtime_ns": 1791533805802986735
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjm.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533805808618242
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533805808725093,
+      "source_mtime_ns": 1791533805222978872
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu2314{5560C17E-FE72-4377-8188-97266087F0A3}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533805922541256
+    },
+    {
+      "path": "workspace/scratch/lu23147livjl.tmp",
+      "sha256": "103671368729f49b7e51aa5227d9b8285b1dfc5e38ec96ea241a206419403115",
+      "size": 19623,
+      "event": "close_write",
+      "captured_at_ns": 1791533805932395950,
+      "source_mtime_ns": 1791533805926988416
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "103671368729f49b7e51aa5227d9b8285b1dfc5e38ec96ea241a206419403115",
+      "size": 19623,
+      "event": "moved_to",
+      "captured_at_ns": 1791533805932592082,
+      "source_mtime_ns": 1791533805926988416
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "103671368729f49b7e51aa5227d9b8285b1dfc5e38ec96ea241a206419403115",
+      "size": 19623,
+      "event": "close_write",
+      "captured_at_ns": 1791533805933294182,
+      "source_mtime_ns": 1791533805926988416
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu2314{7451EDF8-D84C-4717-B5B6-D1FBF4F87846}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533805943460700
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "103671368729f49b7e51aa5227d9b8285b1dfc5e38ec96ea241a206419403115",
+      "size": 19623,
+      "event": "close_write",
+      "captured_at_ns": 1791533805943610302,
+      "source_mtime_ns": 1791533805926988416
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533805943746203
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjj.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533805944862529
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjj.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533805944879309
+    },
+    {
+      "path": "/tmp/lu23147livjh.tmp/lu23147livjj.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791533805944904009
+    },
+    {
+      "path": "/tmp/QRqfTp",
+      "event": "deleted",
+      "captured_at_ns": 1791533805950351243
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791533805956859691
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "3efc8bca1d8cc9edc183952944e4de47be44d9c4ae0ffa402e29bdc87c57d940",
+      "size": 93,
+      "event": "close_write",
+      "captured_at_ns": 1791533806032075551,
+      "source_mtime_ns": 1791533806026989772
+    },
+    {
+      "path": "workspace/scratch/recalc_attempts.json",
+      "sha256": "c7224c22d530be255e35a207b60b01b43d705422fef8a14bb33fd22eaf133e8d",
+      "size": 561,
+      "event": "close_write",
+      "captured_at_ns": 1791533806032281494,
+      "source_mtime_ns": 1791533806026989772
+    },
+    {
+      "path": "workspace/output/retail_enhanced.xlsx",
+      "sha256": "2f53989347fab39864115d9cfb06d8b0db897400d6232221dfa85cff96a20433",
+      "size": 15301,
+      "event": "moved_to",
+      "captured_at_ns": 1791533806063068531,
+      "source_mtime_ns": 1791533806054990152
+    },
+    {
+      "path": "workspace/scratch/recalc_and_inject.py",
+      "sha256": "5143d6e8eb7e776074efd6cb2ad115bac16a0f68ddf7f4d1436e9405b3ca16ed",
+      "size": 4988,
+      "event": "close_write",
+      "captured_at_ns": 1791533812971372948,
+      "source_mtime_ns": 1791533812967083860
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533814817048320,
+      "source_mtime_ns": 1791533814811108860
+    },
+    {
+      "path": "/tmp/w31s21iq",
+      "event": "deleted",
+      "captured_at_ns": 1791533814848820841
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533815148897219,
+      "source_mtime_ns": 1791533815143113361
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xt.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533815148943610
+    },
+    {
+      "path": "temporary/lu29597lj2xs.tmp/lu29597lj2xu.tmp/pkcs11.txt",
+      "sha256": "14158a06eab60175b3d6dc5701fefa45a9e20f7070a33bd03559d232f80bd004",
+      "size": 458,
+      "event": "close_write",
+      "captured_at_ns": 1791533815244320773,
+      "source_mtime_ns": 1791533815239114662
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xu.tmp/cert9.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533815247342974
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xu.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533815248930165
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xu.tmp/key4.db-journal",
+      "event": "deleted",
+      "captured_at_ns": 1791533815250464956
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xv.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533815393697218
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533815395944508,
+      "source_mtime_ns": 1791533814811108860
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533815395975049
+    },
+    {
+      "path": "workspace/scratch/lu29597lj2xw.tmp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "event": "close_write",
+      "captured_at_ns": 1791533815396140511,
+      "source_mtime_ns": 1791533815391116723
+    },
+    {
+      "path": "workspace/scratch/.~lock.recalc_source.xlsx#",
+      "sha256": "9313c3bfc65e1be3e5649779b11b1c572a838f7ef99f7fed53031355255c2196",
+      "size": 71,
+      "event": "close_write",
+      "captured_at_ns": 1791533815396304383,
+      "source_mtime_ns": 1791533815391116723
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xx.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533815396348414
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "close_write",
+      "captured_at_ns": 1791533815396456115,
+      "source_mtime_ns": 1791533814811108860
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu2959{AB8F6751-921A-47B1-9265-CD47C12F22C1}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533815505814888
+    },
+    {
+      "path": "workspace/scratch/lu29597lj2xw.tmp",
+      "sha256": "b4be2b0661f3f102fa131f712d7aaa87cd18394bd69b4e8bfb5e2e6d6ad18130",
+      "size": 19620,
+      "event": "close_write",
+      "captured_at_ns": 1791533815515934195,
+      "source_mtime_ns": 1791533815511118350
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "b4be2b0661f3f102fa131f712d7aaa87cd18394bd69b4e8bfb5e2e6d6ad18130",
+      "size": 19620,
+      "event": "moved_to",
+      "captured_at_ns": 1791533815516082747,
+      "source_mtime_ns": 1791533815511118350
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "b4be2b0661f3f102fa131f712d7aaa87cd18394bd69b4e8bfb5e2e6d6ad18130",
+      "size": 19620,
+      "event": "close_write",
+      "captured_at_ns": 1791533815516779237,
+      "source_mtime_ns": 1791533815511118350
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu2959{234DC20F-F718-41E5-AC4B-F31784E26A82}.tmp",
+      "event": "deleted",
+      "captured_at_ns": 1791533815527110647
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "b4be2b0661f3f102fa131f712d7aaa87cd18394bd69b4e8bfb5e2e6d6ad18130",
+      "size": 19620,
+      "event": "close_write",
+      "captured_at_ns": 1791533815527263689,
+      "source_mtime_ns": 1791533815511118350
+    },
+    {
+      "path": "/runs/xlsx-retail-20261009T081357Z-c3f36068/workspace/scratch/.~lock.recalc_source.xlsx#",
+      "event": "deleted",
+      "captured_at_ns": 1791533815527343840
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xu.tmp/cert9.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533815528467525
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xu.tmp/key4.db",
+      "event": "deleted",
+      "captured_at_ns": 1791533815528480795
+    },
+    {
+      "path": "/tmp/lu29597lj2xs.tmp/lu29597lj2xu.tmp/pkcs11.txt",
+      "event": "deleted",
+      "captured_at_ns": 1791533815528499396
+    },
+    {
+      "path": "/tmp/w26yxH",
+      "event": "deleted",
+      "captured_at_ns": 1791533815533993240
+    },
+    {
+      "path": "/tmp/OSL_PIPE_0_SingleOfficeIPC_53bc4297d6d012e1a744f3977d159334",
+      "event": "deleted",
+      "captured_at_ns": 1791533815540499728
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "3efc8bca1d8cc9edc183952944e4de47be44d9c4ae0ffa402e29bdc87c57d940",
+      "size": 93,
+      "event": "close_write",
+      "captured_at_ns": 1791533815616135834,
+      "source_mtime_ns": 1791533815611119706
+    },
+    {
+      "path": "workspace/scratch/recalc_attempts.json",
+      "sha256": "c7224c22d530be255e35a207b60b01b43d705422fef8a14bb33fd22eaf133e8d",
+      "size": 561,
+      "event": "close_write",
+      "captured_at_ns": 1791533815616280446,
+      "source_mtime_ns": 1791533815611119706
+    },
+    {
+      "path": "workspace/output/retail_enhanced.xlsx",
+      "sha256": "d95fd7ecc76c001b89be4d40d67c26840eac794572977132108d9e40093989f3",
+      "size": 15297,
+      "event": "moved_to",
+      "captured_at_ns": 1791533815647485269,
+      "source_mtime_ns": 1791533815643120139
+    },
+    {
+      "path": "workspace/output/workbook_features.json",
+      "sha256": "07957d8e89db176e62ce3b17104727158b0512b91b7fd48d88dccfa477d0cfd4",
+      "size": 790,
+      "event": "close_write",
+      "captured_at_ns": 1791533818327218108,
+      "source_mtime_ns": 1791533818323156473
+    },
+    {
+      "path": "workspace/output/business_verification.json",
+      "sha256": "2f23e57b5262e370b0d15c1c819ba6db7b58fde00f748ad31d3299cee2b23452",
+      "size": 5554,
+      "event": "moved_to",
+      "captured_at_ns": 1791533820366921721,
+      "source_mtime_ns": 1791533820359184076
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v1_initial.py",
+      "sha256": "8bd580a1a4d3d90bbc4272b89c049f9fe17d41bec3737c9b9f55246d0b419975",
+      "size": 4791,
+      "event": "close_write",
+      "captured_at_ns": 1791533833780509041,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v2_pathfix.py",
+      "sha256": "380c0650c0edadc995af6965f0de6d4b9351bf3c5b6114a1ea61d46deeb1b775",
+      "size": 4791,
+      "event": "close_write",
+      "captured_at_ns": 1791533833780642352,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v3_parsefix.py",
+      "sha256": "bd640b9e1757ff84e25f52e6fbe4200be7a72f6f69852ac56389a43501455d3d",
+      "size": 4774,
+      "event": "close_write",
+      "captured_at_ns": 1791533833780761654,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v4_final.py",
+      "sha256": "5143d6e8eb7e776074efd6cb2ad115bac16a0f68ddf7f4d1436e9405b3ca16ed",
+      "size": 4988,
+      "event": "close_write",
+      "captured_at_ns": 1791533833780940867,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/build_workbook.v1_initial.py",
+      "sha256": "889783bcbb1e3be10048d9963f73d79605534752d3002283372a987c6832439a",
+      "size": 7867,
+      "event": "close_write",
+      "captured_at_ns": 1791533833781155829,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/build_workbook.v2_final.py",
+      "sha256": "f84dbc1ff0cfa24e1cc79dc0a0a93ac269b2f4389b271958b7df9cdcf9483f52",
+      "size": 7827,
+      "event": "close_write",
+      "captured_at_ns": 1791533833781358102,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/output/xlsx_enhancement_summary.json",
+      "sha256": "ff3eb75e78aa1a1cbc164bb877cf72654ddac5b231d9687453191951c3f5f719",
+      "size": 2721,
+      "event": "close_write",
+      "captured_at_ns": 1791533839126522567,
+      "source_mtime_ns": 1791533839119438411
+    },
+    {
+      "path": "workspace/output/business_verification.json",
+      "sha256": "2f23e57b5262e370b0d15c1c819ba6db7b58fde00f748ad31d3299cee2b23452",
+      "size": 5554,
+      "event": "moved_to",
+      "captured_at_ns": 1791533841308543659,
+      "source_mtime_ns": 1791533841303468021
+    },
+    {
+      "path": "workspace/output/xlsx_enhancement_summary.json",
+      "sha256": "ff3eb75e78aa1a1cbc164bb877cf72654ddac5b231d9687453191951c3f5f719",
+      "size": 2721,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849798889624,
+      "source_mtime_ns": 1791533839119438411
+    },
+    {
+      "path": "workspace/output/business_verification.json",
+      "sha256": "2f23e57b5262e370b0d15c1c819ba6db7b58fde00f748ad31d3299cee2b23452",
+      "size": 5554,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799013816,
+      "source_mtime_ns": 1791533841303468021
+    },
+    {
+      "path": "workspace/output/formula_recalc.json",
+      "sha256": "3efc8bca1d8cc9edc183952944e4de47be44d9c4ae0ffa402e29bdc87c57d940",
+      "size": 93,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799114087,
+      "source_mtime_ns": 1791533815611119706
+    },
+    {
+      "path": "workspace/output/retail_enhanced.xlsx",
+      "sha256": "d95fd7ecc76c001b89be4d40d67c26840eac794572977132108d9e40093989f3",
+      "size": 15297,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799226059,
+      "source_mtime_ns": 1791533815643120139
+    },
+    {
+      "path": "workspace/output/workbook_features.json",
+      "sha256": "07957d8e89db176e62ce3b17104727158b0512b91b7fd48d88dccfa477d0cfd4",
+      "size": 790,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799324640,
+      "source_mtime_ns": 1791533818323156473
+    },
+    {
+      "path": "workspace/scratch/base.xlsx",
+      "sha256": "7bcac0c67785cc83605334fb5b664d37abd884c8e9906bcc75bfbcde1207eca4",
+      "size": 10083,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799661205,
+      "source_mtime_ns": 1791533729649954316
+    },
+    {
+      "path": "workspace/scratch/test_norecalc.xlsx",
+      "sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+      "size": 10084,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799773016,
+      "source_mtime_ns": 1791533705161622324
+    },
+    {
+      "path": "workspace/scratch/test_recalc.xlsx",
+      "sha256": "034014a78042538aa5c048247574e6ab51b9714fbd58c7f96d8eb8267c391270",
+      "size": 11878,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799878658,
+      "source_mtime_ns": 1791533705869631923
+    },
+    {
+      "path": "workspace/scratch/recalc_source.xlsx",
+      "sha256": "b4be2b0661f3f102fa131f712d7aaa87cd18394bd69b4e8bfb5e2e6d6ad18130",
+      "size": 19620,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849799988009,
+      "source_mtime_ns": 1791533815511118350
+    },
+    {
+      "path": "workspace/scratch/recalc_and_inject.py",
+      "sha256": "5143d6e8eb7e776074efd6cb2ad115bac16a0f68ddf7f4d1436e9405b3ca16ed",
+      "size": 4988,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800086150,
+      "source_mtime_ns": 1791533812967083860
+    },
+    {
+      "path": "workspace/scratch/recalc_attempts.json",
+      "sha256": "c7224c22d530be255e35a207b60b01b43d705422fef8a14bb33fd22eaf133e8d",
+      "size": 561,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800184892,
+      "source_mtime_ns": 1791533815611119706
+    },
+    {
+      "path": "workspace/scratch/stage1.xlsx",
+      "sha256": "bd1a2a9f7ef84510233a1d27f24ec511a8d715aa4e9b97ca4595a3fd973ae5f0",
+      "size": 15244,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800290523,
+      "source_mtime_ns": 1791533783542684949
+    },
+    {
+      "path": "workspace/scratch/build_workbook.py",
+      "sha256": "f84dbc1ff0cfa24e1cc79dc0a0a93ac269b2f4389b271958b7df9cdcf9483f52",
+      "size": 7827,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800390015,
+      "source_mtime_ns": 1791533780558644494
+    },
+    {
+      "path": "workspace/scratch/versions/build_workbook.v1_initial.py",
+      "sha256": "889783bcbb1e3be10048d9963f73d79605534752d3002283372a987c6832439a",
+      "size": 7867,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800571037,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v1_initial.py",
+      "sha256": "8bd580a1a4d3d90bbc4272b89c049f9fe17d41bec3737c9b9f55246d0b419975",
+      "size": 4791,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800681749,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v4_final.py",
+      "sha256": "5143d6e8eb7e776074efd6cb2ad115bac16a0f68ddf7f4d1436e9405b3ca16ed",
+      "size": 4988,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800791240,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v3_parsefix.py",
+      "sha256": "bd640b9e1757ff84e25f52e6fbe4200be7a72f6f69852ac56389a43501455d3d",
+      "size": 4774,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849800901851,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/recalc_and_inject.v2_pathfix.py",
+      "sha256": "380c0650c0edadc995af6965f0de6d4b9351bf3c5b6114a1ea61d46deeb1b775",
+      "size": 4791,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849801009533,
+      "source_mtime_ns": 1791533833775365961
+    },
+    {
+      "path": "workspace/scratch/versions/build_workbook.v2_final.py",
+      "sha256": "f84dbc1ff0cfa24e1cc79dc0a0a93ac269b2f4389b271958b7df9cdcf9483f52",
+      "size": 7827,
+      "event": "final_inventory",
+      "captured_at_ns": 1791533849801116654,
+      "source_mtime_ns": 1791533833775365961
+    }
+  ],
+  "gaps": [
+    {
+      "path": "workspace/output/retail_enhanced.tmp.xlsx",
+      "reason": "FileNotFoundError"
+    },
+    {
+      "path": "workspace/output/retail_enhanced.tmp.xlsx",
+      "reason": "FileNotFoundError"
+    },
+    {
+      "path": "workspace/output/retail_enhanced.tmp.xlsx",
+      "reason": "FileNotFoundError"
+    },
+    {
+      "path": "workspace/output/business_verification.json.tmp",
+      "reason": "FileNotFoundError"
+    }
+  ],
+  "scope": "Workspace generated files plus script/config/text/document/transformed-data files under /tmp. close-write/move observations and final inventory; filesystem timing is not process read/exec provenance. Fast overwrite/delete races may produce gaps. Full tool arguments/results remain in tool_events.",
+  "replay_ready": false
+}

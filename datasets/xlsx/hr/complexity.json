@@ -1,0 +1,74 @@
+{
+  "schema_version": "office-workbook-complexity-v1",
+  "input_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+  "file_size_bytes": 289615,
+  "compressed_xlsx_size_bytes": 289615,
+  "uncompressed_package_bytes": 1696726,
+  "sheet_count": 4,
+  "sheets": [
+    {
+      "name": "national_M2025_dl",
+      "used_cell_count": 44864,
+      "populated_cell_count": 39260,
+      "row_count": 1402,
+      "column_count": 32,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 33656,
+      "merged_ranges": [],
+      "chart_count": 0,
+      "merged_range_count": 0
+    },
+    {
+      "name": "Field Descriptions",
+      "used_cell_count": 92,
+      "populated_cell_count": 82,
+      "row_count": 48,
+      "column_count": 3,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 92,
+      "merged_ranges": [
+        "A8:B8",
+        "A48:B48"
+      ],
+      "chart_count": 0,
+      "merged_range_count": 2
+    },
+    {
+      "name": "UpdateTime",
+      "used_cell_count": 2,
+      "populated_cell_count": 2,
+      "row_count": 2,
+      "column_count": 1,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 0,
+      "merged_ranges": [],
+      "chart_count": 0,
+      "merged_range_count": 0
+    },
+    {
+      "name": "Filler",
+      "used_cell_count": 0,
+      "populated_cell_count": 0,
+      "row_count": 0,
+      "column_count": 0,
+      "formula_count": 0,
+      "cross_sheet_formula_count": 0,
+      "styled_cell_count": 0,
+      "merged_ranges": [],
+      "chart_count": 0,
+      "merged_range_count": 0
+    }
+  ],
+  "used_cell_count": 44958,
+  "populated_cell_count": 39344,
+  "formula_count": 0,
+  "chart_count": 0,
+  "style_count": 27,
+  "merged_range_count": 2,
+  "has_shared_strings": true,
+  "cross_sheet_formula_count": 0,
+  "counting_method": "OOXML c elements; populated excludes style-only cells; row/column counts are maximum serialized cell coordinates, per sheet"
+}

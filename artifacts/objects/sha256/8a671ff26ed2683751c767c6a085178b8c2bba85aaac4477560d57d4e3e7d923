@@ -1,0 +1,83 @@
+{
+  "summary_sheet": "Executive_Dashboard",
+  "metrics": {
+    "total_trips": {
+      "sheet": "Executive_Dashboard",
+      "cell": "B6"
+    },
+    "fare_revenue": {
+      "sheet": "Executive_Dashboard",
+      "cell": "B7"
+    },
+    "average_fare": {
+      "sheet": "Executive_Dashboard",
+      "cell": "B8"
+    },
+    "removal_rate": {
+      "sheet": "Executive_Dashboard",
+      "cell": "B9"
+    },
+    "reconciliation_status": {
+      "sheet": "Executive_Dashboard",
+      "cell": "B10"
+    }
+  },
+  "scenario": {
+    "selector": {
+      "sheet": "Executive_Dashboard",
+      "cell": "B13"
+    },
+    "assumptions": {
+      "Base": {
+        "fare_multiplier": {
+          "sheet": "Executive_Dashboard",
+          "cell": "B15"
+        },
+        "trip_multiplier": {
+          "sheet": "Executive_Dashboard",
+          "cell": "C15"
+        }
+      },
+      "Upside": {
+        "fare_multiplier": {
+          "sheet": "Executive_Dashboard",
+          "cell": "B16"
+        },
+        "trip_multiplier": {
+          "sheet": "Executive_Dashboard",
+          "cell": "C16"
+        }
+      },
+      "Downside": {
+        "fare_multiplier": {
+          "sheet": "Executive_Dashboard",
+          "cell": "B17"
+        },
+        "trip_multiplier": {
+          "sheet": "Executive_Dashboard",
+          "cell": "C17"
+        }
+      }
+    },
+    "projections": {
+      "projected_trips": {
+        "sheet": "Executive_Dashboard",
+        "cell": "B21"
+      },
+      "projected_fare": {
+        "sheet": "Executive_Dashboard",
+        "cell": "B22"
+      }
+    }
+  },
+  "charts": {
+    "daily_trips": {
+      "sheet": "Charts",
+      "index": 0
+    },
+    "payment_mix": {
+      "sheet": "Charts",
+      "index": 1
+    }
+  }
+}

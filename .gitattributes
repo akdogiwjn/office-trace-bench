@@ -1,0 +1,4 @@
+artifacts/objects/sha256/* -diff
+# Preserve exact imported fixture and official-extract bytes, including EOF blanks.
+legacy/runner/scripts/*.py whitespace=-blank-at-eof
+sources/provenance-audit/*.txt whitespace=-blank-at-eof

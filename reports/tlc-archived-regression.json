@@ -24,6 +24,10 @@
       "ok": true,
       "detail": null
     },
+    "input:input/verify_xlsx_enhanced.py": {
+      "ok": true,
+      "detail": null
+    },
     "workbook_file": {
       "ok": true,
       "detail": null

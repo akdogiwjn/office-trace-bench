@@ -1,0 +1,254 @@
+{
+  "schema_version": "office-dataset-v1",
+  "kind": "xlsx",
+  "dataset_id": "manufacturing",
+  "domain": "manufacturing",
+  "task": "Enhance the existing manufacturing operations benchmark workbook",
+  "workbook": "monthly_operations_template.xlsx",
+  "output_workbook": "monthly_operations_report.xlsx",
+  "requirements": {
+    "summary_sheet": "Executive_Summary",
+    "base_sheets": [
+      "Raw_Data",
+      "Shipment_Summary",
+      "Order_Summary",
+      "Inventory_Summary",
+      "Segment_Summary",
+      "Trend_Summary",
+      "Reconciliation"
+    ],
+    "raw_sheets": [
+      "Raw_Data"
+    ],
+    "minimum_bytes": 1000000,
+    "minimum_formula_count": 39,
+    "metrics": [
+      {
+        "name": "Latest Month Shipments",
+        "cell": "B5",
+        "required_references": [
+          "Shipment_Summary!B25"
+        ],
+        "font_color": "008000",
+        "number_format": "$#,##0"
+      },
+      {
+        "name": "Latest Month New Orders",
+        "cell": "B6",
+        "required_references": [
+          "Order_Summary!B25"
+        ],
+        "font_color": "008000",
+        "number_format": "$#,##0"
+      },
+      {
+        "name": "Latest Month Unfilled Orders",
+        "cell": "B7",
+        "required_references": [
+          "Order_Summary!C25"
+        ],
+        "font_color": "008000",
+        "number_format": "$#,##0"
+      },
+      {
+        "name": "Inventory-to-Shipments Ratio",
+        "cell": "B8",
+        "required_references": [
+          "Inventory_Summary!E25"
+        ],
+        "font_color": "008000",
+        "number_format": "0.00\"x\""
+      },
+      {
+        "name": "Reconciliation Status",
+        "cell": "B9",
+        "required_references": [
+          "Reconciliation!B15"
+        ],
+        "font_color": "008000",
+        "prompt_instruction": "cross-sheet formula returning PASS when Reconciliation!B15 is PASS, otherwise REVIEW."
+      }
+    ],
+    "scenario": {
+      "selector_cell": "B12",
+      "default": "Base",
+      "table_columns": {
+        "D": "Scenario",
+        "E": "Order value multiplier",
+        "F": "Shipment volume multiplier"
+      },
+      "rows": [
+        {
+          "name": "Base",
+          "cells": {
+            "D13": "Base",
+            "E13": 1.0,
+            "F13": 1.0
+          }
+        },
+        {
+          "name": "Upside",
+          "cells": {
+            "D14": "Upside",
+            "E14": 1.08,
+            "F14": 1.05
+          }
+        },
+        {
+          "name": "Downside",
+          "cells": {
+            "D15": "Downside",
+            "E15": 0.93,
+            "F15": 0.95
+          }
+        }
+      ],
+      "formula_metrics": [
+        {
+          "name": "Selected Order value multiplier",
+          "cell": "B13",
+          "required_references": [
+            "B12"
+          ],
+          "meaning": "Look up selected multiplier",
+          "font_color": "000000"
+        },
+        {
+          "name": "Selected Shipment volume multiplier",
+          "cell": "B14",
+          "required_references": [
+            "B12"
+          ],
+          "meaning": "Look up selected multiplier",
+          "font_color": "000000"
+        },
+        {
+          "name": "Projected Shipments",
+          "cell": "B15",
+          "required_references": [
+            "B5",
+            "B14"
+          ],
+          "meaning": "Multiply the referenced KPI by selected scenario multipliers",
+          "font_color": "000000"
+        },
+        {
+          "name": "Projected New Orders",
+          "cell": "B16",
+          "required_references": [
+            "B6",
+            "B13",
+            "B14"
+          ],
+          "meaning": "Multiply the referenced KPI by selected scenario multipliers",
+          "font_color": "000000"
+        }
+      ]
+    },
+    "charts": [
+      {
+        "id": "orders_shipments",
+        "description": "an orders versus shipments trend",
+        "required_references": [
+          "Trend_Summary!"
+        ]
+      },
+      {
+        "id": "inventory_trend",
+        "description": "an inventory trend",
+        "required_references": [
+          "Inventory_Summary!"
+        ]
+      }
+    ],
+    "minimum_conditional_formats": 2,
+    "minimum_comments": 2,
+    "recalc_timeout": 180
+  },
+  "publish_files": [
+    {
+      "input": "prepared_monthly_operations_summary.csv",
+      "output": "monthly_operations_summary.csv",
+      "sha256": "b2c84c5f39d22f0521f9fcc22ae10f5d38607b2e481ab47b60a727cc36a6a7d1"
+    },
+    {
+      "input": "prepared_reconciliation_summary.csv",
+      "output": "reconciliation_summary.csv",
+      "sha256": "5729b3d8efc8aff225ab3398c18e16fc30acb8ea5ceb47b5ff4577632815c6e7"
+    }
+  ],
+  "required_outputs": [
+    "monthly_operations_report.xlsx",
+    "monthly_operations_summary.csv",
+    "reconciliation_summary.csv",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ],
+  "input_files": {
+    "input/dataset_sources.md": "8d149c0503083cfa6ac8490b5f91e64ccbc561e043f724478a26571c5aa98ead",
+    "input/monthly_operations_template.xlsx": "32dfb3963e1dc5e7ba24202ebef68d7a5eeb1e0a4042c6eb2023875f0b01fba9",
+    "input/prepared_monthly_operations_summary.csv": "b2c84c5f39d22f0521f9fcc22ae10f5d38607b2e481ab47b60a727cc36a6a7d1",
+    "input/prepared_reconciliation_summary.csv": "5729b3d8efc8aff225ab3398c18e16fc30acb8ea5ceb47b5ff4577632815c6e7",
+    "input/template_manifest.json": "65e0d7b0a6c2dde6a45efd7ec7eda2af58aa5dfd7a0d1e0fe5e6787d211c858a"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "e83b238fb1a7317209a038c4ae30750070683f0658391e3be14193bc65cd93f9",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+  "prompt_contract": {
+    "task_subject": "Census M3 manufacturing January 2023–December 2024 benchmark workbook",
+    "raw_record_count": 100000,
+    "original_chart_count": 2,
+    "metadata_files": [
+      "template_manifest.json",
+      "dataset_sources.md"
+    ]
+  },
+  "runtime_case": "SUB-MEM-OFFICE-MANUFACTURING-01",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "trace_rules": [
+    {
+      "pattern": "verify_office\\.py",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "recalc\\.py",
+      "operation": "recalculate_formulas"
+    },
+    {
+      "pattern": "\\bcp\\b.*\\.csv",
+      "operation": "publish_csv"
+    },
+    {
+      "pattern": "load_workbook",
+      "operation": "inspect_workbook"
+    }
+  ],
+  "source_provenance": {
+    "publisher": "U.S. Census Bureau",
+    "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=AMTMVS,AMTMNO,AMTMUO,AMTMTI&cosd=2023-01-01&coed=2024-12-31",
+    "source_artifact": "sources/xlsx/manufacturing_fred.zip",
+    "source_sha256": "beb468f6f711cdb4df15cc4b67bf2155470ef1b35c2497ce123bce78444b2675",
+    "series": [
+      "AMTMVS",
+      "AMTMNO",
+      "AMTMUO",
+      "AMTMTI"
+    ],
+    "selected_periods": [
+      "2023-01",
+      "2024-12"
+    ],
+    "observed_seed_rows": 24,
+    "benchmark_raw_rows": 100000,
+    "raw_rows_are_observed_firms": false,
+    "expansion": "Integer-dollar partition: each observed amount split across deterministic synthetic shards; source totals preserved.",
+    "units": "USD converted from source millions of dollars",
+    "dimensions": "National total; six explicitly synthetic benchmark segments, not industry estimates"
+  }
+}

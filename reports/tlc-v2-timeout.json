@@ -1,0 +1,23 @@
+{
+  "run_id": "xlsx-tlc-20261009T060855Z-4e1e183c",
+  "status": "failed",
+  "reason": "Agent 1800000ms timeout during large-workbook preservation verification; CLI output lacked usable session metadata, so ATIF export failed closed.",
+  "terminal_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "agent_exit_code": 1,
+  "agent_seconds": 1836.2,
+  "input_hashes": {
+    "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+    "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+    "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+    "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+    "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832"
+  },
+  "manifest_sha256": "ee14c42c1ec518dfeac768902916dc6e4e293f415a5953aa6cc15220cde7f4a6",
+  "prompt_sha256": "c0289789807ab9ecbeb036d4ee1917d18c64df95259f16a10326b93e781e4d39",
+  "source_snapshot_sha256": "b9b13833dc9d784058cfebab1f178b3c3c09514cba7b5203761249bd2b5421d1",
+  "stderr": "[agent/embedded] embedded run timeout: runId=407df983-e1a9-436b-baab-3650fa265427 sessionId=caea99c9-0bc3-4801-8e3e-a1f5d741d632 timeoutMs=1800000\n[diagnostic] lane task error: lane=main durationMs=1831724 error=\"CommandLaneTaskTimeoutError: Command lane \"main\" task timed out after 1830000ms\"\n[diagnostic] lane task error: lane=session:agent:main:SUB-MEM-OFFICE-01 durationMs=1831728 error=\"CommandLaneTaskTimeoutError: Command lane \"main\" task timed out after 1830000ms\"\nCommandLaneTaskTimeoutError: Command lane \"main\" task timed out after 1830000ms\n",
+  "canonical": false,
+  "retry_run_id": "xlsx-tlc-20261009T063937Z-9a06558f",
+  "fix": "Cache semantic style-object comparisons per pair within each sheet; unchanged source-preservation criteria. Longer 3600s Agent allowance.",
+  "limitation": "No canonical trajectory for this unsuccessful attempt; failure report is diagnostic evidence, not a replay input."
+}

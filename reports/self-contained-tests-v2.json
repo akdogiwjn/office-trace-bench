@@ -1,0 +1,49 @@
+{
+  "schema_version": "office-independent-checks-v2",
+  "checked_at": "2026-10-09T08:37:15.263457+00:00",
+  "publication_tree_sha1": "5dd081d5dc21c1e4f5c70c2f3034a18dd31b3d17",
+  "checkout_method": "git archive of staged tree; no sibling repository, Git history, runs, snapshots or qualification directories",
+  "python_version": "3.11.6",
+  "status": "success",
+  "unit_tests": {
+    "counts": {
+      "total": 26,
+      "passed": 26,
+      "skipped": 0,
+      "failed": 0,
+      "errors": 0,
+      "expected_failures": 0,
+      "unexpected_successes": 0
+    },
+    "successful": true,
+    "skips": [],
+    "failures": []
+  },
+  "checks": [
+    {
+      "check": "unit_tests",
+      "exit_code": 0,
+      "stdout": "{\"run_dir\": \"/tmp/tmphlrkqrh2/runs/pdf-opm-20261009T083230Z-b91a3d85\", \"status\": \"success\"}\n{\"run_dir\": \"/tmp/tmpo49mf61m/runs/pdf-opm-20261009T083230Z-60c83f5a\", \"status\": \"invalidated\"}\n",
+      "stderr": "test_rewritten_helper_versions_and_deleted_script_are_retained (test_artifact_capture.ArtifactCaptureTests.test_rewritten_helper_versions_and_deleted_script_are_retained) ... ok\ntest_all_selected_trace_bindings_and_real_verifier_evidence (test_canonical_pack.CanonicalPackTests.test_all_selected_trace_bindings_and_real_verifier_evidence) ... ok\ntest_modified_trace_is_rejected (test_canonical_pack.CanonicalPackTests.test_modified_trace_is_rejected) ... ok\ntest_added_bootstrap_or_changed_registry_fails_audit (test_context_profile.ContextProfileTests.test_added_bootstrap_or_changed_registry_fails_audit) ... ok\ntest_only_background_files_are_frozen (test_context_profile.ContextProfileTests.test_only_background_files_are_frozen) ... ok\ntest_historical_trace_export_retains_every_call_and_result (test_contracts_and_trace.ContractTests.test_historical_trace_export_retains_every_call_and_result) ... ok\ntest_stage_preserves_seed_and_rejects_overwrite (test_contracts_and_trace.ContractTests.test_stage_preserves_seed_and_rejects_overwrite) ... ok\ntest_unrelated_newest_session_is_never_captured (test_contracts_and_trace.ContractTests.test_unrelated_newest_session_is_never_captured) ... ok\ntest_unsafe_paths_rejected (test_contracts_and_trace.ContractTests.test_unsafe_paths_rejected) ... ok\ntest_legacy_runner_is_unchanged_and_no_historical_outputs_are_imported (test_controlled_pair.ControlledPairTests.test_legacy_runner_is_unchanged_and_no_historical_outputs_are_imported) ... ok\ntest_pdf_task_matches_actual_old_message_and_active_prompts_are_unchanged (test_controlled_pair.ControlledPairTests.test_pdf_task_matches_actual_old_message_and_active_prompts_are_unchanged) ... ok\ntest_exactly_seven_inputs_with_frozen_provenance (test_frozen_suite.FrozenSuiteTests.test_exactly_seven_inputs_with_frozen_provenance) ... ok\ntest_pdf_records_reproduce_and_hashes_are_frozen (test_frozen_suite.FrozenSuiteTests.test_pdf_records_reproduce_and_hashes_are_frozen) ... ok\ntest_equivalence_is_field_specific_and_opt_in (test_pdf_aliases.PdfAliasTests.test_equivalence_is_field_specific_and_opt_in) ... ok\ntest_real_old_attempt_passes_current_contract_without_output_changes (test_pdf_aliases.PdfAliasTests.test_real_old_attempt_passes_current_contract_without_output_changes) ... ok\ntest_common_prompts_have_no_dataset_layout_or_business_literals (test_prompt_compatibility.PromptCompatibilityTests.test_common_prompts_have_no_dataset_layout_or_business_literals) ... ok\ntest_historical_tasks_are_frozen_in_repository_fixtures (test_prompt_compatibility.PromptCompatibilityTests.test_historical_tasks_are_frozen_in_repository_fixtures) ... ok\ntest_modified_prompt_cannot_pass_frozen_manifest_validation (test_prompt_compatibility.PromptCompatibilityTests.test_modified_prompt_cannot_pass_frozen_manifest_validation) ... ok\ntest_only_selected_inputs_and_own_results_are_mounted (test_run_isolation.RunIsolationTests.test_only_selected_inputs_and_own_results_are_mounted) ... ok\ntest_source_changes_invalidate_the_run (test_run_isolation.RunIsolationTests.test_source_changes_invalidate_the_run) ... ok\ntest_different_metric_addresses_and_natural_sheet_counts_pass (test_spreadsheet_semantics.SemanticSpreadsheetTests.test_different_metric_addresses_and_natural_sheet_counts_pass) ... ok\ntest_hardcoded_answer_and_disconnected_scenario_fail (test_spreadsheet_semantics.SemanticSpreadsheetTests.test_hardcoded_answer_and_disconnected_scenario_fail) ... ok\ntest_source_mutations_and_missing_objects_fail (test_spreadsheet_semantics.SemanticSpreadsheetTests.test_source_mutations_and_missing_objects_fail) ... ok\ntest_missing_final_summary_is_deferred_only_during_agent_business_check (test_verification_completion.VerificationCompletionTests.test_missing_final_summary_is_deferred_only_during_agent_business_check) ... ok\ntest_input_mutation_is_rejected_before_outputs (test_verification_failures.VerificationFailureTests.test_input_mutation_is_rejected_before_outputs) ... ok\ntest_protected_field_and_wrong_value_are_rejected (test_verification_failures.VerificationFailureTests.test_protected_field_and_wrong_value_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 7.929s\n\nOK\n"
+    },
+    {
+      "check": "legacy_regression",
+      "exit_code": 0,
+      "stdout": "python3 scripts/regression.py\nchecking archived xlsx/tlc\n{\"new_verifier\": \"success\", \"new_failures\": [], \"legacy_verifier\": \"success\", \"legacy_exit_code\": 0, \"legacy_failures\": [], \"legacy_error\": null}\nchecking archived pdf/opm\n{\"new_verifier\": \"success\", \"new_failures\": [], \"legacy_verifier\": \"success\", \"legacy_exit_code\": 0, \"legacy_failures\": [], \"legacy_error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "check": "canonical_suite",
+      "exit_code": 0,
+      "stdout": "7/7 current datasets, canonical objects and provenance links: OK\n",
+      "stderr": ""
+    },
+    {
+      "check": "canonical_outputs",
+      "exit_code": 0,
+      "stdout": "irs_w4 success []\nopm success []\nsba1919 success []\nhr success []\nmanufacturing success []\nretail success []\ntlc success []\n",
+      "stderr": "/tmp/office-independent-t_w431g1/checkout/vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed\n/tmp/office-independent-t_w431g1/checkout/vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl/openpyxl/worksheet/_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed\n"
+    }
+  ],
+  "scope": "Self-contained unit/integration, frozen legacy artifact regression, and canonical/hash/scenario verification. No Agent or LLM calls; no CPU/OS replay."
+}

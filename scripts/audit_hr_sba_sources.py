@@ -95,7 +95,7 @@ def audit_hr():
             matches.append(dict(soc=row['OCC_CODE'],title=row['OCC_TITLE'],official_line=candidate['line']))
     overall = next(r for r in rows if r['OCC_CODE']=='00-0000')
     oracle = lookup[title_key('All occupations')][0]
-    source_matches_manifest = sha256(source)==read_json(ROOT/'datasets/xlsx/hr/manifest.json')['source_provenance']['source_sha256']
+    source_matches_manifest = sha256(source)==read_json(ROOT/'datasets/xlsx/hr/provenance.json')['sha256']
     assert len(selected)==825 and source_matches_manifest
     return dict(source_path=str(source.relative_to(ROOT)),sha256=sha256(source),bytes=len(data),
         source_matches_frozen_manifest=source_matches_manifest,
@@ -164,7 +164,7 @@ def main():
         status='content_checks_passed_with_provenance_limits' if hr['content_check_passed'] and sba['all_seven_pages_normalized_text_identical'] and sba['redownload_byte_identical'] else 'content_check_failed',
         raw_runs_and_frozen_dataset_inputs_modified=False,
         source_extracts={str(p.relative_to(ROOT)):sha256(p) for p in sorted(FOLDER.glob('*')) if p.is_file()})
-    write_json(ROOT/'reports/hr-sba-source-reliability-v1.json',report)
+    write_json(ROOT/'reports/hr-sba-source-reliability-v2.json',report)
     print('HR',hr['matched_occupations'],'/',hr['selected_detailed_occupations'],'missing',len(hr['missing_occupations']),
           'conflicts',len(hr['conflicting_occupations']),'field checks',hr['checked_field_counts'])
     print('SBA redownload identical:',sba['redownload_byte_identical'],'official normalized text identical:',

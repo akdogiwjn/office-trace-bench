@@ -1,0 +1,17 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "filename": "sba1919_2024.pdf",
+  "revision": "SBA Form 1919, 04/2024; expires 2027-06-30",
+  "sha256": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+  "page_count": 7,
+  "field_count": 127,
+  "official_source": "https://legacy.sba.gov/sites/default/files/2024-07/Form1919%20%281%29.pdf",
+  "actual_download_source": "https://sba.app.box.com/s/iud0tv5euaw4cdvv3itmbrc2tp2p7etf",
+  "download_date": "2026-10-09",
+  "official_byte_identity_verified": false,
+  "records_contract_sha256": "ffe8a1b0989694a1a3309e2d18a89fc215edee20ae01409f9d8356bad3273698",
+  "reason_for_revision": "Native fillable 04/2024 form enables frozen Skill batch filling; not the latest form.",
+  "current_2025_exclusion": "Official 2025 download failed (403). Only the downloaded bank mirror was observed to have no AcroForm; this does not prove the inaccessible official 2025 original is non-fillable.",
+  "corroboration": "Fresh Box download byte-identical; all seven pages normalized letters/digits match official 2024 PDF web extract. No exact share backlink or official byte identity claimed.",
+  "evidence": "reports/hr-sba-source-reliability-v1.json"
+}

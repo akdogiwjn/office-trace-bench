@@ -1,0 +1,383 @@
+{
+  "schema_version": "office-current-agent-regression-v2",
+  "generated_at": "2026-10-09T07:13:36.493206+00:00",
+  "status": "success",
+  "accepted_dataset_count": 7,
+  "datasets": [
+    {
+      "dataset_id": "irs_w4",
+      "kind": "pdf",
+      "run_id": "pdf-irs_w4-20261009T060857Z-ef1696a0",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/pdf/irs_w4/pdf-irs_w4-20261009T060857Z-ef1696a0",
+      "canonical_sha256": "33511c033b87703152e38d1b0291f773045c9651c7e604b365753a2a95abd48f",
+      "trace_sha256": "3361b484e8daf305b45a03bac6dbbac0e5cd740999168fffa73fd2faaee90f45",
+      "manifest_sha256": "ea7e0817247d77740b4c5d46330f981b53814dd91ca28079cd824aa0650404f9",
+      "input_hashes": {
+        "input/fw4_2026.pdf": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+        "input/pdf_dataset_sources.md": "f4b745509bcb56d322b614643335c3aa8306b17b40a561c16cd888bff795b09d",
+        "input/synthetic_employees.json": "a4c5bed32a0ff5da282b9d4b03eb2c484c480dbb890274b59b4ae87783ab79cc"
+      },
+      "prompt_template_sha256": "bcd3fde01752dbcfe98527e199cf00da932f9d9371d74f83e483e1d17d1d2c74",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 18,
+      "tool_calls": 19,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "e90000c2f6b9e8f1f19e32b9aaa256dbd3415f8fe037026be57955bda8d706bc",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "provenance_sha256": "2ad241889efe8c3d673fae3285bbe3d3804404eb37598b03eb368412b307c4a9",
+      "revision_capture": {
+        "present": true,
+        "gaps": []
+      }
+    },
+    {
+      "dataset_id": "opm",
+      "kind": "pdf",
+      "run_id": "pdf-opm-20261009T060618Z-87cbc811",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/pdf/opm/pdf-opm-20261009T060618Z-87cbc811",
+      "canonical_sha256": "de2f3bb1dcb6989be3d99c01432f1140e4aa85771b63b28060ae87e8c67c7320",
+      "trace_sha256": "cdddfcce32d5d3209f71fec07e628f3f5569f36d328b9496f044bd8fb35cabe8",
+      "manifest_sha256": "c186b2ed0fc07639048c7bb2378a30831e2c53e832c186a5f99aac9f0e40532d",
+      "input_hashes": {
+        "input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+        "input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+        "input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+        "input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c"
+      },
+      "prompt_template_sha256": "bcd3fde01752dbcfe98527e199cf00da932f9d9371d74f83e483e1d17d1d2c74",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 16,
+      "tool_calls": 19,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "ffeea35b6a5ae104e48124a1e8b9461af2de85ae599d03650c9d7a9df8dfc5d8",
+        "acceptance_sha256": "b91fd0019a8338c348cfd189278046d0f13111c9058a467b3486040924888674"
+      },
+      "provenance_sha256": "9cb8b2ac621de5d1c724b98a54ab68a94420a34b98802f608058e6d12f96490e",
+      "revision_capture": {
+        "present": true,
+        "gaps": []
+      }
+    },
+    {
+      "dataset_id": "sba1919",
+      "kind": "pdf",
+      "run_id": "pdf-sba1919-20261009T060857Z-b7a0ae3b",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/pdf/sba1919/pdf-sba1919-20261009T060857Z-b7a0ae3b",
+      "canonical_sha256": "86a92c2378a2ec34efcf4940de6e75236128197e2aadb622f5398f9a17c73110",
+      "trace_sha256": "0378b2448dae7c681a504ebb2a38f904e127dabbcd058f26a8e36f8bac56e89d",
+      "manifest_sha256": "2b65a2ca089abdf246fd9695cd539bb2890d6aaaa752083a352e4b2835e6b446",
+      "input_hashes": {
+        "input/pdf_dataset_sources.md": "c00d98924d0f3ca78ca28d2d20bce893e8e6687b8f2406576cd04ddfbcffec9f",
+        "input/sba1919_2024.pdf": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+        "input/synthetic_applicants.json": "4931c2c9f56878cd60507fb6b223e283cb3dae8dedc029ff54f6905209b839d2"
+      },
+      "prompt_template_sha256": "bcd3fde01752dbcfe98527e199cf00da932f9d9371d74f83e483e1d17d1d2c74",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 21,
+      "tool_calls": 28,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "7e216d4b56fce60519e817cfa5bb43b42dda227e03ed094d3d16640485971571",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "provenance_sha256": "37f4d496330f66c28d102edac2a62f095933d89b6156ab6d56c94607af5d3a77",
+      "revision_capture": {
+        "present": true,
+        "gaps": []
+      }
+    },
+    {
+      "dataset_id": "hr",
+      "kind": "xlsx",
+      "run_id": "xlsx-hr-20261009T060833Z-5e454df8",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/xlsx/hr/xlsx-hr-20261009T060833Z-5e454df8",
+      "canonical_sha256": "648bef3f71a6e753c292a4916e6b7408a482d515f0cceabbf27c028704738a53",
+      "trace_sha256": "8e6de648af39d18a706a7a688b2be91ff96cd91873d1c0b24e70f79015294ad0",
+      "manifest_sha256": "0342aee27f185225d32ad21dd4b4aa6b668c4aa82eeaf90430eae74e485557b1",
+      "input_hashes": {
+        "input/national_M2025_dl.xlsx": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2"
+      },
+      "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 53,
+      "tool_calls": 58,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "8309261908a0091bf90d5936725e6ebfb2c71c2cb0e606ced30b4bee05c8bea7",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "provenance_sha256": "9c31955d9728d0c3c74885b2cc4bc32f01364699adac66379a8098ba42c64bd3",
+      "revision_capture": {
+        "present": true,
+        "gaps": [
+          {
+            "path": "workspace/output/business_verification.json.tmp",
+            "reason": "FileNotFoundError"
+          }
+        ]
+      }
+    },
+    {
+      "dataset_id": "manufacturing",
+      "kind": "xlsx",
+      "run_id": "xlsx-manufacturing-20261009T062012Z-176d7d79",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/xlsx/manufacturing/xlsx-manufacturing-20261009T062012Z-176d7d79",
+      "canonical_sha256": "f3931c7b7123fd9aeeefee8da949db381ded7ff7ee9913aab41661d1939da9b7",
+      "trace_sha256": "3877ba7b48fb36f7f9a0502fa3337822c46b98856eb56cbb5ef783d4b5abc94f",
+      "manifest_sha256": "88a4c35d59b22d5db8e4cc3e16f9be51622a146c1d2a0976dc9812e8244e601f",
+      "input_hashes": {
+        "input/m3_shipments_202608.xlsx": "c4f76f667032628cf1c3b8b6eb0b769c1d650404c0083ff0bb8fc25bbaf674b8"
+      },
+      "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 26,
+      "tool_calls": 32,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "6d44d270174f72aa9f4f964d4b77cf21a5e8879f6082413f2f515668ee7b96db",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "provenance_sha256": "1dbff799e6e8156a37291ed9812c7008624f03ec2c46c57bd41dcc81e28bc421",
+      "revision_capture": {
+        "present": true,
+        "gaps": [
+          {
+            "path": "workspace/output/business_verification.json.tmp",
+            "reason": "FileNotFoundError"
+          }
+        ]
+      }
+    },
+    {
+      "dataset_id": "retail",
+      "kind": "xlsx",
+      "run_id": "xlsx-retail-20261009T060447Z-30777b67",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/xlsx/retail/xlsx-retail-20261009T060447Z-30777b67",
+      "canonical_sha256": "c7cbaecbaa03cddbe67f423f2e65dd9a2d8128a48b245dddd289e5136a10157c",
+      "trace_sha256": "e512cafafb12b9769239b6c3f701a6cb69a555789bd3a97a9039b90218e134a9",
+      "manifest_sha256": "b9aacfd3a459ca1b865da4031955607f684e655571bba4ce11b7b9ce228da0c3",
+      "input_hashes": {
+        "input/marts_table1_202608.xlsx": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3"
+      },
+      "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 23,
+      "tool_calls": 28,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "c007da743e4f7320161a79e2484e68398121e5a482dd79d0896e306c7d5f43c5",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "provenance_sha256": "368d734077747055d39ea53bd495b3bd93a975ffdd24bc6f0e43b51d0dc047da",
+      "revision_capture": {
+        "present": true,
+        "gaps": [
+          {
+            "path": "workspace/output/business_verification.json.tmp",
+            "reason": "FileNotFoundError"
+          }
+        ]
+      }
+    },
+    {
+      "dataset_id": "tlc",
+      "kind": "xlsx",
+      "run_id": "xlsx-tlc-20261009T063937Z-9a06558f",
+      "status": "success",
+      "accepted": true,
+      "canonical_path": "artifacts/canonical/xlsx/tlc/xlsx-tlc-20261009T063937Z-9a06558f",
+      "canonical_sha256": "96dd73fc07faf1eb4b1a411616af5941121d6c34903bf8104d2ca0cb9a06af47",
+      "trace_sha256": "c9ae5b05b14022a7cdb8a9aa7963e9e82a00697048615f95adaf5a49be3bde25",
+      "manifest_sha256": "ee14c42c1ec518dfeac768902916dc6e4e293f415a5953aa6cc15220cde7f4a6",
+      "input_hashes": {
+        "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+        "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+        "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+        "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+        "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832"
+      },
+      "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "trace_steps": 81,
+      "tool_calls": 89,
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "4f264d9c0a5132d3d9ae49aa4d7b816a8144cd33043edd70e8de999876f0f6f3",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "provenance_sha256": "6df054c5277c6525a87b7010b0cb7e078475b07666c167a8f0fc4915230c6711",
+      "revision_capture": {
+        "present": true,
+        "gaps": [
+          {
+            "path": "workspace/output/business_verification.json.tmp",
+            "reason": "FileNotFoundError"
+          }
+        ],
+        "supplemental": [
+          {
+            "path": "supplemental_temporary_capture/revisions.json",
+            "sha256": "eb3512529170d03f7a3630e946dc8b16ca3e6e03cb13b2a003973e12a0abb39e",
+            "complete": true,
+            "logical_root": "/tmp",
+            "started_at": "2026-10-09T06:56:17.889767+00:00",
+            "gaps": [],
+            "limitations": [
+              "Started mid-run; earlier removed or overwritten unsupported temporary-file versions cannot be recovered. Files over 128MiB and races are reported as gaps. This is not syscall read/exec provenance."
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "tlc_legacy_semantic_regression": {
+    "status": "success",
+    "trace_sha256": "c9ae5b05b14022a7cdb8a9aa7963e9e82a00697048615f95adaf5a49be3bde25",
+    "legacy_expected_sha256": "bcfe9e859df6152111ab20c29d2b98c7b672ae7e11cd014cb6a3956a04ac031f",
+    "checks": [
+      {
+        "metric_id": "total_trips",
+        "actual": 2758427,
+        "legacy_expected": 2758427,
+        "passed": true
+      },
+      {
+        "metric_id": "fare_revenue",
+        "actual": 50744748.6,
+        "legacy_expected": 50744748.6,
+        "passed": true
+      },
+      {
+        "metric_id": "average_fare",
+        "actual": 18.9361351508528,
+        "legacy_expected": 18.9361351508528,
+        "passed": true
+      },
+      {
+        "metric_id": "removal_rate",
+        "actual": 0.0695524963705347,
+        "legacy_expected": 0.0695524963705347,
+        "passed": true
+      },
+      {
+        "metric_id": "reconciliation_status",
+        "actual": "PASS",
+        "legacy_expected": "PASS",
+        "passed": true
+      }
+    ],
+    "scope": "Same original workbook and five historical business KPI values; Agent-selected layout may differ."
+  },
+  "opm_legacy_regression": {
+    "status": "success",
+    "trace_sha256": "cdddfcce32d5d3209f71fec07e628f3f5569f36d328b9496f044bd8fb35cabe8",
+    "legacy_verifier_result_sha256": "3386335ba51903410245e21983d7285c1e012a4a7c779a6d9dd903692bb5a6f6"
+  },
+  "source_identity_scope": "Provenance limitations retained; successful execution is not official original-byte identity proof.",
+  "replay_ready": false,
+  "failed_attempts": [
+    "reports/tlc-v2-timeout.json"
+  ],
+  "superseded_success": "M3 xlsx-manufacturing-20261009T060813Z-8a54f96e: source prose corrected from 65 to 71 rows and a new run frozen.",
+  "scope": "Real Agent generation plus frozen-source and independent acceptance; not CPU/OS replay or script/trajectory equality against legacy.",
+  "qualification_state": "Superseded: strict current default-style checks rejected initial Retail and M3 outputs. These runs succeeded under their own earlier frozen verifiers; they are not selected for the final suite."
+}

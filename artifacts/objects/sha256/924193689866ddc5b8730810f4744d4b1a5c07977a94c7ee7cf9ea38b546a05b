@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""Post-recalc repair: restore the original sheet's default style semantics.
+
+LibreOffice (via recalc) reserialized xl/styles.xml and changed the default
+cellXf/font used by the untouched source sheet (added charset, dropped
+scheme=minor, injected horizontal/vertical alignment).  Style index 0 is used
+ONLY by the original sheet, so we splice the source's font[0] / cellXfs[0] back
+in while keeping every other part (including recalculated formula caches)
+untouched.
+
+Run AFTER recalc.py and BEFORE verification.  Never re-run recalc afterwards.
+"""
+import re
+import sys
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "input" / "m3_shipments_202608.xlsx"
+OUT = ROOT / "output" / "manufacturing_enhanced.xlsx"
+
+STYLES_PART = "xl/styles.xml"
+
+
+def first_element(styles, container, tag):
+    """Return the first <tag .../> or <tag ...>...</tag> inside a container element."""
+    c = re.search(rf"<{container}\b[^>]*>(.*?)</{container}>", styles, re.S)
+    if not c:
+        raise ValueError(f"<{container}> container not found")
+    body = c.group(1)
+    m = re.match(r"\s*(<" + tag + r"\b[^>]*?/>|<" + tag + r"\b.*?</" + tag + r">)", body, re.S)
+    if not m:
+        raise ValueError(f"no <{tag}> element inside <{container}>")
+    return m.group(1)
+
+
+def splice_first(styles, container, tag, replacement):
+    c = re.search(rf"(<{container}\b[^>]*>)(.*?)(</{container}>)", styles, re.S)
+    old = first_element(styles, container, tag)
+    new_body, n = re.subn(re.escape(old), replacement, c.group(2), count=1)
+    if n != 1:
+        raise ValueError(f"failed to splice {container}/{tag}")
+    return styles[:c.start(2)] + new_body + styles[c.end(2):]
+
+
+def main(path=None):
+    path = Path(path) if path else OUT
+    src_styles = zipfile.ZipFile(SRC).read(STYLES_PART).decode("utf-8")
+    src_font0 = first_element(src_styles, "fonts", "font")
+    src_xf0 = first_element(src_styles, "cellXfs", "xf")
+
+    zin = zipfile.ZipFile(path)
+    names = zin.namelist()
+    data = {n: zin.read(n) for n in names}
+    zin.close()
+
+    styles = data[STYLES_PART].decode("utf-8")
+    styles = splice_first(styles, "fonts", "font", src_font0)
+    styles = splice_first(styles, "cellXfs", "xf", src_xf0)
+    data[STYLES_PART] = styles.encode("utf-8")
+
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zout:
+        for n in names:
+            zout.writestr(n, data[n])
+    print(f"patched {STYLES_PART}: font[0] and cellXfs[0] restored from source")
+    print("  src font[0]:", src_font0)
+    print("  src xf[0]  :", src_xf0)
+
+
+if __name__ == "__main__":
+    main(*sys.argv[1:])

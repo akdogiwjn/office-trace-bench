@@ -1,0 +1,22 @@
+{
+  "summary_sheet": "Retail Analysis",
+  "metrics": {
+    "adjusted_sales": {"sheet": "Retail Analysis", "cell": "B6"},
+    "monthly_growth": {"sheet": "Retail Analysis", "cell": "B7"},
+    "annual_growth": {"sheet": "Retail Analysis", "cell": "B8"}
+  },
+  "scenario": {
+    "selector": {"sheet": "Retail Analysis", "cell": "B11"},
+    "assumptions": {
+      "Base": {"sales_multiplier": {"sheet": "Retail Analysis", "cell": "B13"}},
+      "Higher": {"sales_multiplier": {"sheet": "Retail Analysis", "cell": "B14"}},
+      "Lower": {"sales_multiplier": {"sheet": "Retail Analysis", "cell": "B15"}}
+    },
+    "projections": {
+      "projected_sales": {"sheet": "Retail Analysis", "cell": "B17"}
+    }
+  },
+  "charts": {
+    "adjusted_trend": {"sheet": "Retail Analysis", "index": 0}
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "summary_sheet": "OEWS Summary",
+  "metrics": {
+    "total_employment": {
+      "sheet": "OEWS Summary",
+      "cell": "B6"
+    },
+    "annual_mean_wage": {
+      "sheet": "OEWS Summary",
+      "cell": "B7"
+    },
+    "hourly_median_wage": {
+      "sheet": "OEWS Summary",
+      "cell": "B8"
+    }
+  },
+  "scenario": {
+    "selector": {
+      "sheet": "OEWS Summary",
+      "cell": "B11"
+    },
+    "assumptions": {
+      "Base": {
+        "wage_multiplier": {
+          "sheet": "OEWS Summary",
+          "cell": "B14"
+        }
+      },
+      "Increase": {
+        "wage_multiplier": {
+          "sheet": "OEWS Summary",
+          "cell": "B15"
+        }
+      }
+    },
+    "projections": {
+      "projected_mean_wage": {
+        "sheet": "OEWS Summary",
+        "cell": "B18"
+      }
+    }
+  },
+  "charts": {
+    "major_employment": {
+      "sheet": "Chart Data",
+      "index": 0
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "office-fictional-record-contract-v1",
+  "records_file": "synthetic_employees.json",
+  "records_sha256": "a4c5bed32a0ff5da282b9d4b03eb2c484c480dbb890274b59b4ae87783ab79cc",
+  "records_key": "employees",
+  "record_count": 10,
+  "schema": {
+    "type": "object",
+    "required": [
+      "employees",
+      "provenance"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "employees": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "address",
+            "children_credit",
+            "city_state_zip",
+            "deductions",
+            "extra_withholding",
+            "filing_flags",
+            "first_name",
+            "id",
+            "last_name",
+            "multiple_jobs",
+            "other_dependents_credit",
+            "other_income",
+            "total_credit"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "first_name": {
+              "type": "string"
+            },
+            "last_name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "city_state_zip": {
+              "type": "string"
+            },
+            "filing_flags": {
+              "type": "object",
+              "required": [
+                "head_of_household",
+                "married",
+                "single"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "single": {
+                  "type": "boolean"
+                },
+                "married": {
+                  "type": "boolean"
+                },
+                "head_of_household": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "multiple_jobs": {
+              "type": "boolean"
+            },
+            "children_credit": {
+              "type": "string"
+            },
+            "other_dependents_credit": {
+              "type": "string"
+            },
+            "total_credit": {
+              "type": "string"
+            },
+            "other_income": {
+              "type": "string"
+            },
+            "deductions": {
+              "type": "string"
+            },
+            "extra_withholding": {
+              "type": "string"
+            }
+          }
+        },
+        "minItems": 10,
+        "maxItems": 10
+      },
+      "provenance": {
+        "type": "string"
+      }
+    }
+  },
+  "synthetic": true,
+  "contains_real_sensitive_data": false,
+  "random_seed": null,
+  "generation_method": "Deterministic ordinal loop, no random inputs",
+  "generator": "office_trace_bench/records.py",
+  "generator_sha256": "f205dbb3e3a25ae26b7fa525a621a8f970e77498294cd417b1682b2f0bbe8d6d",
+  "generator_function": "w4",
+  "privacy": "All fixture identities are invented; reserved 555 phone numbers/example.invalid emails where present; SSNs/TINs/signatures excluded. Public birthplaces/addresses can coincide with real places without representing real persons.",
+  "update_policy": "Input byte changes require a new suite revision and new canonical trace; never replace silently."
+}

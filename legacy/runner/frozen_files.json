@@ -1,0 +1,28 @@
+{
+  "schema_version": "office-legacy-runner-fixture-v1",
+  "source": "Historical openclaw-trace-bench import; source repository is not required at runtime",
+  "files": {
+    "scripts/sync_openclaw_config.py": "742f1862b4e651744d5ec6d530bfa4e6195605da18a91d6c7bc1372a22947e21",
+    "scripts/export_openclaw_atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+    "scripts/extract_key_operations.py": "4df7379351897222245b3d49a325b641ed5ed494dc8fe0f83cf02f2fc32b2fc3",
+    "scripts/check_agent_output.py": "e4bd8fdcfc89a84d812239142211d322e7fe40ef875aa4f8cadfba183d1c88f7",
+    "scripts/run_agent_case.sh": "38e7cd4a9aa2c3fb5c3580429ce81b7a2411b0a10bc7a6c09d289708154bc5e1",
+    "scripts/capture_openclaw_session.py": "a83e8d840e49735be2dea4907d5cc3a0cb975c022382348d2221c30bbdfcbef6",
+    "cases/pdf/expected.json": "9c2771bf1108731499ee7d6d3585487ae798416e91ce16ca643af95118824dc1",
+    "cases/pdf/manifest.json": "b77b22da6ddb4e3fe6b080662787f366fd69eb453dce903eeaa5d09641998d1e",
+    "cases/pdf/task.prompt": "94ab4a63c17e0994ccb780b46f51fec7af041ddaf2477da095670f22ef0b9a77",
+    "cases/pdf/input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+    "cases/pdf/input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+    "cases/pdf/input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+    "cases/pdf/input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+    "cases/xlsx/expected.json": "bcfe9e859df6152111ab20c29d2b98c7b672ae7e11cd014cb6a3956a04ac031f",
+    "cases/xlsx/manifest.json": "b9dd4693a2d40e1ec800a1d03f3631ac8f7a854f78346a3cadfda8202aa23793",
+    "cases/xlsx/task.prompt": "fb1e0e97e1715a0c573fbe90f0de444085786612594a947b707b26899b6ef0b1",
+    "cases/xlsx/input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+    "cases/xlsx/input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+    "cases/xlsx/input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+    "cases/xlsx/input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+    "cases/xlsx/input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+    "cases/xlsx/input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+  }
+}

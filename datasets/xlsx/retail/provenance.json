@@ -1,0 +1,24 @@
+{
+  "schema_version": "office-input-provenance-v2",
+  "dataset_id": "retail",
+  "filename": "marts_table1_202608.xlsx",
+  "sha256": "b67bb348423d1b07e28a69b14a39e2d1dc681d82ff94ff89bba31090ae0a95c3",
+  "frozen_at": "2026-10-09T05:17:31.422361+00:00",
+  "task": "Analyze the frozen Census MARTS August 2026 publication table",
+  "input_class": "official_table_transcription",
+  "native_xlsx": false,
+  "official_url": "https://www.census.gov/retail/marts/www/marts_current.pdf",
+  "official_xlsx_url": "https://www.census.gov/retail/marts/www/marts_current.xlsx",
+  "actual_download_source": "Official census.gov PDF table via web-tool text extraction",
+  "source_filename": "marts_current.pdf",
+  "release": "CB26-153; August 2026 advance estimates, released 2026-09-16, before 2026-09-28 revisions",
+  "download_date": "2026-10-09",
+  "source_evidence": "sources/provenance-audit/retail-m3-tables-web.txt",
+  "source_evidence_sha256": "6a60f7bf197c4fc710e6c3fb46cb0d9ff8a18f069096cff6cd5bb03fe1f5f9ee",
+  "observations": 37,
+  "synthetic_expansion": false,
+  "conversion": "All Table 1 rows and 12 numeric/marker columns transcribed; labels joined across PDF lines; publication notes retained. Source PDF and native XLSX byte hashes unavailable.",
+  "limitations": [
+    "Native Census XLSX downloads return HTTP 403; this fallback is explicitly generated from an official raw table, not an official XLSX file."
+  ]
+}
