@@ -1,0 +1,137 @@
+{
+  "schema_version": "office-generation-stability-audit-v5",
+  "historical_runs": [
+    {
+      "label": "kp_original",
+      "kind": "xlsx",
+      "source": "/home/lcq/kp_openclaw/cases/04_xlsx/agent_run/openclaw_session.jsonl",
+      "session_id": "6b9e2cc2-a3f8-4095-8cb7-b20889c6d424",
+      "same_original_user_task": true,
+      "helper_writes": [
+        {
+          "name": "enhance_workbook.py",
+          "lines": 256,
+          "sha256": "c8a244422eb61b3b5473a7bcfccf31c8fee4466cebc360c6ac22c69e5e9a1b78"
+        }
+      ],
+      "same_original_user_task_ignoring_trailing_newlines": true,
+      "task_input_note": "Exact user task text matches the original file."
+    },
+    {
+      "label": "legacy_first",
+      "kind": "xlsx",
+      "source": "/home/lcq/openclaw-trace-bench/trace_backups/20260730T133833Z/xlsx/agent_run/openclaw_session.jsonl",
+      "session_id": "208c4ad0-5f7e-444f-97da-9fd2dbca0e31",
+      "same_original_user_task": false,
+      "helper_writes": [
+        {
+          "name": "enhance_workbook.py",
+          "lines": 291,
+          "sha256": "a15375db57064f2afd57726a471901ba86a28a0b7f2527568ea00ff81ac916be"
+        },
+        {
+          "name": "enhance_workbook.py",
+          "lines": 243,
+          "sha256": "6a4c70762f2407dc64231e4202cdb3ed9a7f8c5968d3157a30d7093aff81ffc9"
+        },
+        {
+          "name": "enhance_workbook.py",
+          "lines": 234,
+          "sha256": "14bff46f35afb5bc959b0a833b055a29b10cc7470d71c4a64d0dd45ca2556eb4"
+        }
+      ],
+      "same_original_user_task_ignoring_trailing_newlines": true,
+      "task_input_note": "Bash command substitution in the old runner strips the file trailing newline; business task text is unchanged."
+    },
+    {
+      "label": "legacy_second",
+      "kind": "xlsx",
+      "source": "/home/lcq/openclaw-trace-bench/cases/xlsx/agent_run/openclaw_session.jsonl",
+      "session_id": "85e12fb7-a392-4cd8-9bdb-066156bc464a",
+      "same_original_user_task": false,
+      "helper_writes": [
+        {
+          "name": "enhance_workbook.py",
+          "lines": 286,
+          "sha256": "2b8fe9c6c839510648e870b19400f66ec5df9d9d7f9c9dea5f5d5f1f5b2a43a6"
+        }
+      ],
+      "same_original_user_task_ignoring_trailing_newlines": true,
+      "task_input_note": "Bash command substitution in the old runner strips the file trailing newline; business task text is unchanged."
+    },
+    {
+      "label": "kp_original",
+      "kind": "pdf",
+      "source": "/home/lcq/kp_openclaw/cases/05_pdf/agent_run/openclaw_session.jsonl",
+      "session_id": "5f15bf99-477c-4a75-8494-0b0232f408ab",
+      "same_original_user_task": true,
+      "helper_writes": [
+        {
+          "name": "generate_field_values.py",
+          "lines": 138,
+          "sha256": "4fe7baf2132ab4b1841c3f778192a0214c843e6cea3037c010523fe935d04f30"
+        },
+        {
+          "name": "batch_driver.sh",
+          "lines": 34,
+          "sha256": "91d74b424ddeb8dde583f49f2bc30f5487ca8c6103b08e8a7ef46bf12729c69f"
+        },
+        {
+          "name": "batch_driver.sh",
+          "lines": 37,
+          "sha256": "e78d39d6d2daf3b51b12659677f8a6ce96d1d62598569aa48ff16fdda463d62d"
+        }
+      ],
+      "same_original_user_task_ignoring_trailing_newlines": true,
+      "task_input_note": "Exact user task text matches the original file."
+    },
+    {
+      "label": "legacy_first",
+      "kind": "pdf",
+      "source": "/home/lcq/openclaw-trace-bench/trace_backups/20260730T133833Z/pdf/agent_run/openclaw_session.jsonl",
+      "session_id": "f8e0e14d-a214-4474-b05b-574ae04650c2",
+      "same_original_user_task": false,
+      "helper_writes": [
+        {
+          "name": "generate_field_values.py",
+          "lines": 139,
+          "sha256": "a84c898708d149928a1e4416de6a9dd2a61567d36100b55b4acc7d1c758934fd"
+        },
+        {
+          "name": "batch_fill_render.py",
+          "lines": 66,
+          "sha256": "d9b6835da4cabf09bca9d511e75f718b3dbf598f689144c71e7b5921d2d5d608"
+        }
+      ],
+      "same_original_user_task_ignoring_trailing_newlines": true,
+      "task_input_note": "Bash command substitution in the old runner strips the file trailing newline; business task text is unchanged."
+    },
+    {
+      "label": "legacy_second",
+      "kind": "pdf",
+      "source": "/home/lcq/openclaw-trace-bench/cases/pdf/agent_run/openclaw_session.jsonl",
+      "session_id": "bc13a924-f3f3-4822-a2b8-80e2ecdf96f3",
+      "same_original_user_task": false,
+      "helper_writes": [
+        {
+          "name": "generate_and_run_batch.py",
+          "lines": 184,
+          "sha256": "f054d84f7758f7f8be205bf69a9d92af4a32366ce17b39ed2e44494bc9bd288b"
+        },
+        {
+          "name": "run_batch_fill_render.py",
+          "lines": 52,
+          "sha256": "0402239c6a100348f35ce689abd012f5e1a5d68ced5c8708facc7bc4ce73a084"
+        }
+      ],
+      "same_original_user_task_ignoring_trailing_newlines": true,
+      "task_input_note": "Bash command substitution in the old runner strips the file trailing newline; business task text is unchanged."
+    }
+  ],
+  "new_attempt_revision_groups": {
+    "compact_task": "shortened task prompt and default background",
+    "restored_task": "old business task restored; default background remained different",
+    "restored_background": "shared parameterized old-structure task and frozen background/Skill registry"
+  },
+  "conclusion": "The new attempts span different input revisions; they do not measure repeated-generation stability under one fixed configuration. Historical helper filenames and structure similarity do not imply frozen source content. No causal attribution for increased observed differences has been established."
+}

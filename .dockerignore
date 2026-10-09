@@ -1,0 +1,5 @@
+*
+!requirements.txt
+!vendor/
+!vendor/wheels/
+!vendor/wheels/*.whl

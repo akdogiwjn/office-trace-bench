@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+runs/
+.snapshots/
+qualification/
+reports/*.log
+reports/credential-provenance.json
+*.env
+sources/pdf/sba_box_page.html
+sources/xlsx/*_response.html
+sources/xlsx/*_missing_key.html

@@ -1,0 +1,395 @@
+{
+  "schema_version": "office-expansion-report-v1",
+  "status": "success",
+  "reported_at": "2026-10-09T11:07:07.192867+08:00",
+  "new_real_traces": 5,
+  "total_supported_instances": 7,
+  "scope": "Five new independently qualified datasets, each accepted after a real Agent run; TLC/OPM regression evidence retained separately. No replay recipe or image produced.",
+  "common_prompts_unchanged": true,
+  "fixed_agent_helpers_introduced": false,
+  "cases": [
+    {
+      "kind": "xlsx",
+      "dataset": "retail",
+      "status": "success",
+      "run_id": "xlsx-retail-20261009T023342Z-42168240",
+      "trace_steps": 26,
+      "tool_calls": 31,
+      "agent_seconds": 301.595,
+      "agent_context_matched": true,
+      "baseline_accepted": true,
+      "source_snapshot_unchanged": true,
+      "original_verifier": "not_applicable",
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "prompt_template": "xlsx.txt",
+      "prompt_template_sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+      "input_hashes": {
+        "input/dataset_sources.md": "7a3e5b098c2f766eefb15e7392638db089eeb61e2c244e90d30ead34968336d7",
+        "input/monthly_operations_template.xlsx": "93095121928adbc03f0e134862716d5fd8b0cf281b773ce25abb4a2f76dfd052",
+        "input/prepared_monthly_operations_summary.csv": "6772ca43cb92ce91e0fbb4978c4232ded8fb4160c1b7f6fb0fed6c2d4ec504aa",
+        "input/prepared_reconciliation_summary.csv": "20665d5fe7446c07f4bc802bfdd8b71a2a1167465c7eade45d547851c09a9aef",
+        "input/template_manifest.json": "a424c7fdf64661968bb111503e865665d69763be1bf485becf32392a6ebe315e"
+      },
+      "source_provenance": {
+        "publisher": "U.S. Census Bureau",
+        "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+        "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MRTSSM441USS,MRTSSM442USS,MRTSSM443USS,MRTSSM445USS,MRTSSM446USS,MRTSSM448USS&cosd=2023-01-01&coed=2024-12-31",
+        "source_artifact": "sources/xlsx/retail_fred.csv",
+        "source_sha256": "bd94274eb921b5331260f38445808c7d78895fe32e7b79cfdcf456a0add0659c",
+        "series": [
+          "MRTSSM441USS",
+          "MRTSSM442USS",
+          "MRTSSM443USS",
+          "MRTSSM445USS",
+          "MRTSSM446USS",
+          "MRTSSM448USS"
+        ],
+        "selected_periods": [
+          "2023-01",
+          "2024-12"
+        ],
+        "observed_seed_rows": 144,
+        "benchmark_raw_rows": 100000,
+        "raw_rows_are_observed_firms": false,
+        "expansion": "Integer-dollar partition: each observed amount split across deterministic synthetic shards; source totals preserved.",
+        "units": "USD converted from source millions of dollars",
+        "dimensions": "Published disjoint selected retail categories"
+      },
+      "qualification_report": "qualification/xlsx-retail/qualification.json",
+      "trace_file": "runs/xlsx-retail-20261009T023342Z-42168240/trajectory.json",
+      "trace_sha256": "dd3cbaae3a0c9f3ce39bec10f0bb0c7ff04260cbfeb8dc4db732e4b5fb7402ac",
+      "tool_events_sha256": "78a04e9cd679623b8f4cb118e5b25287b2ed5831ff2e9b1635fdba69ab58fc67",
+      "independent_verification": "runs/xlsx-retail-20261009T023342Z-42168240/independent_verification.json",
+      "acceptance_report": "runs/xlsx-retail-20261009T023342Z-42168240/baseline_acceptance.json",
+      "analytical_operation_labels": {
+        "read_guidance_or_input": 1,
+        "execute_command": 14,
+        "verify_business": 2,
+        "recalculate_formulas": 3,
+        "inspect_workbook": 5,
+        "process_control": 4,
+        "author_helper": 1,
+        "write_artifact": 1
+      },
+      "operation_label_scope": "Command substring classification includes reading scripts and batched helper calls; counts do not measure actual helper invocations.",
+      "tool_is_error_steps": [],
+      "traceback_observation_steps": [],
+      "error_scope": "Final business acceptance can pass after exploratory command failures; raw observations, failures and retries are retained. A shell can exit zero despite an earlier failed subcommand.",
+      "helper_artifacts": {
+        "workspace/enhance_report.py": "bd296c1071ffa36cf28bce110895a2969559c181ecff849dc678fd9f06ffdc15"
+      },
+      "workload": {
+        "raw_rows": 100000,
+        "raw_columns": 16,
+        "base_sheets": 7,
+        "original_charts": 2,
+        "original_formulas": 41,
+        "input_workbook_bytes": 7826798,
+        "completed_recalc": {
+          "status": "success",
+          "total_errors": 0,
+          "error_summary": {},
+          "total_formulas": 51
+        }
+      }
+    },
+    {
+      "kind": "xlsx",
+      "dataset": "manufacturing",
+      "status": "success",
+      "run_id": "xlsx-manufacturing-20261009T024115Z-4afa2f56",
+      "trace_steps": 27,
+      "tool_calls": 36,
+      "agent_seconds": 252.489,
+      "agent_context_matched": true,
+      "baseline_accepted": true,
+      "source_snapshot_unchanged": true,
+      "original_verifier": "not_applicable",
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "prompt_template": "xlsx.txt",
+      "prompt_template_sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+      "input_hashes": {
+        "input/dataset_sources.md": "8d149c0503083cfa6ac8490b5f91e64ccbc561e043f724478a26571c5aa98ead",
+        "input/monthly_operations_template.xlsx": "32dfb3963e1dc5e7ba24202ebef68d7a5eeb1e0a4042c6eb2023875f0b01fba9",
+        "input/prepared_monthly_operations_summary.csv": "b2c84c5f39d22f0521f9fcc22ae10f5d38607b2e481ab47b60a727cc36a6a7d1",
+        "input/prepared_reconciliation_summary.csv": "5729b3d8efc8aff225ab3398c18e16fc30acb8ea5ceb47b5ff4577632815c6e7",
+        "input/template_manifest.json": "65e0d7b0a6c2dde6a45efd7ec7eda2af58aa5dfd7a0d1e0fe5e6787d211c858a"
+      },
+      "source_provenance": {
+        "publisher": "U.S. Census Bureau",
+        "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+        "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=AMTMVS,AMTMNO,AMTMUO,AMTMTI&cosd=2023-01-01&coed=2024-12-31",
+        "source_artifact": "sources/xlsx/manufacturing_fred.zip",
+        "source_sha256": "beb468f6f711cdb4df15cc4b67bf2155470ef1b35c2497ce123bce78444b2675",
+        "series": [
+          "AMTMVS",
+          "AMTMNO",
+          "AMTMUO",
+          "AMTMTI"
+        ],
+        "selected_periods": [
+          "2023-01",
+          "2024-12"
+        ],
+        "observed_seed_rows": 24,
+        "benchmark_raw_rows": 100000,
+        "raw_rows_are_observed_firms": false,
+        "expansion": "Integer-dollar partition: each observed amount split across deterministic synthetic shards; source totals preserved.",
+        "units": "USD converted from source millions of dollars",
+        "dimensions": "National total; six explicitly synthetic benchmark segments, not industry estimates"
+      },
+      "qualification_report": "qualification/xlsx-manufacturing/qualification.json",
+      "trace_file": "runs/xlsx-manufacturing-20261009T024115Z-4afa2f56/trajectory.json",
+      "trace_sha256": "009dbd884b89ffc80a58bced8fcb2c179d083b7ccb24080479529f9930e21998",
+      "tool_events_sha256": "e92c79a9f7fb5e8fc12478f21dbbe2e28d6b78683bed472414a4030b17b2e14e",
+      "independent_verification": "runs/xlsx-manufacturing-20261009T024115Z-4afa2f56/independent_verification.json",
+      "acceptance_report": "runs/xlsx-manufacturing-20261009T024115Z-4afa2f56/baseline_acceptance.json",
+      "analytical_operation_labels": {
+        "read_guidance_or_input": 15,
+        "execute_command": 11,
+        "inspect_workbook": 3,
+        "process_control": 3,
+        "author_helper": 1,
+        "recalculate_formulas": 1,
+        "verify_business": 1,
+        "write_artifact": 1
+      },
+      "operation_label_scope": "Command substring classification includes reading scripts and batched helper calls; counts do not measure actual helper invocations.",
+      "tool_is_error_steps": [],
+      "traceback_observation_steps": [
+        4
+      ],
+      "error_scope": "Final business acceptance can pass after exploratory command failures; raw observations, failures and retries are retained. A shell can exit zero despite an earlier failed subcommand.",
+      "helper_artifacts": {
+        "workspace/enhance_workbook.py": "ee3b94af10addbe1150220c5799d91ef9a3f6c1d7b0adbfbf3ac318a58e9ac2a"
+      },
+      "workload": {
+        "raw_rows": 100000,
+        "raw_columns": 16,
+        "base_sheets": 7,
+        "original_charts": 2,
+        "original_formulas": 30,
+        "input_workbook_bytes": 7862024,
+        "completed_recalc": {
+          "status": "success",
+          "total_errors": 0,
+          "error_summary": {},
+          "total_formulas": 39
+        }
+      }
+    },
+    {
+      "kind": "xlsx",
+      "dataset": "hr",
+      "status": "success",
+      "run_id": "xlsx-hr-20261009T025210Z-173694e5",
+      "trace_steps": 31,
+      "tool_calls": 41,
+      "agent_seconds": 448.216,
+      "agent_context_matched": true,
+      "baseline_accepted": true,
+      "source_snapshot_unchanged": true,
+      "original_verifier": "not_applicable",
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "prompt_template": "xlsx.txt",
+      "prompt_template_sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+      "input_hashes": {
+        "input/dataset_sources.md": "7a2f2ba41394427402ae99acceac58ce8ae32f5c1235ca0fdf10d762bc0029c6",
+        "input/prepared_reconciliation_summary.csv": "e7db8995ddb19f2edb252a1b41e9d66f08c8ece26fbf3960f6c65e8fbf56db01",
+        "input/prepared_workforce_summary.csv": "2392fb3139e3f34f95a4fa484214d9df68a73af210b4cafcc17fe3d03dfcd719",
+        "input/template_manifest.json": "8402e573e7d48abed22e868d2e080932cc6769615b0b95e4532a601ecea3dd01",
+        "input/workforce_template.xlsx": "717c86b5bf614862fc88baabc8107cc7c3a72a0e2b17070cfb6a445a5eebd478"
+      },
+      "source_provenance": {
+        "publisher": "U.S. Bureau of Labor Statistics",
+        "distributor": "Public GitHub repository cache",
+        "official_source_url": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+        "source_url": "https://raw.githubusercontent.com/hack4rva/richmond-ai-impact-analysis/main/data/oesm25nat/national_M2025_dl.xlsx",
+        "source_artifact": "sources/xlsx/national_M2025_dl.xlsx",
+        "source_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+        "year": 2025,
+        "official_download_available": false,
+        "official_byte_identity_independently_verified": false,
+        "observed_seed_rows": 825,
+        "benchmark_raw_rows": 100000,
+        "raw_rows_are_observed_workers": false,
+        "selection": "U.S. cross-industry ownership 1235 detailed occupations with numeric positive employment, annual mean and annual median; exclude all aggregate hierarchy rows and suppressed wages.",
+        "expansion": "Partition employment counts into synthetic shards; preserve source occupation counts and count-times-wage masses.",
+        "median_definition": "Employment-weighted average of occupation medians; a proxy, never the national worker median.",
+        "payroll_definition": "Employment times published annual mean wage; illustrative estimated wage mass, not observed payroll.",
+        "industries": "No industry detail in national cross-industry source; segments are explicitly synthetic."
+      },
+      "qualification_report": "qualification/xlsx-hr/qualification.json",
+      "trace_file": "runs/xlsx-hr-20261009T025210Z-173694e5/trajectory.json",
+      "trace_sha256": "f50bbbc2b9b70f5f75a90d86f770242894f9888a42a4d89f0897057f9ec6b7b7",
+      "tool_events_sha256": "41272848e25433956250a65a1cab6521ade4a721801166f1fbfa29b7f7555fe6",
+      "independent_verification": "runs/xlsx-hr-20261009T025210Z-173694e5/independent_verification.json",
+      "acceptance_report": "runs/xlsx-hr-20261009T025210Z-173694e5/baseline_acceptance.json",
+      "analytical_operation_labels": {
+        "read_guidance_or_input": 11,
+        "execute_command": 8,
+        "inspect_workbook": 6,
+        "process_control": 6,
+        "recalculate_formulas": 5,
+        "author_helper": 1,
+        "publish_csv": 1,
+        "verify_business": 2,
+        "write_artifact": 1
+      },
+      "operation_label_scope": "Command substring classification includes reading scripts and batched helper calls; counts do not measure actual helper invocations.",
+      "tool_is_error_steps": [],
+      "traceback_observation_steps": [],
+      "error_scope": "Final business acceptance can pass after exploratory command failures; raw observations, failures and retries are retained. A shell can exit zero despite an earlier failed subcommand.",
+      "helper_artifacts": {
+        "workspace/build_workforce_report.py": "2f28f23d9d22c4b322beb7f58dc01ad6d0461f052932078378eba88e79de5c8e"
+      },
+      "workload": {
+        "raw_rows": 100000,
+        "raw_columns": 16,
+        "base_sheets": 7,
+        "original_charts": 2,
+        "original_formulas": 11,
+        "input_workbook_bytes": 7912351,
+        "completed_recalc": {
+          "status": "success",
+          "total_errors": 0,
+          "error_summary": {},
+          "total_formulas": 22
+        }
+      }
+    },
+    {
+      "kind": "pdf",
+      "dataset": "irs_w4",
+      "status": "success",
+      "run_id": "pdf-irs_w4-20261009T021352Z-a22a4aaa",
+      "trace_steps": 24,
+      "tool_calls": 34,
+      "agent_seconds": 105.845,
+      "agent_context_matched": true,
+      "baseline_accepted": true,
+      "source_snapshot_unchanged": true,
+      "original_verifier": "not_applicable",
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "prompt_template": "pdf.txt",
+      "prompt_template_sha256": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+      "input_hashes": {
+        "input/fw4_2026.pdf": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+        "input/pdf_dataset_sources.md": "f4b745509bcb56d322b614643335c3aa8306b17b40a561c16cd888bff795b09d",
+        "input/synthetic_employees.json": "a4c5bed32a0ff5da282b9d4b03eb2c484c480dbb890274b59b4ae87783ab79cc"
+      },
+      "source_provenance": {
+        "url": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+        "form_sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+        "records": "synthetic; not submitted forms",
+        "official_form_modified": false
+      },
+      "qualification_report": "qualification/pdf-irs_w4/qualification.json",
+      "trace_file": "runs/pdf-irs_w4-20261009T021352Z-a22a4aaa/trajectory.json",
+      "trace_sha256": "85b722ca97aa829ae6d6bb80306b7334c1025fa5930fc1e46e583229168d28cd",
+      "tool_events_sha256": "99aba27d663496c6e4085fa5d715f7dea372a4fd6045617f661d76109bf4d4a4",
+      "independent_verification": "runs/pdf-irs_w4-20261009T021352Z-a22a4aaa/independent_verification.json",
+      "acceptance_report": "runs/pdf-irs_w4-20261009T021352Z-a22a4aaa/baseline_acceptance.json",
+      "analytical_operation_labels": {
+        "read_guidance_or_input": 13,
+        "execute_command": 12,
+        "check_fillability": 1,
+        "extract_field_schema": 1,
+        "render_pdf": 1,
+        "inspect_output": 2,
+        "author_helper": 1,
+        "write_artifact": 2,
+        "verify_business": 1
+      },
+      "operation_label_scope": "Command substring classification includes reading scripts and batched helper calls; counts do not measure actual helper invocations.",
+      "tool_is_error_steps": [],
+      "traceback_observation_steps": [
+        10
+      ],
+      "error_scope": "Final business acceptance can pass after exploratory command failures; raw observations, failures and retries are retained. A shell can exit zero despite an earlier failed subcommand.",
+      "helper_artifacts": {
+        "workspace/build_field_values.py": "d398b123c651e80b7b6fc3ae539402c29cd15866b72a05957e3c5092f9c8c103"
+      },
+      "workload": {
+        "records": 10,
+        "pages": 5,
+        "fields": 48,
+        "fill_rules": 14,
+        "actual_rendered_pngs": 55
+      }
+    },
+    {
+      "kind": "pdf",
+      "dataset": "sba1919",
+      "status": "success",
+      "run_id": "pdf-sba1919-20261009T030304Z-987669df",
+      "trace_steps": 31,
+      "tool_calls": 38,
+      "agent_seconds": 192.711,
+      "agent_context_matched": true,
+      "baseline_accepted": true,
+      "source_snapshot_unchanged": true,
+      "original_verifier": "not_applicable",
+      "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+      "prompt_template": "pdf.txt",
+      "prompt_template_sha256": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+      "input_hashes": {
+        "input/pdf_dataset_sources.md": "34dd29cc8d71ef9a2d19c8a423f24f77cdbb006fce2c784e813d203fb80cf281",
+        "input/sba1919_2024.pdf": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+        "input/synthetic_applicants.json": "4931c2c9f56878cd60507fb6b223e283cb3dae8dedc029ff54f6905209b839d2"
+      },
+      "source_provenance": {
+        "url": "https://sba.app.box.com/s/iud0tv5euaw4cdvv3itmbrc2tp2p7etf",
+        "file_name": "SBA Form 1919 04.2024.pdf",
+        "form_sha256": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+        "public_box_file_id": "1584063031191",
+        "public_box_sha1": "0e7cd9a8dfc50bccb8021b51597e58ce84d324ac",
+        "public_box_sha1_matches": true,
+        "latest_2025_download_available": false,
+        "official_form_modified": false,
+        "records": "synthetic; not submitted forms"
+      },
+      "qualification_report": "qualification/pdf-sba1919/qualification.json",
+      "trace_file": "runs/pdf-sba1919-20261009T030304Z-987669df/trajectory.json",
+      "trace_sha256": "7b4e664df92f9e9b8331b9953e97b76685c30b543c1a94833d4ba5ccd9a12018",
+      "tool_events_sha256": "c850b06af0a4c7bf40ecc2c8d00612c86b5734cc74fd89af0eedf46c9ef18afb",
+      "independent_verification": "runs/pdf-sba1919-20261009T030304Z-987669df/independent_verification.json",
+      "acceptance_report": "runs/pdf-sba1919-20261009T030304Z-987669df/baseline_acceptance.json",
+      "analytical_operation_labels": {
+        "read_guidance_or_input": 7,
+        "execute_command": 23,
+        "check_fillability": 2,
+        "extract_field_schema": 1,
+        "render_pdf": 1,
+        "author_helper": 1,
+        "write_artifact": 2,
+        "verify_business": 1
+      },
+      "operation_label_scope": "Command substring classification includes reading scripts and batched helper calls; counts do not measure actual helper invocations.",
+      "tool_is_error_steps": [],
+      "traceback_observation_steps": [
+        5
+      ],
+      "error_scope": "Final business acceptance can pass after exploratory command failures; raw observations, failures and retries are retained. A shell can exit zero despite an earlier failed subcommand.",
+      "helper_artifacts": {
+        "workspace/gen_field_values.py": "c137ed6867e7a9079b92ce3f41703734416b128d420203af47cc4713cfdcb526"
+      },
+      "workload": {
+        "records": 10,
+        "pages": 7,
+        "fields": 127,
+        "fill_rules": 53,
+        "actual_rendered_pngs": 77
+      }
+    }
+  ],
+  "pdf_contract_compatibility": "reports/pdf-contract-compatibility-v7.json",
+  "negative_samples": "reports/expansion-failure-samples-v1.json",
+  "source_limitations": [
+    "Retail and manufacturing Census series obtained through FRED; frozen 2023–2024 selected observations, 100k synthetic partitions, not observed transactions or firms.",
+    "HR uses the publicly cached 2025 national OEWS workbook; official byte identity has not been independently verified. Selected detailed occupations only; weighted occupation median is a proxy.",
+    "SBA uses the native fillable 2024 PDF distributed by SBA Box; the current 2025 official download was unavailable. A 2025 bank mirror was nonfillable and excluded."
+  ],
+  "original_failed_runs_preserved": true,
+  "performance_claim": "No repeated replay measurements; tool counts and Agent wall time do not establish performance or generation stability."
+}

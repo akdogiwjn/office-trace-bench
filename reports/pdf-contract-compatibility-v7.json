@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "manifest_sha256": "356ee4654a7189b8683ee43949cd17653d0d3eae7b27c2f90b45e5732054b611",
+  "verifier_sha256": "57b4af4e4e0cf3b6f5c6e9955b7486956e8689f98c719e33cbd602d84c3a4b3c",
+  "runs": [
+    {
+      "run_id": "control-old-pdf-opm-20261008T163759Z-90a05c03",
+      "original_status": "failed",
+      "current_contract_status": "success",
+      "failures": [],
+      "outputs_unchanged": true,
+      "report": "reports/control-old-pdf-opm-20261008T163759Z-90a05c03-current-contract.json"
+    },
+    {
+      "run_id": "control-new-pdf-opm-20261008T163759Z-90a05c03",
+      "original_status": "success",
+      "current_contract_status": "success",
+      "failures": [],
+      "outputs_unchanged": true,
+      "report": "reports/control-new-pdf-opm-20261008T163759Z-90a05c03-current-contract.json"
+    }
+  ],
+  "scope": "Post hoc revalidation under explicitly declared equivalence; original attempts and v6 audits remain unchanged."
+}

@@ -1,0 +1,736 @@
+{
+  "schema_version": "office-agent-context-audit-v3",
+  "evidence": {
+    "historical_first": {
+      "stdout_source": "/home/lcq/openclaw-trace-bench/trace_backups/20260730T133833Z/xlsx/agent_run/openclaw_agent.stdout.json",
+      "trace_source": "/home/lcq/openclaw-trace-bench/trace_backups/20260730T133833Z/xlsx/agent_run/trajectory.json",
+      "task_prompt_sha256": "fb1e0e97e1715a0c573fbe90f0de444085786612594a947b707b26899b6ef0b1",
+      "steps": 57,
+      "tool_calls": 62,
+      "tools": {
+        "read": 7,
+        "exec": 25,
+        "process": 25,
+        "write": 4,
+        "edit": 1
+      },
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "system_prompt": {
+        "chars": 30179,
+        "hash": "ab99ad41ef59c57dc063738cf5e5847a28f5606d0103dc65a3fbff6152178b63",
+        "projectContextChars": 11727,
+        "nonProjectContextChars": 18452
+      },
+      "bootstrap_files": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7195,
+          "injectedChars": 7195,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1509,
+          "injectedChars": 1509,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 866,
+          "injectedChars": 866,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 1275,
+          "injectedChars": 1275,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 534,
+          "injectedChars": 534,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 243,
+          "injectedChars": 243,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 5813,
+        "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+        "entries": [
+          {
+            "name": "agent-browser",
+            "blockChars": 316
+          },
+          {
+            "name": "canvas",
+            "blockChars": 314
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 317
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 329
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 302
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 332
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 328
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 316
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 310
+          },
+          {
+            "name": "spike",
+            "blockChars": 302
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 332
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 342
+          },
+          {
+            "name": "weather",
+            "blockChars": 340
+          },
+          {
+            "name": "xlsx",
+            "blockChars": 1134
+          }
+        ]
+      },
+      "tool_schema_chars": 27477,
+      "helper_writes": [
+        {
+          "step": 9,
+          "name": "enhance_workbook.py",
+          "lines": 291,
+          "source_sha256": "a15375db57064f2afd57726a471901ba86a28a0b7f2527568ea00ff81ac916be"
+        },
+        {
+          "step": 22,
+          "name": "enhance_workbook.py",
+          "lines": 243,
+          "source_sha256": "6a4c70762f2407dc64231e4202cdb3ed9a7f8c5968d3157a30d7093aff81ffc9"
+        },
+        {
+          "step": 41,
+          "name": "enhance_workbook.py",
+          "lines": 234,
+          "source_sha256": "14bff46f35afb5bc959b0a833b055a29b10cc7470d71c4a64d0dd45ca2556eb4"
+        }
+      ],
+      "exec_wait_arguments": [
+        {
+          "step": 10,
+          "yieldMs": null,
+          "timeout": 60
+        },
+        {
+          "step": 13,
+          "yieldMs": null,
+          "timeout": 200
+        },
+        {
+          "step": 23,
+          "yieldMs": null,
+          "timeout": 60
+        },
+        {
+          "step": 29,
+          "yieldMs": null,
+          "timeout": 60
+        },
+        {
+          "step": 34,
+          "yieldMs": null,
+          "timeout": 200
+        },
+        {
+          "step": 42,
+          "yieldMs": null,
+          "timeout": 60
+        },
+        {
+          "step": 45,
+          "yieldMs": null,
+          "timeout": 200
+        },
+        {
+          "step": 48,
+          "yieldMs": null,
+          "timeout": 200
+        }
+      ]
+    },
+    "historical_second": {
+      "stdout_source": "/home/lcq/openclaw-trace-bench/cases/xlsx/agent_run/openclaw_agent.stdout.json",
+      "trace_source": "/home/lcq/openclaw-trace-bench/cases/xlsx/agent_run/trajectory.json",
+      "task_prompt_sha256": "fb1e0e97e1715a0c573fbe90f0de444085786612594a947b707b26899b6ef0b1",
+      "steps": 35,
+      "tool_calls": 41,
+      "tools": {
+        "read": 1,
+        "exec": 27,
+        "process": 12,
+        "write": 1
+      },
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "system_prompt": {
+        "chars": 30179,
+        "hash": "95fd36db3353663dbe03a43a9f5682145451c5c4a43e04fa92122b26d884f4db",
+        "projectContextChars": 11727,
+        "nonProjectContextChars": 18452
+      },
+      "bootstrap_files": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7195,
+          "injectedChars": 7195,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1509,
+          "injectedChars": 1509,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 866,
+          "injectedChars": 866,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 1275,
+          "injectedChars": 1275,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 534,
+          "injectedChars": 534,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 243,
+          "injectedChars": 243,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 5813,
+        "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+        "entries": [
+          {
+            "name": "agent-browser",
+            "blockChars": 316
+          },
+          {
+            "name": "canvas",
+            "blockChars": 314
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 317
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 329
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 302
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 332
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 328
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 316
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 310
+          },
+          {
+            "name": "spike",
+            "blockChars": 302
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 332
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 342
+          },
+          {
+            "name": "weather",
+            "blockChars": 340
+          },
+          {
+            "name": "xlsx",
+            "blockChars": 1134
+          }
+        ]
+      },
+      "tool_schema_chars": 27477,
+      "helper_writes": [
+        {
+          "step": 17,
+          "name": "enhance_workbook.py",
+          "lines": 286,
+          "source_sha256": "2b8fe9c6c839510648e870b19400f66ec5df9d9d7f9c9dea5f5d5f1f5b2a43a6"
+        }
+      ],
+      "exec_wait_arguments": [
+        {
+          "step": 18,
+          "yieldMs": null,
+          "timeout": 60
+        },
+        {
+          "step": 22,
+          "yieldMs": null,
+          "timeout": 200
+        },
+        {
+          "step": 26,
+          "yieldMs": null,
+          "timeout": 200
+        }
+      ]
+    },
+    "compact_prompt": {
+      "stdout_source": "/home/lcq/office-trace-bench/runs/xlsx-tlc-20261008T115345Z-63218840/openclaw_agent.stdout.log",
+      "trace_source": "/home/lcq/office-trace-bench/runs/xlsx-tlc-20261008T115345Z-63218840/trajectory.json",
+      "task_prompt_sha256": "7457189979bb50e81e577b60fb65b3fbd97ee2711324e98d527379c86be11409",
+      "steps": 32,
+      "tool_calls": 36,
+      "tools": {
+        "read": 8,
+        "exec": 21,
+        "process": 5,
+        "write": 2
+      },
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "system_prompt": {
+        "chars": 33266,
+        "hash": "3b8f220523d68dc4b603d3f8e413123bd9b1bd26b2399dc421614da906a406c9",
+        "projectContextChars": 13883,
+        "nonProjectContextChars": 19383
+      },
+      "bootstrap_files": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8048,
+          "injectedChars": 8048,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1797,
+          "injectedChars": 1797,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 910,
+          "injectedChars": 910,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 693,
+          "injectedChars": 693,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 534,
+          "injectedChars": 534,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 243,
+          "injectedChars": 243,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1510,
+          "injectedChars": 1510,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 6111,
+        "hash": "e958cad98816147b0e6ed401db8105a7899679dd9820f0bf637e008b457d66ab",
+        "entries": [
+          {
+            "name": "canvas",
+            "blockChars": 314
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 317
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 329
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 302
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 332
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 328
+          },
+          {
+            "name": "pdf",
+            "blockChars": 616
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 316
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 310
+          },
+          {
+            "name": "spike",
+            "blockChars": 302
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 332
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 342
+          },
+          {
+            "name": "weather",
+            "blockChars": 340
+          },
+          {
+            "name": "xlsx",
+            "blockChars": 1132
+          }
+        ]
+      },
+      "tool_schema_chars": 27477,
+      "helper_writes": [
+        {
+          "step": 22,
+          "name": "build_report.py",
+          "lines": 212,
+          "source_sha256": "aa76a1da2c87af7c12f3a02b0e49a3c9bead5816cfc0dbf1011021d6ca614a44"
+        },
+        {
+          "step": 23,
+          "name": "build_report.py",
+          "lines": 201,
+          "source_sha256": "e1860ff1b8e8a8bae92b067989ff8c529120fcc5c462f8c6e3ca4dd8f0ebb136"
+        }
+      ],
+      "exec_wait_arguments": [
+        {
+          "step": 26,
+          "yieldMs": 240000,
+          "timeout": 400
+        }
+      ]
+    },
+    "restored_prompt": {
+      "stdout_source": "/home/lcq/office-trace-bench/runs/xlsx-tlc-20261008T123533Z-e0fe46a7/openclaw_agent.stdout.log",
+      "trace_source": "/home/lcq/office-trace-bench/runs/xlsx-tlc-20261008T123533Z-e0fe46a7/trajectory.json",
+      "task_prompt_sha256": "e2785cf023940f3a5b55ce936d7a4258ad096b869d9f7186587abbf6934f5faf",
+      "steps": 18,
+      "tool_calls": 19,
+      "tools": {
+        "read": 3,
+        "exec": 11,
+        "process": 3,
+        "write": 2
+      },
+      "agent": {
+        "name": "openclaw",
+        "version": "OpenClaw 2026.6.6 (8c802aa)",
+        "model_name": "deepseek/deepseek-v4-flash",
+        "extra": {
+          "parser": "openclaw-session-jsonl",
+          "provider": "deepseek",
+          "session_schema_version": 3,
+          "thinking_level": "high"
+        }
+      },
+      "system_prompt": {
+        "chars": 33266,
+        "hash": "536850c583bb0f0094355133931174437154c65e305ccc1f0894fcad0cc6b04d",
+        "projectContextChars": 13883,
+        "nonProjectContextChars": 19383
+      },
+      "bootstrap_files": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8048,
+          "injectedChars": 8048,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1797,
+          "injectedChars": 1797,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 910,
+          "injectedChars": 910,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 693,
+          "injectedChars": 693,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 534,
+          "injectedChars": 534,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 243,
+          "injectedChars": 243,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1510,
+          "injectedChars": 1510,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 6111,
+        "hash": "e958cad98816147b0e6ed401db8105a7899679dd9820f0bf637e008b457d66ab",
+        "entries": [
+          {
+            "name": "canvas",
+            "blockChars": 314
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 317
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 329
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 302
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 332
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 328
+          },
+          {
+            "name": "pdf",
+            "blockChars": 616
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 316
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 310
+          },
+          {
+            "name": "spike",
+            "blockChars": 302
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 332
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 342
+          },
+          {
+            "name": "weather",
+            "blockChars": 340
+          },
+          {
+            "name": "xlsx",
+            "blockChars": 1132
+          }
+        ]
+      },
+      "tool_schema_chars": 27477,
+      "helper_writes": [
+        {
+          "step": 10,
+          "name": "enhance_workbook.py",
+          "lines": 263,
+          "source_sha256": "c98fbd091bab66e5445b242bd9b4ef10f2bdac2973bc8191ac1338ebc0cfa8e4"
+        }
+      ],
+      "exec_wait_arguments": [
+        {
+          "step": 11,
+          "yieldMs": 120000,
+          "timeout": null
+        },
+        {
+          "step": 12,
+          "yieldMs": 120000,
+          "timeout": null
+        },
+        {
+          "step": 14,
+          "yieldMs": 180000,
+          "timeout": null
+        }
+      ]
+    }
+  },
+  "historical_prompts_identical": true,
+  "findings": [
+    "Old real Agent generations already varied under byte-identical task prompts.",
+    "New runner excludes workspace and skills from host config sync; old runner does not.",
+    "New sessions have different injected workspace file sizes, an added BOOTSTRAP.md and a different available Skill registry.",
+    "Restoring task.prompt did not restore these background inputs.",
+    "Restored TLC requests long yieldMs for helper/recalc; old runs omitted yieldMs and used process polling."
+  ],
+  "causal_scope": "These are demonstrated differences and plausible influences, not an isolated estimate of each factor. System prompt hashes also include run-varying context; hashes alone do not establish a behavioral change."
+}

@@ -1,0 +1,1114 @@
+{
+  "sha": "3e136212a689c3639f7331ba180831bf4ed9ee0e",
+  "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/3e136212a689c3639f7331ba180831bf4ed9ee0e",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a60b85e148f80966a550e5ab6a762a907c69ca6",
+      "size": 19,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/7a60b85e148f80966a550e5ab6a762a907c69ca6"
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd02cbe04e727872f08e1f805fc24a594b68b119",
+      "size": 4284,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/cd02cbe04e727872f08e1f805fc24a594b68b119"
+    },
+    {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96e2f181d59e615023175a73c215b35db6f3ad49",
+      "size": 1254,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/96e2f181d59e615023175a73c215b35db6f3ad49"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "294fb16f7e8ca43359658b33e7b4ee255e7d2ddb",
+      "size": 1067,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/294fb16f7e8ca43359658b33e7b4ee255e7d2ddb"
+    },
+    {
+      "path": "LICENSE-DATA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88ba7cbce4534c76a67cf3afd1ae6f53380588dc",
+      "size": 18645,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/88ba7cbce4534c76a67cf3afd1ae6f53380588dc"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d256727fb1d28164c5146b765e9b98e04762750",
+      "size": 9042,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/8d256727fb1d28164c5146b765e9b98e04762750"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cfa3cec25c05c0dbd0d6e7001dfdef549fe61e98",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/cfa3cec25c05c0dbd0d6e7001dfdef549fe61e98"
+    },
+    {
+      "path": "data/bls_cache",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4fc2c1be4b2e56c4a5a21fcdc3340e50cb75761a",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/4fc2c1be4b2e56c4a5a21fcdc3340e50cb75761a"
+    },
+    {
+      "path": "data/bls_cache/emp_000.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5be1d1535d93f7b2cf4ea7d4510f0b352f393035",
+      "size": 4175,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/5be1d1535d93f7b2cf4ea7d4510f0b352f393035"
+    },
+    {
+      "path": "data/bls_cache/emp_001.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6d528685d615540ed85936286c3eb7862ab8848",
+      "size": 4272,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/c6d528685d615540ed85936286c3eb7862ab8848"
+    },
+    {
+      "path": "data/bls_cache/emp_002.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a35e376ca7ac66b558866584f34f0b21010e711",
+      "size": 4268,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/7a35e376ca7ac66b558866584f34f0b21010e711"
+    },
+    {
+      "path": "data/bls_cache/emp_003.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7dbb94a43c557e084f0ec2a9d40ca38e10ceec7",
+      "size": 4205,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/f7dbb94a43c557e084f0ec2a9d40ca38e10ceec7"
+    },
+    {
+      "path": "data/bls_cache/emp_004.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1674c1f1ba7df3e524809eaaddf574f599dcf3a5",
+      "size": 4202,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/1674c1f1ba7df3e524809eaaddf574f599dcf3a5"
+    },
+    {
+      "path": "data/bls_cache/emp_005.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79dd0dc66adb3d6c4393f5bb99108d1331fdb346",
+      "size": 4349,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/79dd0dc66adb3d6c4393f5bb99108d1331fdb346"
+    },
+    {
+      "path": "data/bls_cache/emp_006.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e29cc26cff02aeb8da3be356a26156631a319447",
+      "size": 4156,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e29cc26cff02aeb8da3be356a26156631a319447"
+    },
+    {
+      "path": "data/bls_cache/emp_007.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "683d4c863f8a7fcca250ed9f1c1679d326d895c6",
+      "size": 4216,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/683d4c863f8a7fcca250ed9f1c1679d326d895c6"
+    },
+    {
+      "path": "data/bls_cache/emp_008.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "427ff40cf4fa80346d8ce439f769ca08cb4df696",
+      "size": 4156,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/427ff40cf4fa80346d8ce439f769ca08cb4df696"
+    },
+    {
+      "path": "data/bls_cache/emp_009.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9283d1ec33f7970c6e0175d1521f68dfa51a2316",
+      "size": 3971,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/9283d1ec33f7970c6e0175d1521f68dfa51a2316"
+    },
+    {
+      "path": "data/bls_cache/emp_010.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62b407b5fabf9f28445c0166694afca7f515a1fa",
+      "size": 4253,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/62b407b5fabf9f28445c0166694afca7f515a1fa"
+    },
+    {
+      "path": "data/bls_cache/emp_011.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df4c378bdc178fc0a33a943bd810cdd593ee584d",
+      "size": 4307,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/df4c378bdc178fc0a33a943bd810cdd593ee584d"
+    },
+    {
+      "path": "data/bls_cache/emp_012.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9936cbf2b778fb339e512b88d6d7d60b5ddef9d",
+      "size": 4183,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/f9936cbf2b778fb339e512b88d6d7d60b5ddef9d"
+    },
+    {
+      "path": "data/bls_cache/emp_013.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fdf7996a75cadc613cb43ba5a00de4a6d75ecf7",
+      "size": 4135,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/8fdf7996a75cadc613cb43ba5a00de4a6d75ecf7"
+    },
+    {
+      "path": "data/bls_cache/emp_014.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc5f671003e84c100c6ed81d13b0d1bec2d3cf36",
+      "size": 4346,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/bc5f671003e84c100c6ed81d13b0d1bec2d3cf36"
+    },
+    {
+      "path": "data/bls_cache/emp_015.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9863c7debb107b426233d64ed6cd1f8afec75c63",
+      "size": 4226,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/9863c7debb107b426233d64ed6cd1f8afec75c63"
+    },
+    {
+      "path": "data/bls_cache/emp_016.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d39da48bd9d6fb8bbaf33a25f92a2b5588d097ad",
+      "size": 4214,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/d39da48bd9d6fb8bbaf33a25f92a2b5588d097ad"
+    },
+    {
+      "path": "data/bls_cache/emp_017.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d28c43c17cbbf0465ea5d6f77540c896d97d8be",
+      "size": 4117,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/4d28c43c17cbbf0465ea5d6f77540c896d97d8be"
+    },
+    {
+      "path": "data/bls_cache/emp_018.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a597d0c9bd0a2583d971feb179fcefb07c92d069",
+      "size": 4220,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a597d0c9bd0a2583d971feb179fcefb07c92d069"
+    },
+    {
+      "path": "data/bls_cache/emp_019.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d789215f364be010ad21f6b3289c5ee93fef05a0",
+      "size": 4153,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/d789215f364be010ad21f6b3289c5ee93fef05a0"
+    },
+    {
+      "path": "data/bls_cache/emp_020.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1065ada988f484ae46e7df99c9070538e121fd37",
+      "size": 4065,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/1065ada988f484ae46e7df99c9070538e121fd37"
+    },
+    {
+      "path": "data/bls_cache/emp_021.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c8dc6a85f6f275e7a02d104831859e67e1f17dd",
+      "size": 3446,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/4c8dc6a85f6f275e7a02d104831859e67e1f17dd"
+    },
+    {
+      "path": "data/bls_cache/major_groups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "241ca23f504f492aaf6710ca3e5fb7fe47ef0a77",
+      "size": 3928,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/241ca23f504f492aaf6710ca3e5fb7fe47ef0a77"
+    },
+    {
+      "path": "data/bls_cache/national.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a46caf94a148b86b384fd10826ed44a7cc0fb6cc",
+      "size": 921,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a46caf94a148b86b384fd10826ed44a7cc0fb6cc"
+    },
+    {
+      "path": "data/bls_cache/national_fixed.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b0f664f7e40460f5ad6d50e1513fa95bf07c5f",
+      "size": 1019,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/d9b0f664f7e40460f5ad6d50e1513fa95bf07c5f"
+    },
+    {
+      "path": "data/job_exposure.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aae568975228d5850a1913c0d09f6ce8437e7253",
+      "size": 37176,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/aae568975228d5850a1913c0d09f6ce8437e7253"
+    },
+    {
+      "path": "data/oesm23ma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a035373ca55c54006d3d58fd4918b5ec3c0acbe1",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/a035373ca55c54006d3d58fd4918b5ec3c0acbe1"
+    },
+    {
+      "path": "data/oesm23ma/MSA_M2023_dl.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "964abc89fd2c76913ed401ea103f14d512ca33af",
+      "size": 30362135,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/964abc89fd2c76913ed401ea103f14d512ca33af"
+    },
+    {
+      "path": "data/oesm23ma/file_descriptions.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac1d27f809ef43107fd65011bcb2d4227383cb45",
+      "size": 12381,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/ac1d27f809ef43107fd65011bcb2d4227383cb45"
+    },
+    {
+      "path": "data/oesm23nat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0a921f98200b4d973d52152fdea5e9a5adbb1eef",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/0a921f98200b4d973d52152fdea5e9a5adbb1eef"
+    },
+    {
+      "path": "data/oesm23nat/national_M2023_dl.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036ce41c6516f11f172a76c661d0fbe0aea2a158",
+      "size": 285018,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/036ce41c6516f11f172a76c661d0fbe0aea2a158"
+    },
+    {
+      "path": "data/oesm25ma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cc7e5736f58c95afc0bdbf532dc07918d345262",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/1cc7e5736f58c95afc0bdbf532dc07918d345262"
+    },
+    {
+      "path": "data/oesm25ma/BOS_M2025_dl.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8746d858b39276bae40683c086a73b356aed98c1",
+      "size": 9891462,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/8746d858b39276bae40683c086a73b356aed98c1"
+    },
+    {
+      "path": "data/oesm25ma/MSA_M2025_dl.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f2c45d5b56b71d95dabb11e7abfde3d3a4d207c",
+      "size": 30628700,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/0f2c45d5b56b71d95dabb11e7abfde3d3a4d207c"
+    },
+    {
+      "path": "data/oesm25ma/file_descriptions.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f89dd38468473db30717fb272b70f0d7c063de0a",
+      "size": 11986,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/f89dd38468473db30717fb272b70f0d7c063de0a"
+    },
+    {
+      "path": "data/oesm25nat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18d49017af3f9ea14e2325cda87023cc8d906998",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/18d49017af3f9ea14e2325cda87023cc8d906998"
+    },
+    {
+      "path": "data/oesm25nat/national_M2025_dl.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0406a762b2135c6027895db81042733b489f36af",
+      "size": 289615,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/0406a762b2135c6027895db81042733b489f36af"
+    },
+    {
+      "path": "data/onet",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "306892cb4eefad5d43867c520c2a663533bc66cd",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/306892cb4eefad5d43867c520c2a663533bc66cd"
+    },
+    {
+      "path": "data/onet/Job Zone Reference.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff19df12ee0788b05178af619c9e4744f2a2d99f",
+      "size": 4367,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/ff19df12ee0788b05178af619c9e4744f2a2d99f"
+    },
+    {
+      "path": "data/onet/Job Zones.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9279c0340c0f5ffda42871df01b566b1a27cfa39",
+      "size": 28336,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/9279c0340c0f5ffda42871df01b566b1a27cfa39"
+    },
+    {
+      "path": "data/onet/Related Occupations.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "279d5219b60aa2490d024d3f836ee88e22adc796",
+      "size": 716310,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/279d5219b60aa2490d024d3f836ee88e22adc796"
+    },
+    {
+      "path": "data/richmond_emp_2025.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c4ea6308f1d2a426a3f59a41d093f2bf765b019",
+      "size": 7003,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/0c4ea6308f1d2a426a3f59a41d093f2bf765b019"
+    },
+    {
+      "path": "data/richmond_exposure_base.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3761942d4a2f3545e7b398e5049bec1254b6200f",
+      "size": 64279,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/3761942d4a2f3545e7b398e5049bec1254b6200f"
+    },
+    {
+      "path": "data/richmond_groups_2025.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09f84b905aa4b2a00f4ee10710671be457a44b85",
+      "size": 335,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/09f84b905aa4b2a00f4ee10710671be457a44b85"
+    },
+    {
+      "path": "data/rva_vintages_2019_2025.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcdc2da458eab017e59247c92eb62f2bb45083ca",
+      "size": 55713,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/fcdc2da458eab017e59247c92eb62f2bb45083ca"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6fa4229b389bf95f70d1799423530177e6b8486",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/e6fa4229b389bf95f70d1799423530177e6b8486"
+    },
+    {
+      "path": "docs/data-sources.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "416d43427baddefe4901f8e303a4c7d436d7ac63",
+      "size": 6364,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/416d43427baddefe4901f8e303a4c7d436d7ac63"
+    },
+    {
+      "path": "docs/methodology.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdbc375fa635ae49a8514145c137b8551fcb62d4",
+      "size": 7988,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/fdbc375fa635ae49a8514145c137b8551fcb62d4"
+    },
+    {
+      "path": "docs/robustness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6d0e4b3f4c6381156ca27b6bf3e3831436d577a",
+      "size": 8881,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e6d0e4b3f4c6381156ca27b6bf3e3831436d577a"
+    },
+    {
+      "path": "latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "430de62899d83d265d0833399b38476c3c6d01f6",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/430de62899d83d265d0833399b38476c3c6d01f6"
+    },
+    {
+      "path": "latex/header.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22435415d4d607fd69b64f408b43e26c976ec422",
+      "size": 3480,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/22435415d4d607fd69b64f408b43e26c976ec422"
+    },
+    {
+      "path": "output",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fecd966469bf6d0f846d9acebe86060054105386",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/fecd966469bf6d0f846d9acebe86060054105386"
+    },
+    {
+      "path": "output/CODEBOOK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b30057951ed2225db1517d839d7ce368b56cdf8",
+      "size": 9970,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/7b30057951ed2225db1517d839d7ce368b56cdf8"
+    },
+    {
+      "path": "output/absorption.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f419f9b2cd8e93b6336dc0593788fde681e461",
+      "size": 6331,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/74f419f9b2cd8e93b6336dc0593788fde681e461"
+    },
+    {
+      "path": "output/binding_constraints.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1ca7e0cf0644be6bbd3e5b9ee89394c618c2ed1",
+      "size": 2445,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/c1ca7e0cf0644be6bbd3e5b9ee89394c618c2ed1"
+    },
+    {
+      "path": "output/binding_constraints.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f307ec50ce7b5c7101e3d23e193a6db1a09c1d08",
+      "size": 6146,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/f307ec50ce7b5c7101e3d23e193a6db1a09c1d08"
+    },
+    {
+      "path": "output/cluster.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe586a2645dd885207ede6d629d0649442984698",
+      "size": 3972,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/fe586a2645dd885207ede6d629d0649442984698"
+    },
+    {
+      "path": "output/coverage_excluded.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6f003c55c2d341669c10b6428f21267171be50f",
+      "size": 3735,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e6f003c55c2d341669c10b6428f21267171be50f"
+    },
+    {
+      "path": "output/cross_metro.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf6acba1fc79cfec8453e1b46b596d0eabf78075",
+      "size": 2180,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/cf6acba1fc79cfec8453e1b46b596d0eabf78075"
+    },
+    {
+      "path": "output/cross_metro.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7429b077c453c0873a6b8293ddf1b9180057c96",
+      "size": 2767,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a7429b077c453c0873a6b8293ddf1b9180057c96"
+    },
+    {
+      "path": "output/decliners_vs_national.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25b161afaaae2cf60622f8100689249af7732bf3",
+      "size": 2858,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/25b161afaaae2cf60622f8100689249af7732bf3"
+    },
+    {
+      "path": "output/destinations_screened.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3227fed1cf87574705a247cd5b84251f99b2a801",
+      "size": 25819,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/3227fed1cf87574705a247cd5b84251f99b2a801"
+    },
+    {
+      "path": "output/displaced_occupations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e868b6394003b602237a7603c7f60784afb243ec",
+      "size": 8068,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e868b6394003b602237a7603c7f60784afb243ec"
+    },
+    {
+      "path": "output/exposure_profile_2025.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "121d7654d1e4dd0a448ec91fa8667bcf57165c89",
+      "size": 13218,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/121d7654d1e4dd0a448ec91fa8667bcf57165c89"
+    },
+    {
+      "path": "output/findings.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9d02982214d18427ba50976a9500ca6c02b2689",
+      "size": 7818,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/b9d02982214d18427ba50976a9500ca6c02b2689"
+    },
+    {
+      "path": "output/instruments.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a089aec4a309acf34692625b5d57e2e79046c0b9",
+      "size": 5021,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a089aec4a309acf34692625b5d57e2e79046c0b9"
+    },
+    {
+      "path": "output/national_benchmark.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "198e1315dc1034c279b0148404134a4f7c10fcb2",
+      "size": 1395,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/198e1315dc1034c279b0148404134a4f7c10fcb2"
+    },
+    {
+      "path": "output/national_gap_decomposition.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af3814f3ee52da31fc30b4e3b866adcd6573ceab",
+      "size": 114723,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/af3814f3ee52da31fc30b4e3b866adcd6573ceab"
+    },
+    {
+      "path": "output/non_adjacent_capacity.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ed6e36d5de61b7954aa7f02a25005427ed5e59f",
+      "size": 6876,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/5ed6e36d5de61b7954aa7f02a25005427ed5e59f"
+    },
+    {
+      "path": "output/pathways.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9b7e55ecfce9ecea522e4ca781dc7a67588cee8",
+      "size": 11680,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e9b7e55ecfce9ecea522e4ca781dc7a67588cee8"
+    },
+    {
+      "path": "output/pathways_reachable.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cd56ae03c268053c305a6f556a8adb164498167",
+      "size": 5296,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/2cd56ae03c268053c305a6f556a8adb164498167"
+    },
+    {
+      "path": "output/qcew_fixed_geography.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e90a31e07808273a5608d9893919a3daefa39b86",
+      "size": 2032,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e90a31e07808273a5608d9893919a3daefa39b86"
+    },
+    {
+      "path": "output/qcew_fixed_geography.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e07b957cd74f3910c53e3c14fcf9ee59836889d7",
+      "size": 3898,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/e07b957cd74f3910c53e3c14fcf9ee59836889d7"
+    },
+    {
+      "path": "output/reachable.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af39fe81995d98659b8035e408628bb7134ced5d",
+      "size": 12017,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/af39fe81995d98659b8035e408628bb7134ced5d"
+    },
+    {
+      "path": "output/richmond_exposure_2025.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d747189b3c1f6f72bc99d9388f29d7183c598d7",
+      "size": 84291,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/1d747189b3c1f6f72bc99d9388f29d7183c598d7"
+    },
+    {
+      "path": "output/richmond_panel_2010_2025.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9b572d745cffa45d4f80d978887f9048ef80e81",
+      "size": 1343115,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a9b572d745cffa45d4f80d978887f9048ef80e81"
+    },
+    {
+      "path": "output/richmond_three_point.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f805360e41c89e8b690b9a846e4a9f8f1130c0b",
+      "size": 49474,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/3f805360e41c89e8b690b9a846e4a9f8f1130c0b"
+    },
+    {
+      "path": "output/robustness.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0597d648cfcad90407f41380f78935b682cb89be",
+      "size": 5679,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/0597d648cfcad90407f41380f78935b682cb89be"
+    },
+    {
+      "path": "output/thresholds.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f772d6f1bc2636277bcb5d5e0e7ed6bd3bf1f3d",
+      "size": 6114,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/1f772d6f1bc2636277bcb5d5e0e7ed6bd3bf1f3d"
+    },
+    {
+      "path": "output/trades_destinations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c844087c3d0c10df10b311d714b1776f4dc68136",
+      "size": 3585,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/c844087c3d0c10df10b311d714b1776f4dc68136"
+    },
+    {
+      "path": "reports",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7af94c89cacf67b575338ed14830113cbab906e7",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/7af94c89cacf67b575338ed14830113cbab906e7"
+    },
+    {
+      "path": "reports/ai-exposure-and-employment-change.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ad7e958273a2dd35493e51909fe249d231c6dd",
+      "size": 59399,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/d9ad7e958273a2dd35493e51909fe249d231c6dd"
+    },
+    {
+      "path": "reports/figures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c238144e684f660ddefa76056c993ab6a91f4469",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/c238144e684f660ddefa76056c993ab6a91f4469"
+    },
+    {
+      "path": "reports/figures/fig10_instruments.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34b50439c9022c4f537a65338b4f6e227c4a0f52",
+      "size": 25652,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/34b50439c9022c4f537a65338b4f6e227c4a0f52"
+    },
+    {
+      "path": "reports/figures/fig10_instruments.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68b4980b2ef0419f7001189899d465c110886466",
+      "size": 110208,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/68b4980b2ef0419f7001189899d465c110886466"
+    },
+    {
+      "path": "reports/figures/fig15_measurement_reach.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "579ee4ae836b34e24caf2e1f943c33e6a8a5c02e",
+      "size": 17416,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/579ee4ae836b34e24caf2e1f943c33e6a8a5c02e"
+    },
+    {
+      "path": "reports/figures/fig15_measurement_reach.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cedc10edd828885b78b857da426a26be2a18eaae",
+      "size": 51410,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/cedc10edd828885b78b857da426a26be2a18eaae"
+    },
+    {
+      "path": "reports/figures/fig16_long_baseline.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a06f9eaf208fe7e0339ab6528be9d8ab8aa506e0",
+      "size": 19159,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a06f9eaf208fe7e0339ab6528be9d8ab8aa506e0"
+    },
+    {
+      "path": "reports/figures/fig16_long_baseline.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aeaa3426c24edf8f50369ad651d41cfbb485614c",
+      "size": 62987,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/aeaa3426c24edf8f50369ad651d41cfbb485614c"
+    },
+    {
+      "path": "reports/figures/fig1_office_support.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d27ebe9e0a7df08f58864b30188c45658d330e7",
+      "size": 19168,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/1d27ebe9e0a7df08f58864b30188c45658d330e7"
+    },
+    {
+      "path": "reports/figures/fig1_office_support.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9370b5d5fec04d19995e7355d8a359e578230671",
+      "size": 59871,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/9370b5d5fec04d19995e7355d8a359e578230671"
+    },
+    {
+      "path": "reports/figures/fig2_clerical_trajectories.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2faceb0ecd95ca74bfa6ed4250dadd081323273f",
+      "size": 21478,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/2faceb0ecd95ca74bfa6ed4250dadd081323273f"
+    },
+    {
+      "path": "reports/figures/fig2_clerical_trajectories.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5fa96a95c1ed078d4300c5223e11e98dc9fbb70",
+      "size": 72381,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/f5fa96a95c1ed078d4300c5223e11e98dc9fbb70"
+    },
+    {
+      "path": "reports/figures/fig3_wage_tier.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "471faf38e4625251d6af06d3c2447f307288a13a",
+      "size": 18724,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/471faf38e4625251d6af06d3c2447f307288a13a"
+    },
+    {
+      "path": "reports/figures/fig3_wage_tier.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68cd47320f10ceee1a49fa9cf63be523fd77755e",
+      "size": 37099,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/68cd47320f10ceee1a49fa9cf63be523fd77755e"
+    },
+    {
+      "path": "reports/figures/fig4_exposure_wage.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b861fe1ac102750bcaf296b75fcb83566f928870",
+      "size": 102007,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/b861fe1ac102750bcaf296b75fcb83566f928870"
+    },
+    {
+      "path": "reports/figures/fig4_exposure_wage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bee3f0faf7e8a9655e405f90fc0ff2b91fe6fd13",
+      "size": 81940,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/bee3f0faf7e8a9655e405f90fc0ff2b91fe6fd13"
+    },
+    {
+      "path": "reports/figures/fig5_lq_shift.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6977e8d9079fa784643f7497c4baef3b6a6b38de",
+      "size": 22121,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/6977e8d9079fa784643f7497c4baef3b6a6b38de"
+    },
+    {
+      "path": "reports/figures/fig5_lq_shift.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a96ed68a49c7ebb98d165004a730cc6e3d446c00",
+      "size": 88502,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a96ed68a49c7ebb98d165004a730cc6e3d446c00"
+    },
+    {
+      "path": "reports/figures/fig6_absorption_gap.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3167ea1936fede30f7c9dbc4ebfd47deec01341e",
+      "size": 18442,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/3167ea1936fede30f7c9dbc4ebfd47deec01341e"
+    },
+    {
+      "path": "reports/figures/fig6_absorption_gap.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7ffe6c5da83ee46c2fa618be14d699d10962e91",
+      "size": 49533,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/b7ffe6c5da83ee46c2fa618be14d699d10962e91"
+    },
+    {
+      "path": "reports/figures/fig7_family_concentration.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8710e1affb9d8ca7a6556934cf3a3a94ec25453d",
+      "size": 20596,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/8710e1affb9d8ca7a6556934cf3a3a94ec25453d"
+    },
+    {
+      "path": "reports/figures/fig7_family_concentration.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b70173e6104ec3907f4e0a1896654f13a7f422bf",
+      "size": 50963,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/b70173e6104ec3907f4e0a1896654f13a7f422bf"
+    },
+    {
+      "path": "reports/figures/fig8_neighbourhood.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35131d27b4deb17f0cc71f65d0e22b7a2f8e0861",
+      "size": 20824,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/35131d27b4deb17f0cc71f65d0e22b7a2f8e0861"
+    },
+    {
+      "path": "reports/figures/fig8_neighbourhood.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8528a60fc9e17469384d15a2f7b8dbc5b83f7168",
+      "size": 86358,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/8528a60fc9e17469384d15a2f7b8dbc5b83f7168"
+    },
+    {
+      "path": "reports/figures/fig9_cyber_lanes.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f10d7ae4aedcedf634ce38218870baf37239481",
+      "size": 18194,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/3f10d7ae4aedcedf634ce38218870baf37239481"
+    },
+    {
+      "path": "reports/figures/fig9_cyber_lanes.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d7127335013484d4cc3e540a3b78cccafbd9b94",
+      "size": 51343,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/3d7127335013484d4cc3e540a3b78cccafbd9b94"
+    },
+    {
+      "path": "reports/technical-appendix.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb4cab17b32708fd83da47d82c382b49be561a9",
+      "size": 37756,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/bfb4cab17b32708fd83da47d82c382b49be561a9"
+    },
+    {
+      "path": "reports/transition-capacity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4304c601d341e60886caefda5f3ef37b775298dd",
+      "size": 54866,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/4304c601d341e60886caefda5f3ef37b775298dd"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "966dde77a6f53af080fba1f77ca65102f2e15108",
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/trees/966dde77a6f53af080fba1f77ca65102f2e15108"
+    },
+    {
+      "path": "scripts/absorption.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f38a5ec5f13122d7d759aee85596237f4d20671c",
+      "size": 7021,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/f38a5ec5f13122d7d759aee85596237f4d20671c"
+    },
+    {
+      "path": "scripts/binding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e9fa8fd4d097986bf9ff3fa1f125f11de33adba",
+      "size": 6691,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/2e9fa8fd4d097986bf9ff3fa1f125f11de33adba"
+    },
+    {
+      "path": "scripts/build_appendix.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d179ff123f5084ff1c752d91b518f357e66d3e7",
+      "size": 17294,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/9d179ff123f5084ff1c752d91b518f357e66d3e7"
+    },
+    {
+      "path": "scripts/build_base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "713a3f6936433b272ebd412200316f7f932e1f97",
+      "size": 2828,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/713a3f6936433b272ebd412200316f7f932e1f97"
+    },
+    {
+      "path": "scripts/build_panel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25be2281d0e4d5a7e396c4135965f98b28cf5c5b",
+      "size": 5393,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/25be2281d0e4d5a7e396c4135965f98b28cf5c5b"
+    },
+    {
+      "path": "scripts/build_pdf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcfb2ee36b524fbe759d254042794c058e364cb4",
+      "size": 6231,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/dcfb2ee36b524fbe759d254042794c058e364cb4"
+    },
+    {
+      "path": "scripts/cluster.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a84a075329f7238b0cb886ab6e3cd8bc6ee8dd1",
+      "size": 4857,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/5a84a075329f7238b0cb886ab6e3cd8bc6ee8dd1"
+    },
+    {
+      "path": "scripts/cross_metro.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a50c5c702267b2a39a798a21d13746c357219d6d",
+      "size": 7332,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/a50c5c702267b2a39a798a21d13746c357219d6d"
+    },
+    {
+      "path": "scripts/fetch_2025.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ca8f2a43967a68b9de702cd6fc36f6c379e27a5",
+      "size": 2791,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/4ca8f2a43967a68b9de702cd6fc36f6c379e27a5"
+    },
+    {
+      "path": "scripts/fetch_groups.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24bda339f5960c577e42034e5752472440bf91d6",
+      "size": 1655,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/24bda339f5960c577e42034e5752472440bf91d6"
+    },
+    {
+      "path": "scripts/figures.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82d19b5a59d2419050d39358925481ede574e12b",
+      "size": 11292,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/82d19b5a59d2419050d39358925481ede574e12b"
+    },
+    {
+      "path": "scripts/figures_pathways.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "915878b5029f5f39ee78cd3dd1cc40223c2e0602",
+      "size": 14838,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/915878b5029f5f39ee78cd3dd1cc40223c2e0602"
+    },
+    {
+      "path": "scripts/findings.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6e0239a4830e62bb0e4a8fae3d1907d157277d7",
+      "size": 10081,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/d6e0239a4830e62bb0e4a8fae3d1907d157277d7"
+    },
+    {
+      "path": "scripts/instruments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72da4f434318e702020f3ab14dc4418ad04e1e2",
+      "size": 9573,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/d72da4f434318e702020f3ab14dc4418ad04e1e2"
+    },
+    {
+      "path": "scripts/national_benchmark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbeee5c86ed6f1581478745c4cf9fc1806c8c24f",
+      "size": 6812,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/dbeee5c86ed6f1581478745c4cf9fc1806c8c24f"
+    },
+    {
+      "path": "scripts/pathways.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebcf8443ccdac137d68ecf9f5ab6669ca9a84afb",
+      "size": 11826,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/ebcf8443ccdac137d68ecf9f5ab6669ca9a84afb"
+    },
+    {
+      "path": "scripts/qcew_geography.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c63ac6ed9da8c3582f28a2f7403b2146b4b7f32",
+      "size": 5737,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/0c63ac6ed9da8c3582f28a2f7403b2146b4b7f32"
+    },
+    {
+      "path": "scripts/reachable.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b40816eab757c23cff142d31daee9eb83e216cf4",
+      "size": 7868,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/b40816eab757c23cff142d31daee9eb83e216cf4"
+    },
+    {
+      "path": "scripts/rebase_2025.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42543e4fd617ab5f37ec59e113431d334e6c791a",
+      "size": 10662,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/42543e4fd617ab5f37ec59e113431d334e6c791a"
+    },
+    {
+      "path": "scripts/robustness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76043572cfc00f960e9d6325ad01082ce1121020",
+      "size": 13923,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/76043572cfc00f960e9d6325ad01082ce1121020"
+    },
+    {
+      "path": "scripts/thresholds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90542b21001bab2a7606167a10e198d59a08b653",
+      "size": 9331,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/90542b21001bab2a7606167a10e198d59a08b653"
+    },
+    {
+      "path": "scripts/verify.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "778f07879891dccda815bb381c7775755d19064b",
+      "size": 40244,
+      "url": "https://api.github.com/repos/hack4rva/richmond-ai-impact-analysis/git/blobs/778f07879891dccda815bb381c7775755d19064b"
+    }
+  ],
+  "truncated": false
+}

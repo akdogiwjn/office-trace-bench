@@ -1,0 +1,9 @@
+{
+  "input_form": "of306_aug2023.pdf",
+  "applicant_count": 10,
+  "filled_pdf_count": 10,
+  "rendered_page_count": 33,
+  "fill_script_invocations": 10,
+  "render_script_invocations": 11,
+  "ssn_and_signatures_left_blank": true
+}

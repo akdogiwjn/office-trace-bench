@@ -1,0 +1,12 @@
+{
+  "summary_values": {
+    "input_form": "fw4_2026.pdf",
+    "applicant_count": 10,
+    "filled_pdf_count": 10,
+    "rendered_page_count": 55,
+    "ssn_and_signatures_left_blank": true,
+    "fill_script_invocations": 10,
+    "render_script_invocations": 11
+  },
+  "oracle_provenance": "Official unmodified PDF schema and independently declared synthetic record-to-field rules."
+}

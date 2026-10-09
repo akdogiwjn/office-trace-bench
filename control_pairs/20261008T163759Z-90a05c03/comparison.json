@@ -1,0 +1,4053 @@
+{
+  "schema_version": "office-controlled-comparison-v6",
+  "experiment_id": "20261008T163759Z-90a05c03",
+  "compared_at": "2026-10-08T17:03:13.989899+00:00",
+  "execution_plan": {
+    "schema_version": "office-controlled-runner-pair-v1",
+    "experiment_id": "20261008T163759Z-90a05c03",
+    "requested_model": "deepseek/deepseek-v4-flash",
+    "image_tag": "office-trace-bench:runtime",
+    "status": "failed",
+    "datasets": {
+      "tlc": {
+        "kind": "xlsx",
+        "dataset": "tlc",
+        "snapshot": "/home/lcq/office-trace-bench/.snapshots/20261008T163759Z-90a05c03/xlsx",
+        "actual_task_sha256": "f55ed705a26c21944a9311ff0cc3c525c04aab566a9cf1192331e36d8516126d",
+        "input_hashes": {
+          "dataset_manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+          "monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+          "template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+          "dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+          "prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+          "prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+          "verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+        },
+        "legacy_script_hashes": {
+          "run_agent_case.sh": "38e7cd4a9aa2c3fb5c3580429ce81b7a2411b0a10bc7a6c09d289708154bc5e1",
+          "sync_openclaw_config.py": "742f1862b4e651744d5ec6d530bfa4e6195605da18a91d6c7bc1372a22947e21",
+          "capture_openclaw_session.py": "a83e8d840e49735be2dea4907d5cc3a0cb975c022382348d2221c30bbdfcbef6",
+          "export_openclaw_atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+          "extract_key_operations.py": "4df7379351897222245b3d49a325b641ed5ed494dc8fe0f83cf02f2fc32b2fc3",
+          "check_agent_output.py": "e4bd8fdcfc89a84d812239142211d322e7fe40ef875aa4f8cadfba183d1c88f7"
+        },
+        "source_hashes": {
+          "office.py": "d0c96e934266adbd24fb04ee291eae7da2ba4e6568de92f297cdc510762460c9",
+          "scripts/sync_openclaw_config.py": "742f1862b4e651744d5ec6d530bfa4e6195605da18a91d6c7bc1372a22947e21",
+          "scripts/export_openclaw_atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+          "scripts/control_container_entry.py": "8267f4e364adeaecfe6bc72f5b637bfd6ab259a21ca7ace270cc08b9aa623dfa",
+          "scripts/extract_key_operations.py": "4df7379351897222245b3d49a325b641ed5ed494dc8fe0f83cf02f2fc32b2fc3",
+          "scripts/check_agent_output.py": "e4bd8fdcfc89a84d812239142211d322e7fe40ef875aa4f8cadfba183d1c88f7",
+          "scripts/run_agent_case.sh": "38e7cd4a9aa2c3fb5c3580429ce81b7a2411b0a10bc7a6c09d289708154bc5e1",
+          "scripts/capture_openclaw_session.py": "a83e8d840e49735be2dea4907d5cc3a0cb975c022382348d2221c30bbdfcbef6",
+          "vendor/wheels/pypdf-6.10.0-py3-none-any.whl": "90005e959e1596c6e6c84c8b0ad383285b3e17011751cedd17f2ce8fcdfc86de",
+          "vendor/wheels/et_xmlfile-2.0.0-py3-none-any.whl": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa",
+          "vendor/wheels/pdf2image-1.17.0-py3-none-any.whl": "ecdd58d7afb810dffe21ef2b1bbc057ef434dabbac6c33778a38a3f7744a27e2",
+          "vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2",
+          "vendor/wheels/pillow-12.2.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl": "7371b48c4fa448d20d2714c9a1f775a81155050d383333e0a6c15b1123dda005",
+          "vendor/skills/pdf/reference.md": "03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
+          "vendor/skills/pdf/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+          "vendor/skills/pdf/forms.md": "9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44",
+          "vendor/skills/pdf/SKILL.md": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+          "vendor/skills/pdf/scripts/fill_fillable_fields.py": "d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5",
+          "vendor/skills/pdf/scripts/extract_form_field_info.py": "bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109",
+          "vendor/skills/pdf/scripts/check_fillable_fields.py": "1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8",
+          "vendor/skills/pdf/scripts/convert_pdf_to_images.py": "7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d",
+          "vendor/skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+          "vendor/skills/xlsx/SKILL.md": "dd316db7785a6be12966c2a2d848931fbf5f518b3cdb0a66fa62ee835ead1cfc",
+          "vendor/skills/xlsx/scripts/recalc.py": "cf419d15e02965aeaec17773c05b61303f7f520f67fa2696547e7da07502eac7",
+          "vendor/skills/xlsx/scripts/office/soffice.py": "a3e21840e29e32f947d5286028931b96eaf2dee63f75d883b8eb19c943c80aa0",
+          "vendor/skills/xlsx/scripts/office/unpack.py": "83f69cecc87910183654c06345837244402e8a99edbf3bdddc1cf72f11304b62",
+          "vendor/skills/xlsx/scripts/office/validate.py": "1aef24f8e316965a0584c30859776bd2c82a9fb69f72d79cfed041119cf95514",
+          "vendor/skills/xlsx/scripts/office/pack.py": "b1800987e568261a31f462df8e1303d386e9e6ccc11a75ef46e60cc528c20683",
+          "cases/xlsx/task.prompt": "fb1e0e97e1715a0c573fbe90f0de444085786612594a947b707b26899b6ef0b1",
+          "cases/xlsx/input/dataset_manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+          "cases/xlsx/input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+          "cases/xlsx/input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+          "cases/xlsx/input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+          "cases/xlsx/input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+          "cases/xlsx/input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+          "cases/xlsx/input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5",
+          "control-bin/openclaw": "60e32e7569867651269c8651c5519fab0a85881628500a460af88e0d500f707d",
+          "office_trace_bench/__init__.py": "63d004276ebec93a5ce83bfb39ebb309667f171b10755287c5dd61653d618ff1",
+          "office_trace_bench/cli.py": "e54d03ee0686b3a17006473517acf12b2eef735d8fb5d11ba605f7f95bfc4dcf",
+          "office_trace_bench/verify.py": "8a872f967e2cce4d95a49e0ba4482b7d2d9c34621e2fb3fb31c159f1972e0b98",
+          "office_trace_bench/workbooks.py": "eacd45d2cc8732454f62bb8496e19b6086d2ca74fd01739628b7840572e67a1c",
+          "office_trace_bench/trace.py": "673ebeda64ef8015fe2d3f8e9e0a30244c1c380829718a28dc51eaf3cdb7fbeb",
+          "office_trace_bench/atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+          "office_trace_bench/runner.py": "1f5bb44b5da6cabb1543fb273953f5a3bfd67cdc17ffe7a916001cc76450d450",
+          "office_trace_bench/contracts.py": "cb6644c6befd3c9689f0245997291063378d2ecb0b83992678c57539379dbfbb",
+          "office_trace_bench/prompts.py": "87043bfd882b8aa32b16976f4d04c21e227eb5d539bce6ef89c2b2605319b4c5",
+          "office_trace_bench/context.py": "11891fc4e355ae140e62e63011bb24b5b7552b888dbbaf33d04c168b1774f78c",
+          "prompts/xlsx.txt": "8f7da21e9d80eac53d11dc9ca92cc4482db347c8f6f82236162193311ae53710",
+          "prompts/pdf.txt": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+          "prompts/tlc-legacy-compatible.txt": "a761baa052104762e377a441725cf0e464fa7349169a531d73b12a588ee53aa1",
+          "prompts/opm-legacy-compatible.txt": "0101047875c980b9e987bf402af97e7c7dfb3525960cf95a1c606d3c676c171f",
+          "datasets/xlsx/tlc/expected.json": "bcfe9e859df6152111ab20c29d2b98c7b672ae7e11cd014cb6a3956a04ac031f",
+          "datasets/xlsx/tlc/manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+          "datasets/xlsx/tlc/input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+          "datasets/xlsx/tlc/input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+          "datasets/xlsx/tlc/input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+          "datasets/xlsx/tlc/input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+          "datasets/xlsx/tlc/input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+          "datasets/xlsx/tlc/input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5",
+          "runtime_context/profiles/legacy-host-v1/profile.json": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5",
+          "runtime_context/profiles/legacy-host-v1/skills/agent-browser/SKILL.md": "9643b9c65476eedd5ab353956c31a4d4ce9ad225f9a786d23376a43893f59979",
+          "runtime_context/profiles/legacy-host-v1/workspace/TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+          "runtime_context/profiles/legacy-host-v1/workspace/USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+          "runtime_context/profiles/legacy-host-v1/workspace/AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+          "runtime_context/profiles/legacy-host-v1/workspace/IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+          "runtime_context/profiles/legacy-host-v1/workspace/HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+          "runtime_context/profiles/legacy-host-v1/workspace/SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+          "runtime/Dockerfile": "ac8ef54ef077852baf7a43af4718a0402eddc11a0d81666c08cbfcb39fae4f1e",
+          "runtime/verify_office.py": "c6338492488dedd3be936c5e102a62d5c25f0fbe47551f8c87545a5e17e1c593"
+        },
+        "task_control": "Old historical business text and actual trailing-newline behavior; only experimental snapshot templates are normalized. Active project prompts are unchanged."
+      },
+      "opm": {
+        "kind": "pdf",
+        "dataset": "opm",
+        "snapshot": "/home/lcq/office-trace-bench/.snapshots/20261008T163759Z-90a05c03/pdf",
+        "actual_task_sha256": "46f24800aa54544e0ac1c100ad63ef00156f7e51ef4571cfe014fefe105eb000",
+        "input_hashes": {
+          "dataset_manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+          "synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+          "verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+          "pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+          "of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c"
+        },
+        "legacy_script_hashes": {
+          "run_agent_case.sh": "38e7cd4a9aa2c3fb5c3580429ce81b7a2411b0a10bc7a6c09d289708154bc5e1",
+          "sync_openclaw_config.py": "742f1862b4e651744d5ec6d530bfa4e6195605da18a91d6c7bc1372a22947e21",
+          "capture_openclaw_session.py": "a83e8d840e49735be2dea4907d5cc3a0cb975c022382348d2221c30bbdfcbef6",
+          "export_openclaw_atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+          "extract_key_operations.py": "4df7379351897222245b3d49a325b641ed5ed494dc8fe0f83cf02f2fc32b2fc3",
+          "check_agent_output.py": "e4bd8fdcfc89a84d812239142211d322e7fe40ef875aa4f8cadfba183d1c88f7"
+        },
+        "source_hashes": {
+          "office.py": "d0c96e934266adbd24fb04ee291eae7da2ba4e6568de92f297cdc510762460c9",
+          "scripts/sync_openclaw_config.py": "742f1862b4e651744d5ec6d530bfa4e6195605da18a91d6c7bc1372a22947e21",
+          "scripts/export_openclaw_atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+          "scripts/control_container_entry.py": "8267f4e364adeaecfe6bc72f5b637bfd6ab259a21ca7ace270cc08b9aa623dfa",
+          "scripts/extract_key_operations.py": "4df7379351897222245b3d49a325b641ed5ed494dc8fe0f83cf02f2fc32b2fc3",
+          "scripts/check_agent_output.py": "e4bd8fdcfc89a84d812239142211d322e7fe40ef875aa4f8cadfba183d1c88f7",
+          "scripts/run_agent_case.sh": "38e7cd4a9aa2c3fb5c3580429ce81b7a2411b0a10bc7a6c09d289708154bc5e1",
+          "scripts/capture_openclaw_session.py": "a83e8d840e49735be2dea4907d5cc3a0cb975c022382348d2221c30bbdfcbef6",
+          "vendor/wheels/pypdf-6.10.0-py3-none-any.whl": "90005e959e1596c6e6c84c8b0ad383285b3e17011751cedd17f2ce8fcdfc86de",
+          "vendor/wheels/et_xmlfile-2.0.0-py3-none-any.whl": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa",
+          "vendor/wheels/pdf2image-1.17.0-py3-none-any.whl": "ecdd58d7afb810dffe21ef2b1bbc057ef434dabbac6c33778a38a3f7744a27e2",
+          "vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2",
+          "vendor/wheels/pillow-12.2.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl": "7371b48c4fa448d20d2714c9a1f775a81155050d383333e0a6c15b1123dda005",
+          "vendor/skills/pdf/reference.md": "03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
+          "vendor/skills/pdf/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+          "vendor/skills/pdf/forms.md": "9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44",
+          "vendor/skills/pdf/SKILL.md": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+          "vendor/skills/pdf/scripts/fill_fillable_fields.py": "d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5",
+          "vendor/skills/pdf/scripts/extract_form_field_info.py": "bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109",
+          "vendor/skills/pdf/scripts/check_fillable_fields.py": "1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8",
+          "vendor/skills/pdf/scripts/convert_pdf_to_images.py": "7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d",
+          "vendor/skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+          "vendor/skills/xlsx/SKILL.md": "dd316db7785a6be12966c2a2d848931fbf5f518b3cdb0a66fa62ee835ead1cfc",
+          "vendor/skills/xlsx/scripts/recalc.py": "cf419d15e02965aeaec17773c05b61303f7f520f67fa2696547e7da07502eac7",
+          "vendor/skills/xlsx/scripts/office/soffice.py": "a3e21840e29e32f947d5286028931b96eaf2dee63f75d883b8eb19c943c80aa0",
+          "vendor/skills/xlsx/scripts/office/unpack.py": "83f69cecc87910183654c06345837244402e8a99edbf3bdddc1cf72f11304b62",
+          "vendor/skills/xlsx/scripts/office/validate.py": "1aef24f8e316965a0584c30859776bd2c82a9fb69f72d79cfed041119cf95514",
+          "vendor/skills/xlsx/scripts/office/pack.py": "b1800987e568261a31f462df8e1303d386e9e6ccc11a75ef46e60cc528c20683",
+          "cases/pdf/task.prompt": "94ab4a63c17e0994ccb780b46f51fec7af041ddaf2477da095670f22ef0b9a77",
+          "cases/pdf/input/dataset_manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+          "cases/pdf/input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+          "cases/pdf/input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+          "cases/pdf/input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+          "cases/pdf/input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+          "control-bin/openclaw": "60e32e7569867651269c8651c5519fab0a85881628500a460af88e0d500f707d",
+          "office_trace_bench/__init__.py": "63d004276ebec93a5ce83bfb39ebb309667f171b10755287c5dd61653d618ff1",
+          "office_trace_bench/cli.py": "e54d03ee0686b3a17006473517acf12b2eef735d8fb5d11ba605f7f95bfc4dcf",
+          "office_trace_bench/verify.py": "8a872f967e2cce4d95a49e0ba4482b7d2d9c34621e2fb3fb31c159f1972e0b98",
+          "office_trace_bench/workbooks.py": "eacd45d2cc8732454f62bb8496e19b6086d2ca74fd01739628b7840572e67a1c",
+          "office_trace_bench/trace.py": "673ebeda64ef8015fe2d3f8e9e0a30244c1c380829718a28dc51eaf3cdb7fbeb",
+          "office_trace_bench/atif.py": "5a3d07e2aef3fef13d14ec06abb74d5666dd1377a0cd5ded4bd831c4cc1b8d5b",
+          "office_trace_bench/runner.py": "1f5bb44b5da6cabb1543fb273953f5a3bfd67cdc17ffe7a916001cc76450d450",
+          "office_trace_bench/contracts.py": "cb6644c6befd3c9689f0245997291063378d2ecb0b83992678c57539379dbfbb",
+          "office_trace_bench/prompts.py": "87043bfd882b8aa32b16976f4d04c21e227eb5d539bce6ef89c2b2605319b4c5",
+          "office_trace_bench/context.py": "11891fc4e355ae140e62e63011bb24b5b7552b888dbbaf33d04c168b1774f78c",
+          "prompts/xlsx.txt": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+          "prompts/pdf.txt": "46fbb271f901cd31db1e60386d31a5d7127222a61dd9a8fbfedf61daf1e2496e",
+          "prompts/tlc-legacy-compatible.txt": "a761baa052104762e377a441725cf0e464fa7349169a531d73b12a588ee53aa1",
+          "prompts/opm-legacy-compatible.txt": "0101047875c980b9e987bf402af97e7c7dfb3525960cf95a1c606d3c676c171f",
+          "datasets/pdf/opm/expected.json": "9c2771bf1108731499ee7d6d3585487ae798416e91ce16ca643af95118824dc1",
+          "datasets/pdf/opm/manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+          "datasets/pdf/opm/input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+          "datasets/pdf/opm/input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+          "datasets/pdf/opm/input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+          "datasets/pdf/opm/input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+          "runtime_context/profiles/legacy-host-v1/profile.json": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5",
+          "runtime_context/profiles/legacy-host-v1/skills/agent-browser/SKILL.md": "9643b9c65476eedd5ab353956c31a4d4ce9ad225f9a786d23376a43893f59979",
+          "runtime_context/profiles/legacy-host-v1/workspace/TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+          "runtime_context/profiles/legacy-host-v1/workspace/USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+          "runtime_context/profiles/legacy-host-v1/workspace/AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+          "runtime_context/profiles/legacy-host-v1/workspace/IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+          "runtime_context/profiles/legacy-host-v1/workspace/HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+          "runtime_context/profiles/legacy-host-v1/workspace/SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+          "runtime/Dockerfile": "ac8ef54ef077852baf7a43af4718a0402eddc11a0d81666c08cbfcb39fae4f1e",
+          "runtime/verify_office.py": "c6338492488dedd3be936c5e102a62d5c25f0fbe47551f8c87545a5e17e1c593"
+        },
+        "task_control": "Old historical business text and actual trailing-newline behavior; only experimental snapshot templates are normalized. Active project prompts are unchanged."
+      }
+    },
+    "runs": [
+      {
+        "kind": "xlsx",
+        "dataset": "tlc",
+        "variant": "old",
+        "run_id": "control-old-xlsx-tlc-20261008T163759Z-90a05c03",
+        "run_dir": "/home/lcq/office-trace-bench/runs/control-old-xlsx-tlc-20261008T163759Z-90a05c03",
+        "status": "success",
+        "container_exit_code": 0
+      },
+      {
+        "kind": "xlsx",
+        "dataset": "tlc",
+        "variant": "new",
+        "run_id": "control-new-xlsx-tlc-20261008T163759Z-90a05c03",
+        "run_dir": "/home/lcq/office-trace-bench/runs/control-new-xlsx-tlc-20261008T163759Z-90a05c03",
+        "status": "success",
+        "container_exit_code": 0
+      },
+      {
+        "kind": "pdf",
+        "dataset": "opm",
+        "variant": "old",
+        "run_id": "control-old-pdf-opm-20261008T163759Z-90a05c03",
+        "run_dir": "/home/lcq/office-trace-bench/runs/control-old-pdf-opm-20261008T163759Z-90a05c03",
+        "status": "failed",
+        "container_exit_code": 1
+      },
+      {
+        "kind": "pdf",
+        "dataset": "opm",
+        "variant": "new",
+        "run_id": "control-new-pdf-opm-20261008T163759Z-90a05c03",
+        "run_dir": "/home/lcq/office-trace-bench/runs/control-new-pdf-opm-20261008T163759Z-90a05c03",
+        "status": "success",
+        "container_exit_code": 0
+      }
+    ],
+    "scope": "One current run per runner and dataset; tests current runner differences, not statistical variance.",
+    "image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+    "config_volume": "office-control-config-20261008t163759z-90a05c03",
+    "private_config_volume_removed": true
+  },
+  "scope": "One old/new pair per dataset under current frozen conditions; not a variance estimate or historical model-version reproduction.",
+  "datasets": {
+    "tlc": {
+      "kind": "xlsx",
+      "controls": {
+        "same_image_id": true,
+        "same_tool_versions": true,
+        "same_actual_task": true,
+        "actual_task_captured_correctly": true,
+        "same_visible_inputs": true,
+        "same_background_bytes": true,
+        "same_config_semantics": true,
+        "same_private_config_file_hashes": true,
+        "same_project_source_snapshot": true,
+        "same_process_environment": true,
+        "same_skill_registry": true,
+        "same_tool_registry_metadata": true,
+        "same_workspace_injection": true,
+        "same_full_initial_system_prompt": true,
+        "same_actual_model": true,
+        "same_agent_and_thinking": true,
+        "same_bootstrap_limits": true,
+        "sources_unchanged": true,
+        "context_audits_passed": true,
+        "all_tool_results_captured": true
+      },
+      "runs": {
+        "old": {
+          "run_id": "control-old-xlsx-tlc-20261008T163759Z-90a05c03",
+          "status": "success",
+          "info": {
+            "schema_version": "office-run-v1",
+            "execution": "real-openclaw-agent",
+            "kind": "xlsx",
+            "dataset_id": "tlc",
+            "status": "success",
+            "runner_exit_code": 0,
+            "input_hashes": {
+              "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+              "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+              "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+              "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+            },
+            "trace": {
+              "session_id": "ca27f0ba-679b-4cc9-9d0d-f08fc51ccc54",
+              "steps": 25,
+              "tool_calls": 30
+            },
+            "agent_context_matched": true,
+            "business_status": "success",
+            "agent_business_status": "success",
+            "verifier_called_in_trace": true,
+            "agent_seconds": 387.502,
+            "elapsed_seconds": 422.989,
+            "run_id": "control-old-xlsx-tlc-20261008T163759Z-90a05c03",
+            "internal_run_id": "control",
+            "control_variant": "old",
+            "tool_versions": {
+              "openclaw": "OpenClaw 2026.6.6 (8c802aa)",
+              "node": "v24.14.0",
+              "python": "Python 3.12.3",
+              "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+              "poppler": "pdftoppm version 24.02.0"
+            },
+            "agent_context": {
+              "profile": "legacy-host-v1",
+              "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+            },
+            "runtime_image": "office-trace-bench:runtime",
+            "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+            "source_snapshot_path": "/home/lcq/office-trace-bench/.snapshots/20261008T163759Z-90a05c03/xlsx",
+            "source_snapshot_unchanged": true,
+            "source_snapshot_sha256": "f4e400d1fbc23dc6cfef2fd7a7278c4526f4d8e2cd306f916480ddbb061f4a6d",
+            "container_exit_code": 0,
+            "control_experiment_id": "20261008T163759Z-90a05c03",
+            "baseline_accepted": true,
+            "baseline_acceptance_audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "success",
+              "legacy_verifier": "success",
+              "independent_failures": [],
+              "legacy_failures": [],
+              "failed_attempt_retained": false
+            }
+          },
+          "pre_agent": {
+            "actual_prompt_sha256": "f55ed705a26c21944a9311ff0cc3c525c04aab566a9cf1192331e36d8516126d",
+            "background_hashes": {
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+            },
+            "input_hashes": {
+              "input/dataset_manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+              "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+              "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+              "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+              "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+            },
+            "private_config_hashes": {
+              "openclaw.json": "11f3ae8df3353be85d3aeb12050dd5bff75e6fdcc5fda8235017ff2618228c47",
+              ".env": "a6e2c8434cee614f80ec19654ee661e7f04716486337ff666d6c9583f9b9924d",
+              "agents/main/agent/models.json": "f6a60ffe718b445a923e5d870ff3b23ced2a8e42ef7322a0494c48c788e66e10"
+            },
+            "config_semantic_sha256": "88b2dba3f2d4c30ab350331ce415769b6fd07333a56f586cdcaf256b7e5aa0f1",
+            "process_cwd": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+            "logical_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+            "real_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+            "case_is_symlink": false,
+            "environment": {
+              "PATH": "/workspace/control-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "SHELL": null,
+              "LANG": null,
+              "LC_ALL": null,
+              "TZ": null
+            }
+          },
+          "system_report": {
+            "source": "run",
+            "generatedAt": 1791477549720,
+            "sessionId": "ca27f0ba-679b-4cc9-9d0d-f08fc51ccc54",
+            "sessionKey": "agent:main:SUB-MEM-OFFICE-01",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "workspaceDir": "/root/.openclaw/workspace",
+            "bootstrapMaxChars": 20000,
+            "bootstrapTotalMaxChars": 60000,
+            "bootstrapTruncation": {
+              "warningMode": "always",
+              "warningShown": false,
+              "truncatedFiles": 0,
+              "nearLimitFiles": 0,
+              "totalNearLimit": false
+            },
+            "sandbox": {
+              "mode": "off",
+              "sandboxed": false
+            },
+            "systemPrompt": {
+              "chars": 30154,
+              "hash": "dc1661623a17fda7470f2099ec072c992f5128b52674f63e285b67aad185bf71",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 18427
+            },
+            "injectedWorkspaceFiles": [
+              {
+                "name": "AGENTS.md",
+                "path": "/root/.openclaw/workspace/AGENTS.md",
+                "missing": false,
+                "rawChars": 7195,
+                "injectedChars": 7195,
+                "truncated": false
+              },
+              {
+                "name": "SOUL.md",
+                "path": "/root/.openclaw/workspace/SOUL.md",
+                "missing": false,
+                "rawChars": 1509,
+                "injectedChars": 1509,
+                "truncated": false
+              },
+              {
+                "name": "TOOLS.md",
+                "path": "/root/.openclaw/workspace/TOOLS.md",
+                "missing": false,
+                "rawChars": 866,
+                "injectedChars": 866,
+                "truncated": false
+              },
+              {
+                "name": "IDENTITY.md",
+                "path": "/root/.openclaw/workspace/IDENTITY.md",
+                "missing": false,
+                "rawChars": 1275,
+                "injectedChars": 1275,
+                "truncated": false
+              },
+              {
+                "name": "USER.md",
+                "path": "/root/.openclaw/workspace/USER.md",
+                "missing": false,
+                "rawChars": 534,
+                "injectedChars": 534,
+                "truncated": false
+              },
+              {
+                "name": "HEARTBEAT.md",
+                "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+                "missing": false,
+                "rawChars": 243,
+                "injectedChars": 243,
+                "truncated": false
+              }
+            ],
+            "skills": {
+              "promptChars": 5813,
+              "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                },
+                {
+                  "name": "xlsx",
+                  "blockChars": 1134
+                }
+              ]
+            },
+            "tools": {
+              "listChars": 0,
+              "schemaChars": 27477,
+              "entries": [
+                {
+                  "name": "read",
+                  "summaryChars": 298,
+                  "summaryHash": "f8a1d7cf1ecfe02b1b5865c93387e6a5891e5079117b4fe18614b6f912521727",
+                  "schemaChars": 304,
+                  "schemaHash": "134f19bcabe3e29d63c5cebb38f1d2556759fd08adad6bc90a4b4d3cd1fb8441",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "edit",
+                  "summaryChars": 326,
+                  "summaryHash": "c498a85576e187d069e8e8ea4f70f81bddd57829600d385ef61c4359fd634c9e",
+                  "schemaChars": 834,
+                  "schemaHash": "457e8bb9f800b21be76c4fd8c0e3078bf07ee9bf93ac82f39944c171bd8f6d84",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "write",
+                  "summaryChars": 127,
+                  "summaryHash": "cdb1c46027b22d1f1b923b47bfe297821d9fe589a9f9d92994961948060a4d89",
+                  "schemaChars": 225,
+                  "schemaHash": "e98a2484f667cf7c22d76ca103bf2022bf9113dc63fe38b899e71c328cb1e833",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "apply_patch",
+                  "summaryChars": 132,
+                  "summaryHash": "432bf38688a4f011d2b765a441ac07e1fdfa9faf2051679adee04abcd9332d93",
+                  "schemaChars": 153,
+                  "schemaHash": "05521268363ff4f191472c90d69ef08a503ba9acf1d2febc50b3ee68db32ab65",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "exec",
+                  "summaryChars": 539,
+                  "summaryHash": "4825198988fbfa8ebf5c2a8fbe3946da0be639b1e3b737ceaa4364195bba3f04",
+                  "schemaChars": 1283,
+                  "schemaHash": "2608ea36cf51376859b7204cda1bf1a2507134eb542097b9e8dbc8af617f216b",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "process",
+                  "summaryChars": 456,
+                  "summaryHash": "55297e65d460e0e1e06e7fad4cedb75ffda8fac9fa8b10aa06d6cead3c5a76ea",
+                  "schemaChars": 1074,
+                  "schemaHash": "a2d30a25569f409d7e8539844c89a088044535388b24031d014577b96ed27c5c",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "nodes",
+                  "summaryChars": 143,
+                  "summaryHash": "ea1b0a5498ca3c788b26d164245652e1aaa989806e0123715793ab25f9578121",
+                  "schemaChars": 1764,
+                  "schemaHash": "339c9b744f121ff6a5b2a8a2a7e19286c4114d8dc165a172d3708e993d8b0e55",
+                  "propertiesCount": 32
+                },
+                {
+                  "name": "cron",
+                  "summaryChars": 3721,
+                  "summaryHash": "8eb177e0cdf7d5bc0144f544bf0072e38b6bab267e0699a2859b4a8db97af0b3",
+                  "schemaChars": 8311,
+                  "schemaHash": "60c519602d2a834cb2d5e1f7e3778a125ae07c7ab757a844cbdec72104e5b94b",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "message",
+                  "summaryChars": 71,
+                  "summaryHash": "e43fe566f2d93be0d540da64d2a80a6e1a868757fe2fb49fa38e69fccf9fd4b0",
+                  "schemaChars": 5710,
+                  "schemaHash": "b11a54a8bc235a40b4206dfec1e04170e0cbc7af342f7921676a8ced3a4cbb82",
+                  "propertiesCount": 106
+                },
+                {
+                  "name": "tts",
+                  "summaryChars": 217,
+                  "summaryHash": "652c1970c199d82b61061a40be2adddfc7e5634df5d896d776a8a0047c8a6b75",
+                  "schemaChars": 264,
+                  "schemaHash": "e40695f92ef72d913ee5eb13ef738a15d6f33ae3af3ec609975c45991ef99a78",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "gateway",
+                  "summaryChars": 566,
+                  "summaryHash": "1bef48b95fc67d7dc10e2f5f0cc3522951b067b762de6c3e77bc446de0f608b1",
+                  "schemaChars": 649,
+                  "schemaHash": "1a4f609a948c183832ee8a11c0cfcbe1afddf0732c30c67a593dfcdb630a5ee7",
+                  "propertiesCount": 14
+                },
+                {
+                  "name": "agents_list",
+                  "summaryChars": 63,
+                  "summaryHash": "a7afb8adbaf98833df68160db0677ec2a6bc30b1b96f3592392c9df59e310c65",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "get_goal",
+                  "summaryChars": 71,
+                  "summaryHash": "58dea7906d9e17e5f89a75fea24597ee068d8a56af824370dc27f8501374d6e3",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "create_goal",
+                  "summaryChars": 155,
+                  "summaryHash": "f01e3a63d673a410ba55213ce6bd3fa2b0d2279e8e780c18aa0cb5aa991b29b3",
+                  "schemaChars": 267,
+                  "schemaHash": "27ee794432736471bd76390e236cc7d7e98f8469a02656e7a27109041eea0f8c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "update_goal",
+                  "summaryChars": 212,
+                  "summaryHash": "285201690e5f2456b4cdcd252ff391709b84d69538df61bad694d3c0cfc19958",
+                  "schemaChars": 207,
+                  "schemaHash": "c37894492eedfad02f1e7fe1488900765bfe547f3b3f34cefbab4f7f57441c2c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "skill_workshop",
+                  "summaryChars": 171,
+                  "summaryHash": "577c1d2b8f56bf3e9dd5e00463bbce8b8bf4cf201da9b21b588dcaa3bc6ed8cf",
+                  "schemaChars": 2273,
+                  "schemaHash": "15481d6889a320a46728ee32304f0a2b510c0bcf77d445052c1ef2fa5dd5368b",
+                  "propertiesCount": 13
+                },
+                {
+                  "name": "sessions_list",
+                  "summaryChars": 135,
+                  "summaryHash": "c7e411ae02e3adff5504aaee48f02d262a8abb9152558a3172aae289e3b05faf",
+                  "schemaChars": 435,
+                  "schemaHash": "c29c6b82c36a2d95a88c8944f129929b2621ee2af6d17b2ab101d4d7e9633d89",
+                  "propertiesCount": 9
+                },
+                {
+                  "name": "sessions_history",
+                  "summaryChars": 117,
+                  "summaryHash": "f5d45b76f11a8ac63cc45d456fb6f675f0b1a2e191feb9671924cb5830058f03",
+                  "schemaChars": 162,
+                  "schemaHash": "ac33b8af2252262afe479236046f5a04bc018f1fcf24d1a8bf32743f0e867598",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "sessions_send",
+                  "summaryChars": 282,
+                  "summaryHash": "061e9ef3487676bb2a4fd4c0336bd973aaab5eea0725e7443c4cb17518cd1e78",
+                  "schemaChars": 275,
+                  "schemaHash": "f1fbaa412fe6b6aee102234c87c5aa140f39c9086f9bae6e1e9691309a602ffb",
+                  "propertiesCount": 5
+                },
+                {
+                  "name": "sessions_spawn",
+                  "summaryChars": 332,
+                  "summaryHash": "5ced554d0c09b9c71fa003139eca7871bbfdc0917a323fc17af2a9faec46c5b7",
+                  "schemaChars": 1151,
+                  "schemaHash": "9a91c7668463da8a66386260ce2ae97e7efe3bb93b9b6f03ac85102c354457e1",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "sessions_yield",
+                  "summaryChars": 79,
+                  "summaryHash": "f3782fc41c1522657e1d3494f486a2df998fed38a6b89dcf7f6934fb41424320",
+                  "schemaChars": 60,
+                  "schemaHash": "b1c4c753820bc3096d85ef7a266a14c9fbe12450536db58076b75bb61d14dbbb",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "subagents",
+                  "summaryChars": 132,
+                  "summaryHash": "1c2ffd38549c0444b118d43736fc4b875ea1aaabc446bbf8bc1fc4ee9180cca4",
+                  "schemaChars": 122,
+                  "schemaHash": "c4a241d2c3d46ba7985abfce4d3fcd63298ce81f89d49183c8f3d584c48d0c33",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "session_status",
+                  "summaryChars": 278,
+                  "summaryHash": "71177e543dc6235bad4b1a26761995681dcec27ab58dcb4f4f8a7fc9a7b2b5aa",
+                  "schemaChars": 89,
+                  "schemaHash": "d2995f3d69d126e98ac93eec3c2a9fe5556925bd7979a8e4b6b5a2bf62d329dd",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "web_search",
+                  "summaryChars": 65,
+                  "summaryHash": "b38e9b3c079beaa988d3c576303660b91a55c2e72f56351da04160529173273f",
+                  "schemaChars": 991,
+                  "schemaHash": "3879e368875d824b14e0e683f81408824e9a2a5850fa2f8514a68caebda54d18",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "web_fetch",
+                  "summaryChars": 93,
+                  "summaryHash": "8875afbb51bd63673e5e6836ca31eeda73914a464862665cd73b346e28d28fd5",
+                  "schemaChars": 317,
+                  "schemaHash": "d2d8ad58a1b84d849dd16142282aff6c5606f7b0e3d08405e1b740a6a79e6bcc",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "memory_search",
+                  "summaryChars": 605,
+                  "summaryHash": "0f918d28864d3682ae77731f149273997c84773592a466b18c7cd0121b599a05",
+                  "schemaChars": 250,
+                  "schemaHash": "088cd2a3d3a47b251429ff7c56844cdedd1c45c3af0fa8bfaf7aa795766976bf",
+                  "propertiesCount": 4
+                },
+                {
+                  "name": "memory_get",
+                  "summaryChars": 239,
+                  "summaryHash": "bff1141a3da31a345c550337417efc9ace4da2909004606c727c59ca1a294495",
+                  "schemaChars": 241,
+                  "schemaHash": "78f5d58460a82f9104deebad2f1873a8cde05d1ce7328b3ba4da6e994653e70a",
+                  "propertiesCount": 4
+                }
+              ]
+            },
+            "currentTurn": {
+              "promptChars": 4533,
+              "runtimeContextChars": 0
+            }
+          },
+          "trace_stats": {
+            "trace": "runs/control-old-xlsx-tlc-20261008T163759Z-90a05c03/trajectory.json",
+            "sha256": "8757e6353d7120ef0b1a7af0331a1a027afa0b9a666db2e03727434890486c50",
+            "session_id": "ca27f0ba-679b-4cc9-9d0d-f08fc51ccc54",
+            "agent": {
+              "name": "openclaw",
+              "version": "OpenClaw 2026.6.6 (8c802aa)",
+              "model_name": "deepseek/deepseek-v4-flash",
+              "extra": {
+                "parser": "openclaw-session-jsonl",
+                "provider": "deepseek",
+                "session_schema_version": 3,
+                "thinking_level": "high"
+              }
+            },
+            "steps": 25,
+            "tool_calls": 30,
+            "tools": {
+              "read": 7,
+              "exec": 14,
+              "process": 7,
+              "write": 2
+            },
+            "missing_tool_results": [],
+            "command_failures": [],
+            "process_kill_steps": [],
+            "recorded_metrics": {
+              "total_prompt_tokens": 1016808,
+              "total_completion_tokens": 14435,
+              "total_cached_tokens": 979584,
+              "total_cost_usd": 0.036681512,
+              "total_steps": 25
+            }
+          },
+          "authored_helpers": {
+            "enhance_workbook.py": {
+              "write_steps": [
+                14
+              ],
+              "exec_attempts": [
+                {
+                  "step": 16,
+                  "status": "completed",
+                  "exit_code": 0
+                },
+                {
+                  "step": 17,
+                  "status": "completed",
+                  "exit_code": 0
+                }
+              ],
+              "lines": 230,
+              "bytes": 8667,
+              "source_sha256": "65c98f28d180217f637b76f1afa3acad254b305c72357aeb52aa52e24aa893a2"
+            }
+          },
+          "final_helpers": [
+            {
+              "path": "enhance_workbook.py",
+              "sha256": "65c98f28d180217f637b76f1afa3acad254b305c72357aeb52aa52e24aa893a2",
+              "lines": 230,
+              "functions": [
+                "fill",
+                "font",
+                "enhance"
+              ],
+              "ast_sha256": "072c56ce49bf04506d17b01104131fbb4d72e489b94a06480a8076ff427e73f8"
+            }
+          ],
+          "stages": {
+            "inspect_input": [
+              4,
+              6,
+              8,
+              12,
+              18
+            ],
+            "build_workbook": [
+              16,
+              17
+            ],
+            "recalculate": [
+              20
+            ],
+            "publish_csv": [
+              22
+            ],
+            "verify": [
+              22
+            ]
+          },
+          "context_audit": {
+            "schema_version": "office-agent-context-audit-v1",
+            "matched": true,
+            "profile": "legacy-host-v1",
+            "workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "expected_workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "skills": {
+              "promptChars": 5813,
+              "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                },
+                {
+                  "name": "xlsx",
+                  "blockChars": 1134
+                }
+              ]
+            },
+            "expected_skills": {
+              "promptChars": 5813,
+              "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                },
+                {
+                  "name": "xlsx",
+                  "blockChars": 1134
+                }
+              ]
+            },
+            "tool_schema_chars": 27477,
+            "expected_tool_schema_chars": 27477,
+            "system_prompt": {
+              "chars": 30154,
+              "hash": "dc1661623a17fda7470f2099ec072c992f5128b52674f63e285b67aad185bf71",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 18427
+            },
+            "background_hashes_before": {
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+            },
+            "background_hashes_after": {
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+            },
+            "background_matches_profile": true,
+            "background_unchanged": true,
+            "scope": "Historical injected-file lengths, exact Skill registry text hash and tool-schema length checked; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen."
+          },
+          "verification": {
+            "accepted": true,
+            "audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "success",
+              "legacy_verifier": "success",
+              "independent_failures": [],
+              "legacy_failures": [],
+              "failed_attempt_retained": false
+            }
+          },
+          "checks": {
+            "actual_prompt_matches_recorded": true
+          },
+          "shell_errors_masked_by_zero_exit": [
+            {
+              "step": 16,
+              "exit_code": 0,
+              "command": "cd /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01 && time python3 enhance_workbook.py output/monthly_operations_report.xlsx 2>&1 | tail -20",
+              "result_tail": "/usr/bin/sh: 1: time: not found"
+            }
+          ],
+          "nonzero_exit_details": [],
+          "framework_reference_steps": []
+        },
+        "new": {
+          "run_id": "control-new-xlsx-tlc-20261008T163759Z-90a05c03",
+          "status": "success",
+          "info": {
+            "schema_version": "office-run-v1",
+            "run_id": "control-new-xlsx-tlc-20261008T163759Z-90a05c03",
+            "kind": "xlsx",
+            "dataset_id": "tlc",
+            "status": "success",
+            "execution": "real-openclaw-agent",
+            "prompt_template": "xlsx.txt",
+            "prompt_template_sha256": "8f7da21e9d80eac53d11dc9ca92cc4482db347c8f6f82236162193311ae53710",
+            "manifest_sha256": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+            "expected_sha256": "bcfe9e859df6152111ab20c29d2b98c7b672ae7e11cd014cb6a3956a04ac031f",
+            "prompt_sha256": "f55ed705a26c21944a9311ff0cc3c525c04aab566a9cf1192331e36d8516126d",
+            "started_at": "2026-10-08T16:46:00.288510+00:00",
+            "requested_model": null,
+            "tool_versions": {
+              "openclaw": "OpenClaw 2026.6.6 (8c802aa)",
+              "node": "v24.14.0",
+              "python": "Python 3.12.3",
+              "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+              "poppler": "pdftoppm version 24.02.0"
+            },
+            "input_hashes": {
+              "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+              "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+              "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+              "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+            },
+            "prompt_workspace": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+            "agent_context": {
+              "profile": "legacy-host-v1",
+              "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+            },
+            "session_key": "agent:main:SUB-MEM-OFFICE-01",
+            "agent_seconds": 321.517,
+            "agent_exit_code": 0,
+            "agent_context_matched": true,
+            "trace": {
+              "session_id": "a492397e-c9c2-4445-ab23-a94800279eea",
+              "steps": 22,
+              "tool_calls": 27
+            },
+            "agent_business_status": "success",
+            "verifier_called_in_trace": true,
+            "verification_seconds": 26.41,
+            "business_status": "success",
+            "elapsed_seconds": 350.039,
+            "finished_at": "2026-10-08T16:51:50.327303+00:00",
+            "artifacts": {
+              "container.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "source_snapshot.json": "f4e400d1fbc23dc6cfef2fd7a7278c4526f4d8e2cd306f916480ddbb061f4a6d",
+              "task.prompt": "f55ed705a26c21944a9311ff0cc3c525c04aab566a9cf1192331e36d8516126d",
+              "actual_task.prompt": "f55ed705a26c21944a9311ff0cc3c525c04aab566a9cf1192331e36d8516126d",
+              "config_validate.stdout.log": "275572d12706cfa6972ae580e598a72b66f7ed80d7a126837bb7c383391ccfef",
+              "session_capture.json": "6c2872019d354f09c89a495037211b6f5293edfe12a86d196a64b5c34ab6fcb4",
+              "tool_events.json": "1fae97c1cf7246fdd1b8d00151bad822550c517a6da1010fd2eda7d35a58589b",
+              "openclaw_session.jsonl": "890597fbd4257d1ea5524df511cb41ab616d86763f84f9c9c4f9d7b2146773cb",
+              "config_validate.stderr.log": "b4215a5f83318e9ae09d209625bec030214929505228608930bee0c881dc1e0e",
+              "container.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "trajectory.json": "ca81e778fa9d88813cbb8f9e52e2cd18394909dbe70319071563cd7d5450686c",
+              "openclaw_agent.stdout.log": "de09ef4fdf75108930da8afbff31278e0a293c45748b2486ab345b52b5f472a4",
+              "pre_agent_state.json": "f41ef4a66a892414f0ca3d37b9209b5d47cf8d3b272b558c472ff2cb535fb50b",
+              "openclaw_agent.stderr.log": "b4215a5f83318e9ae09d209625bec030214929505228608930bee0c881dc1e0e",
+              "agent_context_audit.json": "ad09f05f18cd5f0d156de0d0babd6b17cb15f505d52405e88c203f200fd250cf",
+              "independent_verification.json": "72208609ce214b4e44c1028eddade83505611d8189746805b523b07d5374ec6b",
+              "case/task.prompt": "fb1e0e97e1715a0c573fbe90f0de444085786612594a947b707b26899b6ef0b1",
+              "workspace/enhance_workbook.py": "45b923177fd1fc451232ee3d9217accced670c894d49f72ba5cd0e43e2cf4693",
+              "case/input/dataset_manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+              "case/input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+              "case/input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+              "case/input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+              "case/input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "case/input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "case/input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5",
+              "workspace/output/xlsx_enhancement_summary.json": "3aae4cfc6c77d5f761ab5e28c46317305cf2f0ef6b073f0c2eace40a536a7f85",
+              "workspace/output/business_verification.json": "73ee7a96d747270a466052bbf92b0f487d99fd9d272c08c0dbcd01b28a5f7282",
+              "workspace/output/monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "workspace/output/monthly_operations_report.xlsx": "8590442757eded5a92439bab61746ed54c72e97dc53b2973f9e55b3a54f98066",
+              "workspace/output/reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "workspace/output/formula_recalc.json": "a7c3c52799cf5cc31f0a17c5abdee50bb51eeb47817b532d688a399a7f5a1207",
+              "workspace/input/dataset_manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+              "workspace/input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+              "workspace/input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+              "workspace/input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+              "workspace/input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "workspace/input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "workspace/input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+            },
+            "internal_run_id": "control",
+            "control_variant": "new",
+            "runtime_image": "office-trace-bench:runtime",
+            "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+            "source_snapshot_path": "/home/lcq/office-trace-bench/.snapshots/20261008T163759Z-90a05c03/xlsx",
+            "source_snapshot_unchanged": true,
+            "source_snapshot_sha256": "f4e400d1fbc23dc6cfef2fd7a7278c4526f4d8e2cd306f916480ddbb061f4a6d",
+            "container_exit_code": 0,
+            "control_experiment_id": "20261008T163759Z-90a05c03",
+            "baseline_accepted": true,
+            "baseline_acceptance_audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "success",
+              "legacy_verifier": "success",
+              "independent_failures": [],
+              "legacy_failures": [],
+              "failed_attempt_retained": false
+            }
+          },
+          "pre_agent": {
+            "actual_prompt_sha256": "f55ed705a26c21944a9311ff0cc3c525c04aab566a9cf1192331e36d8516126d",
+            "background_hashes": {
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+            },
+            "input_hashes": {
+              "input/dataset_manifest.json": "784cc711488f983d826ee6f10f47176159fc4fc50400f21892f3f18a5efb030e",
+              "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+              "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+              "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+              "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+              "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+              "input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+            },
+            "private_config_hashes": {
+              "openclaw.json": "11f3ae8df3353be85d3aeb12050dd5bff75e6fdcc5fda8235017ff2618228c47",
+              ".env": "a6e2c8434cee614f80ec19654ee661e7f04716486337ff666d6c9583f9b9924d",
+              "agents/main/agent/models.json": "f6a60ffe718b445a923e5d870ff3b23ced2a8e42ef7322a0494c48c788e66e10"
+            },
+            "config_semantic_sha256": "88b2dba3f2d4c30ab350331ce415769b6fd07333a56f586cdcaf256b7e5aa0f1",
+            "process_cwd": "/runs/control/workspace",
+            "logical_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+            "real_case": "/runs/control/workspace",
+            "case_is_symlink": true,
+            "environment": {
+              "PATH": "/workspace/control-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "SHELL": null,
+              "LANG": null,
+              "LC_ALL": null,
+              "TZ": null
+            }
+          },
+          "system_report": {
+            "source": "run",
+            "generatedAt": 1791477968963,
+            "sessionId": "a492397e-c9c2-4445-ab23-a94800279eea",
+            "sessionKey": "agent:main:SUB-MEM-OFFICE-01",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "workspaceDir": "/root/.openclaw/workspace",
+            "bootstrapMaxChars": 20000,
+            "bootstrapTotalMaxChars": 60000,
+            "bootstrapTruncation": {
+              "warningMode": "always",
+              "warningShown": false,
+              "truncatedFiles": 0,
+              "nearLimitFiles": 0,
+              "totalNearLimit": false
+            },
+            "sandbox": {
+              "mode": "off",
+              "sandboxed": false
+            },
+            "systemPrompt": {
+              "chars": 30154,
+              "hash": "dc1661623a17fda7470f2099ec072c992f5128b52674f63e285b67aad185bf71",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 18427
+            },
+            "injectedWorkspaceFiles": [
+              {
+                "name": "AGENTS.md",
+                "path": "/root/.openclaw/workspace/AGENTS.md",
+                "missing": false,
+                "rawChars": 7195,
+                "injectedChars": 7195,
+                "truncated": false
+              },
+              {
+                "name": "SOUL.md",
+                "path": "/root/.openclaw/workspace/SOUL.md",
+                "missing": false,
+                "rawChars": 1509,
+                "injectedChars": 1509,
+                "truncated": false
+              },
+              {
+                "name": "TOOLS.md",
+                "path": "/root/.openclaw/workspace/TOOLS.md",
+                "missing": false,
+                "rawChars": 866,
+                "injectedChars": 866,
+                "truncated": false
+              },
+              {
+                "name": "IDENTITY.md",
+                "path": "/root/.openclaw/workspace/IDENTITY.md",
+                "missing": false,
+                "rawChars": 1275,
+                "injectedChars": 1275,
+                "truncated": false
+              },
+              {
+                "name": "USER.md",
+                "path": "/root/.openclaw/workspace/USER.md",
+                "missing": false,
+                "rawChars": 534,
+                "injectedChars": 534,
+                "truncated": false
+              },
+              {
+                "name": "HEARTBEAT.md",
+                "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+                "missing": false,
+                "rawChars": 243,
+                "injectedChars": 243,
+                "truncated": false
+              }
+            ],
+            "skills": {
+              "promptChars": 5813,
+              "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                },
+                {
+                  "name": "xlsx",
+                  "blockChars": 1134
+                }
+              ]
+            },
+            "tools": {
+              "listChars": 0,
+              "schemaChars": 27477,
+              "entries": [
+                {
+                  "name": "read",
+                  "summaryChars": 298,
+                  "summaryHash": "f8a1d7cf1ecfe02b1b5865c93387e6a5891e5079117b4fe18614b6f912521727",
+                  "schemaChars": 304,
+                  "schemaHash": "134f19bcabe3e29d63c5cebb38f1d2556759fd08adad6bc90a4b4d3cd1fb8441",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "edit",
+                  "summaryChars": 326,
+                  "summaryHash": "c498a85576e187d069e8e8ea4f70f81bddd57829600d385ef61c4359fd634c9e",
+                  "schemaChars": 834,
+                  "schemaHash": "457e8bb9f800b21be76c4fd8c0e3078bf07ee9bf93ac82f39944c171bd8f6d84",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "write",
+                  "summaryChars": 127,
+                  "summaryHash": "cdb1c46027b22d1f1b923b47bfe297821d9fe589a9f9d92994961948060a4d89",
+                  "schemaChars": 225,
+                  "schemaHash": "e98a2484f667cf7c22d76ca103bf2022bf9113dc63fe38b899e71c328cb1e833",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "apply_patch",
+                  "summaryChars": 132,
+                  "summaryHash": "432bf38688a4f011d2b765a441ac07e1fdfa9faf2051679adee04abcd9332d93",
+                  "schemaChars": 153,
+                  "schemaHash": "05521268363ff4f191472c90d69ef08a503ba9acf1d2febc50b3ee68db32ab65",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "exec",
+                  "summaryChars": 539,
+                  "summaryHash": "4825198988fbfa8ebf5c2a8fbe3946da0be639b1e3b737ceaa4364195bba3f04",
+                  "schemaChars": 1283,
+                  "schemaHash": "2608ea36cf51376859b7204cda1bf1a2507134eb542097b9e8dbc8af617f216b",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "process",
+                  "summaryChars": 456,
+                  "summaryHash": "55297e65d460e0e1e06e7fad4cedb75ffda8fac9fa8b10aa06d6cead3c5a76ea",
+                  "schemaChars": 1074,
+                  "schemaHash": "a2d30a25569f409d7e8539844c89a088044535388b24031d014577b96ed27c5c",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "nodes",
+                  "summaryChars": 143,
+                  "summaryHash": "ea1b0a5498ca3c788b26d164245652e1aaa989806e0123715793ab25f9578121",
+                  "schemaChars": 1764,
+                  "schemaHash": "339c9b744f121ff6a5b2a8a2a7e19286c4114d8dc165a172d3708e993d8b0e55",
+                  "propertiesCount": 32
+                },
+                {
+                  "name": "cron",
+                  "summaryChars": 3721,
+                  "summaryHash": "8eb177e0cdf7d5bc0144f544bf0072e38b6bab267e0699a2859b4a8db97af0b3",
+                  "schemaChars": 8311,
+                  "schemaHash": "60c519602d2a834cb2d5e1f7e3778a125ae07c7ab757a844cbdec72104e5b94b",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "message",
+                  "summaryChars": 71,
+                  "summaryHash": "e43fe566f2d93be0d540da64d2a80a6e1a868757fe2fb49fa38e69fccf9fd4b0",
+                  "schemaChars": 5710,
+                  "schemaHash": "b11a54a8bc235a40b4206dfec1e04170e0cbc7af342f7921676a8ced3a4cbb82",
+                  "propertiesCount": 106
+                },
+                {
+                  "name": "tts",
+                  "summaryChars": 217,
+                  "summaryHash": "652c1970c199d82b61061a40be2adddfc7e5634df5d896d776a8a0047c8a6b75",
+                  "schemaChars": 264,
+                  "schemaHash": "e40695f92ef72d913ee5eb13ef738a15d6f33ae3af3ec609975c45991ef99a78",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "gateway",
+                  "summaryChars": 566,
+                  "summaryHash": "1bef48b95fc67d7dc10e2f5f0cc3522951b067b762de6c3e77bc446de0f608b1",
+                  "schemaChars": 649,
+                  "schemaHash": "1a4f609a948c183832ee8a11c0cfcbe1afddf0732c30c67a593dfcdb630a5ee7",
+                  "propertiesCount": 14
+                },
+                {
+                  "name": "agents_list",
+                  "summaryChars": 63,
+                  "summaryHash": "a7afb8adbaf98833df68160db0677ec2a6bc30b1b96f3592392c9df59e310c65",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "get_goal",
+                  "summaryChars": 71,
+                  "summaryHash": "58dea7906d9e17e5f89a75fea24597ee068d8a56af824370dc27f8501374d6e3",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "create_goal",
+                  "summaryChars": 155,
+                  "summaryHash": "f01e3a63d673a410ba55213ce6bd3fa2b0d2279e8e780c18aa0cb5aa991b29b3",
+                  "schemaChars": 267,
+                  "schemaHash": "27ee794432736471bd76390e236cc7d7e98f8469a02656e7a27109041eea0f8c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "update_goal",
+                  "summaryChars": 212,
+                  "summaryHash": "285201690e5f2456b4cdcd252ff391709b84d69538df61bad694d3c0cfc19958",
+                  "schemaChars": 207,
+                  "schemaHash": "c37894492eedfad02f1e7fe1488900765bfe547f3b3f34cefbab4f7f57441c2c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "skill_workshop",
+                  "summaryChars": 171,
+                  "summaryHash": "577c1d2b8f56bf3e9dd5e00463bbce8b8bf4cf201da9b21b588dcaa3bc6ed8cf",
+                  "schemaChars": 2273,
+                  "schemaHash": "15481d6889a320a46728ee32304f0a2b510c0bcf77d445052c1ef2fa5dd5368b",
+                  "propertiesCount": 13
+                },
+                {
+                  "name": "sessions_list",
+                  "summaryChars": 135,
+                  "summaryHash": "c7e411ae02e3adff5504aaee48f02d262a8abb9152558a3172aae289e3b05faf",
+                  "schemaChars": 435,
+                  "schemaHash": "c29c6b82c36a2d95a88c8944f129929b2621ee2af6d17b2ab101d4d7e9633d89",
+                  "propertiesCount": 9
+                },
+                {
+                  "name": "sessions_history",
+                  "summaryChars": 117,
+                  "summaryHash": "f5d45b76f11a8ac63cc45d456fb6f675f0b1a2e191feb9671924cb5830058f03",
+                  "schemaChars": 162,
+                  "schemaHash": "ac33b8af2252262afe479236046f5a04bc018f1fcf24d1a8bf32743f0e867598",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "sessions_send",
+                  "summaryChars": 282,
+                  "summaryHash": "061e9ef3487676bb2a4fd4c0336bd973aaab5eea0725e7443c4cb17518cd1e78",
+                  "schemaChars": 275,
+                  "schemaHash": "f1fbaa412fe6b6aee102234c87c5aa140f39c9086f9bae6e1e9691309a602ffb",
+                  "propertiesCount": 5
+                },
+                {
+                  "name": "sessions_spawn",
+                  "summaryChars": 332,
+                  "summaryHash": "5ced554d0c09b9c71fa003139eca7871bbfdc0917a323fc17af2a9faec46c5b7",
+                  "schemaChars": 1151,
+                  "schemaHash": "9a91c7668463da8a66386260ce2ae97e7efe3bb93b9b6f03ac85102c354457e1",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "sessions_yield",
+                  "summaryChars": 79,
+                  "summaryHash": "f3782fc41c1522657e1d3494f486a2df998fed38a6b89dcf7f6934fb41424320",
+                  "schemaChars": 60,
+                  "schemaHash": "b1c4c753820bc3096d85ef7a266a14c9fbe12450536db58076b75bb61d14dbbb",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "subagents",
+                  "summaryChars": 132,
+                  "summaryHash": "1c2ffd38549c0444b118d43736fc4b875ea1aaabc446bbf8bc1fc4ee9180cca4",
+                  "schemaChars": 122,
+                  "schemaHash": "c4a241d2c3d46ba7985abfce4d3fcd63298ce81f89d49183c8f3d584c48d0c33",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "session_status",
+                  "summaryChars": 278,
+                  "summaryHash": "71177e543dc6235bad4b1a26761995681dcec27ab58dcb4f4f8a7fc9a7b2b5aa",
+                  "schemaChars": 89,
+                  "schemaHash": "d2995f3d69d126e98ac93eec3c2a9fe5556925bd7979a8e4b6b5a2bf62d329dd",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "web_search",
+                  "summaryChars": 65,
+                  "summaryHash": "b38e9b3c079beaa988d3c576303660b91a55c2e72f56351da04160529173273f",
+                  "schemaChars": 991,
+                  "schemaHash": "3879e368875d824b14e0e683f81408824e9a2a5850fa2f8514a68caebda54d18",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "web_fetch",
+                  "summaryChars": 93,
+                  "summaryHash": "8875afbb51bd63673e5e6836ca31eeda73914a464862665cd73b346e28d28fd5",
+                  "schemaChars": 317,
+                  "schemaHash": "d2d8ad58a1b84d849dd16142282aff6c5606f7b0e3d08405e1b740a6a79e6bcc",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "memory_search",
+                  "summaryChars": 605,
+                  "summaryHash": "0f918d28864d3682ae77731f149273997c84773592a466b18c7cd0121b599a05",
+                  "schemaChars": 250,
+                  "schemaHash": "088cd2a3d3a47b251429ff7c56844cdedd1c45c3af0fa8bfaf7aa795766976bf",
+                  "propertiesCount": 4
+                },
+                {
+                  "name": "memory_get",
+                  "summaryChars": 239,
+                  "summaryHash": "bff1141a3da31a345c550337417efc9ace4da2909004606c727c59ca1a294495",
+                  "schemaChars": 241,
+                  "schemaHash": "78f5d58460a82f9104deebad2f1873a8cde05d1ce7328b3ba4da6e994653e70a",
+                  "propertiesCount": 4
+                }
+              ]
+            },
+            "currentTurn": {
+              "promptChars": 4533,
+              "runtimeContextChars": 0
+            }
+          },
+          "trace_stats": {
+            "trace": "runs/control-new-xlsx-tlc-20261008T163759Z-90a05c03/trajectory.json",
+            "sha256": "ca81e778fa9d88813cbb8f9e52e2cd18394909dbe70319071563cd7d5450686c",
+            "session_id": "a492397e-c9c2-4445-ab23-a94800279eea",
+            "agent": {
+              "name": "openclaw",
+              "version": "OpenClaw 2026.6.6 (8c802aa)",
+              "model_name": "deepseek/deepseek-v4-flash",
+              "extra": {
+                "parser": "openclaw-session-jsonl",
+                "provider": "deepseek",
+                "session_schema_version": 3,
+                "thinking_level": "high"
+              }
+            },
+            "steps": 22,
+            "tool_calls": 27,
+            "tools": {
+              "read": 8,
+              "exec": 11,
+              "process": 6,
+              "write": 2
+            },
+            "missing_tool_results": [],
+            "command_failures": [],
+            "process_kill_steps": [],
+            "recorded_metrics": {
+              "total_prompt_tokens": 967015,
+              "total_completion_tokens": 15281,
+              "total_cached_tokens": 936064,
+              "total_cost_usd": 0.034821612,
+              "total_steps": 22
+            }
+          },
+          "authored_helpers": {
+            "enhance_workbook.py": {
+              "write_steps": [
+                13
+              ],
+              "exec_attempts": [
+                {
+                  "step": 14,
+                  "status": "completed",
+                  "exit_code": 0
+                },
+                {
+                  "step": 15,
+                  "status": "completed",
+                  "exit_code": 0
+                }
+              ],
+              "lines": 208,
+              "bytes": 7716,
+              "source_sha256": "45b923177fd1fc451232ee3d9217accced670c894d49f72ba5cd0e43e2cf4693"
+            }
+          },
+          "final_helpers": [
+            {
+              "path": "enhance_workbook.py",
+              "sha256": "45b923177fd1fc451232ee3d9217accced670c894d49f72ba5cd0e43e2cf4693",
+              "lines": 208,
+              "functions": [
+                "fill"
+              ],
+              "ast_sha256": "f64476ef3fc7e01fc9707bf5e5a7ff4abbc04e9b2056cdb556f053a3a5ed3d41"
+            }
+          ],
+          "stages": {
+            "inspect_input": [
+              5,
+              7,
+              9,
+              11
+            ],
+            "build_workbook": [
+              14,
+              15
+            ],
+            "recalculate": [
+              18
+            ],
+            "publish_csv": [
+              14
+            ],
+            "verify": [
+              19
+            ]
+          },
+          "context_audit": {
+            "schema_version": "office-agent-context-audit-v1",
+            "matched": true,
+            "profile": "legacy-host-v1",
+            "workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "expected_workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "skills": {
+              "promptChars": 5813,
+              "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                },
+                {
+                  "name": "xlsx",
+                  "blockChars": 1134
+                }
+              ]
+            },
+            "expected_skills": {
+              "promptChars": 5813,
+              "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                },
+                {
+                  "name": "xlsx",
+                  "blockChars": 1134
+                }
+              ]
+            },
+            "tool_schema_chars": 27477,
+            "expected_tool_schema_chars": 27477,
+            "system_prompt": {
+              "chars": 30154,
+              "hash": "dc1661623a17fda7470f2099ec072c992f5128b52674f63e285b67aad185bf71",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 18427
+            },
+            "background_hashes_before": {
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+            },
+            "background_hashes_after": {
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+            },
+            "background_matches_profile": true,
+            "background_unchanged": true,
+            "scope": "Historical injected-file lengths, exact Skill registry text hash and tool-schema length checked; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen."
+          },
+          "verification": {
+            "accepted": true,
+            "audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "success",
+              "legacy_verifier": "success",
+              "independent_failures": [],
+              "legacy_failures": [],
+              "failed_attempt_retained": false
+            }
+          },
+          "checks": {
+            "actual_prompt_matches_recorded": true
+          },
+          "shell_errors_masked_by_zero_exit": [
+            {
+              "step": 14,
+              "exit_code": 0,
+              "command": "cd /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01 && time python3 enhance_workbook.py 2>&1; echo \"EXIT=$?\"; cp input/prepared_monthly_operations_summary.csv output/monthly_operations_summary.csv; cp input/prepared_reconciliation_summary.csv output/reconciliation_summary.csv; ls -la output/",
+              "result_tail": "/usr/bin/sh: 1: time: not found\nEXIT=127\ntotal 16\ndrwxr-xr-x. 2 root root 4096 Oct  8 16:48 .\ndrwxr-xr-x. 4 root root 4096 Oct  8 16:48 ..\n-rw-r--r--. 1 root root  580 Oct  8 16:48 monthly_operations_summary.csv\n-rw-r--r--. 1 root root  322 Oct  8 16:48 reconciliation_summary.csv"
+            }
+          ],
+          "nonzero_exit_details": [],
+          "framework_reference_steps": []
+        }
+      },
+      "controls_passed": true,
+      "results_passed": true,
+      "outputs": {
+        "same_sheet_order": true,
+        "sheets": [
+          "Executive_Summary",
+          "Raw_Sample",
+          "Hourly_Summary",
+          "Daily_Summary",
+          "Zone_Summary",
+          "Payment_Summary",
+          "Fare_Distance_Bands",
+          "Reconciliation"
+        ],
+        "same_kpi_cached_values": true,
+        "kpi_cached_values": {
+          "B5": 2758427,
+          "B6": 50744748.6,
+          "B7": 18.9361351508528,
+          "B8": 0.0695524963705347,
+          "B9": "PASS",
+          "B13": 1,
+          "B14": 1,
+          "B15": 2758427,
+          "B16": 50744748.6
+        },
+        "same_csv_bytes": {
+          "monthly_operations_summary.csv": true,
+          "reconciliation_summary.csv": true
+        },
+        "formula_counts": {
+          "old": 45,
+          "new": 45
+        },
+        "formula_differences": [
+          {
+            "cell": "Executive_Summary!B13",
+            "old": "=INDEX($E$13:$E$15,MATCH($B$12,$D$13:$D$15,0))",
+            "new": "=VLOOKUP($B$12,$D$13:$F$15,2,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B14",
+            "old": "=INDEX($F$13:$F$15,MATCH($B$12,$D$13:$D$15,0))",
+            "new": "=VLOOKUP($B$12,$D$13:$F$15,3,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B15",
+            "old": "=$B$5*$B$14",
+            "new": "=B5*B14"
+          },
+          {
+            "cell": "Executive_Summary!B16",
+            "old": "=$B$6*$B$13*$B$14",
+            "new": "=B6*B13*B14"
+          }
+        ],
+        "recalc_reports": {
+          "old": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          },
+          "new": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          }
+        }
+      },
+      "historical_trace_stats": {
+        "trace": "legacy/xlsx/trajectory.json",
+        "sha256": "d56b64785155ce95e4df7ccbd4c368970238025e7c4dc0c82de126e95e300ab6",
+        "session_id": "85e12fb7-a392-4cd8-9bdb-066156bc464a",
+        "agent": {
+          "name": "openclaw",
+          "version": "OpenClaw 2026.6.6 (8c802aa)",
+          "model_name": "deepseek/deepseek-v4-flash",
+          "extra": {
+            "parser": "openclaw-session-jsonl",
+            "provider": "deepseek",
+            "session_schema_version": 3,
+            "thinking_level": "high"
+          }
+        },
+        "steps": 35,
+        "tool_calls": 41,
+        "tools": {
+          "read": 1,
+          "exec": 27,
+          "process": 12,
+          "write": 1
+        },
+        "missing_tool_results": [],
+        "command_failures": [],
+        "process_kill_steps": [
+          5,
+          7,
+          9,
+          12
+        ],
+        "recorded_metrics": {
+          "total_prompt_tokens": 1326487,
+          "total_completion_tokens": 13934,
+          "total_cached_tokens": 1293184,
+          "total_cost_usd": 0.044773092,
+          "total_steps": 35
+        }
+      },
+      "historical_helpers": {
+        "enhance_workbook.py": {
+          "write_steps": [
+            17
+          ],
+          "exec_attempts": [
+            {
+              "step": 18,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 286,
+          "bytes": 10461,
+          "source_sha256": "2b8fe9c6c839510648e870b19400f66ec5df9d9d7f9c9dea5f5d5f1f5b2a43a6"
+        }
+      },
+      "current_old_helper_writes_match_historical": false,
+      "current_old_vs_historical_outputs": {
+        "same_sheet_order": true,
+        "sheets": [
+          "Executive_Summary",
+          "Raw_Sample",
+          "Hourly_Summary",
+          "Daily_Summary",
+          "Zone_Summary",
+          "Payment_Summary",
+          "Fare_Distance_Bands",
+          "Reconciliation"
+        ],
+        "same_kpi_cached_values": true,
+        "kpi_cached_values": {
+          "B5": 2758427,
+          "B6": 50744748.6,
+          "B7": 18.9361351508528,
+          "B8": 0.0695524963705347,
+          "B9": "PASS",
+          "B13": 1,
+          "B14": 1,
+          "B15": 2758427,
+          "B16": 50744748.6
+        },
+        "same_csv_bytes": {
+          "monthly_operations_summary.csv": true,
+          "reconciliation_summary.csv": true
+        },
+        "formula_counts": {
+          "old": 45,
+          "new": 45
+        },
+        "formula_differences": [
+          {
+            "cell": "Executive_Summary!B13",
+            "old": "=INDEX(E13:E15,MATCH(B12,D13:D15,0))",
+            "new": "=INDEX($E$13:$E$15,MATCH($B$12,$D$13:$D$15,0))"
+          },
+          {
+            "cell": "Executive_Summary!B14",
+            "old": "=INDEX(F13:F15,MATCH(B12,D13:D15,0))",
+            "new": "=INDEX($F$13:$F$15,MATCH($B$12,$D$13:$D$15,0))"
+          },
+          {
+            "cell": "Executive_Summary!B15",
+            "old": "=B5*B14",
+            "new": "=$B$5*$B$14"
+          },
+          {
+            "cell": "Executive_Summary!B16",
+            "old": "=B6*B13*B14",
+            "new": "=$B$6*$B$13*$B$14"
+          }
+        ],
+        "recalc_reports": {
+          "old": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          },
+          "new": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          }
+        }
+      },
+      "full_system_hash_equal": true,
+      "all_private_config_file_hashes_equal": true,
+      "filesystem_difference": {
+        "old_process_cwd": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+        "new_process_cwd": "/runs/control/workspace",
+        "old_real_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01",
+        "new_real_case": "/runs/control/workspace",
+        "old_case_symlink": false,
+        "new_case_symlink": true
+      },
+      "helper_diff": "control_pairs/20261008T163759Z-90a05c03/tlc-helpers.diff"
+    },
+    "opm": {
+      "kind": "pdf",
+      "controls": {
+        "same_image_id": true,
+        "same_tool_versions": true,
+        "same_actual_task": true,
+        "actual_task_captured_correctly": true,
+        "same_visible_inputs": true,
+        "same_background_bytes": true,
+        "same_config_semantics": true,
+        "same_private_config_file_hashes": true,
+        "same_project_source_snapshot": true,
+        "same_process_environment": true,
+        "same_skill_registry": true,
+        "same_tool_registry_metadata": true,
+        "same_workspace_injection": true,
+        "same_full_initial_system_prompt": true,
+        "same_actual_model": true,
+        "same_agent_and_thinking": true,
+        "same_bootstrap_limits": true,
+        "sources_unchanged": true,
+        "context_audits_passed": true,
+        "all_tool_results_captured": true
+      },
+      "runs": {
+        "old": {
+          "run_id": "control-old-pdf-opm-20261008T163759Z-90a05c03",
+          "status": "failed",
+          "info": {
+            "schema_version": "office-run-v1",
+            "execution": "real-openclaw-agent",
+            "kind": "pdf",
+            "dataset_id": "opm",
+            "status": "failed",
+            "runner_exit_code": 0,
+            "input_hashes": {
+              "input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+              "input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+              "input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+              "input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c"
+            },
+            "trace": {
+              "session_id": "ae8061c4-9665-4c09-8e20-13ef10e457d1",
+              "steps": 17,
+              "tool_calls": 23
+            },
+            "agent_context_matched": true,
+            "business_status": "failed",
+            "agent_business_status": "success",
+            "verifier_called_in_trace": true,
+            "agent_seconds": 65.983,
+            "elapsed_seconds": 76.889,
+            "run_id": "control-old-pdf-opm-20261008T163759Z-90a05c03",
+            "internal_run_id": "control",
+            "control_variant": "old",
+            "tool_versions": {
+              "openclaw": "OpenClaw 2026.6.6 (8c802aa)",
+              "node": "v24.14.0",
+              "python": "Python 3.12.3",
+              "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+              "poppler": "pdftoppm version 24.02.0"
+            },
+            "agent_context": {
+              "profile": "legacy-host-v1",
+              "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+            },
+            "runtime_image": "office-trace-bench:runtime",
+            "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+            "source_snapshot_path": "/home/lcq/office-trace-bench/.snapshots/20261008T163759Z-90a05c03/pdf",
+            "source_snapshot_unchanged": true,
+            "source_snapshot_sha256": "bd87b8dc3e9b45881ced4d5aa7663d95f6a3077607cb0f6f5c408b44340b0eb2",
+            "container_exit_code": 1,
+            "control_experiment_id": "20261008T163759Z-90a05c03",
+            "baseline_accepted": false,
+            "baseline_acceptance_audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "failed",
+              "legacy_verifier": "success",
+              "independent_failures": [
+                "mapping:applicant_01",
+                "field_values:applicant_01",
+                "mapping:applicant_02",
+                "field_values:applicant_02",
+                "mapping:applicant_03",
+                "field_values:applicant_03",
+                "mapping:applicant_04",
+                "field_values:applicant_04",
+                "mapping:applicant_05",
+                "field_values:applicant_05",
+                "mapping:applicant_06",
+                "field_values:applicant_06",
+                "mapping:applicant_07",
+                "field_values:applicant_07",
+                "mapping:applicant_08",
+                "field_values:applicant_08",
+                "mapping:applicant_09",
+                "field_values:applicant_09",
+                "mapping:applicant_10",
+                "field_values:applicant_10",
+                "summary:input_form"
+              ],
+              "legacy_failures": [],
+              "failed_attempt_retained": true
+            }
+          },
+          "pre_agent": {
+            "actual_prompt_sha256": "46f24800aa54544e0ac1c100ad63ef00156f7e51ef4571cfe014fefe105eb000",
+            "background_hashes": {
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+            },
+            "input_hashes": {
+              "input/dataset_manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+              "input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+              "input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+              "input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+              "input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c"
+            },
+            "private_config_hashes": {
+              "openclaw.json": "11f3ae8df3353be85d3aeb12050dd5bff75e6fdcc5fda8235017ff2618228c47",
+              ".env": "a6e2c8434cee614f80ec19654ee661e7f04716486337ff666d6c9583f9b9924d",
+              "agents/main/agent/models.json": "f6a60ffe718b445a923e5d870ff3b23ced2a8e42ef7322a0494c48c788e66e10"
+            },
+            "config_semantic_sha256": "88b2dba3f2d4c30ab350331ce415769b6fd07333a56f586cdcaf256b7e5aa0f1",
+            "process_cwd": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+            "logical_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+            "real_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+            "case_is_symlink": false,
+            "environment": {
+              "PATH": "/workspace/control-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "SHELL": null,
+              "LANG": null,
+              "LC_ALL": null,
+              "TZ": null
+            }
+          },
+          "system_report": {
+            "source": "run",
+            "generatedAt": 1791478328248,
+            "sessionId": "ae8061c4-9665-4c09-8e20-13ef10e457d1",
+            "sessionKey": "agent:main:SUB-MEM-PDF-01",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "workspaceDir": "/root/.openclaw/workspace",
+            "bootstrapMaxChars": 20000,
+            "bootstrapTotalMaxChars": 60000,
+            "bootstrapTruncation": {
+              "warningMode": "always",
+              "warningShown": false,
+              "truncatedFiles": 0,
+              "nearLimitFiles": 0,
+              "totalNearLimit": false
+            },
+            "sandbox": {
+              "mode": "off",
+              "sandboxed": false
+            },
+            "systemPrompt": {
+              "chars": 29638,
+              "hash": "7ccac98a77186598d523caa1f076bd2776549129a664c80de748a15d70cd3da0",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 17911
+            },
+            "injectedWorkspaceFiles": [
+              {
+                "name": "AGENTS.md",
+                "path": "/root/.openclaw/workspace/AGENTS.md",
+                "missing": false,
+                "rawChars": 7195,
+                "injectedChars": 7195,
+                "truncated": false
+              },
+              {
+                "name": "SOUL.md",
+                "path": "/root/.openclaw/workspace/SOUL.md",
+                "missing": false,
+                "rawChars": 1509,
+                "injectedChars": 1509,
+                "truncated": false
+              },
+              {
+                "name": "TOOLS.md",
+                "path": "/root/.openclaw/workspace/TOOLS.md",
+                "missing": false,
+                "rawChars": 866,
+                "injectedChars": 866,
+                "truncated": false
+              },
+              {
+                "name": "IDENTITY.md",
+                "path": "/root/.openclaw/workspace/IDENTITY.md",
+                "missing": false,
+                "rawChars": 1275,
+                "injectedChars": 1275,
+                "truncated": false
+              },
+              {
+                "name": "USER.md",
+                "path": "/root/.openclaw/workspace/USER.md",
+                "missing": false,
+                "rawChars": 534,
+                "injectedChars": 534,
+                "truncated": false
+              },
+              {
+                "name": "HEARTBEAT.md",
+                "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+                "missing": false,
+                "rawChars": 243,
+                "injectedChars": 243,
+                "truncated": false
+              }
+            ],
+            "skills": {
+              "promptChars": 5297,
+              "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "pdf",
+                  "blockChars": 618
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                }
+              ]
+            },
+            "tools": {
+              "listChars": 0,
+              "schemaChars": 27477,
+              "entries": [
+                {
+                  "name": "read",
+                  "summaryChars": 298,
+                  "summaryHash": "f8a1d7cf1ecfe02b1b5865c93387e6a5891e5079117b4fe18614b6f912521727",
+                  "schemaChars": 304,
+                  "schemaHash": "134f19bcabe3e29d63c5cebb38f1d2556759fd08adad6bc90a4b4d3cd1fb8441",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "edit",
+                  "summaryChars": 326,
+                  "summaryHash": "c498a85576e187d069e8e8ea4f70f81bddd57829600d385ef61c4359fd634c9e",
+                  "schemaChars": 834,
+                  "schemaHash": "457e8bb9f800b21be76c4fd8c0e3078bf07ee9bf93ac82f39944c171bd8f6d84",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "write",
+                  "summaryChars": 127,
+                  "summaryHash": "cdb1c46027b22d1f1b923b47bfe297821d9fe589a9f9d92994961948060a4d89",
+                  "schemaChars": 225,
+                  "schemaHash": "e98a2484f667cf7c22d76ca103bf2022bf9113dc63fe38b899e71c328cb1e833",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "apply_patch",
+                  "summaryChars": 132,
+                  "summaryHash": "432bf38688a4f011d2b765a441ac07e1fdfa9faf2051679adee04abcd9332d93",
+                  "schemaChars": 153,
+                  "schemaHash": "05521268363ff4f191472c90d69ef08a503ba9acf1d2febc50b3ee68db32ab65",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "exec",
+                  "summaryChars": 539,
+                  "summaryHash": "4825198988fbfa8ebf5c2a8fbe3946da0be639b1e3b737ceaa4364195bba3f04",
+                  "schemaChars": 1283,
+                  "schemaHash": "2608ea36cf51376859b7204cda1bf1a2507134eb542097b9e8dbc8af617f216b",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "process",
+                  "summaryChars": 456,
+                  "summaryHash": "55297e65d460e0e1e06e7fad4cedb75ffda8fac9fa8b10aa06d6cead3c5a76ea",
+                  "schemaChars": 1074,
+                  "schemaHash": "a2d30a25569f409d7e8539844c89a088044535388b24031d014577b96ed27c5c",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "nodes",
+                  "summaryChars": 143,
+                  "summaryHash": "ea1b0a5498ca3c788b26d164245652e1aaa989806e0123715793ab25f9578121",
+                  "schemaChars": 1764,
+                  "schemaHash": "339c9b744f121ff6a5b2a8a2a7e19286c4114d8dc165a172d3708e993d8b0e55",
+                  "propertiesCount": 32
+                },
+                {
+                  "name": "cron",
+                  "summaryChars": 3721,
+                  "summaryHash": "8eb177e0cdf7d5bc0144f544bf0072e38b6bab267e0699a2859b4a8db97af0b3",
+                  "schemaChars": 8311,
+                  "schemaHash": "60c519602d2a834cb2d5e1f7e3778a125ae07c7ab757a844cbdec72104e5b94b",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "message",
+                  "summaryChars": 71,
+                  "summaryHash": "e43fe566f2d93be0d540da64d2a80a6e1a868757fe2fb49fa38e69fccf9fd4b0",
+                  "schemaChars": 5710,
+                  "schemaHash": "b11a54a8bc235a40b4206dfec1e04170e0cbc7af342f7921676a8ced3a4cbb82",
+                  "propertiesCount": 106
+                },
+                {
+                  "name": "tts",
+                  "summaryChars": 217,
+                  "summaryHash": "652c1970c199d82b61061a40be2adddfc7e5634df5d896d776a8a0047c8a6b75",
+                  "schemaChars": 264,
+                  "schemaHash": "e40695f92ef72d913ee5eb13ef738a15d6f33ae3af3ec609975c45991ef99a78",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "gateway",
+                  "summaryChars": 566,
+                  "summaryHash": "1bef48b95fc67d7dc10e2f5f0cc3522951b067b762de6c3e77bc446de0f608b1",
+                  "schemaChars": 649,
+                  "schemaHash": "1a4f609a948c183832ee8a11c0cfcbe1afddf0732c30c67a593dfcdb630a5ee7",
+                  "propertiesCount": 14
+                },
+                {
+                  "name": "agents_list",
+                  "summaryChars": 63,
+                  "summaryHash": "a7afb8adbaf98833df68160db0677ec2a6bc30b1b96f3592392c9df59e310c65",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "get_goal",
+                  "summaryChars": 71,
+                  "summaryHash": "58dea7906d9e17e5f89a75fea24597ee068d8a56af824370dc27f8501374d6e3",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "create_goal",
+                  "summaryChars": 155,
+                  "summaryHash": "f01e3a63d673a410ba55213ce6bd3fa2b0d2279e8e780c18aa0cb5aa991b29b3",
+                  "schemaChars": 267,
+                  "schemaHash": "27ee794432736471bd76390e236cc7d7e98f8469a02656e7a27109041eea0f8c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "update_goal",
+                  "summaryChars": 212,
+                  "summaryHash": "285201690e5f2456b4cdcd252ff391709b84d69538df61bad694d3c0cfc19958",
+                  "schemaChars": 207,
+                  "schemaHash": "c37894492eedfad02f1e7fe1488900765bfe547f3b3f34cefbab4f7f57441c2c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "skill_workshop",
+                  "summaryChars": 171,
+                  "summaryHash": "577c1d2b8f56bf3e9dd5e00463bbce8b8bf4cf201da9b21b588dcaa3bc6ed8cf",
+                  "schemaChars": 2273,
+                  "schemaHash": "15481d6889a320a46728ee32304f0a2b510c0bcf77d445052c1ef2fa5dd5368b",
+                  "propertiesCount": 13
+                },
+                {
+                  "name": "sessions_list",
+                  "summaryChars": 135,
+                  "summaryHash": "c7e411ae02e3adff5504aaee48f02d262a8abb9152558a3172aae289e3b05faf",
+                  "schemaChars": 435,
+                  "schemaHash": "c29c6b82c36a2d95a88c8944f129929b2621ee2af6d17b2ab101d4d7e9633d89",
+                  "propertiesCount": 9
+                },
+                {
+                  "name": "sessions_history",
+                  "summaryChars": 117,
+                  "summaryHash": "f5d45b76f11a8ac63cc45d456fb6f675f0b1a2e191feb9671924cb5830058f03",
+                  "schemaChars": 162,
+                  "schemaHash": "ac33b8af2252262afe479236046f5a04bc018f1fcf24d1a8bf32743f0e867598",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "sessions_send",
+                  "summaryChars": 282,
+                  "summaryHash": "061e9ef3487676bb2a4fd4c0336bd973aaab5eea0725e7443c4cb17518cd1e78",
+                  "schemaChars": 275,
+                  "schemaHash": "f1fbaa412fe6b6aee102234c87c5aa140f39c9086f9bae6e1e9691309a602ffb",
+                  "propertiesCount": 5
+                },
+                {
+                  "name": "sessions_spawn",
+                  "summaryChars": 332,
+                  "summaryHash": "5ced554d0c09b9c71fa003139eca7871bbfdc0917a323fc17af2a9faec46c5b7",
+                  "schemaChars": 1151,
+                  "schemaHash": "9a91c7668463da8a66386260ce2ae97e7efe3bb93b9b6f03ac85102c354457e1",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "sessions_yield",
+                  "summaryChars": 79,
+                  "summaryHash": "f3782fc41c1522657e1d3494f486a2df998fed38a6b89dcf7f6934fb41424320",
+                  "schemaChars": 60,
+                  "schemaHash": "b1c4c753820bc3096d85ef7a266a14c9fbe12450536db58076b75bb61d14dbbb",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "subagents",
+                  "summaryChars": 132,
+                  "summaryHash": "1c2ffd38549c0444b118d43736fc4b875ea1aaabc446bbf8bc1fc4ee9180cca4",
+                  "schemaChars": 122,
+                  "schemaHash": "c4a241d2c3d46ba7985abfce4d3fcd63298ce81f89d49183c8f3d584c48d0c33",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "session_status",
+                  "summaryChars": 278,
+                  "summaryHash": "71177e543dc6235bad4b1a26761995681dcec27ab58dcb4f4f8a7fc9a7b2b5aa",
+                  "schemaChars": 89,
+                  "schemaHash": "d2995f3d69d126e98ac93eec3c2a9fe5556925bd7979a8e4b6b5a2bf62d329dd",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "web_search",
+                  "summaryChars": 65,
+                  "summaryHash": "b38e9b3c079beaa988d3c576303660b91a55c2e72f56351da04160529173273f",
+                  "schemaChars": 991,
+                  "schemaHash": "3879e368875d824b14e0e683f81408824e9a2a5850fa2f8514a68caebda54d18",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "web_fetch",
+                  "summaryChars": 93,
+                  "summaryHash": "8875afbb51bd63673e5e6836ca31eeda73914a464862665cd73b346e28d28fd5",
+                  "schemaChars": 317,
+                  "schemaHash": "d2d8ad58a1b84d849dd16142282aff6c5606f7b0e3d08405e1b740a6a79e6bcc",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "memory_search",
+                  "summaryChars": 605,
+                  "summaryHash": "0f918d28864d3682ae77731f149273997c84773592a466b18c7cd0121b599a05",
+                  "schemaChars": 250,
+                  "schemaHash": "088cd2a3d3a47b251429ff7c56844cdedd1c45c3af0fa8bfaf7aa795766976bf",
+                  "propertiesCount": 4
+                },
+                {
+                  "name": "memory_get",
+                  "summaryChars": 239,
+                  "summaryHash": "bff1141a3da31a345c550337417efc9ace4da2909004606c727c59ca1a294495",
+                  "schemaChars": 241,
+                  "schemaHash": "78f5d58460a82f9104deebad2f1873a8cde05d1ce7328b3ba4da6e994653e70a",
+                  "propertiesCount": 4
+                }
+              ]
+            },
+            "currentTurn": {
+              "promptChars": 3907,
+              "runtimeContextChars": 0
+            }
+          },
+          "trace_stats": {
+            "trace": "runs/control-old-pdf-opm-20261008T163759Z-90a05c03/trajectory.json",
+            "sha256": "2d6748966a84a2d47d926254512530f54c7551c242ed7166fffa9cbdf6df4a4f",
+            "session_id": "ae8061c4-9665-4c09-8e20-13ef10e457d1",
+            "agent": {
+              "name": "openclaw",
+              "version": "OpenClaw 2026.6.6 (8c802aa)",
+              "model_name": "deepseek/deepseek-v4-flash",
+              "extra": {
+                "parser": "openclaw-session-jsonl",
+                "provider": "deepseek",
+                "session_schema_version": 3,
+                "thinking_level": "high"
+              }
+            },
+            "steps": 17,
+            "tool_calls": 23,
+            "tools": {
+              "read": 9,
+              "exec": 11,
+              "write": 3
+            },
+            "missing_tool_results": [],
+            "command_failures": [
+              {
+                "step_id": 12,
+                "tool": "exec",
+                "exit_code": 2,
+                "result_excerpt": "+ /usr/bin/python3 /root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/filled/applicant_06.pdf /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/rendered/applicant_06\nSaved page 1 as /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/rendered/applicant_06/p"
+              }
+            ],
+            "process_kill_steps": [],
+            "recorded_metrics": {
+              "total_prompt_tokens": 599335,
+              "total_completion_tokens": 9451,
+              "total_cached_tokens": 567296,
+              "total_cost_usd": 0.023016028,
+              "total_steps": 17
+            }
+          },
+          "authored_helpers": {
+            "gen_field_values.py": {
+              "write_steps": [
+                9
+              ],
+              "exec_attempts": [
+                {
+                  "step": 10,
+                  "status": "completed",
+                  "exit_code": 0
+                }
+              ],
+              "lines": 88,
+              "bytes": 3809,
+              "source_sha256": "55f6683da7a6df7472e18d68b57d522d2a39295e38f597a853951b882c76953e"
+            },
+            "run_batch.py": {
+              "write_steps": [
+                9
+              ],
+              "exec_attempts": [
+                {
+                  "step": 12,
+                  "status": "completed",
+                  "exit_code": 2
+                }
+              ],
+              "lines": 50,
+              "bytes": 1607,
+              "source_sha256": "0279a047f9bf2fffd15a5086a0a3e510885596713603bb3af4bee4815763bbdf"
+            }
+          },
+          "final_helpers": [
+            {
+              "path": "gen_field_values.py",
+              "sha256": "55f6683da7a6df7472e18d68b57d522d2a39295e38f597a853951b882c76953e",
+              "lines": 88,
+              "functions": [
+                "radio",
+                "build",
+                "main"
+              ],
+              "ast_sha256": "465c315125479a124023766af5b9bbfdb096845688ebc3bf6d3896c41057bf4b"
+            },
+            {
+              "path": "run_batch.py",
+              "sha256": "0279a047f9bf2fffd15a5086a0a3e510885596713603bb3af4bee4815763bbdf",
+              "lines": 50,
+              "functions": [
+                "run",
+                "main"
+              ],
+              "ast_sha256": "9a0c281e3d32871e81a5383c88ed6af775ebd31b50f2a24a4c7ba69718371cba"
+            }
+          ],
+          "stages": {
+            "check_fields": [
+              6
+            ],
+            "extract_schema": [
+              7
+            ],
+            "render_template": [
+              10
+            ],
+            "execute_batch": [
+              12
+            ],
+            "verify": [
+              15
+            ]
+          },
+          "context_audit": {
+            "schema_version": "office-agent-context-audit-v1",
+            "matched": true,
+            "profile": "legacy-host-v1",
+            "workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "expected_workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "skills": {
+              "promptChars": 5297,
+              "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "pdf",
+                  "blockChars": 618
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                }
+              ]
+            },
+            "expected_skills": {
+              "promptChars": 5297,
+              "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "pdf",
+                  "blockChars": 618
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                }
+              ]
+            },
+            "tool_schema_chars": 27477,
+            "expected_tool_schema_chars": 27477,
+            "system_prompt": {
+              "chars": 29638,
+              "hash": "7ccac98a77186598d523caa1f076bd2776549129a664c80de748a15d70cd3da0",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 17911
+            },
+            "background_hashes_before": {
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+            },
+            "background_hashes_after": {
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+            },
+            "background_matches_profile": true,
+            "background_unchanged": true,
+            "scope": "Historical injected-file lengths, exact Skill registry text hash and tool-schema length checked; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen."
+          },
+          "verification": {
+            "accepted": false,
+            "audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "failed",
+              "legacy_verifier": "success",
+              "independent_failures": [
+                "mapping:applicant_01",
+                "field_values:applicant_01",
+                "mapping:applicant_02",
+                "field_values:applicant_02",
+                "mapping:applicant_03",
+                "field_values:applicant_03",
+                "mapping:applicant_04",
+                "field_values:applicant_04",
+                "mapping:applicant_05",
+                "field_values:applicant_05",
+                "mapping:applicant_06",
+                "field_values:applicant_06",
+                "mapping:applicant_07",
+                "field_values:applicant_07",
+                "mapping:applicant_08",
+                "field_values:applicant_08",
+                "mapping:applicant_09",
+                "field_values:applicant_09",
+                "mapping:applicant_10",
+                "field_values:applicant_10",
+                "summary:input_form"
+              ],
+              "legacy_failures": [],
+              "failed_attempt_retained": true
+            }
+          },
+          "checks": {
+            "actual_prompt_matches_recorded": true
+          },
+          "shell_errors_masked_by_zero_exit": [],
+          "nonzero_exit_details": [
+            {
+              "step": 12,
+              "exit_code": 2,
+              "command": "cd /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01 && python3 run_batch.py 2>&1 | tail -30; echo \"exit=${PIPESTATUS[0]}\"",
+              "result_tail": "nclaw/workspace/tool-modeling/SUB-MEM-PDF-01/input/of306_aug2023.pdf /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/field_values/applicant_10.json /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/filled/applicant_10.pdf\n+ /usr/bin/python3 /root/.openclaw/skills/pdf/scripts/convert_pdf_to_images.py /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/filled/applicant_10.pdf /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/rendered/applicant_10\nSaved page 1 as /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/rendered/applicant_10/page_1.png (size: (772, 1000))\nSaved page 2 as /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/rendered/applicant_10/page_2.png (size: (772, 1000))\nSaved page 3 as /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01/output/rendered/applicant_10/page_3.png (size: (772, 1000))\nConverted 3 pages to PNG images\nBatch complete.\n/usr/bin/sh: 1: Bad substitution\n\n(Command exited with code 2)"
+            }
+          ],
+          "framework_reference_steps": []
+        },
+        "new": {
+          "run_id": "control-new-pdf-opm-20261008T163759Z-90a05c03",
+          "status": "success",
+          "info": {
+            "schema_version": "office-run-v1",
+            "run_id": "control-new-pdf-opm-20261008T163759Z-90a05c03",
+            "kind": "pdf",
+            "dataset_id": "opm",
+            "status": "success",
+            "execution": "real-openclaw-agent",
+            "prompt_template": "pdf.txt",
+            "prompt_template_sha256": "46fbb271f901cd31db1e60386d31a5d7127222a61dd9a8fbfedf61daf1e2496e",
+            "manifest_sha256": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+            "expected_sha256": "9c2771bf1108731499ee7d6d3585487ae798416e91ce16ca643af95118824dc1",
+            "prompt_sha256": "46f24800aa54544e0ac1c100ad63ef00156f7e51ef4571cfe014fefe105eb000",
+            "started_at": "2026-10-08T16:53:10.860539+00:00",
+            "requested_model": null,
+            "tool_versions": {
+              "openclaw": "OpenClaw 2026.6.6 (8c802aa)",
+              "node": "v24.14.0",
+              "python": "Python 3.12.3",
+              "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+              "poppler": "pdftoppm version 24.02.0"
+            },
+            "input_hashes": {
+              "input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+              "input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+              "input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+              "input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c"
+            },
+            "prompt_workspace": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+            "agent_context": {
+              "profile": "legacy-host-v1",
+              "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+            },
+            "session_key": "agent:main:SUB-MEM-PDF-01",
+            "agent_seconds": 69.462,
+            "agent_exit_code": 0,
+            "agent_context_matched": true,
+            "trace": {
+              "session_id": "ce47d6f6-ccd4-4701-96f8-f1b9a87982b4",
+              "steps": 18,
+              "tool_calls": 25
+            },
+            "agent_business_status": "success",
+            "verifier_called_in_trace": true,
+            "verification_seconds": 1.507,
+            "business_status": "success",
+            "elapsed_seconds": 73.135,
+            "finished_at": "2026-10-08T16:54:23.995956+00:00",
+            "artifacts": {
+              "container.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "source_snapshot.json": "bd87b8dc3e9b45881ced4d5aa7663d95f6a3077607cb0f6f5c408b44340b0eb2",
+              "task.prompt": "46f24800aa54544e0ac1c100ad63ef00156f7e51ef4571cfe014fefe105eb000",
+              "actual_task.prompt": "46f24800aa54544e0ac1c100ad63ef00156f7e51ef4571cfe014fefe105eb000",
+              "config_validate.stdout.log": "275572d12706cfa6972ae580e598a72b66f7ed80d7a126837bb7c383391ccfef",
+              "session_capture.json": "6756eefdd8da54bc9bd2811fd8a32bb27e918c2e39eff15659c0a9a067e33d07",
+              "tool_events.json": "2b19bfdc3a919468145fc00fe01050b903f1befefb0583a106be683a2ee2320c",
+              "openclaw_session.jsonl": "59cd11dde32bf675052602476f187e5500ec52f91388d2d72826063e7d51fb91",
+              "config_validate.stderr.log": "b4215a5f83318e9ae09d209625bec030214929505228608930bee0c881dc1e0e",
+              "container.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "trajectory.json": "f8690626b56ad559a2945ae481c65a9404ce899d9ca1f0c1388f7eb3f39da3f8",
+              "openclaw_agent.stdout.log": "5e1d1e4e4c65a2cb0a4e192c2c17b1895654609f162dda3f427985c2f212ddce",
+              "pre_agent_state.json": "7081d7912440092201bb33bc7b6507cc9c0b56c4d430f255104ca5d946707896",
+              "openclaw_agent.stderr.log": "b4215a5f83318e9ae09d209625bec030214929505228608930bee0c881dc1e0e",
+              "agent_context_audit.json": "c7ef7664a8addff27221e2a921d6239cb23f0572ae666b10149447b755612758",
+              "independent_verification.json": "ffeea35b6a5ae104e48124a1e8b9461af2de85ae599d03650c9d7a9df8dfc5d8",
+              "case/task.prompt": "94ab4a63c17e0994ccb780b46f51fec7af041ddaf2477da095670f22ef0b9a77",
+              "workspace/run_batch.sh": "833a68de80ae808271bf96eae742060b13f132e9e4dbdf12aa97bbd21dbddeb1",
+              "workspace/build_field_values.py": "1f06127749ce46ae1343702f24deffd2c05cf027aad52c38eeef0e3fcd092607",
+              "case/input/dataset_manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+              "case/input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+              "case/input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+              "case/input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+              "case/input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+              "workspace/output/business_verification.json": "bff7afe1d0679c3a305a70b2a1dc41f142d0800f86ca3499232d6a85acd66574",
+              "workspace/output/form_field_info.json": "ac8e2cb735563a53359c62a961f2361879625d751a536dc6980cd895696b8821",
+              "workspace/output/batch_summary.json": "764eee70d5fbcc66a3bee8777cd2b94614d56bcd0e422ad6e59eec7b0b910b33",
+              "workspace/output/check_fillable_fields.log": "469c7ba0dd5d021c18d2bc6648b4f1a5fe4842fcd4f77e85058a3b3969eeecb1",
+              "workspace/input/dataset_manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+              "workspace/input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+              "workspace/input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+              "workspace/input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+              "workspace/input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+              "workspace/output/filled/applicant_03.pdf": "8c31530819d1e5e12fbe5d0cd8b53bb1032d5a529bc081c585e082d84456c747",
+              "workspace/output/filled/applicant_07.pdf": "38f8fd79b6aabb58f39abe9ff4abdef187442d028330d54a8b5483667c87b055",
+              "workspace/output/filled/applicant_01.pdf": "85f1b17bec54d846a84a0573f6d105205e372db20fdb72924819e664fa051756",
+              "workspace/output/filled/applicant_08.pdf": "736f6cb14db70f6cf80a98e920f7347b247f135cd7b80abfecab9b994d13be08",
+              "workspace/output/filled/applicant_02.pdf": "3e898de9c0f2a153248d34717c587e5d6ed8058ccc36d6c3a2cd7dd9f2da1ba5",
+              "workspace/output/filled/applicant_06.pdf": "1d0b8ecc4a183d797998e6e982b8d902f0ec0e85a46b2df3964146c0720fc23a",
+              "workspace/output/filled/applicant_09.pdf": "44543668338a25cd12547b957f38f8c0a03166c63c03c7fe3f2b2f5892c4c67b",
+              "workspace/output/filled/applicant_04.pdf": "68280ced1e025f99a5ed5d9437586f48ac8c115c9e84e78b3dfbf12add9f1e48",
+              "workspace/output/filled/applicant_05.pdf": "4a3364f017c8bdc802210d038b7bc52794fc6d7bbe63db1c60dee6e54e370337",
+              "workspace/output/filled/applicant_10.pdf": "f994a500fbda33a404f33707b1f94ec968632bdb02f525f317bacaa66bff43f1",
+              "workspace/output/field_values/applicant_01.json": "ad7ad7fc2d03f830d2cd32b3a317a012977515e417db81fda78561005d4da1a6",
+              "workspace/output/field_values/applicant_03.json": "7f36e859695e7adf750386aaaa63f06d67c646f258a7c878e4fb2de8bf3c5223",
+              "workspace/output/field_values/applicant_02.json": "1381c7b8cbd5a0aeb93dc11203b178766ccb16aa7d4a5a2de47f837691fdc48e",
+              "workspace/output/field_values/applicant_05.json": "d581d98d2d41f89c4305862c53941b133052d39b99d076324c389258f0cd280e",
+              "workspace/output/field_values/applicant_09.json": "6e343216cf1ff923497dbafa4edca941038f4299ada5b4639d5f41524711e0f7",
+              "workspace/output/field_values/applicant_10.json": "50e63fde6f5b68d8d7fe32802a96061a88084db5ddc8d34779a7f26dd0dfbd11",
+              "workspace/output/field_values/applicant_04.json": "cdec563fa4c293c10d91112385481223613448fe33f846b1987e8a540ce3d2db",
+              "workspace/output/field_values/applicant_08.json": "23228573fef8f9b4f265fb352cf2727e22a1b1cb9e1c42becc5a21aac17b1af1",
+              "workspace/output/field_values/applicant_07.json": "d5e4700a49853829deaafe640f720841c52ff807e31067082db4f9acc61691a7",
+              "workspace/output/field_values/applicant_06.json": "255e07d8843a1fc84b9dd9f064a2e52fbd2f8979e201ff3ed8cd2aac6d7396d0",
+              "workspace/output/rendered/applicant_10/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_10/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_10/page_2.png": "fbb7d7351a434eb3d808c174855372ae0bb00bfe5041fbf8c599f34ddd4bcd9c",
+              "workspace/output/rendered/applicant_03/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_03/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_03/page_2.png": "1b1675af4978beb564ad35555064f46968f748d405114f01ede670b1d49c1de8",
+              "workspace/output/rendered/applicant_08/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_08/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_08/page_2.png": "2d12b50e75c337e8a9a56ea1e42c0e51c190f5c71eeb9125dffca8f82b02f11a",
+              "workspace/output/rendered/applicant_06/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_06/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_06/page_2.png": "d2d38996b066ac297869abef45d4a750ea5ebd5a81d930e4129162a080d1cef4",
+              "workspace/output/rendered/applicant_04/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_04/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_04/page_2.png": "a59352166152ae958eeb724678587315643a138bd7f37518130d950a006f706a",
+              "workspace/output/rendered/applicant_02/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_02/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_02/page_2.png": "bc151bb656b6e9adde05df231639aae97c7535ea3ed6ee29c6d83a158e6e7ff7",
+              "workspace/output/rendered/template/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/template/page_3.png": "9ad2d01d8ba81fd1f0851b75c4a045511dd30b8e5c9270b4882f6b539408aaa0",
+              "workspace/output/rendered/template/page_2.png": "cac3bd9ff3da266eefbc8e8a7f6f04452fe92e5eb793326e7cec4cc81512ac84",
+              "workspace/output/rendered/applicant_05/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_05/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_05/page_2.png": "c23a8f5f75e63ebeae3b1bbb4a8b598429a9126495df38cd0cde11781399b4e5",
+              "workspace/output/rendered/applicant_09/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_09/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_09/page_2.png": "af83270941ce231c81abd999835127d7fe65279c96c12ddfa4f5af9274195e13",
+              "workspace/output/rendered/applicant_07/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_07/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_07/page_2.png": "91aa6797718fae6193e0fa8a737af41969afaf1621e5be8ffef8d601b5ba1b8c",
+              "workspace/output/rendered/applicant_01/page_1.png": "69a137064e2030b434c093d67881faa9e44e347588c7bd1526ea25914a5d3add",
+              "workspace/output/rendered/applicant_01/page_3.png": "ad954503e916e2b4819b289c466b28656d6c878ed542900bef0690f8f8fbca2a",
+              "workspace/output/rendered/applicant_01/page_2.png": "dbd1e67a62b0653fff564fbd8a3b917eb75c4e81d0f6ee42092e9adfcb8e694b"
+            },
+            "internal_run_id": "control",
+            "control_variant": "new",
+            "runtime_image": "office-trace-bench:runtime",
+            "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+            "source_snapshot_path": "/home/lcq/office-trace-bench/.snapshots/20261008T163759Z-90a05c03/pdf",
+            "source_snapshot_unchanged": true,
+            "source_snapshot_sha256": "bd87b8dc3e9b45881ced4d5aa7663d95f6a3077607cb0f6f5c408b44340b0eb2",
+            "container_exit_code": 0,
+            "control_experiment_id": "20261008T163759Z-90a05c03",
+            "baseline_accepted": true,
+            "baseline_acceptance_audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "success",
+              "legacy_verifier": "success",
+              "independent_failures": [],
+              "legacy_failures": [],
+              "failed_attempt_retained": false
+            }
+          },
+          "pre_agent": {
+            "actual_prompt_sha256": "46f24800aa54544e0ac1c100ad63ef00156f7e51ef4571cfe014fefe105eb000",
+            "background_hashes": {
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e"
+            },
+            "input_hashes": {
+              "input/dataset_manifest.json": "0b5ca10ef0b866b21bfde5774e3c9da55f594276618f2b0e519c2b7e8d4679f8",
+              "input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+              "input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c",
+              "input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+              "input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c"
+            },
+            "private_config_hashes": {
+              "openclaw.json": "11f3ae8df3353be85d3aeb12050dd5bff75e6fdcc5fda8235017ff2618228c47",
+              ".env": "a6e2c8434cee614f80ec19654ee661e7f04716486337ff666d6c9583f9b9924d",
+              "agents/main/agent/models.json": "f6a60ffe718b445a923e5d870ff3b23ced2a8e42ef7322a0494c48c788e66e10"
+            },
+            "config_semantic_sha256": "88b2dba3f2d4c30ab350331ce415769b6fd07333a56f586cdcaf256b7e5aa0f1",
+            "process_cwd": "/runs/control/workspace",
+            "logical_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+            "real_case": "/runs/control/workspace",
+            "case_is_symlink": true,
+            "environment": {
+              "PATH": "/workspace/control-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+              "SHELL": null,
+              "LANG": null,
+              "LC_ALL": null,
+              "TZ": null
+            }
+          },
+          "system_report": {
+            "source": "run",
+            "generatedAt": 1791478399516,
+            "sessionId": "ce47d6f6-ccd4-4701-96f8-f1b9a87982b4",
+            "sessionKey": "agent:main:SUB-MEM-PDF-01",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "workspaceDir": "/root/.openclaw/workspace",
+            "bootstrapMaxChars": 20000,
+            "bootstrapTotalMaxChars": 60000,
+            "bootstrapTruncation": {
+              "warningMode": "always",
+              "warningShown": false,
+              "truncatedFiles": 0,
+              "nearLimitFiles": 0,
+              "totalNearLimit": false
+            },
+            "sandbox": {
+              "mode": "off",
+              "sandboxed": false
+            },
+            "systemPrompt": {
+              "chars": 29638,
+              "hash": "7ccac98a77186598d523caa1f076bd2776549129a664c80de748a15d70cd3da0",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 17911
+            },
+            "injectedWorkspaceFiles": [
+              {
+                "name": "AGENTS.md",
+                "path": "/root/.openclaw/workspace/AGENTS.md",
+                "missing": false,
+                "rawChars": 7195,
+                "injectedChars": 7195,
+                "truncated": false
+              },
+              {
+                "name": "SOUL.md",
+                "path": "/root/.openclaw/workspace/SOUL.md",
+                "missing": false,
+                "rawChars": 1509,
+                "injectedChars": 1509,
+                "truncated": false
+              },
+              {
+                "name": "TOOLS.md",
+                "path": "/root/.openclaw/workspace/TOOLS.md",
+                "missing": false,
+                "rawChars": 866,
+                "injectedChars": 866,
+                "truncated": false
+              },
+              {
+                "name": "IDENTITY.md",
+                "path": "/root/.openclaw/workspace/IDENTITY.md",
+                "missing": false,
+                "rawChars": 1275,
+                "injectedChars": 1275,
+                "truncated": false
+              },
+              {
+                "name": "USER.md",
+                "path": "/root/.openclaw/workspace/USER.md",
+                "missing": false,
+                "rawChars": 534,
+                "injectedChars": 534,
+                "truncated": false
+              },
+              {
+                "name": "HEARTBEAT.md",
+                "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+                "missing": false,
+                "rawChars": 243,
+                "injectedChars": 243,
+                "truncated": false
+              }
+            ],
+            "skills": {
+              "promptChars": 5297,
+              "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "pdf",
+                  "blockChars": 618
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                }
+              ]
+            },
+            "tools": {
+              "listChars": 0,
+              "schemaChars": 27477,
+              "entries": [
+                {
+                  "name": "read",
+                  "summaryChars": 298,
+                  "summaryHash": "f8a1d7cf1ecfe02b1b5865c93387e6a5891e5079117b4fe18614b6f912521727",
+                  "schemaChars": 304,
+                  "schemaHash": "134f19bcabe3e29d63c5cebb38f1d2556759fd08adad6bc90a4b4d3cd1fb8441",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "edit",
+                  "summaryChars": 326,
+                  "summaryHash": "c498a85576e187d069e8e8ea4f70f81bddd57829600d385ef61c4359fd634c9e",
+                  "schemaChars": 834,
+                  "schemaHash": "457e8bb9f800b21be76c4fd8c0e3078bf07ee9bf93ac82f39944c171bd8f6d84",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "write",
+                  "summaryChars": 127,
+                  "summaryHash": "cdb1c46027b22d1f1b923b47bfe297821d9fe589a9f9d92994961948060a4d89",
+                  "schemaChars": 225,
+                  "schemaHash": "e98a2484f667cf7c22d76ca103bf2022bf9113dc63fe38b899e71c328cb1e833",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "apply_patch",
+                  "summaryChars": 132,
+                  "summaryHash": "432bf38688a4f011d2b765a441ac07e1fdfa9faf2051679adee04abcd9332d93",
+                  "schemaChars": 153,
+                  "schemaHash": "05521268363ff4f191472c90d69ef08a503ba9acf1d2febc50b3ee68db32ab65",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "exec",
+                  "summaryChars": 539,
+                  "summaryHash": "4825198988fbfa8ebf5c2a8fbe3946da0be639b1e3b737ceaa4364195bba3f04",
+                  "schemaChars": 1283,
+                  "schemaHash": "2608ea36cf51376859b7204cda1bf1a2507134eb542097b9e8dbc8af617f216b",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "process",
+                  "summaryChars": 456,
+                  "summaryHash": "55297e65d460e0e1e06e7fad4cedb75ffda8fac9fa8b10aa06d6cead3c5a76ea",
+                  "schemaChars": 1074,
+                  "schemaHash": "a2d30a25569f409d7e8539844c89a088044535388b24031d014577b96ed27c5c",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "nodes",
+                  "summaryChars": 143,
+                  "summaryHash": "ea1b0a5498ca3c788b26d164245652e1aaa989806e0123715793ab25f9578121",
+                  "schemaChars": 1764,
+                  "schemaHash": "339c9b744f121ff6a5b2a8a2a7e19286c4114d8dc165a172d3708e993d8b0e55",
+                  "propertiesCount": 32
+                },
+                {
+                  "name": "cron",
+                  "summaryChars": 3721,
+                  "summaryHash": "8eb177e0cdf7d5bc0144f544bf0072e38b6bab267e0699a2859b4a8db97af0b3",
+                  "schemaChars": 8311,
+                  "schemaHash": "60c519602d2a834cb2d5e1f7e3778a125ae07c7ab757a844cbdec72104e5b94b",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "message",
+                  "summaryChars": 71,
+                  "summaryHash": "e43fe566f2d93be0d540da64d2a80a6e1a868757fe2fb49fa38e69fccf9fd4b0",
+                  "schemaChars": 5710,
+                  "schemaHash": "b11a54a8bc235a40b4206dfec1e04170e0cbc7af342f7921676a8ced3a4cbb82",
+                  "propertiesCount": 106
+                },
+                {
+                  "name": "tts",
+                  "summaryChars": 217,
+                  "summaryHash": "652c1970c199d82b61061a40be2adddfc7e5634df5d896d776a8a0047c8a6b75",
+                  "schemaChars": 264,
+                  "schemaHash": "e40695f92ef72d913ee5eb13ef738a15d6f33ae3af3ec609975c45991ef99a78",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "gateway",
+                  "summaryChars": 566,
+                  "summaryHash": "1bef48b95fc67d7dc10e2f5f0cc3522951b067b762de6c3e77bc446de0f608b1",
+                  "schemaChars": 649,
+                  "schemaHash": "1a4f609a948c183832ee8a11c0cfcbe1afddf0732c30c67a593dfcdb630a5ee7",
+                  "propertiesCount": 14
+                },
+                {
+                  "name": "agents_list",
+                  "summaryChars": 63,
+                  "summaryHash": "a7afb8adbaf98833df68160db0677ec2a6bc30b1b96f3592392c9df59e310c65",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "get_goal",
+                  "summaryChars": 71,
+                  "summaryHash": "58dea7906d9e17e5f89a75fea24597ee068d8a56af824370dc27f8501374d6e3",
+                  "schemaChars": 33,
+                  "schemaHash": "8243f0af367f188a376f2c17b5eabe872a2f7a979813e0d4e2be6d594c2aa259",
+                  "propertiesCount": 0
+                },
+                {
+                  "name": "create_goal",
+                  "summaryChars": 155,
+                  "summaryHash": "f01e3a63d673a410ba55213ce6bd3fa2b0d2279e8e780c18aa0cb5aa991b29b3",
+                  "schemaChars": 267,
+                  "schemaHash": "27ee794432736471bd76390e236cc7d7e98f8469a02656e7a27109041eea0f8c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "update_goal",
+                  "summaryChars": 212,
+                  "summaryHash": "285201690e5f2456b4cdcd252ff391709b84d69538df61bad694d3c0cfc19958",
+                  "schemaChars": 207,
+                  "schemaHash": "c37894492eedfad02f1e7fe1488900765bfe547f3b3f34cefbab4f7f57441c2c",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "skill_workshop",
+                  "summaryChars": 171,
+                  "summaryHash": "577c1d2b8f56bf3e9dd5e00463bbce8b8bf4cf201da9b21b588dcaa3bc6ed8cf",
+                  "schemaChars": 2273,
+                  "schemaHash": "15481d6889a320a46728ee32304f0a2b510c0bcf77d445052c1ef2fa5dd5368b",
+                  "propertiesCount": 13
+                },
+                {
+                  "name": "sessions_list",
+                  "summaryChars": 135,
+                  "summaryHash": "c7e411ae02e3adff5504aaee48f02d262a8abb9152558a3172aae289e3b05faf",
+                  "schemaChars": 435,
+                  "schemaHash": "c29c6b82c36a2d95a88c8944f129929b2621ee2af6d17b2ab101d4d7e9633d89",
+                  "propertiesCount": 9
+                },
+                {
+                  "name": "sessions_history",
+                  "summaryChars": 117,
+                  "summaryHash": "f5d45b76f11a8ac63cc45d456fb6f675f0b1a2e191feb9671924cb5830058f03",
+                  "schemaChars": 162,
+                  "schemaHash": "ac33b8af2252262afe479236046f5a04bc018f1fcf24d1a8bf32743f0e867598",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "sessions_send",
+                  "summaryChars": 282,
+                  "summaryHash": "061e9ef3487676bb2a4fd4c0336bd973aaab5eea0725e7443c4cb17518cd1e78",
+                  "schemaChars": 275,
+                  "schemaHash": "f1fbaa412fe6b6aee102234c87c5aa140f39c9086f9bae6e1e9691309a602ffb",
+                  "propertiesCount": 5
+                },
+                {
+                  "name": "sessions_spawn",
+                  "summaryChars": 332,
+                  "summaryHash": "5ced554d0c09b9c71fa003139eca7871bbfdc0917a323fc17af2a9faec46c5b7",
+                  "schemaChars": 1151,
+                  "schemaHash": "9a91c7668463da8a66386260ce2ae97e7efe3bb93b9b6f03ac85102c354457e1",
+                  "propertiesCount": 15
+                },
+                {
+                  "name": "sessions_yield",
+                  "summaryChars": 79,
+                  "summaryHash": "f3782fc41c1522657e1d3494f486a2df998fed38a6b89dcf7f6934fb41424320",
+                  "schemaChars": 60,
+                  "schemaHash": "b1c4c753820bc3096d85ef7a266a14c9fbe12450536db58076b75bb61d14dbbb",
+                  "propertiesCount": 1
+                },
+                {
+                  "name": "subagents",
+                  "summaryChars": 132,
+                  "summaryHash": "1c2ffd38549c0444b118d43736fc4b875ea1aaabc446bbf8bc1fc4ee9180cca4",
+                  "schemaChars": 122,
+                  "schemaHash": "c4a241d2c3d46ba7985abfce4d3fcd63298ce81f89d49183c8f3d584c48d0c33",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "session_status",
+                  "summaryChars": 278,
+                  "summaryHash": "71177e543dc6235bad4b1a26761995681dcec27ab58dcb4f4f8a7fc9a7b2b5aa",
+                  "schemaChars": 89,
+                  "schemaHash": "d2995f3d69d126e98ac93eec3c2a9fe5556925bd7979a8e4b6b5a2bf62d329dd",
+                  "propertiesCount": 2
+                },
+                {
+                  "name": "web_search",
+                  "summaryChars": 65,
+                  "summaryHash": "b38e9b3c079beaa988d3c576303660b91a55c2e72f56351da04160529173273f",
+                  "schemaChars": 991,
+                  "schemaHash": "3879e368875d824b14e0e683f81408824e9a2a5850fa2f8514a68caebda54d18",
+                  "propertiesCount": 12
+                },
+                {
+                  "name": "web_fetch",
+                  "summaryChars": 93,
+                  "summaryHash": "8875afbb51bd63673e5e6836ca31eeda73914a464862665cd73b346e28d28fd5",
+                  "schemaChars": 317,
+                  "schemaHash": "d2d8ad58a1b84d849dd16142282aff6c5606f7b0e3d08405e1b740a6a79e6bcc",
+                  "propertiesCount": 3
+                },
+                {
+                  "name": "memory_search",
+                  "summaryChars": 605,
+                  "summaryHash": "0f918d28864d3682ae77731f149273997c84773592a466b18c7cd0121b599a05",
+                  "schemaChars": 250,
+                  "schemaHash": "088cd2a3d3a47b251429ff7c56844cdedd1c45c3af0fa8bfaf7aa795766976bf",
+                  "propertiesCount": 4
+                },
+                {
+                  "name": "memory_get",
+                  "summaryChars": 239,
+                  "summaryHash": "bff1141a3da31a345c550337417efc9ace4da2909004606c727c59ca1a294495",
+                  "schemaChars": 241,
+                  "schemaHash": "78f5d58460a82f9104deebad2f1873a8cde05d1ce7328b3ba4da6e994653e70a",
+                  "propertiesCount": 4
+                }
+              ]
+            },
+            "currentTurn": {
+              "promptChars": 3907,
+              "runtimeContextChars": 0
+            }
+          },
+          "trace_stats": {
+            "trace": "runs/control-new-pdf-opm-20261008T163759Z-90a05c03/trajectory.json",
+            "sha256": "f8690626b56ad559a2945ae481c65a9404ce899d9ca1f0c1388f7eb3f39da3f8",
+            "session_id": "ce47d6f6-ccd4-4701-96f8-f1b9a87982b4",
+            "agent": {
+              "name": "openclaw",
+              "version": "OpenClaw 2026.6.6 (8c802aa)",
+              "model_name": "deepseek/deepseek-v4-flash",
+              "extra": {
+                "parser": "openclaw-session-jsonl",
+                "provider": "deepseek",
+                "session_schema_version": 3,
+                "thinking_level": "high"
+              }
+            },
+            "steps": 18,
+            "tool_calls": 25,
+            "tools": {
+              "read": 10,
+              "exec": 12,
+              "write": 3
+            },
+            "missing_tool_results": [],
+            "command_failures": [],
+            "process_kill_steps": [],
+            "recorded_metrics": {
+              "total_prompt_tokens": 673811,
+              "total_completion_tokens": 10436,
+              "total_cached_tokens": 647168,
+              "total_cost_usd": 0.024772804,
+              "total_steps": 18
+            }
+          },
+          "authored_helpers": {
+            "build_field_values.py": {
+              "write_steps": [
+                10
+              ],
+              "exec_attempts": [
+                {
+                  "step": 12,
+                  "status": "completed",
+                  "exit_code": 0
+                }
+              ],
+              "lines": 116,
+              "bytes": 4355,
+              "source_sha256": "1f06127749ce46ae1343702f24deffd2c05cf027aad52c38eeef0e3fcd092607"
+            },
+            "run_batch.sh": {
+              "write_steps": [
+                11
+              ],
+              "exec_attempts": [
+                {
+                  "step": 13,
+                  "status": "completed",
+                  "exit_code": 0
+                }
+              ],
+              "lines": 25,
+              "bytes": 717,
+              "source_sha256": "833a68de80ae808271bf96eae742060b13f132e9e4dbdf12aa97bbd21dbddeb1"
+            }
+          },
+          "final_helpers": [
+            {
+              "path": "build_field_values.py",
+              "sha256": "1f06127749ce46ae1343702f24deffd2c05cf027aad52c38eeef0e3fcd092607",
+              "lines": 116,
+              "functions": [
+                "entry"
+              ],
+              "ast_sha256": "ae1f18d9f1e74a6c7cc0ceb4469b5146b63e360b31bfbcff8850aa32888567d6"
+            },
+            {
+              "path": "run_batch.sh",
+              "sha256": "833a68de80ae808271bf96eae742060b13f132e9e4dbdf12aa97bbd21dbddeb1",
+              "lines": 25,
+              "functions": []
+            }
+          ],
+          "stages": {
+            "check_fields": [
+              6
+            ],
+            "extract_schema": [
+              7
+            ],
+            "render_template": [
+              9
+            ],
+            "execute_batch": [
+              13
+            ],
+            "verify": [
+              16
+            ]
+          },
+          "context_audit": {
+            "schema_version": "office-agent-context-audit-v1",
+            "matched": true,
+            "profile": "legacy-host-v1",
+            "workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "expected_workspace_files": {
+              "AGENTS.md": 7195,
+              "SOUL.md": 1509,
+              "TOOLS.md": 866,
+              "IDENTITY.md": 1275,
+              "USER.md": 534,
+              "HEARTBEAT.md": 243
+            },
+            "skills": {
+              "promptChars": 5297,
+              "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "pdf",
+                  "blockChars": 618
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                }
+              ]
+            },
+            "expected_skills": {
+              "promptChars": 5297,
+              "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+              "entries": [
+                {
+                  "name": "agent-browser",
+                  "blockChars": 316
+                },
+                {
+                  "name": "canvas",
+                  "blockChars": 314
+                },
+                {
+                  "name": "diagram-maker",
+                  "blockChars": 317
+                },
+                {
+                  "name": "healthcheck",
+                  "blockChars": 329
+                },
+                {
+                  "name": "meme-maker",
+                  "blockChars": 302
+                },
+                {
+                  "name": "node-connect",
+                  "blockChars": 332
+                },
+                {
+                  "name": "node-inspect-debugger",
+                  "blockChars": 328
+                },
+                {
+                  "name": "pdf",
+                  "blockChars": 618
+                },
+                {
+                  "name": "python-debugpy",
+                  "blockChars": 316
+                },
+                {
+                  "name": "skill-creator",
+                  "blockChars": 310
+                },
+                {
+                  "name": "spike",
+                  "blockChars": 302
+                },
+                {
+                  "name": "taskflow",
+                  "blockChars": 332
+                },
+                {
+                  "name": "taskflow-inbox-triage",
+                  "blockChars": 342
+                },
+                {
+                  "name": "weather",
+                  "blockChars": 340
+                }
+              ]
+            },
+            "tool_schema_chars": 27477,
+            "expected_tool_schema_chars": 27477,
+            "system_prompt": {
+              "chars": 29638,
+              "hash": "7ccac98a77186598d523caa1f076bd2776549129a664c80de748a15d70cd3da0",
+              "projectContextChars": 11727,
+              "nonProjectContextChars": 17911
+            },
+            "background_hashes_before": {
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+            },
+            "background_hashes_after": {
+              "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+              "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+              "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+              "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+              "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+              "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+            },
+            "background_matches_profile": true,
+            "background_unchanged": true,
+            "scope": "Historical injected-file lengths, exact Skill registry text hash and tool-schema length checked; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen."
+          },
+          "verification": {
+            "accepted": true,
+            "audit": {
+              "source_snapshot_unchanged": true,
+              "context_accepted": true,
+              "historical_artifact_reference_steps": [],
+              "verifier_called_in_trace": true,
+              "agent_verifier": "success",
+              "independent_verifier": "success",
+              "legacy_verifier": "success",
+              "independent_failures": [],
+              "legacy_failures": [],
+              "failed_attempt_retained": false
+            }
+          },
+          "checks": {
+            "actual_prompt_matches_recorded": true
+          },
+          "shell_errors_masked_by_zero_exit": [],
+          "nonzero_exit_details": [],
+          "framework_reference_steps": []
+        }
+      },
+      "controls_passed": true,
+      "results_passed": false,
+      "outputs": {
+        "batch_summaries": {
+          "old": {
+            "input_form": "input/of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true,
+            "check_script_invocations": 1,
+            "extract_script_invocations": 1,
+            "template_rendered_pages": 3,
+            "applicant_rendered_pages": 30
+          },
+          "new": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true,
+            "rendered_template_pages": 3,
+            "rendered_applicant_pages": 30,
+            "notes": "Blank template rendered 3 pages; ten applicants each filled once (10 fill invocations) and rendered once (10 render invocations), for 11 render invocations total. Social Security Number and all signature/date/life-insurance fields omitted and left blank. All names and phone numbers are synthetic."
+          }
+        },
+        "same_field_values_and_pages": {
+          "applicant_01": false,
+          "applicant_02": false,
+          "applicant_03": false,
+          "applicant_04": false,
+          "applicant_05": false,
+          "applicant_06": false,
+          "applicant_07": false,
+          "applicant_08": false,
+          "applicant_09": false,
+          "applicant_10": false
+        },
+        "artifact_counts": {
+          "old": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          },
+          "new": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          }
+        },
+        "mapping_differences": [
+          {
+            "applicant": "applicant_01",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_02",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_03",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_04",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_05",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_06",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_07",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_08",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_09",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          },
+          {
+            "applicant": "applicant_10",
+            "field_id": "Country of Citizenship",
+            "old": {
+              "value": "United States of America",
+              "page": 2
+            },
+            "new": {
+              "value": "United States",
+              "page": 2
+            }
+          }
+        ]
+      },
+      "historical_trace_stats": {
+        "trace": "legacy/pdf/trajectory.json",
+        "sha256": "3c488d4eaa554058d4bb473eb9c06b2b1f70727a524fb3d9391e47c091939f21",
+        "session_id": "bc13a924-f3f3-4822-a2b8-80e2ecdf96f3",
+        "agent": {
+          "name": "openclaw",
+          "version": "OpenClaw 2026.6.6 (8c802aa)",
+          "model_name": "deepseek/deepseek-v4-flash",
+          "extra": {
+            "parser": "openclaw-session-jsonl",
+            "provider": "deepseek",
+            "session_schema_version": 3,
+            "thinking_level": "high"
+          }
+        },
+        "steps": 19,
+        "tool_calls": 25,
+        "tools": {
+          "read": 10,
+          "exec": 12,
+          "write": 3
+        },
+        "missing_tool_results": [],
+        "command_failures": [],
+        "process_kill_steps": [],
+        "recorded_metrics": {
+          "total_prompt_tokens": 641874,
+          "total_completion_tokens": 7116,
+          "total_cached_tokens": 599680,
+          "total_cost_usd": 0.02469068,
+          "total_steps": 19
+        }
+      },
+      "historical_helpers": {
+        "generate_and_run_batch.py": {
+          "write_steps": [
+            12
+          ],
+          "exec_attempts": [
+            {
+              "step": 13,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 184,
+          "bytes": 5191,
+          "source_sha256": "f054d84f7758f7f8be205bf69a9d92af4a32366ce17b39ed2e44494bc9bd288b"
+        },
+        "run_batch_fill_render.py": {
+          "write_steps": [
+            14
+          ],
+          "exec_attempts": [
+            {
+              "step": 15,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 52,
+          "bytes": 1752,
+          "source_sha256": "0402239c6a100348f35ce689abd012f5e1a5d68ced5c8708facc7bc4ce73a084"
+        }
+      },
+      "current_old_helper_writes_match_historical": false,
+      "current_old_vs_historical_outputs": {
+        "batch_summaries": {
+          "old": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true
+          },
+          "new": {
+            "input_form": "input/of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true,
+            "check_script_invocations": 1,
+            "extract_script_invocations": 1,
+            "template_rendered_pages": 3,
+            "applicant_rendered_pages": 30
+          }
+        },
+        "same_field_values_and_pages": {
+          "applicant_01": false,
+          "applicant_02": false,
+          "applicant_03": false,
+          "applicant_04": false,
+          "applicant_05": false,
+          "applicant_06": false,
+          "applicant_07": false,
+          "applicant_08": false,
+          "applicant_09": false,
+          "applicant_10": false
+        },
+        "artifact_counts": {
+          "old": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          },
+          "new": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          }
+        }
+      },
+      "full_system_hash_equal": true,
+      "all_private_config_file_hashes_equal": true,
+      "filesystem_difference": {
+        "old_process_cwd": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+        "new_process_cwd": "/runs/control/workspace",
+        "old_real_case": "/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01",
+        "new_real_case": "/runs/control/workspace",
+        "old_case_symlink": false,
+        "new_case_symlink": true
+      },
+      "helper_diff": "control_pairs/20261008T163759Z-90a05c03/opm-helpers.diff"
+    }
+  },
+  "controls_status": "success",
+  "strict_regression_status": "failed",
+  "status": "comparison_complete"
+}

@@ -1,0 +1,264 @@
+--- old/gen_field_values.py
++++ new/build_field_values.py
+@@ -1,88 +1,116 @@
+ #!/usr/bin/env python3
+-"""Generate final per-applicant field-values JSON for the OF-306 batch fill.
++"""Generate the ten per-applicant OF-306 field_values JSON files.
+ 
+-Field IDs, page numbers, and radio option values are taken verbatim from
+-output/form_field_info.json (produced by the bundled Skill script).
+-SSN, both signatures, certification dates, appointment date, prior-Federal-job
+-date, and life-insurance questions are intentionally omitted.
++Field IDs / page numbers come straight from output/form_field_info.json so the
++fill script's validation cannot fail on a mismatched page. Protected fields
++(SSN, both signatures, certification dates, appointment date, prior-Federal-job
++date, life-insurance questions) are intentionally omitted and left blank.
+ """
++
+ import json
+ from pathlib import Path
+ 
+-ROOT = Path(__file__).resolve().parent
+-INPUT = ROOT / "input"
+-OUT = ROOT / "output"
+-FIELD_VALUES_DIR = OUT / "field_values"
++BASE = Path(__file__).resolve().parent
++OUT = BASE / "output"
+ 
+-CITIZENSHIP = "United States of America"
++field_info = json.loads((OUT / "form_field_info.json").read_text(encoding="utf-8"))
++page_of = {f["field_id"]: f["page"] for f in field_info}
++type_of = {f["field_id"]: f["type"] for f in field_info}
+ 
+-# Radio groups that must be answered "No" for every applicant (verifier SHARED_NO_FIELDS).
++applicants = json.loads(
++    (BASE / "input" / "synthetic_applicants.json").read_text(encoding="utf-8")
++)["applicants"]
++
++yn = lambda flag: "/Yes" if flag else "/No"
++
++# Shared "No" background answers (exact field IDs from the OF-306 schema).
+ SHARED_NO = [
+-    ("Have you ever served in the U.S. Military", 2),
+-    ("Have you been convicted imprisoned probation or paroled last 7 years", 2),
+-    ("Have you been court martialed in the last 7 years", 2),
+-    ("Are you currently under charges", 2),
+-    ("Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired", 2),
+-    ("Are you delinquent on any Federal debt", 2),
+-    ("Do any of your relatives work for the agency or government organization for which you are submitting this form", 3),
+-    ("Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government", 3),
++    "Have you ever served in the U.S. Military",
++    "Have you been convicted imprisoned probation or paroled last 7 years",
++    "Have you been court martialed in the last 7 years",
++    "Are you currently under charges",
++    "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired",
++    "Are you delinquent on any Federal debt",
++    "Do any of your relatives work for the agency or government organization for which you are submitting this form",
++    "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government",
+ ]
+ 
+ 
+-def radio(value: bool) -> str:
+-    return "/Yes" if value else "/No"
++def entry(field_id, description, value):
++    return {
++        "field_id": field_id,
++        "description": description,
++        "page": page_of[field_id],
++        "value": value,
++    }
+ 
+ 
+-def build(applicant: dict, shared: dict) -> list:
+-    entries = [
+-        {"field_id": "Full Name", "description": "Applicant full name", "page": 2,
+-         "value": applicant["full_name"]},
+-        {"field_id": "PLACE OF BIRTH Include city and state or country",
+-         "description": "Place of birth", "page": 2, "value": applicant["place_of_birth"]},
+-        {"field_id": "DATE OF BIRTH MM  DD  YYYY", "description": "Date of birth",
+-         "page": 2, "value": applicant["date_of_birth"]},
+-        {"field_id": "Day", "description": "Daytime phone", "page": 2,
+-         "value": applicant["day_phone"]},
+-        {"field_id": "Other Names Used 2", "description": "Other names used",
+-         "page": 2, "value": applicant["other_names"]},
+-        {"field_id": "Country of Citizenship", "description": "Country of citizenship",
+-         "page": 2, "value": CITIZENSHIP},
+-        {"field_id": "Are you a U.S. Citizen?", "description": "U.S. citizen",
+-         "page": 2, "value": radio(bool(applicant["us_citizen"]))},
+-        {"field_id": "Male", "description": "Male born after 12/31/1959",
+-         "page": 2, "value": radio(bool(applicant["born_male_after_1959"]))},
+-        {"field_id": "Have you registered with Selective Service",
+-         "description": "Selective Service registration", "page": 2,
+-         "value": radio(bool(applicant["registered_selective_service"]))},
++out_dir = OUT / "field_values"
++out_dir.mkdir(parents=True, exist_ok=True)
++
++for applicant in applicants:
++    values = [
++        entry("Full Name", "Applicant full name", applicant["full_name"]),
++        entry(
++            "PLACE OF BIRTH Include city and state or country",
++            "Place of birth",
++            applicant["place_of_birth"],
++        ),
++        entry(
++            "DATE OF BIRTH MM  DD  YYYY",
++            "Date of birth",
++            applicant["date_of_birth"],
++        ),
++        entry("Day", "Daytime phone", applicant["day_phone"]),
++        entry("Other Names Used 2", "Other names used", applicant["other_names"]),
++        entry("Country of Citizenship", "Country of citizenship", "United States"),
++        entry(
++            "Are you a U.S. Citizen?",
++            "U.S. citizen",
++            yn(applicant["us_citizen"]),
++        ),
++        entry(
++            "Male",
++            "Male born after Dec 31 1959",
++            yn(applicant["born_male_after_1959"]),
++        ),
++        entry(
++            "Have you registered with Selective Service",
++            "Selective Service registration",
++            yn(applicant["registered_selective_service"]),
++        ),
++        entry(
++            "Continuation of Space or Agency Specific Questions",
++            "Continuation text",
++            "Synthetic training record; no additional information.",
++        ),
+     ]
+-    for field_id, page in SHARED_NO:
+-        entries.append({
+-            "field_id": field_id,
+-            "description": "Shared background answer: No",
+-            "page": page,
+-            "value": "/No",
+-        })
+-    entries.append({
+-        "field_id": "Continuation of Space or Agency Specific Questions",
+-        "description": "Continuation text",
+-        "page": 3,
+-        "value": shared["continuation"],
+-    })
+-    return entries
++    for field_id in SHARED_NO:
++        values.append(entry(field_id, "Shared background answer: No", "/No"))
+ 
++    # Sanity: every referenced field exists and is the expected kind.
++    for item in values:
++        assert item["field_id"] in page_of, item["field_id"]
++        t = type_of[item["field_id"]]
++        if item["value"].startswith("/"):
++            assert t == "radio_group", (item["field_id"], t)
++        else:
++            assert t == "text", (item["field_id"], t)
+ 
+-def main() -> None:
+-    data = json.loads((INPUT / "synthetic_applicants.json").read_text(encoding="utf-8"))
+-    shared = data["shared_answers"]
+-    FIELD_VALUES_DIR.mkdir(parents=True, exist_ok=True)
+-    for applicant in data["applicants"]:
+-        out_path = FIELD_VALUES_DIR / f"{applicant['id']}.json"
+-        out_path.write_text(
+-            json.dumps(build(applicant, shared), indent=2, ensure_ascii=False) + "\n",
+-            encoding="utf-8",
+-        )
+-        print(f"Wrote {out_path}")
++    # Protected/blank fields must never appear.
++    protected = {
++        "Social Security Number",
++        "17a Applicants Signature",
++        "17b Appointees Signature 1",
++        "Date",
++        "Date_2",
++        "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY",
++        "When did you leave your last Federal job",
++        "Did you waive Basic Life Insurance or any type of optional life insurance",
++        "If yes to 18b did you later cancel the waivers",
++    }
++    assert not (protected & {v["field_id"] for v in values})
+ 
+-
+-if __name__ == "__main__":
+-    main()
++    path = out_dir / f"{applicant['id']}.json"
++    path.write_text(json.dumps(values, indent=2) + "\n", encoding="utf-8")
++    print(f"wrote {path} ({len(values)} fields)")
+--- old/run_batch.py
++++ new/run_batch.sh
+@@ -1,50 +1,25 @@
+-#!/usr/bin/env python3
+-"""Final one-shot batch driver: fill 10 applicants and render 10 x 3 pages.
++#!/usr/bin/env bash
++# Final OF-306 batch driver: one fill + one render per applicant, run exactly once.
++set -euo pipefail
+ 
+-Invokes the bundled PDF Skill scripts exactly once per operation:
+-  - fill_fillable_fields.py  x10
+-  - convert_pdf_to_images.py x10 (applicants)
+-The blank-template render (1 invocation) is done separately by the runbook.
+-"""
+-import json
+-import subprocess
+-import sys
+-from pathlib import Path
++WS=/root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01
++SCRIPTS=/root/.openclaw/skills/pdf/scripts
++PDF="$WS/input/of306_aug2023.pdf"
+ 
+-ROOT = Path(__file__).resolve().parent
+-INPUT = ROOT / "input"
+-OUT = ROOT / "output"
+-SKILL = Path("/root/.openclaw/skills/pdf")
+-SCRIPTS = SKILL / "scripts"
+-TEMPLATE = INPUT / "of306_aug2023.pdf"
+-PY = sys.executable or "python3"
++mkdir -p "$WS/output/filled"
+ 
+-FILL_SCRIPT = SCRIPTS / "fill_fillable_fields.py"
+-RENDER_SCRIPT = SCRIPTS / "convert_pdf_to_images.py"
+-
+-
+-def run(cmd):
+-    print("+", " ".join(str(c) for c in cmd), flush=True)
+-    subprocess.run([str(c) for c in cmd], cwd=str(SCRIPTS), check=True)
+-
+-
+-def main() -> None:
+-    data = json.loads((INPUT / "synthetic_applicants.json").read_text(encoding="utf-8"))
+-    applicants = data["applicants"]
+-    (OUT / "filled").mkdir(parents=True, exist_ok=True)
+-    (OUT / "rendered").mkdir(parents=True, exist_ok=True)
+-
+-    for applicant in applicants:
+-        aid = applicant["id"]
+-        values_json = OUT / "field_values" / f"{aid}.json"
+-        filled_pdf = OUT / "filled" / f"{aid}.pdf"
+-        render_dir = OUT / "rendered" / aid
+-        render_dir.mkdir(parents=True, exist_ok=True)
+-        run([PY, FILL_SCRIPT, TEMPLATE, values_json, filled_pdf])
+-        run([PY, RENDER_SCRIPT, filled_pdf, render_dir])
+-
+-    print("Batch complete.", flush=True)
+-
+-
+-if __name__ == "__main__":
+-    main()
++cd "$SCRIPTS"
++for n in 01 02 03 04 05 06 07 08 09 10; do
++  id="applicant_$n"
++  echo "=== $id: fill ==="
++  python3 fill_fillable_fields.py \
++    "$PDF" \
++    "$WS/output/field_values/$id.json" \
++    "$WS/output/filled/$id.pdf"
++  echo "=== $id: render ==="
++  mkdir -p "$WS/output/rendered/$id"
++  python3 convert_pdf_to_images.py \
++    "$WS/output/filled/$id.pdf" \
++    "$WS/output/rendered/$id"
++done
++echo "=== batch complete ==="

@@ -1,0 +1,396 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "tlc",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "input:input/monthly_operations_template.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/template_manifest.json": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/dataset_sources.md": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/prepared_monthly_operations_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "input:input/prepared_reconciliation_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "sheet_order": {
+      "ok": true,
+      "detail": [
+        "Executive_Summary",
+        "Raw_Sample",
+        "Hourly_Summary",
+        "Daily_Summary",
+        "Zone_Summary",
+        "Payment_Summary",
+        "Fare_Distance_Bands",
+        "Reconciliation"
+      ]
+    },
+    "raw_preserved:Raw_Sample": {
+      "ok": true,
+      "detail": {
+        "rows": 100001,
+        "columns": 25,
+        "sha256": "41e7fc0c2a2794155725d71012f98e1e4957b8ac322b5fec653e487b8fb5e24e"
+      }
+    },
+    "original_formulas:Hourly_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_formulas:Daily_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_formulas:Zone_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_formulas:Payment_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_formulas:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": null
+    },
+    "original_formulas:Reconciliation": {
+      "ok": true,
+      "detail": null
+    },
+    "original_values:Hourly_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_values:Daily_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_values:Zone_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_values:Payment_Summary": {
+      "ok": true,
+      "detail": null
+    },
+    "original_values:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": null
+    },
+    "original_values:Reconciliation": {
+      "ok": true,
+      "detail": null
+    },
+    "original_charts:Raw_Sample": {
+      "ok": true,
+      "detail": []
+    },
+    "original_charts:Hourly_Summary": {
+      "ok": true,
+      "detail": [
+        [
+          "HOURLY_SUMMARY!A2:A25",
+          "HOURLY_SUMMARY!B1",
+          "HOURLY_SUMMARY!B2:B25"
+        ]
+      ]
+    },
+    "original_charts:Daily_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "original_charts:Zone_Summary": {
+      "ok": true,
+      "detail": []
+    },
+    "original_charts:Payment_Summary": {
+      "ok": true,
+      "detail": [
+        [
+          "PAYMENT_SUMMARY!A2:A5",
+          "PAYMENT_SUMMARY!B1",
+          "PAYMENT_SUMMARY!B2:B5"
+        ]
+      ]
+    },
+    "original_charts:Fare_Distance_Bands": {
+      "ok": true,
+      "detail": []
+    },
+    "original_charts:Reconciliation": {
+      "ok": true,
+      "detail": []
+    },
+    "formula:B5": {
+      "ok": true,
+      "detail": "=Reconciliation!B10"
+    },
+    "color:B5": {
+      "ok": true,
+      "detail": null
+    },
+    "number_format:B5": {
+      "ok": true,
+      "detail": "#,##0"
+    },
+    "formula:B6": {
+      "ok": true,
+      "detail": "=Reconciliation!B14"
+    },
+    "color:B6": {
+      "ok": true,
+      "detail": null
+    },
+    "number_format:B6": {
+      "ok": true,
+      "detail": "\\$#,##0.00"
+    },
+    "formula:B7": {
+      "ok": true,
+      "detail": "=Hourly_Summary!B34"
+    },
+    "color:B7": {
+      "ok": true,
+      "detail": null
+    },
+    "number_format:B7": {
+      "ok": true,
+      "detail": "\\$#,##0.00"
+    },
+    "formula:B8": {
+      "ok": true,
+      "detail": "=Reconciliation!B5"
+    },
+    "color:B8": {
+      "ok": true,
+      "detail": null
+    },
+    "number_format:B8": {
+      "ok": true,
+      "detail": "0.0%"
+    },
+    "formula:B9": {
+      "ok": true,
+      "detail": "=IF(AND(Reconciliation!B24=\"YES - Consistent\",Reconciliation!B25=\"YES - Consistent\"),\"PASS\",\"REVIEW\")"
+    },
+    "formula:B13": {
+      "ok": true,
+      "detail": "=INDEX(E13:E15,MATCH(B12,D13:D15,0))"
+    },
+    "color:B13": {
+      "ok": true,
+      "detail": null
+    },
+    "formula:B14": {
+      "ok": true,
+      "detail": "=INDEX(F13:F15,MATCH(B12,D13:D15,0))"
+    },
+    "formula:B15": {
+      "ok": true,
+      "detail": "=B5*B14"
+    },
+    "formula:B16": {
+      "ok": true,
+      "detail": "=B6*B13*B14"
+    },
+    "formula_count": {
+      "ok": true,
+      "detail": 45
+    },
+    "scenario_default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario_dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario_table:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario_table:Upside": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario_table:Downside": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario_input_color": {
+      "ok": true,
+      "detail": null
+    },
+    "executive_chart_count": {
+      "ok": true,
+      "detail": 2
+    },
+    "chart_sources:daily_trips": {
+      "ok": true,
+      "detail": [
+        [
+          "DAILY_SUMMARY!A2:A32",
+          "DAILY_SUMMARY!C1",
+          "DAILY_SUMMARY!C2:C32"
+        ],
+        [
+          "PAYMENT_SUMMARY!A2:A5",
+          "PAYMENT_SUMMARY!B1",
+          "PAYMENT_SUMMARY!B2:B5"
+        ]
+      ]
+    },
+    "chart_sources:payment_mix": {
+      "ok": true,
+      "detail": [
+        [
+          "DAILY_SUMMARY!A2:A32",
+          "DAILY_SUMMARY!C1",
+          "DAILY_SUMMARY!C2:C32"
+        ],
+        [
+          "PAYMENT_SUMMARY!A2:A5",
+          "PAYMENT_SUMMARY!B1",
+          "PAYMENT_SUMMARY!B2:B5"
+        ]
+      ]
+    },
+    "conditional_formatting": {
+      "ok": true,
+      "detail": null
+    },
+    "comments": {
+      "ok": true,
+      "detail": null
+    },
+    "freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "cached_value:B5": {
+      "ok": true,
+      "detail": {
+        "actual": 2758427,
+        "expected": 2758427
+      }
+    },
+    "cached_value:B6": {
+      "ok": true,
+      "detail": {
+        "actual": 50744748.6,
+        "expected": 50744748.6
+      }
+    },
+    "cached_value:B7": {
+      "ok": true,
+      "detail": {
+        "actual": 18.9361351508528,
+        "expected": 18.9361351508528
+      }
+    },
+    "cached_value:B8": {
+      "ok": true,
+      "detail": {
+        "actual": 0.0695524963705347,
+        "expected": 0.0695524963705347
+      }
+    },
+    "cached_value:B9": {
+      "ok": true,
+      "detail": {
+        "actual": "PASS",
+        "expected": "PASS"
+      }
+    },
+    "cached_value:B13": {
+      "ok": true,
+      "detail": {
+        "actual": 1,
+        "expected": 1
+      }
+    },
+    "cached_value:B14": {
+      "ok": true,
+      "detail": {
+        "actual": 1,
+        "expected": 1
+      }
+    },
+    "cached_value:B15": {
+      "ok": true,
+      "detail": {
+        "actual": 2758427,
+        "expected": 2758427
+      }
+    },
+    "cached_value:B16": {
+      "ok": true,
+      "detail": {
+        "actual": 50744748.6,
+        "expected": 50744748.6
+      }
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": {
+        "status": "success",
+        "total_errors": 0,
+        "error_summary": {},
+        "total_formulas": 45
+      }
+    },
+    "published:monthly_operations_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "published:reconciliation_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:monthly_operations_report.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:monthly_operations_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:reconciliation_summary.csv": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:xlsx_enhancement_summary.json": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "failures": []
+}

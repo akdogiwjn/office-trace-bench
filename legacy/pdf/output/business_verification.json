@@ -1,0 +1,517 @@
+{
+  "status": "success",
+  "checks": {
+    "template_form": {
+      "ok": true,
+      "detail": {
+        "pages": 3,
+        "raw_pypdf_fields": 47,
+        "terminal_skill_fields": 38
+      }
+    },
+    "field_inspection_output": {
+      "ok": true,
+      "detail": 38
+    },
+    "template_render": {
+      "ok": true,
+      "detail": [
+        "/workspace/cases/pdf/output/rendered/template/page_1.png",
+        "/workspace/cases/pdf/output/rendered/template/page_2.png",
+        "/workspace/cases/pdf/output/rendered/template/page_3.png"
+      ]
+    },
+    "filled_pdf_batch": {
+      "ok": true,
+      "detail": {
+        "expected": 10,
+        "passed": 10,
+        "items": {
+          "applicant_01": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_01.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_01.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_01",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "No",
+              "Have you registered with Selective Service": "No"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7742
+          },
+          "applicant_02": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_02.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_02.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_02",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "Yes",
+              "Have you registered with Selective Service": "Yes"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7598
+          },
+          "applicant_03": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_03.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_03.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_03",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "No",
+              "Have you registered with Selective Service": "No"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7684
+          },
+          "applicant_04": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_04.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_04.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_04",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "Yes",
+              "Have you registered with Selective Service": "Yes"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7528
+          },
+          "applicant_05": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_05.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_05.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_05",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "No",
+              "Have you registered with Selective Service": "No"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7727
+          },
+          "applicant_06": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_06.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_06.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_06",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "Yes",
+              "Have you registered with Selective Service": "Yes"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7714
+          },
+          "applicant_07": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_07.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_07.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_07",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "No",
+              "Have you registered with Selective Service": "No"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7931
+          },
+          "applicant_08": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_08.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_08.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_08",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "Yes",
+              "Have you registered with Selective Service": "Yes"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7813
+          },
+          "applicant_09": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_09.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_09.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_09",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "No",
+              "Have you registered with Selective Service": "No"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 7691
+          },
+          "applicant_10": {
+            "pdf": "/workspace/cases/pdf/output/filled/applicant_10.pdf",
+            "values": "/workspace/cases/pdf/output/field_values/applicant_10.json",
+            "render_dir": "/workspace/cases/pdf/output/rendered/applicant_10",
+            "checks": {
+              "pages": true,
+              "file_size": true,
+              "full_name": true,
+              "place_of_birth": true,
+              "date_of_birth": true,
+              "day_phone": true,
+              "radio_answers": true,
+              "shared_no_answers": true,
+              "sensitive_fields_blank": true,
+              "sensitive_fields_omitted": true,
+              "rendered_pages": true,
+              "visible_render_difference": true
+            },
+            "radio_values": {
+              "Are you a U.S. Citizen?": "Yes",
+              "Male": "Yes",
+              "Have you registered with Selective Service": "Yes"
+            },
+            "shared_no_values": {
+              "Are you currently under charges": "No",
+              "Have you been court martialed in the last 7 years": "No",
+              "Are you delinquent on any Federal debt": "No",
+              "Do any of your relatives work for the agency or government organization for which you are submitting this form": "No",
+              "Have you been convicted imprisoned probation or paroled last 7 years": "No",
+              "Have you ever served in the U.S. Military": "No",
+              "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired": "No",
+              "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government": "No"
+            },
+            "sensitive_values": {
+              "Date_2": "",
+              "Social Security Number": "",
+              "17b Appointees Signature 1": "",
+              "Did you waive Basic Life Insurance or any type of optional life insurance": "",
+              "If yes to 18b did you later cancel the waivers": "",
+              "17a Applicants Signature": "",
+              "Date": "",
+              "When did you leave your last Federal job": "",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY": ""
+            },
+            "rendered_page_count": 3,
+            "changed_pixels_page_2": 8075
+          }
+        }
+      }
+    },
+    "batch_summary": {
+      "ok": true,
+      "detail": {
+        "input_form": "of306_aug2023.pdf",
+        "applicant_count": 10,
+        "filled_pdf_count": 10,
+        "rendered_page_count": 33,
+        "fill_script_invocations": 10,
+        "render_script_invocations": 11,
+        "ssn_and_signatures_left_blank": true
+      }
+    }
+  },
+  "failures": []
+}

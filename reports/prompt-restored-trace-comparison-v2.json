@@ -1,0 +1,1001 @@
+{
+  "schema_version": "office-prompt-restored-comparison-v2",
+  "compared_at": "2026-10-08T12:51:21.549766+00:00",
+  "datasets": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T123533Z-e0fe46a7",
+      "inputs_match_frozen_legacy_import": {
+        "input/monthly_operations_template.xlsx": true,
+        "input/template_manifest.json": true,
+        "input/dataset_sources.md": true,
+        "input/prepared_monthly_operations_summary.csv": true,
+        "input/prepared_reconciliation_summary.csv": true,
+        "input/verify_xlsx_enhanced.py": true
+      },
+      "skills_match_frozen_legacy_import": {
+        "vendor/skills/xlsx/LICENSE.txt": true,
+        "vendor/skills/xlsx/SKILL.md": true,
+        "vendor/skills/xlsx/scripts/recalc.py": true,
+        "vendor/skills/xlsx/scripts/office/soffice.py": true,
+        "vendor/skills/xlsx/scripts/office/unpack.py": true,
+        "vendor/skills/xlsx/scripts/office/validate.py": true,
+        "vendor/skills/xlsx/scripts/office/pack.py": true
+      },
+      "same_openclaw_model_thinking": true,
+      "trace": {
+        "old": {
+          "trace": "legacy/xlsx/trajectory.json",
+          "sha256": "d56b64785155ce95e4df7ccbd4c368970238025e7c4dc0c82de126e95e300ab6",
+          "session_id": "85e12fb7-a392-4cd8-9bdb-066156bc464a",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 35,
+          "tool_calls": 41,
+          "tools": {
+            "read": 1,
+            "exec": 27,
+            "process": 12,
+            "write": 1
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [
+            5,
+            7,
+            9,
+            12
+          ],
+          "recorded_metrics": {
+            "total_prompt_tokens": 1326487,
+            "total_completion_tokens": 13934,
+            "total_cached_tokens": 1293184,
+            "total_cost_usd": 0.044773092,
+            "total_steps": 35
+          }
+        },
+        "new": {
+          "trace": "runs/xlsx-tlc-20261008T123533Z-e0fe46a7/trajectory.json",
+          "sha256": "6c6d397e22b0d0e0d57ce16f5b0ff9b352114ec038ec57f61fddd630f40ce6d7",
+          "session_id": "7da9cbef-5ba7-4312-815d-2434bf717f71",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 18,
+          "tool_calls": 19,
+          "tools": {
+            "read": 3,
+            "exec": 11,
+            "process": 3,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 11,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 760082,
+            "total_completion_tokens": 20715,
+            "total_cached_tokens": 725120,
+            "total_cost_usd": 0.03099824,
+            "total_steps": 18
+          }
+        }
+      },
+      "business_stage_exec_steps": {
+        "old": {
+          "inspect_input": [
+            3,
+            4,
+            6,
+            8,
+            10,
+            11,
+            14,
+            15
+          ],
+          "build_workbook": [
+            18
+          ],
+          "recalculate": [
+            22,
+            26
+          ],
+          "publish_csv": [
+            25
+          ],
+          "verify": [
+            30
+          ]
+        },
+        "new": {
+          "inspect_input": [
+            3,
+            4,
+            6,
+            8,
+            13
+          ],
+          "build_workbook": [
+            11,
+            12
+          ],
+          "recalculate": [
+            14
+          ],
+          "publish_csv": [
+            15
+          ],
+          "verify": [
+            15
+          ]
+        }
+      },
+      "verification": {
+        "independent_verification.json": true,
+        "legacy_verification.json": true,
+        "baseline_accepted": true,
+        "old_business_success": true,
+        "archived_outputs_pass_both_verifiers": true
+      },
+      "outputs": {
+        "same_sheet_order": true,
+        "sheets": [
+          "Executive_Summary",
+          "Raw_Sample",
+          "Hourly_Summary",
+          "Daily_Summary",
+          "Zone_Summary",
+          "Payment_Summary",
+          "Fare_Distance_Bands",
+          "Reconciliation"
+        ],
+        "same_kpi_cached_values": true,
+        "kpi_cached_values": {
+          "B5": 2758427,
+          "B6": 50744748.6,
+          "B7": 18.9361351508528,
+          "B8": 0.0695524963705347,
+          "B9": "PASS",
+          "B13": 1,
+          "B14": 1,
+          "B15": 2758427,
+          "B16": 50744748.6
+        },
+        "same_csv_bytes": {
+          "monthly_operations_summary.csv": true,
+          "reconciliation_summary.csv": true
+        },
+        "formula_counts": {
+          "old": 45,
+          "new": 48
+        },
+        "formula_differences": [
+          {
+            "cell": "Executive_Summary!B13",
+            "old": "=INDEX(E13:E15,MATCH(B12,D13:D15,0))",
+            "new": "=VLOOKUP($B$12,$D$13:$F$15,2,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B14",
+            "old": "=INDEX(F13:F15,MATCH(B12,D13:D15,0))",
+            "new": "=VLOOKUP($B$12,$D$13:$F$15,3,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B19",
+            "old": null,
+            "new": "=Reconciliation!B4"
+          },
+          {
+            "cell": "Executive_Summary!B20",
+            "old": null,
+            "new": "=Hourly_Summary!B33"
+          },
+          {
+            "cell": "Executive_Summary!B21",
+            "old": null,
+            "new": "=Payment_Summary!H2"
+          }
+        ],
+        "recalc_reports": {
+          "old": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          },
+          "new": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 48
+          }
+        }
+      },
+      "prompt": {
+        "same_business_and_execution_text": true,
+        "allowed_changes": [
+          "workspace path",
+          "VM/container description",
+          "installed openpyxl description"
+        ],
+        "rendered_sha256": "e2785cf023940f3a5b55ce936d7a4258ad096b869d9f7186587abbf6934f5faf",
+        "old_word_count": 565,
+        "new_word_count": 566
+      },
+      "restored_run": {
+        "stats": {
+          "trace": "runs/xlsx-tlc-20261008T123533Z-e0fe46a7/trajectory.json",
+          "sha256": "6c6d397e22b0d0e0d57ce16f5b0ff9b352114ec038ec57f61fddd630f40ce6d7",
+          "session_id": "7da9cbef-5ba7-4312-815d-2434bf717f71",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 18,
+          "tool_calls": 19,
+          "tools": {
+            "read": 3,
+            "exec": 11,
+            "process": 3,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 11,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 760082,
+            "total_completion_tokens": 20715,
+            "total_cached_tokens": 725120,
+            "total_cost_usd": 0.03099824,
+            "total_steps": 18
+          }
+        },
+        "helpers": {
+          "enhance_workbook.py": {
+            "write_steps": [
+              10
+            ],
+            "exec_attempts": [
+              {
+                "step": 11,
+                "status": "failed",
+                "exit_code": 127
+              },
+              {
+                "step": 12,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 263,
+            "bytes": 10261,
+            "source_sha256": "c98fbd091bab66e5445b242bd9b4ef10f2bdac2973bc8191ac1338ebc0cfa8e4"
+          }
+        },
+        "recalc_exec_steps": [
+          14
+        ],
+        "source_framework_reference_steps": [],
+        "expected_file_reference_steps": [],
+        "agent_summary": {
+          "task": "Enhance NYC TLC January 2024 operations workbook",
+          "input_workbook": "input/monthly_operations_template.xlsx",
+          "output_workbook": "output/monthly_operations_report.xlsx",
+          "created_feature_counts": {
+            "sheets_added": 1,
+            "sheets_total": 8,
+            "executive_kpi_formulas": 5,
+            "scenario_control_formulas": 4,
+            "reference_metrics_formulas": 3,
+            "total_formulas_excluding_raw_sample": 48,
+            "charts_added": 2,
+            "charts_total": 4,
+            "conditional_format_ranges": 3,
+            "cell_comments": 2,
+            "data_validations": 1,
+            "frozen_panes": "A5",
+            "raw_sample_rows": 100001,
+            "raw_sample_columns": 25
+          },
+          "preserved": {
+            "original_sheets": [
+              "Raw_Sample",
+              "Hourly_Summary",
+              "Daily_Summary",
+              "Zone_Summary",
+              "Payment_Summary",
+              "Fare_Distance_Bands",
+              "Reconciliation"
+            ],
+            "original_charts_preserved": true,
+            "row_count_preserved": true
+          },
+          "helper_filename": "enhance_workbook.py",
+          "helper_execution_attempts": 1,
+          "helper_successful_executions": 1,
+          "recalc_invocation_count": 1,
+          "final_verifier_status": "success",
+          "recalc_result": {
+            "status": "success",
+            "total_errors": 0,
+            "total_formulas": 48
+          },
+          "verifier_failures": [],
+          "notes": [
+            "A first shell invocation wrapped the helper in `time`, which aborted before Python started (`time` binary absent); the helper itself was executed once and succeeded, so helper execution attempts reflect actual helper runs.",
+            "recalc.py was invoked exactly once with a 180s timeout; LibreOffice recalculated and saved the workbook, producing output/formula_recalc.json.",
+            "The verifier passed on the first run, so no repair or additional recalc invocations were required.",
+            "Prepared reference CSVs were copied to the output directory unchanged."
+          ]
+        }
+      },
+      "compact_prompt_run": {
+        "stats": {
+          "trace": "runs/xlsx-tlc-20261008T115345Z-63218840/trajectory.json",
+          "sha256": "cfe8875219e5a989826b4f007ece84e0bdb66f16bb296814c10821ff32f914d9",
+          "session_id": "d736a457-fec1-486d-ae92-2166a6070525",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 32,
+          "tool_calls": 36,
+          "tools": {
+            "read": 8,
+            "exec": 21,
+            "process": 5,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 24,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 1526901,
+            "total_completion_tokens": 22059,
+            "total_cached_tokens": 1479552,
+            "total_cost_usd": 0.054232836,
+            "total_steps": 32
+          }
+        },
+        "helpers": {
+          "build_report.py": {
+            "write_steps": [
+              22,
+              23
+            ],
+            "exec_attempts": [
+              {
+                "step": 24,
+                "status": "failed",
+                "exit_code": 127
+              },
+              {
+                "step": 25,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 201,
+            "bytes": 8151,
+            "source_sha256": "e1860ff1b8e8a8bae92b067989ff8c529120fcc5c462f8c6e3ca4dd8f0ebb136"
+          }
+        },
+        "recalc_exec_steps": [
+          26
+        ],
+        "source_framework_reference_steps": [
+          4,
+          5,
+          5,
+          5
+        ],
+        "expected_file_reference_steps": [
+          6,
+          7,
+          8,
+          21,
+          28
+        ],
+        "agent_summary": {
+          "dataset_id": "tlc",
+          "workbook_in": "input/monthly_operations_template.xlsx",
+          "workbook_out": "output/monthly_operations_report.xlsx",
+          "helper_attempts": [
+            {
+              "step": "inspect_workbook",
+              "tool": "openpyxl.load_workbook",
+              "sheets": [
+                "Raw_Sample",
+                "Hourly_Summary",
+                "Daily_Summary",
+                "Zone_Summary",
+                "Payment_Summary",
+                "Fare_Distance_Bands",
+                "Reconciliation"
+              ],
+              "result": "ok"
+            },
+            {
+              "step": "copy_template",
+              "from": "input/monthly_operations_template.xlsx",
+              "to": "output/monthly_operations_report.xlsx",
+              "result": "ok"
+            },
+            {
+              "step": "create_summary_sheet",
+              "name": "Executive_Summary",
+              "index": 0,
+              "result": "ok"
+            },
+            {
+              "step": "add_kpi_formulas",
+              "cells": [
+                "B5",
+                "B6",
+                "B7",
+                "B8",
+                "B9"
+              ],
+              "result": "ok"
+            },
+            {
+              "step": "add_scenario",
+              "selector": "B12",
+              "table": "D13:F15",
+              "formula_cells": [
+                "B13",
+                "B14",
+                "B15",
+                "B16",
+                "B17",
+                "B18",
+                "B19"
+              ],
+              "result": "ok"
+            },
+            {
+              "step": "add_charts",
+              "ids": [
+                "daily_trips",
+                "payment_mix"
+              ],
+              "anchors": [
+                "H5",
+                "H22"
+              ],
+              "result": "ok"
+            },
+            {
+              "step": "add_conditional_formatting",
+              "ranges": [
+                "B5:B8",
+                "B16:B18"
+              ],
+              "count": 2,
+              "result": "ok"
+            },
+            {
+              "step": "add_comments",
+              "cells": [
+                "B5",
+                "B6",
+                "B12"
+              ],
+              "count": 3,
+              "result": "ok"
+            },
+            {
+              "step": "set_freeze_panes",
+              "cell": "A5",
+              "result": "ok"
+            },
+            {
+              "step": "save_workbook",
+              "path": "output/monthly_operations_report.xlsx",
+              "result": "ok"
+            }
+          ],
+          "recalc_invocations": [
+            {
+              "script": "/root/.openclaw/skills/xlsx/scripts/recalc.py",
+              "workbook": "output/monthly_operations_report.xlsx",
+              "timeout_seconds": 180,
+              "stdout_saved": "output/formula_recalc.json",
+              "status": "success",
+              "total_errors": 0,
+              "total_formulas": 48
+            }
+          ],
+          "publish_files": [
+            {
+              "input": "input/prepared_monthly_operations_summary.csv",
+              "output": "output/monthly_operations_summary.csv",
+              "result": "ok"
+            },
+            {
+              "input": "input/prepared_reconciliation_summary.csv",
+              "output": "output/reconciliation_summary.csv",
+              "result": "ok"
+            }
+          ],
+          "repairs": [],
+          "verification": "output/business_verification.json"
+        }
+      },
+      "historical_helpers": {
+        "enhance_workbook.py": {
+          "write_steps": [
+            17
+          ],
+          "exec_attempts": [
+            {
+              "step": 18,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 286,
+          "bytes": 10461,
+          "source_sha256": "2b8fe9c6c839510648e870b19400f66ec5df9d9d7f9c9dea5f5d5f1f5b2a43a6"
+        }
+      },
+      "execution_discipline": {
+        "observed_recalc_command_count": 1,
+        "one_recalc": true,
+        "note": "Additional recalc may be justified by a repair; inspect the retained trace, never substitute the summary count."
+      }
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T124346Z-f0f172a6",
+      "inputs_match_frozen_legacy_import": {
+        "input/synthetic_applicants.json": true,
+        "input/pdf_dataset_sources.md": true,
+        "input/of306_aug2023.pdf": true,
+        "input/verify_pdf_batch.py": true
+      },
+      "skills_match_frozen_legacy_import": {
+        "vendor/skills/pdf/reference.md": true,
+        "vendor/skills/pdf/LICENSE.txt": true,
+        "vendor/skills/pdf/forms.md": true,
+        "vendor/skills/pdf/SKILL.md": true,
+        "vendor/skills/pdf/scripts/fill_fillable_fields.py": true,
+        "vendor/skills/pdf/scripts/extract_form_field_info.py": true,
+        "vendor/skills/pdf/scripts/check_fillable_fields.py": true,
+        "vendor/skills/pdf/scripts/convert_pdf_to_images.py": true
+      },
+      "same_openclaw_model_thinking": true,
+      "trace": {
+        "old": {
+          "trace": "legacy/pdf/trajectory.json",
+          "sha256": "3c488d4eaa554058d4bb473eb9c06b2b1f70727a524fb3d9391e47c091939f21",
+          "session_id": "bc13a924-f3f3-4822-a2b8-80e2ecdf96f3",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 19,
+          "tool_calls": 25,
+          "tools": {
+            "read": 10,
+            "exec": 12,
+            "write": 3
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 641874,
+            "total_completion_tokens": 7116,
+            "total_cached_tokens": 599680,
+            "total_cost_usd": 0.02469068,
+            "total_steps": 19
+          }
+        },
+        "new": {
+          "trace": "runs/pdf-opm-20261008T124346Z-f0f172a6/trajectory.json",
+          "sha256": "18418b537fb22f966ec901379b5a2a0337ad6da569320199e87e0c270350afd0",
+          "session_id": "c16e0c11-4343-4e10-a0f1-ff25a645ba34",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 19,
+          "tool_calls": 26,
+          "tools": {
+            "read": 11,
+            "exec": 12,
+            "write": 3
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 776187,
+            "total_completion_tokens": 11823,
+            "total_cached_tokens": 732416,
+            "total_cost_usd": 0.029946028,
+            "total_steps": 19
+          }
+        }
+      },
+      "business_stage_exec_steps": {
+        "old": {
+          "check_fields": [
+            6
+          ],
+          "extract_schema": [
+            8
+          ],
+          "render_template": [
+            11
+          ],
+          "execute_batch": [
+            15
+          ],
+          "verify": [
+            17
+          ]
+        },
+        "new": {
+          "check_fields": [
+            7
+          ],
+          "extract_schema": [
+            7
+          ],
+          "render_template": [
+            15
+          ],
+          "execute_batch": [
+            15
+          ],
+          "verify": [
+            17
+          ]
+        }
+      },
+      "verification": {
+        "independent_verification.json": true,
+        "legacy_verification.json": true,
+        "baseline_accepted": true,
+        "old_business_success": true,
+        "archived_outputs_pass_both_verifiers": true
+      },
+      "outputs": {
+        "batch_summaries": {
+          "old": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true
+          },
+          "new": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true
+          }
+        },
+        "same_field_values_and_pages": {
+          "applicant_01": true,
+          "applicant_02": true,
+          "applicant_03": true,
+          "applicant_04": true,
+          "applicant_05": true,
+          "applicant_06": true,
+          "applicant_07": true,
+          "applicant_08": true,
+          "applicant_09": true,
+          "applicant_10": true
+        },
+        "artifact_counts": {
+          "old": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          },
+          "new": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          }
+        }
+      },
+      "prompt": {
+        "same_business_and_execution_text": true,
+        "allowed_changes": [
+          "workspace path",
+          "VM/container description",
+          "installed openpyxl description"
+        ],
+        "rendered_sha256": "7616fd993ecc0493ea7ba178a3386fc6ef0f9ff179afb3ff8078e976f3ade198",
+        "old_word_count": 472,
+        "new_word_count": 473
+      },
+      "restored_run": {
+        "stats": {
+          "trace": "runs/pdf-opm-20261008T124346Z-f0f172a6/trajectory.json",
+          "sha256": "18418b537fb22f966ec901379b5a2a0337ad6da569320199e87e0c270350afd0",
+          "session_id": "c16e0c11-4343-4e10-a0f1-ff25a645ba34",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 19,
+          "tool_calls": 26,
+          "tools": {
+            "read": 11,
+            "exec": 12,
+            "write": 3
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 776187,
+            "total_completion_tokens": 11823,
+            "total_cached_tokens": 732416,
+            "total_cost_usd": 0.029946028,
+            "total_steps": 19
+          }
+        },
+        "helpers": {
+          "gen_field_values.py": {
+            "write_steps": [
+              12
+            ],
+            "exec_attempts": [
+              {
+                "step": 14,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 74,
+            "bytes": 3614,
+            "source_sha256": "e99ed68a3fa679a8645c76be6d600ecb758bd0905ceb0a893a452a2d8cb22d23"
+          },
+          "run_batch.sh": {
+            "write_steps": [
+              13
+            ],
+            "exec_attempts": [
+              {
+                "step": 15,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 29,
+            "bytes": 986,
+            "source_sha256": "29efe78161d68dae0684fd31588d0869ec077a4caf2e6f06c6a437786004467e"
+          }
+        },
+        "recalc_exec_steps": [],
+        "source_framework_reference_steps": [],
+        "expected_file_reference_steps": [],
+        "agent_summary": {
+          "input_form": "of306_aug2023.pdf",
+          "applicant_count": 10,
+          "filled_pdf_count": 10,
+          "rendered_page_count": 33,
+          "fill_script_invocations": 10,
+          "render_script_invocations": 11,
+          "ssn_and_signatures_left_blank": true
+        }
+      },
+      "compact_prompt_run": {
+        "stats": {
+          "trace": "runs/pdf-opm-20261008T115600Z-aa170fa3/trajectory.json",
+          "sha256": "888cb37399a6f56898ad696e5d7bfd33f731c7bc13cd892e3bf333995c9bb32f",
+          "session_id": "56618ab1-a16b-4233-9fa3-db7fec651797",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 16,
+          "tool_calls": 27,
+          "tools": {
+            "read": 15,
+            "exec": 11,
+            "write": 1
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 5,
+              "tool": "exec",
+              "exit_code": 1,
+              "result_excerpt": "pypdf 6.10.0\npdf2image ok\nPIL 12.2.0\n/usr/bin/pdftoppm\n/usr/bin/pdftotext\n\n(Command exited with code 1)"
+            },
+            {
+              "step_id": 13,
+              "tool": "exec",
+              "exit_code": 1,
+              "result_excerpt": "=== output tree ===\noutput/batch_summary.json\noutput/business_verification.json\noutput/check_fillable_fields.log\noutput/field_values/applicant_01.json\noutput/field_values/applicant_02.json\noutput/field_values/applicant_03.json\noutput/field_values/applicant_04.json\noutput/field_values/applicant_05.json\noutput/field_values/applicant_06.json\noutput/fi"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 611548,
+            "total_completion_tokens": 11116,
+            "total_cached_tokens": 574720,
+            "total_cost_usd": 0.02436056,
+            "total_steps": 16
+          }
+        },
+        "helpers": {
+          "run_batch.py": {
+            "write_steps": [
+              10
+            ],
+            "exec_attempts": [
+              {
+                "step": 11,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 143,
+            "bytes": 5483,
+            "source_sha256": "f5d4ae863617554a45b3e44374ac91b00c43e30309518a1a415e182c2546e4b7"
+          }
+        },
+        "recalc_exec_steps": [],
+        "source_framework_reference_steps": [
+          5,
+          6,
+          6,
+          7
+        ],
+        "expected_file_reference_steps": [
+          6
+        ],
+        "agent_summary": {
+          "input_form": "of306_aug2023.pdf",
+          "applicant_count": 10,
+          "filled_pdf_count": 10,
+          "rendered_page_count": 33,
+          "ssn_and_signatures_left_blank": true,
+          "fill_script_invocations": 10,
+          "render_script_invocations": 11,
+          "check_fillable_fields_invocations": 1,
+          "extract_form_field_info_invocations": 1,
+          "fill_failures": [],
+          "render_failures": [],
+          "repair_count": 0,
+          "repairs": [],
+          "notes": [
+            "rendered blank template (page_1..3.png)"
+          ]
+        }
+      },
+      "historical_helpers": {
+        "generate_and_run_batch.py": {
+          "write_steps": [
+            12
+          ],
+          "exec_attempts": [
+            {
+              "step": 13,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 184,
+          "bytes": 5191,
+          "source_sha256": "f054d84f7758f7f8be205bf69a9d92af4a32366ce17b39ed2e44494bc9bd288b"
+        },
+        "run_batch_fill_render.py": {
+          "write_steps": [
+            14
+          ],
+          "exec_attempts": [
+            {
+              "step": 15,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 52,
+          "bytes": 1752,
+          "source_sha256": "0402239c6a100348f35ce689abd012f5e1a5d68ced5c8708facc7bc4ce73a084"
+        }
+      },
+      "execution_discipline": {
+        "reported_fill_script_invocations": 10,
+        "reported_render_script_invocations": 11,
+        "expected_counts_reported": true,
+        "note": "These two counts are Agent-reported; retain helper sources, exec results and independently verified output inventory as supporting evidence."
+      }
+    }
+  },
+  "status": "success"
+}

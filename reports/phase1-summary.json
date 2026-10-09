@@ -1,0 +1,75 @@
+{
+  "phase": "generalization_and_baseline_regression",
+  "status": "success",
+  "runtime_image": "office-trace-bench:runtime",
+  "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+  "tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "archived_regression": "reports/archived-regression-summary.json",
+  "real_regressions": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T123533Z-e0fe46a7",
+      "baseline_accepted": true,
+      "prompt_template": "tlc-legacy-compatible.txt",
+      "trace_steps": 18,
+      "tool_calls": 19,
+      "acceptance_report": "runs/xlsx-tlc-20261008T123533Z-e0fe46a7/baseline_acceptance.json",
+      "scope": "business regression and original prompt compatibility; not identical program workloads"
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T124346Z-f0f172a6",
+      "baseline_accepted": true,
+      "prompt_template": "opm-legacy-compatible.txt",
+      "trace_steps": 19,
+      "tool_calls": 26,
+      "acceptance_report": "runs/pdf-opm-20261008T124346Z-f0f172a6/baseline_acceptance.json",
+      "scope": "business regression and original prompt compatibility; not identical program workloads"
+    }
+  },
+  "excluded_development_attempts": [
+    "pdf-opm-20261008T114917Z-f12142ca",
+    "pdf-opm-20261008T115030Z-b825c011"
+  ],
+  "scope": "Runtime image for real Agent generation, generic prompts and manifests, verified new TLC/OPM traces. New domains are planned; offline replay recipes/images are deferred.",
+  "trace_comparison": {
+    "status": "success",
+    "report": "reports/prompt-restored-trace-comparison-v2.md",
+    "details": "reports/prompt-restored-trace-comparison-v2.json"
+  },
+  "credential_provenance": {
+    "report": "reports/credential-provenance.json",
+    "scope": "post-run current configuration; request-time credential fingerprint was not captured"
+  },
+  "previous_compact_prompt_regressions": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T115345Z-63218840",
+      "baseline_accepted": true,
+      "trace_steps": 32,
+      "tool_calls": 36,
+      "acceptance_report": "runs/xlsx-tlc-20261008T115345Z-63218840/baseline_acceptance.json"
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T115600Z-aa170fa3",
+      "baseline_accepted": true,
+      "trace_steps": 16,
+      "tool_calls": 27,
+      "acceptance_report": "runs/pdf-opm-20261008T115600Z-aa170fa3/baseline_acceptance.json"
+    }
+  },
+  "prompt_restoration": "reports/prompt-restoration-v1.json",
+  "agent_context_comparison": {
+    "matched": false,
+    "evidence": "reports/agent-context-audit-v3.json",
+    "unmatched_inputs": [
+      "workspace bootstrap documents",
+      "available Skill registry"
+    ],
+    "scope": "Task prompt compatibility passed; complete model inputs are not aligned."
+  }
+}

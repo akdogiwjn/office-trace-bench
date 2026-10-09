@@ -1,0 +1,246 @@
+Table 1. National employment and wage data from the Occupational Employment and Wage Statistics survey by occupation, May 2025 - 2025 A01 Results (https://www.bls.gov/news.release/ocwage.t01.htm)
+citeturn34view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/news.release/ocwage.t01.htm","lineno":1180}); Total lines: 1374
+L1102:         Miscellaneous installation, maintenance, and repair workers.......................     351,050    25.12	52,250     22.82
+L1103:          Coin, vending, and amusement machine servicers and repairers.....................      26,410    23.93	49,770     22.81
+L1104:          Commercial divers................................................................       3,450    42.46	88,320     35.09
+L1105:          Locksmiths and safe repairers....................................................      15,040    26.67	55,470     24.68
+L1106:          Manufactured building and mobile home installers.................................       3,020    21.83	45,410     22.11
+L1107:          Riggers..........................................................................      22,530    32.12	66,810     30.12
+L1108:          Signal and track switch repairers................................................       8,720    43.47	90,410     44.45
+L1109:          Helpers--installation, maintenance, and repair workers...........................      95,580    19.95	41,490     19.05
+L1110:          Installation, maintenance, and repair workers, all other.........................     176,300    25.89	53,850     23.67
+L1111: 
+L1112:     Production occupations                                                                   8,565,760    24.81	51,600     22.59
+L1113:        Supervisors of production workers..................................................     673,430    36.83	76,600     35.79
+L1114:         First-line supervisors of production and operating workers........................     673,430    36.83	76,600     35.79
+L1115:        Assemblers and fabricators.........................................................   1,801,640    22.95	47,740     21.85
+L1116:         Aircraft structure, surfaces, rigging, and systems assemblers.....................      34,020    34.34	71,420     31.43
+L1117:         Electrical, electronics, and electromechanical assemblers.........................     259,810    22.98	47,800     22.08
+L1118:          Coil winders, tapers, and finishers..............................................      12,840    24.26	50,470     23.18
+L1119:          Electrical, electronic, and electromechanical assemblers, except coil winders,
+L1120:           tapers, and finishers...........................................................     246,970    22.92	47,660     22.04
+L1121:         Engine and other machine assemblers...............................................      34,000    27.78	57,790     25.82
+L1122:         Structural metal fabricators and fitters..........................................      52,360    25.98	54,030     24.68
+L1123:         Fiberglass laminators and fabricators.............................................      16,170    23.82	49,550     22.54
+L1124:         Timing device assemblers and adjusters............................................         250    27.27	56,720     30.11
+L1125:         Miscellaneous assemblers and fabricators..........................................   1,405,030    22.43	46,660     21.47
+L1126:        Food processing workers............................................................     879,430    19.70	40,980     18.75
+L1127:         Bakers............................................................................     236,200    18.50	38,480     17.86
+L1128:         Butchers and other meat, poultry, and fish processing workers.....................     352,090    19.70	40,980     18.84
+L1129:          Butchers and meat cutters........................................................     136,430    20.37	42,380     19.30
+L1130:          Meat, poultry, and fish cutters and trimmers.....................................     145,700    18.89	39,280     18.41
+L1131:          Slaughterers and meat packers....................................................      69,950    20.08	41,770     19.29
+L1132:         Miscellaneous food processing workers.............................................     291,140    20.68	43,010     19.82
+L1133:          Food and tobacco roasting, baking, and drying machine operators and tenders......      20,370    22.08	45,930     21.54
+L1134:          Food batchmakers.................................................................     174,520    21.04	43,750     20.33
+L1135:          Food cooking machine operators and tenders.......................................      31,250    20.47	42,570     20.00
+L1136:          Food processing workers, all other...............................................      65,000    19.38	40,300     19.08
+L1137:        Metal workers and plastic workers..................................................   1,545,990    25.83	53,730     23.94
+L1138:         Forming machine setters, operators, and tenders, metal and plastic................      95,010    24.37	50,680     23.27
+L1139:          Extruding and drawing machine setters, operators, and tenders, metal and plastic.      60,840    23.79	49,480     22.94
+L1140:          Forging machine setters, operators, and tenders, metal and plastic...............       8,930    24.85	51,680     23.57
+L1141:          Rolling machine setters, operators, and tenders, metal and plastic...............      25,250    25.59	53,220     24.10
+L1142:         Machine tool cutting setters, operators, and tenders, metal and plastic...........     272,050    23.58	49,050     22.48
+L1143:          Cutting, punching, and press machine setters, operators, and tenders, metal and
+L1144:           plastic.........................................................................     171,200    23.28	48,430     22.27
+L1145:          Drilling and boring machine tool setters, operators, and tenders, metal and
+L1146:           plastic.........................................................................       4,680    24.91	51,810     23.60
+L1147:          Grinding, lapping, polishing, and buffing machine tool setters, operators,
+L1148:           and tenders, metal and plastic..................................................      67,000    23.16	48,170     22.38
+L1149:          Lathe and turning machine tool setters, operators, and tenders, metal and
+L1150:           plastic.........................................................................      16,710    25.24	52,490     24.34
+L1151:          Milling and planing machine setters, operators, and tenders, metal and plastic...      12,460    27.28	56,740     25.39
+L1152:         Machinists........................................................................     287,050    28.52	59,320     28.24
+L1153:         Metal furnace operators, tenders, pourers, and casters............................      21,340    26.55	55,230     25.85
+L1154:          Metal-refining furnace operators and tenders.....................................      16,780    26.68	55,490     26.17
+L1155:          Pourers and casters, metal.......................................................       4,560    26.10	54,290     24.91
+L1156:         Model makers and patternmakers, metal and plastic.................................       4,080    31.59	65,710     29.30
+L1157:          Model makers, metal and plastic..................................................       2,610    32.97	68,570     30.45
+L1158:          Patternmakers, metal and plastic.................................................       1,470    29.14	60,610     27.89
+L1159:         Molders and molding machine setters, operators, and tenders, metal and plastic....     163,270    22.24	46,270     21.50
+L1160:          Foundry mold and coremakers......................................................      12,790    23.97	49,860     23.13
+L1161:          Molding, coremaking, and casting machine setters, operators, and tenders, metal
+L1162:           and plastic.....................................................................     150,470    22.10	45,960     21.32
+L1163:         Multiple machine tool setters, operators, and tenders, metal and plastic..........     124,590    24.05	50,030     22.68
+L1164:         Tool and die makers...............................................................      56,930    32.14	66,860     30.79
+L1165:         Welding, soldering, and brazing workers...........................................     447,810    27.07	56,300     25.36
+L1166:          Welders, cutters, solderers, and brazers.........................................     416,210    27.29	56,760     25.84
+L1167:          Welding, soldering, and brazing machine setters, operators, and tenders..........      31,600    24.15	50,220     23.04
+L1168:         Miscellaneous metal workers and plastic workers...................................      73,880    23.66	49,210     22.42
+L1169:          Heat treating equipment setters, operators, and tenders, metal and plastic.......      14,000    24.26	50,450     23.44
+L1170:          Layout workers, metal and plastic................................................       5,970    31.98	66,520     30.71
+L1171:          Plating machine setters, operators, and tenders, metal and plastic...............      32,410    21.69	45,100     21.14
+L1172:          Tool grinders, filers, and sharpeners............................................       5,600    25.59	53,240     24.07
+L1173:          Metal workers and plastic workers, all other.....................................      15,900    23.36	48,580     22.09
+L1174:        Printing workers...................................................................     201,290    22.74	47,290     22.03
+L1175:         Printing workers..................................................................     201,290    22.74	47,290     22.03
+L1176:          Prepress technicians and workers.................................................      23,840    24.43	50,800     23.41
+L1177:          Printing press operators.........................................................     144,260    22.77	47,360     22.01
+L1178:          Print binding and finishing workers..............................................      33,180    21.38	44,460     20.33
+L1179:        Textile, apparel, and furnishings workers..........................................     454,710    18.19	37,840     17.50
+L1180:         Laundry and dry-cleaning workers..................................................     198,040    16.79	34,920     16.78
+L1181:         Pressers, textile, garment, and related materials.................................      26,120    16.65	34,640     16.85
+L1182:         Sewing machine operators..........................................................     104,880    18.08	37,600     17.63
+L1183:         Shoe and leather workers..........................................................      10,730    18.40	38,280     17.97
+L1184:          Shoe and leather workers and repairers...........................................       7,450    18.83	39,160     18.17
+L1185:          Shoe machine operators and tenders...............................................       3,280    17.44	36,280     17.14
+L1186:         Tailors, dressmakers, and sewers..................................................      16,110    21.19	44,060     19.28
+L1187:          Sewers, hand.....................................................................       2,190    17.89	37,210     17.54
+L1188:          Tailors, dressmakers, and custom sewers..........................................      13,920    21.70	45,140     20.02
+L1189:         Textile machine setters, operators, and tenders...................................      49,350    19.33	40,200     18.73
+L1190:          Textile bleaching and dyeing machine operators and tenders.......................       5,310    19.41	40,380     18.36
+L1191:          Textile cutting machine setters, operators, and tenders..........................       9,000    19.01	39,530     18.64
+L1192:          Textile knitting and weaving machine setters, operators, and tenders.............      13,030    19.58     40,720     19.01
+L1193:          Textile winding, twisting, and drawing out machine setters, operators, and
+L1194:           tenders.........................................................................      22,020    19.29	40,120     18.59
+L1195:         Miscellaneous textile, apparel, and furnishings workers...........................      49,480    22.72	47,250     21.17
+L1196:          Extruding and forming machine setters, operators, and tenders, synthetic and
+L1197:           glass fibers....................................................................      12,850    23.36	48,580     22.29
+L1198:          Fabric and apparel patternmakers.................................................       2,950    34.34	71,420     30.17
+L1199:          Upholsterers.....................................................................      20,140    22.76	47,340     22.28
+L1200:          Textile, apparel, and furnishings workers, all other.............................      13,530    19.50	40,560     17.93
+L1201:        Woodworkers........................................................................     199,920    21.94	45,630     21.78
+L1202:         Cabinetmakers and bench carpenters................................................      77,170    23.22	48,290     22.44
+L1203:         Furniture finishers...............................................................      14,480    21.78	45,300     21.41
+L1204:         Model makers and patternmakers, wood..............................................         500    28.58	59,450     24.57
+L1205:          Model makers, wood...............................................................         280    30.61	63,670     27.19
+L1206:          Patternmakers, wood..............................................................         220    26.08	54,240     23.86
+L1207:         Woodworking machine setters, operators, and tenders...............................     102,270    20.95	43,570     20.72
+L1208:          Sawing machine setters, operators, and tenders, wood.............................      40,850    20.95	43,580     20.56
+L1209:          Woodworking machine setters, operators, and tenders, except sawing...............      61,420    20.95	43,570     20.86
+L1210:         Woodworkers, all other............................................................       5,490    22.15	46,070     21.41
+L1211:        Plant and system operators.........................................................     281,600    37.16	77,280     35.63
+L1212:         Power plant operators, distributors, and dispatchers..............................      42,980    50.32    104,660     50.52
+L1213:          Nuclear power reactor operators..................................................       5,150    58.36    121,380     59.08
+L1214:          Power distributors and dispatchers...............................................       8,520    53.52    111,320     51.31
+L1215:          Power plant operators............................................................      29,320    47.97	99,790     49.06
+L1216:         Stationary engineers and boiler operators.........................................      28,250    40.37	83,960     37.80
+L1217:         Water and wastewater treatment plant and system operators.........................     128,490    30.07	62,540     28.86
+L1218:         Miscellaneous plant and system operators..........................................      81,880    40.27	83,760     40.19
+L1219:          Chemical plant and system operators..............................................      16,610    38.45	79,970     37.56
+L1220:          Gas plant operators..............................................................      18,030    42.65	88,710     42.22
+L1221:          Petroleum pump system operators, refinery operators, and gaugers.................      33,160    43.57	90,630     46.50
+L1222:          Plant and system operators, all other............................................      14,080    31.59	65,700     30.03
+L1223:        Other production occupations.......................................................   2,527,750    24.28	50,510     22.62
+L1224:         Chemical processing machine setters, operators, and tenders.......................     199,730    28.51	59,300 	   27.09
+L1225:          Chemical equipment operators and tenders.........................................     139,630    29.19	60,710     27.90
+L1226:          Separating, filtering, clarifying, precipitating, and still machine setters,
+L1227:           operators, and tenders..........................................................      60,100    26.94	56,030     24.81
+L1228:         Crushing, grinding, polishing, mixing, and blending workers.......................     131,430    24.71	51,390     23.31
+L1229:          Crushing, grinding, and polishing machine setters, operators, and tenders........      26,000    24.70	51,380     23.34
+L1230:          Grinding and polishing workers, hand.............................................      10,510    21.64	45,020     20.51
+L1231:          Mixing and blending machine setters, operators, and tenders......................      94,920    25.04	52,090     23.55
+L1232:         Cutting workers...................................................................      51,040    22.45	46,700     22.20
+L1233:          Cutters and trimmers, hand.......................................................       6,060    19.74	41,050     18.28
+L1234:          Cutting and slicing machine setters, operators, and tenders......................      44,980    22.82	47,460     22.39
+L1235:         Extruding, forming, pressing, and compacting machine setters, operators, and
+L1236:          tenders..........................................................................      58,770    22.72	47,260     22.00
+L1237:         Furnace, kiln, oven, drier, and kettle operators and tenders......................      14,280    24.49	50,940     23.10
+L1238:         Inspectors, testers, sorters, samplers, and weighers..............................     597,370    25.70	53,450     23.35
+L1239:         Jewelers and precious stone and metal workers.....................................      22,440    27.87	57,960     25.26
+L1240:         Dental and ophthalmic laboratory technicians and medical appliance technicians....      64,350    24.42	50,800     22.63
+L1241:          Dental laboratory technicians....................................................      34,410    26.10	54,290     23.85
+L1242:          Medical appliance technicians....................................................      11,280    25.35	52,730     23.09
+L1243:          Ophthalmic laboratory technicians................................................      18,660    20.76	43,190     18.97
+L1244:         Packaging and filling machine operators and tenders...............................     379,060    21.44	44,590     20.78
+L1245:         Painting workers..................................................................     166,680    25.13	52,270     23.10
+L1246:          Painting, coating, and decorating workers........................................       7,940    21.73	45,210     20.00
+L1247:          Coating, painting, and spraying machine setters, operators, and tenders..........     158,740    25.30	52,620     23.20
+L1248:         Semiconductor processing technicians..............................................      31,460    28.93	60,180     24.73
+L1249:         Photographic process workers and processing machine operators.....................       4,800    22.14	46,050     19.52
+L1250:         Computer numerically controlled tool operators and programmers....................     197,950    27.35	56,890     25.67
+L1251:          Computer numerically controlled tool operators...................................     169,450    26.11	54,320     24.37
+L1252:          Computer numerically controlled tool programmers.................................      28,500    34.72	72,210     32.75
+L1253:         Miscellaneous production workers..................................................     608,390    21.88	45,520     20.75
+L1254:          Adhesive bonding machine operators and tenders...................................      11,500    22.53	46,850     22.34
+L1255:          Cleaning, washing, and metal pickling equipment operators and tenders............      14,760    21.44	44,600     20.93
+L1256:          Cooling and freezing equipment operators and tenders.............................       6,900    21.61	44,940     19.87
+L1257:          Etchers and engravers............................................................       7,750    22.27	46,320     20.82
+L1258:          Molders, shapers, and casters, except metal and plastic..........................      33,190    22.84	47,500     22.20
+L1259:          Paper goods machine setters, operators, and tenders..............................      96,130    25.40	52,840     24.17
+L1260:          Tire builders....................................................................      20,770    27.48	57,160     27.59
+L1261:          Helpers--production workers......................................................     165,700    19.77	41,120     18.78
+L1262:          Production workers, all other....................................................     251,700    21.34	44,380     19.29
+L1263:     Transportation and material moving occupations                                          13,677,150    23.96	49,850     21.32
+L1264:        Supervisors of transportation and material moving workers..........................     633,400    32.13	66,830     30.21
+L1265:         First-line supervisors of transportation and material moving workers..............     633,400    32.13	66,830     30.21
+L1266:          Aircraft cargo handling supervisors..............................................       9,760    31.26	65,010     27.97
+L1267:          First-line supervisors of transportation and material moving workers, except
+L1268:           aircraft cargo handling supervisors.............................................     623,640    32.14	66,860     30.23
+L1269:        Air transportation workers.........................................................     320,540     (�)     160,070      (�)
+L1270:         Aircraft pilots and flight engineers..............................................     151,190     (�)     243,730      (�)
+L1271:          Airline pilots, copilots, and flight engineers...................................     103,560     (�)     288,650      (�)
+L1272:          Commercial pilots................................................................      47,630     (�)     146,080      (�)
+L1273:         Air traffic controllers and airfield operations specialists.......................      37,700    54.38    113,100     48.74
+L1274:          Air traffic controllers..........................................................      22,510    70.43    146,490     71.19
+L1275:          Airfield operations specialists..................................................      15,190    30.58	63,610     27.33
+L1276:         Flight attendants.................................................................     131,650     (�)	77,440      (�)
+L1277:        Motor vehicle operators............................................................   4,365,780    25.47	52,980     23.74
+L1278:         Ambulance drivers and attendants, except emergency medical technicians............      12,630    17.41	36,210     17.04
+L1279:         Driver/sales workers and truck drivers............................................   3,454,520    26.13	54,350     24.23
+L1280:          Driver/sales workers.............................................................     409,180    19.58	40,730     18.64
+L1281:          Heavy and tractor-trailer truck drivers..........................................   2,062,040    28.71	59,710     28.19
+L1282:          Light truck drivers..............................................................     983,300    23.45	48,770     21.57
+L1283:         Passenger vehicle drivers.........................................................     851,750    23.18	48,220     22.47
+L1284:          Bus drivers, school..............................................................     402,930    23.28	48,430     23.04
+L1285:          Bus drivers, transit and intercity...............................................     159,240    28.98	60,280     28.39
+L1286:          Shuttle drivers and chauffeurs...................................................     248,530    19.17	39,880     17.93
+L1287:          Taxi drivers.....................................................................      41,050    24.01	49,930     20.24
+L1288:         Motor vehicle operators, all other................................................      46,880    20.40	42,430     17.87
+L1289:        Rail transportation workers........................................................     107,550    38.12	79,290     37.90
+L1290:         Locomotive engineers and operators................................................      37,380    40.42	84,070     38.43
+L1291:          Locomotive engineers.............................................................      33,470    41.30	85,900     39.14
+L1292:          Rail yard engineers, dinkey operators, and hostlers..............................       3,920    32.91	68,450     29.14
+L1293:         Railroad brake, signal, and switch operators and locomotive firers................      12,400    33.19	69,030     33.10
+L1294:         Railroad conductors and yardmasters...............................................      46,440    38.03	79,100     37.50
+L1295:         Subway and streetcar operators....................................................      10,200    37.10	77,170     41.53
+L1296:         Rail transportation workers, all other............................................       1,120    28.91	60,140     27.10
+L1297:        Water transportation workers.......................................................      79,400    40.57	84,390     34.55
+L1298:         Sailors and marine oilers.........................................................      31,670    27.32	56,830     24.77
+L1299:         Ship and boat captains and operators..............................................      39,330    48.43    100,730     41.80
+L1300:          Captains, mates, and pilots of water vessels.....................................      36,850    49.87    103,720     44.45
+L1301:          Motorboat operators..............................................................       2,480    27.05	56,270     22.85
+L1302:         Ship engineers....................................................................       8,400    53.75    111,790     52.66
+L1303:        Other transportation workers.......................................................     347,240    20.04	41,680     17.53
+L1304:         Bridge and lock tenders...........................................................       3,040    26.62	55,370     27.74
+L1305:         Parking attendants................................................................     137,880    16.82	34,990     16.90
+L1306:         Transportation service attendants.................................................     133,300    18.42	38,320     17.47
+L1307:          Automotive and watercraft service attendants.....................................     102,010    17.68	36,780     17.15
+L1308:          Aircraft service attendants......................................................      31,300    20.83	43,330     19.45
+L1309:         Traffic technicians...............................................................       7,860    29.83	62,050     28.41
+L1310:         Transportation inspectors.........................................................      24,500    42.57	88,540     44.28
+L1311:         Passenger attendants..............................................................      27,110    18.18	37,820     18.14
+L1312:         Transportation workers, all other.................................................      13,550    24.47	50,890     21.95
+L1313:        Material moving workers............................................................   7,823,240    20.10	41,810     18.75
+L1314:         Conveyor operators and tenders....................................................      22,930    21.68	45,080     20.39
+L1315:         Crane and tower operators.........................................................      42,890    34.68	72,130     32.73
+L1316:         Dredge operators..................................................................       1,040    26.98	56,120     23.86
+L1317:         Hoist and winch operators.........................................................       2,600    32.55	67,710     27.14
+L1318:         Industrial truck and tractor operators............................................     774,420    23.25	48,370     22.32
+L1319:         Laborers and material movers......................................................   6,766,670    19.44	40,440     18.33
+L1320:          Cleaners of vehicles and equipment...............................................     380,430    17.78	36,980     17.23
+L1321:          Laborers and freight, stock, and material movers, hand...........................   2,950,280    20.32	42,260     19.35
+L1322:          Machine feeders and offbearers...................................................      42,330    20.99	43,660     19.82
+L1323:          Packers and packagers, hand......................................................     559,820    18.05	37,540     17.44
+L1324:          Stockers and order fillers.......................................................   2,833,810    19.01	39,540     17.95
+L1325:         Pumping station operators.........................................................      31,270    33.10	68,840     31.34
+L1326:          Gas compressor and gas pumping station operators.................................       3,510    35.87	74,610     37.17
+L1327:          Pump operators, except wellhead pumpers..........................................       9,780    30.75	63,960     29.70
+L1328:          Wellhead pumpers.................................................................      17,990    33.83	70,370     33.63
+L1329:         Refuse and recyclable material collectors.........................................     147,240    25.39	52,820     23.89
+L1330:         Tank car, truck, and ship loaders.................................................      10,700    28.83	59,970     28.30
+L1331:         Material moving workers, all other................................................      23,480    21.94     45,640     20.10
+L1332:          1 Annual wages have been calculated by multiplying the hourly mean wage by a "year-round, full-time" hours figure of 2,080
+L1333:             hours; for those occupations where there is not an hourly mean wage published, the annual wage has been directly
+L1334:             calculated from the reported survey data.
+L1335: 
+L1336:          2 Wages for some occupations that do not generally work year-round, full time, are reported either as hourly wages or
+L1337:             annual salaries, depending on how they are typically paid.
+L1338: cite149†Table of Contents L1339: 
+L1340: Last Modified Date: May 15, 2026
+L1341: 
+L1342: 
+L1343: 
+L1344:   * cite1†Home L1345:   * cite31†Subjects L1346:   * cite81†Data Tools L1347:   * cite109†Publications L1348:   * cite124†Economic Releases L1349:   * cite139†Classroom L1350:   * cite150†Beta L1351: 
+L1352: cite151†Image: U.S. Bureau of Labor Statistics Logo  L1353: U.S. Bureau of Labor Statistics Occupational Employment and Wage Statistics Office of Employment and Unemployment Statistics Suitland Federal Center Floor 3 4600 Silver Hill Road Washington, DC 20212-0002 Telephone: 202-691-6569 cite152†www.bls.gov/OES cite153†Contact OEWS L1354: 
+

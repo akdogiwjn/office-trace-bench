@@ -1,0 +1,599 @@
+{
+  "schema_version": "office-dataset-v1",
+  "kind": "pdf",
+  "dataset_id": "sba1919",
+  "domain": "business_finance_training",
+  "task": "Batch-fill and render version-pinned SBA Form 1919 using fictional business records",
+  "form": "sba1919_2024.pdf",
+  "records": "synthetic_applicants.json",
+  "records_key": "applicants",
+  "requirements": {
+    "page_count": 7,
+    "field_count": 127,
+    "record_count": 10,
+    "field_rules": [
+      {
+        "semantic": "business_name",
+        "field_id": "applicantname",
+        "value_from": "business_name"
+      },
+      {
+        "semantic": "operating_name",
+        "field_id": "operatingnbusname",
+        "value_from": "operating_name"
+      },
+      {
+        "semantic": "trade_name",
+        "field_id": "dba",
+        "value_from": "trade_name"
+      },
+      {
+        "semantic": "industry_code",
+        "field_id": "PrimarIndustry",
+        "value_from": "industry_code"
+      },
+      {
+        "semantic": "phone",
+        "field_id": "busphone",
+        "value_from": "phone"
+      },
+      {
+        "semantic": "operation_year",
+        "field_id": "yearbeginoperations",
+        "value_from": "operation_year"
+      },
+      {
+        "semantic": "business_address",
+        "field_id": "Business Address",
+        "value_from": "business_address"
+      },
+      {
+        "semantic": "project_address",
+        "field_id": "Project Address",
+        "value_from": "project_address"
+      },
+      {
+        "semantic": "contact_name",
+        "field_id": "Primary Contact Name",
+        "value_from": "contact_name"
+      },
+      {
+        "semantic": "contact_email",
+        "field_id": "Primary Contact Email Address",
+        "value_from": "contact_email"
+      },
+      {
+        "semantic": "existing_employees",
+        "field_id": " of existing employees including owners all parttime fulltime and all employees of domestic and foreign Affiliates  do not convert to FTE",
+        "value_from": "existing_employees"
+      },
+      {
+        "semantic": "retained_jobs",
+        "field_id": " of FTE jobs savedretained because of the loan including owners",
+        "value_from": "retained_jobs"
+      },
+      {
+        "semantic": "new_jobs",
+        "field_id": " of new FTE jobs created because of the loan including owners",
+        "value_from": "new_jobs"
+      },
+      {
+        "semantic": "owner_name",
+        "field_id": "Owners Legal Name First name Last nameRow1",
+        "value_from": "owner_name"
+      },
+      {
+        "semantic": "owner_title",
+        "field_id": "TitleRow1",
+        "value_from": "owner_title"
+      },
+      {
+        "semantic": "owner_percentage",
+        "field_id": "Ownership Row1",
+        "value_from": "owner_percentage"
+      },
+      {
+        "semantic": "owner_address",
+        "field_id": "Home Address Street City State Zip Code No PO BoxRow1",
+        "value_from": "owner_address"
+      },
+      {
+        "semantic": "working_capital_amount",
+        "field_id": "Working Capital amount",
+        "value_from": "working_capital_amount"
+      },
+      {
+        "semantic": "flag_OC",
+        "field_id": "OC",
+        "value_from": "flags.OC",
+        "choices": {
+          "true": "/On",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_EPC",
+        "field_id": "EPC",
+        "value_from": "flags.EPC",
+        "choices": {
+          "true": "/On",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_soleprop",
+        "field_id": "soleprop",
+        "value_from": "flags.soleprop",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_partnership",
+        "field_id": "partnership",
+        "value_from": "flags.partnership",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_ccorp",
+        "field_id": "ccorp",
+        "value_from": "flags.ccorp",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_scorp",
+        "field_id": "scorp",
+        "value_from": "flags.scorp",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_llc",
+        "field_id": "llc",
+        "value_from": "flags.llc",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_etother",
+        "field_id": "etother",
+        "value_from": "flags.etother",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "flag_working capital",
+        "field_id": "working capital",
+        "value_from": "flags.working capital",
+        "choices": {
+          "true": "/On",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_1yes",
+        "field_id": "1yes",
+        "value_from": "answers.1yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_1no",
+        "field_id": "1no",
+        "value_from": "answers.1no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_2yes",
+        "field_id": "2yes",
+        "value_from": "answers.2yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_2no",
+        "field_id": "2no",
+        "value_from": "answers.2no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_3yes",
+        "field_id": "3yes",
+        "value_from": "answers.3yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_3no",
+        "field_id": "3no",
+        "value_from": "answers.3no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_4yes",
+        "field_id": "4yes",
+        "value_from": "answers.4yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_4no",
+        "field_id": "4no",
+        "value_from": "answers.4no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_5yes",
+        "field_id": "5yes",
+        "value_from": "answers.5yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_5no",
+        "field_id": "5no",
+        "value_from": "answers.5no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_6yes",
+        "field_id": "6yes",
+        "value_from": "answers.6yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_6no",
+        "field_id": "6no",
+        "value_from": "answers.6no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_7yes",
+        "field_id": "7yes",
+        "value_from": "answers.7yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_7no",
+        "field_id": "7no",
+        "value_from": "answers.7no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_8yes",
+        "field_id": "8yes",
+        "value_from": "answers.8yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_8no",
+        "field_id": "8no",
+        "value_from": "answers.8no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_9yes",
+        "field_id": "9yes",
+        "value_from": "answers.9yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_9no",
+        "field_id": "9no",
+        "value_from": "answers.9no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_10yes",
+        "field_id": "10yes",
+        "value_from": "answers.10yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_10no",
+        "field_id": "10no",
+        "value_from": "answers.10no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_11yes",
+        "field_id": "11yes",
+        "value_from": "answers.11yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_11no",
+        "field_id": "11no",
+        "value_from": "answers.11no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_12yes",
+        "field_id": "12yes",
+        "value_from": "answers.12yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_12no",
+        "field_id": "12no",
+        "value_from": "answers.12no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_13yes",
+        "field_id": "13yes",
+        "value_from": "answers.13yes",
+        "choices": {
+          "true": "/Yes",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "question_13no",
+        "field_id": "13no",
+        "value_from": "answers.13no",
+        "choices": {
+          "true": "/No",
+          "false": "/Off"
+        }
+      }
+    ],
+    "protected_blank": [
+      "401k or ROBS 401k Trust",
+      "5a Provide the estimated total export sales this loan will support",
+      "5b List of principal countries of Export list at least 1",
+      "5b2 List of principal countries of Export list at least 1",
+      "5b3 List of principal countries of Export list at least 1",
+      "5initials",
+      "Acquisition of Inventory",
+      "Acquisition of inventory amount",
+      "Acquisition/installation of equipment amount",
+      "Acquisitioninstallation of equipment",
+      "American Indian or Alaska Native",
+      "Asian",
+      "Black or African American",
+      "Business TIN EIN SSN",
+      "Business acquisition (Change of Ownership) amount",
+      "Business acquisition Change of Ownership",
+      "Cooperative",
+      "Date",
+      "Debt Refinancing amount",
+      "DebtRefi",
+      "Employee Stock Ownership Plan ESOP",
+      "GenderNotDisclosed",
+      "Hispanic or Latino",
+      "Home Address Street City State Zip Code No PO BoxRow2",
+      "Home Address Street City State Zip Code No PO BoxRow3",
+      "Home Address Street City State Zip Code No PO BoxRow4",
+      "Home Address Street City State Zip Code No PO BoxRow5",
+      "Native Hawaiian or Pacific Islander",
+      "NativeAmerican TribalOwned Business",
+      "NonVeteran",
+      "Not Disclosed",
+      "Not Disclosed_ethnicity",
+      "Not Disclosed_race",
+      "Not Hispanic or Latino",
+      "Other",
+      "Other amount",
+      "Other amount2",
+      "OtherPurpose",
+      "OtherPurpose2",
+      "Owners Legal Name First name Last name",
+      "Owners Legal Name First name Last nameRow2",
+      "Owners Legal Name First name Last nameRow3",
+      "Owners Legal Name First name Last nameRow4",
+      "Owners Legal Name First name Last nameRow5",
+      "Owners Position",
+      "Ownership Row2",
+      "Ownership Row3",
+      "Ownership Row4",
+      "Ownership Row5",
+      "Print Name",
+      "Purchase/Construction of Commercial Real Estate amount",
+      "PurchaseConstruction of Commercial Real Estate",
+      "ServiceDisabled Veteran",
+      "Signature of Authorized Representative of Applicant",
+      "Spouse of Veteran",
+      "TIN SSNEINRow1",
+      "TIN SSNEINRow2",
+      "TIN SSNEINRow3",
+      "TIN SSNEINRow4",
+      "TIN SSNEINRow5",
+      "Title",
+      "TitleRow2",
+      "TitleRow3",
+      "TitleRow4",
+      "TitleRow5",
+      "UniqueEntityID",
+      "Veteran",
+      "White",
+      "entityother",
+      "female",
+      "male",
+      "otherpurp1",
+      "otherpurp2",
+      "speowntypeother"
+    ],
+    "minimum_pdf_bytes": 100000,
+    "minimum_png_bytes": 10000,
+    "visible_changes": [
+      {
+        "page": 1,
+        "minimum_changed_pixels": 500,
+        "pixel_threshold": 12
+      },
+      {
+        "page": 2,
+        "minimum_changed_pixels": 100,
+        "pixel_threshold": 12
+      },
+      {
+        "page": 3,
+        "minimum_changed_pixels": 50,
+        "pixel_threshold": 12
+      }
+    ]
+  },
+  "summary_contract": {
+    "input_form": "sba1919_2024.pdf",
+    "applicant_count": 10,
+    "filled_pdf_count": 10,
+    "rendered_page_count": 77,
+    "ssn_and_signatures_left_blank": true,
+    "fill_script_invocations": 10,
+    "render_script_invocations": 11
+  },
+  "summary_aliases": {
+    "input_form": [
+      "input/sba1919_2024.pdf"
+    ]
+  },
+  "required_outputs": [
+    "check_fillable_fields.log",
+    "form_field_info.json",
+    "field_values",
+    "filled",
+    "rendered",
+    "batch_summary.json",
+    "business_verification.json"
+  ],
+  "input_files": {
+    "input/pdf_dataset_sources.md": "34dd29cc8d71ef9a2d19c8a423f24f77cdbb006fce2c784e813d203fb80cf281",
+    "input/sba1919_2024.pdf": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+    "input/synthetic_applicants.json": "4931c2c9f56878cd60507fb6b223e283cb3dae8dedc029ff54f6905209b839d2"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "e8569582c4bfb54f4267afdb59e4a2dde2d714c5a8d8350490802e5f5aa6f86f",
+  "prompt_template": "pdf.txt",
+  "prompt_template_sha256": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+  "prompt_contract": {
+    "task_subject": "the version-pinned SBA Form 1919 2024 fillable PDF",
+    "record_noun": "applicants",
+    "record_singular": "applicant",
+    "first_record_name": "applicant_01",
+    "record_pattern": "applicant_XX",
+    "form_description": "the unmodified seven-page SBA Form 1919 04.2024 native fillable form",
+    "metadata_file": "pdf_dataset_sources.md",
+    "fill_description": "the supplied business and owner names/addresses, business type, workforce counts, working-capital amount and question answers using semantic field rules in input/dataset_manifest.json",
+    "safe_answer_description": "copy the supplied fictional values and checkbox answers verbatim; do not infer borrower eligibility",
+    "protected_description": "all business/owner TINs, Unique Entity ID, demographics, initials, signatures/dates, certification print-name/title and all undeclared fields"
+  },
+  "runtime_case": "SUB-MEM-PDF-SBA1919-01",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "trace_rules": [
+    {
+      "pattern": "\\bverify_office\\.py\\b",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "check_fillable_fields\\.py",
+      "operation": "check_fillability"
+    },
+    {
+      "pattern": "extract_form_field_info\\.py",
+      "operation": "extract_field_schema"
+    },
+    {
+      "pattern": "fill_fillable_fields\\.py",
+      "operation": "fill_form"
+    },
+    {
+      "pattern": "convert_pdf_to_images\\.py",
+      "operation": "render_pdf"
+    }
+  ],
+  "source_provenance": {
+    "url": "https://sba.app.box.com/s/iud0tv5euaw4cdvv3itmbrc2tp2p7etf",
+    "file_name": "SBA Form 1919 04.2024.pdf",
+    "form_sha256": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+    "public_box_file_id": "1584063031191",
+    "public_box_sha1": "0e7cd9a8dfc50bccb8021b51597e58ce84d324ac",
+    "public_box_sha1_matches": true,
+    "latest_2025_download_available": false,
+    "official_form_modified": false,
+    "records": "synthetic; not submitted forms"
+  }
+}

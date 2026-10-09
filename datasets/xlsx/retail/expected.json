@@ -1,0 +1,2378 @@
+{
+  "baseline": {
+    "sheet_order": [
+      "Raw_Data",
+      "Monthly_Summary",
+      "Category_Summary",
+      "Growth_Summary",
+      "Sales_Mix",
+      "Source_Summary",
+      "Reconciliation"
+    ],
+    "raw_sheets": {
+      "Raw_Data": {
+        "rows": 100001,
+        "columns": 16,
+        "sha256": "b523c9e702b13dec8a1a0293a084cddf767e1e2eb0ebda7224c587a9dd8f910c"
+      }
+    },
+    "formulas": {
+      "Monthly_Summary": {},
+      "Category_Summary": {},
+      "Growth_Summary": {
+        "B3": "=MONTHLY_SUMMARY!B3/MONTHLY_SUMMARY!B2-1",
+        "B4": "=MONTHLY_SUMMARY!B4/MONTHLY_SUMMARY!B3-1",
+        "B5": "=MONTHLY_SUMMARY!B5/MONTHLY_SUMMARY!B4-1",
+        "B6": "=MONTHLY_SUMMARY!B6/MONTHLY_SUMMARY!B5-1",
+        "B7": "=MONTHLY_SUMMARY!B7/MONTHLY_SUMMARY!B6-1",
+        "B8": "=MONTHLY_SUMMARY!B8/MONTHLY_SUMMARY!B7-1",
+        "B9": "=MONTHLY_SUMMARY!B9/MONTHLY_SUMMARY!B8-1",
+        "B10": "=MONTHLY_SUMMARY!B10/MONTHLY_SUMMARY!B9-1",
+        "B11": "=MONTHLY_SUMMARY!B11/MONTHLY_SUMMARY!B10-1",
+        "B12": "=MONTHLY_SUMMARY!B12/MONTHLY_SUMMARY!B11-1",
+        "B13": "=MONTHLY_SUMMARY!B13/MONTHLY_SUMMARY!B12-1",
+        "B14": "=MONTHLY_SUMMARY!B14/MONTHLY_SUMMARY!B13-1",
+        "C14": "=MONTHLY_SUMMARY!B14/MONTHLY_SUMMARY!B2-1",
+        "B15": "=MONTHLY_SUMMARY!B15/MONTHLY_SUMMARY!B14-1",
+        "C15": "=MONTHLY_SUMMARY!B15/MONTHLY_SUMMARY!B3-1",
+        "B16": "=MONTHLY_SUMMARY!B16/MONTHLY_SUMMARY!B15-1",
+        "C16": "=MONTHLY_SUMMARY!B16/MONTHLY_SUMMARY!B4-1",
+        "B17": "=MONTHLY_SUMMARY!B17/MONTHLY_SUMMARY!B16-1",
+        "C17": "=MONTHLY_SUMMARY!B17/MONTHLY_SUMMARY!B5-1",
+        "B18": "=MONTHLY_SUMMARY!B18/MONTHLY_SUMMARY!B17-1",
+        "C18": "=MONTHLY_SUMMARY!B18/MONTHLY_SUMMARY!B6-1",
+        "B19": "=MONTHLY_SUMMARY!B19/MONTHLY_SUMMARY!B18-1",
+        "C19": "=MONTHLY_SUMMARY!B19/MONTHLY_SUMMARY!B7-1",
+        "B20": "=MONTHLY_SUMMARY!B20/MONTHLY_SUMMARY!B19-1",
+        "C20": "=MONTHLY_SUMMARY!B20/MONTHLY_SUMMARY!B8-1",
+        "B21": "=MONTHLY_SUMMARY!B21/MONTHLY_SUMMARY!B20-1",
+        "C21": "=MONTHLY_SUMMARY!B21/MONTHLY_SUMMARY!B9-1",
+        "B22": "=MONTHLY_SUMMARY!B22/MONTHLY_SUMMARY!B21-1",
+        "C22": "=MONTHLY_SUMMARY!B22/MONTHLY_SUMMARY!B10-1",
+        "B23": "=MONTHLY_SUMMARY!B23/MONTHLY_SUMMARY!B22-1",
+        "C23": "=MONTHLY_SUMMARY!B23/MONTHLY_SUMMARY!B11-1",
+        "B24": "=MONTHLY_SUMMARY!B24/MONTHLY_SUMMARY!B23-1",
+        "C24": "=MONTHLY_SUMMARY!B24/MONTHLY_SUMMARY!B12-1",
+        "B25": "=MONTHLY_SUMMARY!B25/MONTHLY_SUMMARY!B24-1",
+        "C25": "=MONTHLY_SUMMARY!B25/MONTHLY_SUMMARY!B13-1"
+      },
+      "Sales_Mix": {},
+      "Source_Summary": {},
+      "Reconciliation": {
+        "B2": "=SUM(RAW_DATA!H2:H100001)",
+        "B3": "=SUM(MONTHLY_SUMMARY!B2:B25)",
+        "B4": "=IF(B2=B3,\"PASS\",\"REVIEW\")",
+        "B5": "=COUNTA(RAW_DATA!A2:A100001)",
+        "B7": "=IF(B5=B6,\"PASS\",\"REVIEW\")",
+        "B15": "=IF(AND(B4=\"PASS\",B7=\"PASS\"),\"PASS\",\"REVIEW\")"
+      }
+    },
+    "values": {
+      "Monthly_Summary": {
+        "A1": [
+          "str",
+          "Period"
+        ],
+        "B1": [
+          "str",
+          "Selected-category sales USD"
+        ],
+        "A2": [
+          "str",
+          "2023-01"
+        ],
+        "B2": [
+          "number",
+          "293086000000"
+        ],
+        "A3": [
+          "str",
+          "2023-02"
+        ],
+        "B3": [
+          "number",
+          "288763000000"
+        ],
+        "A4": [
+          "str",
+          "2023-03"
+        ],
+        "B4": [
+          "number",
+          "286013000000"
+        ],
+        "A5": [
+          "str",
+          "2023-04"
+        ],
+        "B5": [
+          "number",
+          "287283000000"
+        ],
+        "A6": [
+          "str",
+          "2023-05"
+        ],
+        "B6": [
+          "number",
+          "289617000000"
+        ],
+        "A7": [
+          "str",
+          "2023-06"
+        ],
+        "B7": [
+          "number",
+          "292020000000"
+        ],
+        "A8": [
+          "str",
+          "2023-07"
+        ],
+        "B8": [
+          "number",
+          "289950000000"
+        ],
+        "A9": [
+          "str",
+          "2023-08"
+        ],
+        "B9": [
+          "number",
+          "292523000000"
+        ],
+        "A10": [
+          "str",
+          "2023-09"
+        ],
+        "B10": [
+          "number",
+          "293517000000"
+        ],
+        "A11": [
+          "str",
+          "2023-10"
+        ],
+        "B11": [
+          "number",
+          "292272000000"
+        ],
+        "A12": [
+          "str",
+          "2023-11"
+        ],
+        "B12": [
+          "number",
+          "292019000000"
+        ],
+        "A13": [
+          "str",
+          "2023-12"
+        ],
+        "B13": [
+          "number",
+          "290643000000"
+        ],
+        "A14": [
+          "str",
+          "2024-01"
+        ],
+        "B14": [
+          "number",
+          "289685000000"
+        ],
+        "A15": [
+          "str",
+          "2024-02"
+        ],
+        "B15": [
+          "number",
+          "292063000000"
+        ],
+        "A16": [
+          "str",
+          "2024-03"
+        ],
+        "B16": [
+          "number",
+          "289714000000"
+        ],
+        "A17": [
+          "str",
+          "2024-04"
+        ],
+        "B17": [
+          "number",
+          "290444000000"
+        ],
+        "A18": [
+          "str",
+          "2024-05"
+        ],
+        "B18": [
+          "number",
+          "294570000000"
+        ],
+        "A19": [
+          "str",
+          "2024-06"
+        ],
+        "B19": [
+          "number",
+          "290716000000"
+        ],
+        "A20": [
+          "str",
+          "2024-07"
+        ],
+        "B20": [
+          "number",
+          "297338000000"
+        ],
+        "A21": [
+          "str",
+          "2024-08"
+        ],
+        "B21": [
+          "number",
+          "296018000000"
+        ],
+        "A22": [
+          "str",
+          "2024-09"
+        ],
+        "B22": [
+          "number",
+          "297919000000"
+        ],
+        "A23": [
+          "str",
+          "2024-10"
+        ],
+        "B23": [
+          "number",
+          "301525000000"
+        ],
+        "A24": [
+          "str",
+          "2024-11"
+        ],
+        "B24": [
+          "number",
+          "305407000000"
+        ],
+        "A25": [
+          "str",
+          "2024-12"
+        ],
+        "B25": [
+          "number",
+          "307325000000"
+        ]
+      },
+      "Category_Summary": {
+        "A1": [
+          "str",
+          "Category"
+        ],
+        "B1": [
+          "str",
+          "Two-year sales USD"
+        ],
+        "D1": [
+          "str",
+          "Largest selected category"
+        ],
+        "A2": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "B2": [
+          "number",
+          "598417000000"
+        ],
+        "D2": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "A3": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "B3": [
+          "number",
+          "181505000000"
+        ],
+        "A4": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "B4": [
+          "number",
+          "1961884000000"
+        ],
+        "A5": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "B5": [
+          "number",
+          "268959000000"
+        ],
+        "A6": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "B6": [
+          "number",
+          "872801000000"
+        ],
+        "A7": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "B7": [
+          "number",
+          "3156864000000"
+        ]
+      },
+      "Growth_Summary": {
+        "A1": [
+          "str",
+          "Period"
+        ],
+        "B1": [
+          "str",
+          "MoM Growth"
+        ],
+        "C1": [
+          "str",
+          "YoY Growth"
+        ],
+        "A2": [
+          "str",
+          "2023-01"
+        ],
+        "B2": [
+          "number",
+          "0"
+        ],
+        "C2": [
+          "number",
+          "0"
+        ],
+        "A3": [
+          "str",
+          "2023-02"
+        ],
+        "C3": [
+          "number",
+          "0"
+        ],
+        "A4": [
+          "str",
+          "2023-03"
+        ],
+        "C4": [
+          "number",
+          "0"
+        ],
+        "A5": [
+          "str",
+          "2023-04"
+        ],
+        "C5": [
+          "number",
+          "0"
+        ],
+        "A6": [
+          "str",
+          "2023-05"
+        ],
+        "C6": [
+          "number",
+          "0"
+        ],
+        "A7": [
+          "str",
+          "2023-06"
+        ],
+        "C7": [
+          "number",
+          "0"
+        ],
+        "A8": [
+          "str",
+          "2023-07"
+        ],
+        "C8": [
+          "number",
+          "0"
+        ],
+        "A9": [
+          "str",
+          "2023-08"
+        ],
+        "C9": [
+          "number",
+          "0"
+        ],
+        "A10": [
+          "str",
+          "2023-09"
+        ],
+        "C10": [
+          "number",
+          "0"
+        ],
+        "A11": [
+          "str",
+          "2023-10"
+        ],
+        "C11": [
+          "number",
+          "0"
+        ],
+        "A12": [
+          "str",
+          "2023-11"
+        ],
+        "C12": [
+          "number",
+          "0"
+        ],
+        "A13": [
+          "str",
+          "2023-12"
+        ],
+        "C13": [
+          "number",
+          "0"
+        ],
+        "A14": [
+          "str",
+          "2024-01"
+        ],
+        "A15": [
+          "str",
+          "2024-02"
+        ],
+        "A16": [
+          "str",
+          "2024-03"
+        ],
+        "A17": [
+          "str",
+          "2024-04"
+        ],
+        "A18": [
+          "str",
+          "2024-05"
+        ],
+        "A19": [
+          "str",
+          "2024-06"
+        ],
+        "A20": [
+          "str",
+          "2024-07"
+        ],
+        "A21": [
+          "str",
+          "2024-08"
+        ],
+        "A22": [
+          "str",
+          "2024-09"
+        ],
+        "A23": [
+          "str",
+          "2024-10"
+        ],
+        "A24": [
+          "str",
+          "2024-11"
+        ],
+        "A25": [
+          "str",
+          "2024-12"
+        ]
+      },
+      "Sales_Mix": {
+        "A1": [
+          "str",
+          "Category"
+        ],
+        "B1": [
+          "str",
+          "Two-year sales USD"
+        ],
+        "A2": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "B2": [
+          "number",
+          "598417000000"
+        ],
+        "A3": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "B3": [
+          "number",
+          "181505000000"
+        ],
+        "A4": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "B4": [
+          "number",
+          "1961884000000"
+        ],
+        "A5": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "B5": [
+          "number",
+          "268959000000"
+        ],
+        "A6": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "B6": [
+          "number",
+          "872801000000"
+        ],
+        "A7": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "B7": [
+          "number",
+          "3156864000000"
+        ]
+      },
+      "Source_Summary": {
+        "A1": [
+          "str",
+          "Period"
+        ],
+        "B1": [
+          "str",
+          "Category"
+        ],
+        "C1": [
+          "str",
+          "Published sales USD"
+        ],
+        "A2": [
+          "str",
+          "2023-01"
+        ],
+        "B2": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C2": [
+          "number",
+          "132373000000"
+        ],
+        "A3": [
+          "str",
+          "2023-01"
+        ],
+        "B3": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C3": [
+          "number",
+          "12652000000"
+        ],
+        "A4": [
+          "str",
+          "2023-01"
+        ],
+        "B4": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C4": [
+          "number",
+          "7876000000"
+        ],
+        "A5": [
+          "str",
+          "2023-01"
+        ],
+        "B5": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C5": [
+          "number",
+          "80632000000"
+        ],
+        "A6": [
+          "str",
+          "2023-01"
+        ],
+        "B6": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C6": [
+          "number",
+          "34603000000"
+        ],
+        "A7": [
+          "str",
+          "2023-01"
+        ],
+        "B7": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C7": [
+          "number",
+          "24950000000"
+        ],
+        "A8": [
+          "str",
+          "2023-02"
+        ],
+        "B8": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C8": [
+          "number",
+          "128257000000"
+        ],
+        "A9": [
+          "str",
+          "2023-02"
+        ],
+        "B9": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C9": [
+          "number",
+          "11864000000"
+        ],
+        "A10": [
+          "str",
+          "2023-02"
+        ],
+        "B10": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C10": [
+          "number",
+          "7641000000"
+        ],
+        "A11": [
+          "str",
+          "2023-02"
+        ],
+        "B11": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C11": [
+          "number",
+          "81271000000"
+        ],
+        "A12": [
+          "str",
+          "2023-02"
+        ],
+        "B12": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C12": [
+          "number",
+          "35070000000"
+        ],
+        "A13": [
+          "str",
+          "2023-02"
+        ],
+        "B13": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C13": [
+          "number",
+          "24660000000"
+        ],
+        "A14": [
+          "str",
+          "2023-03"
+        ],
+        "B14": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C14": [
+          "number",
+          "126396000000"
+        ],
+        "A15": [
+          "str",
+          "2023-03"
+        ],
+        "B15": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C15": [
+          "number",
+          "11588000000"
+        ],
+        "A16": [
+          "str",
+          "2023-03"
+        ],
+        "B16": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C16": [
+          "number",
+          "7651000000"
+        ],
+        "A17": [
+          "str",
+          "2023-03"
+        ],
+        "B17": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C17": [
+          "number",
+          "80761000000"
+        ],
+        "A18": [
+          "str",
+          "2023-03"
+        ],
+        "B18": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C18": [
+          "number",
+          "35207000000"
+        ],
+        "A19": [
+          "str",
+          "2023-03"
+        ],
+        "B19": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C19": [
+          "number",
+          "24410000000"
+        ],
+        "A20": [
+          "str",
+          "2023-04"
+        ],
+        "B20": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C20": [
+          "number",
+          "127973000000"
+        ],
+        "A21": [
+          "str",
+          "2023-04"
+        ],
+        "B21": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C21": [
+          "number",
+          "11416000000"
+        ],
+        "A22": [
+          "str",
+          "2023-04"
+        ],
+        "B22": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C22": [
+          "number",
+          "7533000000"
+        ],
+        "A23": [
+          "str",
+          "2023-04"
+        ],
+        "B23": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C23": [
+          "number",
+          "80500000000"
+        ],
+        "A24": [
+          "str",
+          "2023-04"
+        ],
+        "B24": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C24": [
+          "number",
+          "35493000000"
+        ],
+        "A25": [
+          "str",
+          "2023-04"
+        ],
+        "B25": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C25": [
+          "number",
+          "24368000000"
+        ],
+        "A26": [
+          "str",
+          "2023-05"
+        ],
+        "B26": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C26": [
+          "number",
+          "130110000000"
+        ],
+        "A27": [
+          "str",
+          "2023-05"
+        ],
+        "B27": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C27": [
+          "number",
+          "11293000000"
+        ],
+        "A28": [
+          "str",
+          "2023-05"
+        ],
+        "B28": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C28": [
+          "number",
+          "7521000000"
+        ],
+        "A29": [
+          "str",
+          "2023-05"
+        ],
+        "B29": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C29": [
+          "number",
+          "80658000000"
+        ],
+        "A30": [
+          "str",
+          "2023-05"
+        ],
+        "B30": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C30": [
+          "number",
+          "35745000000"
+        ],
+        "A31": [
+          "str",
+          "2023-05"
+        ],
+        "B31": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C31": [
+          "number",
+          "24290000000"
+        ],
+        "A32": [
+          "str",
+          "2023-06"
+        ],
+        "B32": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C32": [
+          "number",
+          "132443000000"
+        ],
+        "A33": [
+          "str",
+          "2023-06"
+        ],
+        "B33": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C33": [
+          "number",
+          "11361000000"
+        ],
+        "A34": [
+          "str",
+          "2023-06"
+        ],
+        "B34": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C34": [
+          "number",
+          "7610000000"
+        ],
+        "A35": [
+          "str",
+          "2023-06"
+        ],
+        "B35": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C35": [
+          "number",
+          "80470000000"
+        ],
+        "A36": [
+          "str",
+          "2023-06"
+        ],
+        "B36": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C36": [
+          "number",
+          "35734000000"
+        ],
+        "A37": [
+          "str",
+          "2023-06"
+        ],
+        "B37": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C37": [
+          "number",
+          "24402000000"
+        ],
+        "A38": [
+          "str",
+          "2023-07"
+        ],
+        "B38": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C38": [
+          "number",
+          "130481000000"
+        ],
+        "A39": [
+          "str",
+          "2023-07"
+        ],
+        "B39": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C39": [
+          "number",
+          "11194000000"
+        ],
+        "A40": [
+          "str",
+          "2023-07"
+        ],
+        "B40": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C40": [
+          "number",
+          "7436000000"
+        ],
+        "A41": [
+          "str",
+          "2023-07"
+        ],
+        "B41": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C41": [
+          "number",
+          "80666000000"
+        ],
+        "A42": [
+          "str",
+          "2023-07"
+        ],
+        "B42": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C42": [
+          "number",
+          "35455000000"
+        ],
+        "A43": [
+          "str",
+          "2023-07"
+        ],
+        "B43": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C43": [
+          "number",
+          "24718000000"
+        ],
+        "A44": [
+          "str",
+          "2023-08"
+        ],
+        "B44": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C44": [
+          "number",
+          "131374000000"
+        ],
+        "A45": [
+          "str",
+          "2023-08"
+        ],
+        "B45": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C45": [
+          "number",
+          "11178000000"
+        ],
+        "A46": [
+          "str",
+          "2023-08"
+        ],
+        "B46": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C46": [
+          "number",
+          "7571000000"
+        ],
+        "A47": [
+          "str",
+          "2023-08"
+        ],
+        "B47": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C47": [
+          "number",
+          "81199000000"
+        ],
+        "A48": [
+          "str",
+          "2023-08"
+        ],
+        "B48": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C48": [
+          "number",
+          "36097000000"
+        ],
+        "A49": [
+          "str",
+          "2023-08"
+        ],
+        "B49": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C49": [
+          "number",
+          "25104000000"
+        ],
+        "A50": [
+          "str",
+          "2023-09"
+        ],
+        "B50": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C50": [
+          "number",
+          "132828000000"
+        ],
+        "A51": [
+          "str",
+          "2023-09"
+        ],
+        "B51": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C51": [
+          "number",
+          "10971000000"
+        ],
+        "A52": [
+          "str",
+          "2023-09"
+        ],
+        "B52": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C52": [
+          "number",
+          "7661000000"
+        ],
+        "A53": [
+          "str",
+          "2023-09"
+        ],
+        "B53": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C53": [
+          "number",
+          "81235000000"
+        ],
+        "A54": [
+          "str",
+          "2023-09"
+        ],
+        "B54": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C54": [
+          "number",
+          "36011000000"
+        ],
+        "A55": [
+          "str",
+          "2023-09"
+        ],
+        "B55": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C55": [
+          "number",
+          "24811000000"
+        ],
+        "A56": [
+          "str",
+          "2023-10"
+        ],
+        "B56": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C56": [
+          "number",
+          "130458000000"
+        ],
+        "A57": [
+          "str",
+          "2023-10"
+        ],
+        "B57": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C57": [
+          "number",
+          "10881000000"
+        ],
+        "A58": [
+          "str",
+          "2023-10"
+        ],
+        "B58": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C58": [
+          "number",
+          "7629000000"
+        ],
+        "A59": [
+          "str",
+          "2023-10"
+        ],
+        "B59": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C59": [
+          "number",
+          "81323000000"
+        ],
+        "A60": [
+          "str",
+          "2023-10"
+        ],
+        "B60": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C60": [
+          "number",
+          "37298000000"
+        ],
+        "A61": [
+          "str",
+          "2023-10"
+        ],
+        "B61": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C61": [
+          "number",
+          "24683000000"
+        ],
+        "A62": [
+          "str",
+          "2023-11"
+        ],
+        "B62": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C62": [
+          "number",
+          "130084000000"
+        ],
+        "A63": [
+          "str",
+          "2023-11"
+        ],
+        "B63": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C63": [
+          "number",
+          "11052000000"
+        ],
+        "A64": [
+          "str",
+          "2023-11"
+        ],
+        "B64": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C64": [
+          "number",
+          "7365000000"
+        ],
+        "A65": [
+          "str",
+          "2023-11"
+        ],
+        "B65": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C65": [
+          "number",
+          "81530000000"
+        ],
+        "A66": [
+          "str",
+          "2023-11"
+        ],
+        "B66": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C66": [
+          "number",
+          "37150000000"
+        ],
+        "A67": [
+          "str",
+          "2023-11"
+        ],
+        "B67": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C67": [
+          "number",
+          "24838000000"
+        ],
+        "A68": [
+          "str",
+          "2023-12"
+        ],
+        "B68": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C68": [
+          "number",
+          "130225000000"
+        ],
+        "A69": [
+          "str",
+          "2023-12"
+        ],
+        "B69": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C69": [
+          "number",
+          "10659000000"
+        ],
+        "A70": [
+          "str",
+          "2023-12"
+        ],
+        "B70": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C70": [
+          "number",
+          "7136000000"
+        ],
+        "A71": [
+          "str",
+          "2023-12"
+        ],
+        "B71": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C71": [
+          "number",
+          "81272000000"
+        ],
+        "A72": [
+          "str",
+          "2023-12"
+        ],
+        "B72": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C72": [
+          "number",
+          "36210000000"
+        ],
+        "A73": [
+          "str",
+          "2023-12"
+        ],
+        "B73": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C73": [
+          "number",
+          "25141000000"
+        ],
+        "A74": [
+          "str",
+          "2024-01"
+        ],
+        "B74": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C74": [
+          "number",
+          "129356000000"
+        ],
+        "A75": [
+          "str",
+          "2024-01"
+        ],
+        "B75": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C75": [
+          "number",
+          "10864000000"
+        ],
+        "A76": [
+          "str",
+          "2024-01"
+        ],
+        "B76": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C76": [
+          "number",
+          "7714000000"
+        ],
+        "A77": [
+          "str",
+          "2024-01"
+        ],
+        "B77": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C77": [
+          "number",
+          "81086000000"
+        ],
+        "A78": [
+          "str",
+          "2024-01"
+        ],
+        "B78": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C78": [
+          "number",
+          "35827000000"
+        ],
+        "A79": [
+          "str",
+          "2024-01"
+        ],
+        "B79": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C79": [
+          "number",
+          "24838000000"
+        ],
+        "A80": [
+          "str",
+          "2024-02"
+        ],
+        "B80": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C80": [
+          "number",
+          "131471000000"
+        ],
+        "A81": [
+          "str",
+          "2024-02"
+        ],
+        "B81": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C81": [
+          "number",
+          "10787000000"
+        ],
+        "A82": [
+          "str",
+          "2024-02"
+        ],
+        "B82": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C82": [
+          "number",
+          "7769000000"
+        ],
+        "A83": [
+          "str",
+          "2024-02"
+        ],
+        "B83": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C83": [
+          "number",
+          "81149000000"
+        ],
+        "A84": [
+          "str",
+          "2024-02"
+        ],
+        "B84": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C84": [
+          "number",
+          "35765000000"
+        ],
+        "A85": [
+          "str",
+          "2024-02"
+        ],
+        "B85": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C85": [
+          "number",
+          "25122000000"
+        ],
+        "A86": [
+          "str",
+          "2024-03"
+        ],
+        "B86": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C86": [
+          "number",
+          "130215000000"
+        ],
+        "A87": [
+          "str",
+          "2024-03"
+        ],
+        "B87": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C87": [
+          "number",
+          "10610000000"
+        ],
+        "A88": [
+          "str",
+          "2024-03"
+        ],
+        "B88": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C88": [
+          "number",
+          "7455000000"
+        ],
+        "A89": [
+          "str",
+          "2024-03"
+        ],
+        "B89": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C89": [
+          "number",
+          "81569000000"
+        ],
+        "A90": [
+          "str",
+          "2024-03"
+        ],
+        "B90": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C90": [
+          "number",
+          "35624000000"
+        ],
+        "A91": [
+          "str",
+          "2024-03"
+        ],
+        "B91": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C91": [
+          "number",
+          "24241000000"
+        ],
+        "A92": [
+          "str",
+          "2024-04"
+        ],
+        "B92": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C92": [
+          "number",
+          "129214000000"
+        ],
+        "A93": [
+          "str",
+          "2024-04"
+        ],
+        "B93": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C93": [
+          "number",
+          "10743000000"
+        ],
+        "A94": [
+          "str",
+          "2024-04"
+        ],
+        "B94": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C94": [
+          "number",
+          "7667000000"
+        ],
+        "A95": [
+          "str",
+          "2024-04"
+        ],
+        "B95": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C95": [
+          "number",
+          "82119000000"
+        ],
+        "A96": [
+          "str",
+          "2024-04"
+        ],
+        "B96": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C96": [
+          "number",
+          "35778000000"
+        ],
+        "A97": [
+          "str",
+          "2024-04"
+        ],
+        "B97": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C97": [
+          "number",
+          "24923000000"
+        ],
+        "A98": [
+          "str",
+          "2024-05"
+        ],
+        "B98": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C98": [
+          "number",
+          "132640000000"
+        ],
+        "A99": [
+          "str",
+          "2024-05"
+        ],
+        "B99": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C99": [
+          "number",
+          "10860000000"
+        ],
+        "A100": [
+          "str",
+          "2024-05"
+        ],
+        "B100": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C100": [
+          "number",
+          "7752000000"
+        ],
+        "A101": [
+          "str",
+          "2024-05"
+        ],
+        "B101": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C101": [
+          "number",
+          "82078000000"
+        ],
+        "A102": [
+          "str",
+          "2024-05"
+        ],
+        "B102": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C102": [
+          "number",
+          "36028000000"
+        ],
+        "A103": [
+          "str",
+          "2024-05"
+        ],
+        "B103": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C103": [
+          "number",
+          "25212000000"
+        ],
+        "A104": [
+          "str",
+          "2024-06"
+        ],
+        "B104": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C104": [
+          "number",
+          "128483000000"
+        ],
+        "A105": [
+          "str",
+          "2024-06"
+        ],
+        "B105": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C105": [
+          "number",
+          "10993000000"
+        ],
+        "A106": [
+          "str",
+          "2024-06"
+        ],
+        "B106": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C106": [
+          "number",
+          "7636000000"
+        ],
+        "A107": [
+          "str",
+          "2024-06"
+        ],
+        "B107": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C107": [
+          "number",
+          "82336000000"
+        ],
+        "A108": [
+          "str",
+          "2024-06"
+        ],
+        "B108": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C108": [
+          "number",
+          "36021000000"
+        ],
+        "A109": [
+          "str",
+          "2024-06"
+        ],
+        "B109": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C109": [
+          "number",
+          "25247000000"
+        ],
+        "A110": [
+          "str",
+          "2024-07"
+        ],
+        "B110": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C110": [
+          "number",
+          "132828000000"
+        ],
+        "A111": [
+          "str",
+          "2024-07"
+        ],
+        "B111": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C111": [
+          "number",
+          "11079000000"
+        ],
+        "A112": [
+          "str",
+          "2024-07"
+        ],
+        "B112": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C112": [
+          "number",
+          "7666000000"
+        ],
+        "A113": [
+          "str",
+          "2024-07"
+        ],
+        "B113": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C113": [
+          "number",
+          "82951000000"
+        ],
+        "A114": [
+          "str",
+          "2024-07"
+        ],
+        "B114": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C114": [
+          "number",
+          "37535000000"
+        ],
+        "A115": [
+          "str",
+          "2024-07"
+        ],
+        "B115": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C115": [
+          "number",
+          "25279000000"
+        ],
+        "A116": [
+          "str",
+          "2024-08"
+        ],
+        "B116": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C116": [
+          "number",
+          "132195000000"
+        ],
+        "A117": [
+          "str",
+          "2024-08"
+        ],
+        "B117": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C117": [
+          "number",
+          "11144000000"
+        ],
+        "A118": [
+          "str",
+          "2024-08"
+        ],
+        "B118": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C118": [
+          "number",
+          "7504000000"
+        ],
+        "A119": [
+          "str",
+          "2024-08"
+        ],
+        "B119": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C119": [
+          "number",
+          "82540000000"
+        ],
+        "A120": [
+          "str",
+          "2024-08"
+        ],
+        "B120": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C120": [
+          "number",
+          "37678000000"
+        ],
+        "A121": [
+          "str",
+          "2024-08"
+        ],
+        "B121": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C121": [
+          "number",
+          "24957000000"
+        ],
+        "A122": [
+          "str",
+          "2024-09"
+        ],
+        "B122": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C122": [
+          "number",
+          "132259000000"
+        ],
+        "A123": [
+          "str",
+          "2024-09"
+        ],
+        "B123": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C123": [
+          "number",
+          "11356000000"
+        ],
+        "A124": [
+          "str",
+          "2024-09"
+        ],
+        "B124": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C124": [
+          "number",
+          "7253000000"
+        ],
+        "A125": [
+          "str",
+          "2024-09"
+        ],
+        "B125": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C125": [
+          "number",
+          "83361000000"
+        ],
+        "A126": [
+          "str",
+          "2024-09"
+        ],
+        "B126": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C126": [
+          "number",
+          "38360000000"
+        ],
+        "A127": [
+          "str",
+          "2024-09"
+        ],
+        "B127": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C127": [
+          "number",
+          "25330000000"
+        ],
+        "A128": [
+          "str",
+          "2024-10"
+        ],
+        "B128": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C128": [
+          "number",
+          "135603000000"
+        ],
+        "A129": [
+          "str",
+          "2024-10"
+        ],
+        "B129": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C129": [
+          "number",
+          "11194000000"
+        ],
+        "A130": [
+          "str",
+          "2024-10"
+        ],
+        "B130": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C130": [
+          "number",
+          "7455000000"
+        ],
+        "A131": [
+          "str",
+          "2024-10"
+        ],
+        "B131": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C131": [
+          "number",
+          "83557000000"
+        ],
+        "A132": [
+          "str",
+          "2024-10"
+        ],
+        "B132": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C132": [
+          "number",
+          "38196000000"
+        ],
+        "A133": [
+          "str",
+          "2024-10"
+        ],
+        "B133": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C133": [
+          "number",
+          "25520000000"
+        ],
+        "A134": [
+          "str",
+          "2024-11"
+        ],
+        "B134": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C134": [
+          "number",
+          "139565000000"
+        ],
+        "A135": [
+          "str",
+          "2024-11"
+        ],
+        "B135": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C135": [
+          "number",
+          "11347000000"
+        ],
+        "A136": [
+          "str",
+          "2024-11"
+        ],
+        "B136": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C136": [
+          "number",
+          "7497000000"
+        ],
+        "A137": [
+          "str",
+          "2024-11"
+        ],
+        "B137": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C137": [
+          "number",
+          "83430000000"
+        ],
+        "A138": [
+          "str",
+          "2024-11"
+        ],
+        "B138": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C138": [
+          "number",
+          "38085000000"
+        ],
+        "A139": [
+          "str",
+          "2024-11"
+        ],
+        "B139": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C139": [
+          "number",
+          "25483000000"
+        ],
+        "A140": [
+          "str",
+          "2024-12"
+        ],
+        "B140": [
+          "str",
+          "Motor vehicle and parts dealers"
+        ],
+        "C140": [
+          "number",
+          "140033000000"
+        ],
+        "A141": [
+          "str",
+          "2024-12"
+        ],
+        "B141": [
+          "str",
+          "Furniture and home furnishings"
+        ],
+        "C141": [
+          "number",
+          "11873000000"
+        ],
+        "A142": [
+          "str",
+          "2024-12"
+        ],
+        "B142": [
+          "str",
+          "Electronics and appliance stores"
+        ],
+        "C142": [
+          "number",
+          "7507000000"
+        ],
+        "A143": [
+          "str",
+          "2024-12"
+        ],
+        "B143": [
+          "str",
+          "Food and beverage stores"
+        ],
+        "C143": [
+          "number",
+          "84191000000"
+        ],
+        "A144": [
+          "str",
+          "2024-12"
+        ],
+        "B144": [
+          "str",
+          "Health and personal care stores"
+        ],
+        "C144": [
+          "number",
+          "37831000000"
+        ],
+        "A145": [
+          "str",
+          "2024-12"
+        ],
+        "B145": [
+          "str",
+          "Clothing and accessories stores"
+        ],
+        "C145": [
+          "number",
+          "25890000000"
+        ]
+      },
+      "Reconciliation": {
+        "A1": [
+          "str",
+          "Check"
+        ],
+        "B1": [
+          "str",
+          "Value"
+        ],
+        "A2": [
+          "str",
+          "Raw primary total"
+        ],
+        "A3": [
+          "str",
+          "Summary primary total"
+        ],
+        "A4": [
+          "str",
+          "Primary total agrees"
+        ],
+        "A5": [
+          "str",
+          "Raw count"
+        ],
+        "A6": [
+          "str",
+          "Expected raw count"
+        ],
+        "B6": [
+          "number",
+          "100000"
+        ],
+        "A7": [
+          "str",
+          "Count agrees"
+        ],
+        "A15": [
+          "str",
+          "Overall status"
+        ]
+      }
+    },
+    "charts": {
+      "Raw_Data": [],
+      "Monthly_Summary": [
+        [
+          "MONTHLY_SUMMARY!A2:A25",
+          "MONTHLY_SUMMARY!B1",
+          "MONTHLY_SUMMARY!B2:B25"
+        ]
+      ],
+      "Category_Summary": [],
+      "Growth_Summary": [],
+      "Sales_Mix": [
+        [
+          "SALES_MIX!A2:A7",
+          "SALES_MIX!B1",
+          "SALES_MIX!B2:B7"
+        ]
+      ],
+      "Source_Summary": [],
+      "Reconciliation": []
+    }
+  },
+  "cached_values": {
+    "B5": 307325000000,
+    "B6": 0.006280144201016968,
+    "B7": 0.05739687520428838,
+    "B8": "Motor vehicle and parts dealers",
+    "B9": "PASS",
+    "B13": 1,
+    "B14": 1,
+    "B15": 307325000000,
+    "B16": 307325000000
+  },
+  "oracle_provenance": "Independent Python aggregation of frozen official seed observations, before Agent edits; source partition conservation."
+}

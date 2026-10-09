@@ -1,0 +1,22 @@
+{
+  "bank_2025_mirror": {
+    "source_url": "https://www.wallisbank.com/wp-content/uploads/SBA-Form-1919-4.4.25.pdf",
+    "sha256": "aec40c0ea9e4b770227c568e84e8504e4593d053ef42693c95a66e4d198aa8a9",
+    "pages": 7,
+    "field_count": 0,
+    "status": "excluded_nonfillable",
+    "official_byte_identity_verified": false
+  },
+  "sba_box_2024": {
+    "source_url": "https://sba.app.box.com/s/iud0tv5euaw4cdvv3itmbrc2tp2p7etf",
+    "sha256": "db31ccf144266d6cd8a16555927893299f1b2831ee1651b1d4c6634a48caf91a",
+    "pages": 7,
+    "field_count": 127,
+    "sha1_matches_public_box_metadata": true,
+    "status": "native_fillable_and_independently_qualified"
+  },
+  "official_2025_download": {
+    "status": "http_403",
+    "fillable_status": "unknown_without_original_bytes"
+  }
+}

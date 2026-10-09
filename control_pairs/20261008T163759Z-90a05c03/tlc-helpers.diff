@@ -1,0 +1,437 @@
+--- old/enhance_workbook.py
++++ new/enhance_workbook.py
+@@ -1,230 +1,208 @@
+-"""Add an executive-ready Executive_Summary sheet to the NYC TLC workbook.
+-
+-Loads the copied report workbook in place, preserves every existing sheet,
+-formula, chart and value, and layers on the interactive executive dashboard.
+-"""
+-
++"""Enhance the NYC TLC Jan-2024 operations workbook with an Executive_Summary sheet."""
++import shutil
+ from openpyxl import load_workbook
++from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
++from openpyxl.comments import Comment
++from openpyxl.worksheet.datavalidation import DataValidation
++from openpyxl.formatting.rule import CellIsRule, ColorScaleRule
+ from openpyxl.chart import LineChart, PieChart, Reference
+-from openpyxl.comments import Comment
+-from openpyxl.formatting.rule import CellIsRule, ColorScaleRule, DataBarRule
+-from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+-from openpyxl.worksheet.datavalidation import DataValidation
+-from pathlib import Path
+-import sys
+-
+-ARIAL = "Arial"
+-BLUE = "FF0000FF"      # hardcoded editable inputs
+-GREEN = "FF008000"     # cross-sheet links
+-BLACK = "FF000000"     # local formulas
+-NAVY = "FF1F4E79"
+-MIDBLUE = "FF2E75B6"
+-LIGHT = "FFD9E1F2"
+-GRAY = "FFF2F2F2"
+-DARKTEXT = "FF404040"
+-
++
++SRC = "input/monthly_operations_template.xlsx"
++OUT = "output/monthly_operations_report.xlsx"
++
++shutil.copyfile(SRC, OUT)
++wb = load_workbook(OUT)
++
++daily = wb["Daily_Summary"]
++payment = wb["Payment_Summary"]
++
++ws = wb.create_sheet("Executive_Summary", 0)
++
++NAVY = "FF1F3864"
++STEEL = "FF2E5C9A"
++GRAY = "FFF2F5F9"
++WHITE = "FFFFFFFF"
+ 
+ def fill(rgb):
+-    return PatternFill(fill_type="solid", start_color=rgb, end_color=rgb)
+-
+-
+-def font(color=BLACK, size=10, bold=False, italic=False):
+-    return Font(name=ARIAL, color=color, size=size, bold=bold, italic=italic)
+-
+-
+-def enhance(path):
+-    wb = load_workbook(path, data_only=False)
+-    if "Executive_Summary" in wb.sheetnames:
+-        del wb["Executive_Summary"]
+-    ws = wb.create_sheet("Executive_Summary", 0)
+-
+-    thin = Side(style="thin", color="FFBFBFBF")
+-    border = Border(left=thin, right=thin, top=thin, bottom=thin)
+-
+-    # ---- Title band ----
+-    ws.merge_cells("A1:F1")
+-    ws["A1"] = "NYC TLC Yellow Taxi \u2014 January 2024 Operations"
+-    ws["A1"].font = font("FFFFFFFF", 16, bold=True)
+-    ws["A1"].fill = fill(NAVY)
+-    ws["A1"].alignment = Alignment(horizontal="left", vertical="center", indent=1)
+-    ws.row_dimensions[1].height = 30
+-
+-    ws.merge_cells("A2:F2")
+-    ws["A2"] = "Executive Summary  |  Source: NYC TLC Trip Record Data, January 2024"
+-    ws["A2"].font = font("FF595959", 10, italic=True)
+-    ws["A2"].alignment = Alignment(horizontal="left", indent=1)
+-    ws.row_dimensions[2].height = 18
+-
+-    # ---- KPI section ----
+-    ws["A4"] = "Key Performance Indicators"
+-    ws["A4"].font = font("FFFFFFFF", 11, bold=True)
+-    for col in "ABCDEF":
+-        ws[f"{col}4"].fill = fill(MIDBLUE)
+-    ws.row_dimensions[4].height = 20
+-
+-    kpis = [
+-        ("A5", "Total Trips", "B5", "='Reconciliation'!B10", GREEN),
+-        ("A6", "Total Fare Revenue", "B6", "='Reconciliation'!B14", GREEN),
+-        ("A7", "Overall Average Fare", "B7", "='Hourly_Summary'!B34", GREEN),
+-        ("A8", "Removal Rate", "B8", "='Reconciliation'!B5", GREEN),
+-        ("A9", "Reconciliation Status", "B9",
+-         '=IF(AND(Reconciliation!B24="YES - Consistent",'
+-         'Reconciliation!B25="YES - Consistent"),"PASS","REVIEW")', GREEN),
+-    ]
+-    for label_cell, label, val_cell, formula, color in kpis:
+-        ws[label_cell] = label
+-        ws[label_cell].font = font(DARKTEXT, 10)
+-        ws[val_cell] = formula
+-        ws[val_cell].font = font(color, 10, bold=True)
+-        ws[val_cell].border = border
+-
+-    ws["B5"].number_format = "#,##0"
+-    ws["B6"].number_format = "$#,##0.00"
+-    ws["B7"].number_format = "$#,##0.00"
+-    ws["B8"].number_format = "0.0%"
+-
+-    ws["B5"].comment = Comment(
+-        "Source: Reconciliation!B10 (Hourly_Summary total trips). "
+-        "Cross-sheet link.", "Ops Analytics", width=260, height=90)
+-    ws["B6"].comment = Comment(
+-        "Source: Reconciliation!B14 (Hourly_Summary total fare). "
+-        "Cross-sheet link.", "Ops Analytics", width=260, height=90)
+-    ws["B7"].comment = Comment(
+-        "Source: Hourly_Summary!B34 (average of hourly average fares). "
+-        "Cross-sheet link.", "Ops Analytics", width=260, height=90)
+-
+-    # ---- Scenario section ----
+-    ws["A11"] = "Scenario Analysis"
+-    ws["A11"].font = font("FFFFFFFF", 11, bold=True)
+-    for col in "ABCDEF":
+-        ws[f"{col}11"].fill = fill(MIDBLUE)
+-    ws.row_dimensions[11].height = 20
+-
+-    ws["A12"] = "Scenario"
+-    ws["A12"].font = font(DARKTEXT, 10)
+-    ws["B12"] = "Base"
+-    ws["B12"].font = font(BLUE, 10, bold=True)
+-    ws["B12"].fill = fill("FFFFF2CC")
+-    ws["B12"].border = border
+-    dv = DataValidation(type="list", formula1='"Base,Upside,Downside"',
+-                        allow_blank=False, showDropDown=False)
+-    dv.promptTitle = "Scenario"
+-    dv.prompt = "Select Base, Upside or Downside."
+-    ws.add_data_validation(dv)
+-    dv.add(ws["B12"])
+-    ws["B12"].comment = Comment(
+-        "Hardcoded input: choose Base/Upside/Downside. Drives B13 and B14.",
+-        "Ops Analytics", width=260, height=90)
+-
+-    ws["A13"] = "Fare Multiplier"
+-    ws["A13"].font = font(DARKTEXT, 10)
+-    ws["B13"] = "=INDEX($E$13:$E$15,MATCH($B$12,$D$13:$D$15,0))"
+-    ws["B13"].font = font(BLACK, 10, bold=True)
+-    ws["B13"].number_format = '0.00"x"'
+-    ws["B13"].border = border
+-
+-    ws["A14"] = "Trip Multiplier"
+-    ws["A14"].font = font(DARKTEXT, 10)
+-    ws["B14"] = "=INDEX($F$13:$F$15,MATCH($B$12,$D$13:$D$15,0))"
+-    ws["B14"].font = font(BLACK, 10, bold=True)
+-    ws["B14"].number_format = '0.00"x"'
+-    ws["B14"].border = border
+-
+-    ws["A15"] = "Projected Trips"
+-    ws["A15"].font = font(DARKTEXT, 10)
+-    ws["B15"] = "=$B$5*$B$14"
+-    ws["B15"].font = font(BLACK, 10, bold=True)
+-    ws["B15"].number_format = "#,##0"
+-    ws["B15"].border = border
+-
+-    ws["A16"] = "Projected Fare Revenue"
+-    ws["A16"].font = font(DARKTEXT, 10)
+-    ws["B16"] = "=$B$6*$B$13*$B$14"
+-    ws["B16"].font = font(BLACK, 10, bold=True)
+-    ws["B16"].number_format = "$#,##0.00"
+-    ws["B16"].border = border
+-
+-    # Scenario table D13:F15 (hardcoded inputs)
+-    ws["D12"] = "Scenario"
+-    ws["E12"] = "Fare Mult"
+-    ws["F12"] = "Trip Mult"
+-    for c in ("D12", "E12", "F12"):
+-        ws[c].font = font("FFFFFFFF", 10, bold=True)
+-        ws[c].fill = fill(MIDBLUE)
+-        ws[c].alignment = Alignment(horizontal="center")
+-    table = [("Base", 1.00, 1.00), ("Upside", 1.08, 1.05),
+-             ("Downside", 0.93, 0.95)]
+-    for i, (name, fmul, tmul) in enumerate(table):
+-        r = 13 + i
+-        ws[f"D{r}"] = name
+-        ws[f"E{r}"] = fmul
+-        ws[f"F{r}"] = tmul
+-        for col in ("D", "E", "F"):
+-            ws[f"{col}{r}"].font = font(BLUE, 10)
+-            ws[f"{col}{r}"].border = border
+-        ws[f"E{r}"].number_format = "0.00"
+-        ws[f"F{r}"].number_format = "0.00"
+-    ws["D13"].comment = Comment(
+-        "Scenario assumption table (hardcoded). Fare/trip multipliers per "
+-        "scenario; selected scenario applied through B13/B14.",
+-        "Ops Analytics", width=280, height=110)
+-
+-    # ---- Charts ----
+-    daily = wb["Daily_Summary"]
+-    line = LineChart()
+-    line.title = "Daily Trip Trend \u2014 January 2024"
+-    line.style = 12
+-    line.y_axis.title = "Trips"
+-    line.x_axis.title = "Date"
+-    ldata = Reference(daily, min_col=3, min_row=1, max_row=32)
+-    lcats = Reference(daily, min_col=1, min_row=2, max_row=32)
+-    line.add_data(ldata, titles_from_data=True)
+-    line.set_categories(lcats)
+-    line.height = 8.5
+-    line.width = 17
+-    ws.add_chart(line, "H5")
+-
+-    pay = wb["Payment_Summary"]
+-    pie = PieChart()
+-    pie.title = "Payment Method Mix (Trips)"
+-    pdata = Reference(pay, min_col=2, min_row=1, max_row=5)
+-    pcats = Reference(pay, min_col=1, min_row=2, max_row=5)
+-    pie.add_data(pdata, titles_from_data=True)
+-    pie.set_categories(pcats)
+-    pie.height = 8.5
+-    pie.width = 11
+-    ws.add_chart(pie, "H23")
+-
+-    # ---- Conditional formatting (3 ranges) ----
+-    ws.conditional_formatting.add("B9", CellIsRule(
+-        operator="equal", formula=['"PASS"'],
+-        font=Font(name=ARIAL, bold=True, color="FF006100"),
+-        fill=fill("FFC6EFCE")))
+-    ws.conditional_formatting.add("B9", CellIsRule(
+-        operator="equal", formula=['"REVIEW"'],
+-        font=Font(name=ARIAL, bold=True, color="FF9C0006"),
+-        fill=fill("FFFFC7CE")))
+-    ws.conditional_formatting.add("B5:B6", ColorScaleRule(
+-        start_type="min", start_color="FFFFFFFF",
+-        end_type="max", end_color="FF8EAADB"))
+-    ws.conditional_formatting.add("B15:B16", DataBarRule(
+-        start_type="min", end_type="max", color="FF638EC6"))
+-
+-    # ---- Layout ----
+-    ws.freeze_panes = "A5"
+-    ws.column_dimensions["A"].width = 26
+-    ws.column_dimensions["B"].width = 18
+-    ws.column_dimensions["C"].width = 4
+-    ws.column_dimensions["D"].width = 14
+-    ws.column_dimensions["E"].width = 12
+-    ws.column_dimensions["F"].width = 12
+-    for r in (5, 6, 7, 8, 9, 13, 14, 15, 16):
+-        ws.row_dimensions[r].height = 18
+-
+-    wb.save(path)
+-    print("Enhanced workbook written:", path)
+-
+-
+-if __name__ == "__main__":
+-    enhance(sys.argv[1] if len(sys.argv) > 1
+-            else str(Path(__file__).with_name("output") / "monthly_operations_report.xlsx"))
++    return PatternFill(start_color=rgb, end_color=rgb, fill_type="solid")
++
++title_font = Font(name="Arial", size=16, bold=True, color=NAVY)
++sub_font = Font(name="Arial", size=10, italic=True, color="FF595959")
++section_font = Font(name="Arial", size=11, bold=True, color=WHITE)
++section_fill = fill(STEEL)
++hdr_font = Font(name="Arial", size=10, bold=True, color=NAVY)
++label_font = Font(name="Arial", size=11, color="FF262626")
++blue_font = Font(name="Arial", size=11, color="FF0000FF")
++green_font = Font(name="Arial", size=11, color="FF008000")
++black_font = Font(name="Arial", size=11, color="FF000000")
++bold_black = Font(name="Arial", size=11, bold=True, color="FF000000")
++note_font = Font(name="Arial", size=9, italic=True, color="FF808080")
++thin = Side(style="thin", color="FFBFBFBF")
++box = Border(left=thin, right=thin, top=thin, bottom=thin)
++
++# --- Title block ---
++ws["A1"] = "NYC TLC - January 2024 Executive Operations Summary"
++ws["A1"].font = title_font
++ws.merge_cells("A1:F1")
++ws["A2"] = ("Prepared from the cleaned 100,000-row trip sample; monthly totals reconciled across "
++            "Hourly, Daily, Zone and Payment summaries.")
++ws["A2"].font = sub_font
++ws.merge_cells("A2:F2")
++
++# --- KPI section ---
++ws["A4"] = "Key Performance Indicators"
++ws["A4"].font = section_font
++for c in "ABCDEF":
++    ws[f"{c}4"].fill = section_fill
++ws.merge_cells("A4:F4")
++
++kpi = [
++    ("A5", "Total Trips", "B5", "=Reconciliation!B10", green_font, "#,##0"),
++    ("A6", "Total Fare Revenue", "B6", "=Reconciliation!B14", green_font, "$#,##0.00"),
++    ("A7", "Overall Average Fare", "B7", "='Hourly_Summary'!B34", green_font, "$#,##0.00"),
++    ("A8", "Removal Rate", "B8", "=Reconciliation!B5", green_font, "0.0%"),
++]
++for lab_cell, lab, val_cell, formula, fnt, numfmt in kpi:
++    ws[lab_cell] = lab
++    ws[lab_cell].font = label_font
++    ws[val_cell] = formula
++    ws[val_cell].font = fnt
++    ws[val_cell].number_format = numfmt
++
++ws["A9"] = "Reconciliation Status"
++ws["A9"].font = label_font
++ws["B9"] = ('=IF(AND(Reconciliation!B24="YES - Consistent",'
++            'Reconciliation!B25="YES - Consistent"),"PASS","REVIEW")')
++ws["B9"].font = green_font
++ws["B9"].alignment = Alignment(horizontal="left")
++
++# --- Scenario section ---
++ws["A11"] = "Scenario Analysis"
++ws["A11"].font = section_font
++for c in "ABCDEF":
++    ws[f"{c}11"].fill = section_fill
++ws.merge_cells("A11:F11")
++
++ws["A12"] = "Selected Scenario"
++ws["A12"].font = label_font
++ws["B12"] = "Base"
++ws["B12"].font = blue_font
++ws["B12"].fill = fill("FFFFF2CC")
++ws["B12"].border = box
++ws["B12"].alignment = Alignment(horizontal="left")
++
++ws["A13"] = "Selected Fare Multiplier"
++ws["A13"].font = label_font
++ws["B13"] = "=VLOOKUP($B$12,$D$13:$F$15,2,FALSE)"
++ws["B13"].font = black_font
++ws["B13"].number_format = '0.00"x"'
++
++ws["A14"] = "Selected Trip Multiplier"
++ws["A14"].font = label_font
++ws["B14"] = "=VLOOKUP($B$12,$D$13:$F$15,3,FALSE)"
++ws["B14"].font = black_font
++ws["B14"].number_format = '0.00"x"'
++
++ws["A15"] = "Projected Trips"
++ws["A15"].font = label_font
++ws["B15"] = "=B5*B14"
++ws["B15"].font = black_font
++ws["B15"].number_format = "#,##0"
++
++ws["A16"] = "Projected Fare Revenue"
++ws["A16"].font = label_font
++ws["B16"] = "=B6*B13*B14"
++ws["B16"].font = black_font
++ws["B16"].number_format = "$#,##0.00"
++
++# scenario table (hardcoded inputs)
++for cell, text in (("D12", "Scenario"), ("E12", "Fare Multiplier"), ("F12", "Trip Multiplier")):
++    ws[cell] = text
++    ws[cell].font = hdr_font
++    ws[cell].fill = fill(GRAY)
++    ws[cell].border = box
++scen = [("D13", "Base", 1.00, 1.00), ("D14", "Upside", 1.08, 1.05), ("D15", "Downside", 0.93, 0.95)]
++for dc, name, fm, tm in scen:
++    ws[dc] = name
++    ws[dc].font = blue_font
++    ws[dc].border = box
++    row = dc[1:]
++    ws[f"E{row}"] = fm
++    ws[f"E{row}"].font = blue_font
++    ws[f"E{row}"].number_format = "0.00"
++    ws[f"E{row}"].border = box
++    ws[f"F{row}"] = tm
++    ws[f"F{row}"].font = blue_font
++    ws[f"F{row}"].number_format = "0.00"
++    ws[f"F{row}"].border = box
++
++# --- Charts section ---
++ws["A18"] = "Interactive Charts"
++ws["A18"].font = section_font
++for c in "ABCDEF":
++    ws[f"{c}18"].fill = section_fill
++ws.merge_cells("A18:F18")
++
++# data validation dropdown for scenario selector
++dv = DataValidation(type="list", formula1='"Base,Upside,Downside"', allow_blank=False)
++dv.prompt = "Select a scenario"
++dv.promptTitle = "Scenario"
++ws.add_data_validation(dv)
++dv.add(ws["B12"])
++
++# conditional formatting (distinct ranges -> distinct rules)
++ws.conditional_formatting.add("B9", CellIsRule(
++    operator="equal", formula=['"PASS"'], fill=fill("FFC6EFCE"), font=Font(name="Arial", color="FF006100", bold=True)))
++ws.conditional_formatting.add("B9", CellIsRule(
++    operator="equal", formula=['"REVIEW"'], fill=fill("FFFFC7CE"), font=Font(name="Arial", color="FF9C0006", bold=True)))
++ws.conditional_formatting.add("B8", CellIsRule(
++    operator="greaterThan", formula=["0.1"], fill=fill("FFFFC7CE"), font=Font(name="Arial", color="FF9C0006")))
++ws.conditional_formatting.add("B15:B16", ColorScaleRule(
++    start_type="min", start_color="FFFFFFFF", end_type="max", end_color="FF9DC3E6"))
++
++# comments documenting source / assumptions
++ws["A5"].comment = Comment(
++    "Source: NYC TLC Yellow Taxi Trip Records, January 2024 (cleaned 100k-row sample). "
++    "Total trips reconciled across Hourly/Daily/Zone/Payment summaries (Reconciliation!B10).", "OpenClaw")
++ws["A8"].comment = Comment(
++    "Source: dataset_sources.md + template_manifest.json. Removal Rate = records removed / raw records "
++    "(Reconciliation!B5); success value 'YES - Consistent'.", "OpenClaw")
++ws["D12"].comment = Comment(
++    "Scenario assumptions (illustrative planning multipliers): Base 1.00x/1.00x reflects actuals; "
++    "Upside 1.08x fare / 1.05x trips; Downside 0.93x fare / 0.95x trips. Edit to model alternatives.", "OpenClaw")
++
++# charts referencing the existing summary sheets
++line = LineChart()
++line.title = "Daily Trip Trend - Jan 2024"
++line.style = 12
++line.y_axis.title = "Trips"
++line.x_axis.title = "Date"
++line.add_data(Reference(daily, min_col=3, min_row=1, max_row=32), titles_from_data=True)
++line.set_categories(Reference(daily, min_col=1, min_row=2, max_row=32))
++line.height = 9.5
++line.width = 17
++ws.add_chart(line, "A20")
++
++pie = PieChart()
++pie.title = "Payment Method Mix - Jan 2024"
++pie.style = 10
++pie.add_data(Reference(payment, min_col=2, min_row=1, max_row=5), titles_from_data=True)
++pie.set_categories(Reference(payment, min_col=1, min_row=2, max_row=5))
++pie.height = 9.5
++pie.width = 13
++ws.add_chart(pie, "J20")
++
++# layout: widths, heights, freeze panes
++widths = {"A": 28, "B": 20, "C": 3, "D": 15, "E": 16, "F": 16}
++for col, w in widths.items():
++    ws.column_dimensions[col].width = w
++for col in "GHIJKLM":
++    ws.column_dimensions[col].width = 12
++for r, h in {"1": 24, "2": 15, "4": 20, "11": 20, "18": 20}.items():
++    ws.row_dimensions[int(r)].height = h
++ws.sheet_view.showGridLines = False
++ws.freeze_panes = "A5"
++
++wb.active = 0
++wb.save(OUT)
++print("saved", OUT)

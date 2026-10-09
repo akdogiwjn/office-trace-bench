@@ -1,0 +1,45 @@
+You are executing a measured OpenClaw benchmark case inside a fresh trace-generation container.
+
+Case: inspect, batch-fill, render, and verify {task_subject} using {record_count_word} synthetic training {record_noun}.
+Workspace root: {workspace}
+Input directory: {workspace}/input
+Output directory: {workspace}/output
+
+First read and follow both /root/.openclaw/skills/pdf/SKILL.md and /root/.openclaw/skills/pdf/forms.md. Use the PDF Skill's bundled scripts; do not replace them with a custom PDF implementation.
+
+Execution discipline for a stable measured run:
+- Use `python3` for every Python invocation; do not use the `python` alias.
+- Do not smoke-test, preflight, or separately fill {first_record_name} before the batch.
+- The first and only field-check invocation must already redirect stdout to `output/check_fillable_fields.log`. Do not run a display-only check from the Skill directory before saving the log.
+- Before filling or rendering any {record_singular}, generate the final field-values files and final batch driver/loop. Then execute that final path once.
+- A bundled-script invocation is counted even if a later invocation overwrites the same output. Therefore execute check and extract exactly once, fill exactly {record_count_word} times, and render exactly {render_count_word} times. Do not run duplicate probes or retry a successful operation.
+
+Inputs:
+- {form}: {form_description}.
+- {records}: {record_count_word} fictitious {record_singular} profiles plus shared safe answers.
+- {metadata_file}: public source and privacy rules.
+- {verifier_filename}: independent strict verifier.
+
+Required path and outputs:
+1. Run scripts/check_fillable_fields.py once and save stdout as output/check_fillable_fields.log. It must confirm fillable fields.
+2. Run scripts/extract_form_field_info.py once and save output/form_field_info.json.
+3. Run scripts/convert_pdf_to_images.py once on the blank template, producing output/rendered/template/page_1.png through page_{page_count}.png.
+4. Create output/field_values and output/filled. For each of the {record_count_word} {record_noun}:
+   - create one field-values JSON using exact field IDs and page numbers from form_field_info.json;
+   - fill {fill_description};
+   - {safe_answer_description};
+   - invoke scripts/fill_fillable_fields.py once to create output/filled/{record_pattern}.pdf;
+   - invoke scripts/convert_pdf_to_images.py once on that filled PDF to create {page_count_word} PNGs under output/rendered/{record_pattern}/.
+5. {protected_description} must be omitted from every field-values JSON and remain blank in every PDF. All names and phone numbers are synthetic.
+6. Write output/batch_summary.json containing at least: input_form, {summary_fields}.
+7. Run input/{verifier_filename} against the source PDF, {record_singular} JSON, and output directory so it writes output/business_verification.json. Correct any field mapping or rendering problem until status=success.
+
+Completion requires:
+- one field inspection JSON;
+- {record_count_word} field-values JSON files;
+- {record_count_word} valid {page_count}-page filled PDFs;
+- {rendered_pages} rendered PNG pages;
+- batch_summary.json;
+- business_verification.json with status=success.
+
+Do not install packages, use live personal data, sign/certify forms, or download anything during the measured task. Do not merely describe the work: produce and verify the actual files.

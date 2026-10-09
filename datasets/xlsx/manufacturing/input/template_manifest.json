@@ -1,0 +1,38 @@
+{
+  "dataset_id": "manufacturing",
+  "raw_count": 100000,
+  "base_sheets": [
+    "Raw_Data",
+    "Shipment_Summary",
+    "Order_Summary",
+    "Inventory_Summary",
+    "Segment_Summary",
+    "Trend_Summary",
+    "Reconciliation"
+  ],
+  "existing_formula_count": 30,
+  "existing_chart_count": 2,
+  "source": {
+    "publisher": "U.S. Census Bureau",
+    "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+    "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=AMTMVS,AMTMNO,AMTMUO,AMTMTI&cosd=2023-01-01&coed=2024-12-31",
+    "source_artifact": "sources/xlsx/manufacturing_fred.zip",
+    "source_sha256": "beb468f6f711cdb4df15cc4b67bf2155470ef1b35c2497ce123bce78444b2675",
+    "series": [
+      "AMTMVS",
+      "AMTMNO",
+      "AMTMUO",
+      "AMTMTI"
+    ],
+    "selected_periods": [
+      "2023-01",
+      "2024-12"
+    ],
+    "observed_seed_rows": 24,
+    "benchmark_raw_rows": 100000,
+    "raw_rows_are_observed_firms": false,
+    "expansion": "Integer-dollar partition: each observed amount split across deterministic synthetic shards; source totals preserved.",
+    "units": "USD converted from source millions of dollars",
+    "dimensions": "National total; six explicitly synthetic benchmark segments, not industry estimates"
+  }
+}

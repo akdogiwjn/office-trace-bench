@@ -1,0 +1,261 @@
+Table 1. National employment and wage data from the Occupational Employment and Wage Statistics survey by occupation, May 2025 - 2025 A01 Results (https://www.bls.gov/news.release/ocwage.t01.htm)
+citeturn35view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/news.release/ocwage.t01.htm","lineno":380}); Total lines: 1374
+L295:         Mathematicians....................................................................       2,030    62.15    129,260	   60.92
+L296:         Operations research analysts......................................................     108,510    47.95	99,730	   42.76
+L297:         Statisticians.....................................................................      29,030    55.63    115,700	   50.79
+L298:         Data scientists...................................................................     262,440    60.96    126,800	   57.80
+L299:         Mathematical science occupations, all other.......................................       3,720    44.02	91,550	   39.18
+L300:     Architecture and engineering occupations                                                 2,617,130    51.36    106,830	   47.85
+L301:        Architects, surveyors, and cartographers...........................................     191,460    46.25	96,190	   42.28
+L302:         Architects, except naval..........................................................     126,380    49.78    103,550	   46.91
+L303:          Architects, except landscape and naval...........................................     106,770    51.09    106,260     47.73
+L304:          Landscape architects.............................................................      19,600    42.68	88,780	   38.40
+L305:         Surveyors, cartographers, and photogrammetrists...................................      65,090    39.38	81,910	   36.97
+L306:          Cartographers and photogrammetrists..............................................      14,260    41.68	86,690	   39.13
+L307:          Surveyors........................................................................      50,830    38.73	80,570	   36.27
+L308:        Engineers..........................................................................   1,800,740    57.52    119,640	   52.22
+L309:         Aerospace engineers...............................................................      67,710    68.30    142,060	   64.89
+L310:         Agricultural engineers............................................................       1,480    52.04    108,230	   47.40
+L311:         Bioengineers and biomedical engineers.............................................      23,480    56.20    116,890	   52.58
+L312:         Chemical engineers................................................................      21,070    62.49    129,980	   60.12
+L313:         Civil engineers...................................................................     367,840    52.24    108,670	   48.48
+L314:         Computer hardware engineers.......................................................      76,660    78.21    162,670	   77.76
+L315:         Electrical and electronics engineers..............................................     295,650    62.07    129,100	   60.12
+L316:          Electrical engineers.............................................................     198,750    60.15    125,100	   58.00
+L317:          Electronics engineers, except computer...........................................      96,900    66.00    137,280	   62.60
+L318:         Environmental engineers...........................................................      38,340    54.29    112,910	   51.50
+L319:         Industrial engineers, including health and safety.................................     387,190    53.10    110,450	   49.36
+L320:          Health and safety engineers, except mining safety engineers and inspectors.......      21,450    57.58    119,770	   55.36
+L321:          Industrial engineers.............................................................     365,740    52.84    109,900	   49.25
+L322:         Marine engineers and naval architects.............................................       8,250    59.70    124,180	   53.96
+L323:         Materials engineers...............................................................      22,770    57.81    120,250	   54.26
+L324:         Mechanical engineers..............................................................     296,810    54.62    113,610	   50.05
+L325:         Mining and geological engineers, including mining safety engineers................       6,080    55.49    115,410	   51.07
+L326:         Nuclear engineers.................................................................      15,280    67.51    140,420	   64.41
+L327:         Petroleum engineers...............................................................      18,060    75.55    157,150	   69.67
+L328:         Engineers, all other..............................................................     154,070    60.26    125,330	   59.10
+L329:        Drafters, engineering technicians, and mapping technicians.........................     624,930    35.19     73,190	   33.20
+L330:         Drafters..........................................................................     176,060    34.90	72,590	   32.74
+L331:          Architectural and civil drafters.................................................     103,700    34.01	70,740	   31.80
+L332:          Electrical and electronics drafters..............................................      17,920    39.08	81,280	   36.96
+L333:          Mechanical drafters..............................................................      39,960    36.09	75,060	   34.40
+L334:          Drafters, all other..............................................................      14,470    32.81	68,250	   30.54
+L335:         Engineering technologists and technicians, except drafters........................     390,860    36.40	75,710	   35.32
+L336:          Aerospace engineering and operations technologists and technicians...............      11,280    43.90	91,310	   39.85
+L337:          Civil engineering technologists and technicians..................................      68,520    33.17	68,990	   31.23
+L338:          Electrical and electronic engineering technologists and technicians..............      95,130    38.79	80,680	   37.59
+L339:          Electro-mechanical and mechatronics technologists and technicians................      15,520    36.74	76,420	   35.53
+L340:          Environmental engineering technologists and technicians..........................      12,190    31.19	64,870	   28.81
+L341:          Industrial engineering technologists and technicians.............................      75,570    33.99	70,700	   31.79
+L342:          Mechanical engineering technologists and technicians.............................      36,190    36.72	76,380	   35.82
+L343:          Calibration technologists and technicians........................................      16,540    35.66	74,170	   32.61
+L344:          Engineering technologists and technicians, except drafters, all other............      59,930    38.93	80,960	   37.67
+L345:         Surveying and mapping technicians.................................................      58,010    27.89	58,000	   26.08
+L346: 
+L347:     Life, physical, and social science occupations                                           1,473,260    45.48	94,600	   39.68
+L348:        Life scientists....................................................................     386,900    51.61    107,350	   46.30
+L349:         Agricultural and food scientists..................................................      31,890    43.71	90,910	   39.41
+L350:          Animal scientists................................................................       3,100    42.48	88,350	   33.14
+L351:          Food scientists and technologists................................................      13,060    45.85	95,360	   42.65
+L352:          Soil and plant scientists........................................................      15,730    42.17	87,720	   37.91
+L353:         Biological scientists.............................................................     126,740    51.91    107,970	   47.96
+L354:          Biochemists and biophysicists....................................................      33,830    62.43    129,840	   61.26
+L355:          Microbiologists..................................................................      18,940    46.92	97,600	   42.30
+L356:          Zoologists and wildlife biologists...............................................      18,120    39.91	83,020	   36.91
+L357:          Biological scientists, all other.................................................      55,850    51.12    106,330	   47.56
+L358:         Conservation scientists and foresters.............................................      36,380    37.36	77,720	   35.54
+L359:          Conservation scientists..........................................................      25,950    37.08	77,130	   35.10
+L360:          Foresters........................................................................      10,430    38.06	79,170	   36.73
+L361:         Medical scientists................................................................     184,430    55.58    115,600	   49.51
+L362:          Epidemiologists..................................................................      12,090    47.06	97,890     41.93
+L363:          Medical scientists, except epidemiologists.......................................     172,340    56.18    116,840	   49.72
+L364:         Life scientists, all other........................................................       7,460    51.86    107,860	   45.07
+L365:        Physical scientists................................................................     264,650    51.99    108,140	   46.29
+L366:         Astronomers and physicists........................................................      22,540    80.57    167,590	   80.23
+L367:          Astronomers......................................................................       2,120    63.91    132,920	   61.94
+L368:          Physicists.......................................................................      20,430    82.30    171,180	   82.81
+L369:         Atmospheric and space scientists..................................................      10,000    51.01    106,110	   47.63
+L370:         Chemists and materials scientists.................................................      91,250    49.44    102,840	   45.70
+L371:          Chemists.........................................................................      82,770    48.29    100,450	   43.87
+L372:          Materials scientists.............................................................       8,470    60.67    126,180	   56.63
+L373:         Environmental scientists and geoscientists........................................     118,560    46.69	97,110	   40.97
+L374:          Environmental scientists and specialists, including health.......................      89,250    44.08	91,680	   39.53
+L375:          Geoscientists, except hydrologists and geographers...............................      23,470    55.84    116,150	   49.00
+L376:          Hydrologists.....................................................................       5,850    49.81    103,600	   46.44
+L377:         Physical scientists, all other....................................................      22,300    62.13    129,230	   58.93
+L378:        Social scientists and related workers..............................................     288,600    51.08    106,250	   47.07
+L379:         Economists........................................................................      17,790    68.33    142,130	   59.96
+L380:         Survey researchers................................................................       8,290    38.26     79,580	   33.40
+L381:         Psychologists.....................................................................     159,540    51.64    107,410     47.65
+L382:          Industrial-organizational psychologists..........................................         790    81.84    170,230     93.24
+L383:          Clinical and counseling psychologists............................................      75,990    54.21    112,750	   48.36
+L384:          School psychologists.............................................................      63,940    47.67	99,160	   46.15
+L385:          Psychologists, all other.........................................................      18,820    53.47    111,210	   53.29
+L386:         Sociologists......................................................................       2,260    55.25    114,920	   50.98
+L387:         Urban and regional planners.......................................................      44,230    45.55	94,750	   42.94
+L388:         Miscellaneous social scientists and related workers...............................      56,490    50.12    104,260     46.60
+L389:          Anthropologists and archeologists................................................       8,990    36.35	75,620	   34.02
+L390:          Geographers......................................................................       1,400    49.21    102,350	   49.06
+L391:          Historians.......................................................................       3,450    39.06	81,240	   36.90
+L392:          Political scientists.............................................................       5,540    68.51    142,510	   68.31
+L393:          Social scientists and related workers, all other.................................      37,100    51.78    107,690	   48.61
+L394:        Life, physical, and social science technicians.....................................     361,920    30.91     64,290     28.61
+L395:         Agricultural and food science technicians.........................................      29,730    26.55     55,220     24.60
+L396:          Agricultural technicians.........................................................      15,130    25.89	53,840	   23.86
+L397:          Food science technicians.........................................................      14,600    27.24	56,660     25.06
+L398:         Biological technicians............................................................      69,620    29.51	61,380	   27.65
+L399:         Chemical technicians..............................................................      57,540    30.72	63,900	   29.03
+L400:         Environmental science and geoscience technicians..................................      44,480    29.58	61,530     26.65
+L401:          Environmental science and protection technicians, including health...............      34,670    29.23     60,800     26.49
+L402:          Geological technicians, except hydrologic technicians............................       6,980    29.75	61,870     25.65
+L403:          Hydrologic technicians...........................................................       2,840    33.43	69,530	   31.15
+L404:         Nuclear technicians...............................................................       6,470    52.37    108,940	   53.00
+L405:         Social science research assistants................................................      30,640    31.80	66,140	   29.81
+L406:         Forest and conservation technicians...............................................      30,410    28.39	59,060	   26.23
+L407:         Miscellaneous life, physical, and social science technicians......................      93,030    33.14     68,930     30.62
+L408:          Forensic science technicians.....................................................      19,120    38.08	79,200	   34.65
+L409:          Life, physical, and social science technicians, all other........................      73,910    31.86	66,280	   29.94
+L410:        Occupational health and safety specialists and technicians.........................     171,200    42.91	89,260	   40.26
+L411:         Occupational health and safety specialists and technicians........................     171,200    42.91	89,260	   40.26
+L412:          Occupational health and safety specialists.......................................     140,610    45.12	93,860	   43.34
+L413:          Occupational health and safety technicians.......................................      30,590    32.75	68,120	   29.59
+L414: 
+L415:     Community and social service occupations                                                 2,668,680    30.49	63,410	   28.03
+L416:        Counselors, social workers, and other community and social service specialists.....   2,573,560    30.48	63,400	   28.03
+L417:         Counselors........................................................................   1,035,300    31.88	66,300	   29.00
+L418:          Educational, guidance, and career counselors and advisors........................     353,310    34.34     71,430	   30.93
+L419:          Marriage and family therapists...................................................      66,740    37.00	76,960	   32.18
+L420:          Rehabilitation counselors........................................................      94,740    24.91	51,820	   22.52
+L421:          Substance abuse, behavioral disorder, and mental health counselors...............     491,930    30.98     64,440     28.53
+L422:          Counselors, all other............................................................      28,580    27.99	58,210	   24.45
+L423:         Social workers....................................................................     775,930    32.47	67,540	   29.70
+L424:          Child, family, and school social workers.........................................     392,550    30.77	64,000	   28.63
+L425:          Healthcare social workers........................................................     187,630    34.51	71,790	   32.63
+L426:          Mental health and substance abuse social workers.................................     132,810    32.71	68,030	   28.98
+L427:          Social workers, all other........................................................      62,930    36.50	75,910	   34.57
+L428:         Miscellaneous community and social service specialists............................     762,330    26.56	55,250	   23.74
+L429:          Health education specialists.....................................................      65,690    35.23	73,280	   30.80
+L430:          Probation officers and correctional treatment specialists........................      89,390    35.16	73,130	   31.86
+L431:          Social and human service assistants..............................................     437,860    22.93	47,690	   22.08
+L432:          Community health workers.........................................................      61,660    27.01	56,180	   24.93
+L433:          Community and social service specialists, all other..............................     107,730    28.65	59,590	   27.28
+L434:        Religious workers..................................................................      95,120    30.58	63,600	   27.95
+L435:         Clergy............................................................................      57,200    32.15	66,860	   29.24
+L436:         Directors, religious activities and education.....................................      22,160    29.86	62,100	   25.05
+L437:         Religious workers, all other......................................................      15,760    25.90	53,870	   21.77
+L438: 
+L439:     Legal occupations                                                                        1,305,620    67.07    139,510	   49.28
+L440:        Lawyers, judges, and related workers...............................................     817,400    86.78    180,510	   74.58
+L441:         Lawyers and judicial law clerks...................................................     767,800    88.41    183,890	   75.88
+L442:          Lawyers..........................................................................     754,500    89.35    185,840	   76.76
+L443:          Judicial law clerks..............................................................      13,290    35.07	72,950	   31.21
+L444:         Judges, magistrates, and other judicial workers...................................      49,610    61.61    128,140	   57.33
+L445:          Administrative law judges, adjudicators, and hearing officers....................      16,370    60.57    125,990	   56.67
+L446:          Arbitrators, mediators, and conciliators.........................................       9,210    43.76	91,010	   36.31
+L447:          Judges, magistrate judges, and magistrates.......................................      24,030    69.15    143,830	   74.03
+L448:        Legal support workers..............................................................     488,220    34.08	70,880	   30.23
+L449:         Paralegals and legal assistants...................................................     392,880    33.51	69,700	   30.24
+L450:         Miscellaneous legal support workers...............................................      95,340    36.41	75,740	   30.15
+L451:          Title examiners, abstractors, and searchers......................................      48,580    29.97	62,350	   28.20
+L452:          Legal support workers, all other.................................................      46,760    43.10	89,660	   34.67
+L453:     Educational instruction and library occupations                                          9,100,570    32.47	67,540	   29.12
+L454:        Postsecondary teachers.............................................................   1,370,560     (�)     103,470	    (�)
+L455:         Business teachers, postsecondary..................................................      82,150     (�)     114,720	    (�)
+L456:         Math and computer science teachers, postsecondary.................................      83,150     (�)	97,040	    (�)
+L457:          Computer science teachers, postsecondary.........................................      35,480     (�)     104,420	    (�)
+L458:          Mathematical science teachers, postsecondary.....................................      47,670     (�)	91,550	    (�)
+L459:         Engineering and architecture teachers, postsecondary..............................      47,970     (�)     120,790	    (�)
+L460:          Architecture teachers, postsecondary.............................................       7,700     (�)     101,250	    (�)
+L461:          Engineering teachers, postsecondary..............................................      40,270     (�)     124,520	    (�)
+L462:         Life sciences teachers, postsecondary.............................................      60,630     (�)     102,710	    (�)
+L463:          Agricultural sciences teachers, postsecondary....................................       8,920     (�)     102,050	    (�)
+L464:          Biological science teachers, postsecondary.......................................      50,190     (�)     102,840	    (�)
+L465:          Forestry and conservation science teachers, postsecondary........................       1,520     (�)     102,450      (�)
+L466:         Physical sciences teachers, postsecondary.........................................      49,660     (�)     108,800	    (�)
+L467:          Atmospheric, earth, marine, and space sciences teachers, postsecondary...........       9,900     (�)     116,020      (�)
+L468:          Chemistry teachers, postsecondary................................................      19,980     (�)     105,210	    (�)
+L469:          Environmental science teachers, postsecondary....................................       6,690     (�)     103,610	    (�)
+L470:          Physics teachers, postsecondary..................................................      13,090     (�)     111,460	    (�)
+L471:         Social sciences teachers, postsecondary...........................................     118,350     (�)     101,080	    (�)
+L472:          Anthropology and archeology teachers, postsecondary..............................       5,240     (�)     106,880	    (�)
+L473:          Area, ethnic, and cultural studies teachers, postsecondary.......................      11,300     (�)	98,330	    (�)
+L474:          Economics teachers, postsecondary................................................      11,560     (�)     138,850	    (�)
+L475:          Geography teachers, postsecondary................................................       3,330     (�)     102,350	    (�)
+L476:          Political science teachers, postsecondary........................................      16,970     (�)     108,100	    (�)
+L477:          Psychology teachers, postsecondary...............................................      41,530     (�)	93,860	    (�)
+L478:          Sociology teachers, postsecondary................................................      11,850     (�)	96,980	    (�)
+L479:          Social sciences teachers, postsecondary, all other...............................      16,580     (�)	88,390	    (�)
+L480:         Health teachers, postsecondary....................................................     299,230     (�)     131,640	    (�)
+L481:          Health specialties teachers, postsecondary.......................................     221,270     (�)     147,570	    (�)
+L482:          Nursing instructors and teachers, postsecondary..................................      77,960     (�)	86,410	    (�)
+L483:         Education and library science teachers, postsecondary.............................      64,460     (�)	79,840	    (�)
+L484:          Education teachers, postsecondary................................................      60,830     (�)	79,350	    (�)
+L485:          Library science teachers, postsecondary..........................................       3,630     (�)	88,110	    (�)
+L486:         Law, criminal justice, and social work teachers, postsecondary....................      45,820     (�)     111,610      (�)
+L487:          Criminal justice and law enforcement teachers, postsecondary.....................      13,150     (�)	87,550	    (�)
+L488:          Law teachers, postsecondary......................................................      20,060     (�)     144,770      (�)
+L489:          Social work teachers, postsecondary..............................................      12,610     (�)	83,940	    (�)
+L490:         Arts, communications, history, and humanities teachers, postsecondary.............     239,780     (�)	92,420	    (�)
+L491:          Art, drama, and music teachers, postsecondary....................................      93,560     (�)	94,700	    (�)
+L492:          Communications teachers, postsecondary...........................................      29,420     (�)	90,010	    (�)
+L493:          English language and literature teachers, postsecondary..........................      57,720     (�)	89,580	    (�)
+L494:          Foreign language and literature teachers, postsecondary..........................      19,830     (�)	89,990      (�)
+L495:          History teachers, postsecondary..................................................      18,790     (�)	96,580      (�)
+L496:          Philosophy and religion teachers, postsecondary..................................      20,460     (�)	92,040      (�)
+L497:         Miscellaneous postsecondary teachers..............................................     279,350     (�)	82,770	    (�)
+L498:          Family and consumer sciences teachers, postsecondary.............................       2,770     (�)	81,940	    (�)
+L499:          Recreation and fitness studies teachers, postsecondary...........................      12,630     (�)	86,620	    (�)
+L500:          Career/technical education teachers, postsecondary...............................     114,110    34.64	72,060	   30.68
+L501:          Postsecondary teachers, all other................................................     149,840     (�)	90,630	    (�)
+L502:        Preschool, elementary, middle, secondary, and special education teachers...........   4,373,040     (�)	70,410	    (�)
+L503:         Preschool and kindergarten teachers...............................................     587,650    23.03	47,910	   21.05
+L504:          Preschool teachers, except special education.....................................     478,780    20.69	43,030	   18.34
+L505:          Kindergarten teachers, except special education..................................     108,870     (�)	69,370	    (�)
+L506:         Elementary and middle school teachers.............................................   2,025,340     (�)	72,450	    (�)
+L507:          Elementary school teachers, except special education.............................   1,388,390     (�)	72,650	    (�)
+L508:          Middle school teachers, except special and career/technical education............     620,090     (�)      72,030      (�)
+L509:          Career/technical education teachers, middle school...............................      16,870     (�)	71,590	    (�)
+L510:         Secondary school teachers.........................................................   1,176,620     (�)	75,970      (�)
+L511:          Secondary school teachers, except special and career/technical education.........   1,065,210     (�)      76,320      (�)
+L512:          Career/technical education teachers, secondary school............................     111,420     (�)	72,680	    (�)
+L513:         Special education teachers........................................................     583,430     (�)	74,730	    (�)
+L514:          Special education teachers, preschool............................................      29,510     (�)	76,380      (�)
+L515:          Special education teachers, kindergarten and elementary school...................     260,870     (�)      72,650      (�)
+L516:          Special education teachers, middle school........................................      95,200     (�)	73,780	    (�)
+L517:          Special education teachers, secondary school.....................................     163,930     (�)	77,260	    (�)
+L518:          Special education teachers, all other............................................      33,930     (�)	79,750	    (�)
+L519:        Other teachers and instructors.....................................................   1,183,050    25.12	52,250	   21.99
+L520:         Adult basic education, adult secondary education, and English as a second
+L521:          language instructors.............................................................      37,310    31.66	65,860	   29.59
+L522:         Self-enrichment teachers..........................................................     332,110    26.32	54,740	   22.50
+L523:         Substitute teachers, short-term...................................................     524,770    22.32	46,420	   20.03
+L524:         Tutors............................................................................     175,070    23.10	48,050	   20.84
+L525:         Teachers and instructors, all other...............................................     113,790     (�)	73,880	    (�)
+L526:        Librarians, curators, and archivists...............................................     234,910    30.72	63,900	   29.07
+L527:         Archivists, curators, and museum technicians......................................      32,430    31.71	65,960	   29.00
+L528:          Archivists.......................................................................       7,970    33.96	70,640	   31.03
+L529:          Curators.........................................................................      12,150    34.40	71,560	   30.49
+L530:          Museum technicians and conservators..............................................      12,310    27.60	57,410	   24.73
+L531:         Librarians and media collections specialists......................................     133,790    35.02	72,840	   32.82
+L532:         Library technicians...............................................................      68,690    21.88	45,500	   21.43
+L533:        Other educational instruction and library occupations..............................   1,939,010     (�)	45,460	    (�)
+L534:         Farm and home management educators................................................       8,220    29.35	61,060	   28.95
+L535:         Instructional coordinators........................................................     227,760    38.90	80,920	   37.23
+L536:         Teaching assistants...............................................................   1,584,440     (�)	39,260	    (�)
+L537:          Teaching assistants, postsecondary...............................................     164,090     (�)	47,670	    (�)
+L538:          Teaching assistants, except postsecondary........................................   1,420,350     (�)	38,290	    (�)
+L539:         Educational instruction and library workers, all other............................     118,590    28.39	59,060	   24.47
+L540:     Arts, design, entertainment, sports, and media occupations                               2,046,290    38.36	79,790	   30.17
+L541:        Art and design workers.............................................................     645,970    33.80	70,300	   28.00
+L542:         Artists and related workers.......................................................      95,780    53.86    112,040	   47.96
+L543:          Art directors....................................................................      53,070    62.23    129,440	   55.22
+L544:          Craft artists....................................................................       4,580    23.91	49,740	   22.15
+L545:          Fine artists, including painters, sculptors, and illustrators....................      11,220    35.17	73,150	   26.68
+L546:          Special effects artists and animators............................................      19,970    54.27    112,870	   49.06
+L547:          Artists and related workers, all other...........................................       6,930    38.72	80,530	   34.25
+L548:         Designers.........................................................................     550,190    30.31	63,040	   25.52
+L549:          Commercial and industrial designers..............................................      33,490    44.84	93,260	   40.34
+L550:          Fashion designers................................................................      21,450    43.86	91,230	   38.92
+L551:          Floral designers.................................................................      40,590    19.00	39,520	   17.96
+L552:          Graphic designers................................................................     197,830    33.92	70,560	   30.27
+

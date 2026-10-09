@@ -1,0 +1,225 @@
+{
+  "schema_version": "office-dataset-v1",
+  "kind": "pdf",
+  "dataset_id": "irs_w4",
+  "domain": "payroll_training",
+  "task": "Batch-fill and render the official 2026 IRS W-4 using supplied fictional employee fixtures",
+  "form": "fw4_2026.pdf",
+  "records": "synthetic_employees.json",
+  "records_key": "employees",
+  "requirements": {
+    "page_count": 5,
+    "field_count": 48,
+    "record_count": 10,
+    "field_rules": [
+      {
+        "semantic": "first_name",
+        "field_id": "topmostSubform[0].Page1[0].Step1a[0].f1_01[0]",
+        "value_from": "first_name"
+      },
+      {
+        "semantic": "last_name",
+        "field_id": "topmostSubform[0].Page1[0].Step1a[0].f1_02[0]",
+        "value_from": "last_name"
+      },
+      {
+        "semantic": "address",
+        "field_id": "topmostSubform[0].Page1[0].Step1a[0].f1_03[0]",
+        "value_from": "address"
+      },
+      {
+        "semantic": "city_state_zip",
+        "field_id": "topmostSubform[0].Page1[0].Step1a[0].f1_04[0]",
+        "value_from": "city_state_zip"
+      },
+      {
+        "semantic": "children_credit",
+        "field_id": "topmostSubform[0].Page1[0].Step3_ReadOrder[0].f1_06[0]",
+        "value_from": "children_credit"
+      },
+      {
+        "semantic": "other_dependents_credit",
+        "field_id": "topmostSubform[0].Page1[0].Step3_ReadOrder[0].f1_07[0]",
+        "value_from": "other_dependents_credit"
+      },
+      {
+        "semantic": "total_credit",
+        "field_id": "topmostSubform[0].Page1[0].f1_08[0]",
+        "value_from": "total_credit"
+      },
+      {
+        "semantic": "other_income",
+        "field_id": "topmostSubform[0].Page1[0].f1_09[0]",
+        "value_from": "other_income"
+      },
+      {
+        "semantic": "deductions",
+        "field_id": "topmostSubform[0].Page1[0].f1_10[0]",
+        "value_from": "deductions"
+      },
+      {
+        "semantic": "extra_withholding",
+        "field_id": "topmostSubform[0].Page1[0].f1_11[0]",
+        "value_from": "extra_withholding"
+      },
+      {
+        "semantic": "filing_single",
+        "field_id": "topmostSubform[0].Page1[0].c1_1[0]",
+        "value_from": "filing_flags.single",
+        "choices": {
+          "true": "/1",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "filing_married",
+        "field_id": "topmostSubform[0].Page1[0].c1_1[1]",
+        "value_from": "filing_flags.married",
+        "choices": {
+          "true": "/2",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "filing_head_of_household",
+        "field_id": "topmostSubform[0].Page1[0].c1_1[2]",
+        "value_from": "filing_flags.head_of_household",
+        "choices": {
+          "true": "/3",
+          "false": "/Off"
+        }
+      },
+      {
+        "semantic": "multiple_jobs",
+        "field_id": "topmostSubform[0].Page1[0].c1_2[0]",
+        "value_from": "multiple_jobs",
+        "choices": {
+          "true": "/1",
+          "false": "/Off"
+        }
+      }
+    ],
+    "protected_blank": [
+      "topmostSubform[0].Page1[0].c1_3[0]",
+      "topmostSubform[0].Page1[0].f1_05[0]",
+      "topmostSubform[0].Page1[0].f1_12[0]",
+      "topmostSubform[0].Page1[0].f1_13[0]",
+      "topmostSubform[0].Page1[0].f1_14[0]",
+      "topmostSubform[0].Page3[0].f3_01[0]",
+      "topmostSubform[0].Page3[0].f3_02[0]",
+      "topmostSubform[0].Page3[0].f3_03[0]",
+      "topmostSubform[0].Page3[0].f3_04[0]",
+      "topmostSubform[0].Page3[0].f3_05[0]",
+      "topmostSubform[0].Page3[0].f3_06[0]",
+      "topmostSubform[0].Page4[0].f4_01[0]",
+      "topmostSubform[0].Page4[0].f4_02[0]",
+      "topmostSubform[0].Page4[0].f4_03[0]",
+      "topmostSubform[0].Page4[0].f4_04[0]",
+      "topmostSubform[0].Page4[0].f4_05[0]",
+      "topmostSubform[0].Page4[0].f4_06[0]",
+      "topmostSubform[0].Page4[0].f4_07[0]",
+      "topmostSubform[0].Page4[0].f4_08[0]",
+      "topmostSubform[0].Page4[0].f4_09[0]",
+      "topmostSubform[0].Page4[0].f4_10[0]",
+      "topmostSubform[0].Page4[0].f4_11[0]",
+      "topmostSubform[0].Page4[0].f4_12[0]",
+      "topmostSubform[0].Page4[0].f4_13[0]",
+      "topmostSubform[0].Page4[0].f4_14[0]",
+      "topmostSubform[0].Page4[0].f4_15[0]",
+      "topmostSubform[0].Page4[0].f4_16[0]",
+      "topmostSubform[0].Page4[0].f4_17[0]",
+      "topmostSubform[0].Page4[0].f4_18[0]",
+      "topmostSubform[0].Page4[0].f4_19[0]",
+      "topmostSubform[0].Page4[0].f4_20[0]",
+      "topmostSubform[0].Page4[0].f4_21[0]",
+      "topmostSubform[0].Page4[0].f4_22[0]",
+      "topmostSubform[0].Page4[0].f4_23[0]"
+    ],
+    "minimum_pdf_bytes": 100000,
+    "minimum_png_bytes": 10000,
+    "visible_changes": [
+      {
+        "page": 1,
+        "minimum_changed_pixels": 500,
+        "pixel_threshold": 12
+      }
+    ]
+  },
+  "summary_contract": {
+    "input_form": "fw4_2026.pdf",
+    "applicant_count": 10,
+    "filled_pdf_count": 10,
+    "rendered_page_count": 55,
+    "ssn_and_signatures_left_blank": true,
+    "fill_script_invocations": 10,
+    "render_script_invocations": 11
+  },
+  "summary_aliases": {
+    "input_form": [
+      "input/fw4_2026.pdf"
+    ]
+  },
+  "required_outputs": [
+    "check_fillable_fields.log",
+    "form_field_info.json",
+    "field_values",
+    "filled",
+    "rendered",
+    "batch_summary.json",
+    "business_verification.json"
+  ],
+  "input_files": {
+    "input/fw4_2026.pdf": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+    "input/pdf_dataset_sources.md": "f4b745509bcb56d322b614643335c3aa8306b17b40a561c16cd888bff795b09d",
+    "input/synthetic_employees.json": "a4c5bed32a0ff5da282b9d4b03eb2c484c480dbb890274b59b4ae87783ab79cc"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "a0e812d7c63f7ea808a53ffc67606a84a779615792fb3ab1ef10653df0fe551f",
+  "prompt_template": "pdf.txt",
+  "prompt_template_sha256": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+  "prompt_contract": {
+    "task_subject": "the official 2026 IRS W-4 fillable PDF",
+    "record_noun": "employees",
+    "record_singular": "employee",
+    "first_record_name": "employee_01",
+    "record_pattern": "employee_XX",
+    "form_description": "the unmodified official five-page 2026 IRS W-4 fillable form",
+    "metadata_file": "pdf_dataset_sources.md",
+    "fill_description": "the first and last names, address, filing-status and multiple-jobs checkboxes, and the supplied Step 3/4 amounts, using the semantic field rules in input/dataset_manifest.json",
+    "safe_answer_description": "copy supplied synthetic amounts verbatim and select the supplied filing status; do not infer tax eligibility or calculate withholding",
+    "protected_description": "Social Security Number, exemption certification, signatures/dates, employer name/dates/EIN and all worksheet fields on pages 3 and 4"
+  },
+  "runtime_case": "SUB-MEM-PDF-IRSW4-01",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "trace_rules": [
+    {
+      "pattern": "\\bverify_office\\.py\\b",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "check_fillable_fields\\.py",
+      "operation": "check_fillability"
+    },
+    {
+      "pattern": "extract_form_field_info\\.py",
+      "operation": "extract_field_schema"
+    },
+    {
+      "pattern": "fill_fillable_fields\\.py",
+      "operation": "fill_form"
+    },
+    {
+      "pattern": "convert_pdf_to_images\\.py",
+      "operation": "render_pdf"
+    }
+  ],
+  "source_provenance": {
+    "url": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+    "form_sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+    "records": "synthetic; not submitted forms",
+    "official_form_modified": false
+  }
+}

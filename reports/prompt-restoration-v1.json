@@ -1,0 +1,31 @@
+{
+  "tlc": {
+    "original_prompt": "legacy/xlsx/task.prompt",
+    "new_template": "prompts/tlc-legacy-compatible.txt",
+    "changes": [
+      "Workspace path parameterized",
+      "Fresh VM changed to fresh trace-generation container",
+      "Packaged openpyxl wording changed to installed openpyxl"
+    ],
+    "normalized_diff": "--- original\n+++ legacy-compatible\n@@ -1,4 +1,4 @@\n-You are executing a measured OpenClaw benchmark case inside a fresh VM.\n+You are executing a measured OpenClaw benchmark case inside a fresh trace-generation container.\n \n Case: enhance an existing NYC TLC January 2024 operations workbook into an executive-ready, interactive workbook.\n Workspace root: /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01\n@@ -35,7 +35,7 @@\n \n Execution and QA:\n - You may write one concise Python helper using openpyxl to perform the workbook edits.\n-- The VM uses Ubuntu's packaged openpyxl. Never assign None to cell.fill or another style descriptor; leave an unstyled cell untouched. Construct PatternFill with explicit start_color, end_color, and fill_type keyword arguments so the saved workbook remains valid.\n+- The container uses the installed openpyxl. Never assign None to cell.fill or another style descriptor; leave an unstyled cell untouched. Construct PatternFill with explicit start_color, end_color, and fill_type keyword arguments so the saved workbook remains valid.\n - When all edits are finished, invoke /root/.openclaw/skills/xlsx/scripts/recalc.py exactly once with a 180-second timeout and save its JSON stdout as output/formula_recalc.json.\n - Copy the two prepared CSVs to output/monthly_operations_summary.csv and output/reconciliation_summary.csv.\n - Run input/verify_xlsx_enhanced.py against the final workbook and recalc JSON so it writes output/business_verification.json. Fix the workbook only if this strict verifier fails; if you must repair after recalc, rerun recalc and record the extra invocation in the summary.\n",
+    "verifier": {
+      "path": "input/verify_xlsx_enhanced.py",
+      "unchanged_sha256": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+    },
+    "new_original_helper_provided": false
+  },
+  "opm": {
+    "original_prompt": "legacy/pdf/task.prompt",
+    "new_template": "prompts/opm-legacy-compatible.txt",
+    "changes": [
+      "Workspace path parameterized",
+      "Fresh VM changed to fresh trace-generation container"
+    ],
+    "normalized_diff": "--- original\n+++ legacy-compatible\n@@ -1,4 +1,4 @@\n-You are executing a measured OpenClaw benchmark case inside a fresh VM.\n+You are executing a measured OpenClaw benchmark case inside a fresh trace-generation container.\n \n Case: inspect, batch-fill, render, and verify the current official OPM OF-306 fillable PDF using ten synthetic training applicants.\n Workspace root: /root/.openclaw/workspace/tool-modeling/SUB-MEM-PDF-01\n",
+    "verifier": {
+      "path": "input/verify_pdf_batch.py",
+      "unchanged_sha256": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c"
+    },
+    "new_original_helper_provided": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "status": "success",
+  "scope": "Independent positive fixtures and deliberate raw/KPI/chart or protected-field/mapping damage; original qualifications and real Agent runs remain untouched.",
+  "cases": [
+    {
+      "kind": "xlsx",
+      "dataset": "retail",
+      "expected_rejection": true,
+      "required_failures": [
+        "raw_preserved:Raw_Data",
+        "formula:B5",
+        "chart_sources:monthly_sales",
+        "chart_sources:category_mix"
+      ],
+      "actual_failures": [
+        "raw_preserved:Raw_Data",
+        "original_charts:Monthly_Summary",
+        "original_charts:Sales_Mix",
+        "formula:B5",
+        "chart_sources:monthly_sales",
+        "chart_sources:category_mix"
+      ],
+      "positive_fixture_unchanged": true
+    },
+    {
+      "kind": "xlsx",
+      "dataset": "manufacturing",
+      "expected_rejection": true,
+      "required_failures": [
+        "raw_preserved:Raw_Data",
+        "formula:B5",
+        "chart_sources:orders_shipments",
+        "chart_sources:inventory_trend"
+      ],
+      "actual_failures": [
+        "raw_preserved:Raw_Data",
+        "original_charts:Shipment_Summary",
+        "original_charts:Segment_Summary",
+        "formula:B5",
+        "chart_sources:orders_shipments",
+        "chart_sources:inventory_trend"
+      ],
+      "positive_fixture_unchanged": true
+    },
+    {
+      "kind": "xlsx",
+      "dataset": "hr",
+      "expected_rejection": true,
+      "required_failures": [
+        "raw_preserved:Raw_Data",
+        "formula:B5",
+        "chart_sources:employment_mix",
+        "chart_sources:wage_distribution"
+      ],
+      "actual_failures": [
+        "raw_preserved:Raw_Data",
+        "original_charts:Segment_Summary",
+        "original_charts:Employment_Mix",
+        "formula:B5",
+        "chart_sources:employment_mix",
+        "chart_sources:wage_distribution"
+      ],
+      "positive_fixture_unchanged": true
+    },
+    {
+      "kind": "pdf",
+      "dataset": "irs_w4",
+      "expected_rejection": true,
+      "required_failures": [
+        "mapping:employee_01",
+        "protected_blank:employee_01"
+      ],
+      "actual_failures": [
+        "mapping:employee_01",
+        "protected_blank:employee_01"
+      ],
+      "positive_fixture_unchanged": true
+    },
+    {
+      "kind": "pdf",
+      "dataset": "sba1919",
+      "expected_rejection": true,
+      "required_failures": [
+        "mapping:applicant_01",
+        "protected_blank:applicant_01"
+      ],
+      "actual_failures": [
+        "mapping:applicant_01",
+        "protected_blank:applicant_01"
+      ],
+      "positive_fixture_unchanged": true
+    }
+  ]
+}

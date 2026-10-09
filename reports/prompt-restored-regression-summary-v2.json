@@ -1,0 +1,36 @@
+{
+  "schema_version": "office-prompt-restored-regression-v2",
+  "status": "success",
+  "completed_at": "2026-10-08T12:50:49.178529+00:00",
+  "runtime_image_id": "sha256:592e2675de4c9c657b6d1859893ffe72c8ce19875854c7902f405f9ea6524a65",
+  "model": "deepseek/deepseek-v4-flash",
+  "tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "real_regressions": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T123533Z-e0fe46a7",
+      "baseline_accepted": true,
+      "prompt_template": "tlc-legacy-compatible.txt",
+      "trace_steps": 18,
+      "tool_calls": 19,
+      "acceptance_report": "runs/xlsx-tlc-20261008T123533Z-e0fe46a7/baseline_acceptance.json",
+      "scope": "business regression and original prompt compatibility; not identical program workloads"
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T124346Z-f0f172a6",
+      "baseline_accepted": true,
+      "prompt_template": "opm-legacy-compatible.txt",
+      "trace_steps": 19,
+      "tool_calls": 26,
+      "acceptance_report": "runs/pdf-opm-20261008T124346Z-f0f172a6/baseline_acceptance.json",
+      "scope": "business regression and original prompt compatibility; not identical program workloads"
+    }
+  },
+  "prompt_changes": "reports/prompt-restoration-v1.json",
+  "comparison": "reports/prompt-restored-trace-comparison-v2.json",
+  "performance_equivalence_claimed": false
+}

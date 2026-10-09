@@ -1,0 +1,1315 @@
+{
+  "schema_version": "office-context-aligned-comparison-v4",
+  "compared_at": "2026-10-08T15:22:46.265845+00:00",
+  "datasets": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T150146Z-1742e186",
+      "inputs_match_frozen_legacy_import": {
+        "input/monthly_operations_template.xlsx": true,
+        "input/template_manifest.json": true,
+        "input/dataset_sources.md": true,
+        "input/prepared_monthly_operations_summary.csv": true,
+        "input/prepared_reconciliation_summary.csv": true,
+        "input/verify_xlsx_enhanced.py": true
+      },
+      "skills_match_frozen_legacy_import": {
+        "vendor/skills/xlsx/LICENSE.txt": true,
+        "vendor/skills/xlsx/SKILL.md": true,
+        "vendor/skills/xlsx/scripts/recalc.py": true,
+        "vendor/skills/xlsx/scripts/office/soffice.py": true,
+        "vendor/skills/xlsx/scripts/office/unpack.py": true,
+        "vendor/skills/xlsx/scripts/office/validate.py": true,
+        "vendor/skills/xlsx/scripts/office/pack.py": true
+      },
+      "same_openclaw_model_thinking": true,
+      "trace": {
+        "old": {
+          "trace": "legacy/xlsx/trajectory.json",
+          "sha256": "d56b64785155ce95e4df7ccbd4c368970238025e7c4dc0c82de126e95e300ab6",
+          "session_id": "85e12fb7-a392-4cd8-9bdb-066156bc464a",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 35,
+          "tool_calls": 41,
+          "tools": {
+            "read": 1,
+            "exec": 27,
+            "process": 12,
+            "write": 1
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [
+            5,
+            7,
+            9,
+            12
+          ],
+          "recorded_metrics": {
+            "total_prompt_tokens": 1326487,
+            "total_completion_tokens": 13934,
+            "total_cached_tokens": 1293184,
+            "total_cost_usd": 0.044773092,
+            "total_steps": 35
+          }
+        },
+        "new": {
+          "trace": "runs/xlsx-tlc-20261008T150146Z-1742e186/trajectory.json",
+          "sha256": "019a6b403ef8ac11641402da11c74c38469767200c1234f7ad438f99f9bd446e",
+          "session_id": "9bcf9e10-6b76-405e-b3c1-0349e513cdb3",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 20,
+          "tool_calls": 25,
+          "tools": {
+            "read": 6,
+            "exec": 11,
+            "process": 6,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 15,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            },
+            {
+              "step_id": 17,
+              "tool": "exec",
+              "exit_code": 2,
+              "result_excerpt": "total 12024\ndrwxr-xr-x. 2 root root     4096 Oct  8 15:06 .\ndrwxr-xr-x. 4 root root     4096 Oct  8 15:01 ..\n-rw-r--r--. 1 root root 12283903 Oct  8 15:06 monthly_operations_report.xlsx\n-rw-r--r--. 1 root root      580 Oct  8 15:06 monthly_operations_summary.csv\n-rw-r--r--. 1 root root      322 Oct  8 15:06 reconciliation_summary.csv\n-rw-r--r--. 1 "
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 859196,
+            "total_completion_tokens": 15126,
+            "total_cached_tokens": 814720,
+            "total_cost_usd": 0.03327408,
+            "total_steps": 20
+          }
+        }
+      },
+      "business_stage_exec_steps": {
+        "old": {
+          "inspect_input": [
+            3,
+            4,
+            6,
+            8,
+            10,
+            11,
+            14,
+            15
+          ],
+          "build_workbook": [
+            18
+          ],
+          "recalculate": [
+            22,
+            26
+          ],
+          "publish_csv": [
+            25
+          ],
+          "verify": [
+            30
+          ]
+        },
+        "new": {
+          "inspect_input": [
+            4,
+            6,
+            8,
+            12
+          ],
+          "build_workbook": [
+            15,
+            16
+          ],
+          "recalculate": [
+            17
+          ],
+          "publish_csv": [
+            17
+          ],
+          "verify": [
+            18
+          ]
+        }
+      },
+      "verification": {
+        "independent_verification.json": true,
+        "legacy_verification.json": true,
+        "baseline_accepted": true,
+        "old_business_success": true,
+        "archived_outputs_pass_both_verifiers": true
+      },
+      "outputs": {
+        "same_sheet_order": true,
+        "sheets": [
+          "Executive_Summary",
+          "Raw_Sample",
+          "Hourly_Summary",
+          "Daily_Summary",
+          "Zone_Summary",
+          "Payment_Summary",
+          "Fare_Distance_Bands",
+          "Reconciliation"
+        ],
+        "same_kpi_cached_values": true,
+        "kpi_cached_values": {
+          "B5": 2758427,
+          "B6": 50744748.6,
+          "B7": 18.9361351508528,
+          "B8": 0.0695524963705347,
+          "B9": "PASS",
+          "B13": 1,
+          "B14": 1,
+          "B15": 2758427,
+          "B16": 50744748.6
+        },
+        "same_csv_bytes": {
+          "monthly_operations_summary.csv": true,
+          "reconciliation_summary.csv": true
+        },
+        "formula_counts": {
+          "old": 45,
+          "new": 47
+        },
+        "formula_differences": [
+          {
+            "cell": "Executive_Summary!B13",
+            "old": "=INDEX(E13:E15,MATCH(B12,D13:D15,0))",
+            "new": "=VLOOKUP($B$12,$D$13:$F$15,2,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B14",
+            "old": "=INDEX(F13:F15,MATCH(B12,D13:D15,0))",
+            "new": "=VLOOKUP($B$12,$D$13:$F$15,3,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B17",
+            "old": null,
+            "new": "=B16/B15"
+          },
+          {
+            "cell": "Executive_Summary!B18",
+            "old": null,
+            "new": "=B16-B6"
+          }
+        ],
+        "recalc_reports": {
+          "old": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          },
+          "new": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 47
+          }
+        }
+      },
+      "prompt": {
+        "same_business_and_execution_text": true,
+        "allowed_changes": [
+          "workspace path",
+          "VM/container description",
+          "installed openpyxl description"
+        ],
+        "rendered_sha256": "6ebb5e8a081ae0925705244f346b17fb4cbe17cfcf16651881ce30a77b97f5ed",
+        "old_word_count": 565,
+        "new_word_count": 566
+      },
+      "agent_context": {
+        "schema_version": "office-agent-context-audit-v1",
+        "matched": true,
+        "profile": "legacy-host-v1",
+        "workspace_files": {
+          "AGENTS.md": 7195,
+          "SOUL.md": 1509,
+          "TOOLS.md": 866,
+          "IDENTITY.md": 1275,
+          "USER.md": 534,
+          "HEARTBEAT.md": 243
+        },
+        "expected_workspace_files": {
+          "AGENTS.md": 7195,
+          "SOUL.md": 1509,
+          "TOOLS.md": 866,
+          "IDENTITY.md": 1275,
+          "USER.md": 534,
+          "HEARTBEAT.md": 243
+        },
+        "skills": {
+          "promptChars": 5813,
+          "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+          "entries": [
+            {
+              "name": "agent-browser",
+              "blockChars": 316
+            },
+            {
+              "name": "canvas",
+              "blockChars": 314
+            },
+            {
+              "name": "diagram-maker",
+              "blockChars": 317
+            },
+            {
+              "name": "healthcheck",
+              "blockChars": 329
+            },
+            {
+              "name": "meme-maker",
+              "blockChars": 302
+            },
+            {
+              "name": "node-connect",
+              "blockChars": 332
+            },
+            {
+              "name": "node-inspect-debugger",
+              "blockChars": 328
+            },
+            {
+              "name": "python-debugpy",
+              "blockChars": 316
+            },
+            {
+              "name": "skill-creator",
+              "blockChars": 310
+            },
+            {
+              "name": "spike",
+              "blockChars": 302
+            },
+            {
+              "name": "taskflow",
+              "blockChars": 332
+            },
+            {
+              "name": "taskflow-inbox-triage",
+              "blockChars": 342
+            },
+            {
+              "name": "weather",
+              "blockChars": 340
+            },
+            {
+              "name": "xlsx",
+              "blockChars": 1134
+            }
+          ]
+        },
+        "expected_skills": {
+          "promptChars": 5813,
+          "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+          "entries": [
+            {
+              "name": "agent-browser",
+              "blockChars": 316
+            },
+            {
+              "name": "canvas",
+              "blockChars": 314
+            },
+            {
+              "name": "diagram-maker",
+              "blockChars": 317
+            },
+            {
+              "name": "healthcheck",
+              "blockChars": 329
+            },
+            {
+              "name": "meme-maker",
+              "blockChars": 302
+            },
+            {
+              "name": "node-connect",
+              "blockChars": 332
+            },
+            {
+              "name": "node-inspect-debugger",
+              "blockChars": 328
+            },
+            {
+              "name": "python-debugpy",
+              "blockChars": 316
+            },
+            {
+              "name": "skill-creator",
+              "blockChars": 310
+            },
+            {
+              "name": "spike",
+              "blockChars": 302
+            },
+            {
+              "name": "taskflow",
+              "blockChars": 332
+            },
+            {
+              "name": "taskflow-inbox-triage",
+              "blockChars": 342
+            },
+            {
+              "name": "weather",
+              "blockChars": 340
+            },
+            {
+              "name": "xlsx",
+              "blockChars": 1134
+            }
+          ]
+        },
+        "tool_schema_chars": 27477,
+        "expected_tool_schema_chars": 27477,
+        "system_prompt": {
+          "chars": 30146,
+          "hash": "b0f4f131491a403f0a97d9422d4f6d4f2aa588bb9c6618aebcd6e37310f47449",
+          "projectContextChars": 11727,
+          "nonProjectContextChars": 18419
+        },
+        "background_hashes_before": {
+          "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+          "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+          "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+          "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+          "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+          "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+        },
+        "background_hashes_after": {
+          "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+          "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+          "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+          "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+          "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+          "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+        },
+        "background_unchanged": true,
+        "scope": "Historical injected-file lengths and exact Skill registry/tool schema matched; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen.",
+        "background_matches_profile": true
+      },
+      "historical_system_prompt": {
+        "chars": 30179,
+        "hash": "95fd36db3353663dbe03a43a9f5682145451c5c4a43e04fa92122b26d884f4db",
+        "projectContextChars": 11727,
+        "nonProjectContextChars": 18452
+      },
+      "context_aligned_run": {
+        "stats": {
+          "trace": "runs/xlsx-tlc-20261008T150146Z-1742e186/trajectory.json",
+          "sha256": "019a6b403ef8ac11641402da11c74c38469767200c1234f7ad438f99f9bd446e",
+          "session_id": "9bcf9e10-6b76-405e-b3c1-0349e513cdb3",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 20,
+          "tool_calls": 25,
+          "tools": {
+            "read": 6,
+            "exec": 11,
+            "process": 6,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 15,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            },
+            {
+              "step_id": 17,
+              "tool": "exec",
+              "exit_code": 2,
+              "result_excerpt": "total 12024\ndrwxr-xr-x. 2 root root     4096 Oct  8 15:06 .\ndrwxr-xr-x. 4 root root     4096 Oct  8 15:01 ..\n-rw-r--r--. 1 root root 12283903 Oct  8 15:06 monthly_operations_report.xlsx\n-rw-r--r--. 1 root root      580 Oct  8 15:06 monthly_operations_summary.csv\n-rw-r--r--. 1 root root      322 Oct  8 15:06 reconciliation_summary.csv\n-rw-r--r--. 1 "
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 859196,
+            "total_completion_tokens": 15126,
+            "total_cached_tokens": 814720,
+            "total_cost_usd": 0.03327408,
+            "total_steps": 20
+          }
+        },
+        "helpers": {
+          "xlsx_enhance_helper.py": {
+            "write_steps": [
+              14
+            ],
+            "exec_attempts": [
+              {
+                "step": 15,
+                "status": "failed",
+                "exit_code": 127
+              },
+              {
+                "step": 16,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 224,
+            "bytes": 10066,
+            "source_sha256": "c4379b7bff72e04c274da6b471b0f3dc29d1f9bfb9320ef2a8c61ecc0559d2ff"
+          }
+        },
+        "recalc_exec_steps": [
+          17
+        ],
+        "source_framework_reference_steps": [],
+        "expected_file_reference_steps": [],
+        "agent_summary": {
+          "case": "SUB-MEM-OFFICE-01",
+          "output_workbook": "monthly_operations_report.xlsx",
+          "source_workbook": "monthly_operations_template.xlsx",
+          "helper_filename": "xlsx_enhance_helper.py",
+          "helper_execution_attempts": 1,
+          "helper_successful_executions": 1,
+          "recalc_invocations": 1,
+          "repairs_after_recalc": 0,
+          "final_verifier_status": "success",
+          "created_features": {
+            "executive_summary_position": "first sheet",
+            "kpi_formulas": {
+              "count": 5,
+              "cells": [
+                "B5",
+                "B6",
+                "B7",
+                "B8",
+                "B9"
+              ]
+            },
+            "scenario_formulas": {
+              "count": 4,
+              "cells": [
+                "B13",
+                "B14",
+                "B15",
+                "B16"
+              ]
+            },
+            "extra_local_formulas": {
+              "count": 2,
+              "cells": [
+                "B17",
+                "B18"
+              ]
+            },
+            "total_formulas_added": 11,
+            "workbook_total_formulas": 47,
+            "data_validations": 1,
+            "charts_added": 2,
+            "charts_preserved": 2,
+            "total_workbook_charts": 4,
+            "conditional_format_ranges": 3,
+            "conditional_format_rules": 4,
+            "comments": 3,
+            "comment_cells": [
+              "B6",
+              "B8",
+              "B12"
+            ],
+            "freeze_panes": "A5",
+            "sections": [
+              "Title",
+              "Key Performance Indicators",
+              "Scenario Analysis",
+              "Charts"
+            ]
+          },
+          "published_files": {
+            "monthly_operations_summary.csv": "copied from input/prepared_monthly_operations_summary.csv",
+            "reconciliation_summary.csv": "copied from input/prepared_reconciliation_summary.csv"
+          },
+          "completion_files": [
+            "monthly_operations_report.xlsx",
+            "monthly_operations_summary.csv",
+            "reconciliation_summary.csv",
+            "formula_recalc.json",
+            "business_verification.json",
+            "xlsx_enhancement_summary.json"
+          ]
+        }
+      },
+      "command_failure_diagnostics": [
+        {
+          "step": 15,
+          "command": "cd /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01 && time python3 output/xlsx_enhance_helper.py 2>&1",
+          "result_tail": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+        },
+        {
+          "step": 17,
+          "command": "cd /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01 && cp input/prepared_monthly_operations_summary.csv output/monthly_operations_summary.csv && cp input/prepared_reconciliation_summary.csv output/reconciliation_summary.csv && ls -la output/ && echo \"--- running recalc ---\" && cd /root/.openclaw/skills/xlsx/scripts && python3 recalc.py /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01/output/monthly_operations_report.xlsx 180 2>/tmp/recalc.err | tee /root/.openclaw/workspace/tool-modeling/SUB-MEM-OFFICE-01/output/formula_recalc.json; echo \"EXIT=${PIPESTATUS[0]}\"; echo \"--- stderr tail ---\"; tail -5 /tmp/recalc.err",
+          "result_tail": "total 12024\ndrwxr-xr-x. 2 root root     4096 Oct  8 15:06 .\ndrwxr-xr-x. 4 root root     4096 Oct  8 15:01 ..\n-rw-r--r--. 1 root root 12283903 Oct  8 15:06 monthly_operations_report.xlsx\n-rw-r--r--. 1 root root      580 Oct  8 15:06 monthly_operations_summary.csv\n-rw-r--r--. 1 root root      322 Oct  8 15:06 reconciliation_summary.csv\n-rw-r--r--. 1 root root    10066 Oct  8 15:05 xlsx_enhance_helper.py\n--- running recalc ---\n{\n  \"status\": \"success\",\n  \"total_errors\": 0,\n  \"error_summary\": {},\n  \"total_formulas\": 47\n}\n/usr/bin/sh: 1: Bad substitution\n\n(Command exited with code 2)"
+        }
+      ],
+      "previous_leaf_template_run": {
+        "stats": {
+          "trace": "runs/xlsx-tlc-20261008T123533Z-e0fe46a7/trajectory.json",
+          "sha256": "6c6d397e22b0d0e0d57ce16f5b0ff9b352114ec038ec57f61fddd630f40ce6d7",
+          "session_id": "7da9cbef-5ba7-4312-815d-2434bf717f71",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 18,
+          "tool_calls": 19,
+          "tools": {
+            "read": 3,
+            "exec": 11,
+            "process": 3,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 11,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 760082,
+            "total_completion_tokens": 20715,
+            "total_cached_tokens": 725120,
+            "total_cost_usd": 0.03099824,
+            "total_steps": 18
+          }
+        },
+        "helpers": {
+          "enhance_workbook.py": {
+            "write_steps": [
+              10
+            ],
+            "exec_attempts": [
+              {
+                "step": 11,
+                "status": "failed",
+                "exit_code": 127
+              },
+              {
+                "step": 12,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 263,
+            "bytes": 10261,
+            "source_sha256": "c98fbd091bab66e5445b242bd9b4ef10f2bdac2973bc8191ac1338ebc0cfa8e4"
+          }
+        },
+        "recalc_exec_steps": [
+          14
+        ],
+        "source_framework_reference_steps": [],
+        "expected_file_reference_steps": [],
+        "agent_summary": {
+          "task": "Enhance NYC TLC January 2024 operations workbook",
+          "input_workbook": "input/monthly_operations_template.xlsx",
+          "output_workbook": "output/monthly_operations_report.xlsx",
+          "created_feature_counts": {
+            "sheets_added": 1,
+            "sheets_total": 8,
+            "executive_kpi_formulas": 5,
+            "scenario_control_formulas": 4,
+            "reference_metrics_formulas": 3,
+            "total_formulas_excluding_raw_sample": 48,
+            "charts_added": 2,
+            "charts_total": 4,
+            "conditional_format_ranges": 3,
+            "cell_comments": 2,
+            "data_validations": 1,
+            "frozen_panes": "A5",
+            "raw_sample_rows": 100001,
+            "raw_sample_columns": 25
+          },
+          "preserved": {
+            "original_sheets": [
+              "Raw_Sample",
+              "Hourly_Summary",
+              "Daily_Summary",
+              "Zone_Summary",
+              "Payment_Summary",
+              "Fare_Distance_Bands",
+              "Reconciliation"
+            ],
+            "original_charts_preserved": true,
+            "row_count_preserved": true
+          },
+          "helper_filename": "enhance_workbook.py",
+          "helper_execution_attempts": 1,
+          "helper_successful_executions": 1,
+          "recalc_invocation_count": 1,
+          "final_verifier_status": "success",
+          "recalc_result": {
+            "status": "success",
+            "total_errors": 0,
+            "total_formulas": 48
+          },
+          "verifier_failures": [],
+          "notes": [
+            "A first shell invocation wrapped the helper in `time`, which aborted before Python started (`time` binary absent); the helper itself was executed once and succeeded, so helper execution attempts reflect actual helper runs.",
+            "recalc.py was invoked exactly once with a 180s timeout; LibreOffice recalculated and saved the workbook, producing output/formula_recalc.json.",
+            "The verifier passed on the first run, so no repair or additional recalc invocations were required.",
+            "Prepared reference CSVs were copied to the output directory unchanged."
+          ]
+        }
+      },
+      "historical_helpers": {
+        "enhance_workbook.py": {
+          "write_steps": [
+            17
+          ],
+          "exec_attempts": [
+            {
+              "step": 18,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 286,
+          "bytes": 10461,
+          "source_sha256": "2b8fe9c6c839510648e870b19400f66ec5df9d9d7f9c9dea5f5d5f1f5b2a43a6"
+        }
+      },
+      "expected_file_reference_steps": []
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T151503Z-e61d4442",
+      "inputs_match_frozen_legacy_import": {
+        "input/synthetic_applicants.json": true,
+        "input/pdf_dataset_sources.md": true,
+        "input/of306_aug2023.pdf": true,
+        "input/verify_pdf_batch.py": true
+      },
+      "skills_match_frozen_legacy_import": {
+        "vendor/skills/pdf/reference.md": true,
+        "vendor/skills/pdf/LICENSE.txt": true,
+        "vendor/skills/pdf/forms.md": true,
+        "vendor/skills/pdf/SKILL.md": true,
+        "vendor/skills/pdf/scripts/fill_fillable_fields.py": true,
+        "vendor/skills/pdf/scripts/extract_form_field_info.py": true,
+        "vendor/skills/pdf/scripts/check_fillable_fields.py": true,
+        "vendor/skills/pdf/scripts/convert_pdf_to_images.py": true
+      },
+      "same_openclaw_model_thinking": true,
+      "trace": {
+        "old": {
+          "trace": "legacy/pdf/trajectory.json",
+          "sha256": "3c488d4eaa554058d4bb473eb9c06b2b1f70727a524fb3d9391e47c091939f21",
+          "session_id": "bc13a924-f3f3-4822-a2b8-80e2ecdf96f3",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 19,
+          "tool_calls": 25,
+          "tools": {
+            "read": 10,
+            "exec": 12,
+            "write": 3
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 641874,
+            "total_completion_tokens": 7116,
+            "total_cached_tokens": 599680,
+            "total_cost_usd": 0.02469068,
+            "total_steps": 19
+          }
+        },
+        "new": {
+          "trace": "runs/pdf-opm-20261008T151503Z-e61d4442/trajectory.json",
+          "sha256": "462bb50ed35efee256df5b961e7ae25493e0665efeca07142a780ca2a3a6d9eb",
+          "session_id": "05d80c07-0100-48cf-8fa3-f793b7b47f77",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 16,
+          "tool_calls": 21,
+          "tools": {
+            "read": 11,
+            "exec": 8,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 651928,
+            "total_completion_tokens": 15815,
+            "total_cached_tokens": 602880,
+            "total_cost_usd": 0.02817556,
+            "total_steps": 16
+          }
+        }
+      },
+      "business_stage_exec_steps": {
+        "old": {
+          "check_fields": [
+            6
+          ],
+          "extract_schema": [
+            8
+          ],
+          "render_template": [
+            11
+          ],
+          "execute_batch": [
+            15
+          ],
+          "verify": [
+            17
+          ]
+        },
+        "new": {
+          "check_fields": [
+            7
+          ],
+          "extract_schema": [
+            7
+          ],
+          "render_template": [
+            12
+          ],
+          "execute_batch": [
+            12
+          ],
+          "verify": [
+            13
+          ]
+        }
+      },
+      "verification": {
+        "independent_verification.json": true,
+        "legacy_verification.json": true,
+        "baseline_accepted": true,
+        "old_business_success": true,
+        "archived_outputs_pass_both_verifiers": true
+      },
+      "outputs": {
+        "batch_summaries": {
+          "old": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true
+          },
+          "new": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true,
+            "protected_fields_omitted": [
+              "17a Applicants Signature",
+              "17b Appointees Signature 1",
+              "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY",
+              "Date",
+              "Date_2",
+              "Did you waive Basic Life Insurance or any type of optional life insurance",
+              "If yes to 18b did you later cancel the waivers",
+              "Social Security Number",
+              "When did you leave your last Federal job"
+            ]
+          }
+        },
+        "same_field_values_and_pages": {
+          "applicant_01": true,
+          "applicant_02": true,
+          "applicant_03": true,
+          "applicant_04": true,
+          "applicant_05": true,
+          "applicant_06": true,
+          "applicant_07": true,
+          "applicant_08": true,
+          "applicant_09": true,
+          "applicant_10": true
+        },
+        "artifact_counts": {
+          "old": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          },
+          "new": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          }
+        }
+      },
+      "prompt": {
+        "same_business_and_execution_text": true,
+        "allowed_changes": [
+          "workspace path",
+          "VM/container description",
+          "installed openpyxl description"
+        ],
+        "rendered_sha256": "ac82bfdf0953d872bcc2aa1b2fde7ca08e92c11fb89dad6f6fd53433ce0f5155",
+        "old_word_count": 472,
+        "new_word_count": 473
+      },
+      "agent_context": {
+        "schema_version": "office-agent-context-audit-v1",
+        "matched": true,
+        "profile": "legacy-host-v1",
+        "workspace_files": {
+          "AGENTS.md": 7195,
+          "SOUL.md": 1509,
+          "TOOLS.md": 866,
+          "IDENTITY.md": 1275,
+          "USER.md": 534,
+          "HEARTBEAT.md": 243
+        },
+        "expected_workspace_files": {
+          "AGENTS.md": 7195,
+          "SOUL.md": 1509,
+          "TOOLS.md": 866,
+          "IDENTITY.md": 1275,
+          "USER.md": 534,
+          "HEARTBEAT.md": 243
+        },
+        "skills": {
+          "promptChars": 5297,
+          "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+          "entries": [
+            {
+              "name": "agent-browser",
+              "blockChars": 316
+            },
+            {
+              "name": "canvas",
+              "blockChars": 314
+            },
+            {
+              "name": "diagram-maker",
+              "blockChars": 317
+            },
+            {
+              "name": "healthcheck",
+              "blockChars": 329
+            },
+            {
+              "name": "meme-maker",
+              "blockChars": 302
+            },
+            {
+              "name": "node-connect",
+              "blockChars": 332
+            },
+            {
+              "name": "node-inspect-debugger",
+              "blockChars": 328
+            },
+            {
+              "name": "pdf",
+              "blockChars": 618
+            },
+            {
+              "name": "python-debugpy",
+              "blockChars": 316
+            },
+            {
+              "name": "skill-creator",
+              "blockChars": 310
+            },
+            {
+              "name": "spike",
+              "blockChars": 302
+            },
+            {
+              "name": "taskflow",
+              "blockChars": 332
+            },
+            {
+              "name": "taskflow-inbox-triage",
+              "blockChars": 342
+            },
+            {
+              "name": "weather",
+              "blockChars": 340
+            }
+          ]
+        },
+        "expected_skills": {
+          "promptChars": 5297,
+          "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+          "entries": [
+            {
+              "name": "agent-browser",
+              "blockChars": 316
+            },
+            {
+              "name": "canvas",
+              "blockChars": 314
+            },
+            {
+              "name": "diagram-maker",
+              "blockChars": 317
+            },
+            {
+              "name": "healthcheck",
+              "blockChars": 329
+            },
+            {
+              "name": "meme-maker",
+              "blockChars": 302
+            },
+            {
+              "name": "node-connect",
+              "blockChars": 332
+            },
+            {
+              "name": "node-inspect-debugger",
+              "blockChars": 328
+            },
+            {
+              "name": "pdf",
+              "blockChars": 618
+            },
+            {
+              "name": "python-debugpy",
+              "blockChars": 316
+            },
+            {
+              "name": "skill-creator",
+              "blockChars": 310
+            },
+            {
+              "name": "spike",
+              "blockChars": 302
+            },
+            {
+              "name": "taskflow",
+              "blockChars": 332
+            },
+            {
+              "name": "taskflow-inbox-triage",
+              "blockChars": 342
+            },
+            {
+              "name": "weather",
+              "blockChars": 340
+            }
+          ]
+        },
+        "tool_schema_chars": 27477,
+        "expected_tool_schema_chars": 27477,
+        "system_prompt": {
+          "chars": 29630,
+          "hash": "7c9792240410a0729f7a16a8ce66383e6ed36c1ca280bbc3e064bd9da0f237ad",
+          "projectContextChars": 11727,
+          "nonProjectContextChars": 17903
+        },
+        "background_hashes_before": {
+          "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+          "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+          "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+          "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+          "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+          "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+        },
+        "background_hashes_after": {
+          "AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+          "HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+          "IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+          "SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+          "TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+          "USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16"
+        },
+        "background_matches_profile": true,
+        "background_unchanged": true,
+        "scope": "Historical injected-file lengths, exact Skill registry text hash and tool-schema length checked; current background bytes frozen and unchanged. Historical full background hashes and dynamic system text were not frozen."
+      },
+      "historical_system_prompt": {
+        "chars": 29663,
+        "hash": "8291b2076acaf7d585ada36e936d47b371e2d41c23a4919125499cfb0d02438c",
+        "projectContextChars": 11727,
+        "nonProjectContextChars": 17936
+      },
+      "context_aligned_run": {
+        "stats": {
+          "trace": "runs/pdf-opm-20261008T151503Z-e61d4442/trajectory.json",
+          "sha256": "462bb50ed35efee256df5b961e7ae25493e0665efeca07142a780ca2a3a6d9eb",
+          "session_id": "05d80c07-0100-48cf-8fa3-f793b7b47f77",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 16,
+          "tool_calls": 21,
+          "tools": {
+            "read": 11,
+            "exec": 8,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 651928,
+            "total_completion_tokens": 15815,
+            "total_cached_tokens": 602880,
+            "total_cost_usd": 0.02817556,
+            "total_steps": 16
+          }
+        },
+        "helpers": {
+          "make_field_values.py": {
+            "write_steps": [
+              9
+            ],
+            "exec_attempts": [
+              {
+                "step": 11,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 162,
+            "bytes": 6314,
+            "source_sha256": "c33e206b43b4171ece65339d1f2246ff0f03ffaf70f9aa16683f55e32b78c964"
+          },
+          "run_batch.py": {
+            "write_steps": [
+              10
+            ],
+            "exec_attempts": [
+              {
+                "step": 12,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 131,
+            "bytes": 4458,
+            "source_sha256": "c9853f02f1dba60955e3d4dda8fc991bbe367a63f5a6ae38458b7a810a295fea"
+          }
+        },
+        "recalc_exec_steps": [],
+        "source_framework_reference_steps": [],
+        "expected_file_reference_steps": [],
+        "agent_summary": {
+          "input_form": "of306_aug2023.pdf",
+          "applicant_count": 10,
+          "filled_pdf_count": 10,
+          "rendered_page_count": 33,
+          "fill_script_invocations": 10,
+          "render_script_invocations": 11,
+          "ssn_and_signatures_left_blank": true,
+          "protected_fields_omitted": [
+            "17a Applicants Signature",
+            "17b Appointees Signature 1",
+            "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY",
+            "Date",
+            "Date_2",
+            "Did you waive Basic Life Insurance or any type of optional life insurance",
+            "If yes to 18b did you later cancel the waivers",
+            "Social Security Number",
+            "When did you leave your last Federal job"
+          ]
+        }
+      },
+      "command_failure_diagnostics": [],
+      "logged_bundled_script_invocations": {
+        "convert_pdf_to_images": 11,
+        "fill_fillable_fields": 10
+      },
+      "previous_leaf_template_run": {
+        "stats": {
+          "trace": "runs/pdf-opm-20261008T124346Z-f0f172a6/trajectory.json",
+          "sha256": "18418b537fb22f966ec901379b5a2a0337ad6da569320199e87e0c270350afd0",
+          "session_id": "c16e0c11-4343-4e10-a0f1-ff25a645ba34",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 19,
+          "tool_calls": 26,
+          "tools": {
+            "read": 11,
+            "exec": 12,
+            "write": 3
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 776187,
+            "total_completion_tokens": 11823,
+            "total_cached_tokens": 732416,
+            "total_cost_usd": 0.029946028,
+            "total_steps": 19
+          }
+        },
+        "helpers": {
+          "gen_field_values.py": {
+            "write_steps": [
+              12
+            ],
+            "exec_attempts": [
+              {
+                "step": 14,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 74,
+            "bytes": 3614,
+            "source_sha256": "e99ed68a3fa679a8645c76be6d600ecb758bd0905ceb0a893a452a2d8cb22d23"
+          },
+          "run_batch.sh": {
+            "write_steps": [
+              13
+            ],
+            "exec_attempts": [
+              {
+                "step": 15,
+                "status": "completed",
+                "exit_code": 0
+              }
+            ],
+            "lines": 29,
+            "bytes": 986,
+            "source_sha256": "29efe78161d68dae0684fd31588d0869ec077a4caf2e6f06c6a437786004467e"
+          }
+        },
+        "recalc_exec_steps": [],
+        "source_framework_reference_steps": [],
+        "expected_file_reference_steps": [],
+        "agent_summary": {
+          "input_form": "of306_aug2023.pdf",
+          "applicant_count": 10,
+          "filled_pdf_count": 10,
+          "rendered_page_count": 33,
+          "fill_script_invocations": 10,
+          "render_script_invocations": 11,
+          "ssn_and_signatures_left_blank": true
+        }
+      },
+      "historical_helpers": {
+        "generate_and_run_batch.py": {
+          "write_steps": [
+            12
+          ],
+          "exec_attempts": [
+            {
+              "step": 13,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 184,
+          "bytes": 5191,
+          "source_sha256": "f054d84f7758f7f8be205bf69a9d92af4a32366ce17b39ed2e44494bc9bd288b"
+        },
+        "run_batch_fill_render.py": {
+          "write_steps": [
+            14
+          ],
+          "exec_attempts": [
+            {
+              "step": 15,
+              "status": "completed",
+              "exit_code": 0
+            }
+          ],
+          "lines": 52,
+          "bytes": 1752,
+          "source_sha256": "0402239c6a100348f35ce689abd012f5e1a5d68ced5c8708facc7bc4ce73a084"
+        }
+      },
+      "expected_file_reference_steps": []
+    }
+  },
+  "status": "success"
+}

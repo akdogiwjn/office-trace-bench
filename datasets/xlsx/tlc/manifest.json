@@ -1,0 +1,236 @@
+{
+  "schema_version": "office-dataset-v1",
+  "dataset_id": "tlc",
+  "kind": "xlsx",
+  "domain": "transportation_operations",
+  "task": "Enhance the existing NYC TLC January 2024 operations workbook",
+  "workbook": "monthly_operations_template.xlsx",
+  "output_workbook": "monthly_operations_report.xlsx",
+  "requirements": {
+    "summary_sheet": "Executive_Summary",
+    "base_sheets": [
+      "Raw_Sample",
+      "Hourly_Summary",
+      "Daily_Summary",
+      "Zone_Summary",
+      "Payment_Summary",
+      "Fare_Distance_Bands",
+      "Reconciliation"
+    ],
+    "raw_sheets": [
+      "Raw_Sample"
+    ],
+    "minimum_bytes": 10000000,
+    "minimum_formula_count": 45,
+    "metrics": [
+      {
+        "name": "Total Trips",
+        "cell": "B5",
+        "required_references": [
+          "Reconciliation!B10"
+        ],
+        "number_format": "#,##0",
+        "font_color": "008000"
+      },
+      {
+        "name": "Total Fare Revenue",
+        "cell": "B6",
+        "required_references": [
+          "Reconciliation!B14"
+        ],
+        "number_format": "$#,##0.00",
+        "font_color": "008000"
+      },
+      {
+        "name": "Overall Average Fare",
+        "cell": "B7",
+        "required_references": [
+          "Hourly_Summary!B34"
+        ],
+        "number_format": "$#,##0.00",
+        "font_color": "008000"
+      },
+      {
+        "name": "Removal Rate",
+        "cell": "B8",
+        "required_references": [
+          "Reconciliation!B5"
+        ],
+        "number_format": "0.0%",
+        "font_color": "008000"
+      },
+      {
+        "name": "Reconciliation Status",
+        "cell": "B9",
+        "required_references": [
+          "Reconciliation!B24",
+          "Reconciliation!B25"
+        ],
+        "meaning": "PASS only when both source cells equal YES - Consistent; otherwise REVIEW",
+        "prompt_instruction": "formula returning exactly PASS only when Reconciliation!B24 and B25 both show consistency; otherwise REVIEW."
+      }
+    ],
+    "scenario": {
+      "selector_cell": "B12",
+      "default": "Base",
+      "rows": [
+        {
+          "name": "Base",
+          "cells": {
+            "D13": "Base",
+            "E13": 1.0,
+            "F13": 1.0
+          }
+        },
+        {
+          "name": "Upside",
+          "cells": {
+            "D14": "Upside",
+            "E14": 1.08,
+            "F14": 1.05
+          }
+        },
+        {
+          "name": "Downside",
+          "cells": {
+            "D15": "Downside",
+            "E15": 0.93,
+            "F15": 0.95
+          }
+        }
+      ],
+      "table_columns": {
+        "D": "Scenario",
+        "E": "Fare multiplier",
+        "F": "Trip multiplier"
+      },
+      "formula_metrics": [
+        {
+          "name": "Selected Fare Multiplier",
+          "cell": "B13",
+          "required_references": [
+            "B12"
+          ],
+          "meaning": "Look up the fare multiplier for the selected scenario",
+          "font_color": "000000"
+        },
+        {
+          "name": "Selected Trip Multiplier",
+          "cell": "B14",
+          "required_references": [
+            "B12"
+          ],
+          "meaning": "Look up the trip multiplier for the selected scenario"
+        },
+        {
+          "name": "Projected Trips",
+          "cell": "B15",
+          "required_references": [
+            "B5",
+            "B14"
+          ],
+          "meaning": "Total trips multiplied by selected trip multiplier"
+        },
+        {
+          "name": "Projected Fare Revenue",
+          "cell": "B16",
+          "required_references": [
+            "B6",
+            "B13",
+            "B14"
+          ],
+          "meaning": "Total fare multiplied by selected fare and trip multipliers"
+        }
+      ]
+    },
+    "charts": [
+      {
+        "id": "daily_trips",
+        "description": "a daily-trip trend",
+        "required_references": [
+          "Daily_Summary!"
+        ]
+      },
+      {
+        "id": "payment_mix",
+        "description": "a payment-method mix",
+        "required_references": [
+          "Payment_Summary!"
+        ]
+      }
+    ],
+    "minimum_conditional_formats": 2,
+    "minimum_comments": 2,
+    "recalc_timeout": 180,
+    "styling": "Arial, blue/gray visual hierarchy; editable constants blue, cross-sheet formulas green, local formulas black"
+  },
+  "publish_files": [
+    {
+      "input": "prepared_monthly_operations_summary.csv",
+      "output": "monthly_operations_summary.csv",
+      "sha256": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02"
+    },
+    {
+      "input": "prepared_reconciliation_summary.csv",
+      "output": "reconciliation_summary.csv",
+      "sha256": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832"
+    }
+  ],
+  "required_outputs": [
+    "monthly_operations_report.xlsx",
+    "monthly_operations_summary.csv",
+    "reconciliation_summary.csv",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ],
+  "trace_rules": [
+    {
+      "pattern": "verify_xlsx_enhanced\\.py",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "office\\.py\\s+verify",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "recalc\\.py",
+      "operation": "recalculate_formulas"
+    },
+    {
+      "pattern": "\\bcp\\b.*\\.csv",
+      "operation": "publish_csv"
+    },
+    {
+      "pattern": "load_workbook",
+      "operation": "inspect_workbook"
+    }
+  ],
+  "input_files": {
+    "input/monthly_operations_template.xlsx": "51e34e9d59e43b9c330a00448645f025f1d4ea2d4c33e9998e6e1c6fef7b189f",
+    "input/template_manifest.json": "0ce06d540beea2b174de7da82bca932156511a10cc3df2687b6f6e928214ed8b",
+    "input/dataset_sources.md": "f526508c1d91d6120d1adf16388a5bcd4edbaccec8c34bf4329610ecad6f0214",
+    "input/prepared_monthly_operations_summary.csv": "280b7b8a8d849d2573da352a0ce55de0d4dc9afbde3b5c9b4bd6652102a32f02",
+    "input/prepared_reconciliation_summary.csv": "dec960c9f205e73ba05b4b80f3dfc718dfe77bf9e8229b349762a8c158cdc832",
+    "input/verify_xlsx_enhanced.py": "12a7a334bd758d24f0b3bb3ba1509961dfe9730b32530ed80b6b8cc2a0b409a5"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "bcfe9e859df6152111ab20c29d2b98c7b672ae7e11cd014cb6a3956a04ac031f",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "4457c1646510aa458a900aaf967f351de923a0877092a3f8e47f314c68657506",
+  "prompt_contract": {
+    "task_subject": "NYC TLC January 2024 operations workbook",
+    "raw_record_count": 100000,
+    "original_chart_count": 2,
+    "metadata_files": [
+      "template_manifest.json",
+      "dataset_sources.md"
+    ]
+  },
+  "agent_verifier": "verify_xlsx_enhanced.py",
+  "runtime_case": "SUB-MEM-OFFICE-01",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  }
+}

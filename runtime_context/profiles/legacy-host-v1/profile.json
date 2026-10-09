@@ -1,0 +1,198 @@
+{
+  "schema_version": "office-agent-context-v1",
+  "profile_id": "legacy-host-v1",
+  "source": "Docker host /root/.openclaw; copied only allowlisted background files and agent-browser Skill",
+  "files": {
+    "workspace/AGENTS.md": "c9a664b73200ae5d6b0da0908de3256cdb4dda8ba6fe99f5e6c5115c3983604c",
+    "workspace/SOUL.md": "29c66a31acce424ed6cf9b1c9e77dcdc5ae79d5fe2a035765c302a34b9025e0e",
+    "workspace/TOOLS.md": "4bd351aacb7fa76abb0be06ab3205d6d77bca2cdd9ca57b8fc23257878f3be77",
+    "workspace/IDENTITY.md": "2f6da67d69bd362f7aaa13c1214dcbba9f0f7cb51ff42ec5313e24d6bf6f9e55",
+    "workspace/USER.md": "e418ca9a680553b3ad8f54aecb0d403330810bb77826ab5251cc1dc13368fe16",
+    "workspace/HEARTBEAT.md": "ecce558615751a35aa173731e892ff3993f44bb4f5a1219c0a02994790c85528",
+    "skills/agent-browser/SKILL.md": "9643b9c65476eedd5ab353956c31a4d4ce9ad225f9a786d23376a43893f59979"
+  },
+  "workspace_dir": "/root/.openclaw/workspace",
+  "absent_workspace_files": [
+    "BOOTSTRAP.md",
+    "MEMORY.md"
+  ],
+  "source_metadata": {
+    "AGENTS.md": {
+      "trimmed_chars": 7195,
+      "source_mtime": 1784901506.310041
+    },
+    "SOUL.md": {
+      "trimmed_chars": 1509,
+      "source_mtime": 1784901506.310041
+    },
+    "TOOLS.md": {
+      "trimmed_chars": 866,
+      "source_mtime": 1784901506.310041
+    },
+    "IDENTITY.md": {
+      "trimmed_chars": 1275,
+      "source_mtime": 1784901506.310041
+    },
+    "USER.md": {
+      "trimmed_chars": 534,
+      "source_mtime": 1784901506.310041
+    },
+    "HEARTBEAT.md": {
+      "trimmed_chars": 243,
+      "source_mtime": 1784901506.310041
+    }
+  },
+  "historical_evidence_scope": "Current retained background files have historical metadata character lengths; historical full file hashes were not recorded, so byte-identical historical content is not claimed.",
+  "historical_references": {
+    "xlsx": {
+      "workspace_files": {
+        "AGENTS.md": 7195,
+        "SOUL.md": 1509,
+        "TOOLS.md": 866,
+        "IDENTITY.md": 1275,
+        "USER.md": 534,
+        "HEARTBEAT.md": 243
+      },
+      "skills": {
+        "promptChars": 5813,
+        "hash": "9536202608c2c96de2c4f81b6e6688650f158b0cb9db7ac4f58b4c7736562b82",
+        "entries": [
+          {
+            "name": "agent-browser",
+            "blockChars": 316
+          },
+          {
+            "name": "canvas",
+            "blockChars": 314
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 317
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 329
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 302
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 332
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 328
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 316
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 310
+          },
+          {
+            "name": "spike",
+            "blockChars": 302
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 332
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 342
+          },
+          {
+            "name": "weather",
+            "blockChars": 340
+          },
+          {
+            "name": "xlsx",
+            "blockChars": 1134
+          }
+        ]
+      },
+      "tool_schema_chars": 27477,
+      "workspace_dir": "/root/.openclaw/workspace",
+      "source_metadata": "/home/lcq/openclaw-trace-bench/cases/xlsx/agent_run/openclaw_agent.stdout.json"
+    },
+    "pdf": {
+      "workspace_files": {
+        "AGENTS.md": 7195,
+        "SOUL.md": 1509,
+        "TOOLS.md": 866,
+        "IDENTITY.md": 1275,
+        "USER.md": 534,
+        "HEARTBEAT.md": 243
+      },
+      "skills": {
+        "promptChars": 5297,
+        "hash": "232dafc9f3b7f604b576144b09d35a9f4bccf9241066731cc056ac3446532cf6",
+        "entries": [
+          {
+            "name": "agent-browser",
+            "blockChars": 316
+          },
+          {
+            "name": "canvas",
+            "blockChars": 314
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 317
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 329
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 302
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 332
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 328
+          },
+          {
+            "name": "pdf",
+            "blockChars": 618
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 316
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 310
+          },
+          {
+            "name": "spike",
+            "blockChars": 302
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 332
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 342
+          },
+          {
+            "name": "weather",
+            "blockChars": 340
+          }
+        ]
+      },
+      "tool_schema_chars": 27477,
+      "workspace_dir": "/root/.openclaw/workspace",
+      "source_metadata": "/home/lcq/openclaw-trace-bench/cases/pdf/agent_run/openclaw_agent.stdout.json"
+    }
+  }
+}

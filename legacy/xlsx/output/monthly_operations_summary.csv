@@ -1,0 +1,25 @@
+Metric,Value
+Total Raw Records,2964624
+After Cleaning,2758427
+Removed,206197
+Removal Rate,7.0%
+Total Trips,"2,758,427"
+Total Fare,"$50,744,748.60"
+Total Tip,"$9,665,544.02"
+Total Tolls,"$1,498,476.74"
+Total Extra,"$4,315,463.84"
+Total MTA Tax,"$1,365,324.10"
+Total Congestion Surcharge,"$6,440,281.75"
+Total Amount,"$75,600,521.40"
+Avg Fare,$18.40
+Avg Tip,$3.50
+Avg Trip Distance,3.20 mi
+Peak Hour,18:00
+Peak Hour Trips,"199,409"
+Credit Card %,83.0%
+Cash %,15.6%
+Manhattan Trips,"2,481,834"
+Brooklyn Trips,"8,275"
+Queens Trips,"255,387"
+Bronx Trips,"1,274"
+Staten Island Trips,45

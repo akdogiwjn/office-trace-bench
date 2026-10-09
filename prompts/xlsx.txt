@@ -1,0 +1,42 @@
+You are executing a measured OpenClaw benchmark case inside a fresh trace-generation container.
+
+Case: enhance an existing {task_subject} into an executive-ready, interactive workbook.
+Workspace root: {workspace}
+Input directory: {workspace}/input
+Output directory: {workspace}/output
+
+First read and follow the installed xlsx Skill at /root/.openclaw/skills/xlsx/SKILL.md. Use its prescribed openpyxl workflow and its bundled scripts/recalc.py. Do not replace the source workbook with a newly generated simplified workbook.
+
+Inputs:
+- {workbook}: {raw_count}-row sample workbook with {base_sheet_count} existing sheets and reconciled formulas.
+- {reference_files}: stable reference exports.
+- {metadata_files}: source and integrity metadata.
+- {verifier_filename}: independent strict verifier.
+
+Required business work:
+1. Copy {workbook} to output/{output_workbook}, preserve every existing sheet, formula, chart, value, and the {raw_count}-row {raw_sheet} sheet.
+2. Add {summary_sheet} as the first sheet. Use Arial consistently and a professional blue/gray visual hierarchy.
+3. Place these KPI formulas in the exact cells below:
+{kpi_lines}
+4. Add a {scenario_count}-scenario control block:
+   - {selector_cell} is a data-validation dropdown with {scenario_names} and defaults to {scenario_default}.
+   - {scenario_table_range} is the hardcoded scenario table: {scenario_table} for {scenario_dimensions} multipliers.
+   - {lookup_cells} dynamically return the selected {scenario_dimensions} multipliers using formulas that reference the scenario table.
+{projected_formula_lines}
+5. Add at least {chart_count} charts on {summary_sheet}: {chart_descriptions}. The {original_chart_count} original charts must remain intact.
+6. Add at least {conditional_format_count} conditional-formatting rules, freeze panes, readable widths/heights, correct currency/percentage/integer number formats, and at least {comment_count} comments documenting source or scenario assumptions.
+7. Apply the xlsx Skill color convention: hardcoded editable inputs in blue font, cross-sheet formulas in green font, local formulas in black font.
+8. Calculations must remain Excel formulas, not Python-hardcoded results. Do not create external workbook links.
+
+Execution and QA:
+- You may write one concise Python helper using openpyxl to perform the workbook edits.
+- The container uses the installed openpyxl. Never assign None to cell.fill or another style descriptor; leave an unstyled cell untouched. Construct PatternFill with explicit start_color, end_color, and fill_type keyword arguments so the saved workbook remains valid.
+- When all edits are finished, invoke /root/.openclaw/skills/xlsx/scripts/recalc.py exactly once with a {recalc_timeout}-second timeout and save its JSON stdout as output/formula_recalc.json.
+- Copy the {reference_count} prepared CSVs to {csv_publish_description}.
+- Run input/{verifier_filename} against the final workbook and recalc JSON so it writes output/business_verification.json. Fix the workbook only if this strict verifier fails; if you must repair after recalc, rerun recalc and record the extra invocation in the summary.
+- Write output/xlsx_enhancement_summary.json with the created feature counts, helper filename, helper execution-attempt count, helper successful-execution count, recalc invocation count, and final verifier status.
+
+Completion requires all of these files:
+{output_list}
+
+Do not install packages or download data during the measured task. Do not merely describe the work: create and verify the actual files.

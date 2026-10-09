@@ -1,0 +1,34 @@
+{
+  "dataset_id": "hr",
+  "raw_count": 100000,
+  "base_sheets": [
+    "Raw_Data",
+    "Occupation_Summary",
+    "Employment_Summary",
+    "Wage_Summary",
+    "Segment_Summary",
+    "Employment_Mix",
+    "Reconciliation"
+  ],
+  "existing_formula_count": 11,
+  "existing_chart_count": 2,
+  "source": {
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "distributor": "Public GitHub repository cache",
+    "official_source_url": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+    "source_url": "https://raw.githubusercontent.com/hack4rva/richmond-ai-impact-analysis/main/data/oesm25nat/national_M2025_dl.xlsx",
+    "source_artifact": "sources/xlsx/national_M2025_dl.xlsx",
+    "source_sha256": "852250997ceff9b721ff68f63e877d818f9c1ec8b1b69dd367958faedd5282b2",
+    "year": 2025,
+    "official_download_available": false,
+    "official_byte_identity_independently_verified": false,
+    "observed_seed_rows": 825,
+    "benchmark_raw_rows": 100000,
+    "raw_rows_are_observed_workers": false,
+    "selection": "U.S. cross-industry ownership 1235 detailed occupations with numeric positive employment, annual mean and annual median; exclude all aggregate hierarchy rows and suppressed wages.",
+    "expansion": "Partition employment counts into synthetic shards; preserve source occupation counts and count-times-wage masses.",
+    "median_definition": "Employment-weighted average of occupation medians; a proxy, never the national worker median.",
+    "payroll_definition": "Employment times published annual mean wage; illustrative estimated wage mass, not observed payroll.",
+    "industries": "No industry detail in national cross-industry source; segments are explicitly synthetic."
+  }
+}

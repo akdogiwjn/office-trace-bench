@@ -1,0 +1,620 @@
+[
+  {
+    "field_id": "Full Name",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      42.9088,
+      679.415,
+      584.722,
+      701.415
+    ]
+  },
+  {
+    "field_id": "Social Security Number",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      42.0419,
+      643.441,
+      192.042,
+      665.441
+    ]
+  },
+  {
+    "field_id": "PLACE OF BIRTH Include city and state or country",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      232.242,
+      639.206,
+      584.971,
+      668.006
+    ]
+  },
+  {
+    "field_id": "Country of Citizenship",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      265.688,
+      608.767,
+      395.317,
+      630.767
+    ]
+  },
+  {
+    "field_id": "Are you a U.S. Citizen?",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          17.7703,
+          606.266,
+          35.7703,
+          624.266
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          65.1152,
+          605.947,
+          83.1152,
+          623.947
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "DATE OF BIRTH MM  DD  YYYY",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      429.274,
+      606.24,
+      560.914,
+      631.139
+    ]
+  },
+  {
+    "field_id": "Day",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      439.476,
+      576.002,
+      594.516,
+      594.482
+    ]
+  },
+  {
+    "field_id": "Other Names Used 2",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      45.2436,
+      555.759,
+      380.748,
+      574.725
+    ]
+  },
+  {
+    "field_id": "Male",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/No",
+        "rect": [
+          462.668,
+          494.351,
+          480.668,
+          512.351
+        ]
+      },
+      {
+        "value": "/Yes",
+        "rect": [
+          331.323,
+          494.67,
+          349.323,
+          512.67
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Have you registered with Selective Service",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/No",
+        "rect": [
+          462.668,
+          475.351,
+          480.668,
+          493.351
+        ]
+      },
+      {
+        "value": "/Yes",
+        "rect": [
+          331.323,
+          475.67,
+          349.323,
+          493.67
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Have you ever served in the U.S. Military",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/No",
+        "rect": [
+          503.668,
+          434.706,
+          521.668,
+          452.706
+        ]
+      },
+      {
+        "value": "/Yes",
+        "rect": [
+          332.323,
+          435.025,
+          350.323,
+          453.025
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "BranchRow1",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      19.68,
+      372.72,
+      160.8,
+      388.44
+    ]
+  },
+  {
+    "field_id": "From MMDDYYYYRow1",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      163.44,
+      372.72,
+      254.4,
+      388.44
+    ]
+  },
+  {
+    "field_id": "To MMDDYYYYRow1",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      257.04,
+      372.72,
+      348,
+      388.44
+    ]
+  },
+  {
+    "field_id": "Type of Discharge 2",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      349.319,
+      355.095,
+      594.672,
+      372.327
+    ]
+  },
+  {
+    "field_id": "BranchRow2",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      19.68,
+      354.72,
+      160.8,
+      370.44
+    ]
+  },
+  {
+    "field_id": "From MMDDYYYYRow2",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      163.44,
+      354.72,
+      254.4,
+      370.44
+    ]
+  },
+  {
+    "field_id": "To MMDDYYYYRow2",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      257.04,
+      354.72,
+      348,
+      370.44
+    ]
+  },
+  {
+    "field_id": "BranchRow3",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      19.68,
+      337.08,
+      160.8,
+      352.44
+    ]
+  },
+  {
+    "field_id": "From MMDDYYYYRow3",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      163.44,
+      337.08,
+      254.4,
+      352.44
+    ]
+  },
+  {
+    "field_id": "To MMDDYYYYRow3",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      257.04,
+      337.08,
+      348,
+      352.44
+    ]
+  },
+  {
+    "field_id": "Type of Discharge 3",
+    "type": "text",
+    "page": 2,
+    "rect": [
+      348.319,
+      336.095,
+      593.672,
+      353.327
+    ]
+  },
+  {
+    "field_id": "Have you been convicted imprisoned probation or paroled last 7 years",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          494.323,
+          222.064,
+          512.323,
+          240.064
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          541.668,
+          221.745,
+          559.668,
+          239.745
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Have you been court martialed in the last 7 years",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          495.323,
+          175.967,
+          513.323,
+          193.967
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          542.668,
+          175.648,
+          560.668,
+          193.648
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Are you currently under charges",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          495.323,
+          140.011,
+          513.323,
+          158.011
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          542.668,
+          139.692,
+          560.668,
+          157.692
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          494.323,
+          110.011,
+          512.323,
+          128.011
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          541.668,
+          109.692,
+          559.668,
+          127.692
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Are you delinquent on any Federal debt",
+    "type": "radio_group",
+    "page": 2,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          495.323,
+          63.0109,
+          513.323,
+          81.0109
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          542.668,
+          62.6919,
+          560.668,
+          80.6919
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Do any of your relatives work for the agency or government organization for which you are submitting this form",
+    "type": "radio_group",
+    "page": 3,
+    "radio_options": [
+      {
+        "value": "/No",
+        "rect": [
+          543.945,
+          699.885,
+          561.945,
+          717.885
+        ]
+      },
+      {
+        "value": "/Yes",
+        "rect": [
+          494.101,
+          699.885,
+          512.101,
+          717.885
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government",
+    "type": "radio_group",
+    "page": 3,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          492.074,
+          635.096,
+          510.074,
+          653.096
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          541.918,
+          635.096,
+          559.918,
+          653.096
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "Continuation of Space or Agency Specific Questions",
+    "type": "text",
+    "page": 3,
+    "rect": [
+      26.9443,
+      444.44,
+      594.12,
+      574.544
+    ]
+  },
+  {
+    "field_id": "17a Applicants Signature",
+    "type": "unknown (/Sig)",
+    "page": 3,
+    "rect": [
+      124.8,
+      225.6,
+      347.28,
+      238.68
+    ]
+  },
+  {
+    "field_id": "Date",
+    "type": "text",
+    "page": 3,
+    "rect": [
+      374.88,
+      225.6,
+      455.28,
+      238.68
+    ]
+  },
+  {
+    "field_id": "17b Appointees Signature 1",
+    "type": "unknown (/Sig)",
+    "page": 3,
+    "rect": [
+      128.16,
+      196.8,
+      347.28,
+      209.88
+    ]
+  },
+  {
+    "field_id": "Date_2",
+    "type": "text",
+    "page": 3,
+    "rect": [
+      374.88,
+      196.8,
+      455.28,
+      209.88
+    ]
+  },
+  {
+    "field_id": "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY",
+    "type": "text",
+    "page": 3,
+    "rect": [
+      465.48,
+      195.36,
+      592.92,
+      216.24
+    ]
+  },
+  {
+    "field_id": "When did you leave your last Federal job",
+    "type": "text",
+    "page": 3,
+    "rect": [
+      470.493,
+      107.393,
+      591.953,
+      129.175
+    ]
+  },
+  {
+    "field_id": "Did you waive Basic Life Insurance or any type of optional life insurance",
+    "type": "radio_group",
+    "page": 3,
+    "radio_options": [
+      {
+        "value": "/Yes",
+        "rect": [
+          404.074,
+          85.6046,
+          422.074,
+          103.605
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          453.918,
+          85.6046,
+          471.918,
+          103.605
+        ]
+      },
+      {
+        "value": "/Do Not Know",
+        "rect": [
+          501.996,
+          85.64,
+          519.996,
+          103.64
+        ]
+      }
+    ]
+  },
+  {
+    "field_id": "If yes to 18b did you later cancel the waivers",
+    "type": "radio_group",
+    "page": 3,
+    "radio_options": [
+      {
+        "value": "/Do Not Know",
+        "rect": [
+          502.957,
+          58.6577,
+          520.957,
+          76.6577
+        ]
+      },
+      {
+        "value": "/Yes",
+        "rect": [
+          405.035,
+          58.6223,
+          423.035,
+          76.6223
+        ]
+      },
+      {
+        "value": "/No",
+        "rect": [
+          454.879,
+          58.6223,
+          472.879,
+          76.6223
+        ]
+      }
+    ]
+  }
+]

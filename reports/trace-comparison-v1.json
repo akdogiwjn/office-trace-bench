@@ -1,0 +1,441 @@
+{
+  "schema_version": "office-trace-comparison-v1",
+  "compared_at": "2026-10-08T12:18:59.160524+00:00",
+  "datasets": {
+    "tlc": {
+      "status": "success",
+      "run_id": "xlsx-tlc-20261008T115345Z-63218840",
+      "inputs_match_frozen_legacy_import": {
+        "input/monthly_operations_template.xlsx": true,
+        "input/template_manifest.json": true,
+        "input/dataset_sources.md": true,
+        "input/prepared_monthly_operations_summary.csv": true,
+        "input/prepared_reconciliation_summary.csv": true
+      },
+      "skills_match_frozen_legacy_import": {
+        "vendor/skills/xlsx/LICENSE.txt": true,
+        "vendor/skills/xlsx/SKILL.md": true,
+        "vendor/skills/xlsx/scripts/recalc.py": true,
+        "vendor/skills/xlsx/scripts/office/soffice.py": true,
+        "vendor/skills/xlsx/scripts/office/unpack.py": true,
+        "vendor/skills/xlsx/scripts/office/validate.py": true,
+        "vendor/skills/xlsx/scripts/office/pack.py": true
+      },
+      "same_openclaw_model_thinking": true,
+      "trace": {
+        "old": {
+          "trace": "legacy/xlsx/trajectory.json",
+          "sha256": "d56b64785155ce95e4df7ccbd4c368970238025e7c4dc0c82de126e95e300ab6",
+          "session_id": "85e12fb7-a392-4cd8-9bdb-066156bc464a",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 35,
+          "tool_calls": 41,
+          "tools": {
+            "read": 1,
+            "exec": 27,
+            "process": 12,
+            "write": 1
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [
+            5,
+            7,
+            9,
+            12
+          ],
+          "recorded_metrics": {
+            "total_prompt_tokens": 1326487,
+            "total_completion_tokens": 13934,
+            "total_cached_tokens": 1293184,
+            "total_cost_usd": 0.044773092,
+            "total_steps": 35
+          }
+        },
+        "new": {
+          "trace": "runs/xlsx-tlc-20261008T115345Z-63218840/trajectory.json",
+          "sha256": "cfe8875219e5a989826b4f007ece84e0bdb66f16bb296814c10821ff32f914d9",
+          "session_id": "d736a457-fec1-486d-ae92-2166a6070525",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 32,
+          "tool_calls": 36,
+          "tools": {
+            "read": 8,
+            "exec": 21,
+            "process": 5,
+            "write": 2
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 24,
+              "tool": "exec",
+              "exit_code": 127,
+              "result_excerpt": "/usr/bin/sh: 1: time: not found\n\nCommand not found"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 1526901,
+            "total_completion_tokens": 22059,
+            "total_cached_tokens": 1479552,
+            "total_cost_usd": 0.054232836,
+            "total_steps": 32
+          }
+        }
+      },
+      "business_stage_exec_steps": {
+        "old": {
+          "inspect_input": [
+            3,
+            4,
+            6,
+            8,
+            10,
+            11,
+            14,
+            15
+          ],
+          "build_workbook": [
+            18
+          ],
+          "recalculate": [
+            22,
+            26
+          ],
+          "publish_csv": [
+            25
+          ],
+          "verify": [
+            30
+          ]
+        },
+        "new": {
+          "inspect_input": [
+            9,
+            11,
+            13,
+            19,
+            28,
+            29
+          ],
+          "build_workbook": [
+            24,
+            25
+          ],
+          "recalculate": [
+            26
+          ],
+          "publish_csv": [
+            27
+          ],
+          "verify": [
+            30
+          ]
+        }
+      },
+      "verification": {
+        "independent_verification.json": true,
+        "legacy_verification.json": true,
+        "baseline_accepted": true,
+        "old_business_success": true,
+        "archived_outputs_pass_both_verifiers": true
+      },
+      "outputs": {
+        "same_sheet_order": true,
+        "sheets": [
+          "Executive_Summary",
+          "Raw_Sample",
+          "Hourly_Summary",
+          "Daily_Summary",
+          "Zone_Summary",
+          "Payment_Summary",
+          "Fare_Distance_Bands",
+          "Reconciliation"
+        ],
+        "same_kpi_cached_values": true,
+        "kpi_cached_values": {
+          "B5": 2758427,
+          "B6": 50744748.6,
+          "B7": 18.9361351508528,
+          "B8": 0.0695524963705347,
+          "B9": "PASS",
+          "B13": 1,
+          "B14": 1,
+          "B15": 2758427,
+          "B16": 50744748.6
+        },
+        "same_csv_bytes": {
+          "monthly_operations_summary.csv": true,
+          "reconciliation_summary.csv": true
+        },
+        "formula_counts": {
+          "old": 45,
+          "new": 48
+        },
+        "formula_differences": [
+          {
+            "cell": "Executive_Summary!B13",
+            "old": "=INDEX(E13:E15,MATCH(B12,D13:D15,0))",
+            "new": "=VLOOKUP(B12,$D$13:$F$15,2,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B14",
+            "old": "=INDEX(F13:F15,MATCH(B12,D13:D15,0))",
+            "new": "=VLOOKUP(B12,$D$13:$F$15,3,FALSE())"
+          },
+          {
+            "cell": "Executive_Summary!B17",
+            "old": null,
+            "new": "=B15-B5"
+          },
+          {
+            "cell": "Executive_Summary!B18",
+            "old": null,
+            "new": "=B16-B6"
+          },
+          {
+            "cell": "Executive_Summary!B19",
+            "old": null,
+            "new": "=IF(B6=0,0,B16/B6-1)"
+          }
+        ],
+        "recalc_reports": {
+          "old": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 45
+          },
+          "new": {
+            "status": "success",
+            "total_errors": 0,
+            "error_summary": {},
+            "total_formulas": 48
+          }
+        }
+      }
+    },
+    "opm": {
+      "status": "success",
+      "run_id": "pdf-opm-20261008T115600Z-aa170fa3",
+      "inputs_match_frozen_legacy_import": {
+        "input/synthetic_applicants.json": true,
+        "input/pdf_dataset_sources.md": true,
+        "input/of306_aug2023.pdf": true
+      },
+      "skills_match_frozen_legacy_import": {
+        "vendor/skills/pdf/reference.md": true,
+        "vendor/skills/pdf/LICENSE.txt": true,
+        "vendor/skills/pdf/forms.md": true,
+        "vendor/skills/pdf/SKILL.md": true,
+        "vendor/skills/pdf/scripts/fill_fillable_fields.py": true,
+        "vendor/skills/pdf/scripts/extract_form_field_info.py": true,
+        "vendor/skills/pdf/scripts/check_fillable_fields.py": true,
+        "vendor/skills/pdf/scripts/convert_pdf_to_images.py": true
+      },
+      "same_openclaw_model_thinking": true,
+      "trace": {
+        "old": {
+          "trace": "legacy/pdf/trajectory.json",
+          "sha256": "3c488d4eaa554058d4bb473eb9c06b2b1f70727a524fb3d9391e47c091939f21",
+          "session_id": "bc13a924-f3f3-4822-a2b8-80e2ecdf96f3",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 19,
+          "tool_calls": 25,
+          "tools": {
+            "read": 10,
+            "exec": 12,
+            "write": 3
+          },
+          "missing_tool_results": [],
+          "command_failures": [],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 641874,
+            "total_completion_tokens": 7116,
+            "total_cached_tokens": 599680,
+            "total_cost_usd": 0.02469068,
+            "total_steps": 19
+          }
+        },
+        "new": {
+          "trace": "runs/pdf-opm-20261008T115600Z-aa170fa3/trajectory.json",
+          "sha256": "888cb37399a6f56898ad696e5d7bfd33f731c7bc13cd892e3bf333995c9bb32f",
+          "session_id": "56618ab1-a16b-4233-9fa3-db7fec651797",
+          "agent": {
+            "name": "openclaw",
+            "version": "OpenClaw 2026.6.6 (8c802aa)",
+            "model_name": "deepseek/deepseek-v4-flash",
+            "extra": {
+              "parser": "openclaw-session-jsonl",
+              "provider": "deepseek",
+              "session_schema_version": 3,
+              "thinking_level": "high"
+            }
+          },
+          "steps": 16,
+          "tool_calls": 27,
+          "tools": {
+            "read": 15,
+            "exec": 11,
+            "write": 1
+          },
+          "missing_tool_results": [],
+          "command_failures": [
+            {
+              "step_id": 5,
+              "tool": "exec",
+              "exit_code": 1,
+              "result_excerpt": "pypdf 6.10.0\npdf2image ok\nPIL 12.2.0\n/usr/bin/pdftoppm\n/usr/bin/pdftotext\n\n(Command exited with code 1)"
+            },
+            {
+              "step_id": 13,
+              "tool": "exec",
+              "exit_code": 1,
+              "result_excerpt": "=== output tree ===\noutput/batch_summary.json\noutput/business_verification.json\noutput/check_fillable_fields.log\noutput/field_values/applicant_01.json\noutput/field_values/applicant_02.json\noutput/field_values/applicant_03.json\noutput/field_values/applicant_04.json\noutput/field_values/applicant_05.json\noutput/field_values/applicant_06.json\noutput/fi"
+            }
+          ],
+          "process_kill_steps": [],
+          "recorded_metrics": {
+            "total_prompt_tokens": 611548,
+            "total_completion_tokens": 11116,
+            "total_cached_tokens": 574720,
+            "total_cost_usd": 0.02436056,
+            "total_steps": 16
+          }
+        }
+      },
+      "business_stage_exec_steps": {
+        "old": {
+          "check_fields": [
+            6
+          ],
+          "extract_schema": [
+            8
+          ],
+          "render_template": [
+            11
+          ],
+          "execute_batch": [
+            15
+          ],
+          "verify": [
+            17
+          ]
+        },
+        "new": {
+          "check_fields": [
+            8
+          ],
+          "extract_schema": [
+            8
+          ],
+          "render_template": [
+            11
+          ],
+          "execute_batch": [
+            11
+          ],
+          "verify": [
+            12
+          ]
+        }
+      },
+      "verification": {
+        "independent_verification.json": true,
+        "legacy_verification.json": true,
+        "baseline_accepted": true,
+        "old_business_success": true,
+        "archived_outputs_pass_both_verifiers": true
+      },
+      "outputs": {
+        "batch_summaries": {
+          "old": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "ssn_and_signatures_left_blank": true
+          },
+          "new": {
+            "input_form": "of306_aug2023.pdf",
+            "applicant_count": 10,
+            "filled_pdf_count": 10,
+            "rendered_page_count": 33,
+            "ssn_and_signatures_left_blank": true,
+            "fill_script_invocations": 10,
+            "render_script_invocations": 11,
+            "check_fillable_fields_invocations": 1,
+            "extract_form_field_info_invocations": 1,
+            "fill_failures": [],
+            "render_failures": [],
+            "repair_count": 0,
+            "repairs": [],
+            "notes": [
+              "rendered blank template (page_1..3.png)"
+            ]
+          }
+        },
+        "same_field_values_and_pages": {
+          "applicant_01": true,
+          "applicant_02": true,
+          "applicant_03": true,
+          "applicant_04": true,
+          "applicant_05": true,
+          "applicant_06": true,
+          "applicant_07": true,
+          "applicant_08": true,
+          "applicant_09": true,
+          "applicant_10": true
+        },
+        "artifact_counts": {
+          "old": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          },
+          "new": {
+            "pdf": 10,
+            "png": 33,
+            "mapping": 10
+          }
+        }
+      }
+    }
+  },
+  "scope": "Business regression and complete recorded tool traces; not identical workloads or performance equivalence.",
+  "status": "success"
+}

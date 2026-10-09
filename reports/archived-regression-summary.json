@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "scope": "Historical artifacts only; this does not prove a new generic-prompt Agent run succeeded.",
+  "datasets": {
+    "tlc": {
+      "new_verifier": "success",
+      "new_failures": [],
+      "legacy_verifier": "success",
+      "legacy_exit_code": 0,
+      "legacy_failures": [],
+      "legacy_error": null
+    },
+    "opm": {
+      "new_verifier": "success",
+      "new_failures": [],
+      "legacy_verifier": "success",
+      "legacy_exit_code": 0,
+      "legacy_failures": [],
+      "legacy_error": null
+    }
+  }
+}

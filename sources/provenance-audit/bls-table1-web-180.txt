@@ -1,0 +1,207 @@
+Table 1. National employment and wage data from the Occupational Employment and Wage Statistics survey by occupation, May 2025 - 2025 A01 Results (https://www.bls.gov/news.release/ocwage.t01.htm)
+citeturn33view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/news.release/ocwage.t01.htm","lineno":180}); Total lines: 1374
+L0: cite0†Skip to Content L1: 
+L2:   *   * cite1†Home L3:     * cite2†About BLS L4:     * cite3†History L5:     * cite4†Our Leadership L6:     * cite5†Budget and Performance L7:     * cite6†Questions and Answers L8:     * cite7†A-Z Index L9:     * cite8†Glossary L10:     * cite9†BLS Speakers Available L11:     * cite10†Errata L12:     * cite11†Contact BLS L13:     * cite12†Overview of BLS Statistics L14:     * cite13†Guide to Programs & Services L15:     * cite14†Demographics L16:     * cite15†Industries L17:     * cite16†Business Costs L18:     * cite17†Occupations L19:     * cite18†Geography L20:     * cite19†Resources For L21:     * cite20†Business Leaders L22:     * cite21†Consumers L23:     * cite22†Developers L24:     * cite23†Economists L25:     * cite24†Investors L26:     * cite25†Jobseekers L27:     * cite26†Media L28:     * cite27†Public Policymakers L29:     * cite28†Researcher L30:     * cite29†Students & Teachers L31:     * cite30†Survey Respondents L32:   * cite31†Subjects L33:     * cite32†Inflation & Prices L34:     * cite33†Consumer Price Index L35:     * cite34†Producer Price Indexes L36:     * cite35†Import/Export Price Indexes L37:     * cite36†Contract Escalation L38:     * cite37†Price Index Research L39:     * cite38†Pay & Benefits L40:     * cite39†Employment Cost Index L41:     * cite40†Employer Costs for Employee Compensation L42:     * cite41†Wage Data by Occupation L43:     * cite42†Earnings by Demographics L44:     * cite43†Earnings by Industry L45:     * cite44†County Wages L46:     * cite45†Benefits L47:     * cite46†Modeled Wage Estimates L48:     * cite47†Compensation Research L49:     * cite48†Strikes & Lockouts L50:     * cite49†Wage Records from Unemployment Insurance L51:     * cite50†Occupational Requirements L52:     * cite51†Unemployment L53:     * cite52†National Unemployment Rate L54:     * cite53†State & Local Unemployment Rates L55:     * cite54†Unemployment Research L56:     * cite55†Employment L57:     * cite43†National Employment L58:     * cite56†State & Local Employment L59:     * cite44†County Employment L60:     * cite52†Worker Characteristics L61:     * cite57†American Indian Report L62:     * cite58†Employment Projections L63:     * cite59†Job Openings & Labor Turnover Survey L64:     * cite60†Business Response Survey L65:     * cite41†Employment by Occupation L66:     * cite61†Work Experience Over Time L67:     * cite62†Business Employment Dynamics L68:     * cite63†Foreign Direct Investment L69:     * cite54†Employment Research L70:     * cite64†Workplace Injuries L71:     * cite65†Productivity L72:     * cite66†Labor and Total Factor Productivity L73:     * cite67†Productivity Research L74:     * cite68†Spending & Time Use L75:     * cite69†Consumer Expenditures L76:     * cite70†How Americans Spend Time L77:     * cite71†International L78:     * cite72†International Technical Cooperation L79:     * cite35†Import/Export Price Indexes L80:     * cite73†Geographic Information L81:     * cite74†Northeast (Boston-New York) L82:     * cite75†Mid-Atlantic (Philadelphia) L83:     * cite76†Southeast (Atlanta) L84:     * cite77†Midwest (Chicago) L85:     * cite78†Southwest (Dallas) L86:     * cite79†Mountain-Plains (Kansas City) L87:     * cite80†West (San Francisco) L88:   * cite81†Data Tools L89:     * cite82†Data Retrieval Tools L90:     * cite83†BLS Popular Series†data.bls.gov L91:     * cite84†Series Report†data.bls.gov L92:     * cite85†Top Picks, One Screen, Multi-Screen, and Maps L93:     * cite86†Data Finder†data.bls.gov L94:     * cite87†Public Data API L95:     * cite88†Charts and Applications L96:     * cite89†Charts for Economic News Releases L97:     * cite90†CPI Inflation Calculator L98:     * cite91†Injury and Illness Calculator†data.bls.gov L99:     * cite92†Pay Measure Comparison†data.bls.gov L100:     * cite93†Demographic Data Sources†data.bls.gov L101:     * cite94†COVID-19 Economic Trends†data.bls.gov L102:     * cite95†Industry Productivity Viewer†data.bls.gov L103:     * cite96†Employment and Wages Data Viewer†data.bls.gov L104:     * cite97†Industry Finder from the Quarterly Census of Employment and Wages†data.bls.gov L105:     * cite98†Customized Tables L106:     * cite99†U.S. Economy at a Glance L107:     * cite100†Regions, States & Areas at a Glance L108:     * cite101†Industry at a Glance L109:     * cite102†Text Files†download.bls.gov L110:     * cite103†News Release Tables L111:     * cite104†More Sources of Data L112:     * cite105†Restricted Data Access L113:     * cite106†Discontinued Databases L114:     * cite107†Questions & Answers L115:     * cite108†Special Notices L116:   * cite109†Publications L117: 
+L118:     * cite109†Latest Publications L119:     * cite110†The Economics Daily L120:     * cite111†Monthly Labor Review L121:     * cite112†Beyond the Numbers L122:     * cite113†Spotlight on Statistics L123:     * cite114†Reports L124:     * cite115†Videos L125:     * cite116†Career Outlook L126:     * cite117†Occupational Outlook Handbook L127:     * cite118†Geographic Profile L128:     * cite119†Handbook of Methods L129:     * cite120†Research Papers L130:     * cite121†Copyright Information L131:     * cite122†Contact & Help L132:     * cite123†Weekly Update L133: 
+L134:   * cite124†Economic Releases L135:     * cite125†Latest Releases L136:     * cite126†Major Economic Indicators L137:     * cite127†Schedules for news Releases L138:     * cite128†By Month L139:     * cite129†By News Release L140:     * cite130†Current Year L141:     * cite131†Prior Years L142:     * cite132†Archived News Releases L143:     * cite133†Employment & Unemployment L144:     * cite133†Monthly L145:     * cite133†Quarterly, annual, and other L146:     * cite134†Inflation & Prices L147:     * cite135†Pay & Benefits & Workplace Injuries L148:     * cite136†Productivity & Technology L149:     * cite137†Employment Projections L150:     * cite138†Regional News Releases L151:   * cite139†Classroom L152: 
+L153:     * cite139†K-12 Student & Teacher Resources L154:     * cite140†Games & Quizzes L155:     * cite141†Student's Desk L156:     * cite142†Teacher's Desk L157:     * cite143†Questions & Answers L158: 
+L159: cite124†Economic News Release L160: 
+L161: cite144†PRINT:†data.bls.gov L162: 
+L163: cite145†OEWS L164: 
+L165: Occupational Employment and Wage Statistics
+L166: 
+L167:   * cite41†OEWS Homepage L168:   * cite146†OEWS Overview L169:   * cite147†OEWS FAQs L170:   * cite148†Contact OEWS L171: 
+L172: [Button: Close]
+L173: # Table 1. National employment and wage data from the Occupational Employment and Wage Statistics survey by occupation, May 2025
+L174: 
+L175:     Table 1.  National employment and wage data from the Occupational Employment and Wage Statistics survey by occupation, May 2025
+L176:                                                                                                                               Median
+L177:                                          Occupation                                         Employment        Mean wages      hourly
+L178:                                                                                                          Hourly    Annual(1)   wages
+L179: 
+L180:     All occupations                                                                        155,495,730   $33.54    $69,770    $24.51
+L181:     Management occupations                                                                  11,132,700    69.84    145,260     60.83
+L182:        Top executives.....................................................................   3,720,520    68.33    142,120     52.17
+L183:         Chief executives..................................................................     204,350   129.63    269,630    102.88
+L184:         General and operations managers...................................................   3,503,020    64.87    134,940     50.85
+L185:        Advertising, marketing, promotions, public relations, and sales managers...........   1,167,460    80.73    167,930     74.89
+L186:         Advertising and promotions managers...............................................      21,470    74.18    154,280     64.26
+L187:         Marketing and sales managers......................................................   1,032,320    81.49    169,490     75.98
+L188:          Marketing managers...............................................................     395,240    85.47    177,770     80.19
+L189:          Sales managers...................................................................     637,080    79.02    164,350     71.28
+L190:         Public relations and fundraising managers.........................................     113,670    75.15    156,310     65.61
+L191:          Public relations managers........................................................      74,850    79.21    164,760     70.63
+L192:          Fundraising managers.............................................................      38,810    67.32    140,020	   60.32
+L193:        Operations specialties managers....................................................   2,775,810    79.49    165,330     72.45
+L194:         Administrative services and facilities managers...................................     420,130    60.12    125,040	   53.13
+L195:          Administrative services managers.................................................     263,960    62.44    129,870	   54.87
+L196:          Facilities managers..............................................................     156,180    56.20    116,890	   51.28
+L197:         Computer and information systems managers.........................................     670,570    92.39    192,160     84.20
+L198:         Financial managers................................................................     841,710    89.86    186,910	   80.08
+L199:         Industrial production managers....................................................     246,250    64.50    134,170	   60.61
+L200:         Purchasing managers...............................................................      84,320    75.17    156,360	   71.19
+L201:         Transportation, storage, and distribution managers................................     221,180    58.46    121,600	   51.55
+L202:         Compensation and benefits managers................................................      22,940    78.19    162,640	   71.75
+L203:         Human resources managers..........................................................     220,660    78.96    164,230	   71.77
+L204:         Training and development managers.................................................      48,050    71.33    148,370	   63.94
+L205:        Other management occupations.......................................................   3,468,900    60.07    124,950	   51.33
+L206:         Farmers, ranchers, and other agricultural managers................................       6,500    47.99     99,820	   43.22
+L207:         Construction managers.............................................................     380,360    59.79    124,360	   55.28
+L208:         Education and childcare administrators............................................     637,590    53.80    111,900	   49.16
+L209:          Education and childcare administrators, preschool and daycare....................      73,660    31.15     64,800	   28.51
+L210:          Education administrators, kindergarten through secondary.........................     328,330     (�)     116,100      (�)
+L211:          Education administrators, postsecondary..........................................     180,470    60.84    126,540	   50.29
+L212:          Education administrators, all other..............................................      55,130    48.99    101,900	   45.77
+L213:         Architectural and engineering managers............................................     220,260    87.28    181,540	   82.34
+L214:         Food service managers.............................................................     238,430    36.00     74,880	   33.36
+L215:         Entertainment and recreation managers.............................................      43,010    43.90     91,310	   38.58
+L216:          Gambling managers................................................................       5,030    49.54    103,050	   44.82
+L217:          Entertainment and recreation managers, except gambling...........................      37,980    43.15     89,750	   38.23
+L218:         Lodging managers..................................................................      42,620    37.86     78,740	   33.29
+L219:         Medical and health services managers..............................................     597,080    67.77    140,970	   59.55
+L220:         Natural sciences managers.........................................................     108,690    86.66    180,250	   80.39
+L221:         Postmasters and mail superintendents..............................................      13,810    46.81     97,360	   46.47
+L222:         Property, real estate, and community association managers.........................     311,180    40.25     83,710	   33.65
+L223:         Social and community service managers.............................................     209,330    42.73     88,880	   38.65
+L224:         Emergency management directors....................................................      13,500    49.24    102,420	   44.87
+L225:         Personal service managers.........................................................      24,350    41.61	86,550	   36.65
+L226:          Funeral home managers............................................................      13,910    44.63	92,840	   37.88
+L227:          Personal service managers, all other.............................................      10,450    37.59	78,190	   33.54
+L228:         Managers, all other...............................................................     622,190    73.99    153,890	   68.22
+L229: 
+L230:     Business and financial operations occupations                                           10,537,240    45.78	95,230	   39.74
+L231:        Business operations specialists....................................................   7,485,920    44.63	92,830	   39.45
+L232:         Agents and business managers of artists, performers, and athletes.................      12,620    68.07    141,580	   39.85
+L233:         Buyers and purchasing agents......................................................     491,430    40.27	83,770	   37.36
+L234:         Claims adjusters, appraisers, examiners, and investigators........................     335,790    38.66	80,420	   37.51
+L235:          Claims adjusters, examiners, and investigators...................................     324,230    38.69	80,470	   37.50
+L236:          Insurance appraisers, auto damage................................................      11,560    37.93	78,900	   37.61
+L237:         Compliance officers...............................................................     417,070    42.50	88,400	   38.81
+L238:         Cost estimators...................................................................     224,220    41.06	85,390	   37.86
+L239:         Human resources workers...........................................................     977,550    39.95	83,090	   36.87
+L240:          Human resources specialists......................................................     912,430    39.42	81,990	   36.51
+L241:          Farm labor contractors...........................................................         310    28.11	58,470	   28.11
+L242:          Labor relations specialists......................................................      64,810    47.46	98,720	   45.87
+L243:         Logisticians and project management specialists...................................   1,317,720    51.32    106,740	   48.00
+L244:          Logisticians.....................................................................     251,040    43.14	89,730	   39.58
+L245:          Project management specialists...................................................   1,066,670    53.24    110,740	   49.19
+L246:         Management analysts...............................................................     898,280    54.71    113,790	   48.97
+L247:         Meeting, convention, and event planners...........................................     142,860    31.98	66,520	   29.41
+L248:         Fundraisers.......................................................................     111,040    37.12	77,200	   34.88
+L249:         Compensation, benefits, and job analysis specialists..............................     112,380    40.54	84,330	   37.60
+L250:         Training and development specialists..............................................     458,300    36.32	75,550	   33.31
+L251:         Market research analysts and marketing specialists................................     899,580    43.03	89,490	   37.87
+L252:         Business operations specialists, all other........................................   1,087,090    45.18	93,970	   39.93
+L253:        Financial specialists..............................................................   3,051,310    48.61    101,120	   40.71
+L254:         Accountants and auditors..........................................................   1,449,500    45.56	94,750	   40.23
+L255:         Property appraisers and assessors.................................................      57,070    36.43	75,770	   32.67
+L256:         Budget analysts...................................................................      47,160    46.33	96,370	   44.06
+L257:         Credit analysts...................................................................      64,390    48.49    100,850	   40.15
+L258:         Financial analysts and advisors...................................................     798,050    61.39    127,690	   49.08
+L259:          Financial and investment analysts................................................     361,980    56.15    116,800	   49.40
+L260:          Personal financial advisors......................................................     266,800    75.32    156,670	   50.51
+L261:          Insurance underwriters...........................................................     105,420    45.05	93,700	   39.12
+L262:          Financial risk specialists.......................................................      63,850    59.82    124,420	   56.41
+L263:         Financial examiners...............................................................      67,830    51.08    106,240	   45.27
+L264:         Credit counselors and loan officers...............................................     302,100    40.86	84,980     35.55
+L265:          Credit counselors................................................................      27,770    27.51	57,210	   25.11
+L266:          Loan officers....................................................................     274,330    42.21	87,790	   36.87
+L267:         Tax examiners, collectors and preparers, and revenue agents.......................     133,090    31.26	65,010	   28.30
+L268:          Tax examiners and collectors, and revenue agents.................................      56,610    33.91	70,520	   29.98
+L269:          Tax preparers....................................................................      76,480    29.30	60,930	   26.40
+L270:         Financial specialists, all other..................................................     132,130    45.10	93,810	   38.99
+L271: 
+L272:     Computer and mathematical occupations                                                    5,260,110    57.73    120,080	   52.54
+L273:        Computer occupations...............................................................   4,827,720    57.74    120,100	   52.63
+L274:         Computer and information analysts.................................................     710,180    57.41    119,420	   52.81
+L275:          Computer systems analysts........................................................     519,530    55.10    114,610 	   50.89
+L276:          Information security analysts....................................................     190,650    63.71    132,510	   62.11
+L277:         Computer and information research scientists......................................      37,200    74.00    153,930	   67.45
+L278:         Computer support specialists......................................................     863,380    33.55     69,790	   30.24
+L279:          Computer network support specialists.............................................     146,190    39.36     81,870	   36.64
+L280:          Computer user support specialists................................................     717,190    32.37     67,330	   29.74
+L281:         Database and network administrators and architects................................     631,200    57.19    118,950	   53.26
+L282:          Computer network architects......................................................     179,740    67.11    139,580	   64.45
+L283:          Database administrators..........................................................      69,990    52.93    110,090	   50.30
+L284:          Database architects..............................................................      67,140    69.44    144,440	   67.07
+L285:          Network and computer systems administrators......................................     314,340    49.85    103,680	   47.66
+L286:         Software and web developers, programmers, and testers.............................   2,150,380    67.24    139,850	   63.53
+L287:          Computer programmers.............................................................      92,230    50.56    105,170	   48.26
+L288:          Software developers..............................................................   1,687,890    71.20    148,100	   65.38
+L289:          Software quality assurance analysts and testers..................................     186,740    53.60    111,490	   50.14
+L290:          Web developers...................................................................      70,190    47.49     98,770	   44.54
+L291:          Web and digital interface designers..............................................     113,330    56.49    117,490	   50.00
+L292:         Computer occupations, all other...................................................     435,370    58.77    122,230	   56.05
+L293:        Mathematical science occupations...................................................     432,400    57.63    119,880	   51.71
+L294:         Actuaries.........................................................................      26,670    68.02    141,480	   62.50
+L295:         Mathematicians....................................................................       2,030    62.15    129,260	   60.92
+L296:         Operations research analysts......................................................     108,510    47.95	99,730	   42.76
+L297:         Statisticians.....................................................................      29,030    55.63    115,700	   50.79
+L298:         Data scientists...................................................................     262,440    60.96    126,800	   57.80
+L299:         Mathematical science occupations, all other.......................................       3,720    44.02	91,550	   39.18
+L300:     Architecture and engineering occupations                                                 2,617,130    51.36    106,830	   47.85
+L301:        Architects, surveyors, and cartographers...........................................     191,460    46.25	96,190	   42.28
+L302:         Architects, except naval..........................................................     126,380    49.78    103,550	   46.91
+L303:          Architects, except landscape and naval...........................................     106,770    51.09    106,260     47.73
+L304:          Landscape architects.............................................................      19,600    42.68	88,780	   38.40
+L305:         Surveyors, cartographers, and photogrammetrists...................................      65,090    39.38	81,910	   36.97
+L306:          Cartographers and photogrammetrists..............................................      14,260    41.68	86,690	   39.13
+L307:          Surveyors........................................................................      50,830    38.73	80,570	   36.27
+L308:        Engineers..........................................................................   1,800,740    57.52    119,640	   52.22
+L309:         Aerospace engineers...............................................................      67,710    68.30    142,060	   64.89
+L310:         Agricultural engineers............................................................       1,480    52.04    108,230	   47.40
+L311:         Bioengineers and biomedical engineers.............................................      23,480    56.20    116,890	   52.58
+L312:         Chemical engineers................................................................      21,070    62.49    129,980	   60.12
+L313:         Civil engineers...................................................................     367,840    52.24    108,670	   48.48
+L314:         Computer hardware engineers.......................................................      76,660    78.21    162,670	   77.76
+L315:         Electrical and electronics engineers..............................................     295,650    62.07    129,100	   60.12
+L316:          Electrical engineers.............................................................     198,750    60.15    125,100	   58.00
+L317:          Electronics engineers, except computer...........................................      96,900    66.00    137,280	   62.60
+L318:         Environmental engineers...........................................................      38,340    54.29    112,910	   51.50
+L319:         Industrial engineers, including health and safety.................................     387,190    53.10    110,450	   49.36
+L320:          Health and safety engineers, except mining safety engineers and inspectors.......      21,450    57.58    119,770	   55.36
+L321:          Industrial engineers.............................................................     365,740    52.84    109,900	   49.25
+L322:         Marine engineers and naval architects.............................................       8,250    59.70    124,180	   53.96
+L323:         Materials engineers...............................................................      22,770    57.81    120,250	   54.26
+L324:         Mechanical engineers..............................................................     296,810    54.62    113,610	   50.05
+L325:         Mining and geological engineers, including mining safety engineers................       6,080    55.49    115,410	   51.07
+L326:         Nuclear engineers.................................................................      15,280    67.51    140,420	   64.41
+L327:         Petroleum engineers...............................................................      18,060    75.55    157,150	   69.67
+L328:         Engineers, all other..............................................................     154,070    60.26    125,330	   59.10
+L329:        Drafters, engineering technicians, and mapping technicians.........................     624,930    35.19     73,190	   33.20
+L330:         Drafters..........................................................................     176,060    34.90	72,590	   32.74
+L331:          Architectural and civil drafters.................................................     103,700    34.01	70,740	   31.80
+L332:          Electrical and electronics drafters..............................................      17,920    39.08	81,280	   36.96
+L333:          Mechanical drafters..............................................................      39,960    36.09	75,060	   34.40
+L334:          Drafters, all other..............................................................      14,470    32.81	68,250	   30.54
+L335:         Engineering technologists and technicians, except drafters........................     390,860    36.40	75,710	   35.32
+L336:          Aerospace engineering and operations technologists and technicians...............      11,280    43.90	91,310	   39.85
+L337:          Civil engineering technologists and technicians..................................      68,520    33.17	68,990	   31.23
+L338:          Electrical and electronic engineering technologists and technicians..............      95,130    38.79	80,680	   37.59
+L339:          Electro-mechanical and mechatronics technologists and technicians................      15,520    36.74	76,420	   35.53
+L340:          Environmental engineering technologists and technicians..........................      12,190    31.19	64,870	   28.81
+L341:          Industrial engineering technologists and technicians.............................      75,570    33.99	70,700	   31.79
+L342:          Mechanical engineering technologists and technicians.............................      36,190    36.72	76,380	   35.82
+L343:          Calibration technologists and technicians........................................      16,540    35.66	74,170	   32.61
+L344:          Engineering technologists and technicians, except drafters, all other............      59,930    38.93	80,960	   37.67
+L345:         Surveying and mapping technicians.................................................      58,010    27.89	58,000	   26.08
+L346: 
+L347:     Life, physical, and social science occupations                                           1,473,260    45.48	94,600	   39.68
+L348:        Life scientists....................................................................     386,900    51.61    107,350	   46.30
+L349:         Agricultural and food scientists..................................................      31,890    43.71	90,910	   39.41
+L350:          Animal scientists................................................................       3,100    42.48	88,350	   33.14
+L351:          Food scientists and technologists................................................      13,060    45.85	95,360	   42.65
+L352:          Soil and plant scientists........................................................      15,730    42.17	87,720	   37.91
+L353:         Biological scientists.............................................................     126,740    51.91    107,970	   47.96
+L354:          Biochemists and biophysicists....................................................      33,830    62.43    129,840	   61.26
+L355:          Microbiologists..................................................................      18,940    46.92	97,600	   42.30
+L356:          Zoologists and wildlife biologists...............................................      18,120    39.91	83,020	   36.91
+L357:          Biological scientists, all other.................................................      55,850    51.12    106,330	   47.56
+L358:         Conservation scientists and foresters.............................................      36,380    37.36	77,720	   35.54
+L359:          Conservation scientists..........................................................      25,950    37.08	77,130	   35.10
+L360:          Foresters........................................................................      10,430    38.06	79,170	   36.73
+L361:         Medical scientists................................................................     184,430    55.58    115,600	   49.51
+L362:          Epidemiologists..................................................................      12,090    47.06	97,890     41.93
+L363:          Medical scientists, except epidemiologists.......................................     172,340    56.18    116,840	   49.72
+L364:         Life scientists, all other........................................................       7,460    51.86    107,860	   45.07
+

@@ -1,0 +1,256 @@
+Table 1. National employment and wage data from the Occupational Employment and Wage Statistics survey by occupation, May 2025 - 2025 A01 Results (https://www.bls.gov/news.release/ocwage.t01.htm)
+citeturn36view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.bls.gov/news.release/ocwage.t01.htm","lineno":780}); Total lines: 1374
+L695:         Physical therapist assistants and aides...........................................     160,580    28.39	59,040	   29.42
+L696:          Physical therapist assistants....................................................     112,430    33.04	68,730	   32.88
+L697:          Physical therapist aides.........................................................      48,150    17.52	36,430	   16.94
+L698:        Other healthcare support occupations...............................................   1,842,810    22.95	47,730	   22.20
+L699:         Massage therapists................................................................      98,790    30.69	63,830	   28.10
+L700:         Miscellaneous healthcare support occupations......................................   1,744,020    22.51	46,810     22.12
+L701:          Dental assistants................................................................     387,790    24.13	50,200	   23.11
+L702:          Medical assistants...............................................................     817,870    22.17	46,120	   21.97
+L703:          Medical equipment preparers......................................................      77,420    24.28	50,510	   22.93
+L704:          Medical transcriptionists........................................................      41,550    20.05	41,710	   19.43
+L705:          Pharmacy aides...................................................................      39,530    19.45	40,450	   18.12
+L706:          Veterinary assistants and laboratory animal caretakers...........................     126,580    19.39	40,340	   18.34
+L707:          Phlebotomists....................................................................     143,540    21.88	45,520	   21.75
+L708:          Healthcare support workers, all other............................................     109,740    24.43	50,810	   23.28
+L709: 
+L710:     Protective service occupations                                                           3,776,610    29.19	60,720	   24.08
+L711:        Supervisors of protective service workers..........................................     409,310    44.49	92,550	   41.55
+L712:         First-line supervisors of law enforcement workers.................................     208,000    50.51    105,050	   48.10
+L713:          First-line supervisors of correctional officers..................................      53,380    40.57	84,380	   37.49
+L714:          First-line supervisors of police and detectives..................................     154,610    53.94    112,190	   50.98
+L715:         First-line supervisors of firefighting and prevention workers.....................      99,140    46.60	96,930     44.96
+L716:         Miscellaneous first-line supervisors, protective service workers..................     102,170    30.21	62,830	   28.00
+L717:          First-line supervisors of security workers.......................................      81,480    28.80	59,900	   26.90
+L718:          First-line supervisors of protective service workers, all other..................      20,690    35.76     74,390     36.73
+L719:        Firefighting and prevention workers................................................     362,570    30.88	64,220	   28.67
+L720:         Firefighters......................................................................     345,990    30.59	63,630	   28.50
+L721:         Fire inspectors...................................................................      16,580    36.85	76,650	   35.42
+L722:          Fire inspectors and investigators................................................      13,800    37.82	78,670	   36.50
+L723:          Forest fire inspectors and prevention specialists................................       2,780    32.04	66,640	   27.34
+L724:        Law enforcement workers............................................................   1,201,970    36.42	75,760	   34.63
+L725:         Bailiffs, correctional officers, and jailers......................................     397,800    30.55	63,540	   28.30
+L726:          Bailiffs.........................................................................      17,310    29.65	61,660	   27.21
+L727:          Correctional officers and jailers................................................     380,500    30.59	63,630	   28.34
+L728:         Detectives and criminal investigators.............................................     114,430    47.80	99,430	   45.09
+L729:         Fish and game wardens.............................................................       5,770    36.03	74,950	   35.60
+L730:         Parking enforcement workers.......................................................       9,050    24.61	51,190	   22.47
+L731:         Police officers...................................................................     674,910    38.12	79,280	   36.66
+L732:          Police and sheriff's patrol officers.............................................     670,520    38.08	79,200	   36.64
+L733:          Transit and railroad police......................................................       4,390    44.14	91,810	   43.38
+L734:        Other protective service workers...................................................   1,802,770    20.56	42,770	   18.22
+L735:         Animal control workers............................................................      12,070    23.29	48,440	   21.95
+L736:         Private detectives and investigators..............................................      35,580    28.92	60,150	   24.62
+L737:         Security guards and gambling surveillance officers................................   1,292,990    20.43	42,490	   18.29
+L738:          Gambling surveillance officers and gambling investigators........................       9,520    21.94	45,630	   20.85
+L739:          Security guards..................................................................   1,283,470    20.42	42,470	   18.28
+L740:         Miscellaneous protective service workers..........................................     462,130    20.21	42,050	   17.70
+L741:          Crossing guards and flaggers.....................................................      94,360    20.84	43,350	   18.32
+L742:          Lifeguards, ski patrol, and other recreational protective service workers........     157,550    16.57	34,470	   16.14
+L743:          Transportation security screeners................................................      50,290    30.92	64,310	   32.10
+L744:          School bus monitors..............................................................      78,420    16.90	35,150	   16.88
+L745:          Protective service workers, all other............................................      81,500    23.11	48,070	   20.45
+L746: 
+L747:     Food preparation and serving related occupations                                        13,680,750    17.86	37,150	   16.85
+L748:        Supervisors of food preparation and serving workers................................   1,423,280    23.59	49,070	   21.81
+L749:         Supervisors of food preparation and serving workers...............................   1,423,280    23.59	49,070	   21.81
+L750:          Chefs and head cooks.............................................................     200,040    32.07	66,700	   30.03
+L751:          First-line supervisors of food preparation and serving workers...................   1,223,240    22.20	46,180	   21.19
+L752:        Cooks and food preparation workers.................................................   3,544,690    17.61	36,630	   17.46
+L753:         Cooks.............................................................................   2,651,090    17.83	37,080	   17.62
+L754:          Cooks, fast food.................................................................     641,070    15.57	32,390	   14.85
+L755:          Cooks, institution and cafeteria.................................................     441,050    18.66	38,810	   18.01
+L756:          Cooks, private household.........................................................       1,100    25.81	53,680	   23.05
+L757:          Cooks, restaurant................................................................   1,409,890    18.62	38,730	   17.98
+L758:          Cooks, short order...............................................................     138,650    17.37	36,120	   17.25
+L759:          Cooks, all other.................................................................      19,350    18.82	39,150	   18.12
+L760:         Food preparation workers..........................................................     893,600    16.96	35,290	   16.98
+L761:        Food and beverage serving workers..................................................   7,175,250    17.18	35,730	   16.06
+L762:         Bartenders........................................................................     756,390    19.61	40,790	   16.51
+L763:         Fast food and counter workers.....................................................   3,854,050    15.46	32,150	   15.00
+L764:         Waiters and waitresses............................................................   2,270,910    19.26	40,060	   16.94
+L765:         Food servers, nonrestaurant.......................................................     293,900    17.37	36,140	   17.00
+L766:        Other food preparation and serving related workers.................................   1,537,520    16.33	33,960	   16.38
+L767:         Dining room and cafeteria attendants and bartender helpers........................     542,750    16.46	34,230	   16.34
+L768:         Dishwashers.......................................................................     477,450    16.49	34,310	   16.73
+L769:         Hosts and hostesses, restaurant, lounge, and coffee shop..........................     432,690    15.72	32,690	   15.00
+L770:         Food preparation and serving related workers, all other...........................      84,630    17.70	36,810	   17.23
+L771: 
+L772:     Building and grounds cleaning and maintenance occupations                                4,548,260    19.66	40,880     18.12
+L773:        Supervisors of building and grounds cleaning and maintenance workers...............     309,510    27.19	56,550	   25.45
+L774:         First-line supervisors of building and grounds cleaning and maintenance workers...     309,510    27.19	56,550	   25.45
+L775:          First-line supervisors of housekeeping and janitorial workers....................     178,760    25.64	53,320	   23.61
+L776:          First-line supervisors of landscaping, lawn service, and groundskeeping workers..     130,760    29.31	60,960	   28.09
+L777:        Building cleaning and pest control workers.........................................   3,190,260    18.56	38,600	   17.62
+L778:         Building cleaning workers.........................................................   3,087,640    18.43	38,340	   17.56
+L779:          Janitors and cleaners, except maids and housekeeping cleaners....................   2,209,760    18.64	38,760	   17.71
+L780:          Maids and housekeeping cleaners..................................................     860,670    17.83	37,080	   17.07
+L781:          Building cleaning workers, all other.............................................      17,210    22.32	46,420	   21.17
+L782:         Pest control workers..............................................................     102,620    22.31	46,400	   21.75
+L783:        Grounds maintenance workers........................................................   1,048,490    20.78	43,220	   19.27
+L784:         Grounds maintenance workers.......................................................   1,048,490    20.78	43,220	   19.27
+L785:          Landscaping and groundskeeping workers...........................................     952,640    20.33	42,290	   18.82
+L786:          Pesticide handlers, sprayers, and applicators, vegetation........................      27,050    22.63	47,070	   22.28
+L787:          Tree trimmers and pruners........................................................      55,160    26.91	55,970	   24.50
+L788:          Grounds maintenance workers, all other...........................................      13,630    23.48	48,830	   22.53
+L789: 
+L790:     Personal care and service occupations                                                    3,255,790    19.74     41,070	   17.51
+L791:        Supervisors of personal care and service workers...................................     243,320    26.06	54,200	   23.95
+L792:         First-line supervisors of entertainment and recreation workers....................     129,200    26.84	55,820	   24.52
+L793:          First-line supervisors of gambling services workers..............................      26,010    31.17	64,830	   30.68
+L794:          First-line supervisors of entertainment and recreation workers, except
+L795:           gambling services...............................................................     103,190    25.75	53,550	   23.34
+L796:         First-line supervisors of personal service workers................................     114,110    25.17	52,360	   23.36
+L797:        Animal care and service workers....................................................     285,680    18.24	37,940	   17.08
+L798:         Animal trainers...................................................................      18,770    22.61	47,020	   19.22
+L799:         Animal caretakers.................................................................     266,910    17.94	37,300	   17.00
+L800:        Entertainment attendants and related workers.......................................     657,210    16.70	34,740	   15.82
+L801:         Gambling services workers.........................................................     107,000    20.14	41,880	   16.50
+L802:          Gambling dealers.................................................................      83,910    20.46	42,550	   16.50
+L803:          Gambling and sports book writers and runners.....................................       8,950    17.53	36,450	   16.82
+L804:          Gambling service workers, all other..............................................      14,140    19.90	41,380	   17.46
+L805:         Motion picture projectionists.....................................................       1,480    24.75	51,480	   18.40
+L806:         Ushers, lobby attendants, and ticket takers.......................................     121,770    15.91	33,080	   15.82
+L807:         Miscellaneous entertainment attendants and related workers........................     426,960    16.04 	33,360	   15.52
+L808:          Amusement and recreation attendants..............................................     397,830    15.69	32,640	   15.46
+L809:          Costume attendants...............................................................       6,510    30.50	63,440	   24.23
+L810:          Locker room, coatroom, and dressing room attendants..............................      15,560    18.49	38,460	   17.45
+L811:          Entertainment attendants and related workers, all other..........................       7,060    16.82	34,980	   15.69
+L812:        Funeral service workers............................................................      63,050    22.71	47,250	   20.53
+L813:         Embalmers and crematory operators.................................................       6,870    25.42	52,880	   24.17
+L814:          Embalmers........................................................................       3,890    28.07     58,390     28.26
+L815:          Crematory operators..............................................................       2,970    21.96	45,670     20.98
+L816:         Funeral attendants................................................................      31,090    17.88	37,190     17.16
+L817:         Morticians, undertakers, and funeral arrangers....................................      25,100    27.96     58,160     26.45
+L818:        Personal appearance workers........................................................     556,770    20.99	43,670     17.48
+L819:         Barbers, hairdressers, hairstylists and cosmetologists............................     320,710    21.20	44,100     17.25
+L820:          Barbers..........................................................................      15,000    22.63	47,070     18.37
+L821:          Hairdressers, hairstylists, and cosmetologists...................................     305,710    21.13	43,960     17.21
+L822:         Miscellaneous personal appearance workers.........................................     236,070    20.71	43,070     17.61
+L823:          Makeup artists, theatrical and performance.......................................       2,340    49.16    102,240     46.71
+L824:          Manicurists and pedicurists......................................................     152,770    18.54	38,570     17.19
+L825:          Shampooers.......................................................................       8,070    15.37	31,980     15.67
+L826:          Skincare specialists.............................................................      72,890    24.93     51,850     21.79
+L827:        Baggage porters, bellhops, and concierges..........................................      77,750    19.74	41,070     18.47
+L828:         Baggage porters, bellhops, and concierges.........................................      77,750    19.74	41,070     18.47
+L829:          Baggage porters and bellhops.....................................................      28,510    18.54	38,570     17.83
+L830:          Concierges.......................................................................      49,240    20.44	42,510     18.73
+L831:        Tour and travel guides.............................................................      53,500    21.02	43,720     18.33
+L832:         Tour and travel guides............................................................      53,500    21.02	43,720     18.33
+L833:        Other personal care and service workers............................................   1,318,510    19.70	40,980     17.76
+L834:         Childcare workers.................................................................     518,910    16.84	35,030     16.82
+L835:         Recreation and fitness workers....................................................     654,420    21.82	45,380     18.63
+L836:          Exercise trainers and group fitness instructors..................................     322,930    25.20	52,420     22.67
+L837:          Recreation workers...............................................................     331,490    18.52	38,520     17.58
+L838:         Residential advisors..............................................................      84,760    21.15	43,990     20.31
+L839:         Personal care and service workers, all other......................................      60,420    19.29	40,120     20.00
+L840:     Sales and related occupations                                                           13,424,300    26.43	54,960 	   18.52
+L841:        Supervisors of sales workers.......................................................   1,336,190    29.21	60,750     24.79
+L842:         First-line supervisors of sales workers...........................................   1,336,190    29.21	60,750     24.79
+L843:          First-line supervisors of retail sales workers...................................   1,121,800    25.66	53,380     23.33
+L844:          First-line supervisors of non-retail sales workers...............................     214,390    47.77	99,370     42.08
+L845:        Retail sales workers...............................................................   7,679,690    17.46	36,320     16.74
+L846:         Cashiers..........................................................................   3,110,940    15.97	33,220     15.83
+L847:          Cashiers.........................................................................   3,089,410    15.95	33,180     15.81
+L848:          Gambling change persons and booth cashiers.......................................      21,530    18.80	39,100     17.41
+L849:         Counter and rental clerks and parts salespersons..................................     670,890    21.61	44,950     19.25
+L850:          Counter and rental clerks........................................................     400,810    21.97	45,700     19.86
+L851:          Parts salespersons...............................................................     270,070    21.07	43,830     18.57
+L852:         Retail salespersons...............................................................   3,897,860    17.94	37,310     17.03
+L853:        Sales representatives, services....................................................   2,371,490    41.85	87,040     32.78
+L854:         Advertising sales agents..........................................................      91,700    38.79	80,670     31.16
+L855:         Insurance sales agents............................................................     479,100    39.18	81,480     29.94
+L856:         Securities, commodities, and financial services sales agents......................     489,570    52.48    109,150     37.82
+L857:         Travel agents.....................................................................      55,110    26.28	54,660     24.11
+L858:         Sales representatives of services, except advertising, insurance, financial
+L859:          services, and travel.............................................................   1,256,010    39.63	82,430     33.65
+L860:        Sales representatives, wholesale and manufacturing.................................   1,522,990    43.02     89,490     36.76
+L861:         Sales representatives, wholesale and manufacturing................................   1,522,990    43.02     89,490     36.76
+L862:          Sales representatives, wholesale and manufacturing, technical and scientific
+L863:           products........................................................................     284,800    57.56    119,730     50.44
+L864:          Sales representatives, wholesale and manufacturing, except technical and
+L865:           scientific products.............................................................   1,238,190    39.68	82,530     34.65
+L866:        Other sales and related workers....................................................     513,930    32.76	68,150     24.06
+L867:         Models, demonstrators, and product promoters......................................      68,300    22.64     47,090     19.02
+L868:          Demonstrators and product promoters..............................................      64,520    21.91     45,580     18.91
+L869:          Models...........................................................................       3,780    35.00     72,800     23.30
+L870:         Real estate brokers and sales agents..............................................     239,470    34.75     72,290     27.59
+L871:          Real estate brokers..............................................................      46,100    40.36     83,950     35.20
+L872:          Real estate sales agents.........................................................     193,370    33.42     69,510     25.40
+L873:         Sales engineers...................................................................      51,790    62.57    130,140     60.05
+L874:         Telemarketers.....................................................................      58,430    17.97     37,370     17.04
+L875:         Miscellaneous sales and related workers...........................................      95,940    27.93     58,080     23.05
+L876:          Door-to-door sales workers, news and street vendors, and related workers.........       2,760    21.08     43,850     19.89
+L877:          Sales and related workers, all other.............................................      93,180    28.13     58,510     23.21
+L878:     Office and administrative support occupations                                           17,753,430    24.79	51,560     22.81
+L879:        Supervisors of office and administrative support workers...........................   1,436,680    35.33	73,490     33.41
+L880:         First-line supervisors of office and administrative support workers...............   1,436,680    35.33	73,490     33.41
+L881:        Communications equipment operators.................................................      38,910    20.74	43,140     18.82
+L882:         Switchboard operators, including answering service................................      34,280    20.34	42,300     18.57
+L883:         Telephone operators...............................................................       3,430    21.62     44,970     20.07
+L884:         Communications equipment operators, all other.....................................       1,200    29.87	62,130     26.29
+L885:        Financial clerks...................................................................   2,525,690    24.87	51,720     23.38
+L886:         Bill and account collectors.......................................................     158,830    23.59	49,060     22.61
+L887:         Billing and posting clerks........................................................     404,060    24.55	51,070     23.32
+L888:         Bookkeeping, accounting, and auditing clerks......................................   1,373,680    25.75	53,560     24.36
+L889:         Gambling cage workers.............................................................      14,430    19.00	39,510     18.07
+L890:         Payroll and timekeeping clerks....................................................     153,140    28.67	59,630     28.01
+L891:         Procurement clerks................................................................      55,810    25.18	52,370     24.32
+L892:         Tellers...........................................................................     329,480    20.36	42,350     20.69
+L893:         Financial clerks, all other.......................................................      36,260    27.14     56,450     25.88
+L894:        Information and record clerks......................................................   5,081,880    22.05     45,860     21.09
+L895:         Brokerage clerks..................................................................      35,940    35.03     72,850     31.61
+L896:         Correspondence clerks.............................................................       4,290    23.12     48,090     22.50
+L897:         Court, municipal, and license clerks..............................................     179,750    25.15     52,320     23.41
+L898:         Credit authorizers, checkers, and clerks..........................................      12,030    24.72     51,420     24.08
+L899:         Customer service representatives..................................................   2,595,750    22.40     46,590     21.53
+L900:         Eligibility interviewers, government programs.....................................     154,800    26.97	56,090     26.06
+L901:         File clerks.......................................................................      73,440    21.92	45,590     20.96
+L902:         Hotel, motel, and resort desk clerks..............................................     261,420    17.09     35,550     16.86
+L903:         Interviewers, except eligibility and loan.........................................     148,060    22.71     47,240     22.08
+L904:         Library assistants, clerical......................................................      85,520    18.93     39,370     17.74
+L905:         Loan interviewers and clerks......................................................     164,790    25.25	52,520     24.05
+L906:         New accounts clerks...............................................................      36,860    23.73	49,370     22.92
+L907:         Order clerks......................................................................      75,200    23.19	48,220     22.20
+L908:         Human resources assistants, except payroll and timekeeping........................      90,220    25.12	52,250     24.33
+L909:         Receptionists and information clerks..............................................     910,180    18.97	39,460     18.27
+L910:         Reservation and transportation ticket agents and travel clerks....................     118,710    23.86	49,630     21.34
+L911:         Information and record clerks, all other..........................................     134,920    24.76	51,490     23.80
+L912:        Material recording, scheduling, dispatching, and distributing workers..............   2,259,120    26.13	54,360     24.02
+L913:         Cargo and freight agents..........................................................      97,670    27.52	57,230     25.13
+L914:         Couriers and messengers...........................................................      68,640    19.70	40,970     18.85
+L915:         Dispatchers.......................................................................     305,300    26.64	55,410     24.55
+L916:          Public safety telecommunicators..................................................     102,500    27.28	56,740     25.50
+L917:          Dispatchers, except police, fire, and ambulance..................................     202,810    26.32	54,740     24.20
+L918:         Meter readers, utilities..........................................................      19,430    26.63	55,380     23.15
+L919:         Postal service workers............................................................     507,730    29.71	61,800     28.79
+L920:          Postal service clerks............................................................      73,720    29.74	61,860     29.87
+L921:          Postal service mail carriers.....................................................     328,820    30.07	62,540     29.11
+L922:          Postal service mail sorters, processors, and processing machine operators........     105,200    28.57	59,430     28.11
+L923:         Production, planning, and expediting clerks.......................................     390,160    29.88	62,150     28.68
+L924:         Shipping, receiving, and inventory clerks.........................................     816,870    22.50	46,810     21.76
+L925:         Weighers, measurers, checkers, and samplers, recordkeeping........................      53,300    22.90	47,630     22.30
+L926:        Secretaries and administrative assistants..........................................   3,284,600    25.63	53,310     23.23
+L927:         Secretaries and administrative assistants.........................................   3,284,600    25.63	53,310     23.23
+L928:          Executive secretaries and executive administrative assistants....................     459,910    38.05	79,140     36.82
+L929:          Legal secretaries and administrative assistants..................................     156,280    29.14	60,620     26.72
+L930:          Medical secretaries and administrative assistants................................     961,610    22.50	46,800     22.08
+L931:          Secretaries and administrative assistants, except legal, medical, and executive..   1,706,790    23.73	49,350     22.86
+L932:        Other office and administrative support workers....................................   3,126,550    22.53	46,860     21.78
+L933:         Data entry and information processing workers.....................................     162,090    21.63	44,990     20.72
+L934:          Data entry keyers................................................................     127,080    20.82	43,310     19.88
+L935:          Word processors and typists......................................................      35,010    24.58	51,120     23.69
+L936:         Desktop publishers................................................................       3,350    29.79	61,970     26.58
+L937:         Insurance claims and policy processing clerks.....................................     214,260    25.44	52,920     23.67
+L938:         Mail clerks and mail machine operators, except postal service.....................      55,230    20.03	41,650     18.89
+L939:         Office clerks, general............................................................   2,464,940    22.32	46,420     21.64
+L940:         Office machine operators, except computer.........................................      25,130    20.78	43,220     19.69
+L941:         Proofreaders and copy markers.....................................................       4,580    26.35	54,800     24.58
+L942:         Statistical assistants............................................................       4,710    26.75	55,650     24.20
+L943:         Office and administrative support workers, all other..............................     192,260    23.40	48,670     21.96
+L944: 
+L945:     Farming, fishing, and forestry occupations                                                 435,200    19.96	41,510     17.61
+L946:        Supervisors of farming, fishing, and forestry workers..............................      27,960    30.16	62,730     28.52
+L947:         First-line supervisors of farming, fishing, and forestry workers..................      27,960    30.16	62,730     28.52
+

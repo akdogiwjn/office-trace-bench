@@ -1,0 +1,222 @@
+{
+  "schema_version": "office-dataset-v1",
+  "dataset_id": "opm",
+  "kind": "pdf",
+  "domain": "employment_forms",
+  "task": "Inspect, batch-fill, render and verify OPM OF-306 using synthetic training applicants",
+  "form": "of306_aug2023.pdf",
+  "records": "synthetic_applicants.json",
+  "records_key": "applicants",
+  "requirements": {
+    "page_count": 3,
+    "field_count": 38,
+    "record_count": 10,
+    "field_rules": [
+      {
+        "semantic": "full_name",
+        "field_id": "Full Name",
+        "value_from": "full_name"
+      },
+      {
+        "semantic": "birthplace",
+        "field_id": "PLACE OF BIRTH Include city and state or country",
+        "value_from": "place_of_birth"
+      },
+      {
+        "semantic": "birthdate",
+        "field_id": "DATE OF BIRTH MM  DD  YYYY",
+        "value_from": "date_of_birth"
+      },
+      {
+        "semantic": "phone",
+        "field_id": "Day",
+        "value_from": "day_phone"
+      },
+      {
+        "semantic": "other_names",
+        "field_id": "Other Names Used 2",
+        "value_from": "other_names"
+      },
+      {
+        "semantic": "citizenship_country",
+        "field_id": "Country of Citizenship",
+        "constant": "United States",
+        "value_aliases": {
+          "United States": [
+            "United States of America"
+          ]
+        }
+      },
+      {
+        "semantic": "citizenship",
+        "field_id": "Are you a U.S. Citizen?",
+        "value_from": "us_citizen",
+        "choices": {
+          "true": "/Yes",
+          "false": "/No"
+        }
+      },
+      {
+        "semantic": "selective_service_eligibility",
+        "field_id": "Male",
+        "value_from": "born_male_after_1959",
+        "choices": {
+          "true": "/Yes",
+          "false": "/No"
+        }
+      },
+      {
+        "semantic": "selective_service_registration",
+        "field_id": "Have you registered with Selective Service",
+        "value_from": "registered_selective_service",
+        "choices": {
+          "true": "/Yes",
+          "false": "/No"
+        }
+      },
+      {
+        "semantic": "continuation",
+        "field_id": "Continuation of Space or Agency Specific Questions",
+        "source": "shared",
+        "value_from": "shared_answers.continuation"
+      },
+      {
+        "semantic": "shared_background_0",
+        "field_id": "Are you currently under charges",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_1",
+        "field_id": "Are you delinquent on any Federal debt",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_2",
+        "field_id": "Do any of your relatives work for the agency or government organization for which you are submitting this form",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_3",
+        "field_id": "Have you applied or do you receive retirement or pension benefits from the military Federal or D.C. government",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_4",
+        "field_id": "Have you been convicted imprisoned probation or paroled last 7 years",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_5",
+        "field_id": "Have you been court martialed in the last 7 years",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_6",
+        "field_id": "Have you been fired or debarred or quit due to a specific problem or quit after being told you would be fired",
+        "constant": "/No"
+      },
+      {
+        "semantic": "shared_background_7",
+        "field_id": "Have you ever served in the U.S. Military",
+        "constant": "/No"
+      }
+    ],
+    "protected_blank": [
+      "17a Applicants Signature",
+      "17b Appointees Signature 1",
+      "Appointing Officer Enter Date of Appointment or Conversion MM  DD  YYYY",
+      "Date",
+      "Date_2",
+      "Did you waive Basic Life Insurance or any type of optional life insurance",
+      "If yes to 18b did you later cancel the waivers",
+      "Social Security Number",
+      "When did you leave your last Federal job"
+    ],
+    "minimum_pdf_bytes": 100000,
+    "minimum_png_bytes": 10000,
+    "visible_changes": [
+      {
+        "page": 2,
+        "minimum_changed_pixels": 500,
+        "pixel_threshold": 12
+      }
+    ]
+  },
+  "summary_contract": {
+    "input_form": "of306_aug2023.pdf",
+    "applicant_count": 10,
+    "filled_pdf_count": 10,
+    "rendered_page_count": 33,
+    "ssn_and_signatures_left_blank": true,
+    "fill_script_invocations": 10,
+    "render_script_invocations": 11
+  },
+  "required_outputs": [
+    "check_fillable_fields.log",
+    "form_field_info.json",
+    "field_values",
+    "filled",
+    "rendered",
+    "batch_summary.json",
+    "business_verification.json"
+  ],
+  "trace_rules": [
+    {
+      "pattern": "verify_pdf_batch\\.py",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "office\\.py\\s+verify",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "check_fillable_fields\\.py",
+      "operation": "check_fillability"
+    },
+    {
+      "pattern": "extract_form_field_info\\.py",
+      "operation": "extract_field_schema"
+    },
+    {
+      "pattern": "fill_fillable_fields\\.py",
+      "operation": "fill_form"
+    },
+    {
+      "pattern": "convert_pdf_to_images\\.py",
+      "operation": "render_pdf"
+    }
+  ],
+  "input_files": {
+    "input/synthetic_applicants.json": "3f5247d47c13763f56a1e820f9f73796104a2d972b86a3a89a823fb516714b7d",
+    "input/pdf_dataset_sources.md": "4736a0879c8e13ff4eefe685bdd545e4bb01057a4f8e6c781e2c6027ee253e20",
+    "input/of306_aug2023.pdf": "b690ec40015e42b0ed0424e5c0193616dc6491b70525240463d24b951e6ce46c",
+    "input/verify_pdf_batch.py": "a930b8c761d94a621f0de409bf11444466550f75a1e16aa8f3619de39a78fa7c"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "9c2771bf1108731499ee7d6d3585487ae798416e91ce16ca643af95118824dc1",
+  "prompt_template": "pdf.txt",
+  "prompt_template_sha256": "cabe94c33fcd9c924071f56e2d03d5539bcd5c47bd67e1cd80143d0aba614a40",
+  "prompt_contract": {
+    "task_subject": "the current official OPM OF-306 fillable PDF",
+    "record_noun": "applicants",
+    "record_singular": "applicant",
+    "first_record_name": "applicant_01",
+    "record_pattern": "applicant_XX",
+    "form_description": "the current official 3-page OPM fillable form",
+    "metadata_file": "pdf_dataset_sources.md",
+    "fill_description": "Full Name, place/date of birth, day phone, other names, citizenship, Selective Service answers, the shared background answers, and continuation text",
+    "safe_answer_description": "answer No for military service, all background questions, relatives-at-agency, and government retirement/pension",
+    "protected_description": "Social Security Number, both signature fields, certification dates, appointment date, prior-Federal-job date, and life-insurance questions"
+  },
+  "agent_verifier": "verify_pdf_batch.py",
+  "runtime_case": "SUB-MEM-PDF-01",
+  "agent_context": {
+    "profile": "legacy-host-v1",
+    "sha256": "0774a6c0494054eeb85ac572bdd7f1a29f4321937464e998576ff149a21c36e5"
+  },
+  "summary_aliases": {
+    "input_form": [
+      "input/of306_aug2023.pdf"
+    ]
+  }
+}

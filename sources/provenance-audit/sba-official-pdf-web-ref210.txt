@@ -1,0 +1,307 @@
+SBA 7(a) Borrower Information Form (https://legacy.sba.gov/sites/default/files/2024-07/Form1919%20%281%29.pdf)
+citeturn43view0 [wordlim: 200] Crawled: 5 days ago; Content type: application/pdf; Number of pages: 7; Source: open({"ref_id":"turn39view0","lineno":210}); Redirected to URL: https://legacy.sba.gov/sites/default/files/2024-07/Form1919%20(1).pdf; Total lines: 418
+L93@P1: 3. Is the Applicant or any owner of the Applicant an owner of any other business? If yes, list all such businesses (including their TINs),
+L97@P1: statement? (if “Yes” the Applicant is not eligible for SBA financial assistance.)
+L98@P1: ☐ ☐
+L99@P1: Initial here to confirm your response to question 4 (originally initialed, or an acceptable electronic signature, and not typed.)
+L100@P1: 5. Are any of the Applicant's products and/or services exported (directly or indirectly), or is there a plan to begin exporting (directly or
+L101@P1: indirectly) as a result of this loan, or is this an Export Working Capital Program (EWCP)* loan? If “Yes,” answer questions 5.a) and
+L102@P1: b) below, if “No” move to question 6
+L103@P1: ☐ ☐
+L104@P1: 5.a) Provide the estimated total export sales this loan will support. $
+L105@P1: * (For EWCP loans, in a separate attachment, provide details of the underlying transaction(s) for which the loan is needed, countries where the buyers
+L106@P1: are located and a description of products and/or services to be exported.)
+L107@P1: 5.b) List of principal countries of Export (list at least 1):
+L108@P1: 6. Has the Applicant paid or committed to pay a fee to the Lender or a third party to assist in the preparation of the loan application or
+L109@P1: application materials, or has the Applicant paid or committed to pay a referral agent or broker a fee? If “Yes” provide details to your
+L110@P1: Lender (the name of the third party and the amount of the fee). The Applicant is not required to obtain or pay for unwanted services.
+L111@P1: ☐ ☐
+L112@P1: 7. Are any of the Applicant’s revenues derived from gambling, loan packaging, lending activities, lobbying activities, or from the sale of
+L113@P1: products or services, or the presentation of any depiction, displays or live performances, of a prurient sexual nature? If “Yes,” provide
+L114@P1: details under a separate attachment.
+L115@P1: ☐ ☐
+L116@P1: 8. Is any sole proprietor, partner, officer, director, stockholder with a 10 percent or more interest in the Applicant an SBA employee or a
+L117@P1: Household Member of an SBA employee? (13 CFR 105.204). “Household Member” means spouse and minor children of an
+L118@P1: employee, all blood relations of the employee and any spouse who resides in the same place of abode with the employee (13 CFR
+L119@P1: §105.201(d))
+L120@P1: ☐ ☐
+L121@P1: 9. Is any employee, owner, partner, attorney, agent, owner of stock, officer, director, creditor or debtor of the Applicant a former SBA
+L122@P1: employee who has been separated from SBA for less than one year prior to the request for financial assistance? (13 CFR 105.203) ☐ ☐
+L123@P1: 10. Is any sole proprietor, general partner, officer, director, or stockholder with a 10 percent or more interest in the Applicant, or a
+L124@P1: household member of such individual, a member of Congress, or an appointed official or employee of the legislative or judicial branch
+L125@P1: of the Federal Government? (13 CFR 105.301(c))
+L126@P1: ☐ ☐
+L127@P1: 11. Is any sole proprietor, general partner, officer, director, or stockholder with a 10 percent or more interest in the Applicant, or a
+L128@P1: household member of such individual, a Federal Government employee or Member of the Military having a grade of at least GS-13 or
+L129@P1: higher (or Military equivalent)? (13 CFR 105.301(a))
+L130@P1: ☐ ☐
+L131@P1-2: SBA Form 1919 (04/2024) 2
+L132@P2: 
+L133@P2: 
+L134@P2: 
+L135@P2: 
+L136@P2: 
+L137@P2: 
+L138@P2: 
+L139@P2: 
+L140@P2: 
+L141@P2: 
+L142@P2: 
+L143@P2: 
+L144@P2: 
+L145@P2: 
+L146@P2: 
+L147@P2: 
+L148@P2: 
+L149@P2: 
+L150@P2: 
+L151@P2: 
+L152@P2: 
+L153@P2: 
+L154@P2: SBA 7(a) Borrower Information Form OMB Control No.: 3245-0348
+L155@P2: For use with all SBA 7(a) Loan Programs Expiration Date: 6/30/2027
+L156@P2: 12. Is any sole proprietor, general partner, officer, director, or stockholder with a 10 percent or more interest in the Applicant, or a
+L157@P2: household member of such individual, a member or employee of a Small Business Advisory Council or a SCORE volunteer? (13 CFR
+L158@P2: 105.302(a))
+L159@P2: ☐ ☐
+L160@P2: 13. Is the Applicant, any owner of the Applicant, or any business owned by them (Affiliates), presently involved in any legal action
+L161@P2: (including divorce)? If yes, provide details. ☐ ☐
+L162@P2: By Signing Below, You Make the Following Representations, Authorizations, and Certifications:
+L163@P2: APPLICANT CERTIFICATION
+L164@P2: By signing this application, the Applicant certifies that it complies with all Loan Program Requirements as defined in 13 CFR § 120.10, including but not
+L165@P2: limited to requirements in 13 CFR §§ 120.100, 120.110, 121.301, and 31 CFR § 285.13. The Applicant further certifies that the Applicant business is at
+L166@P2: least 51 percent owned and controlled by persons who are citizens of the U.S. or are Lawful Permanent Residents and that all SBA loan proceeds will be
+L167@P2: used in accordance with Loan Program Requirements. SBA or the Lender may request additional information to determine that an Applicant fulfills any
+L168@P2: eligibility requirement. By signing the application, the Applicant has certified that it fulfills all eligibility requirements.
+L169@P2: The authorized representative of the Applicant and the Operating Company certifies to the following:
+L170@P2: • I have read the statements included in this form, including the Statements Required by Law and Executive Order, and I understand them.
+L171@P2: • I certify that the information provided in this application and the information provided in all supporting documents and forms is true and accurate
+L172@P2: in all material respects. The Applicant understands that knowingly making a false statement to obtain a guaranteed loan from SBA is punishable
+L173@P2: under the law, including under 18 U.S.C. 1001 and 3571 by imprisonment of not more than five years and/or a fine of up to $250,000; under 15
+L174@P2: U.S.C. 645 by imprisonment of not more than two years and/or a fine of not more than $5,000; and, if submitted to a federally insured institution,
+L175@P2: under 18 U.S.C. 1014 by imprisonment of not more than thirty years and/or a fine of not more than $1,000,000.
+L176@P2: • I will comply, whenever applicable, with the hazard insurance, lead-based paint, civil rights or other limitations set forth in SBA Loan Program
+L177@P2: Requirements.
+L178@P2: • No holder of 50 percent or more of the ownership of the Applicant or OC is delinquent more than 60 days under the terms of any administrative
+L179@P2: order; court order; or repayment agreement requiring payment of child support.
+L180@P2: • Applicant and OC are current on all Federal, state, and local taxes, including but not limited to income taxes, payroll taxes, real estate taxes and
+L181@P2: sales taxes of the business, and will pay all Federal, state, and local taxes when they come due.
+L182@P2: • All 7(a) loan proceeds will be used only for the Applicant business as approved by the Lender and/or SBA.
+L183@P2: • I understand, acknowledge, agree, and consent that the Lender can share any tax information that I have provided and/or that the Lender has
+L184@P2: obtained from the Internal Revenue Service with SBA’s authorized representatives, including authorized representatives of the SBA Office of
+L185@P2: Inspector General, for the purpose of compliance with SBA Loan Program Requirements and all SBA reviews.
+L186@P2: • I acknowledge that the Lender will confirm the eligible loan amount using required documents submitted.
+L187@P2: • The Applicant, together with all affiliates, is small under the applicable small business size standard (13 CFR 121.201 and Section 3(a)(5) of the
+L188@P2: Small Business Act [15 U.S.C. 631 et seq]. SBA or the Lender may request additional information concerning the Applicant’s size based on
+L189@P2: information supplied in the application or any other source.
+L190@P2: • The Build America, Buy America Act (BABAA) requires that no federal financial assistance for “infrastructure” projects is provided “unless all
+L191@P2: of the iron, steel, manufactured products, and construction materials used in the project are produced in the United States.” Section 70914 of Public
+L192@P2: Law No. 117-58, §§ 70901-52. The undersigned certifies that if any SBA loan proceeds are used directly or indirectly for an infrastructure project,
+L193@P2: the iron, steel, manufactured products, and construction materials used in the construction of the infrastructure project are in full compliance with
+L194@P2: the BABAA requirements including: 1. All iron and steel used in the project are produced in the United States; 2. All manufactured products
+L195@P2: purchased with SBA financial assistance must be produced in the United States; and 3. All construction materials used in the construction are
+L196@P2: manufactured in the United States. And the Borrower will obtain from the Contractors, or Subcontractors, certifications, or affirmations as to their
+L197@P2: compliance with BABAA requirements in the project. SBA encourages the purchase, to the extent feasible, of American-made equipment and
+L198@P2: supplies.
+L199@P2: • The Applicant is not engaged and will not engage in any activity that is illegal under federal, state, or local law or that can reasonably be determined
+L200@P2: to support or facilitate any activity that is illegal under federal, state, or local law.
+L201@P2: • During the life of the loan, the real estate pledged as collateral for the loan or where the Borrower or OC conducts its business operations will not
+L202@P2: be leased to or occupied by any business that Borrower or OC knows is engaged in any activity that is illegal under Federal, state or local law or
+L203@P2: any activity that can reasonably be determined to support, promote, or facilitate any activity that is illegal under Federal, state or local law.
+L204@P2: • If applicable, the Applicant(s), the ESOP (or equivalent trust), and/or the 401(k) plan are in compliance with all applicable IRS, Treasury, and
+L205@P2: Department of Labor requirements and will comply with all relevant operating and reporting requirements.
+L206@P2: • If the 7(a) loan request is for a Standard 7(a) loan (loan greater than $500,000), and if the loan will finance a change of ownership between existing
+L207@P2: owners (complete partner buyout), and if the 7(a) loan proceeds will finance more than 90% of the purchase price of the partner buyout, the
+L208@P2: remaining owner(s) must certify that they have been actively participating in the business operation and held the same or an increasing ownership
+L209@P2: interest in the business for at least the past 24 months. For any real estate to be purchased by loan proceeds and pledged as collateral for the loan
+L210@P2: or where the Applicant or OC is conducting business operations, the Applicant or OC are currently and will remain in compliance with all local,
+L211@P2: state, and Federal environmental laws and regulations and will continue to comply with these laws and regulations. Furthermore, they are unaware
+L212@P2: of any other actual or potential environmental hazards related to the collateral or business premises. They agree to fully indemnify Lender and
+L213@P2: SBA against all liabilities or losses arising from the contamination of the property before or during the term of the loan.
+L214@P2: • The Applicant and/or OC will reimburse Lender for out-of-pocket expenses incurred in the making and administration of the loan.
+L215@P2-3: SBA Form 1919 (04/2024} 3
+L216@P3: 
+L217@P3: 
+L218@P3: 
+L219@P3: 
+L220@P3: 
+L221@P3: 
+L222@P3: 
+L223@P3: _________________________________________________________ ________________________
+L224@P3: _________________________________________________________ ________________________
+L225@P3: SBA 7(a) Borrower Information Form OMB Control No.: 3245-0348
+L226@P3: For use with all SBA 7(a) Loan Programs Expiration Date: 6/30/2027
+L227@P3: • The Applicant and/or OC will maintain proper books and records, allow Lender and SBA access to these records, and furnish financial statements
+L228@P3: or reports annually or whenever requested by Lender.
+L229@P3: • The Applicant and/or OC will post SBA Form 722, Equal Opportunity Poster, where it is clearly visible to employees, applicants for employment
+L230@P3: and the general public.
+L231@P3: • For debt refinance, the debt being refinanced with the loan proceeds was used exclusively for the Applicant’s business, including any credit card,
+L232@P3: HELOC, and/or debt on the Applicant’s balance sheet.
+L233@P3: • The U.S. Small Business Administration (SBA) is hereby authorized to release any and all information about my existing SBA Loans to the Lender
+L234@P3: processing this loan application. I understand that information released may include, but may not be limited to, information relating to my loan
+L235@P3: amount and payment transactions history, and/or the provision of copies of my loan documents, which may contain non-public information relating
+L236@P3: to all obligors and/or guarantors (if applicable).
+L237@P3: • The Applicant and OC will not, without Lender’s prior written consent:
+L238@P3: o Make any distribution of company assets that will adversely affect the financial condition of the Borrower and/or OC.
+L239@P3: o Change the ownership structure or interests in the business during the term of the loan; and
+L240@P3: o Sell, lease, pledge, encumber (except by purchase money liens on property acquired after the date of the Note), or otherwise dispose of
+L241@P3: any of the Borrower’s property or assets, except in the ordinary course of business.
+L242@P3: Signature of Authorized Representative of Applicant Date
+L243@P3: Print Name Title
+L244@P3-4: SBA Form 1919 (04/2024) 4
+L245@P4: 
+L246@P4: 
+L247@P4: 
+L248@P4: 
+L249@P4: 
+L250@P4: 
+L251@P4: 
+L252@P4: 
+L253@P4: 
+L254@P4: 
+L255@P4: 
+L256@P4: 
+L257@P4: 
+L258@P4: 
+L259@P4: 
+L260@P4: 
+L261@P4: 
+L262@P4: 
+L263@P4: 
+L264@P4: SBA 7(a) Borrower Information Form OMB Control No.: 3245-0348
+L265@P4: For use with all SBA 7(a) Loan Programs Expiration Date: 6/30/2027
+L266@P4: Purpose of this form:
+L267@P4: The purpose of this form is to collect information about the Small Business Applicant (“Applicant”) and its owners, the loan request, existing indebtedness,
+L268@P4: information about current or previous government financing, and certain other topics. The information also facilitates background checks as authorized by
+L269@P4: section 7(a)(1)(B) of the Small Business Act, 15 U.S.C. 636(a)(1)(B). Submission of the requested information is required for SBA or the Lender to
+L270@P4: determine eligibility for financial assistance. Failure to submit the information would affect that determination.
+L271@P4: Instructions for completing this form:
+L272@P4: A separate SBA Form 1919 for each co-Applicant(e.g., EPC and OC) must be completed and signed by the authorized representative of the Applicant and
+L273@P4: submitted to your SBA Participating Lender. The amounts of the “Purpose of the loan” sections across all SBA Forms 1919 should equal the total amount
+L274@P4: of the loan request. Submission of the requested information is required to make a determination regarding eligibility for financial assistance.
+L275@P4: For purposes of reporting NAICS Code, Applicants must match the business activity code provided on their IRS income tax filings, if applicable.
+L276@P4: All parties listed below are considered Owners of the Applicant:
+L277@P4: • For a sole proprietorship, the sole proprietor;
+L278@P4: • For a partnership, all general partners, and all limited partners owning 20% or more of the equity of the firm;
+L279@P4: • For a corporation, all owners of 20% or more of the corporation;
+L280@P4: • For limited liability companies, all members owning 20% or more of the company; and
+L281@P4: • Any Trustor (if the Applicant is owned by a trust).
+L282@P4: For purposes of reporting (optional) demographic information:
+L283@P4: Purpose. Veteran/gender/race/ethnicity data is collected for program reporting purposes only.
+L284@P4: Description. This form requests information about each of the Applicant’s owners. Add additional sheets if necessary.
+L285@P4: 1. Owner’s Legal Name. Insert the full name of the owner.
+L286@P4: 2. Owner’s Position. Identify the owner’s position; for example, sole proprietor; general partner; owner; officer; director; or member.
+L287@P4: Statements Required by Law and Executive Order
+L288@P4: This application and any assistance provided pursuant to this application is subject to the following laws, regulations, and Executive Orders:
+L289@P4: Paperwork Reduction Act – You are not required to respond to this collection of information unless it displays a currently valid OMB Control Number.
+L290@P4: The estimated time for completing this application, including gathering data needed, is 31 minutes. Comments about this time or the information requested
+L291@P4: should be sent to: Small Business Administration, Director, Records Management Division, 409 3rd St., SW, Washington DC 20416, and/or SBA Desk
+L292@P4: Officer, Office of Management and Budget, New Executive Office Building, Washington DC 20503. PLEASE DO NOT SEND FORMS TO THESE
+L293@P4: ADDRESSES.
+L294@P4: Federal Funding Accountability and Transparency Act of 2006, as amended (31 U.S.C. 6101 Note) - SBA routinely publishes information related to
+L295@P4: this loan application (e.g., name and address of Borrower, amount of loan) on USAspending.gov, as required by the Federal Funding Accountability and
+L296@P4: Transparency Act of 2006, as amended.
+L297@P4: Privacy Act (5 U.S.C. 552a); Collection of Social Security Number (31 U.S.C. 7701)
+L298@P4: Authorities and Purpose for Collecting Information: SBA is collecting the information on this form, including social security numbers (SSNs) and other
+L299@P4: personal information, to make a character and credit eligibility decision in connection with you or your company’s application for SBA assistance. SBA
+L300@P4: may also use SSNs and other taxpayer identification numbers(TINs) for the purpose of collecting and reporting on any delinquent fees or other amounts
+L301@P4: owed SBA. Under the provisions of 31 U.S.C. 7701, the Administrator shall require a person applying for a loan under the program to provide that person’s
+L302@P4: TIN; therefore, the Applicant business and any guarantor of the loan must provide their SSNs or other TINs in order to do business with SBA and not
+L303@P4: providing your SSN or TIN will impact the loan decision.
+L304@P4: SBA also determines eligibility of the Applicant business in accordance with regulations under 13 CFR 120.110(n). SBA is specifically authorized to verify
+L305@P4: your criminal history, or lack thereof, pursuant to section 7(a)(1)(B), of the Small Business Act, 15 USC Section 636(a)(1)(B). In addition, for all forms of
+L306@P4: assistance, SBA is authorized to make all investigations necessary to ensure that a person has not engaged in acts that violate or will violate the Small
+L307@P4: Business Act, 15 U.S.C. 634(b)(11). SBA also uses the SSN to distinguish the Applicant and its owners of the Applicant from other individuals with the
+L308@P4: same or similar name or other personal identifiers. This use is permitted under Executive Order 9397.
+L309@P4: Routine Uses: Some of the information collected may be checked against criminal history indices of the Federal Bureau of Investigation. When the
+L310@P4: information collected indicates a violation or potential violation of law, whether civil, criminal, or administrative in nature, SBA may refer it to the
+L311@P4: appropriate agency, whether Federal, State, local, or foreign, charged with responsibility for or otherwise involved in investigation, prosecution, enforcement
+L312@P4: or prevention of such violations. See SBA’s Privacy Act System of Records, at 74 Fed. Reg. 14890 (2009) and 82 Fed. Reg. 23026 (2021) (as amended
+L313@P4: from time to time) for other published routine uses for the collected information.
+L314@P4-5: SBA Form 1919 (04/2024) 5
+L315@P5: SBA 7(a) Borrower Information Form OMB Control No.: 3245-0348
+L316@P5: For use with all SBA 7(a) Loan Programs Expiration Date: 6/30/2027
+L317@P5: Right to Financial Privacy Act of 1978 (12 U.S.C. § 3401 et seq.) – As required by the Right of Financial Privacy Act of 1978, SBA provides this notice
+L318@P5: of SBA's right to access financial records held by financial institutions that are or have been doing business with you or your business, including any financial
+L319@P5: institutions participating in a loan or loan guarantee. The law provides that SBA shall have a right of access to your financial records in connection with its
+L320@P5: consideration or administration of assistance to you in the form of a Government loan or loan guaranty agreement. SBA is required to provide a certificate
+L321@P5: of its compliance with the Act to a financial institution in connection with its first request for access to your financial records, after which no further
+L322@P5: certification is required for subsequent access. The law also provides that SBA's access rights continue for the term of any approved loan or loan guaranty
+L323@P5: agreement.
+L324@P5: No further notice to you of SBA's access rights is required during the term of any such agreement. The law also authorizes SBA to transfer to another
+L325@P5: Government authority any financial records included in an application for a loan, or concerning an approved loan or loan guarantee, as necessary to process,
+L326@P5: service or foreclose on a loan or loan guarantee or to collect on a defaulted loan or loan guarantee. No other transfer of your financial records to another
+L327@P5: Government authority will be permitted by SBA except as required or permitted by law.
+L328@P5: Disclosure of Information – Requests for information about another party may be denied unless SBA has the written permission of the individual to release
+L329@P5: the information to the requestor or unless the information is subject to disclosure under the Freedom of Information Act. The Privacy Act authorizes SBA
+L330@P5: to make certain “routine uses” of information protected by that Act. One such routine use is the disclosure of information maintained in SBA’s system of
+L331@P5: records when this information indicates a violation or potential violation of law, whether civil, criminal, or administrative in nature. Specifically, SBA may
+L332@P5: refer the information to the appropriate agency, whether Federal, State, local or foreign, charged with responsibility for, or otherwise involved in
+L333@P5: investigation, prosecution, enforcement or prevention of such violations. Another routine use is disclosure to other Federal agencies conducting background
+L334@P5: checks but only to the extent the information is relevant to the requesting agencies’ function. See, 74 F.R. 14890 (2009), and as amended from time to time
+L335@P5: for additional background and other routine uses.
+L336@P5: Debt Collection Act of 1982 and Debt Collection Improvement Act of 1996 (5 U.S.C. § 5514 note and 31 U.S.C. § 3701 et seq.) – These laws require
+L337@P5: SBA to aggressively collect any loan or other payments which become delinquent. SBA must obtain your taxpayer identification number when you apply
+L338@P5: for a loan. If you receive a loan, and do not make payments as they come due, SBA may take one or more of the following actions:
+L339@P5: • Report the status of your loan(s) or other debt owed to SBA to credit bureaus
+L340@P5: • Hire a collection agency to collect your loan or other delinquent debt
+L341@P5: • Offset your income tax refund or other amounts due to you from the Federal Government
+L342@P5: • Suspend or debar you or your company from doing business with the Federal Government
+L343@P5: • Refer your loan or other delinquent debt to the Department of Justice or other attorneys for litigation
+L344@P5: • Foreclose on collateral or take other action permitted in the loan instruments
+L345@P5: • If you default on an SBA loan and fail to fully reimburse SBA for any resulting loss, refer you to the computer database of delinquent Federal debtors
+L346@P5: maintained by the Department of Housing and Urban Development, or other Federal agency, which may disqualify you from receiving financial
+L347@P5: assistance from other Federal agencies. In addition, unless SBA is reimbursed in full for the loss, you will not be eligible for additional SBA financial
+L348@P5: assistance.
+L349@P5: Freedom of Information Act (5 U.S.C. 552) -- This law provides, with some exceptions, that SBA must supply information reflected in agency files and
+L350@P5: records to a person requesting it. Information about approved loans that is generally released includes, among other things, statistics on our loan programs
+L351@P5: (individual Borrowers are not identified in the statistics) and other information such as the names of the Borrowers, the amount of the loan, and the type of
+L352@P5: loan. Proprietary data on a Borrower would not routinely be made available to third parties. All requests under this Act are to be addressed to the SBA’s
+L353@P5: Freedom of Information/Privacy Acts Office and be identified as a Freedom of Information request.
+L354@P5: Flood Disaster Protection Act (42 U.S.C. 4011) -- Regulations have been issued by the Federal Insurance Administration (FIA) and by SBA implementing
+L355@P5: this Act and its amendments. These regulations prohibit SBA from making certain loans in an FIA designated floodplain unless Federal Flood insurance is
+L356@P5: purchased as a condition of the loan. Failure to maintain the required level of flood insurance makes the Applicant ineligible for any financial assistance
+L357@P5: from SBA, including disaster assistance.
+L358@P5: Executive Orders -- Floodplain Management and Wetland Protection (42 F.R. 26951 and 42 F.R. 26961) -- SBA discourages settlement in or
+L359@P5: development of a floodplain or a wetland. This statement is to notify all SBA loan Applicants that such actions are hazardous to both life and property and
+L360@P5: should be avoided. The additional cost of flood preventive construction must be considered in addition to the possible loss of all assets and investments due
+L361@P5: to a future flood.
+L362@P5: Executive Order 11738 -- Environmental Protection (38 F.R. 25161) – The Executive Order charges the SBA with administering its loan programs in a
+L363@P5: manner that will result in effective enforcement of the Clean Air Act, the Federal Water Pollution Act and other environmental protection legislation. SBA
+L364@P5: must, therefore, impose conditions on some loans. By acknowledging receipt of this form and presenting the application, all Applicant small businesses
+L365@P5: borrowing $100,000 or more in direct funds stipulate to the following:
+L366@P5: • That any facility used, or to be used, by the subject firm is not cited on the EPA list of Violating Facilities.
+L367@P5: • That subject firm will comply with all the requirements of Section 114 of the Clean Air Act (42 U.S.C.7414) and Section 308 of the Water Act (33
+L368@P5: U.S.C. § 1318) relating to inspection, monitoring, entry, reports and information, as well as all other requirements specified in Section 114 and Section
+L369@P5: 308 of the respective Acts, and all regulations and guidelines issued thereunder.
+L370@P5: • That subject firm will notify SBA of the receipt of any communication from the Director of the Environmental Protection Agency indicating that a
+L371@P5: facility utilized, or to be utilized, by subject firm is under consideration to be listed on the EPA List of Violating Facilities.
+L372@P5-6: SBA Form 1919 (04/2024) 6
+L373@P6: SBA 7(a) Borrower Information Form OMB Control No.: 3245-0348
+L374@P6: For use with all SBA 7(a) Loan Programs Expiration Date: 6/30/2027
+L375@P6: Occupational Safety and Health Act (15 U.S.C. 651 et seq.) – The Occupational Safety and Health Administration (OSHA) can require businesses to
+L376@P6: modify facilities and procedures to protect employees. Businesses that do not comply may be fined and required to abate the hazards in their workplaces.
+L377@P6: They may also be ordered to cease operations posing an imminent danger of death or serious injury until employees can be protected. Signing this form is
+L378@P6: certification that the Applicant, to the best of its knowledge, is in compliance with the applicable OSHA requirements, and will remain in compliance during
+L379@P6: the life of the loan.
+L380@P6: Lead-Based Paint Poisoning Prevention Act (42 U.S.C. § 4821 et seq.) – Borrowers using SBA funds for the construction or rehabilitation of a residential
+L381@P6: structure are prohibited from using lead-based paint (as defined in Federal regulations) on all interior surfaces, whether accessible or not, and exterior
+L382@P6: surfaces, such as stairs, decks, porches, railings, windows and doors, which are readily accessible to children under 7 years of age. A "residential structure"
+L383@P6: is any home, apartment, hotel, motel, orphanage, boarding school, dormitory, day care center, extended care facility, college or other school housing,
+L384@P6: hospital, group practice or community facility and all other residential or institutional structures where persons reside.
+L385@P6: Civil Rights (13 C.F.R. 112, 113, 117) – All businesses receiving SBA financial assistance must agree not to discriminate in any business practice, including
+L386@P6: employment practices and services to the public on the basis of categories cited in 13 C.F.R., Parts 112, 113, and 117 of SBA Regulations. This includes
+L387@P6: making their goods and services available to handicapped clients or customers. All Borrowers must display the "Equal Employment Opportunity Poster"
+L388@P6: prescribed by SBA.
+L389@P6: Equal Credit Opportunity Act (15 U.S.C. 1691 et sec.) – The Federal Equal Credit Opportunity Act prohibits creditors from discriminating against credit
+L390@P6: Applicants on the basis of race, color, religion, national origin, sex, marital status or age (provided that the Applicant has the capacity to enter into a binding
+L391@P6: contract); because all or part of the Applicant's income derives from any public assistance program, or because the Applicant has in good faith exercised
+L392@P6: any right under the Consumer Credit Protection Act. The Federal agency that administers compliance with this law concerning this creditor is the Federal
+L393@P6: Trade Commission, Equal Credit Opportunity, Washington, D.C. 20580.
+L394@P6: Executive Order 12549 as amended by E.O. 12689, Debarment and Suspension (2 C.F.R. 180, adopted by reference in 2 C.F.R. Part 2700 (SBA
+L395@P6: Debarment Regulations)) – By submission of this loan application, you certify and acknowledge that neither you nor any Associates: (a) are presently
+L396@P6: debarred, suspended, declared ineligible from participating in, or voluntarily excluded from participation in a transaction by any Federal department or
+L397@P6: agency; (b) are formally proposed for debarment, with a final determination still pending; (c) are presently indicted or otherwise criminally or civilly charged
+L398@P6: by a governmental entity (Federal, State or local) with commission of any of the offenses listed in the SBA Debarment Regulations; (d) have been convicted,
+L399@P6: or had a civil judgment rendered against you within the preceding three years for any of the offenses listed in the SBA Debarment Regulations, including 2
+

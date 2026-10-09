@@ -1,0 +1,72 @@
+{
+  "workbook": "monthly_operations_report.xlsx",
+  "helper_script": "enhance_workbook.py",
+  "helper_execution_attempts": 1,
+  "helper_successful_executions": 1,
+  "recalc_invocation_count": 1,
+  "recalc_extra_invocations": false,
+  "features": {
+    "executive_summary_sheet": true,
+    "kpi_formulas": [
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B9"
+    ],
+    "cross_sheet_formulas": [
+      "B5",
+      "B6",
+      "B7",
+      "B8"
+    ],
+    "scenario_analysis": {
+      "dropdown_cell": "B12",
+      "scenarios": [
+        "Base",
+        "Upside",
+        "Downside"
+      ],
+      "projected_formulas": [
+        "B15",
+        "B16"
+      ]
+    },
+    "charts_added": 2,
+    "charts_type": [
+      "Line (Daily Trip Trend)",
+      "Pie (Payment Method Mix)"
+    ],
+    "conditional_formatting_rules": 2,
+    "freeze_panes": "A4",
+    "comments_count": 3,
+    "font_color_convention": {
+      "blue_input": "B12",
+      "green_cross_sheet": [
+        "B5",
+        "B6",
+        "B7",
+        "B8"
+      ],
+      "black_local": [
+        "B9",
+        "B13",
+        "B14",
+        "B15",
+        "B16"
+      ]
+    },
+    "base_charts_preserved": true,
+    "raw_sample_preserved": true
+  },
+  "verifier_status": "success",
+  "verifier_failures": [],
+  "files_created": [
+    "monthly_operations_report.xlsx",
+    "monthly_operations_summary.csv",
+    "reconciliation_summary.csv",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ]
+}

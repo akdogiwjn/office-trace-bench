@@ -1,0 +1,148 @@
+{
+  "status": "success",
+  "checks": {
+    "workbook_file": {
+      "ok": true,
+      "detail": 11573980
+    },
+    "sheet_order": {
+      "ok": true,
+      "detail": [
+        "Executive_Summary",
+        "Raw_Sample",
+        "Hourly_Summary",
+        "Daily_Summary",
+        "Zone_Summary",
+        "Payment_Summary",
+        "Fare_Distance_Bands",
+        "Reconciliation"
+      ]
+    },
+    "raw_sample_preserved": {
+      "ok": true,
+      "detail": {
+        "rows": 100001,
+        "columns": 25
+      }
+    },
+    "required_formulas": {
+      "ok": true,
+      "detail": {
+        "B5": "=Reconciliation!B10",
+        "B6": "=Reconciliation!B14",
+        "B7": "=Hourly_Summary!B34",
+        "B8": "=Reconciliation!B5",
+        "B9": "=IF(AND(Reconciliation!B24=\"YES - Consistent\",Reconciliation!B25=\"YES - Consistent\"),\"PASS\",\"REVIEW\")",
+        "B13": "=INDEX(E13:E15,MATCH(B12,D13:D15,0))",
+        "B14": "=INDEX(F13:F15,MATCH(B12,D13:D15,0))",
+        "B15": "=B5*B14",
+        "B16": "=B6*B13*B14"
+      }
+    },
+    "cross_sheet_formulas": {
+      "ok": true,
+      "detail": {
+        "B5": "=Reconciliation!B10",
+        "B6": "=Reconciliation!B14",
+        "B7": "=Hourly_Summary!B34",
+        "B8": "=Reconciliation!B5"
+      }
+    },
+    "formula_count": {
+      "ok": true,
+      "detail": 45
+    },
+    "scenario_default": {
+      "ok": true,
+      "detail": "Base"
+    },
+    "scenario_data_validation": {
+      "ok": true,
+      "detail": [
+        "B12"
+      ]
+    },
+    "executive_charts": {
+      "ok": true,
+      "detail": 2
+    },
+    "base_charts_preserved": {
+      "ok": true,
+      "detail": 4
+    },
+    "conditional_formatting": {
+      "ok": true,
+      "detail": 2
+    },
+    "source_comments": {
+      "ok": true,
+      "detail": [
+        "B5",
+        "B12",
+        "D13"
+      ]
+    },
+    "freeze_panes": {
+      "ok": true,
+      "detail": "A4"
+    },
+    "font_color_convention": {
+      "ok": true,
+      "detail": {
+        "B12": "<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FF0000FF', indexed=None, auto=None, theme=None, tint=0.0, type='rgb'",
+        "B5": "<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FF008000', indexed=None, auto=None, theme=None, tint=0.0, type='rgb'",
+        "B13": "<openpyxl.styles.colors.Color object>\nParameters:\nrgb='FF000000', indexed=None, auto=None, theme=None, tint=0.0, type='rgb'"
+      }
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": 0
+    },
+    "cached_numeric_values": {
+      "ok": true,
+      "detail": {
+        "B5": 2758427,
+        "B6": 50744748.6,
+        "B7": 18.9361351508528,
+        "B8": 0.0695524963705347,
+        "B9": "PASS",
+        "B13": 1,
+        "B14": 1,
+        "B15": 2758427,
+        "B16": 50744748.6
+      }
+    },
+    "scenario_cached_values": {
+      "ok": true,
+      "detail": {
+        "B5": 2758427,
+        "B6": 50744748.6,
+        "B7": 18.9361351508528,
+        "B8": 0.0695524963705347,
+        "B9": "PASS",
+        "B13": 1,
+        "B14": 1,
+        "B15": 2758427,
+        "B16": 50744748.6
+      }
+    },
+    "reconciliation_status": {
+      "ok": true,
+      "detail": "PASS"
+    },
+    "zero_cached_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": {
+        "status": "success",
+        "total_errors": 0,
+        "error_summary": {},
+        "total_formulas": 45
+      }
+    }
+  },
+  "failures": []
+}
