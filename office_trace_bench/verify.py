@@ -233,19 +233,32 @@ def verify_pdf(manifest, expected, workspace, checks):
         checks.add('deliverable:' + filename, (output / filename).exists())
 
 
-def verify(manifest_path, workspace, report_path=None, *, deferred_outputs=()):
+def verify(manifest_path, workspace, report_path=None, *, deferred_outputs=(), scope='independent'):
+    if scope not in ('loop', 'independent'):
+        raise ValueError("scope must be 'loop' or 'independent'")
     manifest = load_manifest(manifest_path)
+    if manifest.get('loop_verification_contract'):
+        return _verify_industry_contract(manifest_path, manifest, workspace, report_path,
+                                        deferred_outputs=deferred_outputs, scope=scope)
     expected = read_json(Path(manifest_path).parent / manifest['expected_file'])
     workspace = Path(workspace)
     checks = Checks(manifest)
+    checks.data['validation_scope'] = scope
+    checks.data['validation_contract'] = (manifest.get('loop_verification_contract')
+                                          if scope == 'loop'
+                                          else 'office-independent-acceptance-v1')
     try:
-        for relative, digest in manifest['input_files'].items():
-            p = workspace / relative
-            checks.add('input:' + relative, p.is_file() and sha256(p) == digest)
+        if scope == 'independent':
+            for relative, digest in manifest['input_files'].items():
+                p = workspace / relative
+                checks.add('input:' + relative, p.is_file() and sha256(p) == digest)
         if checks.data['failures']:
             return checks.finish()
         if manifest['kind'] == 'xlsx':
-            if manifest.get('workload_contract') == 'spreadsheet-semantic-v2':
+            if scope == 'loop' and manifest.get('loop_verification_contract'):
+                from .loop_spreadsheet import verify_semantic_xlsx_loop
+                verify_semantic_xlsx_loop(manifest, expected, workspace, checks, deferred_outputs)
+            elif manifest.get('workload_contract') == 'spreadsheet-semantic-v2':
                 from .spreadsheet import verify_semantic_xlsx
                 verify_semantic_xlsx(manifest, expected, workspace, checks, deferred_outputs)
             else:
@@ -258,4 +271,34 @@ def verify(manifest_path, workspace, report_path=None, *, deferred_outputs=()):
         report = checks.finish()
         if report_path is not None:
             write_json(report_path, report)
+    return report
+
+
+def _verify_industry_contract(manifest_path, manifest, workspace, report_path, *, deferred_outputs, scope):
+    """Use the dataset's frozen loop/independent contract for industry_productivity."""
+    if scope not in ('loop', 'independent'):
+        raise ValueError("scope must be 'loop' or 'independent'")
+    from .industry_verification.verify import Checks
+    from .industry_verification.spreadsheet import (
+        verify_semantic_xlsx, verify_semantic_xlsx_loop)
+    from .contracts import read_json, sha256, write_json
+
+    expected = read_json(Path(manifest_path).parent / manifest['expected_file'])
+    workspace = Path(workspace)
+    checks = Checks(manifest)
+    checks.data['validation_contract'] = manifest['loop_verification_contract'] if scope == 'loop' else 'office-independent-acceptance-v3'
+    checks.data['validation_scope'] = scope
+    try:
+        if scope == 'independent':
+            for relative, digest in manifest['input_files'].items():
+                path = workspace / relative
+                checks.add('input:' + relative, path.is_file() and sha256(path) == digest)
+        if not checks.data['failures']:
+            verifier = verify_semantic_xlsx_loop if scope == 'loop' else verify_semantic_xlsx
+            verifier(manifest, expected, workspace, checks, deferred_outputs)
+    except Exception as exc:
+        checks.add('verification_exception', False, f'{type(exc).__name__}: {exc}')
+    report = checks.finish()
+    if report_path is not None:
+        write_json(report_path, report)
     return report

@@ -97,7 +97,12 @@ def main():
     selections={(row['kind'],row['dataset_id']):row for row in qualification_report['datasets']}
     if len(selections)!=7 or set(selections)!=SCOPE:raise ValueError('explicit canonical selections must cover exactly seven datasets')
     for path in sorted((ROOT/'datasets').glob('*/*/manifest.json')):
-        manifest=load_manifest(path);selection=selections[(manifest['kind'],manifest['dataset_id'])]
+        manifest=load_manifest(path)
+        # Additional Agent cases have a separate extension index. Publishing
+        # the historical suite must preserve its explicitly qualified scope.
+        if (manifest['kind'],manifest['dataset_id']) not in SCOPE:
+            continue
+        selection=selections[(manifest['kind'],manifest['dataset_id'])]
         chosen=ROOT/selection['canonical_path'];data=validate_pack(chosen)
         if (data['manifest_sha256']!=sha256(path) or data['original_run_id']!=selection['run_id']
             or sha256(chosen/'canonical.json')!=selection['canonical_sha256']):raise ValueError('explicit selection does not match current canonical/manifest')

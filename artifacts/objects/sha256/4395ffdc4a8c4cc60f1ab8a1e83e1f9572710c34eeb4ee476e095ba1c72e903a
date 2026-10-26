@@ -1,0 +1,52 @@
+{
+  "schema_version": "office-input-provenance-v3",
+  "dataset_id": "industry_productivity",
+  "filename": "labor-productivity-detailed-industries.xlsx",
+  "sha256": "9c1213923977e6dcefd20b6185537434e9057428cb9a16b3329a8ccb4dd117dd",
+  "file_size_bytes": 22639809,
+  "frozen_at": "2026-10-19T02:23:46.606187+00:00",
+  "input_class": "official_native_spreadsheet",
+  "native_xlsx": true,
+  "official_publisher": "U.S. Bureau of Labor Statistics, Office of Productivity and Technology",
+  "official_url": "https://www.bls.gov/productivity/tables/labor-productivity-detailed-industries.xlsx",
+  "official_listing_url": "https://www.bls.gov/productivity/tables/home.htm",
+  "official_listing_label": "Labor productivity by detailed industries",
+  "official_listing_release_date": "2026-09-24",
+  "official_listing_verified_at": "2026-10-19T02:23:46.606187+00:00",
+  "release": "2026-09-24; BLS Tables listing and workbook Annual!A2 / ReadMe!A2 agree",
+  "release_text_verbatim": "Data released Sepetmber 24th, 2026; Bureau of Labor Statistics, Office of Productivity and Technology",
+  "period": "1987–2025 annual year headers; coverage varies by series",
+  "download_date": null,
+  "actual_download_source": "https://www.bls.gov/productivity/tables/labor-productivity-detailed-industries.xlsx",
+  "owner_declared_official_source": "https://www.bls.gov/productivity/tables/labor-productivity-detailed-industries.xlsx",
+  "acquisition_method": "Owner-confirmed BLS official download; moved into the repository without conversion or rewriting",
+  "official_byte_identity_verified": false,
+  "independent_redownload": {
+    "attempted_at": "2026-10-19T02:23:46.606187+00:00",
+    "url": "https://www.bls.gov/productivity/tables/labor-productivity-detailed-industries.xlsx",
+    "http_status": 403,
+    "result": "Official endpoint returned HTTP 403 from Akamai; no official byte comparison available"
+  },
+  "verified_content": [
+    "Workbook core metadata names BLS Office of Productivity and Technology as author",
+    "Workbook release statement agrees with current official Tables listing",
+    "Annual and MachineReadable contain published industry statistical series",
+    "Manufacturing rows include labor productivity, output, hours, employment and labor compensation"
+  ],
+  "not_independently_verified": [
+    "Byte identity with a separately downloaded official XLSX",
+    "Owner original download date and browser response headers"
+  ],
+  "synthetic_expansion": false,
+  "conversion": "None; the complete original XLSX byte sequence is preserved",
+  "scope": "Multiple industries, including manufacturing; not manufacturing-only and not record-level firm/worker data",
+  "view_semantics": "Annual and MachineReadable are wide/long representations of the data; do not add their row counts as independent observations",
+  "limitations": [
+    "The live official URL is mutable; the frozen SHA256 identifies this specific input",
+    "Official listing/content checks are not proof of byte-for-byte authenticity"
+  ],
+  "onboarding_status": "input_staged_not_yet_registered_for_agent_or_replay",
+  "official_source_confirmed": true,
+  "source_confirmation_method": "Owner explicitly confirmed downloading this exact supplied workbook from the BLS official website",
+  "source_confirmation_note": "Accepted as an official-source input on owner confirmation. Independent byte comparison was not performed; the historical HTTP 403 attempt is retained as acquisition evidence, not an onboarding blocker."
+}

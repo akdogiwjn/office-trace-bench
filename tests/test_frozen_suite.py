@@ -8,11 +8,13 @@ from office_trace_bench.contracts import ROOT,load_manifest,read_json,sha256
 from office_trace_bench import records
 from scripts.freeze_suite import lines,table_rows,chart_oracle
 from scripts.native_xlsx_oracle import calculate
+from scripts.freeze_suite_index import SCOPE
 from openpyxl import load_workbook
 
 class FrozenSuiteTests(unittest.TestCase):
     def test_exactly_seven_inputs_with_frozen_provenance(self):
-        paths=list((ROOT/'datasets').glob('*/*/manifest.json'))
+        paths=[path for path in (ROOT/'datasets').glob('*/*/manifest.json')
+               if (path.parent.parent.name,path.parent.name) in SCOPE]
         self.assertEqual(len(paths),7)
         for path in paths:
             m=load_manifest(path);p=read_json(path.parent/'provenance.json')

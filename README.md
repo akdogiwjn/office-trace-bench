@@ -1,9 +1,18 @@
 # Office Trace Bench
 
-本项目冻结七个 Office workload，用于 Agent 轨迹、工具工作量及后续 CPU/OS 工作量研究。
+本仓库负责真实 Agent 任务执行和 trace 冻结；确定性回放、镜像与性能分析位于
+[office-trace-replay](https://github.com/akdogiwjn/office-trace-replay)。两仓库职责和用例集合
+不同，不要求使用相同的执行脚本或验证器版本。最新关联见 [仓库同步说明](docs/replay-handoff.md)。
+
+本项目的历史 Agent suite 冻结七个 Office workload，用于 Agent 轨迹、工具工作量及后续 CPU/OS 工作量研究。
 现有 OpenClaw Agent、PDF/XLSX Skill 和 ATIF 导出框架保持使用。真实 Agent 在运行镜像中生成
-trace；后续离线工具 replay 以冻结证据为输入，不重新调用 LLM。当前尚无可执行 recipe、
-离线 replay 镜像或 CPU/OS 性能结论。
+trace；后续离线工具 replay 以冻结证据为输入，不重新调用 LLM。可执行 recipe、
+离线 replay 镜像和 CPU/OS 性能结论在独立的 replay 仓库维护。
+
+另已接入 Industry Productivity，保存完整 BLS 原始输入、冻结 Agent context、成功 canonical
+trace 和 loop/independent 验证支持，索引位于 [artifacts/extensions.json](artifacts/extensions.json)。
+它作为新增用例保留，不覆盖原七项 suite 或其历史资格报告。HR Metro、Retail Online 在 replay
+仓库以人工适配方式接入，本仓库没有这两个用例的 Agent trace，不将人工适配标成 Agent 生成。
 
 正式输入、来源限制和逐项回归状态见 [原生输入更新审计](docs/native-input-update-v3.md)；研究边界见
 [methodology](docs/methodology.md)。测试结果以 [独立目录测试报告](reports/self-contained-tests-v2.json)
@@ -90,6 +99,8 @@ XLSX 通用验证分别检查原工作簿的 worksheet 保留及相对顺序、�
 和交付文件。它不要求全局固定行列数、Sheet 数或图表数。独立预期保存在 expected.json，
 不属于任务语义要求。重算后的数值允许有限序列化误差；这不是 OOXML 字节或视觉逐像素
 等同证明。非默认场景通过额外临时副本重算验证，不混入原 Agent tool_events。
+Industry Productivity 使用自身冻结的 loop/independent contract；历史七项的完整回归报告不
+代表本次修改后的重新回归结果，也不代表 replay 当前版本的验证范围。
 
 每次运行冻结所选 dataset、代码、Prompt、Skill 和背景上下文；Agent 只看到该只读快照及
 自身可写 workspace，不看到历史成功产物或其他 runs。原始 session 必须匹配返回的 session
@@ -114,7 +125,8 @@ ATIF 和工具日志属于 execution trace，不是 executable replay recipe。�
 
 原工作簿 complexity 放在 `datasets/xlsx/*/complexity.json`，不混入 Agent Prompt。
 文件大小、cell、Sheet、公式、图表、style、合并区域及压缩结构差异是 workload 的一部分；
-不能据此把 CPU 差异直接解释成“行业差异”。当前不增加第八个领域。
+不能据此把 CPU 差异直接解释成“行业差异”。新增 Industry Productivity 的来源和交接边界
+单独记录，不把新增记录混入原七项冻结报告。
 
 `runs/`、`.snapshots/`、`qualification/`、凭据来源记录及含临时令牌的下载缓存仍忽略。
 这些目录用于开发/运行；正式 evidence 通过 canonical pack 和报告发布。历史报告保留原

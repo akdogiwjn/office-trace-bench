@@ -1,0 +1,29 @@
+{
+  "schema_version": "office-semantic-oracle-v2",
+  "metric_values": {
+    "food_productivity_2025": 92.025,
+    "food_productivity_yoy_change": -0.021395833554877338,
+    "food_productivity_change_since_2020": -0.09331402222747684
+  },
+  "scenario_values": {
+    "Base": {
+      "projected_productivity_index": 92.025
+    },
+    "Higher": {
+      "projected_productivity_index": 96.62625000000001
+    },
+    "Lower": {
+      "projected_productivity_index": 87.42375
+    }
+  },
+  "chart_values": {
+    "manufacturing_subindustry_2025": [
+      92.025,
+      65.216,
+      93.136,
+      108.58,
+      114.982
+    ]
+  },
+  "oracle_provenance": "Independent calculations from the complete frozen Annual sheet. The MachineReadable sheet is a long representation of the same published series and is not combined with Annual."
+}

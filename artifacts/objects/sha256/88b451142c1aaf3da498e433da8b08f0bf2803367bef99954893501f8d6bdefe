@@ -1,0 +1,449 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "industry_productivity",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "input:input/labor-productivity-detailed-industries.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "source:worksheets": {
+      "ok": true,
+      "detail": [
+        "Summary",
+        "Analysis",
+        "Annual",
+        "MachineReadable",
+        "ReadMe"
+      ]
+    },
+    "source:relative_order": {
+      "ok": true,
+      "detail": null
+    },
+    "source:data:Annual": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats_meaning:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:MachineReadable": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats_meaning:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:data:ReadMe": {
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "changed": [],
+        "added": []
+      }
+    },
+    "source:formulas:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats_meaning:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions_removed:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:charts:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions_removed:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:charts:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions_removed:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:charts:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names_damaged": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_name_shadowing": {
+      "ok": true,
+      "detail": []
+    },
+    "overview_added": {
+      "ok": true,
+      "detail": null
+    },
+    "metric_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C7": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:food_productivity_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:food_productivity_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:food_productivity_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C8": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:food_productivity_yoy_change": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:food_productivity_yoy_change": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:food_productivity_yoy_change": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C9": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:food_productivity_change_since_2020": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:food_productivity_change_since_2020": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:food_productivity_change_since_2020": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:selector_color": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:productivity_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Higher": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Higher:productivity_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Lower": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Lower:productivity_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "projection_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C18": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_productivity_index": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_productivity_index": {
+      "ok": true,
+      "detail": null
+    },
+    "chart_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": [
+        "ANALYSIS!A5:A9",
+        "ANALYSIS!C5:C9"
+      ]
+    },
+    "semantic:chart:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": [
+        [
+          92.025,
+          65.216,
+          93.136,
+          108.58,
+          114.982
+        ]
+      ]
+    },
+    "semantic:chart_dependency:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "format:conditional_rules": {
+      "ok": true,
+      "detail": null
+    },
+    "format:comments": {
+      "ok": true,
+      "detail": null
+    },
+    "format:freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:industry_productivity_enhanced.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:workbook_features.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:xlsx_enhancement_summary.json": {
+      "ok": true,
+      "detail": null
+    },
+    "csv_matches_workbook:metrics.csv": {
+      "ok": true,
+      "detail": {
+        "rows": 3,
+        "expected_rows": 3
+      }
+    },
+    "csv_matches_workbook:scenario.csv": {
+      "ok": true,
+      "detail": {
+        "rows": 1,
+        "expected_rows": 1
+      }
+    }
+  },
+  "failures": [],
+  "diagnostics": {
+    "source:number_formats:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:empty_string_normalized:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:empty_string_normalized:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:number_formats:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:empty_string_normalized:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:merged_regions:Annual": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:Annual": {
+      "ok": true,
+      "detail": [
+        "A1:font",
+        "A1:alignment",
+        "A2:font",
+        "A2:alignment",
+        "A3:font",
+        "A3:border",
+        "B3:font",
+        "B3:border",
+        "C3:font",
+        "C3:border",
+        "D3:font",
+        "D3:border",
+        "E3:font",
+        "E3:border",
+        "F3:font",
+        "F3:border",
+        "G3:font",
+        "G3:border",
+        "H3:font",
+        "H3:border",
+        "I3:font",
+        "I3:border",
+        "J3:font",
+        "J3:border"
+      ]
+    },
+    "source:merged_regions:MachineReadable": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:MachineReadable": {
+      "ok": true,
+      "detail": [
+        "A1:font",
+        "A1:border",
+        "B1:font",
+        "B1:border",
+        "C1:font",
+        "C1:border",
+        "D1:font",
+        "D1:border",
+        "E1:font",
+        "E1:border",
+        "F1:font",
+        "F1:border",
+        "G1:font",
+        "G1:border",
+        "H1:font",
+        "H1:border",
+        "I1:font",
+        "I1:border",
+        "A2:font",
+        "A2:alignment",
+        "B2:font",
+        "B2:alignment",
+        "C2:font",
+        "C2:alignment"
+      ]
+    },
+    "source:merged_regions:ReadMe": {
+      "ok": true,
+      "detail": []
+    },
+    "source:styles:ReadMe": {
+      "ok": true,
+      "detail": [
+        "A1:font",
+        "A1:alignment",
+        "A2:font",
+        "A2:alignment",
+        "A4:font",
+        "A4:alignment",
+        "B4:font",
+        "B4:alignment",
+        "A5:font",
+        "A5:alignment",
+        "B5:font",
+        "B5:alignment",
+        "A6:font",
+        "A6:alignment",
+        "B6:font",
+        "B6:alignment",
+        "A8:font",
+        "A8:alignment",
+        "A9:font",
+        "A9:alignment",
+        "A10:font",
+        "A10:alignment",
+        "A11:font",
+        "A11:alignment"
+      ]
+    },
+    "source:defined_names_serialization": {
+      "ok": true,
+      "detail": []
+    },
+    "source:defined_names_added": {
+      "ok": true,
+      "detail": []
+    }
+  },
+  "diagnostics_total": 14,
+  "diagnostic_diff_count": 3,
+  "validation_contract": "office-independent-acceptance-v3",
+  "validation_scope": "independent"
+}

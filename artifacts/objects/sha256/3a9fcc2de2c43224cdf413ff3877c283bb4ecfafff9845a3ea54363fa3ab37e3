@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""Audit the recalculated workbook against the pristine input.
+
+Checks:
+  - sheet order and dimensions
+  - original sheets: cell values, formulas, number formats, N.A. markers,
+    defined names, charts (digest-level comparison against input)
+  - new sheets: cached formula values, dropdown validation, conditional
+    formatting count, comments, freeze panes, chart series/references
+Writes output/audit_report.json and prints a human summary.
+"""
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, '/workspace/vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl')
+from openpyxl import load_workbook
+
+ROOT = Path(__file__).resolve().parents[1]
+INPUT = ROOT / 'input/labor-productivity-detailed-industries.xlsx'
+OUTPUT = ROOT / 'output/industry_productivity_enhanced.xlsx'
+REPORT = ROOT / 'output/audit_report.json'
+
+
+def cell_digest(cell):
+    v = cell.value
+    if isinstance(v, float):
+        return ('n', round(v, 10))
+    return (type(v).__name__, v)
+
+
+def sheet_digest(ws, sample_limit=None):
+    values = []
+    for row in ws.iter_rows():
+        for c in row:
+            if c.value is not None:
+                values.append((c.coordinate, cell_digest(c)))
+    return values
+
+
+def defined_names(book):
+    out = {}
+    for name in book.defined_names:
+        try:
+            out[name] = str(name.attr_text)
+        except Exception:
+            out[name] = None
+    return out
+
+
+def chart_sources(chart):
+    refs = []
+    for ser in getattr(chart, 'series', []):
+        for attr in ('val', 'cat'):
+            node = getattr(ser, attr, None)
+            if node is not None:
+                ref = getattr(node, 'numRef', None) or getattr(node, 'strRef', None)
+                if ref is not None:
+                    refs.append(getattr(ref, 'f', None))
+    return refs
+
+
+def audit():
+    report = {'checks': {}, 'details': {}}
+    wb_in = load_workbook(INPUT, data_only=False)
+    wb_out = load_workbook(OUTPUT, data_only=False)
+
+    # Sheet order + dimensions
+    report['checks']['sheet_order'] = wb_out.sheetnames == [
+        'Summary', 'Analysis', *['Annual', 'MachineReadable', 'ReadMe']]
+    report['details']['sheets'] = {s: [ws.max_row, ws.max_column] for s, ws in
+                                   [(s, wb_out[s]) for s in wb_out.sheetnames]}
+    report['details']['input_sheets'] = wb_in.sheetnames
+
+    # Original sheets: digest comparison (values + types)
+    for name in ('Annual', 'MachineReadable', 'ReadMe'):
+        a = sheet_digest(wb_in[name])
+        b = sheet_digest(wb_out[name])
+        same = a == b
+        report['checks'][f'values:{name}'] = same
+        if not same:
+            da = dict(a)
+            db = dict(b)
+            diffs = [(k, da.get(k), db.get(k)) for k in sorted(set(da) | set(db)) if da.get(k) != db.get(k)]
+            report['details'][f'diff:{name}'] = diffs[:50]
+            report['details'][f'diff_count:{name}'] = len(diffs)
+
+    # Original number formats
+    for name in ('Annual', 'MachineReadable', 'ReadMe'):
+        a = [(c.coordinate, c.number_format) for row in wb_in[name].iter_rows() for c in row
+             if c.value is not None and c.number_format != 'General']
+        b = [(c.coordinate, c.number_format) for row in wb_out[name].iter_rows() for c in row
+             if c.value is not None and c.number_format != 'General']
+        report['checks'][f'formats:{name}'] = a == b
+        if a != b:
+            report['details'][f'format_diff:{name}'] = [x for x in a if x not in b][:30], [x for x in b if x not in a][:30]
+
+    # Defined names
+    dn_in = defined_names(wb_in)
+    dn_out = defined_names(wb_out)
+    report['checks']['defined_names'] = dn_in == dn_out
+    report['details']['defined_names_in'] = len(dn_in)
+    report['details']['defined_names_out'] = len(dn_out)
+    if dn_in != dn_out:
+        report['details']['defined_names_diff'] = list(set(dn_in) ^ set(dn_out))[:20]
+
+    # New sheet features
+    summary = wb_out['Summary']
+    analysis = wb_out['Analysis']
+
+    def formula_of(ws, cell):
+        return ws[cell].value
+
+    report['details']['formulas'] = {
+        'Summary!C7': formula_of(summary, 'C7'),
+        'Summary!C8': formula_of(summary, 'C8'),
+        'Summary!C9': formula_of(summary, 'C9'),
+        'Summary!C18': formula_of(summary, 'C18'),
+        'Analysis!C5': formula_of(analysis, 'C5'),
+        'Analysis!C6': formula_of(analysis, 'C6'),
+        'Analysis!C7': formula_of(analysis, 'C7'),
+        'Analysis!C8': formula_of(analysis, 'C8'),
+        'Analysis!C9': formula_of(analysis, 'C9'),
+    }
+    report['checks']['formulas_present'] = all(
+        isinstance(v, str) and v.startswith('=') for v in report['details']['formulas'].values())
+
+    # Dropdown validation
+    dvs = []
+    for v in summary.data_validations.dataValidation:
+        dvs.append({'type': v.type, 'formula1': v.formula1, 'sqref': str(v.sqref)})
+    report['details']['validations'] = dvs
+    report['checks']['dropdown'] = any(
+        v['type'] == 'list' and 'C12' in v['sqref'] and str(v['formula1']).strip('"') == 'Base,Higher,Lower'
+        for v in dvs)
+
+    # Conditional formatting
+    cf_counts = {s.title: len(s.conditional_formatting) for s in wb_out.worksheets}
+    report['details']['conditional_formatting'] = cf_counts
+    report['checks']['conditional_formatting'] = (len(summary.conditional_formatting) +
+                                                  len(analysis.conditional_formatting)) >= 2
+
+    # Comments
+    comment_counts = {s.title: sum(1 for row in s.iter_rows() for c in row if c.comment is not None)
+                      for s in wb_out.worksheets}
+    report['details']['comments'] = comment_counts
+    report['checks']['comments'] = comment_counts['Summary'] + comment_counts['Analysis'] >= 2
+
+    # Freeze panes
+    report['details']['freeze'] = {s.title: s.freeze_panes for s in wb_out.worksheets}
+    report['checks']['freeze_panes'] = summary.freeze_panes is not None
+
+    # Charts
+    chart_info = {s.title: [chart_sources(c) for c in s._charts] for s in wb_out.worksheets
+                  if s._charts}
+    report['details']['charts'] = chart_info
+    analysis_charts = chart_info.get('Analysis', [])
+    report['checks']['chart_series'] = len(analysis_charts) == 1 and bool(analysis_charts[0])
+
+    # External links
+    report['checks']['no_external_links'] = not wb_out._external_links
+
+    wb_in.close()
+    wb_out.close()
+
+    # Cached values (data_only pass)
+    wb_c = load_workbook(OUTPUT, data_only=True, read_only=True)
+    cached = {}
+    for cell in ('C7', 'C8', 'C9', 'C18'):
+        cached['Summary!' + cell] = wb_c['Summary'][cell].value
+    for cell in ('C5', 'C6', 'C7', 'C8', 'C9'):
+        cached['Analysis!' + cell] = wb_c['Analysis'][cell].value
+    wb_c.close()
+    report['details']['cached_values'] = cached
+    expected = {
+        'Summary!C7': 92.025, 'Summary!C18': 92.025,
+        'Analysis!C5': 92.025, 'Analysis!C6': 65.216, 'Analysis!C7': 93.136,
+        'Analysis!C8': 108.58, 'Analysis!C9': 114.982,
+    }
+    ok_cached = True
+    for k, v in expected.items():
+        actual = cached.get(k)
+        if not (isinstance(actual, (int, float)) and abs(actual - v) < 1e-6):
+            ok_cached = False
+    if isinstance(cached.get('Summary!C8'), (int, float)) and isinstance(cached.get('Summary!C9'), (int, float)):
+        pass
+    report['checks']['cached_values'] = ok_cached
+
+    ok = all(v is True for k, v in report['checks'].items())
+    report['status'] = 'ok' if ok else 'problems'
+    REPORT.write_text(json.dumps(report, indent=2, default=str) + '\n')
+    print('=== AUDIT ===')
+    for k, v in report['checks'].items():
+        print(f"{'PASS' if v else 'FAIL'}  {k}")
+    print('cached:', json.dumps({k: v for k, v in cached.items()}))
+    if not ok:
+        print('--- problem details ---')
+        for k, v in report['details'].items():
+            if k.startswith('diff'):
+                print(k, v)
+    return ok
+
+
+if __name__ == '__main__':
+    sys.exit(0 if audit() else 1)

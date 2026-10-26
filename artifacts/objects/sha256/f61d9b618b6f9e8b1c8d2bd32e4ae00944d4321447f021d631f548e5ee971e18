@@ -1,0 +1,98 @@
+{
+  "output_workbook": "output/industry_productivity_enhanced.xlsx",
+  "added_sheets": [
+    {
+      "name": "Summary",
+      "role": "Overview: published metrics, scenario selector with dropdown, assumption table, formula-driven projection, notes, freeze panes, conditional formatting, comments."
+    },
+    {
+      "name": "Analysis",
+      "role": "Chart data table (formula-linked 2025 index values for five 3-digit manufacturing industries) and the manufacturing_subindustry_2025 bar chart."
+    }
+  ],
+  "original_sheets_preserved": [
+    "Annual",
+    "MachineReadable",
+    "ReadMe"
+  ],
+  "feature_counts": {
+    "metrics": 3,
+    "scenario_dimensions": 1,
+    "scenario_rows": 3,
+    "projections": 1,
+    "charts": 1,
+    "formulas_on_added_sheets": 9,
+    "conditional_format_ranges": {
+      "Summary": 2,
+      "Analysis": 1
+    },
+    "conditional_format_rules_total": 3,
+    "comments": 6,
+    "freeze_panes": {
+      "Summary": "A5",
+      "Analysis": null
+    }
+  },
+  "cached_values": {
+    "food_productivity_2025": 92.025,
+    "food_productivity_yoy_change": -0.021395833554877338,
+    "food_productivity_change_since_2020": -0.09331402222747684,
+    "projected_productivity_index": 92.025,
+    "chart_values": [
+      92.025,
+      65.216,
+      93.136,
+      108.58,
+      114.982
+    ]
+  },
+  "helpers": [
+    {
+      "file": "helpers/build_workbook.py",
+      "attempts": 1,
+      "successes": 1,
+      "purpose": "Load pristine input, add Summary/Analysis sheets with live formulas, dropdown, chart, formatting; save output workbook and workbook_features.json."
+    },
+    {
+      "file": "/root/.openclaw/skills/xlsx/scripts/recalc.py",
+      "attempts": 1,
+      "successes": 1,
+      "purpose": "LibreOffice recalculation (timeout 180s per manifest); stdout captured to output/formula_recalc.json."
+    },
+    {
+      "file": "helpers/audit_workbook.py",
+      "attempts": 1,
+      "successes": 1,
+      "purpose": "Verify source sheets/values/formats/defined names preserved after recalc; confirm cached values, dropdown, conditional formatting, comments, freeze panes, chart series."
+    },
+    {
+      "file": "helpers/write_deliverables.py",
+      "attempts": 1,
+      "successes": 1,
+      "purpose": "Write output/metrics.csv and output/scenario.csv from recalculated cache values."
+    },
+    {
+      "file": "input/verify_office.py",
+      "attempts": 1,
+      "successes": 1,
+      "purpose": "Business verifier (office-loop-validation-v1); writes output/business_verification.json."
+    },
+    {
+      "file": "helpers/write_summary.py",
+      "attempts": 2,
+      "successes": 1,
+      "purpose": "Write output/xlsx_enhancement_summary.json (first attempt failed: read-only workbook load lacks conditional-formatting/comments attributes; fixed to source counts from output/audit_report.json)."
+    }
+  ],
+  "recalc_invocations": 1,
+  "recalc_timeout_seconds": 180,
+  "recalc_report": {
+    "status": "success",
+    "total_errors": 0,
+    "total_formulas": 9
+  },
+  "final_verifier_status": "success",
+  "verifier_checks": 51,
+  "verifier_failures": [],
+  "verifier_contract": "document-oe-compatible-xlsx-loop-v1"
+}

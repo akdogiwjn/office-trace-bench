@@ -1,0 +1,55 @@
+{
+  "schema_version": "office-agent-extension-index-v1",
+  "historical_suite": {
+    "path": "artifacts/suite.json",
+    "sha256": "86ea1a7a02192972624cbc8e2e4b505fb8005a5f2f73a82a5c77aa212815578c",
+    "dataset_count": 7,
+    "unchanged": true
+  },
+  "datasets": [
+    {
+      "kind": "xlsx",
+      "dataset_id": "industry_productivity",
+      "origin_type": "successful_agent_execution",
+      "manifest_path": "datasets/xlsx/industry_productivity/manifest.json",
+      "manifest_sha256": "5edca0ba9fdf3e2a3f72dbdf38d55aac4fc16e962c6069d0f003983134c924ed",
+      "canonical_path": "artifacts/canonical/xlsx/industry_productivity/xlsx-industry_productivity-20261019T043257Z-06a71220",
+      "canonical_sha256": "b3393b732fc10ead2557db2230d2cff231d1a297d17aff3d4db665e6926db8e1",
+      "run_id": "xlsx-industry_productivity-20261019T043257Z-06a71220",
+      "trace_sha256": "777f1fc431ed34f6686c1d16fbed3c9ef490d5f9f4a4a8b514f0fd12d66a0961",
+      "input_hashes": {
+        "input/labor-productivity-detailed-industries.xlsx": "9c1213923977e6dcefd20b6185537434e9057428cb9a16b3329a8ccb4dd117dd"
+      },
+      "verifier_result": {
+        "status": "success",
+        "accepted": true,
+        "independent_sha256": "88b451142c1aaf3da498e433da8b08f0bf2803367bef99954893501f8d6bdefe",
+        "acceptance_sha256": "43bc7526e8bf2ff6cd113b24d5fe1f567b1f5fb566cdf3a7bb4c5b60d0157590"
+      },
+      "context": {
+        "profile": "industry-productivity-current-v1",
+        "sha256": "0d0447c8313a9fb433e26fb8b245f9c1fc6fa00999f7d2e6853c148ccc245f95"
+      },
+      "qualification_scope": "Existing frozen successful Agent run; not a new workload execution or scenario regression."
+    }
+  ],
+  "replay_handoff": {
+    "repository": "git@github.com:akdogiwjn/office-trace-replay.git",
+    "reference_commit": "c92c851cff53a0ed448bc8e095bfb04164afca68",
+    "default_datasets": [
+      "opm",
+      "tlc",
+      "irs_w4",
+      "sba1919",
+      "hr_metro",
+      "retail_online",
+      "industry_productivity"
+    ],
+    "manual_adaptations_without_agent_trace": [
+      "hr_metro",
+      "retail_online"
+    ],
+    "industry_parent_canonical_sha256": "b3393b732fc10ead2557db2230d2cff231d1a297d17aff3d4db665e6926db8e1"
+  },
+  "scope": "Agent-source repository extension; replay recipes, v12 image acceptance and performance evidence live in the replay repository."
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": "office-dataset-v2",
+  "workload_contract": "spreadsheet-semantic-v2",
+  "kind": "xlsx",
+  "dataset_id": "industry_productivity",
+  "domain": "industry_productivity",
+  "task": "Analyze published labor productivity within the complete BLS workbook, focusing on food manufacturing and a small comparison of selected 3-digit manufacturing industries. Preserve all source worksheets and distinguish the Annual and MachineReadable representations.",
+  "workbook": "labor-productivity-detailed-industries.xlsx",
+  "output_workbook": "industry_productivity_enhanced.xlsx",
+  "input_files": {
+    "input/labor-productivity-detailed-industries.xlsx": "9c1213923977e6dcefd20b6185537434e9057428cb9a16b3329a8ccb4dd117dd"
+  },
+  "expected_file": "expected.json",
+  "expected_sha256": "cdbb8ca5d5d9ebd9f4164fd4b32e2be664b81aab1e2b2cdcf2341e9b5c403175",
+  "prompt_template": "xlsx.txt",
+  "prompt_template_sha256": "a3502cdc6b95681fc9dc332305c05b9015201d33bab2b3bc12884d89f02c10b4",
+  "agent_context": {
+    "profile": "industry-productivity-current-v1",
+    "sha256": "0d0447c8313a9fb433e26fb8b245f9c1fc6fa00999f7d2e6853c148ccc245f95"
+  },
+  "runtime_case": "OFFICE-XLSX-INDUSTRY-PRODUCTIVITY",
+  "requirements": {
+    "metrics": [
+      {
+        "id": "food_productivity_2025",
+        "name": "Food manufacturing labor productivity index",
+        "meaning": "Published 2025 labor productivity index for NAICS 311, all workers, in 2017=100 units.",
+        "unit": "index (2017=100)"
+      },
+      {
+        "id": "food_productivity_yoy_change",
+        "name": "Food manufacturing year-over-year change",
+        "meaning": "Relative change in the published productivity index from 2024 to 2025, calculated from the two annual levels.",
+        "unit": "fraction"
+      },
+      {
+        "id": "food_productivity_change_since_2020",
+        "name": "Food manufacturing change since 2020",
+        "meaning": "Relative change in the published productivity index from 2020 to 2025, calculated from the two annual levels.",
+        "unit": "fraction"
+      }
+    ],
+    "scenario": {
+      "default": "Base",
+      "dimensions": [
+        {
+          "id": "productivity_multiplier",
+          "meaning": "Illustrative scenario multiplier applied to the published 2025 index; not a forecast."
+        }
+      ],
+      "rows": [
+        {
+          "name": "Base",
+          "assumptions": {
+            "productivity_multiplier": 1.0
+          }
+        },
+        {
+          "name": "Higher",
+          "assumptions": {
+            "productivity_multiplier": 1.05
+          }
+        },
+        {
+          "name": "Lower",
+          "assumptions": {
+            "productivity_multiplier": 0.95
+          }
+        }
+      ],
+      "projections": [
+        {
+          "id": "projected_productivity_index",
+          "meaning": "Published 2025 food manufacturing productivity index scaled by the selected illustrative assumption.",
+          "unit": "index (2017=100)"
+        }
+      ]
+    },
+    "charts": [
+      {
+        "id": "manufacturing_subindustry_2025",
+        "meaning": "Compare published 2025 productivity index levels for five 3-digit manufacturing industries. Do not combine levels across industries or representations.",
+        "unit": "index (2017=100)"
+      }
+    ],
+    "minimum_comments": 2,
+    "minimum_conditional_formats": 2,
+    "recalc_timeout": 180,
+    "base_sheets": [
+      "Annual",
+      "MachineReadable",
+      "ReadMe"
+    ],
+    "base_dimensions": {
+      "Annual": [
+        15183,
+        46
+      ],
+      "MachineReadable": [
+        566659,
+        9
+      ],
+      "ReadMe": [
+        14,
+        2
+      ]
+    },
+    "empty_strings_policy": {
+      "sheets": [],
+      "rule": "No input cell values are added as task content; blank source cells remain source data."
+    }
+  },
+  "publish_files": [],
+  "trace_rules": [
+    {
+      "pattern": "\\bverify_office\\.py\\b",
+      "operation": "verify_business"
+    },
+    {
+      "pattern": "recalc\\.py",
+      "operation": "recalculate_formulas"
+    }
+  ],
+  "required_outputs": [
+    "industry_productivity_enhanced.xlsx",
+    "workbook_features.json",
+    "formula_recalc.json",
+    "business_verification.json",
+    "xlsx_enhancement_summary.json"
+  ],
+  "analysis_metadata": {
+    "provenance.json": "4395ffdc4a8c4cc60f1ab8a1e83e1f9572710c34eeb4ee476e095ba1c72e903a",
+    "complexity.json": "295cd1242b4d0c2d99a92f1540212f150402792ccc39d134a9f9739529f4b1a3"
+  },
+  "suite_revision": "native-xlsx-industry-productivity-v1",
+  "loop_verification_contract": "document-oe-compatible-xlsx-loop-v1"
+}

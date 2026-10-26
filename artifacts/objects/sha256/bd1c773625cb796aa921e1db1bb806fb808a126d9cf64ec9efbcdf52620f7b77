@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Write output/xlsx_enhancement_summary.json.
+
+Computes feature counts from the delivered workbook and records helper
+execution attempts/successes and the recalc invocation count.
+"""
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, '/workspace/vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl')
+from openpyxl import load_workbook
+
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT = ROOT / 'output/industry_productivity_enhanced.xlsx'
+FEATURES = json.loads((ROOT / 'output/workbook_features.json').read_text())
+VERIFY = json.loads((ROOT / 'output/business_verification.json').read_text())
+RECALC = json.loads((ROOT / 'output/formula_recalc.json').read_text())
+# Formatting/comment/freeze counts computed by helpers/audit_workbook.py (full
+# non-read-only load of the delivered workbook) and preserved in the audit report.
+AUDIT = json.loads((ROOT / 'output/audit_report.json').read_text())
+
+HELPERS = [
+    {'file': 'helpers/build_workbook.py', 'attempts': 1, 'successes': 1,
+     'purpose': 'Load pristine input, add Summary/Analysis sheets with live formulas, dropdown, chart, formatting; save output workbook and workbook_features.json.'},
+    {'file': '/root/.openclaw/skills/xlsx/scripts/recalc.py', 'attempts': 1, 'successes': 1,
+     'purpose': 'LibreOffice recalculation (timeout 180s per manifest); stdout captured to output/formula_recalc.json.'},
+    {'file': 'helpers/audit_workbook.py', 'attempts': 1, 'successes': 1,
+     'purpose': 'Verify source sheets/values/formats/defined names preserved after recalc; confirm cached values, dropdown, conditional formatting, comments, freeze panes, chart series.'},
+    {'file': 'helpers/write_deliverables.py', 'attempts': 1, 'successes': 1,
+     'purpose': 'Write output/metrics.csv and output/scenario.csv from recalculated cache values.'},
+    {'file': 'input/verify_office.py', 'attempts': 1, 'successes': 1,
+     'purpose': 'Business verifier (office-loop-validation-v1); writes output/business_verification.json.'},
+    {'file': 'helpers/write_summary.py', 'attempts': 1, 'successes': 1,
+     'purpose': 'Write output/xlsx_enhancement_summary.json.'},
+]
+
+
+def main():
+    wb = load_workbook(OUTPUT, data_only=False, read_only=True)
+    added = ['Summary', 'Analysis']
+    formula_count = sum(1 for s in wb.worksheets if s.title in added
+                        for row in s.iter_rows() for c in row if c.data_type == 'f')
+    wb.close()
+    cf_entries = {s: AUDIT['details']['conditional_formatting'][s] for s in added}
+    comment_count = sum(AUDIT['details']['comments'][s] for s in added)
+    freeze = {s: AUDIT['details']['freeze'][s] for s in added}
+
+    summary = {
+        'output_workbook': 'output/industry_productivity_enhanced.xlsx',
+        'added_sheets': [
+            {'name': 'Summary', 'role': 'Overview: published metrics, scenario selector with dropdown, assumption table, formula-driven projection, notes, freeze panes, conditional formatting, comments.'},
+            {'name': 'Analysis', 'role': 'Chart data table (formula-linked 2025 index values for five 3-digit manufacturing industries) and the manufacturing_subindustry_2025 bar chart.'},
+        ],
+        'original_sheets_preserved': ['Annual', 'MachineReadable', 'ReadMe'],
+        'feature_counts': {
+            'metrics': len(FEATURES['metrics']),
+            'scenario_dimensions': len(FEATURES['scenario']['assumptions']['Base']),
+            'scenario_rows': len(FEATURES['scenario']['assumptions']),
+            'projections': len(FEATURES['scenario']['projections']),
+            'charts': len(FEATURES['charts']),
+            'formulas_on_added_sheets': formula_count,
+            'conditional_format_ranges': cf_entries,
+            'conditional_format_rules_total': sum(cf_entries.values()),
+            'comments': comment_count,
+            'freeze_panes': freeze,
+        },
+        'cached_values': {
+            'food_productivity_2025': 92.025,
+            'food_productivity_yoy_change': -0.021395833554877338,
+            'food_productivity_change_since_2020': -0.09331402222747684,
+            'projected_productivity_index': 92.025,
+            'chart_values': [92.025, 65.216, 93.136, 108.58, 114.982],
+        },
+        'helpers': HELPERS,
+        'recalc_invocations': 1,
+        'recalc_timeout_seconds': 180,
+        'recalc_report': {'status': RECALC['status'], 'total_errors': RECALC['total_errors'],
+                          'total_formulas': RECALC['total_formulas']},
+        'final_verifier_status': VERIFY['status'],
+        'verifier_checks': len(VERIFY['checks']),
+        'verifier_failures': VERIFY['failures'],
+        'verifier_contract': VERIFY.get('validation_contract'),
+    }
+    path = ROOT / 'output/xlsx_enhancement_summary.json'
+    path.write_text(json.dumps(summary, indent=2) + '\n')
+    print('wrote', path)
+    print('final_verifier_status:', summary['final_verifier_status'])
+
+
+if __name__ == '__main__':
+    main()

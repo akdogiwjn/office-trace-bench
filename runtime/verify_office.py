@@ -16,6 +16,7 @@ if __name__ == '__main__':
     # Accept the family's positional invocation; verification uses the staged workspace.
     report = verify(dataset_path(selection['kind'], selection['dataset_id']), workspace,
                     workspace / 'output/business_verification.json',
-                    deferred_outputs=('xlsx_enhancement_summary.json',) if selection['kind'] == 'xlsx' else ())
+                    deferred_outputs=('xlsx_enhancement_summary.json',) if selection['kind'] == 'xlsx' else (),
+                    scope='loop' if selection.get('loop_verification_contract') else 'independent')
     print(report['status'])
     raise SystemExit(0 if report['status'] == 'success' else 1)

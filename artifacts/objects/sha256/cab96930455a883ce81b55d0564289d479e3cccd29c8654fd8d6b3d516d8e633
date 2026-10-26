@@ -1,0 +1,7 @@
+[agent/embedded] embedded run agent end: runId=d86dac93-c3fe-4ad6-93a8-2eaaea9cd1e3 isError=true model=deepseek-v4-flash provider=videoweaver-telemetry error=Context overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session, or use a larger-context model. rawError=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent/embedded] [context-overflow-diag] sessionKey=agent:main:OFFICE-XLSX-INDUSTRY-PRODUCTIVITY provider=videoweaver-telemetry/deepseek-v4-flash source=assistantError messages=99 sessionFile=/root/.openclaw/agents/main/sessions/04ef8480-7d04-4851-a327-bd7cc82f5287.jsonl diagId=ovf-mvernwy8-LL1oGA compactionAttempts=0 observedTokens=unknown compactionTokens=131073 error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent/embedded] context overflow detected (attempt 1/3); attempting auto-compaction for videoweaver-telemetry/deepseek-v4-flash
+[session-compaction-checkpoints] skipping compaction checkpoint persist: session not found
+[agent/embedded] auto-compaction succeeded for videoweaver-telemetry/deepseek-v4-flash; retrying prompt
+[agents/post-compaction-guard] post-compaction guard armed for 3 attempts
+[session-compaction-checkpoints] skipping compaction checkpoint persist: session not found

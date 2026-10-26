@@ -1,0 +1,272 @@
+{
+  "schema_version": "office-verification-v1",
+  "dataset_id": "industry_productivity",
+  "kind": "xlsx",
+  "status": "success",
+  "checks": {
+    "workbook_file": {
+      "ok": true,
+      "detail": null
+    },
+    "base_sheets_present": {
+      "ok": true,
+      "detail": [
+        "Summary",
+        "Analysis",
+        "Annual",
+        "MachineReadable",
+        "ReadMe"
+      ]
+    },
+    "base_sheet_order": {
+      "ok": true,
+      "detail": [
+        "Annual",
+        "MachineReadable",
+        "ReadMe"
+      ]
+    },
+    "base_sheet_scale:Annual": {
+      "ok": true,
+      "detail": {
+        "source": [
+          15183,
+          46
+        ],
+        "output": [
+          15183,
+          46
+        ]
+      }
+    },
+    "base_sheet_scale:MachineReadable": {
+      "ok": true,
+      "detail": {
+        "source": [
+          566659,
+          9
+        ],
+        "output": [
+          566659,
+          9
+        ]
+      }
+    },
+    "base_sheet_scale:ReadMe": {
+      "ok": true,
+      "detail": {
+        "source": [
+          14,
+          2
+        ],
+        "output": [
+          14,
+          2
+        ]
+      }
+    },
+    "overview_added": {
+      "ok": true,
+      "detail": null
+    },
+    "metric_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C7": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:food_productivity_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:food_productivity_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:food_productivity_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C8": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:food_productivity_yoy_change": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:food_productivity_yoy_change": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:food_productivity_yoy_change": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C9": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:metric:food_productivity_change_since_2020": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:source_dependency:food_productivity_change_since_2020": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:metric_color:food_productivity_change_since_2020": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:default": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dropdown": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:selector_color": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Base": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Base:productivity_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Higher": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Higher:productivity_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:dimension_inventory:Lower": {
+      "ok": true,
+      "detail": null
+    },
+    "scenario:assumption:Lower:productivity_multiplier": {
+      "ok": true,
+      "detail": null
+    },
+    "projection_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "feature:formula:Summary!C18": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:projection:projected_productivity_index": {
+      "ok": true,
+      "detail": null
+    },
+    "semantic:scenario_dependency:projected_productivity_index": {
+      "ok": true,
+      "detail": null
+    },
+    "chart_inventory": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:references:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": [
+        "ANALYSIS!A5:A9",
+        "ANALYSIS!C5:C9"
+      ]
+    },
+    "semantic:chart:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": [
+        [
+          92.025,
+          65.216,
+          93.136,
+          108.58,
+          114.982
+        ]
+      ]
+    },
+    "semantic:chart_dependency:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "chart:manufacturing_subindustry_2025": {
+      "ok": true,
+      "detail": null
+    },
+    "added_formula_count": {
+      "ok": true,
+      "detail": 9
+    },
+    "format:conditional_rules": {
+      "ok": true,
+      "detail": null
+    },
+    "format:comments": {
+      "ok": true,
+      "detail": null
+    },
+    "format:freeze_panes": {
+      "ok": true,
+      "detail": null
+    },
+    "no_external_links": {
+      "ok": true,
+      "detail": null
+    },
+    "zero_formula_errors": {
+      "ok": true,
+      "detail": []
+    },
+    "recalc_report": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:industry_productivity_enhanced.xlsx": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:workbook_features.json": {
+      "ok": true,
+      "detail": null
+    },
+    "deliverable:formula_recalc.json": {
+      "ok": true,
+      "detail": null
+    },
+    "csv_matches_workbook:metrics.csv": {
+      "ok": true,
+      "detail": {
+        "rows": 3,
+        "expected_rows": 3
+      }
+    },
+    "csv_matches_workbook:scenario.csv": {
+      "ok": true,
+      "detail": {
+        "rows": 1,
+        "expected_rows": 1
+      }
+    }
+  },
+  "failures": [],
+  "diagnostics": {},
+  "diagnostics_total": 0,
+  "diagnostic_diff_count": 0,
+  "validation_contract": "document-oe-compatible-xlsx-loop-v1",
+  "validation_scope": "loop"
+}

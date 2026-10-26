@@ -1,0 +1,55 @@
+{
+  "summary_sheet": "Summary",
+  "metrics": {
+    "food_productivity_2025": {
+      "sheet": "Summary",
+      "cell": "C7"
+    },
+    "food_productivity_yoy_change": {
+      "sheet": "Summary",
+      "cell": "C8"
+    },
+    "food_productivity_change_since_2020": {
+      "sheet": "Summary",
+      "cell": "C9"
+    }
+  },
+  "scenario": {
+    "selector": {
+      "sheet": "Summary",
+      "cell": "C12"
+    },
+    "assumptions": {
+      "Base": {
+        "productivity_multiplier": {
+          "sheet": "Summary",
+          "cell": "B14"
+        }
+      },
+      "Higher": {
+        "productivity_multiplier": {
+          "sheet": "Summary",
+          "cell": "B15"
+        }
+      },
+      "Lower": {
+        "productivity_multiplier": {
+          "sheet": "Summary",
+          "cell": "B16"
+        }
+      }
+    },
+    "projections": {
+      "projected_productivity_index": {
+        "sheet": "Summary",
+        "cell": "C18"
+      }
+    }
+  },
+  "charts": {
+    "manufacturing_subindustry_2025": {
+      "sheet": "Analysis",
+      "index": 0
+    }
+  }
+}

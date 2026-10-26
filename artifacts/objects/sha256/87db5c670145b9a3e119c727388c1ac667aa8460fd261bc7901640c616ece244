@@ -1,0 +1,344 @@
+#!/usr/bin/env python3
+"""Build the enhanced BLS labor-productivity workbook.
+
+Loads the pristine input workbook, inserts two new worksheets (Summary, Analysis)
+with live formulas linked to the original Annual sheet, a scenario dropdown with
+editable assumption cells and a formula-driven projection, a bar chart over
+formula-linked values, plus formatting, freeze panes, conditional formatting,
+and source/assumption comments. Saves output/industry_productivity_enhanced.xlsx
+and output/workbook_features.json.
+
+Skill color conventions applied to new content only:
+  blue  (FF0000FF) = editable inputs (selector + assumption cells)
+  green (FF008000) = formulas pulling from other worksheets (Annual)
+  black (FF000000) = local formulas / labels
+"""
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, '/workspace/vendor/wheels/openpyxl-3.1.5-py2.py3-none-any.whl')
+from openpyxl import load_workbook
+from openpyxl.chart import BarChart, Reference
+from openpyxl.chart.label import DataLabelList
+from openpyxl.comments import Comment
+from openpyxl.formatting.rule import ColorScaleRule, DataBarRule, FormulaRule
+from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.worksheet.datavalidation import DataValidation
+
+ROOT = Path(__file__).resolve().parents[1]
+INPUT = ROOT / 'input/labor-productivity-detailed-industries.xlsx'
+OUTPUT = ROOT / 'output/industry_productivity_enhanced.xlsx'
+FEATURES = ROOT / 'output/workbook_features.json'
+
+BLUE = 'FF0000FF'
+GREEN = 'FF008000'
+BLACK = 'FF000000'
+
+TITLE_FILL = PatternFill('solid', start_color='1F4E79')
+SECTION_FILL = PatternFill('solid', start_color='D9E2F3')
+NOTE_FILL = PatternFill('solid', start_color='FFF2CC')
+HEADER_FONT = Font(name='Arial', size=11, bold=True, color='FFFFFFFF')
+TITLE_FONT = Font(name='Arial', size=14, bold=True, color='FFFFFFFF')
+SECTION_FONT = Font(name='Arial', size=11, bold=True, color='FF1F4E79')
+NOTE_FONT = Font(name='Arial', size=9, italic=True, color='FF404040')
+WRAP = Alignment(wrap_text=True, vertical='top')
+LEFT = Alignment(horizontal='left', vertical='center')
+RIGHT = Alignment(horizontal='right', vertical='center')
+
+
+def font(color=BLACK, bold=False, italic=False, size=11):
+    return Font(name='Arial', size=size, bold=bold, italic=italic, color=color)
+
+
+def build_summary(wb):
+    ws = wb.create_sheet('Summary', 0)
+    widths = {'A': 52, 'B': 30, 'C': 18, 'D': 34, 'E': 12}
+    for col, w in widths.items():
+        ws.column_dimensions[col].width = w
+
+    # Title block
+    ws.merge_cells('A1:E1')
+    ws['A1'] = 'Labor Productivity in Food Manufacturing - BLS Detailed Industries Analysis'
+    ws['A1'].font = TITLE_FONT
+    ws['A1'].fill = TITLE_FILL
+    ws['A1'].alignment = Alignment(horizontal='left', vertical='center')
+    ws.row_dimensions[1].height = 24
+    ws.merge_cells('A2:E2')
+    ws['A2'] = ('Source: U.S. Bureau of Labor Statistics, Office of Productivity and Technology, '
+                'labor-productivity-detailed-industries.xlsx, Annual tab (released September 24, 2026).')
+    ws['A2'].font = font(italic=True, size=10)
+    ws['A2'].alignment = WRAP
+    ws.row_dimensions[2].height = 28
+    ws.merge_cells('A3:E3')
+    ws['A3'] = ('The MachineReadable tab holds the same published series in long form; '
+                'all calculations below use the Annual tab only. Suppression markers (N.A.) are retained.')
+    ws['A3'].font = font(italic=True, size=10)
+    ws['A3'].alignment = WRAP
+    ws.row_dimensions[3].height = 28
+
+    # Section 1: published metrics
+    ws.merge_cells('A5:E5')
+    ws['A5'] = 'PUBLISHED METRICS - NAICS 311 Food Manufacturing, All workers'
+    ws['A5'].font = SECTION_FONT
+    ws['A5'].fill = SECTION_FILL
+    ws['A5'].alignment = Alignment(horizontal='left', vertical='center')
+    for col, text in (('A6', 'Metric'), ('B6', 'Unit'), ('C6', 'Value')):
+        ws[col].font = HEADER_FONT
+        ws[col].fill = TITLE_FILL
+        ws[col].alignment = LEFT
+
+    ws['A7'] = 'Labor productivity index, 2025'
+    ws['A7'].font = font()
+    ws['A7'].alignment = LEFT
+    ws['B7'] = 'index (2017=100)'
+    ws['B7'].font = font()
+    ws['B7'].alignment = LEFT
+    ws['C7'] = '=Annual!AT487'
+    ws['C7'].font = font(color=GREEN)
+    ws['C7'].number_format = '0.000'
+    ws['C7'].alignment = RIGHT
+    ws['C7'].comment = Comment(
+        'Source: Annual tab, NAICS 311 Food manufacturing, All workers, Labor productivity, '
+        'Units "Index (2017=100)", year 2025 (cell Annual!AT487). '
+        'Published level; MachineReadable tab carries the same series in long form.',
+        'Productivity Analysis')
+
+    ws['A8'] = 'Year-over-year change, 2024 to 2025'
+    ws['A8'].font = font()
+    ws['A8'].alignment = LEFT
+    ws['B8'] = 'fraction'
+    ws['B8'].font = font()
+    ws['B8'].alignment = LEFT
+    ws['C8'] = '=(Annual!AT487-Annual!AS487)/Annual!AS487'
+    ws['C8'].font = font(color=GREEN)
+    ws['C8'].number_format = '0.0000'
+    ws['C8'].alignment = RIGHT
+    ws['C8'].comment = Comment(
+        'Formula: (2025 index - 2024 index) / 2024 index using published Annual tab levels '
+        '(Annual!AT487 and Annual!AS487). Not seasonally adjusted; published levels as reported.',
+        'Productivity Analysis')
+
+    ws['A9'] = 'Change since 2020, 2020 to 2025'
+    ws['A9'].font = font()
+    ws['A9'].alignment = LEFT
+    ws['B9'] = 'fraction'
+    ws['B9'].font = font()
+    ws['B9'].alignment = LEFT
+    ws['C9'] = '=(Annual!AT487-Annual!AO487)/Annual!AO487'
+    ws['C9'].font = font(color=GREEN)
+    ws['C9'].number_format = '0.0000'
+    ws['C9'].alignment = RIGHT
+    ws['C9'].comment = Comment(
+        'Formula: (2025 index - 2020 index) / 2020 index using published Annual tab levels '
+        '(Annual!AT487 and Annual!AO487).',
+        'Productivity Analysis')
+
+    # Section 2: illustrative scenario
+    ws.merge_cells('A11:E11')
+    ws['A11'] = 'ILLUSTRATIVE SCENARIO - assumption-driven projection (not a forecast)'
+    ws['A11'].font = SECTION_FONT
+    ws['A11'].fill = SECTION_FILL
+    ws['A11'].alignment = Alignment(horizontal='left', vertical='center')
+
+    ws['A12'] = 'Scenario selector (dropdown):'
+    ws['A12'].font = font(bold=True)
+    ws['A12'].alignment = LEFT
+    ws['C12'] = 'Base'
+    ws['C12'].font = font(color=BLUE, bold=True)
+    ws['C12'].alignment = LEFT
+    ws['D12'] = 'Select Base, Higher, or Lower from the dropdown.'
+    ws['D12'].font = NOTE_FONT
+    ws['D12'].alignment = WRAP
+    ws['C12'].comment = Comment(
+        'Editable input (blue). Illustrative scenario selector; the chosen multiplier is applied '
+        'to the published 2025 index to form the projection. Not a forecast - assumptions are user-editable.',
+        'Productivity Analysis')
+    dv = DataValidation(type='list', formula1='"Base,Higher,Lower"', allow_blank=False,
+                        showErrorMessage=True)
+    dv.error = 'Choose Base, Higher, or Lower.'
+    dv.errorTitle = 'Invalid scenario'
+    ws.add_data_validation(dv)
+    dv.add('C12')
+
+    for col, text in (('A13', 'Scenario'), ('B13', 'Productivity multiplier (illustrative)')):
+        ws[col].font = HEADER_FONT
+        ws[col].fill = TITLE_FILL
+        ws[col].alignment = LEFT
+
+    assumptions = [('Base', 1.0, 'B14', 14), ('Higher', 1.05, 'B15', 15), ('Lower', 0.95, 'B16', 16)]
+    for name, value, cell, row in assumptions:
+        ws[f'A{row}'] = name
+        ws[f'A{row}'].font = font()
+        ws[f'A{row}'].alignment = LEFT
+        ws[cell] = value
+        ws[cell].font = font(color=BLUE)
+        ws[cell].number_format = '0.00'
+        ws[cell].alignment = RIGHT
+
+    ws['A18'] = 'Projected productivity index (2025 index x selected multiplier)'
+    ws['A18'].font = font(bold=True)
+    ws['A18'].alignment = LEFT
+    ws['B18'] = 'index (2017=100)'
+    ws['B18'].font = font()
+    ws['B18'].alignment = LEFT
+    ws['C18'] = '=C7*INDEX(B14:B16,MATCH(C12,A14:A16,0))'
+    ws['C18'].font = font(color=BLACK, bold=True)
+    ws['C18'].number_format = '0.000'
+    ws['C18'].alignment = RIGHT
+    ws['C18'].comment = Comment(
+        'Local formula (black): published 2025 index (Summary!C7, linked to Annual!AT487) multiplied by '
+        'the selected scenario multiplier via INDEX/MATCH over the assumptions table (B14:B16 / A14:A16).',
+        'Productivity Analysis')
+
+    ws.merge_cells('A20:E20')
+    ws['A20'] = ('Note: NAICS 316 (Leather and allied products) 2025 productivity is suppressed '
+                 '("N.A.") in the source and is excluded from the industry comparison chart.')
+    ws['A20'].font = NOTE_FONT
+    ws['A20'].fill = NOTE_FILL
+    ws['A20'].alignment = WRAP
+    ws.row_dimensions[20].height = 28
+    ws.merge_cells('A21:E21')
+    ws['A21'] = ('All change metrics are computed from published annual index levels; '
+                 'no missing observations are inferred or combined across industries or representations.')
+    ws['A21'].font = NOTE_FONT
+    ws['A21'].fill = NOTE_FILL
+    ws['A21'].alignment = WRAP
+    ws.row_dimensions[21].height = 28
+
+    # Conditional formatting on Summary
+    ws.conditional_formatting.add('C7:C9', ColorScaleRule(
+        start_type='min', start_color='F8696B',
+        mid_type='percentile', mid_value=50, mid_color='FFEB84',
+        end_type='max', end_color='63BE7B'))
+    ws.conditional_formatting.add('A14:C16', FormulaRule(
+        formula=['$C$12=$A14'], fill=PatternFill('solid', start_color='FFF2CC'), stopIfTrue=False))
+
+    ws.freeze_panes = 'A5'
+    return ws
+
+
+def build_analysis(wb):
+    ws = wb.create_sheet('Analysis', 1)
+    widths = {'A': 36, 'B': 12, 'C': 20, 'D': 8, 'E': 12, 'F': 12, 'G': 12, 'H': 12}
+    for col, w in widths.items():
+        ws.column_dimensions[col].width = w
+
+    ws.merge_cells('A1:H1')
+    ws['A1'] = '2025 Labor Productivity Index by 3-Digit Manufacturing Industry'
+    ws['A1'].font = TITLE_FONT
+    ws['A1'].fill = TITLE_FILL
+    ws['A1'].alignment = Alignment(horizontal='left', vertical='center')
+    ws.row_dimensions[1].height = 24
+    ws.merge_cells('A2:H2')
+    ws['A2'] = ('Source: Annual tab (All workers, Labor productivity, Index (2017=100)); published levels '
+                'as reported. NAICS 316 is suppressed ("N.A.") in 2025 and is not shown.')
+    ws['A2'].font = font(italic=True, size=10)
+    ws['A2'].alignment = WRAP
+    ws.row_dimensions[2].height = 28
+
+    headers = (('A4', 'Industry'), ('B4', 'NAICS'), ('C4', '2025 Index (2017=100)'))
+    for col, text in headers:
+        ws[col].font = HEADER_FONT
+        ws[col].fill = TITLE_FILL
+        ws[col].alignment = LEFT
+
+    rows = [
+        ('Food manufacturing', 311, 'AT487', 5),
+        ('Beverages and tobacco products', 312, 'AT510', 6),
+        ('Textile mills', 313, 'AT533', 7),
+        ('Textile product mills', 314, 'AT556', 8),
+        ('Apparel', 315, 'AT579', 9),
+    ]
+    for name, naics, cell, row in rows:
+        ws[f'A{row}'] = name
+        ws[f'A{row}'].font = font()
+        ws[f'A{row}'].alignment = LEFT
+        ws[f'B{row}'] = naics
+        ws[f'B{row}'].font = font()
+        ws[f'B{row}'].alignment = LEFT
+        ws[f'C{row}'] = f'=Annual!{cell}'
+        ws[f'C{row}'].font = font(color=GREEN)
+        ws[f'C{row}'].number_format = '0.000'
+        ws[f'C{row}'].alignment = RIGHT
+    ws['C5'].comment = Comment(
+        'Formula-linked value: Annual tab, NAICS 311 Food manufacturing, All workers, '
+        'Labor productivity, Index (2017=100), year 2025 (Annual!AT487).',
+        'Productivity Analysis')
+
+    ws.merge_cells('A11:H11')
+    ws['A11'] = ('Published levels are compared as reported. Levels are not combined across industries '
+                 'or between the Annual and MachineReadable representations.')
+    ws['A11'].font = NOTE_FONT
+    ws['A11'].fill = NOTE_FILL
+    ws['A11'].alignment = WRAP
+    ws.row_dimensions[11].height = 28
+
+    # Bar chart over formula-linked values
+    chart = BarChart()
+    chart.type = 'col'
+    chart.style = 10
+    chart.title = '2025 Labor Productivity Index (2017=100)'
+    chart.y_axis.title = 'Index (2017=100)'
+    chart.x_axis.title = 'Industry'
+    chart.legend = None
+    chart.width = 17
+    chart.height = 9
+    data = Reference(ws, min_col=3, min_row=5, max_row=9)
+    cats = Reference(ws, min_col=1, min_row=5, max_row=9)
+    chart.add_data(data, titles_from_data=False)
+    chart.set_categories(cats)
+    chart.dataLabels = DataLabelList()
+    chart.dataLabels.showVal = True
+    ws.add_chart(chart, 'E4')
+
+    # Conditional formatting on Analysis
+    ws.conditional_formatting.add('C5:C9', DataBarRule(
+        start_type='min', end_type='max', color='638EC6', showValue=True))
+    ws.conditional_formatting.add('C5:C9', ColorScaleRule(
+        start_type='min', start_color='F8696B',
+        mid_type='percentile', mid_value=50, mid_color='FFEB84',
+        end_type='max', end_color='63BE7B'))
+    return ws
+
+
+def main():
+    OUTPUT.parent.mkdir(exist_ok=True)
+    print('loading input workbook...', flush=True)
+    wb = load_workbook(INPUT, data_only=False)
+    print('input sheets:', wb.sheetnames, flush=True)
+    build_summary(wb)
+    build_analysis(wb)
+    print('output sheets:', wb.sheetnames, flush=True)
+    wb.save(OUTPUT)
+    wb.close()
+
+    features = {
+        'summary_sheet': 'Summary',
+        'metrics': {
+            'food_productivity_2025': {'sheet': 'Summary', 'cell': 'C7'},
+            'food_productivity_yoy_change': {'sheet': 'Summary', 'cell': 'C8'},
+            'food_productivity_change_since_2020': {'sheet': 'Summary', 'cell': 'C9'},
+        },
+        'scenario': {
+            'selector': {'sheet': 'Summary', 'cell': 'C12'},
+            'assumptions': {
+                'Base': {'productivity_multiplier': {'sheet': 'Summary', 'cell': 'B14'}},
+                'Higher': {'productivity_multiplier': {'sheet': 'Summary', 'cell': 'B15'}},
+                'Lower': {'productivity_multiplier': {'sheet': 'Summary', 'cell': 'B16'}},
+            },
+            'projections': {
+                'projected_productivity_index': {'sheet': 'Summary', 'cell': 'C18'},
+            },
+        },
+        'charts': {
+            'manufacturing_subindustry_2025': {'sheet': 'Analysis', 'index': 0},
+        },
+    }
+    FEATURES.write_text(json.dumps(features, indent=2) + '\n')
+    print('wrote', FEATURES, flush=True)
+    print('saved', OUTPUT, flush=True)
+
+
+if __name__ == '__main__':
+    main()

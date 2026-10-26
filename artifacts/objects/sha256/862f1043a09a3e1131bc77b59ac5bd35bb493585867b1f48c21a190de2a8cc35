@@ -1,0 +1,110 @@
+{
+  "checks": {
+    "sheet_order": true,
+    "values:Annual": true,
+    "values:MachineReadable": true,
+    "values:ReadMe": true,
+    "formats:Annual": true,
+    "formats:MachineReadable": true,
+    "formats:ReadMe": true,
+    "defined_names": true,
+    "formulas_present": true,
+    "dropdown": true,
+    "conditional_formatting": true,
+    "comments": true,
+    "freeze_panes": true,
+    "chart_series": true,
+    "no_external_links": true,
+    "cached_values": true
+  },
+  "details": {
+    "sheets": {
+      "Summary": [
+        21,
+        5
+      ],
+      "Analysis": [
+        11,
+        8
+      ],
+      "Annual": [
+        15183,
+        46
+      ],
+      "MachineReadable": [
+        566659,
+        9
+      ],
+      "ReadMe": [
+        14,
+        2
+      ]
+    },
+    "input_sheets": [
+      "Annual",
+      "MachineReadable",
+      "ReadMe"
+    ],
+    "defined_names_in": 4,
+    "defined_names_out": 4,
+    "formulas": {
+      "Summary!C7": "=Annual!AT487",
+      "Summary!C8": "=(Annual!AT487-Annual!AS487)/Annual!AS487",
+      "Summary!C9": "=(Annual!AT487-Annual!AO487)/Annual!AO487",
+      "Summary!C18": "=C7*INDEX(B14:B16,MATCH(C12,A14:A16,0))",
+      "Analysis!C5": "=Annual!AT487",
+      "Analysis!C6": "=Annual!AT510",
+      "Analysis!C7": "=Annual!AT533",
+      "Analysis!C8": "=Annual!AT556",
+      "Analysis!C9": "=Annual!AT579"
+    },
+    "validations": [
+      {
+        "type": "list",
+        "formula1": "\"Base,Higher,Lower\"",
+        "sqref": "C12"
+      }
+    ],
+    "conditional_formatting": {
+      "Summary": 2,
+      "Analysis": 1,
+      "Annual": 0,
+      "MachineReadable": 0,
+      "ReadMe": 0
+    },
+    "comments": {
+      "Summary": 5,
+      "Analysis": 1,
+      "Annual": 0,
+      "MachineReadable": 0,
+      "ReadMe": 0
+    },
+    "freeze": {
+      "Summary": "A5",
+      "Analysis": null,
+      "Annual": "AO4",
+      "MachineReadable": null,
+      "ReadMe": null
+    },
+    "charts": {
+      "Analysis": [
+        [
+          "Analysis!$C$5:$C$9",
+          "Analysis!$A$5:$A$9"
+        ]
+      ]
+    },
+    "cached_values": {
+      "Summary!C7": 92.025,
+      "Summary!C8": -0.0213958335548773,
+      "Summary!C9": -0.0933140222274768,
+      "Summary!C18": 92.025,
+      "Analysis!C5": 92.025,
+      "Analysis!C6": 65.216,
+      "Analysis!C7": 93.136,
+      "Analysis!C8": 108.58,
+      "Analysis!C9": 114.982
+    }
+  },
+  "status": "ok"
+}
